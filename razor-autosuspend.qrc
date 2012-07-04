@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/razor-autosuspend.svg</file>
+    </qresource>
+</RCC>
