@@ -1,131 +1,131 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pl_PL" version="2.0">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru_RU" version="2.0">
 <context>
     <name>Battery</name>
     <message>
         <source>No battery!</source>
-        <translation>Brak baterii!</translation>
+        <translation>Нет батареи!</translation>
     </message>
     <message>
         <source>Razor autosuspend could not find data about any battery - actions on power low will not work</source>
-        <translation>Razor autouśpienie nie może odnaleźć informacji o baterii - powiadomienie o niskim poziomie naładowania nie będzie działać.</translation>
+        <translation>Razor autosuspend не смог найти данные о состоянии батареи - действия при низком уровне питания не будут работать</translation>
     </message>
 </context>
 <context>
     <name>BatteryInfo</name>
     <message>
         <source>Dialog</source>
-        <translation>Okno dialogowe</translation>
+        <translation>Диалог</translation>
     </message>
     <message>
         <source>Battery info</source>
-        <translation>Informacje o baterii</translation>
+        <translation>Информация о батарее</translation>
     </message>
     <message>
         <source>Energy Now:</source>
-        <translation>Poziom Baterii:</translation>
+        <translation>Заряд сейчас:</translation>
     </message>
     <message>
         <source>Updated:</source>
-        <translation>Aktualne:</translation>
+        <translation>Обновлено:</translation>
     </message>
     <message>
         <source>Technology:</source>
-        <translation>Technologia:</translation>
+        <translation>Технология:</translation>
     </message>
     <message>
         <source>Model:</source>
-        <translation>Model:</translation>
+        <translation>Модель:</translation>
     </message>
     <message>
         <source>Energy rate:</source>
-        <translation>Zużycie energii:</translation>
+        <translation>Потребление энергии:</translation>
     </message>
     <message>
         <source>Voltage:</source>
-        <translation>Napięcie:</translation>
+        <translation>Вольт:</translation>
     </message>
     <message>
         <source>Energy Full, Design:</source>
-        <translation>Pełen Energii, Projekt:</translation>
+        <translation>Полный заряд, модели:</translation>
     </message>
     <message>
         <source>Energy Full:</source>
-        <translation>Naładowana:</translation>
+        <translation>Полный заряд:</translation>
     </message>
     <message>
         <source>State:</source>
-        <translation>Stan:</translation>
+        <translation>Состояние:</translation>
     </message>
     <message>
         <source>Lithium ion</source>
-        <translation>Litowo - Jonowa</translation>
+        <translation>Литий-ионная</translation>
     </message>
     <message>
         <source>Lithium polymer</source>
-        <translation>Litowo - Polimerowa</translation>
+        <translation>Литий-полимерная</translation>
     </message>
     <message>
         <source>Lithium iron phosphate</source>
-        <translation>Litowo - Fosforanowa</translation>
+        <translation>Литий-железо-фосфатная</translation>
     </message>
     <message>
         <source>Lead acid</source>
-        <translation>Ołowiowa</translation>
+        <translation>Свинцово-кислотная</translation>
     </message>
     <message>
         <source>Nickel cadmium</source>
-        <translation>Niklowo - kadmowa</translation>
+        <translation>Никель-кадмиевая</translation>
     </message>
     <message>
         <source>Nickel metal hybride</source>
-        <translation>Nickel metal hybride</translation>
+        <translation>Никель-металл-гидридная</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Nieznana</translation>
+        <translation>Неизвестная</translation>
     </message>
     <message>
         <source>Charging</source>
-        <translation>Ładowanie</translation>
+        <translation>Зарядка</translation>
     </message>
     <message>
         <source>Discharging</source>
-        <translation>Rozładowywanie</translation>
+        <translation>Разрядка</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Rozładowana</translation>
+        <translation>Пусто</translation>
     </message>
     <message>
         <source>Fully charged</source>
-        <translation>Naładowana</translation>
+        <translation>Полный заряд</translation>
     </message>
     <message>
         <source>Pending charge</source>
-        <translation>Czas do naładowania</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Pending discharge</source>
-        <translation>Czas do rozładowania</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>RazorAutosuspendd</name>
     <message>
         <source>Power low</source>
-        <translation>Bateria Słaba</translation>
+        <translation>Низкий заряд!</translation>
     </message>
     <message>
         <source>Sleeping in %1 seconds</source>
-        <translation>Uśpij po %1 sekundach</translation>
+        <translation>Засыпание через %1 секунд</translation>
     </message>
     <message>
         <source>Hibernating in %1 seconds</source>
-        <translation>Hibernuj po %1 sekundach</translation>
+        <translation>Гибернация через %1 секунд</translation>
     </message>
     <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>Zamknij system po %1 sekundach</translation>
+        <translation>Выключение через %1 секунд</translation>
     </message>
 </context>
 </TS>

@@ -1,110 +1,110 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru_RU" version="2.0">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="hu_HU" version="2.0">
 <context>
     <name>GeneralSettings</name>
     <message>
         <source>Dialog</source>
-        <translation>Диалог</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Show battery status icon in tray</source>
-        <translation>Показывать значек состояния батареи в трее</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>LidSettings</name>
     <message>
         <source>Dialog</source>
-        <translation>Диалог</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Lid closed</source>
-        <translation>Закрытие крышки</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Action:</source>
-        <translation>Действие:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Nothing</source>
-        <translation>Ничего</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Sleep</source>
-        <translation>Засыпать</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Hibernate</source>
-        <translation>Спящий режим</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Shutdown</source>
-        <translation>Выключить компьютер</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>Razor Autosuspend Configuration</source>
-        <translation>Конфигурация автоматического выключения </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>General</source>
-        <translation>Основные</translation>
+        <translation>Általános</translation>
     </message>
     <message>
         <source>Lid closed</source>
-        <translation>Закрытие крышки</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Power Low</source>
-        <translation>Низкий заряд</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>PowerLowSettings</name>
     <message>
         <source>Dialog</source>
-        <translation>Диалог</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Power low</source>
-        <translation>Низкий заряд батареи</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Action:</source>
-        <translation>Действие:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Warning:</source>
-        <translation>Предупреждение:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source> seconds</source>
-        <translation>секунд</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Level is low at:</source>
-        <translation>Низкий уровень на:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source> %</source>
-        <translation>%</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Nothing</source>
-        <translation>Ничего</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Sleep</source>
-        <translation>Засыпать</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Hibernate</source>
-        <translation>Спящий режим</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Shutdown</source>
-        <translation>Выключить компьютер</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>
