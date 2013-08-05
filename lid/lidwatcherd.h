@@ -34,12 +34,12 @@
 #include <razorqt/razorpower.h>
 #include "lid.h"
 
-class RazorAutosuspendd : public QObject
+class LidWatcherd : public QObject
 {
     Q_OBJECT
 public:
-    explicit RazorAutosuspendd(QObject *parent = 0);
-    virtual ~RazorAutosuspendd();
+    explicit LidWatcherd(QObject *parent = 0);
+    virtual ~LidWatcherd();
 
 private slots:
     void lidChanged(bool closed);

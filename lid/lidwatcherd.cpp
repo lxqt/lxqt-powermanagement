@@ -29,10 +29,10 @@
 #include <QtCore/QCoreApplication>
 #include <razorqt/razorautostartentry.h>
 
-#include "razorautosuspend.h"
+#include "lidwatcherd.h"
 #include "../config/constants.h"
 
-RazorAutosuspendd::RazorAutosuspendd(QObject *parent) :
+LidWatcherd::LidWatcherd(QObject *parent) :
     QObject(parent),
     mSettings("razor-autosuspend")
 {
@@ -45,11 +45,11 @@ RazorAutosuspendd::RazorAutosuspendd(QObject *parent) :
     connect(&mLid, SIGNAL(changed(bool)), this, SLOT(lidChanged(bool)));
 }
 
-RazorAutosuspendd::~RazorAutosuspendd()
+LidWatcherd::~LidWatcherd()
 {
 }
 
-void RazorAutosuspendd::lidChanged(bool closed)
+void LidWatcherd::lidChanged(bool closed)
 {
     if (closed)
     {
@@ -57,7 +57,7 @@ void RazorAutosuspendd::lidChanged(bool closed)
     }
 }
 
-void RazorAutosuspendd::doAction(int action)
+void LidWatcherd::doAction(int action)
 {
     switch (action)
     {

@@ -7,19 +7,19 @@ include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
 
 set ( lid_HDRS
       lid.h
-      razorautosuspend.h
+      lidwatcherd.h
         )
 
 set ( lid_SRCS
         main.cpp
         lid.cpp
         lid.cpp
-        razorautosuspend.cpp
+        lidwatcherd.cpp
         )
 
 set ( lid_MOCS
       lid.h
-      razorautosuspend.h
+      lidwatcherd.h
     )
 
 # TODO: remove actual file and its translations

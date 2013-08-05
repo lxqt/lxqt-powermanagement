@@ -29,26 +29,25 @@
 #include <QDebug>
 #include <razorqt/razorapplication.h>
 #include "razortranslate.h"
-#include "razorautosuspend.h"
+#include "lidwatcherd.h"
 
 int main(int argc, char *argv[])
 {
 
     RazorApplication a(argc, argv);
-    a.setQuitOnLastWindowClosed(false);
     TRANSLATE_APP;
 
-    // To ensure only one instance of razor-autosuspend is running we register as a DBus service and refuse to run
+    // To ensure only one instance of lidwatcherd is running we register as a DBus service and refuse to run
     // if not able to do so.
     // We do not register any object as we don't have any dbus-operations to expose.
-    if (! QDBusConnection::sessionBus().registerService("org.razorqt.razor-autosuspend"))
+    if (! QDBusConnection::sessionBus().registerService("org.razorqt.lidwatcherd"))
     {
-        qWarning() << "Unable to register 'org.razorqt.razor-autosuspend' service - is another instance of razor-autosuspend running?";
+        qWarning() << "Unable to register 'org.razorqt.lidwatcherd' service - is another instance of razor-autosuspend running?";
         return 1;
     }
     else
     {
-        RazorAutosuspendd razorAutosuspendd;
+        LidWatcherd lidWatcherd;
         return a.exec();
     }
 }
