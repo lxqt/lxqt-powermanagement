@@ -17,7 +17,8 @@ set(CPP_FILES
 )
 
 set(LIBRARIES
-    razorqt
+    ${RAZORQT_LIBRARIES}
+    ${RAZORXDG_LIBRARY}
 )
 
 file(GLOB DESKTOP_FILES_IN
@@ -41,8 +42,9 @@ razor_translate_desktop(DESKTOP_FILES
 
 qt4_wrap_cpp(MOC_SOURCES ${MOC_FILES})
 qt4_add_dbus_adaptor(CPP_FILES
-    ../../razorqt-resources/dbus/org.freedesktop.ScreenSaver.xml
-    razorscreenlocker.h RazorScreenLocker
+    org.freedesktop.ScreenSaver.xml
+    razorscreenlocker.h 
+    RazorScreenLocker
 )
 
 # XCB stuff (TODO: move into findXCB)

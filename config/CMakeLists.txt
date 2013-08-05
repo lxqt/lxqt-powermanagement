@@ -71,8 +71,11 @@ add_executable ( ${PROJECT_NAME}
                  ${QM_FILES}
                )
 
+message(STATUS "QT_QTCORE_LIBRARY: ${QT_QTCORE_LIBRARY}")
+
 target_link_libraries ( razor-config-autosuspend  
-                        razorqt 
+                        ${RAZORQT_LIBRARIES}
+                        ${RAZORXDG_LIBRARIES}
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY}  
                         ${QT_QTDBUS_LIBRARY}
