@@ -29,7 +29,7 @@
 #include <QDebug>
 #include <razorqt/razorapplication.h>
 #include "razortranslate.h"
-#include "razorautosuspend.h"
+#include "batterywatcherd.h"
 
 int main(int argc, char *argv[])
 {
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-        RazorAutosuspendd razorAutosuspendd;
+        BatteryWatcherd razorAutosuspendd;
         return a.exec();
     }
 }

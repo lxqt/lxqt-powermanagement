@@ -35,12 +35,12 @@
 #include "battery.h"
 #include "trayicon.h"
 
-class RazorAutosuspendd : public QObject
+class BatteryWatcherd : public QObject
 {
     Q_OBJECT
 public:
-    explicit RazorAutosuspendd(QObject *parent = 0);
-    virtual ~RazorAutosuspendd();
+    explicit BatteryWatcherd(QObject *parent = 0);
+    virtual ~BatteryWatcherd();
 
 protected:
     void timerEvent(QTimerEvent *event);

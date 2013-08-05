@@ -29,10 +29,10 @@
 #include <QtCore/QCoreApplication>
 #include <razorqt/razorautostartentry.h>
 
-#include "razorautosuspend.h"
+#include "batterywatcherd.h"
 #include "../config/constants.h"
 
-RazorAutosuspendd::RazorAutosuspendd(QObject *parent) :
+BatteryWatcherd::BatteryWatcherd(QObject *parent) :
     QObject(parent),
     mRazorNotification(tr("Power low"), this),
     mActionTime(),
@@ -72,11 +72,11 @@ RazorAutosuspendd::RazorAutosuspendd(QObject *parent) :
     connect(mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
 }
 
-RazorAutosuspendd::~RazorAutosuspendd()
+BatteryWatcherd::~BatteryWatcherd()
 {
 }
 
-void RazorAutosuspendd::batteryChanged()
+void BatteryWatcherd::batteryChanged()
 {
     qDebug() <<  "BatteryChanged"
              <<  "discharging:"  << mBattery->discharging() 
@@ -93,7 +93,7 @@ void RazorAutosuspendd::batteryChanged()
     }
 }
 
-void RazorAutosuspendd::timerEvent(QTimerEvent *event)
+void BatteryWatcherd::timerEvent(QTimerEvent *event)
 {
     if (mActionTime.isNull() || powerLowAction() == 0 || ! mBattery->powerLow())
     {
@@ -127,7 +127,7 @@ void RazorAutosuspendd::timerEvent(QTimerEvent *event)
     }
 }
 
-void RazorAutosuspendd::doAction(int action)
+void BatteryWatcherd::doAction(int action)
 {
     switch (action)
     {
@@ -143,7 +143,7 @@ void RazorAutosuspendd::doAction(int action)
     }
 }
 
-int RazorAutosuspendd::powerLowAction()
+int BatteryWatcherd::powerLowAction()
 {
     return mSettings.value(POWERLOWACTION_KEY).toInt();
 }
