@@ -30,7 +30,7 @@
 #include <razorqt/programfinder.h>
 
 #include "screensaveradaptor.h"
-#include "razorscreenlocker.h"
+#include "idlenesswatcherd.h"
 #include "x11helper.h"
 
 /* lockers:
@@ -42,7 +42,7 @@
  * xtrlock
  */
 
-RazorScreenLocker::RazorScreenLocker(QObject* parent) :
+IdlenessWatcherd::IdlenessWatcherd(QObject* parent) :
     QObject(parent),
     mSettings("razor-screenlocker"),
     mErrorNotification(tr("Razor Screenlocker failed to start")),
@@ -117,7 +117,7 @@ RazorScreenLocker::RazorScreenLocker(QObject* parent) :
     qDebug() << "timeout:" << mIdleTimeoutMs << "ms, lock command:" << mLockCommand;
 }
 
-xcb_screen_t* RazorScreenLocker::screenOfDisplay(xcb_connection_t* conn, int screen)
+xcb_screen_t* IdlenessWatcherd::screenOfDisplay(xcb_connection_t* conn, int screen)
 {
     xcb_screen_iterator_t iter = xcb_setup_roots_iterator(xcb_get_setup(conn));
     for (; iter.rem; --screen, xcb_screen_next(&iter))
@@ -126,7 +126,7 @@ xcb_screen_t* RazorScreenLocker::screenOfDisplay(xcb_connection_t* conn, int scr
     return NULL;
 }
 
-uint RazorScreenLocker::getIdleTimeMs()
+uint IdlenessWatcherd::getIdleTimeMs()
 {
     xcb_screensaver_query_info_cookie_t infoCookie = xcb_screensaver_query_info_unchecked(mConn, mScreen->root);
     xcb_screensaver_query_info_reply_t* infoReply = xcb_screensaver_query_info_reply(mConn, infoCookie, NULL);
@@ -140,7 +140,7 @@ uint RazorScreenLocker::getIdleTimeMs()
     return msSinceUserInput;
 }
 
-void RazorScreenLocker::idleTimeout()
+void IdlenessWatcherd::idleTimeout()
 {
     uint msSinceUserInput = getIdleTimeMs();
     qDebug() << "    ms since user input:" << msSinceUserInput;
@@ -155,7 +155,7 @@ void RazorScreenLocker::idleTimeout()
     }
 }
 
-bool RazorScreenLocker::lockScreen()
+bool IdlenessWatcherd::lockScreen()
 {
     qDebug() << "!!! Locking screen!";
     mLockProcess.start(mLockCommand);
@@ -175,13 +175,13 @@ bool RazorScreenLocker::lockScreen()
     return true;
 }
 
-void RazorScreenLocker::restartTimer()
+void IdlenessWatcherd::restartTimer()
 {
     qDebug() << ">>> Timer Restarted";
     mTimer.start(mIdleTimeoutMs);
 }
 
-void RazorScreenLocker::screenUnlocked(int exitCode, QProcess::ExitStatus exitStatus)
+void IdlenessWatcherd::screenUnlocked(int exitCode, QProcess::ExitStatus exitStatus)
 {
     mIsLocked = false;
     emit ActiveChanged(false);
@@ -203,7 +203,7 @@ void RazorScreenLocker::screenUnlocked(int exitCode, QProcess::ExitStatus exitSt
     }
 }
 
-void RazorScreenLocker::notificationAction(int num)
+void IdlenessWatcherd::notificationAction(int num)
 {
     switch (num)
     {
@@ -212,7 +212,7 @@ void RazorScreenLocker::notificationAction(int num)
     }
 }
 
-void RazorScreenLocker::serviceUnregistered(const QString& service)
+void IdlenessWatcherd::serviceUnregistered(const QString& service)
 {
     for (QMutableMapIterator<uint, QString> iter(mInhibitors); iter.hasNext();)
     {
@@ -228,7 +228,7 @@ void RazorScreenLocker::serviceUnregistered(const QString& service)
         restartTimer();
 }
 
-void RazorScreenLocker::loadSettings()
+void IdlenessWatcherd::loadSettings()
 {
     mLockCommand = mSettings.value("LockCommand").toString();
     mIdleTimeoutMs = mSettings.value("IdleTimeoutSecs", 5 * 60).toInt() * 1000;
@@ -250,41 +250,41 @@ void RazorScreenLocker::loadSettings()
 
 /* ---------- D-Bus methods ---------- */
 
-void RazorScreenLocker::Lock()
+void IdlenessWatcherd::Lock()
 {
     lockScreen();
 }
 
-uint RazorScreenLocker::GetSessionIdleTime()
+uint IdlenessWatcherd::GetSessionIdleTime()
 {
     return getIdleTimeMs() / 1000;
 }
 
-uint RazorScreenLocker::GetActiveTime()
+uint IdlenessWatcherd::GetActiveTime()
 {
     if (!mIsLocked)
         return 0;
     return mLockTime.secsTo(QDateTime::currentDateTime());
 }
 
-bool RazorScreenLocker::GetActive()
+bool IdlenessWatcherd::GetActive()
 {
     return mIsLocked;
 }
 
-bool RazorScreenLocker::SetActive(bool activate)
+bool IdlenessWatcherd::SetActive(bool activate)
 {
     if (!activate)
         return false;
     return lockScreen();
 }
 
-void RazorScreenLocker::SimulateUserActivity()
+void IdlenessWatcherd::SimulateUserActivity()
 {
     restartTimer();
 }
 
-uint RazorScreenLocker::Inhibit(const QString& applicationName, const QString& reasonForInhibit)
+uint IdlenessWatcherd::Inhibit(const QString& applicationName, const QString& reasonForInhibit)
 {
     mInhibitorCookie++;
     QString service(this->message().service());
@@ -296,7 +296,7 @@ uint RazorScreenLocker::Inhibit(const QString& applicationName, const QString& r
     return mInhibitorCookie;
 }
 
-void RazorScreenLocker::UnInhibit(uint cookie)
+void IdlenessWatcherd::UnInhibit(uint cookie)
 {
     qDebug() << "*** Uninhibit" << cookie;
     mDBusWatcher.removeWatchedService(mInhibitors.value(cookie));
@@ -306,14 +306,14 @@ void RazorScreenLocker::UnInhibit(uint cookie)
         restartTimer();
 }
 
-uint RazorScreenLocker::Throttle(const QString& applicationName, const QString& reasonForThrottle)
+uint IdlenessWatcherd::Throttle(const QString& applicationName, const QString& reasonForThrottle)
 {
     Q_UNUSED(applicationName);
     Q_UNUSED(reasonForThrottle);
     return 0;
 }
 
-void RazorScreenLocker::UnThrottle(uint cookie)
+void IdlenessWatcherd::UnThrottle(uint cookie)
 {
     Q_UNUSED(cookie);
 }

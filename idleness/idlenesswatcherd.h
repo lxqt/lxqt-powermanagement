@@ -35,11 +35,11 @@
 #include <QtDBus/QDBusContext>
 #include <QtDBus/QDBusServiceWatcher>
 
-class RazorScreenLocker : public QObject, protected QDBusContext
+class IdlenessWatcherd : public QObject, protected QDBusContext
 {
     Q_OBJECT
 public:
-    explicit RazorScreenLocker(QObject* parent = 0);
+    explicit IdlenessWatcherd(QObject* parent = 0);
 
 signals:
     void ActiveChanged(bool in0);

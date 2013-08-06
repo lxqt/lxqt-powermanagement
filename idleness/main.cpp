@@ -23,7 +23,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <razorqt/razorapplication.h>
-#include "razorscreenlocker.h"
+#include "idlenesswatcherd.h"
 #include "razortranslate.h"
 
 int main(int argc, char** argv)
@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 
     app.setQuitOnLastWindowClosed(false);
 
-    RazorScreenLocker screenLocker;
+    IdlenessWatcherd screenLocker;
 
     return app.exec();
 }
