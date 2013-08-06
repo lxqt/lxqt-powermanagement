@@ -1,9 +1,11 @@
 project(lz-config-powermanagement)
 
-include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
-                      ${CMAKE_CURRENT_BINARY_DIR}
-                      ${CMAKE_SOURCE_DIR}/libraries
-                    )
+set ( config-powermanagement_MOCS
+      mainwindow.h
+      generalsettings.h
+      lidsettings.h
+      powerlowsettings.h
+    )
 
 set ( config-powermanagement_SRCS
       main.cpp
@@ -20,48 +22,23 @@ set ( config-powermanagement_UIS
     )
 
 set ( config-powermanagement_RSCS
-        razorautosuspend-config.qrc
+      config-powermanagement.qrc
     )
 
-QT4_ADD_RESOURCES( RSCS
-                   ${config-powermanagement_RSCS}
-                 )
-
-set(DESKTOP_FILES_IN
-    lz-config-powermanagement.desktop.in
-)
-
-set ( config-powermanagement_MOCS
-      mainwindow.h
-      generalsettings.h
-      lidsettings.h
-      powerlowsettings.h
+set (DESKTOP_FILES_IN
+     lz-config-powermanagement.desktop.in
     )
 
+QT4_ADD_RESOURCES( RSCS ${config-powermanagement_RSCS})
 
-set ( ICON_FILES icons/laptop-lid.svg
-    )
+QT4_WRAP_CPP( MOCS ${config-powermanagement_MOCS})
 
-# Translations **********************************
-include(RazorTranslate)
-razor_translate_ts(QM_FILES
-    SOURCES
-        ${config-powermanagement_HDRS}
-        ${config-powermanagement_SRCS}
-        ${config-powermanagement_UIS}
-)
+QT4_WRAP_UI( UIS ${config-powermanagement_UIS})
 
-razor_translate_desktop(DESKTOP_FILES
-    SOURCES
-        ${DESKTOP_FILES_IN}
-)
-#************************************************
+include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
+                      ${CMAKE_CURRENT_BINARY_DIR}
+                    )
 
-QT4_WRAP_CPP( MOCS ${config-powermanagement_MOCS}
-            )
-
-QT4_WRAP_UI( UIS ${config-powermanagement_UIS}
-           )
 
 add_executable ( ${PROJECT_NAME} 
                  ${config-powermanagement_SRCS} 
@@ -71,19 +48,14 @@ add_executable ( ${PROJECT_NAME}
                  ${QM_FILES}
                )
 
-message(STATUS "QT_QTCORE_LIBRARY: ${QT_QTCORE_LIBRARY}")
-
 target_link_libraries ( lz-config-powermanagement  
-                        ${RAZORQT_LIBRARIES}
-                        ${RAZORXDG_LIBRARIES}
+                        ${RAZOR_LIBRARY}
+                        ${QTXDG_LIBRARY}
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY}  
                         ${QT_QTDBUS_LIBRARY}
                       )
 
-
-
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES   ${DESKTOP_FILES}   DESTINATION share/applications)
-install(FILES   ${ICON_FILES}      DESTINATION share/icons/hicolor/scalable/apps)
 

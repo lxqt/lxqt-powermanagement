@@ -16,11 +16,6 @@ set(CPP_FILES
     x11helper.cpp
 )
 
-set(LIBRARIES
-    ${RAZORQT_LIBRARIES}
-    ${RAZORXDG_LIBRARY}
-)
-
 file(GLOB DESKTOP_FILES_IN
     resources/*.desktop.in
 )
@@ -46,6 +41,9 @@ qt4_add_dbus_adaptor(CPP_FILES
     idlenesswatcherd.h 
     IdlenessWatcherd
 )
+
+find_package(Razor)
+find_package(QtXdg)
 
 # XCB stuff (TODO: move into findXCB)
 find_package(PkgConfig)
@@ -94,13 +92,13 @@ include_directories(
     ${X11_XCB_INCLUDE_DIR}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
-    ../../libraries # TODO: Remove me
 )
 
 add_executable(${PROJECT} ${CPP_FILES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
 add_dependencies(${PROJECT} razorqt)
 target_link_libraries(${PROJECT}
-                        ${LIBRARIES}
+                        ${QTXDG_LIBRARY}
+                        ${RAZOR_LIBRARY}
                         ${QT_LIBRARIES}
                         ${XCB_LIBRARY}
                         ${XCB_SCREENSAVER_LIBRARY}

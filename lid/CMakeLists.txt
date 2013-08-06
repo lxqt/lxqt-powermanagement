@@ -27,6 +27,10 @@ set(DESKTOP_FILES_IN
 #    lid.desktop.in
 )
 
+find_package(Razor)
+find_package(QtXdg)
+
+
 QT4_WRAP_CPP(MOCS ${lid_MOCS})
 
 # Translations **********************************
@@ -46,8 +50,8 @@ razor_translate_desktop(DESKTOP_FILES
 
 add_executable ( lz-lid ${lid_SRCS} ${UIS} ${RSCS} ${QM_FILES} ${MOCS} ${DESKTOP_FILES})
 target_link_libraries ( lz-lid  
-                        ${RAZORQT_LIBRARIES}
-                        ${RAZORXDG_LIBRARIES}
+                        ${RAZOR_LIBRARY}
+                        ${QTXDG_LIBRARY}
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY} 
                         ${QT_QTDBUS_LIBRARY} 
