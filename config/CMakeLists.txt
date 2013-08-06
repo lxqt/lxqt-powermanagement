@@ -1,11 +1,11 @@
-project(razor-config-autosuspend)
+project(lz-config-powermanagement)
 
 include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
                       ${CMAKE_CURRENT_BINARY_DIR}
                       ${CMAKE_SOURCE_DIR}/libraries
                     )
 
-set ( razor-config-autosuspend_SRCS
+set ( config-powermanagement_SRCS
       main.cpp
       mainwindow.cpp
       generalsettings.cpp
@@ -13,25 +13,25 @@ set ( razor-config-autosuspend_SRCS
       powerlowsettings.cpp
     )
 
-set ( razor-config-autosuspend_UIS
+set ( config-powermanagement_UIS
       generalsettings.ui
       lidsettings.ui
       powerlowsettings.ui  
     )
 
-set ( razor-config-autosuspend_RSCS
+set ( config-powermanagement_RSCS
         razorautosuspend-config.qrc
     )
 
 QT4_ADD_RESOURCES( RSCS
-                   ${razor-config-autosuspend_RSCS}
+                   ${config-powermanagement_RSCS}
                  )
 
 set(DESKTOP_FILES_IN
-    razor-config-autosuspend.desktop.in
+    lz-config-powermanagement.desktop.in
 )
 
-set ( razor-config-autosuspend_MOCS
+set ( config-powermanagement_MOCS
       mainwindow.h
       generalsettings.h
       lidsettings.h
@@ -46,9 +46,9 @@ set ( ICON_FILES icons/laptop-lid.svg
 include(RazorTranslate)
 razor_translate_ts(QM_FILES
     SOURCES
-        ${razor-config-autosuspend_HDRS}
-        ${razor-config-autosuspend_SRCS}
-        ${razor-config-autosuspend_UIS}
+        ${config-powermanagement_HDRS}
+        ${config-powermanagement_SRCS}
+        ${config-powermanagement_UIS}
 )
 
 razor_translate_desktop(DESKTOP_FILES
@@ -57,14 +57,14 @@ razor_translate_desktop(DESKTOP_FILES
 )
 #************************************************
 
-QT4_WRAP_CPP( MOCS ${razor-config-autosuspend_MOCS}
+QT4_WRAP_CPP( MOCS ${config-powermanagement_MOCS}
             )
 
-QT4_WRAP_UI( UIS ${razor-config-autosuspend_UIS}
+QT4_WRAP_UI( UIS ${config-powermanagement_UIS}
            )
 
 add_executable ( ${PROJECT_NAME} 
-                 ${razor-config-autosuspend_SRCS} 
+                 ${config-powermanagement_SRCS} 
                  ${UIS} 
                  ${MOCS} 
                  ${DESKTOP_FILES}
@@ -73,7 +73,7 @@ add_executable ( ${PROJECT_NAME}
 
 message(STATUS "QT_QTCORE_LIBRARY: ${QT_QTCORE_LIBRARY}")
 
-target_link_libraries ( razor-config-autosuspend  
+target_link_libraries ( lz-config-powermanagement  
                         ${RAZORQT_LIBRARIES}
                         ${RAZORXDG_LIBRARIES}
                         ${QT_QTCORE_LIBRARY} 
