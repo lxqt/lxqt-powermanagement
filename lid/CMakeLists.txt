@@ -1,4 +1,4 @@
-project(lz-lid)
+project(lxqt-lid)
 
 include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
                       ${CMAKE_CURRENT_BINARY_DIR}
@@ -48,8 +48,8 @@ razor_translate_desktop(DESKTOP_FILES
 )
 #************************************************
 
-add_executable ( lz-lid ${lid_SRCS} ${UIS} ${RSCS} ${QM_FILES} ${MOCS} ${DESKTOP_FILES})
-target_link_libraries ( lz-lid  
+add_executable ( lxqt-lid ${lid_SRCS} ${UIS} ${RSCS} ${QM_FILES} ${MOCS} ${DESKTOP_FILES})
+target_link_libraries ( lxqt-lid  
                         ${RAZOR_LIBRARY}
                         ${QTXDG_LIBRARY}
                         ${QT_QTCORE_LIBRARY} 

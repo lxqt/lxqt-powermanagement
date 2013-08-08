@@ -1,4 +1,4 @@
-project(lz-config-powermanagement)
+project(lxqt-config-powermanagement)
 
 set ( config-powermanagement_MOCS
       mainwindow.h
@@ -26,7 +26,7 @@ set ( config-powermanagement_RSCS
     )
 
 set (DESKTOP_FILES_IN
-     lz-config-powermanagement.desktop.in
+     lxqt-config-powermanagement.desktop.in
     )
 
 QT4_ADD_RESOURCES( RSCS ${config-powermanagement_RSCS})
@@ -48,7 +48,7 @@ add_executable ( ${PROJECT_NAME}
                  ${QM_FILES}
                )
 
-target_link_libraries ( lz-config-powermanagement  
+target_link_libraries ( lxqt-config-powermanagement  
                         ${RAZOR_LIBRARY}
                         ${QTXDG_LIBRARY}
                         ${QT_QTCORE_LIBRARY} 

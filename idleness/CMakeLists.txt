@@ -1,4 +1,4 @@
-set(PROJECT lz-idleness)
+set(PROJECT lxqt-idleness)
 project(${PROJECT})
 
 set(MOC_FILES
