@@ -27,8 +27,7 @@
 
 #include <QDBusConnection>
 #include <QDebug>
-#include <razorqt/razorapplication.h>
-#include "razortranslate.h"
+#include <lxqt/razorapplication.h>
 #include "batterywatcherd.h"
 
 int main(int argc, char *argv[])
@@ -36,7 +35,7 @@ int main(int argc, char *argv[])
 
     RazorApplication a(argc, argv);
     a.setQuitOnLastWindowClosed(false);
-    TRANSLATE_APP;
+//    TRANSLATE_APP;
 
     // To ensure only one instance of razor-autosuspend is running we register as a DBus service and refuse to run
     // if not able to do so.
@@ -48,7 +47,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-        BatteryWatcherd razorAutosuspendd;
+        BatteryWatcherd batteryWatcherd;
         return a.exec();
     }
 }

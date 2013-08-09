@@ -32,7 +32,7 @@
 #include <QDebug>
 #include <QMetaObject>
 #include <QMetaProperty>
-#include <razorqt/razorsettings.h>
+#include <lxqt/razorsettings.h>
 #include "../config/constants.h"
 
 Battery::Battery(QObject* parent) 

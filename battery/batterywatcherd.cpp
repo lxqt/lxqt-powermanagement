@@ -27,7 +27,7 @@
 #include <QtCore/QDebug>
 #include <QtCore/QTimer>
 #include <QtCore/QCoreApplication>
-#include <razorqt/razorautostartentry.h>
+#include <lxqt/razorautostartentry.h>
 
 #include "batterywatcherd.h"
 #include "../config/constants.h"

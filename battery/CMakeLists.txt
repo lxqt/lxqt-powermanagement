@@ -41,7 +41,7 @@ add_executable ( lxqt-battery
                )
 
 target_link_libraries ( lxqt-battery  
-                        ${RAZOR_LIBRARY}
+                        lxqt
                         ${QTXDG_LIBRARY}
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY} 

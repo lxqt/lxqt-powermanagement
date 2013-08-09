@@ -22,14 +22,13 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <razorqt/razorapplication.h>
+#include <lxqt/razorapplication.h>
 #include "idlenesswatcherd.h"
-#include "razortranslate.h"
 
 int main(int argc, char** argv)
 {
     RazorApplication app(argc, argv);
-    TRANSLATE_APP;
+//    TRANSLATE_APP;
 
     app.setQuitOnLastWindowClosed(false);
 

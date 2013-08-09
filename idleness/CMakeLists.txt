@@ -20,20 +20,20 @@ file(GLOB DESKTOP_FILES_IN
     resources/*.desktop.in
 )
 
-# Translations **********************************
-include(RazorTranslate)
-razor_translate_ts(QM_FILES
-    SOURCES
-        ${H_FILES}
-        ${CPP_FILES}
-        ${UI_FILES}
-)
-
-razor_translate_desktop(DESKTOP_FILES
-    SOURCES
-        ${DESKTOP_FILES_IN}
-)
-#************************************************
+## Translations **********************************
+#include(RazorTranslate)
+#razor_translate_ts(QM_FILES
+#    SOURCES
+#        ${H_FILES}
+#        ${CPP_FILES}
+#        ${UI_FILES}
+#)
+#
+#razor_translate_desktop(DESKTOP_FILES
+#    SOURCES
+#        ${DESKTOP_FILES_IN}
+#)
+##************************************************
 
 qt4_wrap_cpp(MOC_SOURCES ${MOC_FILES})
 qt4_add_dbus_adaptor(CPP_FILES
@@ -41,9 +41,6 @@ qt4_add_dbus_adaptor(CPP_FILES
     idlenesswatcherd.h 
     IdlenessWatcherd
 )
-
-find_package(Razor)
-find_package(QtXdg)
 
 # XCB stuff (TODO: move into findXCB)
 find_package(PkgConfig)
@@ -96,14 +93,14 @@ include_directories(
 
 add_executable(${PROJECT} ${CPP_FILES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
 add_dependencies(${PROJECT} razorqt)
-target_link_libraries(${PROJECT}
-                        ${QTXDG_LIBRARY}
-                        ${RAZOR_LIBRARY}
-                        ${QT_LIBRARIES}
-                        ${XCB_LIBRARY}
-                        ${XCB_SCREENSAVER_LIBRARY}
-                        ${XCB_DPMS_LIBRARY}
-                        ${X11_XCB_LIBRARY}
+target_link_libraries( ${PROJECT}
+                       lxqt 
+                       ${QTXDG_LIBRARY}
+                       ${QT_LIBRARIES}
+                       ${XCB_LIBRARY}
+                       ${XCB_SCREENSAVER_LIBRARY}
+                       ${XCB_DPMS_LIBRARY}
+                       ${X11_XCB_LIBRARY}
 )
 
 install(TARGETS ${PROJECT} RUNTIME DESTINATION bin)

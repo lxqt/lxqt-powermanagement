@@ -8,8 +8,7 @@ endif (NOT BUILD_TOOLS_DIR)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${BUILD_TOOLS_DIR})
 
-find_package(Razor REQUIRED)
-find_package(QtXdg REQUIRED)
+find_package(QTXDG REQUIRED)
 
 set(QT_USE_QTDBUS 1)
 

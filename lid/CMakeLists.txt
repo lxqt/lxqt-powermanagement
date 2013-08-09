@@ -27,30 +27,27 @@ set(DESKTOP_FILES_IN
 #    lid.desktop.in
 )
 
-find_package(Razor)
-find_package(QtXdg)
-
 
 QT4_WRAP_CPP(MOCS ${lid_MOCS})
 
-# Translations **********************************
-include(RazorTranslate)
-razor_translate_ts(QM_FILES
-    SOURCES
-        ${lid_HDRS}
-        ${lid_SRCS}
-        ${lid_UIS}
-)
-
-razor_translate_desktop(DESKTOP_FILES
-    SOURCES
-        ${DESKTOP_FILES_IN}
-)
-#************************************************
+## Translations **********************************
+#include(RazorTranslate)
+#razor_translate_ts(QM_FILES
+#    SOURCES
+#        ${lid_HDRS}
+#        ${lid_SRCS}
+#        ${lid_UIS}
+#)
+#
+#razor_translate_desktop(DESKTOP_FILES
+#    SOURCES
+#        ${DESKTOP_FILES_IN}
+#)
+##************************************************
 
 add_executable ( lxqt-lid ${lid_SRCS} ${UIS} ${RSCS} ${QM_FILES} ${MOCS} ${DESKTOP_FILES})
 target_link_libraries ( lxqt-lid  
-                        ${RAZOR_LIBRARY}
+                        lxqt
                         ${QTXDG_LIBRARY}
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY} 

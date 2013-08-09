@@ -28,7 +28,7 @@
 #define LIDSETTINGS_H
 
 #include <QWidget>
-#include <razorqt/razorsettings.h>
+#include <lxqt/razorsettings.h>
 
 namespace Ui {
 class LidSettings;

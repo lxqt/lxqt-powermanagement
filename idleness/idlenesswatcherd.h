@@ -26,14 +26,14 @@
 #define RAZORSCREENLOCKER_H
 
 #include <xcb/xcb.h>
-#include <razorqt/razorsettings.h>
-#include <razorqt/razornotification.h>
 #include <QtCore/QMap>
 #include <QtCore/QTimer>
 #include <QtCore/QProcess>
 #include <QtCore/QDateTime>
 #include <QtDBus/QDBusContext>
 #include <QtDBus/QDBusServiceWatcher>
+#include <lxqt/razorsettings.h>
+#include <lxqt/razornotification.h>
 
 class IdlenessWatcherd : public QObject, protected QDBusContext
 {

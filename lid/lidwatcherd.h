@@ -29,9 +29,9 @@
 
 #include <QObject>
 #include <QTime>
-#include <razorqt/razornotification.h>
-#include <razorqt/razorsettings.h>
-#include <razorqt/razorpower.h>
+#include <lxqt/razornotification.h>
+#include <lxqt/razorsettings.h>
+#include <lxqt/razorpower.h>
 #include "lid.h"
 
 class LidWatcherd : public QObject

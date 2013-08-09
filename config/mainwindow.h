@@ -27,7 +27,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <razorqt/razorconfigdialog.h>
+#include <lxqt/razorconfigdialog.h>
 
 class MainWindow : public RazorConfigDialog
 {

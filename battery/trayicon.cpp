@@ -25,13 +25,14 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include "trayicon.h"
-#include "razorqt/razorsettings.h"
-#include "../config/constants.h"
 #include <math.h>
 #include <QtCore/QDebug>
 #include <QtSvg/QSvgRenderer>
 #include <QtGui/QPainter>
+#include <lxqt/razorsettings.h>
+
+#include "trayicon.h"
+#include "../config/constants.h"
 
 class IconNamingScheme 
 {

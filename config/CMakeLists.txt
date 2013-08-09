@@ -49,7 +49,7 @@ add_executable ( ${PROJECT_NAME}
                )
 
 target_link_libraries ( lxqt-config-powermanagement  
-                        ${RAZOR_LIBRARY}
+                        lxqt
                         ${QTXDG_LIBRARY}
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY}  

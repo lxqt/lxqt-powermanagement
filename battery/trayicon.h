@@ -32,7 +32,7 @@
 #include <QtGui/QWidget>
 #include <QtGui/QIcon>
 #include <QtCore/QVariantMap>
-#include <razorqt/razorsettings.h>
+#include <lxqt/razorsettings.h>
 #include "batteryinfo.h"
 #include "battery.h"
 

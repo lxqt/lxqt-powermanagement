@@ -28,9 +28,9 @@
 #define GENERALSETTINGS_H
 
 #include <QWidget>
-#include <razorqt/razorsettings.h>
-#include <razorqt/razorconfigdialog.h>
-#include <razorqt/razorautostartentry.h>
+#include <lxqt/razorsettings.h>
+#include <lxqt/razorconfigdialog.h>
+#include <lxqt/razorautostartentry.h>
 #include "constants.h"
 
 namespace Ui {
