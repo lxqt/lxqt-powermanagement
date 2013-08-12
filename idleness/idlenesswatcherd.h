@@ -22,8 +22,8 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef RAZORSCREENLOCKER_H
-#define RAZORSCREENLOCKER_H
+#ifndef IDLENESSWATCHERD_H
+#define IDLENESSWATCHERD_H
 
 #include <xcb/xcb.h>
 #include <QtCore/QMap>
@@ -86,4 +86,4 @@ private:
     bool mTurnOffDisplay;
 };
 
-#endif // RAZORSCREENLOCKER_H
+#endif // IDLENESSWATCHERD_H

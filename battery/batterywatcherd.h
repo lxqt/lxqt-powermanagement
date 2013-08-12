@@ -24,8 +24,8 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#ifndef RAZORAUTOSUSPENDD_H
-#define RAZORAUTOSUSPENDD_H
+#ifndef BATTERYWATCHERD_H
+#define BATTERYWATCHERD_H
 
 #include <QObject>
 #include <QTime>
@@ -59,4 +59,4 @@ private:
     RazorSettings mSettings;
 };
 
-#endif // RAZORAUTOSUSPENDD_H
+#endif // BATTERYWATCHERD_H

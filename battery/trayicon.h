@@ -25,8 +25,8 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef TRAYICON_H
+#define TRAYICON_H
 
 #include <QtGui/QSystemTrayIcon>
 #include <QtGui/QWidget>
@@ -67,4 +67,4 @@ private slots:
     void showStatus(QSystemTrayIcon::ActivationReason reason);
 };
 
-#endif // MAINWINDOW_H
+#endif // TRAYICON_H
