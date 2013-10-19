@@ -32,7 +32,7 @@
 #include <QtGui/QWidget>
 #include <QtGui/QIcon>
 #include <QtCore/QVariantMap>
-#include <lxqt/razorsettings.h>
+#include <lxqt/lxqtsettings.h>
 #include "batteryinfo.h"
 #include "battery.h"
 
@@ -57,7 +57,7 @@ private:
     
     Battery* mBattery; 
     BatteryInfo mBatteryInfo;
-    RazorSettings mSettings;
+    LxQt::Settings mSettings;
     const IconNamingScheme* mCurrentNamingScheme;
 
 private slots:

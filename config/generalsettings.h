@@ -28,9 +28,9 @@
 #define GENERALSETTINGS_H
 
 #include <QWidget>
-#include <lxqt/razorsettings.h>
-#include <lxqt/razorconfigdialog.h>
-#include <lxqt/razorautostartentry.h>
+#include <lxqt/lxqtsettings.h>
+#include <lxqt/lxqtconfigdialog.h>
+#include <lxqt/lxqtautostartentry.h>
 #include "constants.h"
 
 namespace Ui {
@@ -42,7 +42,7 @@ class GeneralSettings : public QWidget
     Q_OBJECT
     
 public:
-    explicit GeneralSettings(RazorSettings *settings, RazorConfigDialog *parent = 0);
+    explicit GeneralSettings(LxQt::Settings *settings, LxQt::ConfigDialog *parent = 0);
     ~GeneralSettings();
 
 public slots:
@@ -54,9 +54,9 @@ private slots:
     void onClose();
 
 private:
-    RazorSettings *mSettings;
+    LxQt::Settings *mSettings;
     Ui::GeneralSettings *mUi;
-    RazorAutostartEntry mAutostart;
+    LxQt::AutostartEntry mAutostart;
     bool mLoading;
     bool mModuleRunning;
 };

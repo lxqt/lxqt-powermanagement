@@ -29,7 +29,7 @@
 #include <QtCore/QDebug>
 #include <QtSvg/QSvgRenderer>
 #include <QtGui/QPainter>
-#include <lxqt/razorsettings.h>
+#include <lxqt/lxqtsettings.h>
 
 #include "trayicon.h"
 #include "../config/constants.h"
@@ -58,7 +58,7 @@ TrayIcon::TrayIcon(Battery* battery, QObject *parent) :
         mSettings("razor-autosuspend")
 {
     connect(mBattery, SIGNAL(batteryChanged()), this, SLOT(update()));
-    connect(RazorSettings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(iconThemeChanged()));
+    connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(iconThemeChanged()));
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
     connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(showStatus(QSystemTrayIcon::ActivationReason)));
 

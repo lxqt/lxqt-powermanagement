@@ -31,7 +31,7 @@
 #include "generalsettings.h"
 #include "ui_generalsettings.h"
 
-GeneralSettings::GeneralSettings(RazorSettings *settings, RazorConfigDialog *parent) :
+GeneralSettings::GeneralSettings(LxQt::Settings *settings, LxQt::ConfigDialog *parent) :
     QWidget(parent),
     mUi(new Ui::GeneralSettings),
     mAutostart("razor-autosuspend.desktop"),
@@ -65,7 +65,7 @@ void GeneralSettings::saveSettings()
 void GeneralSettings::loadSettings()
 {
     mLoading = true;
-    mAutostart = RazorAutostartEntry("razor-autosuspend.desktop");
+    mAutostart = LxQt::AutostartEntry("razor-autosuspend.desktop");
     mUi->startupCheckBox->setChecked(mAutostart.isEnabled());
     mUi->showTrayIconCheckBox->setChecked(mSettings->value(SHOWTRAYICON_KEY, true).toBool());
     mUi->useThemeStatusIconsCheckBox->setChecked(mSettings->value(USETHEMEICONS_KEY, true).toBool());

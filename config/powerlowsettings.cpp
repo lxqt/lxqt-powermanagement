@@ -28,7 +28,7 @@
 #include "ui_powerlowsettings.h"
 #include "constants.h"
 
-PowerLowSettings::PowerLowSettings(RazorSettings *settings, QWidget *parent) :
+PowerLowSettings::PowerLowSettings(LxQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
     mUi(new Ui::PowerLowSettings), mLoading(false)
 {

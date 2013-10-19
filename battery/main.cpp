@@ -27,13 +27,13 @@
 
 #include <QDBusConnection>
 #include <QDebug>
-#include <lxqt/razorapplication.h>
+#include <lxqt/lxqtapplication.h>
 #include "batterywatcherd.h"
 
 int main(int argc, char *argv[])
 {
 
-    RazorApplication a(argc, argv);
+    LxQt::Application a(argc, argv);
     a.setQuitOnLastWindowClosed(false);
 //    TRANSLATE_APP;
 

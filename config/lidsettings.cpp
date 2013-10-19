@@ -28,7 +28,7 @@
 #include "ui_lidsettings.h"
 #include "constants.h"
 
-LidSettings::LidSettings(RazorSettings *settings, QWidget *parent) :
+LidSettings::LidSettings(LxQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
     mUi(new Ui::LidSettings),
     mLoading(false)

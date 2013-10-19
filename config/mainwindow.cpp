@@ -30,7 +30,7 @@
 #include "powerlowsettings.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-    RazorConfigDialog(tr("Razor Autosuspend Configuration"), new RazorSettings("razor-autosuspend"), parent)
+    LxQt::ConfigDialog(tr("Razor Autosuspend Configuration"), new LxQt::Settings("razor-autosuspend"), parent)
 {
 
     GeneralSettings* generalSettings = new GeneralSettings(mSettings, this);

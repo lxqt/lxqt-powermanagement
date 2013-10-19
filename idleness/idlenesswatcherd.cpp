@@ -27,7 +27,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QDebug>
 #include <QtDBus/QDBusServiceWatcher>
-#include <lxqt/programfinder.h>
+#include <lxqt/lxqtprogramfinder.h>
 
 #include "screensaveradaptor.h"
 #include "idlenesswatcherd.h"
@@ -44,8 +44,8 @@
 
 IdlenessWatcherd::IdlenessWatcherd(QObject* parent) :
     QObject(parent),
-    mSettings("razor-screenlocker"),
-    mErrorNotification(tr("Razor Screenlocker failed to start")),
+    mSettings("lxqt-screenlocker"),
+    mErrorNotification(tr("LxQt Screenlocker failed to start")),
     mDBusWatcher(this),
     mInhibitorCookie(0),
     mIsLocked(false)
@@ -58,7 +58,7 @@ IdlenessWatcherd::IdlenessWatcherd(QObject* parent) :
     // Note that XCB is asynchronous, so we want to make requests ASAP and get the responses as late as possible.
 
     mScreen = screenOfDisplay(mConn, 0);
-    mErrorNotification.setUrgencyHint(RazorNotification::UrgencyCritical);
+    mErrorNotification.setUrgencyHint(LxQt::Notification::UrgencyCritical);
     mErrorNotification.setIcon("object-unlocked");
     mErrorNotification.setTimeout(0);
 
@@ -234,7 +234,7 @@ void IdlenessWatcherd::loadSettings()
     mIdleTimeoutMs = mSettings.value("IdleTimeoutSecs", 5 * 60).toInt() * 1000;
     mTurnOffDisplay = mSettings.value("TurnOffDisplay", true).toBool();
 
-    if (ProgramFinder::programExists(mLockCommand))
+    if (LxQt::ProgramFinder::programExists(mLockCommand))
     {
         restartTimer();
         mErrorNotification.close();
@@ -242,7 +242,7 @@ void IdlenessWatcherd::loadSettings()
     else
     {
         mErrorNotification.setSummary(tr("ERROR: Can't lock screen"));
-        mErrorNotification.setBody(tr("Program \"%1\" does not exist!").arg(ProgramFinder::programName(mLockCommand)));
+        mErrorNotification.setBody(tr("Program \"%1\" does not exist!").arg(LxQt::ProgramFinder::programName(mLockCommand)));
         mErrorNotification.update();
         mTimer.stop();
     }

@@ -29,9 +29,9 @@
 
 #include <QObject>
 #include <QTime>
-#include <lxqt/razornotification.h>
-#include <lxqt/razorsettings.h>
-#include <lxqt/razorpower.h>
+#include <lxqt/lxqtnotification.h>
+#include <lxqt/lxqtsettings.h>
+#include <lxqt/lxqtpower.h>
 #include "lid.h"
 
 class LidWatcherd : public QObject
@@ -48,8 +48,8 @@ private:
     void doAction(int action);
 
     Lid mLid;
-    RazorPower mRazorPower;
-    RazorSettings mSettings;
+    LxQt::Power mRazorPower;
+    LxQt::Settings mSettings;
 
 };
 

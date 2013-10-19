@@ -27,13 +27,13 @@
 
 #include <QDBusConnection>
 #include <QDebug>
-#include <lxqt/razorapplication.h>
+#include <lxqt/lxqtapplication.h>
 #include "lidwatcherd.h"
 
 int main(int argc, char *argv[])
 {
 
-    RazorApplication a(argc, argv);
+    LxQt::Application a(argc, argv);
 //    TRANSLATE_APP;
 
     // To ensure only one instance of lidwatcherd is running we register as a DBus service and refuse to run

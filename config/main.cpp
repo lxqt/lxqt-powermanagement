@@ -25,12 +25,12 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <lxqt/razorapplication.h>
+#include <lxqt/lxqtapplication.h>
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
-    RazorApplication a(argc, argv);
+    LxQt::Application a(argc, argv);
 //    TRANSLATE_APP;
 
     MainWindow mainWindow;

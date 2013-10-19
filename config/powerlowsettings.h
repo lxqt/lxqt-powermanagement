@@ -28,7 +28,7 @@
 #define POWERLOWSETTINGS_H
 
 #include <QWidget>
-#include <lxqt/razorsettings.h>
+#include <lxqt/lxqtsettings.h>
 
 namespace Ui {
 class PowerLowSettings;
@@ -39,7 +39,7 @@ class PowerLowSettings : public QWidget
     Q_OBJECT
     
 public:
-    explicit PowerLowSettings(RazorSettings *settings, QWidget *parent = 0);
+    explicit PowerLowSettings(LxQt::Settings *settings, QWidget *parent = 0);
     ~PowerLowSettings();
 
 public slots:
@@ -49,7 +49,7 @@ private slots:
     void saveSettings();
 
 private:
-    RazorSettings *mSettings;
+    LxQt::Settings *mSettings;
     Ui::PowerLowSettings *mUi;
     bool mLoading;
 };

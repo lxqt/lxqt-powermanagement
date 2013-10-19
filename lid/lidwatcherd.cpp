@@ -27,7 +27,7 @@
 #include <QtCore/QDebug>
 #include <QtCore/QTimer>
 #include <QtCore/QCoreApplication>
-#include <lxqt/razorautostartentry.h>
+#include <lxqt/lxqtautostartentry.h>
 
 #include "lidwatcherd.h"
 #include "../config/constants.h"

@@ -27,7 +27,7 @@
 #include <QtCore/QDebug>
 #include <QtCore/QTimer>
 #include <QtCore/QCoreApplication>
-#include <lxqt/razorautostartentry.h>
+#include <lxqt/lxqtautostartentry.h>
 
 #include "batterywatcherd.h"
 #include "../config/constants.h"
@@ -50,7 +50,7 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
         if (performFirstRunCheck)
         {
             qWarning() << "No battery detected - disabling Razor Autosuspend";
-            RazorAutostartEntry autostartEntry("razor-autosuspend.desktop");
+            LxQt::AutostartEntry autostartEntry("razor-autosuspend.desktop");
             autostartEntry.setEnabled(false);
             autostartEntry.commit();
 
@@ -59,13 +59,13 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
             return;
         }
 
-        RazorNotification::notify(tr("No battery!"),
+        LxQt::Notification::notify(tr("No battery!"),
                                   tr("Razor autosuspend could not find data about any battery - actions on power low will not work"),
                                   "razor-autosuspend");
     }
 
     mRazorNotification.setIcon("razor-autosuspend");
-    mRazorNotification.setUrgencyHint(RazorNotification::UrgencyCritical);
+    mRazorNotification.setUrgencyHint(LxQt::Notification::UrgencyCritical);
     mRazorNotification.setTimeout(2000);
 
     new TrayIcon(mBattery, this);

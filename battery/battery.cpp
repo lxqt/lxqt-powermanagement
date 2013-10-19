@@ -32,7 +32,7 @@
 #include <QDebug>
 #include <QMetaObject>
 #include <QMetaProperty>
-#include <lxqt/razorsettings.h>
+#include <lxqt/lxqtsettings.h>
 #include "../config/constants.h"
 
 Battery::Battery(QObject* parent) 
@@ -95,7 +95,7 @@ double Battery::chargeLevel()
 
 bool Battery::powerLow()
 {
-    return  discharging() && chargeLevel() <  RazorSettings("razor-autosuspend").value(POWERLOWLEVEL_KEY, 15).toInt();
+    return  discharging() && chargeLevel() <  LxQt::Settings("razor-autosuspend").value(POWERLOWLEVEL_KEY, 15).toInt();
 }
 
 bool Battery::discharging()

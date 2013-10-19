@@ -28,7 +28,7 @@
 #define LIDSETTINGS_H
 
 #include <QWidget>
-#include <lxqt/razorsettings.h>
+#include <lxqt/lxqtsettings.h>
 
 namespace Ui {
 class LidSettings;
@@ -39,7 +39,7 @@ class LidSettings : public QWidget
     Q_OBJECT
     
 public:
-    explicit LidSettings(RazorSettings *settings, QWidget *parent = 0);
+    explicit LidSettings(LxQt::Settings *settings, QWidget *parent = 0);
     ~LidSettings();
 
 public slots:
@@ -50,7 +50,7 @@ private slots:
 
 private:
 
-    RazorSettings *mSettings;
+    LxQt::Settings *mSettings;
     Ui::LidSettings *mUi;
     bool mLoading;
 };

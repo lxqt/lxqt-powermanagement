@@ -32,8 +32,8 @@
 #include <QtCore/QDateTime>
 #include <QtDBus/QDBusContext>
 #include <QtDBus/QDBusServiceWatcher>
-#include <lxqt/razorsettings.h>
-#include <lxqt/razornotification.h>
+#include <lxqt/lxqtsettings.h>
+#include <lxqt/lxqtnotification.h>
 
 class IdlenessWatcherd : public QObject, protected QDBusContext
 {
@@ -70,10 +70,10 @@ private:
 
     static xcb_screen_t* screenOfDisplay(xcb_connection_t* mConn, int screen);
 
-    RazorSettings mSettings;
+    LxQt::Settings mSettings;
     QTimer mTimer;
     QProcess mLockProcess;
-    RazorNotification mErrorNotification;
+    LxQt::Notification mErrorNotification;
     QString mLockCommand;
     QDateTime mLockTime;
     QMap<uint,QString> mInhibitors;

@@ -29,9 +29,9 @@
 
 #include <QObject>
 #include <QTime>
-#include <lxqt/razornotification.h>
-#include <lxqt/razorsettings.h>
-#include <lxqt/razorpower.h>
+#include <lxqt/lxqtnotification.h>
+#include <lxqt/lxqtsettings.h>
+#include <lxqt/lxqtpower.h>
 #include "battery.h"
 #include "trayicon.h"
 
@@ -53,10 +53,10 @@ private:
     int powerLowAction();
 
     Battery* mBattery;
-    RazorPower mRazorPower;
-    RazorNotification mRazorNotification;
+    LxQt::Power mRazorPower;
+    LxQt::Notification mRazorNotification;
     QTime mActionTime;
-    RazorSettings mSettings;
+    LxQt::Settings mSettings;
 };
 
 #endif // BATTERYWATCHERD_H
