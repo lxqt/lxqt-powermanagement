@@ -1,5 +1,8 @@
 project(lxqt-config-powermanagement)
 
+find_package(LXQT REQUIRED)
+include(${LXQT_USE_FILE})
+
 set ( config-powermanagement_MOCS
       mainwindow.h
       generalsettings.h
