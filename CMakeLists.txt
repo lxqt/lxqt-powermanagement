@@ -1,4 +1,4 @@
-set(PROJECT lz-powermanagement)
+set(PROJECT lxqt-powermanagement)
 cmake_minimum_required( VERSION 2.6 )
 project(${PROJECT})
 
