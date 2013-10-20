@@ -52,8 +52,8 @@ add_executable ( ${PROJECT_NAME}
                )
 
 target_link_libraries ( lxqt-config-powermanagement  
-                        lxqt
-                        ${QTXDG_LIBRARY}
+                        ${LXQT_LIBRARIES}
+                        ${QTXDG_LIBRARIES}
                         ${QT_QTCORE_LIBRARY} 
                         ${QT_QTGUI_LIBRARY}  
                         ${QT_QTDBUS_LIBRARY}
