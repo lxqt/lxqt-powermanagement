@@ -208,7 +208,7 @@ void IdlenessWatcherd::notificationAction(int num)
     switch (num)
     {
     case 0: // "Configure"
-        QProcess::startDetached("razor-config-screenlocker");
+        QProcess::startDetached("lxqt-config-screenlocker");
     }
 }
 

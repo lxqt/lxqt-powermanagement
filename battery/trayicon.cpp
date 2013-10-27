@@ -55,7 +55,7 @@ private:
 TrayIcon::TrayIcon(Battery* battery, QObject *parent) : 
     QSystemTrayIcon(parent), 
         mBattery(battery), 
-        mSettings("razor-autosuspend")
+        mSettings("lxqt-autosuspend")
 {
     connect(mBattery, SIGNAL(batteryChanged()), this, SLOT(update()));
     connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(iconThemeChanged()));

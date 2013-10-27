@@ -34,7 +34,7 @@
 GeneralSettings::GeneralSettings(LxQt::Settings *settings, LxQt::ConfigDialog *parent) :
     QWidget(parent),
     mUi(new Ui::GeneralSettings),
-    mAutostart("razor-autosuspend.desktop"),
+    mAutostart("lxqt-autosuspend.desktop"),
     mLoading(false),
     mModuleRunning(false)
 {
@@ -65,7 +65,7 @@ void GeneralSettings::saveSettings()
 void GeneralSettings::loadSettings()
 {
     mLoading = true;
-    mAutostart = LxQt::AutostartEntry("razor-autosuspend.desktop");
+    mAutostart = LxQt::AutostartEntry("lxqt-autosuspend.desktop");
     mUi->startupCheckBox->setChecked(mAutostart.isEnabled());
     mUi->showTrayIconCheckBox->setChecked(mSettings->value(SHOWTRAYICON_KEY, true).toBool());
     mUi->useThemeStatusIconsCheckBox->setChecked(mSettings->value(USETHEMEICONS_KEY, true).toBool());

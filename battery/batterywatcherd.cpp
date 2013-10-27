@@ -36,7 +36,7 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
     QObject(parent),
     mRazorNotification(tr("Power low"), this),
     mActionTime(),
-    mSettings("razor-autosuspend")
+    mSettings("lxqt-autosuspend")
 {
     bool performFirstRunCheck = mSettings.value(FIRSTRUNCHECK_KEY, false).toBool();
     if (performFirstRunCheck)
@@ -50,7 +50,7 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
         if (performFirstRunCheck)
         {
             qWarning() << "No battery detected - disabling Razor Autosuspend";
-            LxQt::AutostartEntry autostartEntry("razor-autosuspend.desktop");
+            LxQt::AutostartEntry autostartEntry("lxqt-autosuspend.desktop");
             autostartEntry.setEnabled(false);
             autostartEntry.commit();
 
@@ -61,10 +61,10 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
 
         LxQt::Notification::notify(tr("No battery!"),
                                   tr("Razor autosuspend could not find data about any battery - actions on power low will not work"),
-                                  "razor-autosuspend");
+                                  "lxqt-autosuspend");
     }
 
-    mRazorNotification.setIcon("razor-autosuspend");
+    mRazorNotification.setIcon("lxqt-autosuspend");
     mRazorNotification.setUrgencyHint(LxQt::Notification::UrgencyCritical);
     mRazorNotification.setTimeout(2000);
 

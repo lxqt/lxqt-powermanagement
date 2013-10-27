@@ -30,11 +30,11 @@
 #include "powerlowsettings.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-    LxQt::ConfigDialog(tr("Razor Autosuspend Configuration"), new LxQt::Settings("razor-autosuspend"), parent)
+    LxQt::ConfigDialog(tr("LXDE-Qt Autosuspend Configuration"), new LxQt::Settings("lxqt-autosuspend"), parent)
 {
 
     GeneralSettings* generalSettings = new GeneralSettings(mSettings, this);
-    addPage(generalSettings, tr("General"), "razor-autosuspend");
+    addPage(generalSettings, tr("General"), "lxqt-autosuspend");
     connect(this, SIGNAL(reset()), generalSettings, SLOT(loadSettings()));
 
     LidSettings *lidSettings = new LidSettings(mSettings, this);

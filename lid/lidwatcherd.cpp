@@ -34,7 +34,7 @@
 
 LidWatcherd::LidWatcherd(QObject *parent) :
     QObject(parent),
-    mSettings("razor-autosuspend")
+    mSettings("lxqt-autosuspend")
 {
     bool performFirstRunCheck = mSettings.value(FIRSTRUNCHECK_KEY, false).toBool();
     if (performFirstRunCheck)
