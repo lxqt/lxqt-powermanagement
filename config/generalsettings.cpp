@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2012 Razor team
@@ -82,17 +82,17 @@ void GeneralSettings::startModule(bool enable)
 
     QDBusReply<QStringList> reply = QDBusConnection::sessionBus().interface()->registeredServiceNames();
     QStringList services = reply.value();
-    if (!services.contains("org.razorqt.razor-autosuspend"))
+    if (!services.contains("org.lxqt.lxqt-autosuspend"))
     {
-        if (services.contains("org.razorqt.session"))
+        if (services.contains("org.lxqt.session"))
         {
-            QDBusInterface interface("org.razorqt.session", "/RazorSession", "",
+            QDBusInterface interface("org.lxqt.session", "/LxQtSession", "",
                                      QDBusConnection::sessionBus(), this);
             QList<QVariant> arg;
             arg.append(mAutostart.name());
             interface.callWithArgumentList(QDBus::NoBlock, "startModule", arg);
         }
-        else // in case razor-session is not being used
+        else // in case lxqt-session is not being used
         {
             mAutostart.file().startDetached();
         }
@@ -104,7 +104,7 @@ void GeneralSettings::onClose()
 {
     if (!mAutostart.isEnabled())
     {
-        QDBusInterface interface("org.razorqt.session", "/RazorSession", "",
+        QDBusInterface interface("org.lxqt.session", "/LxQtSession", "",
                                  QDBusConnection::sessionBus(), this);
         QList<QVariant> arg;
         arg.append(mAutostart.name());

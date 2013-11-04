@@ -23,7 +23,7 @@
       <item>
        <widget class="QCheckBox" name="startupCheckBox">
         <property name="text">
-         <string>Enable Razor Autosuspend</string>
+         <string>Enable LxQt Autosuspend</string>
         </property>
        </widget>
       </item>

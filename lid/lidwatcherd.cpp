@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2012 Razor team
@@ -62,13 +62,13 @@ void LidWatcherd::doAction(int action)
     switch (action)
     {
     case SLEEP:
-        mRazorPower.suspend();
+        mLxQtPower.suspend();
         break;
     case HIBERNATE:
-        mRazorPower.hibernate();
+        mLxQtPower.hibernate();
         break;
     case POWEROFF:
-        mRazorPower.shutdown();
+        mLxQtPower.shutdown();
         break;
     }
 }

@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2011 Razor team
@@ -37,12 +37,12 @@ int main(int argc, char *argv[])
     a.setQuitOnLastWindowClosed(false);
 //    TRANSLATE_APP;
 
-    // To ensure only one instance of razor-autosuspend is running we register as a DBus service and refuse to run
+    // To ensure only one instance of lxqt-autosuspend is running we register as a DBus service and refuse to run
     // if not able to do so.
     // We do not register any object as we don't have any dbus-operations to expose.
-    if (! QDBusConnection::sessionBus().registerService("org.razorqt.razor-autosuspend"))
+    if (! QDBusConnection::sessionBus().registerService("org.lxqt.lxqt-autosuspend"))
     {
-        qWarning() << "Unable to register 'org.razorqt.razor-autosuspend' service - is another instance of razor-autosuspend running?";
+        qWarning() << "Unable to register 'org.lxqt.lxqt-autosuspend' service - is another instance of lxqt-autosuspend running?";
         return 1;
     }
     else

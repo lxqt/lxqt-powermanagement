@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2012 Razor team
@@ -53,8 +53,8 @@ private:
     int powerLowAction();
 
     Battery* mBattery;
-    LxQt::Power mRazorPower;
-    LxQt::Notification mRazorNotification;
+    LxQt::Power mLxQtPower;
+    LxQt::Notification mLxQtNotification;
     QTime mActionTime;
     LxQt::Settings mSettings;
 };

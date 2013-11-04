@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2012 Razor team
@@ -34,7 +34,7 @@
 
 BatteryWatcherd::BatteryWatcherd(QObject *parent) :
     QObject(parent),
-    mRazorNotification(tr("Power low"), this),
+    mLxQtNotification(tr("Power low"), this),
     mActionTime(),
     mSettings("lxqt-autosuspend")
 {
@@ -49,7 +49,7 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
     {
         if (performFirstRunCheck)
         {
-            qWarning() << "No battery detected - disabling Razor Autosuspend";
+            qWarning() << "No battery detected - disabling LxQt Autosuspend";
             LxQt::AutostartEntry autostartEntry("lxqt-autosuspend.desktop");
             autostartEntry.setEnabled(false);
             autostartEntry.commit();
@@ -60,13 +60,13 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
         }
 
         LxQt::Notification::notify(tr("No battery!"),
-                                  tr("Razor autosuspend could not find data about any battery - actions on power low will not work"),
+                                  tr("LxQt autosuspend could not find data about any battery - actions on power low will not work"),
                                   "lxqt-autosuspend");
     }
 
-    mRazorNotification.setIcon("lxqt-autosuspend");
-    mRazorNotification.setUrgencyHint(LxQt::Notification::UrgencyCritical);
-    mRazorNotification.setTimeout(2000);
+    mLxQtNotification.setIcon("lxqt-autosuspend");
+    mLxQtNotification.setUrgencyHint(LxQt::Notification::UrgencyCritical);
+    mLxQtNotification.setTimeout(2000);
 
     new TrayIcon(mBattery, this);
     connect(mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
@@ -116,8 +116,8 @@ void BatteryWatcherd::timerEvent(QTimerEvent *event)
             break;
         }
 
-        mRazorNotification.setBody(notificationMsg.arg(QTime::currentTime().msecsTo(mActionTime)/1000));
-        mRazorNotification.update();
+        mLxQtNotification.setBody(notificationMsg.arg(QTime::currentTime().msecsTo(mActionTime)/1000));
+        mLxQtNotification.update();
     }
     else
     {
@@ -132,13 +132,13 @@ void BatteryWatcherd::doAction(int action)
     switch (action)
     {
     case SLEEP:
-        mRazorPower.suspend();
+        mLxQtPower.suspend();
         break;
     case HIBERNATE:
-        mRazorPower.hibernate();
+        mLxQtPower.hibernate();
         break;
     case POWEROFF:
-        mRazorPower.shutdown();
+        mLxQtPower.shutdown();
         break;
     }
 }

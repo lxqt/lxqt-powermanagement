@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
 Exec=lxqt-config-autosuspend
-Icon=razor-autosuspend
+Icon=lxqt-autosuspend
 Terminal=false
-OnlyShowIn=Razor;LXDE;
-Categories=Settings;DesktopSettings;Qt;Razor;
-Name=Razor Autosuspend Configuration
+OnlyShowIn=LxQt;LXDE;
+Categories=Settings;DesktopSettings;Qt;LxQt;
+Name=LxQt Autosuspend Configuration
 GenericName=Autosuspend Configuration
 #TRANSLATIONS_DIR=translations

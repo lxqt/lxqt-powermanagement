@@ -21,15 +21,15 @@ file(GLOB DESKTOP_FILES_IN
 )
 
 ## Translations **********************************
-#include(RazorTranslate)
-#razor_translate_ts(QM_FILES
+#include(LxQtTranslate)
+#lxqt_translate_ts(QM_FILES
 #    SOURCES
 #        ${H_FILES}
 #        ${CPP_FILES}
 #        ${UI_FILES}
 #)
 #
-#razor_translate_desktop(DESKTOP_FILES
+#lxqt_translate_desktop(DESKTOP_FILES
 #    SOURCES
 #        ${DESKTOP_FILES_IN}
 #)
@@ -92,7 +92,7 @@ include_directories(
 )
 
 add_executable(${PROJECT} ${CPP_FILES} ${QM_FILES} ${MOC_SOURCES} ${DESKTOP_FILES})
-add_dependencies(${PROJECT} razorqt)
+add_dependencies(${PROJECT} lxqt)
 target_link_libraries( ${PROJECT}
                        lxqt 
                        ${QTXDG_LIBRARY}

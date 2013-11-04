@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright: 2012 Razor team
@@ -24,8 +24,8 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#ifndef RAZORAUTOSUSPENDD_H
-#define RAZORAUTOSUSPENDD_H
+#ifndef LXQTAUTOSUSPENDD_H
+#define LXQTAUTOSUSPENDD_H
 
 #include <QObject>
 #include <QTime>
@@ -48,9 +48,9 @@ private:
     void doAction(int action);
 
     Lid mLid;
-    LxQt::Power mRazorPower;
+    LxQt::Power mLxQtPower;
     LxQt::Settings mSettings;
 
 };
 
-#endif // RAZORAUTOSUSPENDD_H
+#endif // LXQTAUTOSUSPENDD_H

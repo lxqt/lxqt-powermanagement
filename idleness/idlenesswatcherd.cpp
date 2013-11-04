@@ -1,7 +1,7 @@
 /* BEGIN_COMMON_COPYRIGHT_HEADER
  * (c)LGPL2+
  *
- * Razor - a lightweight, Qt based, desktop toolset
+ * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
  * Copyright (C) 2013  Alec Moskvin <alecm@gmx.com>
@@ -113,7 +113,7 @@ IdlenessWatcherd::IdlenessWatcherd(QObject* parent) :
 
     loadSettings();
 
-    qDebug() << "Razor Screenlocker started.";
+    qDebug() << "LxQt Screenlocker started.";
     qDebug() << "timeout:" << mIdleTimeoutMs << "ms, lock command:" << mLockCommand;
 }
 
