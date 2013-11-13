@@ -83,7 +83,6 @@ find_library(XCB_DPMS_LIBRARY NAMES xcb-dpms
 
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
     ${XCB_INCLUDE_DIR}
     ${X11_XCB_INCLUDE_DIR}

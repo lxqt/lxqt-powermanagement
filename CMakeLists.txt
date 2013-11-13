@@ -2,10 +2,6 @@ set(PROJECT lxqt-powermanagement)
 cmake_minimum_required( VERSION 2.6 )
 project(${PROJECT})
 
-if (NOT BUILD_TOOLS_DIR)
-    set (BUILD_TOOLS_DIR ${CMAKE_SOURCE_DIR}/../buildtools)
-endif (NOT BUILD_TOOLS_DIR) 
-
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${BUILD_TOOLS_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 find_package(QTXDG REQUIRED)
