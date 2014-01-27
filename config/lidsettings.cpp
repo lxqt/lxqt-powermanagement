@@ -24,9 +24,11 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
+#include <qt4/QtGui/qcombobox.h>
+
 #include "lidsettings.h"
 #include "ui_lidsettings.h"
-#include "constants.h"
+#include "common.h"
 
 LidSettings::LidSettings(LxQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
@@ -35,7 +37,15 @@ LidSettings::LidSettings(LxQt::Settings *settings, QWidget *parent) :
 {
     mSettings = settings;
     mUi->setupUi(this);
-    connect(mUi->actionComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(saveAction()));
+    fillComboBox(mUi->onBatteryActionComboBox);
+    fillComboBox(mUi->onAcActionComboBox);
+    fillComboBox(mUi->extMonOnBatteryActionComboBox);
+    fillComboBox(mUi->extMonOnAcActionComboBox);
+    connect(mUi->onBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveAction()));
+    connect(mUi->onAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveAction()));
+    connect(mUi->extMonOnBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveAction()));
+    connect(mUi->extMonOnAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveAction()));
+    connect(mUi->extMonGroupBox, SIGNAL(toggled(bool)), this, SLOT(saveAction()));
 }
 
 LidSettings::~LidSettings()
@@ -43,31 +53,23 @@ LidSettings::~LidSettings()
     delete mUi;
 }
 
-
 void LidSettings::loadSettings()
 {
-    mLoading = true;
-    mUi->actionComboBox->clear();
-    mUi->actionComboBox->addItem(tr("Nothing"), NOTHING);
-    mUi->actionComboBox->addItem(tr("Sleep"), SLEEP);
-    mUi->actionComboBox->addItem(tr("Hibernate"), HIBERNATE);
-    mUi->actionComboBox->addItem(tr("Shutdown"), POWEROFF);
+    loadValueFromSettings(mSettings, mUi->onBatteryActionComboBox, LIDCLOSEDACTION_KEY, 0);
+    int fallBackOnAcIfNotDefined = currentValue(mUi->onBatteryActionComboBox);
+    loadValueFromSettings(mSettings, mUi->onAcActionComboBox, LIDCLOSED_AC_ACTION_KEY, fallBackOnAcIfNotDefined);
+    loadValueFromSettings(mSettings, mUi->extMonOnBatteryActionComboBox, LIDCLOSED_EXT_MON_ACTION_KEY, 0);
+    int fallBackExtMonOnAcIfNotDefined = currentValue(mUi->extMonOnBatteryActionComboBox);
+    loadValueFromSettings(mSettings, mUi->extMonOnAcActionComboBox, LIDCLOSED_EXT_MON_AC_ACTION_KEY, fallBackExtMonOnAcIfNotDefined);
 
-    for (int index = 0; index < mUi->actionComboBox->count(); index++)
-    {
-        if (mSettings->value(LIDCLOSEDACTION_KEY, 0) == mUi->actionComboBox->itemData(index).toInt())
-        {
-            mUi->actionComboBox->setCurrentIndex(index);
-            break;
-        }
-    }
-    mLoading = false;
+    mUi->extMonGroupBox->setChecked(mSettings->value(ENABLE_EXT_MON_LIDCLOSED_ACTIONS, false).toBool());
 }
 
 void LidSettings::saveAction()
 {
-    if (! mLoading)
-    {
-        mSettings->setValue(LIDCLOSEDACTION_KEY, mUi->actionComboBox->itemData(mUi->actionComboBox->currentIndex()).toInt());
-    }
+    mSettings->setValue(LIDCLOSEDACTION_KEY, currentValue(mUi->onBatteryActionComboBox));
+    mSettings->setValue(LIDCLOSED_AC_ACTION_KEY, currentValue(mUi->onAcActionComboBox));
+    mSettings->setValue(LIDCLOSED_EXT_MON_ACTION_KEY, currentValue(mUi->extMonOnBatteryActionComboBox));
+    mSettings->setValue(LIDCLOSED_EXT_MON_AC_ACTION_KEY, currentValue(mUi->extMonOnAcActionComboBox));
+    mSettings->setValue(ENABLE_EXT_MON_LIDCLOSED_ACTIONS, mUi->extMonGroupBox->isChecked());
 }

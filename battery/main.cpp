@@ -40,9 +40,9 @@ int main(int argc, char *argv[])
     // To ensure only one instance of lxqt-autosuspend is running we register as a DBus service and refuse to run
     // if not able to do so.
     // We do not register any object as we don't have any dbus-operations to expose.
-    if (! QDBusConnection::sessionBus().registerService("org.lxqt.lxqt-autosuspend"))
+    if (! QDBusConnection::sessionBus().registerService("org.lxqt.lxqt-batterymonitor"))
     {
-        qWarning() << "Unable to register 'org.lxqt.lxqt-autosuspend' service - is another instance of lxqt-autosuspend running?";
+        qWarning() << "Unable to register 'org.lxqt.lxqt-batterywatcher' service - is another instance of lxqt-batterywatcher running?";
         return 1;
     }
     else

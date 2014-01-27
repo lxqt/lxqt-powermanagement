@@ -30,7 +30,7 @@
 #include <lxqt/lxqtautostartentry.h>
 
 #include "batterywatcherd.h"
-#include "../config/constants.h"
+#include "../config/common.h"
 
 BatteryWatcherd::BatteryWatcherd(QObject *parent) :
     QObject(parent),

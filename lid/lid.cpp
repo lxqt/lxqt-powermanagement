@@ -27,6 +27,8 @@
 #include "lid.h"
 #include <QDBusConnection>
 #include <QDBusReply>
+#include <qt4/QtCore/qobject.h>
+#include <QDebug>
 
 Lid::Lid()
 {
@@ -38,9 +40,16 @@ Lid::Lid()
     mIsClosed = mUPowerPropertiesInterface->property("LidIsClosed").toBool();
 }
 
+bool Lid::onBattery()
+{
+    return mUPowerInterface->property("OnBattery").toBool();
+}
+
+
 void Lid::uPowerChange()
 {
     bool newIsClosed = mUPowerInterface->property("LidIsClosed").toBool();
+    qDebug() << "uPowerChange: newIscloded = " << newIsClosed;
     if (newIsClosed != mIsClosed)
     {
         mIsClosed = newIsClosed;

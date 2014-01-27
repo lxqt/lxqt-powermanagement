@@ -24,23 +24,29 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
+#include <QComboBox>
 
-#define LIDCLOSEDACTION_KEY "lidClosedAction"
-#define POWERLOWACTION_KEY "powerLowAction"
-#define POWERLOWWARNING_KEY "powerLowWarning"
-#define POWERLOWLEVEL_KEY "powerLowLevel"
-#define SHOWTRAYICON_KEY "showTrayIcon"
-#define USETHEMEICONS_KEY "useThemeIcons"
-#define FIRSTRUNCHECK_KEY "performFirstRunCheck"
+#include "idlesettings.h"
+#include "ui_idlesettings.h"
+#include "common.h"
 
-enum
+IdleSettings::IdleSettings(LxQt::Settings *settings, QWidget *parent) :
+    QWidget(parent),
+    mUi(new Ui::IdleSettings)
 {
-    NOTHING,
-    SLEEP,
-    HIBERNATE,
-    POWEROFF
-};
+    mSettings = settings;
+    mUi->setupUi(this);
+}
 
-#endif // CONSTANTS_H
+IdleSettings::~IdleSettings()
+{
+    delete mUi;
+}
+
+void IdleSettings::loadSettings()
+{
+}
+
+void IdleSettings::saveAction()
+{
+}

@@ -38,6 +38,7 @@ signals:
 
 public:
     Lid();
+    bool onBattery();
     bool isClosed() { return mIsClosed; }
 
 private:

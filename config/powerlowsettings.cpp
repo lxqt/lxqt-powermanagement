@@ -26,18 +26,21 @@
  * END_COMMON_COPYRIGHT_HEADER */
 #include "powerlowsettings.h"
 #include "ui_powerlowsettings.h"
-#include "constants.h"
+#include "common.h"
 
 PowerLowSettings::PowerLowSettings(LxQt::Settings *settings, QWidget *parent) :
     QWidget(parent),
-    mUi(new Ui::PowerLowSettings), mLoading(false)
+    mUi(new Ui::PowerLowSettings)
 {
     mSettings = settings;
     mUi->setupUi(this);
 
-    connect(mUi->actionComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(saveSettings()));
-    connect(mUi->warningSpinBox, SIGNAL(valueChanged(int)), this, SLOT(saveSettings()));
-    connect(mUi->levelSpinBox, SIGNAL(valueChanged(int)), this, SLOT(saveSettings()));
+    connect(mUi->actionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
+    connect(mUi->warningSpinBox, SIGNAL(editingFinished()), this, SLOT(saveSettings()));
+    connect(mUi->levelSpinBox, SIGNAL(editingFinished()), this, SLOT(saveSettings()));
+    connect(mUi->appearanceGroupBox, SIGNAL(clicked(bool)), this, SLOT(saveSettings()));
+    connect(mUi->useBuiltInIconRadioButton, SIGNAL(clicked()), this, SLOT(saveSettings()));
+    connect(mUi->useThemeIconsRadioButton, SIGNAL(clicked()), this, SLOT(saveSettings()));
 }
 
 PowerLowSettings::~PowerLowSettings()
@@ -47,34 +50,20 @@ PowerLowSettings::~PowerLowSettings()
 
 void PowerLowSettings::loadSettings()
 {
-    mLoading = true;
-    mUi->actionComboBox->clear();
-    mUi->actionComboBox->addItem(tr("Nothing"), NOTHING);
-    mUi->actionComboBox->addItem(tr("Sleep"), SLEEP);
-    mUi->actionComboBox->addItem(tr("Hibernate"), HIBERNATE);
-    mUi->actionComboBox->addItem(tr("Shutdown"), POWEROFF);
-
-    for (int index = 0; index < mUi->actionComboBox->count(); index++)
-    {
-        if (mSettings->value(POWERLOWACTION_KEY, 0) == mUi->actionComboBox->itemData(index).toInt())
-        {
-            mUi->actionComboBox->setCurrentIndex(index);
-            break;
-        }
-    }
-
+    fillComboBox(mUi->actionComboBox);
+    loadValueFromSettings(mSettings, mUi->actionComboBox, POWERLOWACTION_KEY, NOTHING);
     mUi->warningSpinBox->setValue(mSettings->value(POWERLOWWARNING_KEY, 30).toInt());
     mUi->levelSpinBox->setValue(mSettings->value(POWERLOWLEVEL_KEY, 15).toInt());
-    mLoading = false;
+    mUi->appearanceGroupBox->setChecked(mSettings->value(SHOWTRAYICON_KEY).toBool());
+    mUi->useThemeIconsRadioButton->setChecked(mSettings->value(USETHEMEICONS_KEY).toBool());
 }
 
 void PowerLowSettings::saveSettings()
 {
-    if (! mLoading)
-    {
-        mSettings->setValue(POWERLOWACTION_KEY, mUi->actionComboBox->itemData(mUi->actionComboBox->currentIndex()).toInt());
-        mSettings->setValue(POWERLOWWARNING_KEY, mUi->warningSpinBox->value());
-        mSettings->setValue(POWERLOWLEVEL_KEY, mUi->levelSpinBox->value());
-    }
+    mSettings->setValue(POWERLOWACTION_KEY, mUi->actionComboBox->itemData(mUi->actionComboBox->currentIndex()).toInt());
+    mSettings->setValue(POWERLOWWARNING_KEY, mUi->warningSpinBox->value());
+    mSettings->setValue(POWERLOWLEVEL_KEY, mUi->levelSpinBox->value());
+    mSettings->setValue(SHOWTRAYICON_KEY, mUi->appearanceGroupBox->isChecked());
+    mSettings->setValue(USETHEMEICONS_KEY, mUi->useThemeIconsRadioButton->isChecked());
 }
 

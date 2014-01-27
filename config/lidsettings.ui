@@ -6,37 +6,121 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>300</width>
-    <height>300</height>
+    <width>304</width>
+    <height>306</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QGroupBox" name="groupBox_2">
-     <property name="title">
-      <string>Lid closed</string>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <item row="0" column="0">
+    <widget class="QLabel" name="headingLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
-     <layout class="QGridLayout" name="gridLayout">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Action when lid is closed</string>
+     </property>
+     <property name="margin">
+      <number>5</number>
+     </property>
+     <property name="indent">
+      <number>10</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="extMonGroupBox">
+     <property name="title">
+      <string>if using more than one monitor</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
-       <widget class="QLabel" name="actionLabel">
+       <widget class="QLabel" name="extMonOnBatteryActionLabel">
         <property name="text">
-         <string>Action:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <string>On Battery</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QComboBox" name="actionComboBox"/>
+       <widget class="QComboBox" name="extMonOnBatteryActionComboBox"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="extMonOnAcActionComboBox"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="extMonOnAcActionLabel">
+        <property name="text">
+         <string>On AC</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
    </item>
-   <item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="defaultGroupBox">
+     <property name="title">
+      <string>Default</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="1">
+       <widget class="QComboBox" name="onAcActionComboBox"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="onBatteryActionComboBox">
+        <item>
+         <property name="text">
+          <string>Nothing</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Suspend</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Hibernate</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shut down</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="onBatteryActionLabel">
+        <property name="text">
+         <string>On Battery</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="onAcActionLabel">
+        <property name="text">
+         <string>On AC</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>

@@ -51,7 +51,6 @@ private slots:
 private:
     LxQt::Settings *mSettings;
     Ui::PowerLowSettings *mUi;
-    bool mLoading;
 };
 
 #endif // POWERLOWSETTINGS_H

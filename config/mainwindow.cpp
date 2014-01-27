@@ -25,25 +25,24 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 #include "mainwindow.h"
-#include "generalsettings.h"
 #include "lidsettings.h"
 #include "powerlowsettings.h"
+#include "idlesettings.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-    LxQt::ConfigDialog(tr("LXDE-Qt Autosuspend Configuration"), new LxQt::Settings("lxqt-autosuspend"), parent)
+    LxQt::ConfigDialog(tr("LXQt Powermanagement Configuration"), new LxQt::Settings("lxqt-autosuspend"), parent)
 {
-
-    GeneralSettings* generalSettings = new GeneralSettings(mSettings, this);
-    addPage(generalSettings, tr("General"), "lxqt-autosuspend");
-    connect(this, SIGNAL(reset()), generalSettings, SLOT(loadSettings()));
-
     LidSettings *lidSettings = new LidSettings(mSettings, this);
-    addPage(lidSettings, tr("Lid closed"), "laptop-lid");
+    addPage(lidSettings, tr("Lid"), "laptop-lid");
     connect(this, SIGNAL(reset()), lidSettings, SLOT(loadSettings()));
 
     PowerLowSettings* powerLowSettings = new PowerLowSettings(mSettings, this);
-    addPage(powerLowSettings, tr("Power Low"), "battery-low");
+    addPage(powerLowSettings, tr("Battery"), "battery");
     connect(this, SIGNAL(reset()), powerLowSettings, SLOT(loadSettings()));
+
+    IdleSettings* idleSettings = new IdleSettings(mSettings, this);
+    addPage(idleSettings, tr("Idle"), "idle");
+    connect(this, SIGNAL(reset()), idleSettings, SLOT(loadSettings()));
 
     emit reset();
 }

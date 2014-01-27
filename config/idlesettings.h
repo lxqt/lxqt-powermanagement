@@ -4,7 +4,7 @@
  * LXDE-Qt - a lightweight, Qt based, desktop toolset
  * http://razor-qt.org
  *
- * Copyright: 2011 Razor team
+ * Copyright: 2012 Razor team
  * Authors:
  *   Christian Surlykke <christian@surlykke.dk>
  *
@@ -24,29 +24,34 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
+#ifndef IDLE_SETTINGS_H
+#define IDLE_SETTINGS_H
 
-#include <QDBusConnection>
-#include <QDebug>
-#include <lxqt/lxqtapplication.h>
-#include "lidwatcherd.h"
+#include <QWidget>
+#include <lxqt/lxqtsettings.h>
 
-int main(int argc, char *argv[])
-{
-
-    LxQt::Application a(argc, argv);
-//    TRANSLATE_APP;
-
-    // To ensure only one instance of lidwatcherd is running we register as a DBus service and refuse to run
-    // if not able to do so.
-    // We do not register any object as we don't have any dbus-operations to expose.
-    if (! QDBusConnection::sessionBus().registerService("org.lxqt.lidwatcherd"))
-    {
-        qWarning() << "Unable to register 'org.lxqt.lidwatcherd' service - is another instance of lxqt-lid running?";
-        return 1;
-    }
-    else
-    {
-        LidWatcherd lidWatcherd;
-        return a.exec();
-    }
+namespace Ui {
+    class IdleSettings;
 }
+
+class IdleSettings : public QWidget
+{
+    Q_OBJECT
+    
+public:
+    explicit IdleSettings(LxQt::Settings *settings, QWidget *parent = 0);
+    ~IdleSettings();
+
+public slots:
+    void loadSettings();
+
+private slots:
+    void saveAction();
+
+private:
+    
+    LxQt::Settings *mSettings;
+    Ui::IdleSettings *mUi;
+};
+
+#endif // IDLE_SETTINGS_H

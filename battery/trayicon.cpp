@@ -32,7 +32,7 @@
 #include <lxqt/lxqtsettings.h>
 
 #include "trayicon.h"
-#include "../config/constants.h"
+#include "../config/common.h"
 
 class IconNamingScheme 
 {

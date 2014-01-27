@@ -5,23 +5,24 @@ include(${LXQT_USE_FILE})
 
 set ( config-powermanagement_MOCS
       mainwindow.h
-      generalsettings.h
       lidsettings.h
       powerlowsettings.h
+      idlesettings.h
     )
 
 set ( config-powermanagement_SRCS
       main.cpp
       mainwindow.cpp
-      generalsettings.cpp
       lidsettings.cpp
       powerlowsettings.cpp
+      idlesettings.cpp
+      common.cpp
     )
 
 set ( config-powermanagement_UIS
-      generalsettings.ui
       lidsettings.ui
-      powerlowsettings.ui  
+      powerlowsettings.ui
+      idlesettings.ui
     )
 
 set ( config-powermanagement_RSCS
