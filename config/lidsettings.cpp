@@ -24,7 +24,7 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#include <qt4/QtGui/qcombobox.h>
+#include <QComboBox>
 
 #include "lidsettings.h"
 #include "ui_lidsettings.h"

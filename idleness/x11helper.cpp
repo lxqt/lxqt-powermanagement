@@ -25,7 +25,7 @@
 #include "x11helper.h"
 
 #if QT_VERSION < 0x050000
-#include <QtGui/QX11Info>
+#include <QX11Info>
 #include <X11/Xlib-xcb.h>
 
 Display* X11Helper::display()

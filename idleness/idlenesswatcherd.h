@@ -26,12 +26,12 @@
 #define IDLENESSWATCHERD_H
 
 #include <xcb/xcb.h>
-#include <QtCore/QMap>
-#include <QtCore/QTimer>
-#include <QtCore/QProcess>
-#include <QtCore/QDateTime>
-#include <QtDBus/QDBusContext>
-#include <QtDBus/QDBusServiceWatcher>
+#include <QMap>
+#include <QTimer>
+#include <QProcess>
+#include <QDateTime>
+#include <QDBusContext>
+#include <QDBusServiceWatcher>
 #include <lxqt/lxqtsettings.h>
 #include <lxqt/lxqtnotification.h>
 

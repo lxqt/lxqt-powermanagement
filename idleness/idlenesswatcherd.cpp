@@ -24,9 +24,9 @@
 
 #include <xcb/dpms.h>
 #include <xcb/screensaver.h>
-#include <QtCore/QCoreApplication>
-#include <QtCore/QDebug>
-#include <QtDBus/QDBusServiceWatcher>
+#include <QCoreApplication>
+#include <QDebug>
+#include <QDBusServiceWatcher>
 #include <lxqt/lxqtprogramfinder.h>
 
 #include "screensaveradaptor.h"
