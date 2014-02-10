@@ -29,19 +29,18 @@
 #include "common.h"
 
 BatteryWatcherSettings::BatteryWatcherSettings(LxQt::Settings *settings, QWidget *parent) :
-    QGroupBox(parent),
+    QWidget(parent),
     mUi(new Ui::BatteryWatcherSettings)
 
 {
     mSettings = settings;
     mUi->setupUi(this);
-
+   
+    connect(mUi->groupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
     connect(mUi->actionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
     connect(mUi->warningSpinBox, SIGNAL(editingFinished()), this, SLOT(saveSettings()));
     connect(mUi->levelSpinBox, SIGNAL(editingFinished()), this, SLOT(saveSettings()));
-    connect(mUi->appearanceGroupBox, SIGNAL(clicked(bool)), this, SLOT(saveSettings()));
-    connect(mUi->useBuiltInIconRadioButton, SIGNAL(clicked()), this, SLOT(saveSettings()));
-    connect(mUi->useThemeIconsRadioButton, SIGNAL(clicked()), this, SLOT(saveSettings()));
+    connect(mUi->useThemeIconsCheckBox, SIGNAL(clicked(bool)), this, SLOT(saveSettings()));
 }
 
 BatteryWatcherSettings::~BatteryWatcherSettings()
@@ -55,8 +54,7 @@ void BatteryWatcherSettings::loadSettings()
     loadValueFromSettings(mSettings, mUi->actionComboBox, POWERLOWACTION_KEY, NOTHING);
     mUi->warningSpinBox->setValue(mSettings->value(POWERLOWWARNING_KEY, 30).toInt());
     mUi->levelSpinBox->setValue(mSettings->value(POWERLOWLEVEL_KEY, 15).toInt());
-    mUi->appearanceGroupBox->setChecked(mSettings->value(SHOWTRAYICON_KEY).toBool());
-    mUi->useThemeIconsRadioButton->setChecked(mSettings->value(USETHEMEICONS_KEY).toBool());
+    mUi->useThemeIconsCheckBox->setChecked(mSettings->value(USETHEMEICONS_KEY).toBool());
 }
 
 void BatteryWatcherSettings::saveSettings()
@@ -64,7 +62,6 @@ void BatteryWatcherSettings::saveSettings()
     mSettings->setValue(POWERLOWACTION_KEY, mUi->actionComboBox->itemData(mUi->actionComboBox->currentIndex()).toInt());
     mSettings->setValue(POWERLOWWARNING_KEY, mUi->warningSpinBox->value());
     mSettings->setValue(POWERLOWLEVEL_KEY, mUi->levelSpinBox->value());
-    mSettings->setValue(SHOWTRAYICON_KEY, mUi->appearanceGroupBox->isChecked());
-    mSettings->setValue(USETHEMEICONS_KEY, mUi->useThemeIconsRadioButton->isChecked());
+    mSettings->setValue(USETHEMEICONS_KEY, mUi->useThemeIconsCheckBox->isChecked());
 }
 

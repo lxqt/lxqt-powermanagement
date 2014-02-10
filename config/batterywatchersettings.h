@@ -27,14 +27,14 @@
 #ifndef POWERLOWSETTINGS_H
 #define POWERLOWSETTINGS_H
 
-#include <QGroupBox>
+#include <QWidget>
 #include <lxqt/lxqtsettings.h>
 
 namespace Ui {
 class BatteryWatcherSettings;
 }
 
-class BatteryWatcherSettings : public QGroupBox
+class BatteryWatcherSettings : public QWidget
 {
     Q_OBJECT
     
