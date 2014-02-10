@@ -2,9 +2,7 @@
  * (c)LGPL2+
  *
  * LXDE-Qt - a lightweight, Qt based, desktop toolset
- * http://razor-qt.org
  *
- * Copyright: 2011 Razor team
  * Authors:
  *   Christian Surlykke <christian@surlykke.dk>
  *
@@ -28,25 +26,26 @@
 #include <QDBusConnection>
 #include <QDebug>
 #include <lxqt/lxqtapplication.h>
-#include "lidwatcherd.h"
+#include "powermanagementd.h"
 
 int main(int argc, char *argv[])
 {
 
     LxQt::Application a(argc, argv);
+    a.setQuitOnLastWindowClosed(false);
 //    TRANSLATE_APP;
 
-    // To ensure only one instance of lidwatcherd is running we register as a DBus service and refuse to run
+    // To ensure only one instance of lxqt-autosuspend is running we register as a DBus service and refuse to run
     // if not able to do so.
     // We do not register any object as we don't have any dbus-operations to expose.
-    if (! QDBusConnection::sessionBus().registerService("org.lxqt.lidwatcherd"))
+    if (! QDBusConnection::sessionBus().registerService("org.lxqt.lxqt-powermanagement"))
     {
-        qWarning() << "Unable to register 'org.lxqt.lidwatcherd' service - is another instance of lxqt-lid running?";
+        qWarning() << "Unable to register 'org.lxqt.lxqt-powermanagement' service - is another instance of lxqt-powermanagement running?";
         return 1;
     }
     else
     {
-        LidWatcherd lidWatcherd;
+        PowerManagementd powerManagementd;
         return a.exec();
     }
 }

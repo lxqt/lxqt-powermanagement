@@ -26,7 +26,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <math.h>
-#include <QtCore/QDebug>
+#include <QDebug>
 #include <QtSvg/QSvgRenderer>
 #include <QtGui/QPainter>
 #include <lxqt/lxqtsettings.h>

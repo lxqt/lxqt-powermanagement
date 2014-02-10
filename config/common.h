@@ -31,7 +31,9 @@
 #include <QString>
 #include <lxqt/lxqtsettings.h>
 
-
+#define ENABLE_BATTERY_WATCHER "enableBatteryWatcher"
+#define ENABLE_LID_WATCHER "enableLidWatcher"
+#define ENABLE_IDLENESS_WATCHER "enableIdlenessWatcher"
 #define LIDCLOSEDACTION_KEY "lidClosedAction"
 #define LIDCLOSED_AC_ACTION_KEY "lidClosedAction_on_ac"
 #define LIDCLOSED_EXT_MON_ACTION_KEY "lidClosedAction_extern_monitor"
