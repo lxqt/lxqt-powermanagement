@@ -34,13 +34,13 @@ namespace Ui {
 class LidWatcherSettings;
 }
 
-class LidSettings : public QGroupBox
+class LidWatcherSettings : public QWidget
 {
     Q_OBJECT
     
 public:
-    explicit LidSettings(LxQt::Settings *settings, QWidget *parent = 0);
-    ~LidSettings();
+    explicit LidWatcherSettings(LxQt::Settings *settings, QWidget *parent = 0);
+    ~LidWatcherSettings();
 
 public slots:
     void loadSettings();

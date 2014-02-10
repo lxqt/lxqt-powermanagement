@@ -34,13 +34,13 @@ namespace Ui {
     class IdlenessWatcherSettings;
 }
 
-class IdleSettings : public QGroupBox
+class IdlenessWatcherSettings : public QWidget
 {
     Q_OBJECT
     
 public:
-    explicit IdleSettings(LxQt::Settings *settings, QWidget *parent = 0);
-    ~IdleSettings();
+    explicit IdlenessWatcherSettings(LxQt::Settings *settings, QWidget *parent = 0);
+    ~IdlenessWatcherSettings();
 
 public slots:
     void loadSettings();
@@ -49,7 +49,6 @@ private slots:
     void saveAction();
 
 private:
-    
     LxQt::Settings *mSettings;
     Ui::IdlenessWatcherSettings *mUi;
 };

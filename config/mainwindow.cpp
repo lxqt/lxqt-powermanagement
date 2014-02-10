@@ -32,17 +32,17 @@
 MainWindow::MainWindow(QWidget *parent) :
     LxQt::ConfigDialog(tr("LXQt Powermanagement Configuration"), new LxQt::Settings("lxqt-autosuspend"), parent)
 {
-    LidSettings *lidSettings = new LidSettings(mSettings, this);
-    addPage(lidSettings, tr("Lid"), "laptop-lid");
-    connect(this, SIGNAL(reset()), lidSettings, SLOT(loadSettings()));
+    LidWatcherSettings *lidwatcherSettings = new LidWatcherSettings(mSettings, this);
+    addPage(lidwatcherSettings, tr("Lid"), "laptop-lid");
+    connect(this, SIGNAL(reset()), lidwatcherSettings, SLOT(loadSettings()));
 
-    BatteryWatcherSettings* powerLowSettings = new BatteryWatcherSettings(mSettings, this);
-    addPage(powerLowSettings, tr("Battery"), "battery");
-    connect(this, SIGNAL(reset()), powerLowSettings, SLOT(loadSettings()));
+    BatteryWatcherSettings* batteryWatcherSettings = new BatteryWatcherSettings(mSettings, this);
+    addPage(batteryWatcherSettings, tr("Battery"), "battery");
+    connect(this, SIGNAL(reset()), batteryWatcherSettings, SLOT(loadSettings()));
 
-    IdleSettings* idleSettings = new IdleSettings(mSettings, this);
-    addPage(idleSettings, tr("Idle"), "idle");
-    connect(this, SIGNAL(reset()), idleSettings, SLOT(loadSettings()));
+    IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(mSettings, this);
+    addPage(idlenessWatcherSettings, tr("Idle"), "idle");
+    connect(this, SIGNAL(reset()), idlenessWatcherSettings, SLOT(loadSettings()));
 
     emit reset();
 }

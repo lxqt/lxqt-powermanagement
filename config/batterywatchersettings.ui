@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>Battery Watcher Settings</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#BatteryWatcherSettings {
+border: none;
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="groupBox">

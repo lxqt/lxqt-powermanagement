@@ -50,6 +50,7 @@ BatteryWatcherSettings::~BatteryWatcherSettings()
 
 void BatteryWatcherSettings::loadSettings()
 {
+    mUi->groupBox->setChecked(mSettings->value(ENABLE_BATTERY_WATCHER, true).toBool());
     fillComboBox(mUi->actionComboBox);
     loadValueFromSettings(mSettings, mUi->actionComboBox, POWERLOWACTION_KEY, NOTHING);
     mUi->warningSpinBox->setValue(mSettings->value(POWERLOWWARNING_KEY, 30).toInt());
@@ -59,6 +60,7 @@ void BatteryWatcherSettings::loadSettings()
 
 void BatteryWatcherSettings::saveSettings()
 {
+    mSettings->setValue(ENABLE_BATTERY_WATCHER, mUi->groupBox->isChecked());
     mSettings->setValue(POWERLOWACTION_KEY, mUi->actionComboBox->itemData(mUi->actionComboBox->currentIndex()).toInt());
     mSettings->setValue(POWERLOWWARNING_KEY, mUi->warningSpinBox->value());
     mSettings->setValue(POWERLOWLEVEL_KEY, mUi->levelSpinBox->value());

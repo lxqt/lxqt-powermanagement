@@ -30,8 +30,8 @@
 #include "ui_lidwatchersettings.h"
 #include "common.h"
 
-LidSettings::LidSettings(LxQt::Settings *settings, QWidget *parent) :
-    QGroupBox(parent),
+LidWatcherSettings::LidWatcherSettings(LxQt::Settings *settings, QWidget *parent) :
+    QWidget(parent),
     mUi(new Ui::LidWatcherSettings),
     mLoading(false)
 {
@@ -48,12 +48,12 @@ LidSettings::LidSettings(LxQt::Settings *settings, QWidget *parent) :
     connect(mUi->extMonGroupBox, SIGNAL(toggled(bool)), this, SLOT(saveAction()));
 }
 
-LidSettings::~LidSettings()
+LidWatcherSettings::~LidWatcherSettings()
 {
     delete mUi;
 }
 
-void LidSettings::loadSettings()
+void LidWatcherSettings::loadSettings()
 {
     loadValueFromSettings(mSettings, mUi->onBatteryActionComboBox, LIDCLOSEDACTION_KEY, 0);
     int fallBackOnAcIfNotDefined = currentValue(mUi->onBatteryActionComboBox);
@@ -65,7 +65,7 @@ void LidSettings::loadSettings()
     mUi->extMonGroupBox->setChecked(mSettings->value(ENABLE_EXT_MON_LIDCLOSED_ACTIONS, false).toBool());
 }
 
-void LidSettings::saveAction()
+void LidWatcherSettings::saveAction()
 {
     mSettings->setValue(LIDCLOSEDACTION_KEY, currentValue(mUi->onBatteryActionComboBox));
     mSettings->setValue(LIDCLOSED_AC_ACTION_KEY, currentValue(mUi->onAcActionComboBox));

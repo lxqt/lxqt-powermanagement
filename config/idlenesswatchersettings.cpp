@@ -30,23 +30,22 @@
 #include "ui_idlenesswatchersettings.h"
 #include "common.h"
 
-IdleSettings::IdleSettings(LxQt::Settings *settings, QWidget *parent) :
-    QGroupBox(parent),
-    mUi(new Ui::IdlenessWatcherSettings)
+IdlenessWatcherSettings::IdlenessWatcherSettings(LxQt::Settings *settings, QWidget *parent) :
+    QWidget(parent), mUi(new Ui::IdlenessWatcherSettings)
 {
     mSettings = settings;
     mUi->setupUi(this);
 }
 
-IdleSettings::~IdleSettings()
+IdlenessWatcherSettings::~IdlenessWatcherSettings()
 {
     delete mUi;
 }
 
-void IdleSettings::loadSettings()
+void IdlenessWatcherSettings::loadSettings()
 {
 }
 
-void IdleSettings::saveAction()
+void IdlenessWatcherSettings::saveAction()
 {
 }

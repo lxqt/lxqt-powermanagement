@@ -1,132 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>LidWatcherSettings</class>
- <widget class="QGroupBox" name="LidWatcherSettings">
+ <widget class="QWidget" name="LidWatcherSettings">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>343</width>
+    <height>345</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GroupBox</string>
-  </property>
-  <property name="title">
-   <string>Enable Lid Watcher</string>
-  </property>
-  <property name="checkable">
-   <bool>true</bool>
+   <string>Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
+    <widget class="QGroupBox" name="enableGroupBox">
+     <property name="styleSheet">
+      <string notr="true"/>
      </property>
-     <property name="text">
-      <string>Action when lid is closed:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="defaultGroupBox">
      <property name="title">
-      <string>Default</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="1">
-       <widget class="QComboBox" name="onAcActionComboBox"/>
-      </item>
-      <item row="0" column="1">
-       <widget class="QComboBox" name="onBatteryActionComboBox">
-        <item>
-         <property name="text">
-          <string>Nothing</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Suspend</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Hibernate</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Shut down</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="onBatteryActionLabel">
-        <property name="text">
-         <string>On Battery</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="onAcActionLabel">
-        <property name="text">
-         <string>On AC</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="extMonGroupBox">
-     <property name="title">
-      <string>if using more than one monitor</string>
+      <string>Enable Lid Watcher</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0">
-       <widget class="QLabel" name="extMonOnBatteryActionLabel">
-        <property name="text">
-         <string>On Battery</string>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {
+    border: none;
+	padding-top: 12px;
+    padding-left: 8px;
+}</string>
         </property>
+        <property name="title">
+         <string>Action when lid is closed</string>
+        </property>
+        <layout class="QFormLayout" name="formLayout_2">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <property name="labelAlignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="onBatteryActionLabel">
+           <property name="text">
+            <string>On Battery</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="onBatteryActionComboBox">
+           <item>
+            <property name="text">
+             <string>Nothing</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Suspend</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Hibernate</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Shut down</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="onAcActionLabel">
+           <property name="text">
+            <string>On AC</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="onAcActionComboBox"/>
+         </item>
+        </layout>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QComboBox" name="extMonOnBatteryActionComboBox"/>
-      </item>
-      <item row="1" column="1">
-       <widget class="QComboBox" name="extMonOnAcActionComboBox"/>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="extMonOnAcActionLabel">
-        <property name="text">
-         <string>On AC</string>
+      <item>
+       <widget class="QGroupBox" name="extMonGroupBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {
+    border: none;
+	padding-top: 12px;
+    padding-left: 8px;
+}</string>
+        </property>
+        <property name="title">
+         <string>When using external monitor</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <property name="labelAlignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <item row="1" column="0">
+          <widget class="QLabel" name="extMonOnBatteryActionLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>On Battery</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="extMonOnAcActionLabel">
+           <property name="text">
+            <string>On Ac</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="extMonOnAcActionComboBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="extMonOnBatteryActionComboBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>
     </widget>
-   </item>
-   <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
