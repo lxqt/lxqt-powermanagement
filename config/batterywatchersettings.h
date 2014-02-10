@@ -24,29 +24,33 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#include <QComboBox>
+#ifndef POWERLOWSETTINGS_H
+#define POWERLOWSETTINGS_H
 
-#include "idlesettings.h"
-#include "ui_idlesettings.h"
-#include "common.h"
+#include <QGroupBox>
+#include <lxqt/lxqtsettings.h>
 
-IdleSettings::IdleSettings(LxQt::Settings *settings, QWidget *parent) :
-    QWidget(parent),
-    mUi(new Ui::IdleSettings)
-{
-    mSettings = settings;
-    mUi->setupUi(this);
+namespace Ui {
+class BatteryWatcherSettings;
 }
 
-IdleSettings::~IdleSettings()
+class BatteryWatcherSettings : public QGroupBox
 {
-    delete mUi;
-}
+    Q_OBJECT
+    
+public:
+    explicit BatteryWatcherSettings(LxQt::Settings *settings, QWidget *parent = 0);
+    ~BatteryWatcherSettings();
 
-void IdleSettings::loadSettings()
-{
-}
+public slots:
+    void loadSettings();
 
-void IdleSettings::saveAction()
-{
-}
+private slots:
+    void saveSettings();
+
+private:
+    LxQt::Settings *mSettings;
+    Ui::BatteryWatcherSettings *mUi;
+};
+
+#endif // POWERLOWSETTINGS_H

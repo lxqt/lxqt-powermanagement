@@ -26,13 +26,13 @@
  * END_COMMON_COPYRIGHT_HEADER */
 #include <QComboBox>
 
-#include "lidsettings.h"
-#include "ui_lidsettings.h"
+#include "lidwatchersettings.h"
+#include "ui_lidwatchersettings.h"
 #include "common.h"
 
 LidSettings::LidSettings(LxQt::Settings *settings, QWidget *parent) :
-    QWidget(parent),
-    mUi(new Ui::LidSettings),
+    QGroupBox(parent),
+    mUi(new Ui::LidWatcherSettings),
     mLoading(false)
 {
     mSettings = settings;

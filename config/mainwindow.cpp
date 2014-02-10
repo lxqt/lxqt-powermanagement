@@ -25,9 +25,9 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 #include "mainwindow.h"
-#include "lidsettings.h"
-#include "powerlowsettings.h"
-#include "idlesettings.h"
+#include "lidwatchersettings.h"
+#include "batterywatchersettings.h"
+#include "idlenesswatchersettings.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     LxQt::ConfigDialog(tr("LXQt Powermanagement Configuration"), new LxQt::Settings("lxqt-autosuspend"), parent)
@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
     addPage(lidSettings, tr("Lid"), "laptop-lid");
     connect(this, SIGNAL(reset()), lidSettings, SLOT(loadSettings()));
 
-    PowerLowSettings* powerLowSettings = new PowerLowSettings(mSettings, this);
+    BatteryWatcherSettings* powerLowSettings = new BatteryWatcherSettings(mSettings, this);
     addPage(powerLowSettings, tr("Battery"), "battery");
     connect(this, SIGNAL(reset()), powerLowSettings, SLOT(loadSettings()));
 

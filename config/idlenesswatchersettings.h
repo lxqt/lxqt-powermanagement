@@ -27,14 +27,14 @@
 #ifndef IDLE_SETTINGS_H
 #define IDLE_SETTINGS_H
 
-#include <QWidget>
+#include <QGroupBox>
 #include <lxqt/lxqtsettings.h>
 
 namespace Ui {
-    class IdleSettings;
+    class IdlenessWatcherSettings;
 }
 
-class IdleSettings : public QWidget
+class IdleSettings : public QGroupBox
 {
     Q_OBJECT
     
@@ -51,7 +51,7 @@ private slots:
 private:
     
     LxQt::Settings *mSettings;
-    Ui::IdleSettings *mUi;
+    Ui::IdlenessWatcherSettings *mUi;
 };
 
 #endif // IDLE_SETTINGS_H

@@ -24,33 +24,29 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#ifndef POWERLOWSETTINGS_H
-#define POWERLOWSETTINGS_H
+#include <QComboBox>
 
-#include <QWidget>
-#include <lxqt/lxqtsettings.h>
+#include "idlenesswatchersettings.h"
+#include "ui_idlenesswatchersettings.h"
+#include "common.h"
 
-namespace Ui {
-class PowerLowSettings;
+IdleSettings::IdleSettings(LxQt::Settings *settings, QWidget *parent) :
+    QGroupBox(parent),
+    mUi(new Ui::IdlenessWatcherSettings)
+{
+    mSettings = settings;
+    mUi->setupUi(this);
 }
 
-class PowerLowSettings : public QWidget
+IdleSettings::~IdleSettings()
 {
-    Q_OBJECT
-    
-public:
-    explicit PowerLowSettings(LxQt::Settings *settings, QWidget *parent = 0);
-    ~PowerLowSettings();
+    delete mUi;
+}
 
-public slots:
-    void loadSettings();
+void IdleSettings::loadSettings()
+{
+}
 
-private slots:
-    void saveSettings();
-
-private:
-    LxQt::Settings *mSettings;
-    Ui::PowerLowSettings *mUi;
-};
-
-#endif // POWERLOWSETTINGS_H
+void IdleSettings::saveAction()
+{
+}

@@ -24,13 +24,14 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#include "powerlowsettings.h"
-#include "ui_powerlowsettings.h"
+#include "batterywatchersettings.h"
+#include "ui_batterywatchersettings.h"
 #include "common.h"
 
-PowerLowSettings::PowerLowSettings(LxQt::Settings *settings, QWidget *parent) :
-    QWidget(parent),
-    mUi(new Ui::PowerLowSettings)
+BatteryWatcherSettings::BatteryWatcherSettings(LxQt::Settings *settings, QWidget *parent) :
+    QGroupBox(parent),
+    mUi(new Ui::BatteryWatcherSettings)
+
 {
     mSettings = settings;
     mUi->setupUi(this);
@@ -43,12 +44,12 @@ PowerLowSettings::PowerLowSettings(LxQt::Settings *settings, QWidget *parent) :
     connect(mUi->useThemeIconsRadioButton, SIGNAL(clicked()), this, SLOT(saveSettings()));
 }
 
-PowerLowSettings::~PowerLowSettings()
+BatteryWatcherSettings::~BatteryWatcherSettings()
 {
     delete mUi;
 }
 
-void PowerLowSettings::loadSettings()
+void BatteryWatcherSettings::loadSettings()
 {
     fillComboBox(mUi->actionComboBox);
     loadValueFromSettings(mSettings, mUi->actionComboBox, POWERLOWACTION_KEY, NOTHING);
@@ -58,7 +59,7 @@ void PowerLowSettings::loadSettings()
     mUi->useThemeIconsRadioButton->setChecked(mSettings->value(USETHEMEICONS_KEY).toBool());
 }
 
-void PowerLowSettings::saveSettings()
+void BatteryWatcherSettings::saveSettings()
 {
     mSettings->setValue(POWERLOWACTION_KEY, mUi->actionComboBox->itemData(mUi->actionComboBox->currentIndex()).toInt());
     mSettings->setValue(POWERLOWWARNING_KEY, mUi->warningSpinBox->value());

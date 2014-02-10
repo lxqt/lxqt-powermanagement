@@ -27,14 +27,14 @@
 #ifndef LIDSETTINGS_H
 #define LIDSETTINGS_H
 
-#include <QWidget>
+#include <QGroupBox>
 #include <lxqt/lxqtsettings.h>
 
 namespace Ui {
-class LidSettings;
+class LidWatcherSettings;
 }
 
-class LidSettings : public QWidget
+class LidSettings : public QGroupBox
 {
     Q_OBJECT
     
@@ -49,9 +49,8 @@ private slots:
     void saveAction();
 
 private:
-
     LxQt::Settings *mSettings;
-    Ui::LidSettings *mUi;
+    Ui::LidWatcherSettings *mUi;
     bool mLoading;
 };
 
