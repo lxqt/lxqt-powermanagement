@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Exec=lxqt-config-autosuspend
-Icon=lxqt-autosuspend
+Exec=lxqt-config-powermanagement
+Icon=lxqt-powermanagement
 Terminal=false
 OnlyShowIn=LxQt;LXDE;
 Categories=Settings;DesktopSettings;Qt;LxQt;
-Name=LxQt Autosuspend Configuration
-GenericName=Autosuspend Configuration
+Name=LxQt Powermanagement Configuration
+GenericName=Powermanagement Configuration
 #TRANSLATIONS_DIR=translations

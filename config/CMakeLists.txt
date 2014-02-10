@@ -33,6 +33,14 @@ set (DESKTOP_FILES_IN
      lxqt-config-powermanagement.desktop.in
     )
 
+# Translations **********************************
+include(LxQtTranslate)
+
+lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
+
+#************************************************
+
+
 QT4_ADD_RESOURCES( RSCS ${config-powermanagement_RSCS})
 
 QT4_WRAP_CPP( MOCS ${config-powermanagement_MOCS})
