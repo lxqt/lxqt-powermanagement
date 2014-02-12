@@ -27,6 +27,12 @@ border: none;
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox, QComboBox {
+	max-width: 130px;
+    min-width: 130px;
+}</string>
+     </property>
      <property name="title">
       <string>Enable Battery Watcher</string>
      </property>
@@ -40,16 +46,6 @@ border: none;
       <property name="labelAlignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
-      <item row="0" column="0">
-       <widget class="QLabel" name="actionLabel">
-        <property name="text">
-         <string>Action when power is low:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="1">
        <widget class="QComboBox" name="actionComboBox"/>
       </item>
@@ -65,6 +61,9 @@ border: none;
       </item>
       <item row="1" column="1">
        <widget class="QSpinBox" name="warningSpinBox">
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
         <property name="suffix">
          <string> seconds</string>
         </property>
@@ -85,6 +84,9 @@ border: none;
       </item>
       <item row="2" column="1">
        <widget class="QSpinBox" name="levelSpinBox">
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
         <property name="suffix">
          <string> %</string>
         </property>
@@ -101,6 +103,16 @@ border: none;
        <widget class="QCheckBox" name="useThemeIconsCheckBox">
         <property name="text">
          <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="actionLabel">
+        <property name="text">
+         <string>When power is low then:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>240</width>
+    <width>309</width>
     <height>177</height>
    </rect>
   </property>
@@ -16,6 +16,12 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">QSpinBox, QComboBox {
+	max-width: 130px;
+    min-width: 130px;
+}</string>
+     </property>
      <property name="title">
       <string>Enable Idleness Watcher</string>
      </property>
@@ -23,6 +29,22 @@
       <bool>true</bool>
      </property>
      <layout class="QFormLayout" name="formLayout">
+      <property name="labelAlignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="idleTimeSpinbox">
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="suffix">
+         <string> seconds</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="idleActionComboBox"/>
+      </item>
       <item row="0" column="0">
        <widget class="QLabel" name="idleTimeLabel">
         <property name="sizePolicy">
@@ -32,15 +54,12 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>When idle for:</string>
+         <string>When idle then:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QSpinBox" name="idleTimeSpinbox"/>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="idleActionLabel">
@@ -51,15 +70,12 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>then:</string>
+         <string>IIdle time:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QComboBox" name="idleActionComboBox"/>
       </item>
      </layout>
     </widget>
