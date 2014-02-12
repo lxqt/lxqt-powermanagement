@@ -37,17 +37,13 @@ LidWatcherd::LidWatcherd(QObject *parent) :
 QObject(parent),
 mSettings("lxqt-autosuspend")
 {
-    bool performFirstRunCheck = mSettings.value(FIRSTRUNCHECK_KEY, false).toBool();
-    if (performFirstRunCheck)
-    {
-        mSettings.setValue(FIRSTRUNCHECK_KEY, false);
-    }
-
+    qDebug() << "Starting lidwatcher";
     connect(&mLid, SIGNAL(changed(bool)), this, SLOT(lidChanged(bool)));
 }
 
 LidWatcherd::~LidWatcherd()
 {
+    qDebug() << "Stopping lidwatcher";
 }
 
 void LidWatcherd::lidChanged(bool closed)

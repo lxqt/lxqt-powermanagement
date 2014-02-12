@@ -27,7 +27,7 @@
 #ifndef LIDSETTINGS_H
 #define LIDSETTINGS_H
 
-#include <QGroupBox>
+#include <QWidget>
 #include <lxqt/lxqtsettings.h>
 
 namespace Ui {
@@ -46,7 +46,7 @@ public slots:
     void loadSettings();
 
 private slots:
-    void saveAction();
+    void saveSettings();
 
 private:
     LxQt::Settings *mSettings;

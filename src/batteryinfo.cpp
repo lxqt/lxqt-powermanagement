@@ -31,8 +31,8 @@
 #include <QTableWidgetItem>
 #include <QDateTime>
 
-BatteryInfo::BatteryInfo(QWidget *parent) :
-    QDialog(parent),
+BatteryInfo::BatteryInfo() :
+    QDialog(),
     mUi(new Ui::BatteryInfo)
 {
     mUi->setupUi(this);

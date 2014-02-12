@@ -34,116 +34,132 @@
 #include "trayicon.h"
 #include "../config/common.h"
 
-class IconNamingScheme 
-{
-public:
-    static QList<IconNamingScheme*> & getAllSchemes();
-
-    bool currentIconThemeHasAllIconsOfThisScheme() const;
-    QString iconName(float chargeLevel, bool discharging) const;
- 
-private:
-    IconNamingScheme(QString schemeName, QList<float> chargeLevels, QList<QString> iconNamesCharging, QList<QString> iconNamesDischarging);
-  
-    QList<float> mChargeLevels;
-    QList<QString> mIconNamesCharging;
-    QList<QString> mIconNamesDischarging;
-    QString mSchemeName;
-};
-
-
-TrayIcon::TrayIcon(Battery* battery, QObject *parent) : 
-    QSystemTrayIcon(parent), 
-        mBattery(battery), 
-        mSettings("lxqt-autosuspend")
-{
-    connect(mBattery, SIGNAL(batteryChanged()), this, SLOT(update()));
-    connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(iconThemeChanged()));
-    connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
-    connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(showStatus(QSystemTrayIcon::ActivationReason)));
-
-    determingIconNamingScheme(); 
-    update(); 
-    setVisible(mSettings.value(SHOWTRAYICON_KEY, true).toBool());
-}
-
-TrayIcon::~TrayIcon()
-{
-}
-
-void TrayIcon::update()
-{
-    updateStatusIcon();
-    updateToolTip();
-    mBatteryInfo.updateInfo(mBattery);
-}
-
-
-void TrayIcon::updateStatusIcon(bool force)
-{
-    static double chargeLevel = -1;
-    static bool   discharging = false;
-
-    if (!force && fabs(mBattery->chargeLevel() - chargeLevel) < 0.1 && (mBattery->discharging() == discharging))
-    {
-        qDebug() << "No significant change - not updating icon";
-        return;
-    }
+QString IconNamingScheme::iconName(float chargeLevel, bool discharging) const
+{   
+    int i = 0;
+    while(i < mChargeLevels.size() - 1 && mChargeLevels.at(i+1) <= chargeLevel) i++;
     
-    chargeLevel = mBattery->chargeLevel();
-    discharging = mBattery->discharging();
-
-    if (mSettings.value(USETHEMEICONS_KEY, true).toBool() && mCurrentNamingScheme) 
-    {
-        QString iconName = mCurrentNamingScheme->iconName(chargeLevel, discharging);
-        setIcon(QIcon::fromTheme(iconName));
-    }
-    else
-    {
-        setIcon(getBuiltInIcon(chargeLevel, discharging));
-    }
+    return discharging ? mIconNamesDischarging.at(i) : mIconNamesCharging.at(i);
 }
 
-void TrayIcon::updateToolTip()
-{
-    QString toolTip = mBattery->stateAsString();
 
-    if (mBattery->state() == 1 || mBattery->state() == 2)
-    {
-        toolTip = toolTip + QString(" - %1 %").arg(mBattery->chargeLevel(), 0, 'f', 1);
-    }
-    setToolTip(toolTip);
+IconNamingScheme::IconNamingScheme(QString schemeName, QList<float> chargeLevels, QList<QString> iconNamesCharging, QList<QString> iconNamesDischarging)
+{
+    mSchemeName = schemeName;
+    mChargeLevels = chargeLevels;
+    mIconNamesCharging = iconNamesCharging;
+    mIconNamesDischarging = iconNamesDischarging;
 }
 
-void TrayIcon::determingIconNamingScheme()
+IconNamingScheme* IconNamingScheme::getNamingSchemeForCurrentIconTheme()
 {
-    foreach(const IconNamingScheme *scheme, IconNamingScheme::getAllSchemes()) 
+    static QList<IconNamingScheme*> schemes;
+    
+    if (schemes.isEmpty()) 
     {
-        if (scheme->currentIconThemeHasAllIconsOfThisScheme()) 
+        // Freedesktop naming scheme 
+         schemes << new IconNamingScheme(
+                "freedesktop",
+                (QList<float>() << 0 << 1 << 20 << 40 << 60),
+                (QList<QString>() << "battery-empty" << "battery-caution-charging" << "battery-low-charging" 
+                                  << "battery-good-charging" <<  "battery-full-charging"),
+                (QList<QString>() << "battery-empty" << "battery-caution" << "battery-low" << "battery-good" <<  "battery-full")
+                );
+        
+         // Oxygen naming scheme
+         schemes << new IconNamingScheme(
+                "oxygen",
+                ((QList<float>()) << 0 << 20 << 40 << 60 << 80 << 99.5),
+                ((QList<QString>()) << "battery-charging-low" << "battery-charging-caution" << "battery-charging-040"
+                                    << "battery-charging-060" << "battery-charging-080" << "battery-charging"),
+                ((QList<QString>()) << "battery-low" << "battery-caution" << "battery-040"
+                                    << "battery-060" << "battery-080" << "battery-100")
+                );
+
+         // AwOken naming scheme
+         schemes << new IconNamingScheme(
+                "AwOken",
+                ((QList<float>()) << 0 << 20 << 40 << 60 << 80 << 99.5),
+                ((QList<QString>()) << "battery-000-charging" << "battery-020-charging" << "battery-040-charging"
+                                    << "battery-060-charging" << "battery-080-charging" << "battery-100-charging"),
+                ((QList<QString>()) << "battery-000" << "battery-020" << "battery-040"
+                                   << "battery-060" << "battery-080" << "battery-100")
+                );
+    }
+
+    foreach (IconNamingScheme* iconNamingScheme, schemes)
+    {
+        if (iconNamingScheme->isValidForCurrentIconTheme())
         {
-            mCurrentNamingScheme = scheme;
-            return;
+            qDebug() << "Found IconNamingScheme:" << iconNamingScheme->mSchemeName;
+            return iconNamingScheme;
         }
     }
 
-    mCurrentNamingScheme = 0;
+    qDebug() << "Found no IconNamingScheme";
+    return 0;
 }
 
-void TrayIcon::iconThemeChanged()
+
+bool IconNamingScheme::isValidForCurrentIconTheme() const
 {
-    qDebug() << "iconThemeChanged";
-    determingIconNamingScheme();
-    updateStatusIcon(true);
+    for (int i = 0; i < mIconNamesCharging.size(); i++) 
+    {
+        qDebug() << "Looking for"  << mIconNamesCharging.at(i);
+        if (!QIcon::hasThemeIcon(mIconNamesCharging.at(i)))
+        {
+            qDebug() << "Not found";
+            return false;
+        }
+        
+        qDebug() << "Looking for"  << mIconNamesDischarging.at(i);
+        if (!QIcon::hasThemeIcon(mIconNamesDischarging.at(i)))
+        {
+            qDebug() << "Not found";
+            return false;
+        }
+    }
+    qDebug();
+
+    return true;
 }
 
-void TrayIcon::settingsChanged()
+
+TrayIcon::TrayIcon(QObject *parent) : QSystemTrayIcon(parent) {}
+
+TrayIcon::~TrayIcon() {}
+
+void TrayIcon::update(bool discharging, double chargeLevel, double lowLevel)
 {
-    updateStatusIcon(true);
-    setVisible(mSettings.value(SHOWTRAYICON_KEY, true).toBool()); 
+    this->discharging = discharging;
+    this->chargeLevel = chargeLevel;
+    this->lowLevel = lowLevel;
+
+    updateToolTip();
+    updateIcon();
 }
 
 
-QIcon TrayIcon::getBuiltInIcon(double chargeLevel, bool discharging)
+
+void TrayIcon::updateToolTip()
+{
+    QString toolTip = discharging ? tr("discharging") : tr("charging"); // TODO Use states...
+    toolTip = toolTip + QString(" - %1 %").arg(chargeLevel, 0, 'f', 1);
+    setToolTip(toolTip);
+}
+
+
+TrayIconBuiltIn::TrayIconBuiltIn(QObject* parent) : 
+    TrayIcon(parent)
+{
+}
+
+TrayIconBuiltIn::~TrayIconBuiltIn()
+{
+}
+
+
+void TrayIconBuiltIn::updateIcon()
 {
     // See http://www.w3.org/TR/SVG/Overview.html 
     // and regarding circle-arch in particular: 
@@ -160,7 +176,7 @@ QIcon TrayIcon::getBuiltInIcon(double chargeLevel, bool discharging)
     double segment_endpoint_x = cos(angle);
     double segment_endpoint_y = sin(angle);
 
-    // svg uses an coordinate system with (0,0) at the topmost left corner,  
+    // svg uses a coordinate system with (0,0) at the topmost left corner,  
     // y increasing downwards and x increasing left-to-right.
     // We draw the circle segments with center at (100,100) and radius 100 for the
     // outer and radius 60 for the inner. The segments will (unless fully charged, 
@@ -187,7 +203,6 @@ QIcon TrayIcon::getBuiltInIcon(double chargeLevel, bool discharging)
     }
  
     QString chargeColor;
-    int lowLevel = mSettings.value(POWERLOWLEVEL_KEY, 5).toInt();
     if (discharging && chargeLevel <= lowLevel + 10)
     {
         chargeColor = "rgb(200,40,40)";
@@ -226,107 +241,28 @@ QIcon TrayIcon::getBuiltInIcon(double chargeLevel, bool discharging)
     pixmap.fill(QColor(0,0,0,0));
     QPainter painter(&pixmap);
     render.render(&painter);
-    return QIcon(pixmap);
-
+    setIcon(QIcon(pixmap));
 }
 
-void TrayIcon::showStatus(ActivationReason reason)
+TrayIconTheme::TrayIconTheme(IconNamingScheme* iconNamingScheme, QObject* parent)
 {
-    if (reason == QSystemTrayIcon::Trigger)
-    {
-        if (mBatteryInfo.isVisible())
-        {
-            mBatteryInfo.close();
-        }
-        else
-        {
-            mBatteryInfo.open();
-        }
-    }
+    this->mIconNamingScheme = iconNamingScheme;
 }
 
-// IconNamingScheme
-
-QString IconNamingScheme::iconName(float chargeLevel, bool discharging) const
-{   
-    int i = 0;
-    while(i < mChargeLevels.size() - 1 && mChargeLevels.at(i+1) <= chargeLevel) i++;
-    
-    return discharging ? mIconNamesDischarging.at(i) : mIconNamesCharging.at(i);
-}
-
-
-IconNamingScheme::IconNamingScheme(QString schemeName, QList<float> chargeLevels, QList<QString> iconNamesCharging, QList<QString> iconNamesDischarging)
+TrayIconTheme::~TrayIconTheme()
 {
-    mSchemeName = schemeName;
-    mChargeLevels = chargeLevels;
-    mIconNamesCharging = iconNamesCharging;
-    mIconNamesDischarging = iconNamesDischarging;
 }
 
-bool IconNamingScheme::currentIconThemeHasAllIconsOfThisScheme() const
+bool TrayIconTheme::isProperForCurrentSettings(bool useThemedIcons)
 {
-    qDebug() << "NamingScheme: " << mSchemeName << "- antal:" << mChargeLevels.size();
-    for (int i = 0; i < mIconNamesCharging.size(); i++) 
-    {
-        qDebug() << "Looking for"  << mIconNamesCharging.at(i);
-        if (!QIcon::hasThemeIcon(mIconNamesCharging.at(i)))
-        {
-            qDebug() << "Not found";
-            return false;
-        }
-        
-        qDebug() << "Looking for"  << mIconNamesDischarging.at(i);
-        if (!QIcon::hasThemeIcon(mIconNamesDischarging.at(i)))
-        {
-            qDebug() << "Not found";
-            return false;
-        }
-    }
-    qDebug();
-
-    return true;
+    return useThemedIcons && mIconNamingScheme->isValidForCurrentIconTheme();
 }
 
-QList<IconNamingScheme*> & IconNamingScheme::getAllSchemes()
+
+
+void TrayIconTheme::updateIcon()
 {
-    static QList<IconNamingScheme*> schemes;
-    if (schemes.isEmpty()) 
-    {
-        // Freedesktop naming scheme 
-         schemes << new IconNamingScheme(
-                "freedesktop",
-                (QList<float>() << 0 << 1 << 20 << 40 << 60),
-                (QList<QString>() << "battery-empty" << "battery-caution-charging" << "battery-low-charging" 
-                                  << "battery-good-charging" <<  "battery-full-charging"),
-                (QList<QString>() << "battery-empty" << "battery-caution" << "battery-low" << "battery-good" <<  "battery-full")
-                );
-        
-         // Oxygen naming scheme
-         schemes << new IconNamingScheme(
-                "oxygen",
-                ((QList<float>()) << 0 << 20 << 40 << 60 << 80 << 99.5),
-                ((QList<QString>()) << "battery-charging-low" << "battery-charging-caution" << "battery-charging-040"
-                                    << "battery-charging-060" << "battery-charging-080" << "battery-charging"),
-                ((QList<QString>()) << "battery-low" << "battery-caution" << "battery-040"
-                                    << "battery-060" << "battery-080" << "battery-100")
-                );
+    QString iconName = mIconNamingScheme->iconName(chargeLevel, discharging);
+    setIcon(QIcon::fromTheme(iconName));
 
-         // AwOken naming scheme
-         schemes << new IconNamingScheme(
-                "AwOken",
-                ((QList<float>()) << 0 << 20 << 40 << 60 << 80 << 99.5),
-                ((QList<QString>()) << "battery-000-charging" << "battery-020-charging" << "battery-040-charging"
-                                    << "battery-060-charging" << "battery-080-charging" << "battery-100-charging"),
-                ((QList<QString>()) << "battery-000" << "battery-020" << "battery-040"
-                                   << "battery-060" << "battery-080" << "battery-100")
-                );
-    }
-
-    return schemes;
 }
-
-
-
-
-

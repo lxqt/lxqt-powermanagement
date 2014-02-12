@@ -41,7 +41,7 @@ class BatteryInfo : public QDialog
     Q_OBJECT
     
 public:
-    explicit BatteryInfo(QWidget *parent = 0);
+    explicit BatteryInfo();
     ~BatteryInfo();
     void updateInfo(Battery* battery);
 

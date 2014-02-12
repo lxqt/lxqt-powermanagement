@@ -41,11 +41,12 @@ LidWatcherSettings::LidWatcherSettings(LxQt::Settings *settings, QWidget *parent
     fillComboBox(mUi->onAcActionComboBox);
     fillComboBox(mUi->extMonOnBatteryActionComboBox);
     fillComboBox(mUi->extMonOnAcActionComboBox);
-    connect(mUi->onBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveAction()));
-    connect(mUi->onAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveAction()));
-    connect(mUi->extMonOnBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveAction()));
-    connect(mUi->extMonOnAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveAction()));
-    connect(mUi->extMonGroupBox, SIGNAL(toggled(bool)), this, SLOT(saveAction()));
+    connect(mUi->enableGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
+    connect(mUi->onBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
+    connect(mUi->onAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
+    connect(mUi->extMonOnBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
+    connect(mUi->extMonOnAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
+    connect(mUi->extMonGroupBox, SIGNAL(toggled(bool)), this, SLOT(saveSettings()));
 }
 
 LidWatcherSettings::~LidWatcherSettings()
@@ -55,6 +56,8 @@ LidWatcherSettings::~LidWatcherSettings()
 
 void LidWatcherSettings::loadSettings()
 {
+    mUi->enableGroupBox->setChecked(mSettings->value(ENABLE_LID_WATCHER, true).toBool());
+    
     loadValueFromSettings(mSettings, mUi->onBatteryActionComboBox, LIDCLOSEDACTION_KEY, 0);
     int fallBackOnAcIfNotDefined = currentValue(mUi->onBatteryActionComboBox);
     loadValueFromSettings(mSettings, mUi->onAcActionComboBox, LIDCLOSED_AC_ACTION_KEY, fallBackOnAcIfNotDefined);
@@ -65,8 +68,9 @@ void LidWatcherSettings::loadSettings()
     mUi->extMonGroupBox->setChecked(mSettings->value(ENABLE_EXT_MON_LIDCLOSED_ACTIONS, false).toBool());
 }
 
-void LidWatcherSettings::saveAction()
+void LidWatcherSettings::saveSettings()
 {
+    mSettings->setValue(ENABLE_LID_WATCHER, mUi->enableGroupBox->isChecked());
     mSettings->setValue(LIDCLOSEDACTION_KEY, currentValue(mUi->onBatteryActionComboBox));
     mSettings->setValue(LIDCLOSED_AC_ACTION_KEY, currentValue(mUi->onAcActionComboBox));
     mSettings->setValue(LIDCLOSED_EXT_MON_ACTION_KEY, currentValue(mUi->extMonOnBatteryActionComboBox));

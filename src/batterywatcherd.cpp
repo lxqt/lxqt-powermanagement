@@ -34,68 +34,64 @@
 
 BatteryWatcherd::BatteryWatcherd(QObject *parent) :
     QObject(parent),
+    mBatteryInfo(),
+    mBattery(),
+    mTrayIcon(0),
+    mLxQtPower(),
     mLxQtNotification(tr("Power low"), this),
     mActionTime(),
     mSettings("lxqt-autosuspend")
 {
-    bool performFirstRunCheck = mSettings.value(FIRSTRUNCHECK_KEY, false).toBool();
-    if (performFirstRunCheck)
+    if (!mBattery.haveBattery())
     {
-        mSettings.setValue(FIRSTRUNCHECK_KEY, false);
-    }
-
-    mBattery = new Battery(this);
-    if (!mBattery->haveBattery())
-    {
-        if (performFirstRunCheck)
-        {
-            qWarning() << "No battery detected - disabling LxQt Autosuspend";
-            LxQt::AutostartEntry autostartEntry("lxqt-autosuspend.desktop");
-            autostartEntry.setEnabled(false);
-            autostartEntry.commit();
-
-            // We can't quit if the event loop did not start yet
-            QTimer::singleShot(0, qApp, SLOT(quit()));
-            return;
-        }
-
         LxQt::Notification::notify(tr("No battery!"),
                                   tr("LxQt autosuspend could not find data about any battery - actions on power low will not work"),
                                   "lxqt-autosuspend");
     }
 
-    mLxQtNotification.setIcon("lxqt-autosuspend");
+    mLxQtNotification.setIcon("lxqt-autosuspend"); // FIXME should be a battery icon
     mLxQtNotification.setUrgencyHint(LxQt::Notification::UrgencyCritical);
     mLxQtNotification.setTimeout(2000);
 
-    new TrayIcon(mBattery, this);
-    connect(mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
+    connect(&mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
+    connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
+    connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
+    settingsChanged();
+    batteryChanged();
 }
 
 BatteryWatcherd::~BatteryWatcherd()
 {
+    if (mTrayIcon)
+    {
+        delete mTrayIcon;
+    }
 }
 
 void BatteryWatcherd::batteryChanged()
 {
     qDebug() <<  "BatteryChanged"
-             <<  "discharging:"  << mBattery->discharging() 
-             << "chargeLevel:" << mBattery->chargeLevel() 
-             << "powerlow:"    << mBattery->powerLow() 
+             <<  "discharging:"  << mBattery.discharging() 
+             << "chargeLevel:" << mBattery.chargeLevel() 
+             << "powerlow:"    << mBattery.powerLow() 
              << "actionTime:"  << mActionTime;
 
-    if (mBattery->powerLow() && mActionTime.isNull() && powerLowAction() > 0)
+    if (mBattery.powerLow() && mActionTime.isNull() && powerLowAction() > 0)
     {
         int warningTimeMsecs = mSettings.value(POWERLOWWARNING_KEY, 30).toInt()*1000;
         mActionTime = QTime::currentTime().addMSecs(warningTimeMsecs);
         startTimer(100);
         // From here everything is handled by timerEvent below
     }
+
+    mBatteryInfo.updateInfo(&mBattery);
+
+    mTrayIcon->update(mBattery.discharging(), mBattery.chargeLevel(), mSettings.value(POWERLOWLEVEL_KEY, 0.05).toDouble());
 }
 
 void BatteryWatcherd::timerEvent(QTimerEvent *event)
 {
-    if (mActionTime.isNull() || powerLowAction() == 0 || ! mBattery->powerLow())
+    if (mActionTime.isNull() || powerLowAction() == 0 || ! mBattery.powerLow())
     {
             killTimer(event->timerId());
             mActionTime = QTime();
@@ -148,3 +144,47 @@ int BatteryWatcherd::powerLowAction()
     return mSettings.value(POWERLOWACTION_KEY).toInt();
 }
 
+
+void BatteryWatcherd::settingsChanged()
+{
+    bool useThemeIcons = mSettings.value(USETHEMEICONS_KEY, false).toBool();
+
+    if (mTrayIcon != 0 && !mTrayIcon->isProperForCurrentSettings(useThemeIcons))
+    {
+        mTrayIcon->hide(); 
+        mTrayIcon->deleteLater();
+        mTrayIcon = 0;
+    }
+   
+    if (mTrayIcon == 0) 
+    {
+        IconNamingScheme *iconNamingScheme = 0;
+        if (useThemeIcons && (iconNamingScheme = IconNamingScheme::getNamingSchemeForCurrentIconTheme()))
+        {
+            mTrayIcon = new TrayIconTheme(iconNamingScheme, this);
+        }
+        else 
+        {
+            mTrayIcon = new TrayIconBuiltIn(this);
+        }
+    
+        bool discharging = mBattery.state() == 2;
+        qDebug() << "updating trayicon: " << discharging << mBattery.chargeLevel() << mSettings.value(POWERLOWLEVEL_KEY, 0.05).toDouble();
+        
+        connect(mTrayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(showBatteryInfo()));
+        mTrayIcon->update(discharging, mBattery.chargeLevel(), mSettings.value(POWERLOWLEVEL_KEY, 0.05).toDouble());
+        mTrayIcon->show();
+    }
+}
+
+void BatteryWatcherd::showBatteryInfo()
+{
+    if (mBatteryInfo.isVisible())
+    {
+        mBatteryInfo.close();
+    }
+    else
+    {
+        mBatteryInfo.open();
+    }
+}

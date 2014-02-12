@@ -36,35 +36,74 @@
 #include "batteryinfo.h"
 #include "battery.h"
 
-class IconNamingScheme;
+class IconNamingScheme 
+{
+public:
+    static IconNamingScheme* getNamingSchemeForCurrentIconTheme();
+    QString iconName(float chargeLevel, bool discharging) const;
+    bool isValidForCurrentIconTheme() const;
+
+private:
+    IconNamingScheme(QString schemeName, QList<float> chargeLevels, QList<QString> iconNamesCharging, QList<QString> iconNamesDischarging);
+
+    QList<float> mChargeLevels;
+    QList<QString> mIconNamesCharging;
+    QList<QString> mIconNamesDischarging;
+    QString mSchemeName;
+};
+
 
 class TrayIcon : public QSystemTrayIcon
 {
     Q_OBJECT
 
 public:
-    TrayIcon(Battery* battery, QObject *parent = 0);
+    TrayIcon(QObject *parent = 0);
     ~TrayIcon();
 
-private:
-    void updateStatusIcon(bool force=false);
+public:
+    void update(bool discharging, double chargeLevel, double lowLevel);
+    virtual bool isProperForCurrentSettings(bool useThemedIcons) = 0;
+
+protected:
     void updateToolTip();
-    void updateStateAsString();
+    virtual void updateIcon() = 0;
+    bool discharging;
+    double chargeLevel;
+    double lowLevel;
+};
 
-    void determingIconNamingScheme();
-    void setupThemeStatusIcons(); 
-    QIcon getBuiltInIcon(double chargeLevel, bool discharging);
+class TrayIconBuiltIn : public TrayIcon 
+{
+    Q_OBJECT
+
+public:
+    TrayIconBuiltIn(QObject *parent = 0);
+    ~TrayIconBuiltIn();
     
-    Battery* mBattery; 
-    BatteryInfo mBatteryInfo;
-    LxQt::Settings mSettings;
-    const IconNamingScheme* mCurrentNamingScheme;
+    virtual bool isProperForCurrentSettings(bool useThemedIcons) { return !useThemedIcons; };
 
-private slots:
-    void update();
-    void iconThemeChanged();
-    void settingsChanged();
-    void showStatus(QSystemTrayIcon::ActivationReason reason);
+protected:
+    virtual void updateIcon();
+    
+};
+
+class TrayIconTheme : public TrayIcon
+{
+    Q_OBJECT
+
+public:
+    TrayIconTheme(IconNamingScheme *iconNamingScheme, QObject* parent);
+    ~TrayIconTheme();
+
+    virtual bool isProperForCurrentSettings(bool useThemedIcons);
+
+protected:
+    virtual void updateIcon();
+    
+private:
+    IconNamingScheme *mIconNamingScheme;
+
 };
 
 #endif // TRAYICON_H

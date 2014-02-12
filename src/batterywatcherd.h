@@ -47,16 +47,21 @@ protected:
 
 private slots:
     void batteryChanged();
+    void settingsChanged();
+    void showBatteryInfo();
 
 private:
     void doAction(int action);
     int powerLowAction();
 
-    Battery* mBattery;
+    BatteryInfo mBatteryInfo;
+    Battery mBattery;
+    TrayIcon* mTrayIcon;
     LxQt::Power mLxQtPower;
+    LxQt::Settings mSettings;
+    
     LxQt::Notification mLxQtNotification;
     QTime mActionTime;
-    LxQt::Settings mSettings;
 };
 
 #endif // BATTERYWATCHERD_H
