@@ -37,21 +37,14 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
     mBatteryInfo(),
     mBattery(),
     mTrayIcon(0),
-    mLxQtPower(),
-    mLxQtNotification(tr("Power low"), this),
-    mActionTime(),
     mSettings("lxqt-autosuspend")
 {
     if (!mBattery.haveBattery())
     {
         LxQt::Notification::notify(tr("No battery!"),
-                                  tr("LxQt autosuspend could not find data about any battery - actions on power low will not work"),
-                                  "lxqt-autosuspend");
+                                  tr("LxQt Powermanagement could not find data about any battery - battery will not be monitored"),
+                                  "lxqt-powermanagement");
     }
-
-    mLxQtNotification.setIcon("lxqt-autosuspend"); // FIXME should be a battery icon
-    mLxQtNotification.setUrgencyHint(LxQt::Notification::UrgencyCritical);
-    mLxQtNotification.setTimeout(2000);
 
     connect(&mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
@@ -70,18 +63,68 @@ BatteryWatcherd::~BatteryWatcherd()
 
 void BatteryWatcherd::batteryChanged()
 {
+    static QTime actionTime;
+    static LxQt::Notification *notification = 0;
+
     qDebug() <<  "BatteryChanged"
              <<  "discharging:"  << mBattery.discharging() 
              << "chargeLevel:" << mBattery.chargeLevel() 
              << "powerlow:"    << mBattery.powerLow() 
-             << "actionTime:"  << mActionTime;
+             << "actionTime:"  << actionTime;
 
-    if (mBattery.powerLow() && mActionTime.isNull() && powerLowAction() > 0)
+
+    if (mBattery.powerLow() && powerLowAction() > 0)
     {
-        int warningTimeMsecs = mSettings.value(POWERLOWWARNING_KEY, 30).toInt()*1000;
-        mActionTime = QTime::currentTime().addMSecs(warningTimeMsecs);
-        startTimer(100);
-        // From here everything is handled by timerEvent below
+        if (actionTime.isNull()) 
+        {
+            actionTime = QTime::currentTime().addMSecs(mSettings.value(POWERLOWWARNING_KEY, 30).toInt()*1000);
+        }
+       
+        if (notification == 0)
+        {
+            notification = new LxQt::Notification(tr("Power low!"), this);
+            notification->setTimeout(2000);
+        }
+
+        int milliSecondsToAction = QTime::currentTime().msecsTo(actionTime);
+        
+        if (milliSecondsToAction > 0)
+        {
+            int secondsToAction = milliSecondsToAction/1000;
+            switch (powerLowAction())
+            {
+            case SLEEP:
+                notification->setBody(tr("Sleeping in %1 seconds").arg(secondsToAction));
+                break;
+            case HIBERNATE:
+                notification->setBody(tr("Hibernating in %1 seconds").arg(secondsToAction));
+                break;
+            case POWEROFF:
+                notification->setBody(tr("Shutting down in %1 seconds").arg(secondsToAction));
+                break;
+            }
+
+            notification->update();
+
+            QTimer::singleShot(200, this, SLOT(batteryChanged()));
+        }
+        else
+        {
+            doAction(powerLowAction());
+        }
+    }
+    else 
+    {
+        if (!actionTime.isNull())
+        {
+            actionTime = QTime();
+        }
+
+        if (notification) 
+        {
+            delete notification;
+            notification = 0;
+        }
     }
 
     mBatteryInfo.updateInfo(&mBattery);
@@ -89,52 +132,20 @@ void BatteryWatcherd::batteryChanged()
     mTrayIcon->update(mBattery.discharging(), mBattery.chargeLevel(), mSettings.value(POWERLOWLEVEL_KEY, 0.05).toDouble());
 }
 
-void BatteryWatcherd::timerEvent(QTimerEvent *event)
-{
-    if (mActionTime.isNull() || powerLowAction() == 0 || ! mBattery.powerLow())
-    {
-            killTimer(event->timerId());
-            mActionTime = QTime();
-    }
-    else if (QTime::currentTime().msecsTo(mActionTime) > 0)
-    {
-        QString notificationMsg;
-        switch (powerLowAction())
-        {
-        case SLEEP:
-            notificationMsg = tr("Sleeping in %1 seconds");
-            break;
-        case HIBERNATE:
-            notificationMsg = tr("Hibernating in %1 seconds");
-            break;
-        case POWEROFF:
-            notificationMsg = tr("Shutting down in %1 seconds");
-            break;
-        }
-
-        mLxQtNotification.setBody(notificationMsg.arg(QTime::currentTime().msecsTo(mActionTime)/1000));
-        mLxQtNotification.update();
-    }
-    else
-    {
-        doAction(powerLowAction());
-        mActionTime = QTime();
-        killTimer(event->timerId());
-    }
-}
-
 void BatteryWatcherd::doAction(int action)
 {
+    LxQt::Power power;
+
     switch (action)
     {
     case SLEEP:
-        mLxQtPower.suspend();
+        power.suspend();
         break;
     case HIBERNATE:
-        mLxQtPower.hibernate();
+        power.hibernate();
         break;
     case POWEROFF:
-        mLxQtPower.shutdown();
+        power.shutdown();
         break;
     }
 }

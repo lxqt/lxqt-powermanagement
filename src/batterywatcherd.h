@@ -42,9 +42,6 @@ public:
     explicit BatteryWatcherd(QObject *parent = 0);
     virtual ~BatteryWatcherd();
 
-protected:
-    void timerEvent(QTimerEvent *event);
-
 private slots:
     void batteryChanged();
     void settingsChanged();
@@ -57,11 +54,7 @@ private:
     BatteryInfo mBatteryInfo;
     Battery mBattery;
     TrayIcon* mTrayIcon;
-    LxQt::Power mLxQtPower;
     LxQt::Settings mSettings;
-    
-    LxQt::Notification mLxQtNotification;
-    QTime mActionTime;
 };
 
 #endif // BATTERYWATCHERD_H
