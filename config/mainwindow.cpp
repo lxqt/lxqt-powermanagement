@@ -24,6 +24,7 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
+
 #include "mainwindow.h"
 #include "lidwatchersettings.h"
 #include "batterywatchersettings.h"
@@ -32,15 +33,15 @@
 MainWindow::MainWindow(QWidget *parent) :
     LxQt::ConfigDialog(tr("LXQt Powermanagement Configuration"), new LxQt::Settings("lxqt-autosuspend"), parent)
 {
-    LidWatcherSettings *lidwatcherSettings = new LidWatcherSettings(mSettings, this);
-    addPage(lidwatcherSettings, tr("Lid"), "laptop-lid");
-    connect(this, SIGNAL(reset()), lidwatcherSettings, SLOT(loadSettings()));
-
-    BatteryWatcherSettings* batteryWatcherSettings = new BatteryWatcherSettings(mSettings, this);
+    BatteryWatcherSettings* batteryWatcherSettings = new BatteryWatcherSettings(this);
     addPage(batteryWatcherSettings, tr("Battery"), "battery");
     connect(this, SIGNAL(reset()), batteryWatcherSettings, SLOT(loadSettings()));
 
-    IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(mSettings, this);
+    LidWatcherSettings *lidwatcherSettings = new LidWatcherSettings(this);
+    addPage(lidwatcherSettings, tr("Lid"), "laptop-lid");
+    connect(this, SIGNAL(reset()), lidwatcherSettings, SLOT(loadSettings()));
+
+    IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(this);
     addPage(idlenessWatcherSettings, tr("Idle"), "idle");
     connect(this, SIGNAL(reset()), idlenessWatcherSettings, SLOT(loadSettings()));
 

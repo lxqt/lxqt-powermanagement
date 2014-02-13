@@ -13,11 +13,11 @@
 #include "batterywatcherd.h"
 
 PowerManagementd::PowerManagementd() : 
-        mSettings("lxqt-autosuspend"),
         mBatterywatcherd(0),
         mLidwatcherd(0),
-        mIdlenesswatcherd(0)
-{
+        mIdlenesswatcherd(0),
+        mSettings()
+ {
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
     settingsChanged();
 }
@@ -28,23 +28,24 @@ PowerManagementd::~PowerManagementd()
 
 void PowerManagementd::settingsChanged()
 {
-    qDebug() << "PowerManagementd::settingsChanged...";
-    
-    startStopWatcher(mBatterywatcherd, mSettings.value(ENABLE_BATTERY_WATCHER, true).toBool()); 
-    startStopWatcher(mLidwatcherd, mSettings.value(ENABLE_LID_WATCHER, true).toBool());
-}
-
-template<class Watcher> void PowerManagementd::startStopWatcher(Watcher*& watcher, bool enabled)
-{
-    if (watcher == 0 && enabled) 
+    if (mSettings.isBatteryWatcherEnabled() && !mBatterywatcherd) 
+    { 
+        mBatterywatcherd = new BatteryWatcherd(this);
+    }
+    else if (mBatterywatcherd && ! mSettings.isBatteryWatcherEnabled())
     {
-        watcher = new Watcher();
+        mBatterywatcherd->deleteLater();
+        mBatterywatcherd = 0;
     }
-    else if (watcher != 0 && !enabled) {
-        watcher->deleteLater();
-        watcher = 0;
+
+    if (mSettings.isLidWatcherEnabled() && !mLidwatcherd) 
+    { 
+        mLidwatcherd = new LidWatcherd(this);
     }
+    else if (mLidwatcherd && ! mSettings.isLidWatcherEnabled())
+    {
+        mLidwatcherd->deleteLater();
+        mLidwatcherd = 0;
+    }
+
 }
-
-
-

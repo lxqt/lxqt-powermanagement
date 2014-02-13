@@ -95,7 +95,7 @@ double Battery::chargeLevel()
 
 bool Battery::powerLow()
 {
-    return  discharging() && chargeLevel() <  LxQt::Settings("lxqt-autosuspend").value(POWERLOWLEVEL_KEY, 15).toInt();
+    return  discharging() && chargeLevel() <  PowerManagementSettings().getPowerLowLevel();
 }
 
 bool Battery::discharging()

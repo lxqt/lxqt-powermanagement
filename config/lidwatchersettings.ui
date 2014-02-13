@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QGroupBox" name="enableGroupBox">
+    <widget class="QGroupBox" name="lidWatcherSettingsGroupBox">
      <property name="styleSheet">
       <string notr="true">QComboBox {
 	max-width: 130px;
@@ -26,6 +26,9 @@
       <string>Enable Lid Watcher</string>
      </property>
      <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
       <bool>true</bool>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -158,25 +161,22 @@
            </property>
           </widget>
          </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="extMonOnBatteryActionComboBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
          <item row="2" column="0">
           <widget class="QLabel" name="extMonOnAcActionLabel">
            <property name="text">
             <string>On Ac</string>
            </property>
           </widget>
-         </item>
-         <item row="3" column="0">
-          <spacer name="verticalSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
          </item>
          <item row="2" column="1">
           <widget class="QComboBox" name="extMonOnAcActionComboBox">
@@ -191,16 +191,6 @@
              <width>134</width>
              <height>0</height>
             </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QComboBox" name="extMonOnBatteryActionComboBox">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
            </property>
           </widget>
          </item>

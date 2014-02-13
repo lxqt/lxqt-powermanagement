@@ -4,34 +4,35 @@ find_package(LXQT REQUIRED)
 include(${LXQT_USE_FILE})
 
 set ( config-powermanagement_MOCS
-      mainwindow.h
-      lidwatchersettings.h
-      batterywatchersettings.h
-      idlenesswatchersettings.h
-    )
+    mainwindow.h
+    lidwatchersettings.h
+    batterywatchersettings.h
+    idlenesswatchersettings.h
+    common.h
+)
 
 set ( config-powermanagement_SRCS
-      main.cpp
-      mainwindow.cpp
-      lidwatchersettings.cpp
-      batterywatchersettings.cpp
-      idlenesswatchersettings.cpp
-      common.cpp
-    )
+    main.cpp
+    mainwindow.cpp
+    lidwatchersettings.cpp
+    batterywatchersettings.cpp
+    idlenesswatchersettings.cpp
+    common.cpp
+)
 
 set ( config-powermanagement_UIS
-      lidwatchersettings.ui
-      batterywatchersettings.ui
-      idlenesswatchersettings.ui
-    )
+    lidwatchersettings.ui
+    batterywatchersettings.ui
+    idlenesswatchersettings.ui
+)
 
 set ( config-powermanagement_RSCS
-      config-powermanagement.qrc
-    )
+    config-powermanagement.qrc
+)
 
 set (DESKTOP_FILES_IN
-     lxqt-config-powermanagement.desktop.in
-    )
+    lxqt-config-powermanagement.desktop.in
+)
 
 # Translations **********************************
 include(LxQtTranslate)

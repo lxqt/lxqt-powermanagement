@@ -12,6 +12,7 @@ set ( lxqt-powermanagement_MOCS
     lidwatcherd.h
     powermanagementd.h
     trayicon.h
+    ../config/common.h
 )
 
 set ( lxqt-powermanagement_SRCS
@@ -25,6 +26,7 @@ set ( lxqt-powermanagement_SRCS
     powermanagementd.cpp
     trayicon.cpp
     x11helper.cpp
+    ../config/common.cpp
 )
 
 set ( lxqt-powermanagement_UIS

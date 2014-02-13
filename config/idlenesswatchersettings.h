@@ -39,17 +39,16 @@ class IdlenessWatcherSettings : public QWidget
     Q_OBJECT
     
 public:
-    explicit IdlenessWatcherSettings(LxQt::Settings *settings, QWidget *parent = 0);
+    explicit IdlenessWatcherSettings(QWidget *parent = 0);
     ~IdlenessWatcherSettings();
 
 public slots:
     void loadSettings();
 
 private slots:
-    void saveAction();
+    void saveSettings();
 
 private:
-    LxQt::Settings *mSettings;
     Ui::IdlenessWatcherSettings *mUi;
 };
 

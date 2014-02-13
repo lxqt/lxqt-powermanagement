@@ -28,13 +28,13 @@
 #include "ui_batterywatchersettings.h"
 #include "common.h"
 
-BatteryWatcherSettings::BatteryWatcherSettings(LxQt::Settings *settings, QWidget *parent) :
+BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     QWidget(parent),
     mUi(new Ui::BatteryWatcherSettings)
 
 {
-    mSettings = settings;
     mUi->setupUi(this);
+    fillComboBox(mUi->actionComboBox);
    
     connect(mUi->groupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
     connect(mUi->actionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
@@ -50,20 +50,25 @@ BatteryWatcherSettings::~BatteryWatcherSettings()
 
 void BatteryWatcherSettings::loadSettings()
 {
-    mUi->groupBox->setChecked(mSettings->value(ENABLE_BATTERY_WATCHER, true).toBool());
-    fillComboBox(mUi->actionComboBox);
-    loadValueFromSettings(mSettings, mUi->actionComboBox, POWERLOWACTION_KEY, NOTHING);
-    mUi->warningSpinBox->setValue(mSettings->value(POWERLOWWARNING_KEY, 30).toInt());
-    mUi->levelSpinBox->setValue(mSettings->value(POWERLOWLEVEL_KEY, 15).toInt());
-    mUi->useThemeIconsCheckBox->setChecked(mSettings->value(USETHEMEICONS_KEY).toBool());
+    PowerManagementSettings settings;
+
+    mUi->groupBox->setChecked(settings.isBatteryWatcherEnabled());
+    
+    setComboBoxToValue(mUi->actionComboBox, settings.getPowerLowAction());
+    mUi->warningSpinBox->setValue(settings.getPowerLowWarningTime());
+    mUi->levelSpinBox->setValue(settings.getPowerLowLevel());
+    mUi->useThemeIconsCheckBox->setChecked(settings.isUseThemeIcons());
 }
 
 void BatteryWatcherSettings::saveSettings()
 {
-    mSettings->setValue(ENABLE_BATTERY_WATCHER, mUi->groupBox->isChecked());
-    mSettings->setValue(POWERLOWACTION_KEY, mUi->actionComboBox->itemData(mUi->actionComboBox->currentIndex()).toInt());
-    mSettings->setValue(POWERLOWWARNING_KEY, mUi->warningSpinBox->value());
-    mSettings->setValue(POWERLOWLEVEL_KEY, mUi->levelSpinBox->value());
-    mSettings->setValue(USETHEMEICONS_KEY, mUi->useThemeIconsCheckBox->isChecked());
+    PowerManagementSettings settings;
+    
+    settings.setBatteryWatcherEnabled(mUi->groupBox->isChecked());
+    
+    settings.setPowerLowAction(currentValue(mUi->actionComboBox));
+    settings.setPowerLowWarningTime(mUi->warningSpinBox->value());
+    settings.setPowerLowLevel(mUi->levelSpinBox->value());
+    settings.setUseThemeIcons(mUi->useThemeIconsCheckBox->isChecked());
 }
 

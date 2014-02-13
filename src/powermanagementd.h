@@ -9,7 +9,7 @@
 #define	POWERMANAGEMENTD_H
 
 #include <lxqt/lxqtsettings.h>
-
+#include "../config/common.h"
 
 class BatteryWatcherd;
 class LidWatcherd;
@@ -27,13 +27,11 @@ private slots:
     void settingsChanged();
 
 private:
-    template <class Watcher> void startStopWatcher(Watcher*& watcher, bool enabled);
-
-    LxQt::Settings mSettings;
-
     BatteryWatcherd* mBatterywatcherd;
     LidWatcherd* mLidwatcherd;
     IdlenessWatcherd* mIdlenesswatcherd;
+
+    PowerManagementSettings mSettings;
 };
 
 #endif	/* POWERMANAGEMENTD_H */

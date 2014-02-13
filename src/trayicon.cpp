@@ -158,6 +158,10 @@ TrayIconBuiltIn::~TrayIconBuiltIn()
 {
 }
 
+bool TrayIconBuiltIn::isProperForCurrentSettings()
+{
+    return ! PowerManagementSettings().isUseThemeIcons();
+}
 
 void TrayIconBuiltIn::updateIcon()
 {
@@ -253,9 +257,9 @@ TrayIconTheme::~TrayIconTheme()
 {
 }
 
-bool TrayIconTheme::isProperForCurrentSettings(bool useThemedIcons)
+bool TrayIconTheme::isProperForCurrentSettings()
 {
-    return useThemedIcons && mIconNamingScheme->isValidForCurrentIconTheme();
+    return PowerManagementSettings().isUseThemeIcons() && mIconNamingScheme->isValidForCurrentIconTheme();
 }
 
 

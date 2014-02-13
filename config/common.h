@@ -31,20 +31,61 @@
 #include <QString>
 #include <lxqt/lxqtsettings.h>
 
-#define ENABLE_BATTERY_WATCHER "enableBatteryWatcher"
-#define ENABLE_LID_WATCHER "enableLidWatcher"
-#define ENABLE_IDLENESS_WATCHER "enableIdlenessWatcher"
-#define LIDCLOSEDACTION_KEY "lidClosedAction"
-#define LIDCLOSED_AC_ACTION_KEY "lidClosedAction_on_ac"
-#define LIDCLOSED_EXT_MON_ACTION_KEY "lidClosedAction_extern_monitor"
-#define LIDCLOSED_EXT_MON_AC_ACTION_KEY "lidClosedAction_extern_monitor_ac"
-#define ENABLE_EXT_MON_LIDCLOSED_ACTIONS "enable_external_monitor_lidClosed_actions"
-#define POWERLOWACTION_KEY "powerLowAction"
-#define POWERLOWWARNING_KEY "powerLowWarning"
-#define POWERLOWLEVEL_KEY "powerLowLevel"
-#define SHOWTRAYICON_KEY "showTrayIcon"
-#define USETHEMEICONS_KEY "useThemeIcons"
-#define FIRSTRUNCHECK_KEY "performFirstRunCheck"
+class PowerManagementSettings : public LxQt::Settings
+{
+    Q_OBJECT
+
+public:
+    PowerManagementSettings(QObject* parent = 0);
+    ~PowerManagementSettings();
+
+    bool isBatteryWatcherEnabled();
+    void setBatteryWatcherEnabled(bool batteryWatcherEnabled);
+
+    int getPowerLowAction();
+    void setPowerLowAction(int powerLowAction);
+
+    int getPowerLowLevel();
+    void setPowerLowLevel(int powerLowLevel);
+
+    int getPowerLowWarningTime();
+    void setPowerLowWarningTime(int powerLowWarningTime);
+
+    bool isUseThemeIcons();
+    void setUseThemeIcons(bool useThemeIcons);
+
+
+    bool isLidWatcherEnabled();
+    void setLidWatcherEnabled(bool lidWatcherEnabled);
+
+    int getLidClosedAcAction();
+    void setLidClosedAcAction(int lidClosedAcAction);
+
+    int getLidClosedAction();
+    void setLidClosedAction(int lidClosedAction);
+
+    int getLidClosedExtMonAcAction();
+    void setLidClosedExtMonAcAction(int lidClosedExtMonAcAction);
+
+    int getLidClosedExtMonAction();
+    void setLidClosedExtMonAction(int lidClosedExtMonAction);
+
+    bool isEnableExtMonLidClosedActions();
+    void setEnableExtMonLidClosedActions(bool enableExtMonLidClosedActions);
+
+    int getIdlenessAction();
+    void setIdlenessAction(int idlenessAction);
+
+    int getIdlenessTimeSecs();
+    void setIdlenessTimeSecs(int idlenessTimeSecs);
+
+    int getIdlenessTimeMins();
+    void setIdlenessTimeMins(int idlenessTimeMins);
+
+    bool isIdlenessWatcherEnabled();
+    void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
+};
+
 
 enum
 {
@@ -57,7 +98,7 @@ enum
 
 void fillComboBox(QComboBox* comboBox);
 
-void loadValueFromSettings(LxQt::Settings *settings, QComboBox* comboBox, const QString & settingsKey, int defaultValue);
+void setComboBoxToValue(QComboBox* comboBox, int value);
 
 int currentValue(QComboBox *comboBox);
 

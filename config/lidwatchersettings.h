@@ -39,7 +39,7 @@ class LidWatcherSettings : public QWidget
     Q_OBJECT
     
 public:
-    explicit LidWatcherSettings(LxQt::Settings *settings, QWidget *parent = 0);
+    explicit LidWatcherSettings(QWidget *parent = 0);
     ~LidWatcherSettings();
 
 public slots:
@@ -49,9 +49,7 @@ private slots:
     void saveSettings();
 
 private:
-    LxQt::Settings *mSettings;
     Ui::LidWatcherSettings *mUi;
-    bool mLoading;
 };
 
 #endif // LIDSETTINGS_H

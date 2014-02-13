@@ -77,42 +77,29 @@ void LidWatcherd::doAction(int action)
 
 int LidWatcherd::action()
 {
-    int action;
-
-
-    
-    if (mLid.onBattery())
+    PowerManagementSettings settings;
+    if (settings.isEnableExtMonLidClosedActions() && externalMonitorPlugged())
     {
-        if (externalMonitorActionsEnabled() && externalMonitorPlugged())
+        if (mLid.onBattery())
         {
-            action = mSettings.value(LIDCLOSED_EXT_MON_ACTION_KEY).toInt();
-            qDebug() << "a: action =" << action;
+            return settings.getLidClosedExtMonAction();
         }
         else
         {
-            action = mSettings.value(LIDCLOSEDACTION_KEY).toInt();
+            return settings.getLidClosedExtMonAcAction();
         }
     }
     else
     {
-        if (externalMonitorActionsEnabled() && externalMonitorPlugged())
+        if (mLid.onBattery())
         {
-            action = mSettings.value(LIDCLOSED_EXT_MON_AC_ACTION_KEY).toInt();
+            return settings.getLidClosedAction();
         }
         else
         {
-            action = mSettings.value(LIDCLOSED_AC_ACTION_KEY).toInt();
+            return settings.getLidClosedAcAction(); 
         }
     }
-
-    return action;
-}
-
-bool LidWatcherd::externalMonitorActionsEnabled()
-{
-    bool result = mSettings.value(ENABLE_EXT_MON_LIDCLOSED_ACTIONS, false).toBool();
-    qDebug() << "externalMonitorActionsEnabled" << result;
-    return result;
 }
 
 bool LidWatcherd::externalMonitorPlugged()

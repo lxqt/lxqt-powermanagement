@@ -30,10 +30,9 @@
 #include "ui_idlenesswatchersettings.h"
 #include "common.h"
 
-IdlenessWatcherSettings::IdlenessWatcherSettings(LxQt::Settings *settings, QWidget *parent) :
+IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     QWidget(parent), mUi(new Ui::IdlenessWatcherSettings)
 {
-    mSettings = settings;
     mUi->setupUi(this);
 }
 
@@ -46,6 +45,6 @@ void IdlenessWatcherSettings::loadSettings()
 {
 }
 
-void IdlenessWatcherSettings::saveAction()
+void IdlenessWatcherSettings::saveSettings()
 {
 }

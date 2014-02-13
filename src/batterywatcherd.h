@@ -34,6 +34,7 @@
 #include <lxqt/lxqtpower.h>
 #include "battery.h"
 #include "trayicon.h"
+#include "../config/common.h"
 
 class BatteryWatcherd : public QObject
 {
@@ -49,12 +50,11 @@ private slots:
 
 private:
     void doAction(int action);
-    int powerLowAction();
 
     BatteryInfo mBatteryInfo;
     Battery mBattery;
     TrayIcon* mTrayIcon;
-    LxQt::Settings mSettings;
+    PowerManagementSettings mSettings;
 };
 
 #endif // BATTERYWATCHERD_H

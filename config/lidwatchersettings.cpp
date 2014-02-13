@@ -25,28 +25,29 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 #include <QComboBox>
+#include <QDebug>
 
 #include "lidwatchersettings.h"
 #include "ui_lidwatchersettings.h"
 #include "common.h"
 
-LidWatcherSettings::LidWatcherSettings(LxQt::Settings *settings, QWidget *parent) :
+LidWatcherSettings::LidWatcherSettings(QWidget *parent) :
     QWidget(parent),
-    mUi(new Ui::LidWatcherSettings),
-    mLoading(false)
+    mUi(new Ui::LidWatcherSettings)
 {
-    mSettings = settings;
     mUi->setupUi(this);
+    
     fillComboBox(mUi->onBatteryActionComboBox);
     fillComboBox(mUi->onAcActionComboBox);
     fillComboBox(mUi->extMonOnBatteryActionComboBox);
     fillComboBox(mUi->extMonOnAcActionComboBox);
-    connect(mUi->enableGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
+    
+    connect(mUi->lidWatcherSettingsGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
     connect(mUi->onBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
     connect(mUi->onAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
     connect(mUi->extMonOnBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
     connect(mUi->extMonOnAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
-    connect(mUi->extMonGroupBox, SIGNAL(toggled(bool)), this, SLOT(saveSettings()));
+    connect(mUi->extMonGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
 }
 
 LidWatcherSettings::~LidWatcherSettings()
@@ -56,24 +57,32 @@ LidWatcherSettings::~LidWatcherSettings()
 
 void LidWatcherSettings::loadSettings()
 {
-    mUi->enableGroupBox->setChecked(mSettings->value(ENABLE_LID_WATCHER, true).toBool());
+    qDebug() << "LidWatcher::loadSettings...";
+    PowerManagementSettings settings;
     
-    loadValueFromSettings(mSettings, mUi->onBatteryActionComboBox, LIDCLOSEDACTION_KEY, 0);
-    int fallBackOnAcIfNotDefined = currentValue(mUi->onBatteryActionComboBox);
-    loadValueFromSettings(mSettings, mUi->onAcActionComboBox, LIDCLOSED_AC_ACTION_KEY, fallBackOnAcIfNotDefined);
-    loadValueFromSettings(mSettings, mUi->extMonOnBatteryActionComboBox, LIDCLOSED_EXT_MON_ACTION_KEY, 0);
-    int fallBackExtMonOnAcIfNotDefined = currentValue(mUi->extMonOnBatteryActionComboBox);
-    loadValueFromSettings(mSettings, mUi->extMonOnAcActionComboBox, LIDCLOSED_EXT_MON_AC_ACTION_KEY, fallBackExtMonOnAcIfNotDefined);
+    mUi->lidWatcherSettingsGroupBox->setChecked(settings.isLidWatcherEnabled());
+    
+    setComboBoxToValue(mUi->onBatteryActionComboBox, settings.getLidClosedAction());
+    setComboBoxToValue(mUi->onAcActionComboBox, settings.getLidClosedAcAction());
+    
+    mUi->extMonGroupBox->setChecked(settings.isEnableExtMonLidClosedActions());
+    setComboBoxToValue(mUi->extMonOnBatteryActionComboBox, settings.getLidClosedExtMonAction());
+    setComboBoxToValue(mUi->extMonOnAcActionComboBox, settings.getLidClosedExtMonAcAction());
 
-    mUi->extMonGroupBox->setChecked(mSettings->value(ENABLE_EXT_MON_LIDCLOSED_ACTIONS, false).toBool());
 }
 
 void LidWatcherSettings::saveSettings()
 {
-    mSettings->setValue(ENABLE_LID_WATCHER, mUi->enableGroupBox->isChecked());
-    mSettings->setValue(LIDCLOSEDACTION_KEY, currentValue(mUi->onBatteryActionComboBox));
-    mSettings->setValue(LIDCLOSED_AC_ACTION_KEY, currentValue(mUi->onAcActionComboBox));
-    mSettings->setValue(LIDCLOSED_EXT_MON_ACTION_KEY, currentValue(mUi->extMonOnBatteryActionComboBox));
-    mSettings->setValue(LIDCLOSED_EXT_MON_AC_ACTION_KEY, currentValue(mUi->extMonOnAcActionComboBox));
-    mSettings->setValue(ENABLE_EXT_MON_LIDCLOSED_ACTIONS, mUi->extMonGroupBox->isChecked());
+    qDebug() << "LidWatcher::saveSettings...";
+    
+    PowerManagementSettings settings;
+   
+    settings.setLidWatcherEnabled(mUi->lidWatcherSettingsGroupBox->isChecked());
+    
+    settings.setLidClosedAction(currentValue(mUi->onBatteryActionComboBox));
+    settings.setLidClosedAcAction(currentValue(mUi->onAcActionComboBox));
+    
+    settings.setEnableExtMonLidClosedActions(mUi->extMonGroupBox->isChecked());
+    settings.setLidClosedExtMonAction(currentValue(mUi->extMonOnBatteryActionComboBox));
+    settings.setLidClosedExtMonAcAction(currentValue(mUi->extMonOnAcActionComboBox));
 }

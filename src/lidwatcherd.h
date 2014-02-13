@@ -46,10 +46,7 @@ private slots:
 
 private:
     void doAction(int action);
-
     int action();
-
-    bool externalMonitorActionsEnabled();
     bool externalMonitorPlugged();
 
     Lid mLid;

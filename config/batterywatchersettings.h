@@ -39,7 +39,7 @@ class BatteryWatcherSettings : public QWidget
     Q_OBJECT
     
 public:
-    explicit BatteryWatcherSettings(LxQt::Settings *settings, QWidget *parent = 0);
+    explicit BatteryWatcherSettings(QWidget *parent = 0);
     ~BatteryWatcherSettings();
 
 public slots:
@@ -49,7 +49,6 @@ private slots:
     void saveSettings();
 
 private:
-    LxQt::Settings *mSettings;
     Ui::BatteryWatcherSettings *mUi;
 };
 

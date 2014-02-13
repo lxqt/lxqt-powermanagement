@@ -63,7 +63,7 @@ public:
 
 public:
     void update(bool discharging, double chargeLevel, double lowLevel);
-    virtual bool isProperForCurrentSettings(bool useThemedIcons) = 0;
+    virtual bool isProperForCurrentSettings() = 0;
 
 protected:
     void updateToolTip();
@@ -81,7 +81,7 @@ public:
     TrayIconBuiltIn(QObject *parent = 0);
     ~TrayIconBuiltIn();
     
-    virtual bool isProperForCurrentSettings(bool useThemedIcons) { return !useThemedIcons; };
+    virtual bool isProperForCurrentSettings();
 
 protected:
     virtual void updateIcon();
@@ -96,7 +96,7 @@ public:
     TrayIconTheme(IconNamingScheme *iconNamingScheme, QObject* parent);
     ~TrayIconTheme();
 
-    virtual bool isProperForCurrentSettings(bool useThemedIcons);
+    virtual bool isProperForCurrentSettings();
 
 protected:
     virtual void updateIcon();
