@@ -4,29 +4,31 @@ find_package(LXQT REQUIRED)
 include(${LXQT_USE_FILE})
 
 set ( lxqt-powermanagement_MOCS
+    watcher.h
     battery.h
     batteryinfo.h
-    batterywatcherd.h
-    idlenesswatcherd.h
+    batterywatcher.h
+    idlenesswatcher.h
     lid.h
-    lidwatcherd.h
+    lidwatcher.h
     powermanagementd.h
     trayicon.h
-    ../config/common.h
+    ../config/powermanagementsettings.h
 )
 
 set ( lxqt-powermanagement_SRCS
+    watcher.cpp
     battery.cpp
     batteryinfo.cpp
-    batterywatcherd.cpp
-    idlenesswatcherd.cpp
+    batterywatcher.cpp
+    idlenesswatcher.cpp
     lid.cpp
-    lidwatcherd.cpp
+    lidwatcher.cpp
     main.cpp
     powermanagementd.cpp
     trayicon.cpp
     x11helper.cpp
-    ../config/common.cpp
+    ../config/powermanagementsettings.cpp
 )
 
 set ( lxqt-powermanagement_UIS
@@ -43,8 +45,8 @@ QT4_WRAP_UI( UIS ${lxqt-powermanagement_UIS})
 
 qt4_add_dbus_adaptor(lxqt-powermanagement_SRCS
     org.freedesktop.ScreenSaver.xml
-    idlenesswatcherd.h 
-    IdlenessWatcherd
+    idlenesswatcher.h 
+    IdlenessWatcher
 )
 
 # XCB stuff (TODO: move into findXCB)

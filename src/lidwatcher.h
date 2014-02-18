@@ -24,35 +24,36 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#ifndef LXQTAUTOSUSPENDD_H
-#define LXQTAUTOSUSPENDD_H
+#ifndef LIDWATCHER_H
+#define LIDWATCHER_H
 
 #include <QObject>
 #include <QTime>
 #include <lxqt/lxqtnotification.h>
 #include <lxqt/lxqtsettings.h>
 #include <lxqt/lxqtpower.h>
+#include "../config/powermanagementsettings.h"
+#include "watcher.h"
 #include "lid.h"
 
-class LidWatcherd : public QObject
+class LidWatcher : public Watcher
 {
     Q_OBJECT
 public:
-    explicit LidWatcherd(QObject *parent = 0);
-    virtual ~LidWatcherd();
+    explicit LidWatcher(QObject *parent = 0);
+    virtual ~LidWatcher();
 
 private slots:
     void lidChanged(bool closed);
 
 private:
-    void doAction(int action);
     int action();
     bool externalMonitorPlugged();
 
     Lid mLid;
     LxQt::Power mLxQtPower;
-    LxQt::Settings mSettings;
+    PowerManagementSettings mSettings;
 
 };
 
-#endif // LXQTAUTOSUSPENDD_H
+#endif // LIDWATCHER_H

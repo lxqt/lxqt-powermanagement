@@ -30,6 +30,8 @@
 #include <QWidget>
 #include <lxqt/lxqtsettings.h>
 
+#include "powermanagementsettings.h"
+
 namespace Ui {
 class LidWatcherSettings;
 }
@@ -49,6 +51,7 @@ private slots:
     void saveSettings();
 
 private:
+    PowerManagementSettings mSettings;
     Ui::LidWatcherSettings *mUi;
 };
 

@@ -30,7 +30,7 @@
 #include <lxqt/lxqtprogramfinder.h>
 
 #include "screensaveradaptor.h"
-#include "idlenesswatcherd.h"
+#include "idlenesswatcher.h"
 #include "x11helper.h"
 
 /* lockers:
@@ -42,14 +42,16 @@
  * xtrlock
  */
 
-IdlenessWatcherd::IdlenessWatcherd(QObject* parent) :
-    QObject(parent),
-    mSettings("lxqt-screenlocker"),
-    mErrorNotification(tr("LxQt Screenlocker failed to start")),
+
+IdlenessWatcher::IdlenessWatcher(QObject* parent):
+    Watcher(parent),
+    mPSettings(),
+    mErrorNotification(tr("LxQt Idleness watcher failed to start")),
     mDBusWatcher(this),
     mInhibitorCookie(0),
     mIsLocked(false)
 {
+    qDebug() << "Starting idlenesswatcher";
     mConn = X11Helper::connection();
     xcb_prefetch_extension_data(mConn, &xcb_screensaver_id);
     xcb_prefetch_extension_data(mConn, &xcb_dpms_id);
@@ -69,15 +71,14 @@ IdlenessWatcherd::IdlenessWatcherd(QObject* parent) :
     {
         mErrorNotification.setBody(tr("D-Bus interface org.freedesktop.ScreenSaver is already registered"));
         mErrorNotification.update();
-        qCritical() << "ERROR: D-Bus interface org.freedesktop.ScreenSaver is already registered";
-        exit(0);
+        qWarning() << "ERROR: D-Bus interface org.freedesktop.ScreenSaver is already registered";
     }
 
     mDBusWatcher.setConnection(QDBusConnection::sessionBus());
     mDBusWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
 
     connect(&mTimer, SIGNAL(timeout()), SLOT(idleTimeout()));
-    connect(&mSettings, SIGNAL(settingsChanged()), SLOT(loadSettings()));
+    connect(&mPSettings, SIGNAL(settingsChanged()), SLOT(restartTimer()));
     connect(&mDBusWatcher, SIGNAL(serviceUnregistered(QString)), SLOT(serviceUnregistered(QString)));
     connect(&mLockProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(screenUnlocked(int,QProcess::ExitStatus)));
     connect(&mErrorNotification, SIGNAL(actionActivated(int)), SLOT(notificationAction(int)));
@@ -106,18 +107,16 @@ IdlenessWatcherd::IdlenessWatcherd(QObject* parent) :
         if (verReply)
             free(verReply);
         qCritical() << "ERROR: Can't use the X11 Screensaver Extension!";
-        exit(0);
     }
 
     mErrorNotification.setActions(QStringList(tr("Configure...")));
 
-    loadSettings();
-
     qDebug() << "LxQt Screenlocker started.";
-    qDebug() << "timeout:" << mIdleTimeoutMs << "ms, lock command:" << mLockCommand;
+    qDebug() << "timeout:" << getMaxIdleTimeoutMs() << "ms, lock command:" << mLockCommand;
+    restartTimer();
 }
 
-xcb_screen_t* IdlenessWatcherd::screenOfDisplay(xcb_connection_t* conn, int screen)
+xcb_screen_t* IdlenessWatcher::screenOfDisplay(xcb_connection_t* conn, int screen)
 {
     xcb_screen_iterator_t iter = xcb_setup_roots_iterator(xcb_get_setup(conn));
     for (; iter.rem; --screen, xcb_screen_next(&iter))
@@ -126,7 +125,7 @@ xcb_screen_t* IdlenessWatcherd::screenOfDisplay(xcb_connection_t* conn, int scre
     return NULL;
 }
 
-uint IdlenessWatcherd::getIdleTimeMs()
+uint IdlenessWatcher::getIdleTimeMs()
 {
     xcb_screensaver_query_info_cookie_t infoCookie = xcb_screensaver_query_info_unchecked(mConn, mScreen->root);
     xcb_screensaver_query_info_reply_t* infoReply = xcb_screensaver_query_info_reply(mConn, infoCookie, NULL);
@@ -140,49 +139,35 @@ uint IdlenessWatcherd::getIdleTimeMs()
     return msSinceUserInput;
 }
 
-void IdlenessWatcherd::idleTimeout()
+uint IdlenessWatcher::getMaxIdleTimeoutMs()
+{
+    return 1000*(mPSettings.getIdlenessTimeMins()*60 + mPSettings.getIdlenessTimeSecs());
+}
+
+void IdlenessWatcher::idleTimeout()
 {
     uint msSinceUserInput = getIdleTimeMs();
     qDebug() << "    ms since user input:" << msSinceUserInput;
-    if (msSinceUserInput >= mIdleTimeoutMs)
+    if (msSinceUserInput >= getMaxIdleTimeoutMs())
     {
-        lockScreen();
+        doAction(mPSettings.getIdlenessAction());        
     }
     else
     {
-        qDebug() << "--- Locking screen in" << (mIdleTimeoutMs - msSinceUserInput) << "(maybe).";
-        mTimer.start(mIdleTimeoutMs - msSinceUserInput);
+        qDebug() << "--- Locking screen in" << (getMaxIdleTimeoutMs() - msSinceUserInput) << "(maybe).";
+        mTimer.start(getMaxIdleTimeoutMs() - msSinceUserInput);
     }
 }
 
-bool IdlenessWatcherd::lockScreen()
+void IdlenessWatcher::restartTimer()
 {
-    qDebug() << "!!! Locking screen!";
-    mLockProcess.start(mLockCommand);
-    if (!mLockProcess.waitForStarted())
-    {
-        mErrorNotification.setSummary("ERROR: Can't lock screen");
-        mErrorNotification.setBody(tr("Can't start \"%1\"").arg(mLockCommand));
-        mErrorNotification.update();
-        return false;
-    }
-    mTimer.stop();
-    mIsLocked = true;
-    mLockTime = QDateTime::currentDateTime();
-    if (mTurnOffDisplay)
-        xcb_dpms_force_level(mConn, XCB_DPMS_DPMS_MODE_OFF);
-    emit ActiveChanged(true);
-    return true;
+    qDebug() << ">>> Timer Restarted, waiting: " << getMaxIdleTimeoutMs() << "msecs";
+    mTimer.start(getMaxIdleTimeoutMs());
 }
 
-void IdlenessWatcherd::restartTimer()
+void IdlenessWatcher::screenUnlocked(int exitCode, QProcess::ExitStatus exitStatus)
 {
-    qDebug() << ">>> Timer Restarted";
-    mTimer.start(mIdleTimeoutMs);
-}
 
-void IdlenessWatcherd::screenUnlocked(int exitCode, QProcess::ExitStatus exitStatus)
-{
     mIsLocked = false;
     emit ActiveChanged(false);
 
@@ -203,7 +188,7 @@ void IdlenessWatcherd::screenUnlocked(int exitCode, QProcess::ExitStatus exitSta
     }
 }
 
-void IdlenessWatcherd::notificationAction(int num)
+void IdlenessWatcher::notificationAction(int num)
 {
     switch (num)
     {
@@ -212,7 +197,7 @@ void IdlenessWatcherd::notificationAction(int num)
     }
 }
 
-void IdlenessWatcherd::serviceUnregistered(const QString& service)
+void IdlenessWatcher::serviceUnregistered(const QString& service)
 {
     for (QMutableMapIterator<uint, QString> iter(mInhibitors); iter.hasNext();)
     {
@@ -228,63 +213,43 @@ void IdlenessWatcherd::serviceUnregistered(const QString& service)
         restartTimer();
 }
 
-void IdlenessWatcherd::loadSettings()
-{
-    mLockCommand = mSettings.value("LockCommand").toString();
-    mIdleTimeoutMs = mSettings.value("IdleTimeoutSecs", 5 * 60).toInt() * 1000;
-    mTurnOffDisplay = mSettings.value("TurnOffDisplay", true).toBool();
-
-    if (LxQt::ProgramFinder::programExists(mLockCommand))
-    {
-        restartTimer();
-        mErrorNotification.close();
-    }
-    else
-    {
-        mErrorNotification.setSummary(tr("ERROR: Can't lock screen"));
-        mErrorNotification.setBody(tr("Program \"%1\" does not exist!").arg(LxQt::ProgramFinder::programName(mLockCommand)));
-        mErrorNotification.update();
-        mTimer.stop();
-    }
-}
-
 /* ---------- D-Bus methods ---------- */
 
-void IdlenessWatcherd::Lock()
+void IdlenessWatcher::Lock()
 {
-    lockScreen();
+    // lockScreen();
 }
 
-uint IdlenessWatcherd::GetSessionIdleTime()
+uint IdlenessWatcher::GetSessionIdleTime()
 {
     return getIdleTimeMs() / 1000;
 }
 
-uint IdlenessWatcherd::GetActiveTime()
+uint IdlenessWatcher::GetActiveTime()
 {
     if (!mIsLocked)
         return 0;
     return mLockTime.secsTo(QDateTime::currentDateTime());
 }
 
-bool IdlenessWatcherd::GetActive()
+bool IdlenessWatcher::GetActive()
 {
     return mIsLocked;
 }
 
-bool IdlenessWatcherd::SetActive(bool activate)
+bool IdlenessWatcher::SetActive(bool activate)
 {
     if (!activate)
         return false;
-    return lockScreen();
+    //return lockScreen();
 }
 
-void IdlenessWatcherd::SimulateUserActivity()
+void IdlenessWatcher::SimulateUserActivity()
 {
     restartTimer();
 }
 
-uint IdlenessWatcherd::Inhibit(const QString& applicationName, const QString& reasonForInhibit)
+uint IdlenessWatcher::Inhibit(const QString& applicationName, const QString& reasonForInhibit)
 {
     mInhibitorCookie++;
     QString service(this->message().service());
@@ -296,7 +261,7 @@ uint IdlenessWatcherd::Inhibit(const QString& applicationName, const QString& re
     return mInhibitorCookie;
 }
 
-void IdlenessWatcherd::UnInhibit(uint cookie)
+void IdlenessWatcher::UnInhibit(uint cookie)
 {
     qDebug() << "*** Uninhibit" << cookie;
     mDBusWatcher.removeWatchedService(mInhibitors.value(cookie));
@@ -306,14 +271,14 @@ void IdlenessWatcherd::UnInhibit(uint cookie)
         restartTimer();
 }
 
-uint IdlenessWatcherd::Throttle(const QString& applicationName, const QString& reasonForThrottle)
+uint IdlenessWatcher::Throttle(const QString& applicationName, const QString& reasonForThrottle)
 {
     Q_UNUSED(applicationName);
     Q_UNUSED(reasonForThrottle);
     return 0;
 }
 
-void IdlenessWatcherd::UnThrottle(uint cookie)
+void IdlenessWatcher::UnThrottle(uint cookie)
 {
     Q_UNUSED(cookie);
 }

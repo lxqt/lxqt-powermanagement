@@ -24,24 +24,25 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#ifndef BATTERYWATCHERD_H
-#define BATTERYWATCHERD_H
+#ifndef BATTERYWATCHER_H
+#define BATTERYWATCHER_H
 
 #include <QObject>
 #include <QTime>
 #include <lxqt/lxqtnotification.h>
 #include <lxqt/lxqtsettings.h>
 #include <lxqt/lxqtpower.h>
+#include "watcher.h"
 #include "battery.h"
 #include "trayicon.h"
-#include "../config/common.h"
+#include "../config/powermanagementsettings.h"
 
-class BatteryWatcherd : public QObject
+class BatteryWatcher : public Watcher
 {
     Q_OBJECT
 public:
-    explicit BatteryWatcherd(QObject *parent = 0);
-    virtual ~BatteryWatcherd();
+    explicit BatteryWatcher(QObject *parent = 0);
+    virtual ~BatteryWatcher();
 
 private slots:
     void batteryChanged();
@@ -49,12 +50,10 @@ private slots:
     void showBatteryInfo();
 
 private:
-    void doAction(int action);
-
     BatteryInfo mBatteryInfo;
     Battery mBattery;
     TrayIcon* mTrayIcon;
     PowerManagementSettings mSettings;
 };
 
-#endif // BATTERYWATCHERD_H
+#endif // BATTERYWATCHER_H

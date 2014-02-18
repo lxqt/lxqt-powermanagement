@@ -30,6 +30,8 @@
 #include <QGroupBox>
 #include <lxqt/lxqtsettings.h>
 
+#include "powermanagementsettings.h"
+
 namespace Ui {
     class IdlenessWatcherSettings;
 }
@@ -49,6 +51,7 @@ private slots:
     void saveSettings();
 
 private:
+    PowerManagementSettings mSettings;
     Ui::IdlenessWatcherSettings *mUi;
 };
 

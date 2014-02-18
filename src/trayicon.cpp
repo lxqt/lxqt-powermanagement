@@ -32,7 +32,7 @@
 #include <lxqt/lxqtsettings.h>
 
 #include "trayicon.h"
-#include "../config/common.h"
+#include "../config/powermanagementsettings.h"
 
 QString IconNamingScheme::iconName(float chargeLevel, bool discharging) const
 {   

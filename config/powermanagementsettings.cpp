@@ -1,29 +1,47 @@
 #include <QDebug>
-#include "common.h"
+#include <lxqt/LxQtPower>
+#include "powermanagementsettings.h"
 
-#define ENABLE_BATTERY_WATCHER_KEY "enableBatteryWatcher"
-#define ENABLE_LID_WATCHER_KEY "enableLidWatcher"
-#define ENABLE_IDLENESS_WATCHER_KEY "enableIdlenessWatcher"
-#define LID_CLOSED_ACTION_KEY "lidClosedAction"
-#define LID_CLOSED_AC_ACTION_KEY "lidClosedAcAction"
-#define LID_CLOSED_EXT_MON_ACTION_KEY "lidClosedExtMonAction"
-#define LID_CLOSED_EXT_MON_AC_ACTION_KEY "lidClosedExtMonAcAction"
-#define ENABLE_EXT_MON_LIDCLOSED_ACTIONS_KEY "enableExtMonLidClosedActions"
-#define POWER_LOW_ACTION_KEY "powerLowAction"
-#define POWER_LOW_WARNING_KEY "powerLowWarning"
-#define POWER_LOW_LEVEL_KEY "powerLowLevel"
-#define USE_THEME_ICONS_KEY "useThemeIcons"
-#define IDLENESS_ACTION_KEY "idlenessAction"
-#define IDLENESS_TIME_MINS_KEY "idlenessTimeMins"
-#define IDLENESS_TIME_SECS_KEY "idlenessTimeSecs"
+namespace PowerManagementSettingsConstants 
+{
+    const QString PERFORM_FIRST_RUN_CHECK = "performFirstRunCheck";
+    const QString ENABLE_BATTERY_WATCHER_KEY = "enableBatteryWatcher";
+    const QString ENABLE_LID_WATCHER_KEY = "enableLidWatcher";
+    const QString ENABLE_IDLENESS_WATCHER_KEY = "enableIdlenessWatcher";
+    const QString LID_CLOSED_ACTION_KEY = "lidClosedAction";
+    const QString LID_CLOSED_AC_ACTION_KEY = "lidClosedAcAction";
+    const QString LID_CLOSED_EXT_MON_ACTION_KEY = "lidClosedExtMonAction";
+    const QString LID_CLOSED_EXT_MON_AC_ACTION_KEY = "lidClosedExtMonAcAction";
+    const QString ENABLE_EXT_MON_LIDCLOSED_ACTIONS_KEY = "enableExtMonLidClosedActions";
+    const QString POWER_LOW_ACTION_KEY = "powerLowAction";
+    const QString POWER_LOW_WARNING_KEY = "powerLowWarning";
+    const QString POWER_LOW_LEVEL_KEY = "powerLowLevel";
+    const QString USE_THEME_ICONS_KEY = "useThemeIcons";
+    const QString IDLENESS_ACTION_KEY = "idlenessAction";
+    const QString IDLENESS_TIME_MINS_KEY = "idlenessTimeMins";
+    const QString IDLENESS_TIME_SECS_KEY = "idlenessTimeSecs";
+}
 
-PowerManagementSettings::PowerManagementSettings(QObject* parent) : LxQt::Settings("lxqt-autosuspend")
+using namespace PowerManagementSettingsConstants;
+
+PowerManagementSettings::PowerManagementSettings(QObject* parent) : LxQt::Settings("lxqt-powermanagement")
 {
 }
 
 PowerManagementSettings::~PowerManagementSettings()
 {
 }
+
+bool PowerManagementSettings::isPerformFirstRunCheck()
+{
+    return value(PERFORM_FIRST_RUN_CHECK, true).toBool();
+}
+
+void PowerManagementSettings::setPerformFirstRunCheck(bool performFirstRunCheck)
+{
+    setValue(PERFORM_FIRST_RUN_CHECK, performFirstRunCheck);
+}
+
 
 bool PowerManagementSettings::isBatteryWatcherEnabled()
 {
@@ -177,33 +195,4 @@ void PowerManagementSettings::setIdlenessWatcherEnabled(bool idlenessWatcherEnab
     setValue(ENABLE_IDLENESS_WATCHER_KEY, idlenessWatcherEnabled);
 }
 
-
-void fillComboBox(QComboBox* comboBox)
-{
-    comboBox->clear();
-    comboBox->addItem(QObject::tr("Nothing"), NOTHING);
-    comboBox->addItem(QObject::tr("Lock screen"), LOCK);
-    comboBox->addItem(QObject::tr("Sleep"), SLEEP);
-    comboBox->addItem(QObject::tr("Hibernate"), HIBERNATE);
-    comboBox->addItem(QObject::tr("Shutdown"), POWEROFF);
-}
-
-void setComboBoxToValue(QComboBox* comboBox, int value)
-{
-    for (int index = 0; index < comboBox->count(); index++)
-    {
-        if (value == comboBox->itemData(index).toInt())
-        {
-            comboBox->setCurrentIndex(index);
-            return;
-        }
-    }
-
-    comboBox->setCurrentIndex(0);
-}
-
-int currentValue(QComboBox *comboBox)
-{
-    return comboBox->itemData(comboBox->currentIndex()).toInt();
-}
 

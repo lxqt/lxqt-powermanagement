@@ -33,7 +33,7 @@
 #include <QMetaObject>
 #include <QMetaProperty>
 #include <lxqt/lxqtsettings.h>
-#include "../config/common.h"
+#include "../config/powermanagementsettings.h"
 
 Battery::Battery(QObject* parent) 
    : QObject(parent),

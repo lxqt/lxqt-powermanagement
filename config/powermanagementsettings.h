@@ -24,6 +24,7 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
+
 #ifndef COMMON_H
 #define COMMON_H 
 
@@ -38,6 +39,9 @@ class PowerManagementSettings : public LxQt::Settings
 public:
     PowerManagementSettings(QObject* parent = 0);
     ~PowerManagementSettings();
+
+    bool isPerformFirstRunCheck();
+    void setPerformFirstRunCheck(bool performFirstRunCheck);
 
     bool isBatteryWatcherEnabled();
     void setBatteryWatcherEnabled(bool batteryWatcherEnabled);
@@ -86,20 +90,5 @@ public:
     void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
 };
 
-
-enum
-{
-    NOTHING,
-    SLEEP,
-    HIBERNATE,
-    POWEROFF,
-    LOCK
-};
-
-void fillComboBox(QComboBox* comboBox);
-
-void setComboBoxToValue(QComboBox* comboBox, int value);
-
-int currentValue(QComboBox *comboBox);
 
 #endif // COMMON_H

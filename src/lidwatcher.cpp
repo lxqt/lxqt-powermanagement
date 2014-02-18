@@ -30,23 +30,20 @@
 #include <qt4/QtCore/qprocess.h>
 #include <qt4/QtCore/qtextstream.h>
 #include <QDebug>
-#include "lidwatcherd.h"
-#include "../config/common.h"
+#include "lidwatcher.h"
+#include "../config/powermanagementsettings.h"
 
-LidWatcherd::LidWatcherd(QObject *parent) :
-QObject(parent),
-mSettings("lxqt-autosuspend")
+LidWatcher::LidWatcher(QObject *parent) : Watcher(parent)
 {
     qDebug() << "Starting lidwatcher";
     connect(&mLid, SIGNAL(changed(bool)), this, SLOT(lidChanged(bool)));
 }
 
-LidWatcherd::~LidWatcherd()
-{
+LidWatcher::~LidWatcher(){
     qDebug() << "Stopping lidwatcher";
 }
 
-void LidWatcherd::lidChanged(bool closed)
+void LidWatcher::lidChanged(bool closed)
 {
     qDebug() << "LidWatcherd#lidChanged: closed=" << closed;
     if (closed)
@@ -55,54 +52,33 @@ void LidWatcherd::lidChanged(bool closed)
     }
 }
 
-void LidWatcherd::doAction(int action)
+int LidWatcher::action()
 {
-    qDebug() << "LidWatcherd.doAction, action=" << action;
-    switch (action)
-    {
-        case SLEEP:
-            mLxQtPower.suspend();
-            break;
-        case HIBERNATE:
-            mLxQtPower.hibernate();
-            break;
-        case POWEROFF:
-            mLxQtPower.shutdown();
-            break;
-        case LOCK:
-            // FIXME Do something;
-            break;
-    }
-}
-
-int LidWatcherd::action()
-{
-    PowerManagementSettings settings;
-    if (settings.isEnableExtMonLidClosedActions() && externalMonitorPlugged())
+    if (mSettings.isEnableExtMonLidClosedActions() && externalMonitorPlugged())
     {
         if (mLid.onBattery())
         {
-            return settings.getLidClosedExtMonAction();
+            return mSettings.getLidClosedExtMonAction();
         }
         else
         {
-            return settings.getLidClosedExtMonAcAction();
+            return mSettings.getLidClosedExtMonAcAction();
         }
     }
     else
     {
         if (mLid.onBattery())
         {
-            return settings.getLidClosedAction();
+            return mSettings.getLidClosedAction();
         }
         else
         {
-            return settings.getLidClosedAcAction(); 
+            return mSettings.getLidClosedAcAction(); 
         }
     }
 }
 
-bool LidWatcherd::externalMonitorPlugged()
+bool LidWatcher::externalMonitorPlugged()
 {
     int monitorCount = 0;
 

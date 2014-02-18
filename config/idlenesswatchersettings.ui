@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QGroupBox" name="groupBox">
+    <widget class="QGroupBox" name="idlenessWatcherGroupBox">
      <property name="styleSheet">
       <string notr="true">QSpinBox, QComboBox, QTimeEdit {
 	max-width: 130px;

@@ -9,11 +9,11 @@
 #define	POWERMANAGEMENTD_H
 
 #include <lxqt/lxqtsettings.h>
-#include "../config/common.h"
+#include "../config/powermanagementsettings.h"
 
-class BatteryWatcherd;
-class LidWatcherd;
-class IdlenessWatcherd;
+class BatteryWatcher;
+class LidWatcher;
+class IdlenessWatcher;
 
 class PowerManagementd : public QObject
 {
@@ -27,9 +27,9 @@ private slots:
     void settingsChanged();
 
 private:
-    BatteryWatcherd* mBatterywatcherd;
-    LidWatcherd* mLidwatcherd;
-    IdlenessWatcherd* mIdlenesswatcherd;
+    BatteryWatcher* mBatterywatcherd;
+    LidWatcher* mLidwatcherd;
+    IdlenessWatcher* mIdlenesswatcherd;
 
     PowerManagementSettings mSettings;
 };

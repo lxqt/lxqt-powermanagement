@@ -28,17 +28,19 @@
 #include <QtCore/QTimer>
 #include <QtCore/QCoreApplication>
 #include <lxqt/lxqtautostartentry.h>
+#include <lxqt/lxqtpower.h>
 
-#include "batterywatcherd.h"
-#include "../config/common.h"
+#include "batterywatcher.h"
+#include "../config/powermanagementsettings.h"
 
-BatteryWatcherd::BatteryWatcherd(QObject *parent) :
-    QObject(parent),
+BatteryWatcher::BatteryWatcher(QObject *parent) :
+    Watcher(parent),
     mBatteryInfo(),
     mBattery(),
     mTrayIcon(0),
     mSettings()
 {
+    qDebug() << "Starting BatteryWatcher";
     if (!mBattery.haveBattery())
     {
         LxQt::Notification::notify(tr("No battery!"),
@@ -53,15 +55,14 @@ BatteryWatcherd::BatteryWatcherd(QObject *parent) :
     batteryChanged();
 }
 
-BatteryWatcherd::~BatteryWatcherd()
-{
+BatteryWatcher::~BatteryWatcher(){
     if (mTrayIcon)
     {
         delete mTrayIcon;
     }
 }
 
-void BatteryWatcherd::batteryChanged()
+void BatteryWatcher::batteryChanged()
 {
     static QTime actionTime;
     static LxQt::Notification *notification = 0;
@@ -93,13 +94,13 @@ void BatteryWatcherd::batteryChanged()
             int secondsToAction = milliSecondsToAction/1000;
             switch (mSettings.getPowerLowAction())
             {
-            case SLEEP:
-                notification->setBody(tr("Sleeping in %1 seconds").arg(secondsToAction));
+            case LxQt::Power::PowerSuspend:
+                notification->setBody(tr("Suspending in %1 seconds").arg(secondsToAction));
                 break;
-            case HIBERNATE:
+            case LxQt::Power::PowerHibernate:
                 notification->setBody(tr("Hibernating in %1 seconds").arg(secondsToAction));
                 break;
-            case POWEROFF:
+            case LxQt::Power::PowerShutdown:
                 notification->setBody(tr("Shutting down in %1 seconds").arg(secondsToAction));
                 break;
             }
@@ -132,25 +133,7 @@ void BatteryWatcherd::batteryChanged()
     mTrayIcon->update(mBattery.discharging(), mBattery.chargeLevel(), mSettings.getPowerLowLevel());
 }
 
-void BatteryWatcherd::doAction(int action)
-{
-    LxQt::Power power;
-
-    switch (action)
-    {
-    case SLEEP:
-        power.suspend();
-        break;
-    case HIBERNATE:
-        power.hibernate();
-        break;
-    case POWEROFF:
-        power.shutdown();
-        break;
-    }
-}
-
-void BatteryWatcherd::settingsChanged()
+void BatteryWatcher::settingsChanged()
 {
     if (mTrayIcon != 0 && !mTrayIcon->isProperForCurrentSettings())
     {
@@ -180,7 +163,7 @@ void BatteryWatcherd::settingsChanged()
     }
 }
 
-void BatteryWatcherd::showBatteryInfo()
+void BatteryWatcher::showBatteryInfo()
 {
     if (mBatteryInfo.isVisible())
     {

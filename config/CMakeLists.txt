@@ -8,7 +8,7 @@ set ( config-powermanagement_MOCS
     lidwatchersettings.h
     batterywatchersettings.h
     idlenesswatchersettings.h
-    common.h
+    powermanagementsettings.h
 )
 
 set ( config-powermanagement_SRCS
@@ -17,7 +17,8 @@ set ( config-powermanagement_SRCS
     lidwatchersettings.cpp
     batterywatchersettings.cpp
     idlenesswatchersettings.cpp
-    common.cpp
+    powermanagementsettings.cpp
+    helpers.cpp
 )
 
 set ( config-powermanagement_UIS

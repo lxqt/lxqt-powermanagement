@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     a.setQuitOnLastWindowClosed(false);
 //    TRANSLATE_APP;
 
-    // To ensure only one instance of lxqt-autosuspend is running we register as a DBus service and refuse to run
+    // To ensure only one instance of lxqt-powermanagement is running we register as a DBus service and refuse to run
     // if not able to do so.
     // We do not register any object as we don't have any dbus-operations to expose.
     if (! QDBusConnection::sessionBus().registerService("org.lxqt.lxqt-powermanagement"))

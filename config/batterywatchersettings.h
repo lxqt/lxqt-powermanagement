@@ -29,6 +29,8 @@
 
 #include <QWidget>
 #include <lxqt/lxqtsettings.h>
+#include "../config/powermanagementsettings.h"
+#include "helpers.h"
 
 namespace Ui {
 class BatteryWatcherSettings;
@@ -49,6 +51,7 @@ private slots:
     void saveSettings();
 
 private:
+    PowerManagementSettings mSettings;
     Ui::BatteryWatcherSettings *mUi;
 };
 

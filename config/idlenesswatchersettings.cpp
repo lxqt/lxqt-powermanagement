@@ -25,15 +25,23 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 #include <QComboBox>
+#include <QDebug>
 
 #include "idlenesswatchersettings.h"
 #include "ui_idlenesswatchersettings.h"
-#include "common.h"
+#include "helpers.h"
 
 IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
-    QWidget(parent), mUi(new Ui::IdlenessWatcherSettings)
+    QWidget(parent), 
+    mSettings(), 
+    mUi(new Ui::IdlenessWatcherSettings)
 {
     mUi->setupUi(this);
+    fillComboBox(mUi->idleActionComboBox);
+    connect(mUi->idlenessWatcherGroupBox, SIGNAL(clicked()), SLOT(saveSettings()));
+    connect(mUi->idleActionComboBox, SIGNAL(activated(int)), SLOT(saveSettings()));
+    connect(mUi->idleTimeMinutesSpinBox, SIGNAL(valueChanged(int)), SLOT(saveSettings()));
+    connect(mUi->idleTimeSecondsSpinBox, SIGNAL(valueChanged(int)), SLOT(saveSettings()));
 }
 
 IdlenessWatcherSettings::~IdlenessWatcherSettings()
@@ -43,8 +51,20 @@ IdlenessWatcherSettings::~IdlenessWatcherSettings()
 
 void IdlenessWatcherSettings::loadSettings()
 {
+    qDebug() << "IdlenessWatcherSettings:loadSettings";
+
+    mUi->idlenessWatcherGroupBox->setChecked(mSettings.isIdlenessWatcherEnabled());
+    setComboBoxToValue(mUi->idleActionComboBox, mSettings.getIdlenessAction());
+    mUi->idleTimeMinutesSpinBox->setValue(mSettings.getIdlenessTimeMins());
+    mUi->idleTimeSecondsSpinBox->setValue(mSettings.getIdlenessTimeSecs());
 }
 
 void IdlenessWatcherSettings::saveSettings()
 {
+    qDebug() << "IdlenessWatcherSettings:saveSettings";
+
+    mSettings.setIdlenessWatcherEnabled(mUi->idlenessWatcherGroupBox->isChecked());
+    mSettings.setIdlenessAction(currentValue(mUi->idleActionComboBox));
+    mSettings.setIdlenessTimeMins(mUi->idleTimeMinutesSpinBox->value());
+    mSettings.setIdlenessTimeSecs(mUi->idleTimeSecondsSpinBox->value());
 }
