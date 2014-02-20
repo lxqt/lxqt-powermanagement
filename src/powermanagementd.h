@@ -9,6 +9,8 @@
 #define	POWERMANAGEMENTD_H
 
 #include <lxqt/lxqtsettings.h>
+#include <lxqt/lxqtnotification.h>
+
 #include "../config/powermanagementsettings.h"
 
 class BatteryWatcher;
@@ -25,6 +27,7 @@ public:
 
 private slots:
     void settingsChanged();
+    void runConfigure();
 
 private:
     BatteryWatcher* mBatterywatcherd;
@@ -32,6 +35,7 @@ private:
     IdlenessWatcher* mIdlenesswatcherd;
 
     PowerManagementSettings mSettings;
+    LxQt::Notification mNotification;
 };
 
 #endif	/* POWERMANAGEMENTD_H */

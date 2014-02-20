@@ -5,6 +5,7 @@
  * Created on 9. februar 2014, 16:15
  */
 #include <QDebug>
+#include <QStringList>
 
 #include "powermanagementd.h"
 #include "../config/powermanagementsettings.h"
@@ -23,7 +24,13 @@ PowerManagementd::PowerManagementd() :
 
     if (mSettings.isPerformFirstRunCheck()) 
     {
-        // FIXME show notification with action
+        mNotification.setSummary(tr("Power management"));
+        mNotification.setBody(tr("You are running LxQt Powermanagement for the first time.\nYou can configure it from settings... "));
+        mNotification.setActions(QStringList() << tr("Configure..."));
+        mNotification.setTimeout(10000);
+        connect(&mNotification, SIGNAL(actionActivated(int)), SLOT(runConfigure()));
+        mNotification.update();
+        
         mSettings.setPerformFirstRunCheck(false);
     }
 }
@@ -64,4 +71,10 @@ void PowerManagementd::settingsChanged()
         mIdlenesswatcherd = 0;
     }
 
+}
+
+void PowerManagementd::runConfigure()
+{
+    mNotification.close();
+    QProcess::startDetached("lxqt-config-powermanagement");
 }
