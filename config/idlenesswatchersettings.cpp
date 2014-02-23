@@ -69,7 +69,7 @@ void IdlenessWatcherSettings::loadSettings()
 
 void IdlenessWatcherSettings::minutesChanged(int newVal)
 {
-    if (newVal <= 1 && mUi->idleTimeSecondsSpinBox->value() < 5)
+    if (newVal < 1 && mUi->idleTimeSecondsSpinBox->value() < 5)
     {
         mUi->idleTimeSecondsSpinBox->setValue(5);
     }
