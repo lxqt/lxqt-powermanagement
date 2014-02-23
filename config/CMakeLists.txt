@@ -31,6 +31,10 @@ set ( config-powermanagement_RSCS
     config-powermanagement.qrc
 )
 
+set ( ICON_FILES
+    icons/laptop-lid.svg
+)
+
 set (DESKTOP_FILES_IN
     lxqt-config-powermanagement.desktop.in
 )
@@ -72,4 +76,4 @@ target_link_libraries ( lxqt-config-powermanagement
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(FILES   ${DESKTOP_FILES}   DESTINATION share/applications)
-
+install(FILES ${ICON_FILES} DESTINATION share/icons/hicolor/scalable/devices)

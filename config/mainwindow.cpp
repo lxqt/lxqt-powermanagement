@@ -42,7 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this, SIGNAL(reset()), lidwatcherSettings, SLOT(loadSettings()));
 
     IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(this);
-    addPage(idlenessWatcherSettings, tr("Idle"), "idle");
+    addPage(idlenessWatcherSettings, tr("idle"), (QStringList() << "user-idle" << "user-away"));
     connect(this, SIGNAL(reset()), idlenessWatcherSettings, SLOT(loadSettings()));
 
     emit reset();
