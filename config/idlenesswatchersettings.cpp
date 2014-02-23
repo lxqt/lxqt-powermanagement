@@ -40,8 +40,11 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     fillComboBox(mUi->idleActionComboBox);
     connect(mUi->idlenessWatcherGroupBox, SIGNAL(clicked()), SLOT(saveSettings()));
     connect(mUi->idleActionComboBox, SIGNAL(activated(int)), SLOT(saveSettings()));
-    connect(mUi->idleTimeMinutesSpinBox, SIGNAL(valueChanged(int)), SLOT(saveSettings()));
-    connect(mUi->idleTimeSecondsSpinBox, SIGNAL(valueChanged(int)), SLOT(saveSettings()));
+    connect(mUi->idleTimeMinutesSpinBox, SIGNAL(editingFinished()), SLOT(saveSettings()));
+    connect(mUi->idleTimeMinutesSpinBox, SIGNAL(valueChanged(int)), SLOT(minutesChanged(int)));
+    connect(mUi->idleTimeSecondsSpinBox, SIGNAL(valueChanged(int)), SLOT(secondsChanged(int)));
+
+    connect(mUi->idleTimeSecondsSpinBox, SIGNAL(editingFinished()), SLOT(saveSettings()));
 }
 
 IdlenessWatcherSettings::~IdlenessWatcherSettings()
@@ -55,9 +58,42 @@ void IdlenessWatcherSettings::loadSettings()
 
     mUi->idlenessWatcherGroupBox->setChecked(mSettings.isIdlenessWatcherEnabled());
     setComboBoxToValue(mUi->idleActionComboBox, mSettings.getIdlenessAction());
-    mUi->idleTimeMinutesSpinBox->setValue(mSettings.getIdlenessTimeMins());
-    mUi->idleTimeSecondsSpinBox->setValue(mSettings.getIdlenessTimeSecs());
+    
+    int idlenessTimeSeconds = mSettings.getIdlenessTimeSecs();
+    if (idlenessTimeSeconds < 5) idlenessTimeSeconds = 5;
+    int idlenessTimeMinutes = idlenessTimeSeconds/60;
+    idlenessTimeSeconds = idlenessTimeSeconds % 60;
+    mUi->idleTimeMinutesSpinBox->setValue(idlenessTimeMinutes);
+    mUi->idleTimeSecondsSpinBox->setValue(idlenessTimeSeconds);
 }
+
+void IdlenessWatcherSettings::minutesChanged(int newVal)
+{
+    if (newVal <= 1 && mUi->idleTimeSecondsSpinBox->value() < 5)
+    {
+        mUi->idleTimeSecondsSpinBox->setValue(5);
+    }
+}
+
+void IdlenessWatcherSettings::secondsChanged(int newVal)
+{
+    if (newVal > 59) 
+    {
+        mUi->idleTimeSecondsSpinBox->setValue(0);
+        mUi->idleTimeMinutesSpinBox->setValue(mUi->idleTimeMinutesSpinBox->value() + 1);
+    }
+    else if (newVal < 5 && mUi->idleTimeMinutesSpinBox->value() <= 0) 
+    {
+        mUi->idleTimeSecondsSpinBox->setValue(5);
+    }
+    else if (newVal < 0)
+    {
+        mUi->idleTimeMinutesSpinBox->setValue(mUi->idleTimeMinutesSpinBox->value() - 1);
+        mUi->idleTimeSecondsSpinBox->setValue(59);
+    }
+}
+
+
 
 void IdlenessWatcherSettings::saveSettings()
 {
@@ -65,6 +101,6 @@ void IdlenessWatcherSettings::saveSettings()
 
     mSettings.setIdlenessWatcherEnabled(mUi->idlenessWatcherGroupBox->isChecked());
     mSettings.setIdlenessAction(currentValue(mUi->idleActionComboBox));
-    mSettings.setIdlenessTimeMins(mUi->idleTimeMinutesSpinBox->value());
-    mSettings.setIdlenessTimeSecs(mUi->idleTimeSecondsSpinBox->value());
+    
+    mSettings.setIdlenessTimeSecs(60*mUi->idleTimeMinutesSpinBox->value() + mUi->idleTimeSecondsSpinBox->value());
 }

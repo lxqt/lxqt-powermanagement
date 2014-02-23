@@ -48,6 +48,8 @@ public slots:
     void loadSettings();
 
 private slots:
+    void minutesChanged(int newVal);
+    void secondsChanged(int newVal);
     void saveSettings();
 
 private:

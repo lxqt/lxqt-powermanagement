@@ -63,9 +63,9 @@ private slots:
     void screenUnlocked(int exitCode, QProcess::ExitStatus exitStatus);
     void notificationAction(int num);
     void serviceUnregistered(const QString& service);
-
-private:
     void restartTimer();
+ 
+private:
     uint getIdleTimeMs();
     uint getMaxIdleTimeoutMs();
     

@@ -83,9 +83,6 @@ public:
     int getIdlenessTimeSecs();
     void setIdlenessTimeSecs(int idlenessTimeSecs);
 
-    int getIdlenessTimeMins();
-    void setIdlenessTimeMins(int idlenessTimeMins);
-
     bool isIdlenessWatcherEnabled();
     void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
 };

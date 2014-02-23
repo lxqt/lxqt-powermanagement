@@ -141,7 +141,7 @@ uint IdlenessWatcher::getIdleTimeMs()
 
 uint IdlenessWatcher::getMaxIdleTimeoutMs()
 {
-    return 1000*(mPSettings.getIdlenessTimeMins()*60 + mPSettings.getIdlenessTimeSecs());
+    return 1000*mPSettings.getIdlenessTimeSecs();
 }
 
 void IdlenessWatcher::idleTimeout()

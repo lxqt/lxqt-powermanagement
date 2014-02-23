@@ -164,16 +164,6 @@ void PowerManagementSettings::setIdlenessAction(int idlenessAction)
     setValue(IDLENESS_ACTION_KEY, idlenessAction);
 }
 
-int PowerManagementSettings::getIdlenessTimeMins()
-{
-    return value(IDLENESS_TIME_MINS_KEY, 0).toInt();
-}
-
-void PowerManagementSettings::setIdlenessTimeMins(int idlenessTimeMins)
-{
-    setValue(IDLENESS_TIME_MINS_KEY, idlenessTimeMins);
-}
-
 int PowerManagementSettings::getIdlenessTimeSecs()
 {
     return value(IDLENESS_TIME_SECS_KEY, 5).toInt();
