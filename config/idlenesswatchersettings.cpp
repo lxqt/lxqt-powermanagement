@@ -82,14 +82,19 @@ void IdlenessWatcherSettings::secondsChanged(int newVal)
         mUi->idleTimeSecondsSpinBox->setValue(0);
         mUi->idleTimeMinutesSpinBox->setValue(mUi->idleTimeMinutesSpinBox->value() + 1);
     }
-    else if (newVal < 5 && mUi->idleTimeMinutesSpinBox->value() <= 0) 
-    {
-        mUi->idleTimeSecondsSpinBox->setValue(5);
-    }
+    
     else if (newVal < 0)
     {
-        mUi->idleTimeMinutesSpinBox->setValue(mUi->idleTimeMinutesSpinBox->value() - 1);
-        mUi->idleTimeSecondsSpinBox->setValue(59);
+        if (mUi->idleTimeMinutesSpinBox->value() < 1)
+        { 
+            mUi->idleTimeMinutesSpinBox->setValue(0);
+            mUi->idleTimeSecondsSpinBox->setValue(0);
+        } 
+        else 
+        {
+            mUi->idleTimeMinutesSpinBox->setValue(mUi->idleTimeMinutesSpinBox->value() - 1);
+            mUi->idleTimeSecondsSpinBox->setValue(59);
+        }
     }
 }
 
@@ -101,6 +106,14 @@ void IdlenessWatcherSettings::saveSettings()
 
     mSettings.setIdlenessWatcherEnabled(mUi->idlenessWatcherGroupBox->isChecked());
     mSettings.setIdlenessAction(currentValue(mUi->idleActionComboBox));
-    
-    mSettings.setIdlenessTimeSecs(60*mUi->idleTimeMinutesSpinBox->value() + mUi->idleTimeSecondsSpinBox->value());
+
+    int idleTimeSecs = 60*mUi->idleTimeMinutesSpinBox->value() + mUi->idleTimeSecondsSpinBox->value();
+    if (idleTimeSecs < 5) 
+    {
+        idleTimeSecs = 5;
+        mUi->idleTimeMinutesSpinBox->setValue(0);
+        mUi->idleTimeSecondsSpinBox->setValue(5);
+    }
+
+    mSettings.setIdlenessTimeSecs(idleTimeSecs);
 }
