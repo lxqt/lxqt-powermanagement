@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
 Exec=lxqt-config-powermanagement
-Icon=lxqt-powermanagement
+Icon=preferences-system-power-management
 Terminal=false
-OnlyShowIn=LxQt;LXDE;
+OnlyShowIn=LxQt;LXDE;Razor;
 Categories=Settings;DesktopSettings;Qt;LxQt;
 Name=LxQt Powermanagement Configuration
 GenericName=Powermanagement Configuration
