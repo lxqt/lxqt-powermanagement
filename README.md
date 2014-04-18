@@ -1,4 +1,4 @@
-lxde-powermanagement
+lxqt-powermanagement
 ====================
 
-powermanagement module for lxde-qt
+Power management module for LXQt
