@@ -54,12 +54,21 @@ Battery::Battery(QObject* parent)
               device->property("NativePath").toString().contains("power_supply"))) // - hence this line
         {
             mUPowerBatteryDeviceInterface = device;
-            connect(mUPowerBatteryDeviceInterface, SIGNAL(Changed()), this, SLOT(uPowerBatteryChanged()));
-            mUPowerBatteryPropertiesInterface = new QDBusInterface("org.freedesktop.UPower",
+           mUPowerBatteryPropertiesInterface = new QDBusInterface("org.freedesktop.UPower",
                                                          objectPath.path(),
                                                          "org.freedesktop.DBus.Properties",
                                                          QDBusConnection::systemBus());
-            uPowerBatteryChanged();
+            if (! connect(mUPowerBatteryDeviceInterface, SIGNAL(Changed()), this, SLOT(uPowerBatteryChanged()))) 
+			{
+				qDebug() << "Could not connect to 'changed' signal, connecting to PropertiesChanged instead and hoping for the best";
+				QDBusConnection::systemBus().connect("org.freedesktop.UPower",
+													objectPath.path(),
+													"org.freedesktop.DBus.Properties",
+													"PropertiesChanged",
+													this,
+													SLOT(uPowerBatteryChanged()));
+			}
+			uPowerBatteryChanged();
             break;
         }
         else
