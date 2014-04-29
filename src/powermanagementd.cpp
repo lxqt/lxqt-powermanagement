@@ -1,7 +1,7 @@
-/* 
+/*
  * File:   powermanagementd.cpp
  * Author: Christian Surlykke
- * 
+ *
  * Created on 9. februar 2014, 16:15
  */
 #include <QDebug>
@@ -13,7 +13,7 @@
 #include "lidwatcher.h"
 #include "batterywatcher.h"
 
-PowerManagementd::PowerManagementd() : 
+PowerManagementd::PowerManagementd() :
         mBatterywatcherd(0),
         mLidwatcherd(0),
         mIdlenesswatcherd(0),
@@ -22,15 +22,15 @@ PowerManagementd::PowerManagementd() :
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
     settingsChanged();
 
-    if (mSettings.isPerformFirstRunCheck()) 
+    if (mSettings.isPerformFirstRunCheck())
     {
-        mNotification.setSummary(tr("Power management"));
-        mNotification.setBody(tr("You are running LxQt Powermanagement for the first time.\nYou can configure it from settings... "));
+        mNotification.setSummary(tr("Power Management"));
+        mNotification.setBody(tr("You are running LXQt Power Management for the first time.\nYou can configure it from settings... "));
         mNotification.setActions(QStringList() << tr("Configure..."));
         mNotification.setTimeout(10000);
         connect(&mNotification, SIGNAL(actionActivated(int)), SLOT(runConfigure()));
         mNotification.update();
-        
+
         mSettings.setPerformFirstRunCheck(false);
     }
 }
@@ -41,8 +41,8 @@ PowerManagementd::~PowerManagementd()
 
 void PowerManagementd::settingsChanged()
 {
-    if (mSettings.isBatteryWatcherEnabled() && !mBatterywatcherd) 
-    { 
+    if (mSettings.isBatteryWatcherEnabled() && !mBatterywatcherd)
+    {
         mBatterywatcherd = new BatteryWatcher(this);
     }
     else if (mBatterywatcherd && ! mSettings.isBatteryWatcherEnabled())
@@ -51,8 +51,8 @@ void PowerManagementd::settingsChanged()
         mBatterywatcherd = 0;
     }
 
-    if (mSettings.isLidWatcherEnabled() && !mLidwatcherd) 
-    { 
+    if (mSettings.isLidWatcherEnabled() && !mLidwatcherd)
+    {
         mLidwatcherd = new LidWatcher(this);
     }
     else if (mLidwatcherd && ! mSettings.isLidWatcherEnabled())
@@ -62,7 +62,7 @@ void PowerManagementd::settingsChanged()
     }
 
     if (mSettings.isIdlenessWatcherEnabled() && !mIdlenesswatcherd)
-    {   
+    {
         mIdlenesswatcherd = new IdlenessWatcher(this);
     }
     else if (mIdlenesswatcherd && !mSettings.isIdlenessWatcherEnabled())
