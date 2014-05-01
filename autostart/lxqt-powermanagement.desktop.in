@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=LxQt Powermanagement
+Name=LXQt Powermanagement
 TryExec=lxqt-powermanagement
 Exec=lxqt-powermanagement
-OnlyShowIn=Razor;
-X-LxQt-Need-Tray=true
-X-LxQt-Module=true
+OnlyShowIn=LXQt;
+X-LXQt-Need-Tray=true
+X-LXQt-Module=true
 
 #TRANSLATIONS_DIR=translations
