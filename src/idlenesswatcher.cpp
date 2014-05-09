@@ -239,8 +239,8 @@ bool IdlenessWatcher::GetActive()
 
 bool IdlenessWatcher::SetActive(bool activate)
 {
-    if (!activate)
-        return false;
+    //if (!activate)
+    return false;
     //return lockScreen();
 }
 
