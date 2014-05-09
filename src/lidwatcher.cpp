@@ -27,8 +27,7 @@
 #include <QTimer>
 #include <QCoreApplication>
 #include <lxqt/lxqtautostartentry.h>
-#include <qt4/QtCore/qprocess.h>
-#include <qt4/QtCore/qtextstream.h>
+#include <QProcess>
 #include <QDebug>
 #include "lidwatcher.h"
 #include "../config/powermanagementsettings.h"

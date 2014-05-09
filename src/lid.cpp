@@ -27,7 +27,7 @@
 #include "lid.h"
 #include <QDBusConnection>
 #include <QDBusReply>
-#include <qt4/QtCore/qobject.h>
+#include <QObject>
 #include <QDebug>
 
 Lid::Lid()
