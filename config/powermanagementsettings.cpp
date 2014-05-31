@@ -1,5 +1,5 @@
 #include <QDebug>
-#include <lxqt/LxQtPower>
+#include <LXQt/Power>
 #include "powermanagementsettings.h"
 
 namespace PowerManagementSettingsConstants 

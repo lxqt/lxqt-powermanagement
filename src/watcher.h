@@ -2,7 +2,7 @@
 #define	WATCHER_H
 
 #include <QObject>
-#include <lxqt/LxQtPower>
+#include <LXQt/Power>
 
 class Watcher : public QObject
 {
