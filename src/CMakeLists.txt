@@ -93,6 +93,7 @@ include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
                       ${CMAKE_CURRENT_BINARY_DIR}
     ${XCB_INCLUDE_DIR}
     ${X11_XCB_INCLUDE_DIR}
+    ${QTXDG_INCLUDE_DIRS}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
                     )
