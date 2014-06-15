@@ -47,7 +47,7 @@ public:
 private slots:
     void batteryChanged();
     void settingsChanged();
-    void showBatteryInfo();
+    void showBatteryInfo(QSystemTrayIcon::ActivationReason activationReason);
 
 private:
     BatteryInfo mBatteryInfo;

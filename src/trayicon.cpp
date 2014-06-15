@@ -27,8 +27,11 @@
 
 #include <math.h>
 #include <QDebug>
+#include <QMenu>
 #include <QtSvg/QSvgRenderer>
-#include <QtGui/QPainter>
+#include <QPainter>
+#include <QProcess>
+#include <QMessageBox>
 #include <lxqt/lxqtsettings.h>
 
 #include "trayicon.h"
@@ -125,7 +128,12 @@ bool IconNamingScheme::isValidForCurrentIconTheme() const
 }
 
 
-TrayIcon::TrayIcon(QObject *parent) : QSystemTrayIcon(parent) {}
+TrayIcon::TrayIcon(QObject *parent) : QSystemTrayIcon(parent), contextMenu()
+{
+    contextMenu.addAction(tr("Configure..."), this, SLOT(onConfigureTriggered()));
+    contextMenu.addAction(tr("About.."), this, SLOT(onAboutTriggered()));
+    setContextMenu(&contextMenu);
+}
 
 TrayIcon::~TrayIcon() {}
 
@@ -147,6 +155,21 @@ void TrayIcon::updateToolTip()
     toolTip = toolTip + QString(" - %1 %").arg(chargeLevel, 0, 'f', 1);
     setToolTip(toolTip);
 }
+
+void TrayIcon::onConfigureTriggered()
+{
+    QProcess::startDetached("lxqt-config-powermanagement");
+}
+
+void TrayIcon::onAboutTriggered()
+{
+    QMessageBox::about(0, tr("About"),
+                          tr("LXQt Powermanagement:\n"
+                             "Powermanagement for the LXQt Desktop Environment\n\n"
+                             "Author: Christian Surlykke\n\n"
+                             "Copyright 2012-2014"));
+}
+
 
 
 TrayIconBuiltIn::TrayIconBuiltIn(QObject* parent) : 

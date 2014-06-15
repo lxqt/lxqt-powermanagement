@@ -48,6 +48,8 @@ BatteryWatcher::BatteryWatcher(QObject *parent) :
                                   "lxqt-powermanagement");
     }
 
+
+
     connect(&mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
     connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
@@ -157,19 +159,19 @@ void BatteryWatcher::settingsChanged()
         bool discharging = mBattery.state() == 2;
         qDebug() << "updating trayicon: " << discharging << mBattery.chargeLevel() << mSettings.getPowerLowLevel();
 
-        connect(mTrayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(showBatteryInfo()));
+        connect(mTrayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(showBatteryInfo(QSystemTrayIcon::ActivationReason)));
         mTrayIcon->update(discharging, mBattery.chargeLevel(), mSettings.getPowerLowLevel());
         mTrayIcon->show();
     }
 }
 
-void BatteryWatcher::showBatteryInfo()
+void BatteryWatcher::showBatteryInfo(QSystemTrayIcon::ActivationReason activationReason)
 {
     if (mBatteryInfo.isVisible())
     {
         mBatteryInfo.close();
     }
-    else
+    else if (QSystemTrayIcon::Trigger == activationReason)
     {
         mBatteryInfo.open();
     }

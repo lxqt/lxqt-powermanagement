@@ -28,10 +28,11 @@
 #ifndef TRAYICON_H
 #define TRAYICON_H
 
-#include <QtGui/QSystemTrayIcon>
-#include <QtGui/QWidget>
-#include <QtGui/QIcon>
-#include <QtCore/QVariantMap>
+#include <QSystemTrayIcon>
+#include <QWidget>
+#include <QIcon>
+#include <QVariantMap>
+#include <QMenu>
 #include <lxqt/lxqtsettings.h>
 #include "batteryinfo.h"
 #include "battery.h"
@@ -71,6 +72,13 @@ protected:
     bool discharging;
     double chargeLevel;
     double lowLevel;
+
+private slots:
+    void onAboutTriggered();
+    void onConfigureTriggered();
+
+private:
+    QMenu contextMenu;
 };
 
 class TrayIconBuiltIn : public TrayIcon 
