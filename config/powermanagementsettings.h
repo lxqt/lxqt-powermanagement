@@ -40,8 +40,8 @@ public:
     PowerManagementSettings(QObject* parent = 0);
     ~PowerManagementSettings();
 
-    bool isPerformFirstRunCheck();
-    void setPerformFirstRunCheck(bool performFirstRunCheck);
+    int getRunCheckLevel();
+    void setRunCheckLevel(int newLevel);
 
     bool isBatteryWatcherEnabled();
     void setBatteryWatcherEnabled(bool batteryWatcherEnabled);

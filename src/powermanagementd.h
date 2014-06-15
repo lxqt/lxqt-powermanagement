@@ -30,6 +30,8 @@ private slots:
     void runConfigure();
 
 private:
+    void performRunCheck();
+
     BatteryWatcher* mBatterywatcherd;
     LidWatcher* mLidwatcherd;
     IdlenessWatcher* mIdlenesswatcherd;

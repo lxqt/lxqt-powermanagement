@@ -13,6 +13,8 @@
 #include "lidwatcher.h"
 #include "batterywatcher.h"
 
+#define CURRENT_RUNCHECK_LEVEL 1
+
 PowerManagementd::PowerManagementd() :
         mBatterywatcherd(0),
         mLidwatcherd(0),
@@ -22,17 +24,12 @@ PowerManagementd::PowerManagementd() :
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
     settingsChanged();
 
-    if (mSettings.isPerformFirstRunCheck())
+    if (mSettings.getRunCheckLevel() < CURRENT_RUNCHECK_LEVEL)
     {
-        mNotification.setSummary(tr("Power Management"));
-        mNotification.setBody(tr("You are running LXQt Power Management for the first time.\nYou can configure it from settings... "));
-        mNotification.setActions(QStringList() << tr("Configure..."));
-        mNotification.setTimeout(10000);
-        connect(&mNotification, SIGNAL(actionActivated(int)), SLOT(runConfigure()));
-        mNotification.update();
-
-        mSettings.setPerformFirstRunCheck(false);
+        performRunCheck();
+        mSettings.setRunCheckLevel(CURRENT_RUNCHECK_LEVEL);
     }
+
 }
 
 PowerManagementd::~PowerManagementd()
@@ -77,4 +74,18 @@ void PowerManagementd::runConfigure()
 {
     mNotification.close();
     QProcess::startDetached("lxqt-config-powermanagement");
+}
+
+void PowerManagementd::performRunCheck()
+{
+    mSettings.setLidWatcherEnabled(Lid().haveLid());
+    mSettings.setBatteryWatcherEnabled(Battery().haveBattery());
+    qDebug() << "performRunCheck, lidWatcherEnabled:" << mSettings.isLidWatcherEnabled() << ", batteryWatcherEnabled:" << mSettings.isBatteryWatcherEnabled();
+    mSettings.sync();
+    mNotification.setSummary(tr("Power Management"));
+    mNotification.setBody(tr("You are running LXQt Power Management for the first time.\nYou can configure it from settings... "));
+    mNotification.setActions(QStringList() << tr("Configure..."));
+    mNotification.setTimeout(10000);
+    connect(&mNotification, SIGNAL(actionActivated(int)), SLOT(runConfigure()));
+    mNotification.update();
 }

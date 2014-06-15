@@ -4,7 +4,7 @@
 
 namespace PowerManagementSettingsConstants 
 {
-    const QString PERFORM_FIRST_RUN_CHECK = "performFirstRunCheck";
+    const QString RUN_CHECK_LEVEL = "runCheckLevel";
     const QString ENABLE_BATTERY_WATCHER_KEY = "enableBatteryWatcher";
     const QString ENABLE_LID_WATCHER_KEY = "enableLidWatcher";
     const QString ENABLE_IDLENESS_WATCHER_KEY = "enableIdlenessWatcher";
@@ -32,16 +32,15 @@ PowerManagementSettings::~PowerManagementSettings()
 {
 }
 
-bool PowerManagementSettings::isPerformFirstRunCheck()
+int PowerManagementSettings::getRunCheckLevel()
 {
-    return value(PERFORM_FIRST_RUN_CHECK, true).toBool();
+    return value(RUN_CHECK_LEVEL, 0).toInt();
 }
 
-void PowerManagementSettings::setPerformFirstRunCheck(bool performFirstRunCheck)
+void PowerManagementSettings::setRunCheckLevel(int newLevel)
 {
-    setValue(PERFORM_FIRST_RUN_CHECK, performFirstRunCheck);
+    setValue(RUN_CHECK_LEVEL, newLevel);
 }
-
 
 bool PowerManagementSettings::isBatteryWatcherEnabled()
 {

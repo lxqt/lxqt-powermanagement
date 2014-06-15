@@ -50,6 +50,11 @@ Lid::Lid()
 	mIsClosed = mUPowerPropertiesInterface->property("LidIsClosed").toBool();
 }
 
+bool Lid::haveLid()
+{
+    return mUPowerInterface->property("LidIsPresent").toBool();
+}
+
 bool Lid::onBattery()
 {
     return mUPowerInterface->property("OnBattery").toBool();
