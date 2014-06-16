@@ -29,6 +29,7 @@
 
 #include <QObject>
 #include <QTime>
+#include <QDBusUnixFileDescriptor>
 #include <lxqt/lxqtnotification.h>
 #include <lxqt/lxqtsettings.h>
 #include <lxqt/lxqtpower.h>
@@ -49,11 +50,12 @@ private slots:
 private:
     int action();
     bool externalMonitorPlugged();
+    void inhibitSystemdLogin();
 
     Lid mLid;
     LxQt::Power mLxQtPower;
     PowerManagementSettings mSettings;
-
+    QDBusUnixFileDescriptor logindLock;
 };
 
 #endif // LIDWATCHER_H

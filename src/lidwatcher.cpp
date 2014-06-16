@@ -29,12 +29,15 @@
 #include <lxqt/lxqtautostartentry.h>
 #include <QProcess>
 #include <QDebug>
+#include <QDBusInterface>
+#include <QDBusReply>
 #include "lidwatcher.h"
 #include "../config/powermanagementsettings.h"
 
 LidWatcher::LidWatcher(QObject *parent) : Watcher(parent)
 {
     qDebug() << "Starting lidwatcher";
+    inhibitSystemdLogin();
     connect(&mLid, SIGNAL(changed(bool)), this, SLOT(lidChanged(bool)));
 }
 
@@ -105,3 +108,47 @@ bool LidWatcher::externalMonitorPlugged()
 
     return monitorCount >= 2;
 }
+
+void LidWatcher::inhibitSystemdLogin()
+{
+    QDBusInterface manager("org.freedesktop.login1",
+                           "/org/freedesktop/login1",
+                           "org.freedesktop.login1.Manager",
+                           QDBusConnection::systemBus(), this);
+    QDBusReply<QDBusUnixFileDescriptor> reply = manager.call("Inhibit", "handle-lid-switch", "lxqt-powermanagment", "LidWatcher is in da house!", "block");
+    if (reply.isValid())
+    {
+        logindLock = reply.value();
+        qDebug() << "Inhibit got:" << logindLock.fileDescriptor();
+    }
+    else
+    {
+        qDebug() << "Error from inhibit:" << reply.error();
+    }
+}
+
+/*gdbus introspect --system --dest org.freedesktop.login1 --object-path /org/freedesktop/login1
+node /org/freedesktop/login1 {
+  interface org.freedesktop.login1.Manager {
+    methods:
+      Inhibit(in  s what,
+              in  s who,
+              in  s why,
+              in  s mode,
+              out h fd);
+      ListInhibitors(out a(ssssuu) inhibitors);
+      ...
+    signals:
+      PrepareForShutdown(b active);
+      PrepareForSleep(b active);
+      ...
+    properties:
+      readonly s BlockInhibited = '';
+      readonly s DelayInhibited = '';
+      readonly t InhibitDelayMaxUSec = 5000000;
+      readonly b PreparingForShutdown = false;
+      readonly b PreparingForSleep = false;
+      ...
+  };
+  ...
+};*/
