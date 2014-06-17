@@ -161,11 +161,21 @@ void TrayIcon::onConfigureTriggered()
 
 void TrayIcon::onAboutTriggered()
 {
-    QMessageBox::about(0, tr("About"),
-                          tr("LXQt Powermanagement:\n"
-                             "Powermanagement for the LXQt Desktop Environment\n\n"
-                             "Author: Christian Surlykke\n\n"
-                             "Copyright 2012-2014"));
+    QMessageBox::about(0,
+                       tr("About"),
+                       tr( "<p>"
+                           "  <b>LXQt Powermanagement</b><br/>"
+                           "  - Powermanagement for the LXQt Desktop Environment"
+                           "</p>"
+                           "<p>"
+                           "  Authors:<br/>"
+                           "  &nbsp; Christian Surlykke, Alec Moskvin<br/>"
+                           "  &nbsp; - and others from the Razor and LXQt projects"
+                           "</p>"
+                           "<p>"
+                           "  Copyright &copy; 2012-2014"
+                           "</p>"
+                        ));
 }
 
 
