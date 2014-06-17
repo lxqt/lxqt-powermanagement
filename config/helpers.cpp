@@ -4,8 +4,11 @@
  * 
  * Created on 15. februar 2014, 11:44
  */
+
 #include <QComboBox>
-#include <lxqt/lxqtpower.h>
+
+#include <LXQt/Power>
+
 #include "helpers.h"
 
 void fillComboBox(QComboBox* comboBox)

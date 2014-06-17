@@ -24,12 +24,13 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#include "battery.h"
 #include <QDBusConnection>
 #include <QDBusReply>
 #include <QList>
 #include <QDBusObjectPath>
 #include <QDebug>
+
+#include "battery.h"
 #include "../config/powermanagementsettings.h"
 
 Battery::Battery(QObject* parent) 

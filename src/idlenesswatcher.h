@@ -32,8 +32,10 @@
 #include <QDateTime>
 #include <QDBusContext>
 #include <QDBusServiceWatcher>
-#include <lxqt/LxQtSettings>
-#include <lxqt/LxQtNotification>
+
+#include <LXQt/Settings>
+#include <LXQt/Notification>
+
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"
 

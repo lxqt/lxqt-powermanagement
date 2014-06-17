@@ -25,7 +25,8 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <lxqt/lxqtapplication.h>
+#include <LXQt/Application>
+
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])

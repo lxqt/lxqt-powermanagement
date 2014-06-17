@@ -29,9 +29,9 @@
 #include <QTime>
 #include <QTimer>
 
-#include <lxqt/LxQtNotification>
-#include <lxqt/LxQtAutostartEntry>
-#include <lxqt/LxQtPower>
+#include <LXQt/Notification>
+#include <LXQt/AutostartEntry>
+#include <LXQt/Power>
 
 #include "batterywatcher.h"
 #include "../config/powermanagementsettings.h"

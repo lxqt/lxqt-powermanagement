@@ -24,11 +24,13 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#include "lid.h"
+
 #include <QDBusConnection>
 #include <QDBusReply>
 #include <QObject>
 #include <QDebug>
+
+#include "lid.h"
 
 Lid::Lid()
 {

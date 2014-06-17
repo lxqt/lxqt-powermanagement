@@ -27,9 +27,9 @@
 #ifndef BATTERYINFO_H
 #define BATTERYINFO_H
 
-#include "battery.h"
-
 #include <QDialog>
+
+#include "battery.h"
 
 namespace Ui {
 class BatteryInfo;

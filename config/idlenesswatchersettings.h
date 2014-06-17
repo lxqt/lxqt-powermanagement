@@ -28,7 +28,7 @@
 #define IDLE_SETTINGS_H
 
 #include <QGroupBox>
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
 
 #include "powermanagementsettings.h"
 

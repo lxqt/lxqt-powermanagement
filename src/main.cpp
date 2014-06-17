@@ -25,7 +25,9 @@
 
 #include <QDBusConnection>
 #include <QDebug>
-#include <lxqt/LxQtApplication>
+
+#include <LXQt/Application>
+
 #include "powermanagementd.h"
 
 int main(int argc, char *argv[])

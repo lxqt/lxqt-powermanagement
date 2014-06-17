@@ -28,7 +28,8 @@
 #define POWERLOWSETTINGS_H
 
 #include <QWidget>
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
+
 #include "../config/powermanagementsettings.h"
 #include "helpers.h"
 

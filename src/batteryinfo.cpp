@@ -24,9 +24,10 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
+#include <QDateTime>
+
 #include "batteryinfo.h"
 #include "ui_batteryinfo.h"
-#include <QDateTime>
 
 BatteryInfo::BatteryInfo() :
     QDialog(),

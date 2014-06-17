@@ -27,7 +27,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <lxqt/lxqtconfigdialog.h>
+#include <LXQt/ConfigDialog>
 
 class MainWindow : public LxQt::ConfigDialog
 {

@@ -6,6 +6,7 @@
  */
 #ifndef POWER_MANAGEMENT_SETTINGS_H
 #define	POWER_MANAGEMENT_SETTINGS_H
+
 #include <QComboBox>
 
 void fillComboBox(QComboBox* comboBox);

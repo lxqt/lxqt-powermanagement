@@ -28,7 +28,7 @@
 #define LIDSETTINGS_H
 
 #include <QWidget>
-#include <lxqt/lxqtsettings.h>
+#include <LXQt/Settings>
 
 #include "powermanagementsettings.h"
 

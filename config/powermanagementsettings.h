@@ -30,7 +30,8 @@
 
 #include <QComboBox>
 #include <QString>
-#include <lxqt/lxqtsettings.h>
+
+#include <LXQt/Settings>
 
 class PowerManagementSettings : public LxQt::Settings
 {

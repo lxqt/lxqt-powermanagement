@@ -6,6 +6,7 @@
  */
 
 #include <QDebug>
+
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"
 
