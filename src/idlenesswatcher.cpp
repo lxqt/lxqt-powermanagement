@@ -27,7 +27,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDBusServiceWatcher>
-#include <lxqt/lxqtprogramfinder.h>
+#include <lxqt/LxQtProgramFinder>
 
 #include "screensaveradaptor.h"
 #include "idlenesswatcher.h"

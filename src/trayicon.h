@@ -29,11 +29,8 @@
 #define TRAYICON_H
 
 #include <QSystemTrayIcon>
-#include <QWidget>
-#include <QIcon>
-#include <QVariantMap>
 #include <QMenu>
-#include <lxqt/lxqtsettings.h>
+
 #include "batteryinfo.h"
 #include "battery.h"
 

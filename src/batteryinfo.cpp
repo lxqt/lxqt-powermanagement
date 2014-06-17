@@ -26,9 +26,6 @@
  * END_COMMON_COPYRIGHT_HEADER */
 #include "batteryinfo.h"
 #include "ui_batteryinfo.h"
-#include <QStringList>
-#include <QVariantMap>
-#include <QTableWidgetItem>
 #include <QDateTime>
 
 BatteryInfo::BatteryInfo() :

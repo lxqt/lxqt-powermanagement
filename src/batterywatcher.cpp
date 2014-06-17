@@ -24,11 +24,14 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#include <QtCore/QDebug>
-#include <QtCore/QTimer>
-#include <QtCore/QCoreApplication>
-#include <lxqt/lxqtautostartentry.h>
-#include <lxqt/lxqtpower.h>
+
+#include <QDebug>
+#include <QTime>
+#include <QTimer>
+
+#include <lxqt/LxQtNotification>
+#include <lxqt/LxQtAutostartEntry>
+#include <lxqt/LxQtPower>
 
 #include "batterywatcher.h"
 #include "../config/powermanagementsettings.h"

@@ -26,7 +26,6 @@
  * END_COMMON_COPYRIGHT_HEADER */
 #include <QTimer>
 #include <QCoreApplication>
-#include <lxqt/lxqtautostartentry.h>
 #include <QProcess>
 #include <QDebug>
 #include <QDBusInterface>

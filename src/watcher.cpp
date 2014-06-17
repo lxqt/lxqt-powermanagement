@@ -5,7 +5,6 @@
  * Created on 14. februar 2014, 18:34
  */
 
-#include <lxqt/lxqtpower.h>
 #include <QDebug>
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"

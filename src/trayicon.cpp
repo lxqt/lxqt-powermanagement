@@ -27,12 +27,10 @@
 
 #include <math.h>
 #include <QDebug>
-#include <QMenu>
 #include <QtSvg/QSvgRenderer>
 #include <QPainter>
 #include <QProcess>
 #include <QMessageBox>
-#include <lxqt/lxqtsettings.h>
 
 #include "trayicon.h"
 #include "../config/powermanagementsettings.h"

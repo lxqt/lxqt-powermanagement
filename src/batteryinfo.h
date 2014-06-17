@@ -30,7 +30,6 @@
 #include "battery.h"
 
 #include <QDialog>
-#include <QVariantMap>
 
 namespace Ui {
 class BatteryInfo;

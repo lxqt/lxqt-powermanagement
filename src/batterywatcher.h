@@ -27,11 +27,6 @@
 #ifndef BATTERYWATCHER_H
 #define BATTERYWATCHER_H
 
-#include <QObject>
-#include <QTime>
-#include <lxqt/lxqtnotification.h>
-#include <lxqt/lxqtsettings.h>
-#include <lxqt/lxqtpower.h>
 #include "watcher.h"
 #include "battery.h"
 #include "trayicon.h"

@@ -30,9 +30,7 @@
 #include <QObject>
 #include <QTime>
 #include <QDBusUnixFileDescriptor>
-#include <lxqt/lxqtnotification.h>
-#include <lxqt/lxqtsettings.h>
-#include <lxqt/lxqtpower.h>
+#include <lxqt/LxQtPower>
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"
 #include "lid.h"

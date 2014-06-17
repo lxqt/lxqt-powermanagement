@@ -8,8 +8,7 @@
 #ifndef POWERMANAGEMENTD_H
 #define	POWERMANAGEMENTD_H
 
-#include <lxqt/lxqtsettings.h>
-#include <lxqt/lxqtnotification.h>
+#include <lxqt/LxQtNotification>
 
 #include "../config/powermanagementsettings.h"
 

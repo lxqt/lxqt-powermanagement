@@ -30,9 +30,6 @@
 #include <QList>
 #include <QDBusObjectPath>
 #include <QDebug>
-#include <QMetaObject>
-#include <QMetaProperty>
-#include <lxqt/lxqtsettings.h>
 #include "../config/powermanagementsettings.h"
 
 Battery::Battery(QObject* parent) 
