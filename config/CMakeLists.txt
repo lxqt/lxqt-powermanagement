@@ -1,7 +1,12 @@
 project(lxqt-config-powermanagement)
 
-find_package(LXQT REQUIRED)
-include(${LXQT_USE_FILE})
+if(USE_QT5)
+    set(QTX_INCLUDE_DIRS "")
+    set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus)
+else()
+    set(QTX_INCLUDE_DIRS ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTDBUS_INCLUDE_DIR})
+    set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY})
+endif()
 
 set ( config-powermanagement_MOCS
     mainwindow.h
@@ -46,14 +51,15 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
 
 #************************************************
 
+if(USE_QT5)
+    qt5_add_resources( RSCS ${config-powermanagement_RSCS})
+    qt5_wrap_ui( UIS ${config-powermanagement_UIS})
+else()
+    qt4_add_resources( RSCS ${config-powermanagement_RSCS})
+    qt4_wrap_ui( UIS ${config-powermanagement_UIS})
+endif()
 
-QT4_ADD_RESOURCES( RSCS ${config-powermanagement_RSCS})
-
-QT4_WRAP_CPP( MOCS ${config-powermanagement_MOCS})
-
-QT4_WRAP_UI( UIS ${config-powermanagement_UIS})
-
-include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
+include_directories ( ${QTX_INCLUDE_DIRS}
                       ${CMAKE_CURRENT_BINARY_DIR}
                     )
 
@@ -61,7 +67,6 @@ include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
 add_executable ( ${PROJECT_NAME} 
                  ${config-powermanagement_SRCS} 
                  ${UIS} 
-                 ${MOCS} 
                  ${DESKTOP_FILES}
                  ${QM_FILES}
                )
@@ -69,9 +74,7 @@ add_executable ( ${PROJECT_NAME}
 target_link_libraries ( lxqt-config-powermanagement  
                         ${LXQT_LIBRARIES}
                         ${QTXDG_LIBRARIES}
-                        ${QT_QTCORE_LIBRARY} 
-                        ${QT_QTGUI_LIBRARY}  
-                        ${QT_QTDBUS_LIBRARY}
+                        ${QTX_LIBRARIES}
                       )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

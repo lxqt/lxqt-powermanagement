@@ -1,7 +1,12 @@
 project(lxqt-powermanagement)
 
-find_package(LXQT REQUIRED)
-include(${LXQT_USE_FILE})
+if(USE_QT5)
+    set(QTX_INCLUDE_DIRS "")
+    set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
+else()
+    set(QTX_INCLUDE_DIRS ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTDBUS_INCLUDE_DIR} ${QT_QTSVG_INCLUDE_DIR})
+    set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTSVG_LIBRARY})
+endif()
 
 set ( lxqt-powermanagement_MOCS
     watcher.h
@@ -39,15 +44,21 @@ set (  DESKTOP_FILES_IN
       lxqt-powermanagement.desktop.in
 )
 
-QT4_WRAP_CPP(MOCS ${lxqt-powermanagement_MOCS})
-
-QT4_WRAP_UI( UIS ${lxqt-powermanagement_UIS})
-
-qt4_add_dbus_adaptor(lxqt-powermanagement_SRCS
-    org.freedesktop.ScreenSaver.xml
-    idlenesswatcher.h 
-    IdlenessWatcher
-)
+if(USE_QT5)
+    qt5_wrap_ui( UIS ${lxqt-powermanagement_UIS})
+    qt5_add_dbus_adaptor(lxqt-powermanagement_SRCS
+        org.freedesktop.ScreenSaver.xml
+        idlenesswatcher.h 
+        IdlenessWatcher
+    )
+else()
+    qt4_wrap_ui( UIS ${lxqt-powermanagement_UIS})
+    qt4_add_dbus_adaptor(lxqt-powermanagement_SRCS
+        org.freedesktop.ScreenSaver.xml
+        idlenesswatcher.h 
+        IdlenessWatcher
+    )
+endif()
 
 # XCB stuff (TODO: move into findXCB)
 find_package(PkgConfig)
@@ -89,33 +100,27 @@ find_library(XCB_DPMS_LIBRARY NAMES xcb-dpms
 )
 
 
-include_directories ( ${CMAKE_CURRENT_SOURCE_DIR}
-                      ${CMAKE_CURRENT_BINARY_DIR}
+include_directories (${CMAKE_CURRENT_BINARY_DIR}
     ${XCB_INCLUDE_DIR}
     ${X11_XCB_INCLUDE_DIR}
+    ${QTX_INCLUDE_DIRS}
     ${QTXDG_INCLUDE_DIRS}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
                     )
-
-
 
 add_executable ( lxqt-powermanagement 
                  ${lxqt-powermanagement_SRCS} 
                  ${UIS} 
                  ${RSCS} 
                  ${QM_FILES} 
-                 ${MOCS} 
                  ${DESKTOP_FILES}
                )
 
 target_link_libraries ( lxqt-powermanagement  
                         lxqt
                         ${QTXDG_LIBRARY}
-                        ${QT_QTCORE_LIBRARY} 
-                        ${QT_QTGUI_LIBRARY} 
-                        ${QT_QTDBUS_LIBRARY} 
-                        ${QT_QTSVG_LIBRARY}
+                        ${QTX_LIBRARIES}
                        ${XCB_LIBRARY}
                        ${XCB_SCREENSAVER_LIBRARY}
                        ${XCB_DPMS_LIBRARY}

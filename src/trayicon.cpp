@@ -271,7 +271,7 @@ void TrayIconBuiltIn::updateIcon()
     qDebug() << svg;
 
     // Paint the svg on a pixmap and create an icon from that.
-    QSvgRenderer render(svg.toAscii());
+    QSvgRenderer render(svg.toLatin1());
     QPixmap pixmap(render.defaultSize());
     pixmap.fill(QColor(0,0,0,0));
     QPainter painter(&pixmap);

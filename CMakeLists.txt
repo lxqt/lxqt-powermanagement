@@ -1,20 +1,38 @@
 set(PROJECT lxqt-powermanagement)
-cmake_minimum_required( VERSION 2.6 )
+cmake_minimum_required( VERSION 2.8.9 )
 project(${PROJECT})
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${BUILD_TOOLS_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-find_package(QTXDG REQUIRED)
-
-set(QT_USE_QTDBUS 1)
-
-find_package(Qt4 REQUIRED)
-
-include(${QT_USE_FILE})
+# Support Qt5
+option(USE_QT5 "Build with Qt5." $ENV{USE_QT5})
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_AUTOMOC ON)
+if(USE_QT5)
+    cmake_minimum_required(VERSION 2.8.11)
+    find_package(Qt5Widgets REQUIRED)
+    find_package(Qt5DBus REQUIRED)
+    find_package(Qt5X11Extras REQUIRED)
+    find_package(Qt5Svg REQUIRED)
+    find_package(Qt5LinguistTools REQUIRED QUIET)
+    find_package(lxqt-qt5 REQUIRED QUIET)
+    find_package(Qt5Xdg REQUIRED)
+    message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
+else()
+    set(QT_USE_QTDBUS 1)
+    set(QT_USE_SVG 1)
+    find_package(Qt4 REQUIRED)
+    include(${QT_USE_FILE})
+    find_package(LXQT REQUIRED)
+    find_package(QTXDG REQUIRED)
+    message(STATUS "Building with Qt${QTVERSION}")
+endif()
+include(${LXQT_USE_FILE})
+include(${QTXDG_USE_FILE})
 
 add_subdirectory(config)
 add_subdirectory(src)
-
 
 # building tarball with CPack -------------------------------------------------
 include (InstallRequiredSystemLibraries)
