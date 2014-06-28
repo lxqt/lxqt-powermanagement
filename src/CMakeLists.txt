@@ -118,7 +118,7 @@ add_executable ( lxqt-powermanagement
                )
 
 target_link_libraries ( lxqt-powermanagement  
-                        lxqt
+                        ${LXQT_LIBRARIES}
                         ${QTXDG_LIBRARY}
                         ${QTX_LIBRARIES}
                        ${XCB_LIBRARY}
