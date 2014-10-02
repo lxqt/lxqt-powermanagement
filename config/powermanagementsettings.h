@@ -26,7 +26,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #ifndef COMMON_H
-#define COMMON_H 
+#define COMMON_H
 
 #include <QComboBox>
 #include <QString>
@@ -55,6 +55,9 @@ public:
 
     int getPowerLowWarningTime();
     void setPowerLowWarningTime(int powerLowWarningTime);
+
+    bool isShowIcon();
+    void setShowIcon(bool showIcon);
 
     bool isUseThemeIcons();
     void setUseThemeIcons(bool useThemeIcons);

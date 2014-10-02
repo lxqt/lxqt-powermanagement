@@ -135,19 +135,20 @@ void BatteryWatcher::batteryChanged()
 
     mBatteryInfo.updateInfo(&mBattery);
 
-    mTrayIcon->update(mBattery.discharging(), mBattery.chargeLevel(), mSettings.getPowerLowLevel());
+    if (mSettings.isShowIcon())
+        mTrayIcon->update(mBattery.discharging(), mBattery.chargeLevel(), mSettings.getPowerLowLevel());
 }
 
 void BatteryWatcher::settingsChanged()
 {
-    if (mTrayIcon != 0 && !mTrayIcon->isProperForCurrentSettings())
+    if (mTrayIcon != 0 && (!mTrayIcon->isProperForCurrentSettings() || !mSettings.isShowIcon()))
     {
         mTrayIcon->hide();
         mTrayIcon->deleteLater();
         mTrayIcon = 0;
     }
 
-    if (mTrayIcon == 0)
+    if (mTrayIcon == 0 && mSettings.isShowIcon())
     {
         IconNamingScheme *iconNamingScheme = 0;
         if (mSettings.isUseThemeIcons() && (iconNamingScheme = IconNamingScheme::getNamingSchemeForCurrentIconTheme()))

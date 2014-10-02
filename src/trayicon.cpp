@@ -30,16 +30,17 @@
 #include <QtSvg/QSvgRenderer>
 #include <QPainter>
 #include <QProcess>
+#include <QApplication>
 #include <QMessageBox>
 
 #include "trayicon.h"
 #include "../config/powermanagementsettings.h"
 
 QString IconNamingScheme::iconName(float chargeLevel, bool discharging) const
-{   
+{
     int i = 0;
     while(i < mChargeLevels.size() - 1 && mChargeLevels.at(i+1) <= chargeLevel) i++;
-    
+
     return discharging ? mIconNamesDischarging.at(i) : mIconNamesCharging.at(i);
 }
 
@@ -55,18 +56,18 @@ IconNamingScheme::IconNamingScheme(QString schemeName, QList<float> chargeLevels
 IconNamingScheme* IconNamingScheme::getNamingSchemeForCurrentIconTheme()
 {
     static QList<IconNamingScheme*> schemes;
-    
-    if (schemes.isEmpty()) 
+
+    if (schemes.isEmpty())
     {
-        // Freedesktop naming scheme 
+        // Freedesktop naming scheme
          schemes << new IconNamingScheme(
                 "freedesktop",
                 (QList<float>() << 0 << 1 << 20 << 40 << 60),
-                (QList<QString>() << "battery-empty" << "battery-caution-charging" << "battery-low-charging" 
+                (QList<QString>() << "battery-empty" << "battery-caution-charging" << "battery-low-charging"
                                   << "battery-good-charging" <<  "battery-full-charging"),
                 (QList<QString>() << "battery-empty" << "battery-caution" << "battery-low" << "battery-good" <<  "battery-full")
                 );
-        
+
          // Oxygen naming scheme
          schemes << new IconNamingScheme(
                 "oxygen",
@@ -104,7 +105,7 @@ IconNamingScheme* IconNamingScheme::getNamingSchemeForCurrentIconTheme()
 
 bool IconNamingScheme::isValidForCurrentIconTheme() const
 {
-    for (int i = 0; i < mIconNamesCharging.size(); i++) 
+    for (int i = 0; i < mIconNamesCharging.size(); i++)
     {
         qDebug() << "Looking for"  << mIconNamesCharging.at(i);
         if (!QIcon::hasThemeIcon(mIconNamesCharging.at(i)))
@@ -112,7 +113,7 @@ bool IconNamingScheme::isValidForCurrentIconTheme() const
             qDebug() << "Not found";
             return false;
         }
-        
+
         qDebug() << "Looking for"  << mIconNamesDischarging.at(i);
         if (!QIcon::hasThemeIcon(mIconNamesDischarging.at(i)))
         {
@@ -128,8 +129,9 @@ bool IconNamingScheme::isValidForCurrentIconTheme() const
 
 TrayIcon::TrayIcon(QObject *parent) : QSystemTrayIcon(parent), contextMenu()
 {
-    contextMenu.addAction(tr("Configure..."), this, SLOT(onConfigureTriggered()));
-    contextMenu.addAction(tr("About.."), this, SLOT(onAboutTriggered()));
+    contextMenu.addAction(tr("Configure"), this, SLOT(onConfigureTriggered()));
+    contextMenu.addAction(tr("About"), this, SLOT(onAboutTriggered()));
+    contextMenu.addAction(tr("Disable icon"), this, SLOT(onDisableIconTriggered()));
     setContextMenu(&contextMenu);
 }
 
@@ -178,9 +180,14 @@ void TrayIcon::onAboutTriggered()
                         ));
 }
 
+void TrayIcon::onDisableIconTriggered()
+{
+    hide();
+    PowerManagementSettings().setShowIcon(false);
+}
 
 
-TrayIconBuiltIn::TrayIconBuiltIn(QObject* parent) : 
+TrayIconBuiltIn::TrayIconBuiltIn(QObject* parent) :
     TrayIcon(parent)
 {
 }
@@ -196,13 +203,13 @@ bool TrayIconBuiltIn::isProperForCurrentSettings()
 
 void TrayIconBuiltIn::updateIcon()
 {
-    // See http://www.w3.org/TR/SVG/Overview.html 
-    // and regarding circle-arch in particular: 
+    // See http://www.w3.org/TR/SVG/Overview.html
+    // and regarding circle-arch in particular:
     // http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands
-   
+
     // We show charge with a segment of a circle.
     // We start at the top of the circle
-    // The starting point of the circle segment is at the top (12 o'clock or (0,1) or pi/2 
+    // The starting point of the circle segment is at the top (12 o'clock or (0,1) or pi/2
     // and it moves counter-clockwise as the charge increases
     // First we calculate in floating point numbers, using a circle with center
     // in (0,0) and a radius of 1
@@ -211,10 +218,10 @@ void TrayIconBuiltIn::updateIcon()
     double segment_endpoint_x = cos(angle);
     double segment_endpoint_y = sin(angle);
 
-    // svg uses a coordinate system with (0,0) at the topmost left corner,  
+    // svg uses a coordinate system with (0,0) at the topmost left corner,
     // y increasing downwards and x increasing left-to-right.
     // We draw the circle segments with center at (100,100) and radius 100 for the
-    // outer and radius 60 for the inner. The segments will (unless fully charged, 
+    // outer and radius 60 for the inner. The segments will (unless fully charged,
     // where they go full circle) be radially connected at the endpoints.
     QString chargeGraphics;
 
@@ -228,35 +235,35 @@ void TrayIconBuiltIn::updateIcon()
             "<path d='M 100,0 A 100,100 0 1,0 101,0 z M 100,40 A 60,60 0 1,0 101,40 z' stroke-width='0'/>";
     }
     else {
-        chargeGraphics = 
+        chargeGraphics =
             QString("<path d='M 100,0 A 100,100 0 %1,0 %2,%3 L %4,%5 A 60,60 0 %1,1 100,40 z'/>")
-                .arg(angle > M_PI + M_PI_2 ? 1 : 0)     // %1 
+                .arg(angle > M_PI + M_PI_2 ? 1 : 0)     // %1
                 .arg(round(100*(1 + segment_endpoint_x)))    // %2
                 .arg(round(100*(1 - segment_endpoint_y)))    // %3
                 .arg(round(100*(1 + 0.6*segment_endpoint_x)))    // %4
                 .arg(round(100*(1 - 0.6*segment_endpoint_y)));   // %5
     }
- 
+
     QString chargeColor;
     if (discharging && chargeLevel <= lowLevel + 10)
     {
         chargeColor = "rgb(200,40,40)";
     }
-    else if (discharging && chargeLevel <= lowLevel + 30) 
+    else if (discharging && chargeLevel <= lowLevel + 30)
     {
         int fac = chargeLevel - lowLevel - 10;
         chargeColor = QString("rgb(%1,%2,40)").arg(40 + 200 - fac*8).arg(40 + fac*8);
     }
-    else 
+    else
         chargeColor = "rgb(40,200,40)";
 
 
-    QString sign = 
-            discharging ? 
+    QString sign =
+            discharging ?
                 QString("<path d='M 60,100 h 80' stroke='black' stroke-width='20' />"):                // Minus
                 QString("<path d='M 60,100 h 80 M 100,60 v 80' stroke='black' stroke-width='20' />");  // Plus
 
-    QString svg = 
+    QString svg =
         QString("<?xml version='1.0' standalone='no'?>\n"
                 "<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>\n"
                 "<svg xmlns='http://www.w3.org/2000/svg'  version='1.1' viewBox='0 0 210 210'>\n"
@@ -265,7 +272,7 @@ void TrayIconBuiltIn::updateIcon()
                 "    <g fill-rule='evenodd' fill='%2' stroke-width='0'>\n"
                 "        %1\n"
                 "    </g>\n"
-                "    %3\n" 
+                "    %3\n"
                 "</svg>\n").arg(chargeGraphics).arg(chargeColor).arg(sign);
 
     qDebug() << svg;

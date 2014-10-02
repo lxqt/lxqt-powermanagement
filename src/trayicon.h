@@ -34,7 +34,7 @@
 #include "batteryinfo.h"
 #include "battery.h"
 
-class IconNamingScheme 
+class IconNamingScheme
 {
 public:
     static IconNamingScheme* getNamingSchemeForCurrentIconTheme();
@@ -71,26 +71,27 @@ protected:
     double lowLevel;
 
 private slots:
-    void onAboutTriggered();
     void onConfigureTriggered();
+    void onAboutTriggered();
+    void onDisableIconTriggered();
 
 private:
     QMenu contextMenu;
 };
 
-class TrayIconBuiltIn : public TrayIcon 
+class TrayIconBuiltIn : public TrayIcon
 {
     Q_OBJECT
 
 public:
     TrayIconBuiltIn(QObject *parent = 0);
     ~TrayIconBuiltIn();
-    
+
     virtual bool isProperForCurrentSettings();
 
 protected:
     virtual void updateIcon();
-    
+
 };
 
 class TrayIconTheme : public TrayIcon
@@ -105,7 +106,7 @@ public:
 
 protected:
     virtual void updateIcon();
-    
+
 private:
     IconNamingScheme *mIconNamingScheme;
 

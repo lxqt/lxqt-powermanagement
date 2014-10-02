@@ -29,7 +29,7 @@
 
 #include "powermanagementsettings.h"
 
-namespace PowerManagementSettingsConstants 
+namespace PowerManagementSettingsConstants
 {
     const QString RUN_CHECK_LEVEL = "runCheckLevel";
     const QString ENABLE_BATTERY_WATCHER_KEY = "enableBatteryWatcher";
@@ -43,6 +43,7 @@ namespace PowerManagementSettingsConstants
     const QString POWER_LOW_ACTION_KEY = "powerLowAction";
     const QString POWER_LOW_WARNING_KEY = "powerLowWarning";
     const QString POWER_LOW_LEVEL_KEY = "powerLowLevel";
+    const QString SHOW_ICON_KEY = "showIcon";
     const QString USE_THEME_ICONS_KEY = "useThemeIcons";
     const QString IDLENESS_ACTION_KEY = "idlenessAction";
     const QString IDLENESS_TIME_MINS_KEY = "idlenessTimeMins";
@@ -107,6 +108,16 @@ int PowerManagementSettings::getPowerLowWarningTime()
 void PowerManagementSettings::setPowerLowWarningTime(int powerLowWarningTime)
 {
     setValue(POWER_LOW_WARNING_KEY, powerLowWarningTime);
+}
+
+bool PowerManagementSettings::isShowIcon()
+{
+    return value(SHOW_ICON_KEY, true).toBool();
+}
+
+void PowerManagementSettings::setShowIcon(bool showIcon)
+{
+    setValue(SHOW_ICON_KEY, showIcon);
 }
 
 bool PowerManagementSettings::isUseThemeIcons()
