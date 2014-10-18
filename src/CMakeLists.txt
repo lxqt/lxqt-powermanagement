@@ -1,14 +1,8 @@
 project(lxqt-powermanagement)
 
-if(USE_QT5)
-    set(QTX_INCLUDE_DIRS "")
-    set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
-else()
-    set(QTX_INCLUDE_DIRS ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTDBUS_INCLUDE_DIR} ${QT_QTSVG_INCLUDE_DIR})
-    set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTSVG_LIBRARY})
-endif()
+set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
 
-set ( lxqt-powermanagement_MOCS
+set(lxqt-powermanagement_MOCS
     watcher.h
     battery.h
     batteryinfo.h
@@ -21,7 +15,7 @@ set ( lxqt-powermanagement_MOCS
     ../config/powermanagementsettings.h
 )
 
-set ( lxqt-powermanagement_SRCS
+set(lxqt-powermanagement_SRCS
     watcher.cpp
     battery.cpp
     batteryinfo.cpp
@@ -36,29 +30,20 @@ set ( lxqt-powermanagement_SRCS
     ../config/powermanagementsettings.cpp
 )
 
-set ( lxqt-powermanagement_UIS
+set(lxqt-powermanagement_UIS
     batteryinfo.ui
 )
 
-set (  DESKTOP_FILES_IN
-      lxqt-powermanagement.desktop.in
+set(DESKTOP_FILES_IN
+    lxqt-powermanagement.desktop.in
 )
 
-if(USE_QT5)
-    qt5_wrap_ui( UIS ${lxqt-powermanagement_UIS})
-    qt5_add_dbus_adaptor(lxqt-powermanagement_SRCS
-        org.freedesktop.ScreenSaver.xml
-        idlenesswatcher.h 
-        IdlenessWatcher
-    )
-else()
-    qt4_wrap_ui( UIS ${lxqt-powermanagement_UIS})
-    qt4_add_dbus_adaptor(lxqt-powermanagement_SRCS
-        org.freedesktop.ScreenSaver.xml
-        idlenesswatcher.h 
-        IdlenessWatcher
-    )
-endif()
+qt5_wrap_ui( UIS ${lxqt-powermanagement_UIS})
+qt5_add_dbus_adaptor(lxqt-powermanagement_SRCS
+    org.freedesktop.ScreenSaver.xml
+    idlenesswatcher.h
+    IdlenessWatcher
+)
 
 # XCB stuff (TODO: move into findXCB)
 find_package(PkgConfig)
@@ -100,33 +85,31 @@ find_library(XCB_DPMS_LIBRARY NAMES xcb-dpms
 )
 
 
-include_directories (${CMAKE_CURRENT_BINARY_DIR}
+include_directories(${CMAKE_CURRENT_BINARY_DIR}
     ${XCB_INCLUDE_DIR}
     ${X11_XCB_INCLUDE_DIR}
-    ${QTX_INCLUDE_DIRS}
     ${QTXDG_INCLUDE_DIRS}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
-                    )
+)
 
-add_executable ( lxqt-powermanagement 
-                 ${lxqt-powermanagement_SRCS} 
-                 ${UIS} 
-                 ${RSCS} 
-                 ${QM_FILES} 
-                 ${DESKTOP_FILES}
-               )
+add_executable(lxqt-powermanagement
+    ${lxqt-powermanagement_SRCS}
+    ${UIS}
+    ${RSCS}
+    ${QM_FILES}
+    ${DESKTOP_FILES}
+)
 
-target_link_libraries ( lxqt-powermanagement  
-                        ${LXQT_LIBRARIES}
-                        ${QTXDG_LIBRARY}
-                        ${QTX_LIBRARIES}
-                       ${XCB_LIBRARY}
-                       ${XCB_SCREENSAVER_LIBRARY}
-                       ${XCB_DPMS_LIBRARY}
-                       ${X11_XCB_LIBRARY}
-                      )
-
+target_link_libraries(lxqt-powermanagement
+    ${LXQT_LIBRARIES}
+    ${QTXDG_LIBRARY}
+    ${QTX_LIBRARIES}
+    ${XCB_LIBRARY}
+    ${XCB_SCREENSAVER_LIBRARY}
+    ${XCB_DPMS_LIBRARY}
+    ${X11_XCB_LIBRARY}
+)
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES   ${DESKTOP_FILES} DESTINATION share/applications)
+install(FILES ${DESKTOP_FILES} DESTINATION share/applications)

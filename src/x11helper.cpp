@@ -24,21 +24,6 @@
 
 #include "x11helper.h"
 
-#if QT_VERSION < 0x050000
-#include <QX11Info>
-#include <X11/Xlib-xcb.h>
-
-Display* X11Helper::display()
-{
-    return QX11Info::display();
-}
-
-xcb_connection_t* X11Helper::connection()
-{
-    return XGetXCBConnection(display());
-}
-
-#else // QT_VERSION >= 0x050000
 #include <QtGui/QGuiApplication>
 #include <qpa/qplatformnativeinterface.h>
 
@@ -55,5 +40,3 @@ xcb_connection_t* X11Helper::connection()
     void* connection = native->nativeResourceForWindow("connection", 0);
     return reinterpret_cast<xcb_connection_t*>(connection);
 }
-
-#endif // QT_VERSION
