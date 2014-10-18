@@ -85,7 +85,9 @@ find_library(XCB_DPMS_LIBRARY NAMES xcb-dpms
 )
 
 
-include_directories(${CMAKE_CURRENT_BINARY_DIR}
+include_directories(
+    "${CMAKE_CURRENT_BINARY_DIR}"
+    ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
     ${XCB_INCLUDE_DIR}
     ${X11_XCB_INCLUDE_DIR}
     ${QTXDG_INCLUDE_DIRS}
