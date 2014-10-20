@@ -38,7 +38,19 @@ set(DESKTOP_FILES_IN
     lxqt-config-powermanagement.desktop.in
 )
 
-# Translations
+# Translations **********************************
+
+QtTranslate(QM_FILES
+    USE_QT5 ${USE_QT5}
+    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
+    SOURCES
+        ${config-powermanagement_SRCS}
+        ${config-powermanagement_UIS}
+        ${config-powermanagement_MOCS}
+    INSTALL_DIR
+        ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
+)
+
 include(LxQtTranslate)
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
 

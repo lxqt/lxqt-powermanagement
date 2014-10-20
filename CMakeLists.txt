@@ -4,6 +4,8 @@ project(lxqt-powermanagement)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${BUILD_TOOLS_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_AUTOMOC ON)
@@ -19,6 +21,7 @@ message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
 
 include(${LXQT_USE_FILE})
 include(${QTXDG_USE_FILE})
+include(QtTranslate)
 
 add_subdirectory(config)
 add_subdirectory(src)
