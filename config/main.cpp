@@ -26,13 +26,14 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/Application>
+#include <LXQt/Translator>
 
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
     LxQt::Application a(argc, argv);
-//    TRANSLATE_APP;
+    LxQt::Translator::translateApplication(QLatin1String("lxqt-config-powermanagement"));
 
     MainWindow mainWindow;
     mainWindow.show();

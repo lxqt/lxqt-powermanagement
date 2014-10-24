@@ -27,6 +27,7 @@
 #include <QDebug>
 
 #include <LXQt/Application>
+#include <LXQt/Translator>
 
 #include "powermanagementd.h"
 
@@ -35,7 +36,7 @@ int main(int argc, char *argv[])
 
     LxQt::Application a(argc, argv);
     a.setQuitOnLastWindowClosed(false);
-//    TRANSLATE_APP;
+    LxQt::Translator::translateApplication(QLatin1String("lxqt-powermanagement"));
 
     // To ensure only one instance of lxqt-powermanagement is running we register as a DBus service and refuse to run
     // if not able to do so.
