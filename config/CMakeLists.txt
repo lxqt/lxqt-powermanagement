@@ -40,8 +40,7 @@ set(DESKTOP_FILES_IN
 
 # Translations **********************************
 
-QtTranslate(QM_FILES
-    USE_QT5 ${USE_QT5}
+lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES
         ${config-powermanagement_SRCS}
@@ -51,7 +50,7 @@ QtTranslate(QM_FILES
         ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
 
-include(LxQtTranslate)
+lxqt_app_translation_loader(config-powermanagement_QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
 
 
@@ -63,6 +62,7 @@ add_executable(${PROJECT_NAME}
     ${UIS}
     ${DESKTOP_FILES}
     ${QM_FILES}
+    ${config-powermanagement_QM_LOADER}
 )
 
 target_link_libraries(lxqt-config-powermanagement

@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 2.8.11)
 
 project(lxqt-powermanagement)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${BUILD_TOOLS_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -21,7 +19,8 @@ message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
 
 include(${LXQT_USE_FILE})
 include(${QTXDG_USE_FILE})
-include(QtTranslate)
+
+include(LXQtTranslate)
 
 add_subdirectory(config)
 add_subdirectory(src)

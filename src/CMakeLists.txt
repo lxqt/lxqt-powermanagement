@@ -45,8 +45,7 @@ qt5_add_dbus_adaptor(lxqt-powermanagement_SRCS
     IdlenessWatcher
 )
 
-QtTranslate(QM_FILES
-    USE_QT5 ${USE_QT5}
+lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES
         ${lxqt-powermanagement_SRCS}
@@ -55,6 +54,8 @@ QtTranslate(QM_FILES
     INSTALL_DIR
         ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
+
+lxqt_app_translation_loader(lxqt-powermanagement_QM_LOADER ${PROJECT_NAME})
 
 # XCB stuff (TODO: move into findXCB)
 find_package(PkgConfig)
@@ -111,6 +112,7 @@ add_executable(lxqt-powermanagement
     ${UIS}
     ${RSCS}
     ${QM_FILES}
+    ${lxqt-powermanagement_QM_LOADER}
     ${DESKTOP_FILES}
 )
 
