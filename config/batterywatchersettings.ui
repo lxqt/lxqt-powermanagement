@@ -6,17 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>377</width>
-    <height>184</height>
+    <width>428</width>
+    <height>294</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Battery Watcher Settings</string>
-  </property>
-  <property name="styleSheet">
-   <string notr="true">QWidget#BatteryWatcherSettings {
-border: none;
-}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -26,12 +21,6 @@ border: none;
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QSpinBox, QComboBox {
-	max-width: 130px;
-    min-width: 130px;
-}</string>
      </property>
      <property name="title">
       <string>E&amp;nable Battery Watcher</string>

@@ -6,24 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>390</width>
-    <height>276</height>
+    <width>276</width>
+    <height>289</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox QGroupBox {
+border: none;
+padding-top: 30px;
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="lidWatcherSettingsGroupBox">
-     <property name="styleSheet">
-      <string notr="true">QComboBox {
-	max-width: 130px;
-    min-width: 130px;
-}</string>
-     </property>
      <property name="title">
-      <string>Enable Lid Watcher</string>
+      <string>Enable &amp;Lid Watcher</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -35,11 +35,7 @@
       <item>
        <widget class="QGroupBox" name="groupBox">
         <property name="styleSheet">
-         <string notr="true">QGroupBox {
-    border: none;
-	padding-top: 12px;
-    padding-left: 8px;
-}</string>
+         <string notr="true"/>
         </property>
         <property name="title">
          <string>Action when lid is closed</string>
@@ -60,18 +56,6 @@
          </item>
          <item row="0" column="1">
           <widget class="QComboBox" name="onBatteryActionComboBox">
-           <property name="minimumSize">
-            <size>
-             <width>134</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>134</width>
-             <height>16777215</height>
-            </size>
-           </property>
            <item>
             <property name="text">
              <string>Nothing</string>
@@ -102,41 +86,15 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QComboBox" name="onAcActionComboBox">
-           <property name="minimumSize">
-            <size>
-             <width>134</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>134</width>
-             <height>16777215</height>
-            </size>
-           </property>
-          </widget>
+          <widget class="QComboBox" name="onAcActionComboBox"/>
          </item>
         </layout>
        </widget>
       </item>
       <item>
        <widget class="QGroupBox" name="extMonGroupBox">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QGroupBox {
-    border: none;
-	padding-top: 12px;
-    padding-left: 8px;
-}</string>
-        </property>
         <property name="title">
-         <string>When using external monitor</string>
+         <string>When &amp;using external monitor</string>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -162,14 +120,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QComboBox" name="extMonOnBatteryActionComboBox">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
+          <widget class="QComboBox" name="extMonOnBatteryActionComboBox"/>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="extMonOnAcActionLabel">
@@ -185,12 +136,6 @@
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>134</width>
-             <height>0</height>
-            </size>
            </property>
           </widget>
          </item>

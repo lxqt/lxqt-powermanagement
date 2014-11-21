@@ -16,14 +16,8 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="idlenessWatcherGroupBox">
-     <property name="styleSheet">
-      <string notr="true">QSpinBox, QComboBox, QTimeEdit {
-	max-width: 130px;
-    min-width: 130px;
-}</string>
-     </property>
      <property name="title">
-      <string>Enable Idleness Watcher</string>
+      <string>Enab&amp;le Idleness Watcher</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
