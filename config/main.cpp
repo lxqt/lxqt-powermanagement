@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
     LxQt::Application a(argc, argv);
 
     MainWindow mainWindow;
+    mainWindow.setWindowIcon(QIcon::fromTheme("preferences-system-power-management"));
     mainWindow.show();
 
     return a.exec();
