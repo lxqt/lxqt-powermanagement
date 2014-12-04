@@ -9,7 +9,9 @@ class IconProducer
 {
 public:
     IconProducer();
+    void update(float chargeLevel);
     QIcon icon(float chargeLevel, bool discharging);
+    QString iconName(float chargeLevel, bool discharging);
 
 private:
     QIcon themedIcon(float chargeLevel, bool discharging);
@@ -18,11 +20,14 @@ private:
 
     PowerManagementSettings mSettings;
     QString mLastThemeName;
+    float mChargeLevel;
+
 
     QMap<float, QString> mLevelNameMapCharging;
     QMap<float, QString> mLevelNameMapDischarging;
 
-
+    QIcon mChargingIcon;
+    QIcon mDischargingIcon;
 
 };
 

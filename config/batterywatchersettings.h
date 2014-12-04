@@ -31,6 +31,8 @@
 #include <LXQt/Settings>
 
 #include "../config/powermanagementsettings.h"
+#include "../src/iconproducer.h"
+
 #include "helpers.h"
 
 namespace Ui {
@@ -50,10 +52,12 @@ public slots:
 
 private slots:
     void saveSettings();
+    void updatePreview();
 
 private:
     PowerManagementSettings mSettings;
     Ui::BatteryWatcherSettings *mUi;
+    IconProducer mIconProducer;
 };
 
 #endif // POWERLOWSETTINGS_H

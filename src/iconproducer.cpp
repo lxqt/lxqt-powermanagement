@@ -10,6 +10,7 @@ IconProducer::IconProducer(): mSettings(), mLastThemeName(), mLevelNameMapChargi
 {
 }
 
+
 QIcon IconProducer::icon(float chargeLevel, bool discharging)
 {
     return mSettings.isUseThemeIcons() ? themedIcon(chargeLevel, discharging) : builtInIcon(chargeLevel, discharging);
@@ -18,19 +19,31 @@ QIcon IconProducer::icon(float chargeLevel, bool discharging)
 
 QIcon IconProducer::themedIcon(float chargeLevel, bool discharging)
 {
-    updateLevelNameMaps();
+    return QIcon::fromTheme(iconName(chargeLevel, discharging));
+}
 
-    QString iconName;
+QString IconProducer::iconName(float chargeLevel, bool discharging)
+{
+    if (! mSettings.isUseThemeIcons())
+    {
+        return QString("Built in: ") + (discharging ? "discharging" : "charging");
+    }
+
+    updateLevelNameMaps();
 
     QMap<float, QString> *levelNameMap =  (discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
     foreach (float level, levelNameMap->keys())
     {
         if (level >= chargeLevel)
-            iconName = levelNameMap->value(level);
+        {
+            return levelNameMap->value(level);
+        }
     }
 
-    return QIcon::fromTheme(iconName);
+    return QString();
+
 }
+
 
 void IconProducer::updateLevelNameMaps()
 {

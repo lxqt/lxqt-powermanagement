@@ -1,6 +1,6 @@
 project(lxqt-config-powermanagement)
 
-set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus)
+set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg)
 
 set(config-powermanagement_MOCS
     mainwindow.h
@@ -18,6 +18,7 @@ set(config-powermanagement_SRCS
     idlenesswatchersettings.cpp
     powermanagementsettings.cpp
     helpers.cpp
+    ../src/iconproducer.cpp
 )
 
 set(config-powermanagement_UIS

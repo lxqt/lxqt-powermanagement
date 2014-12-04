@@ -24,6 +24,10 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
+#include <LXQt/Settings>
+
+#include <QDebug>
+#include <QLabel>
 
 #include "batterywatchersettings.h"
 #include "ui_batterywatchersettings.h"
@@ -32,18 +36,25 @@
 BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     QWidget(parent),
     mSettings(),
-    mUi(new Ui::BatteryWatcherSettings)
+    mUi(new Ui::BatteryWatcherSettings),
+    mIconProducer()
 
 {
     mUi->setupUi(this);
     fillComboBox(mUi->actionComboBox);
+    mUi->chargeLevelSlider->setValue(53);
 
     connect(mUi->groupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
     connect(mUi->actionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
     connect(mUi->warningSpinBox, SIGNAL(editingFinished()), this, SLOT(saveSettings()));
     connect(mUi->levelSpinBox, SIGNAL(editingFinished()), this, SLOT(saveSettings()));
     connect(mUi->showIconCheckBox, SIGNAL(clicked(bool)), this, SLOT(saveSettings()));
+    connect(mUi->showIconCheckBox, SIGNAL(clicked(bool)), mUi->previewBox, SLOT(setEnabled(bool)));
     connect(mUi->useThemeIconsCheckBox, SIGNAL(clicked(bool)), this, SLOT(saveSettings()));
+    connect(mUi->useThemeIconsCheckBox, SIGNAL(clicked(bool)), this, SLOT(updatePreview()));
+    connect(mUi->chargeLevelSlider, SIGNAL(valueChanged(int)), this, SLOT(updatePreview()));
+    connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(updatePreview()));
+    updatePreview();
 }
 
 BatteryWatcherSettings::~BatteryWatcherSettings()
@@ -71,3 +82,12 @@ void BatteryWatcherSettings::saveSettings()
     mSettings.setUseThemeIcons(mUi->useThemeIconsCheckBox->isChecked());
 }
 
+void BatteryWatcherSettings::updatePreview()
+{
+    float chargeLevel = mUi->chargeLevelSlider->value();
+    mUi->chargingIcon->setPixmap(mIconProducer.icon(chargeLevel, false).pixmap(QSize(48, 48)));
+    mUi->chargingLabel->setText(mIconProducer.iconName(chargeLevel, false));
+    mUi->dischargingIcon->setPixmap(mIconProducer.icon(chargeLevel, true).pixmap(QSize(48, 48)));
+    mUi->dischargingLabel->setText(mIconProducer.iconName(chargeLevel, true));
+    mUi->chargeLevelLabel->setText(tr("Level: %1%").arg(chargeLevel));
+}
