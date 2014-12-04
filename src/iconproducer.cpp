@@ -26,7 +26,7 @@ QString IconProducer::iconName(float chargeLevel, bool discharging)
 {
     if (! mSettings.isUseThemeIcons())
     {
-        return QString("Built in: ") + (discharging ? "discharging" : "charging");
+        return QString(discharging ? "discharging" : "charging");
     }
 
     updateLevelNameMaps();
@@ -47,8 +47,10 @@ QString IconProducer::iconName(float chargeLevel, bool discharging)
 
 void IconProducer::updateLevelNameMaps()
 {
+    qDebug() << "themeName:" << QIcon::themeName();
     if (QIcon::themeName() == mLastThemeName) return;
 
+    qDebug() << "Updating";
     /*
      * We maintain specific charge-level-to-icon-name mappings for Oxygen and Awoken and
      * asume all other themes adhere to the freedesktop standard.
@@ -56,49 +58,54 @@ void IconProducer::updateLevelNameMaps()
      * this and that theme is not working we will probably have to add new
      * mappings beside Oxygen and Awoken
      */
+    mLevelNameMapDischarging.clear();
+    mLevelNameMapCharging.clear();
+
     if (QIcon::themeName() == "oxygen")
-    {
-        mLevelNameMapCharging[20] = "battery-charging-low";       // Means:
-        mLevelNameMapDischarging[20] = "battery-low";             // Use 'battery-low'/'battery-charging-low' for levels up to 20
-        mLevelNameMapCharging[40] = "battery-charging-caution";   //
-        mLevelNameMapDischarging[40] = "battery-caution";         //  -  'battery-caution'/'battery-charging-caution' for levels between 20 and 40
-        mLevelNameMapCharging[60] = "battery-charging-040";       //
-        mLevelNameMapDischarging[60] = "battery-040";             // etc..
-        mLevelNameMapCharging[80] = "battery-charging-060";
-        mLevelNameMapDischarging[80] = "battery-060";
-        mLevelNameMapCharging[99] = "battery-charging-080";
-        mLevelNameMapDischarging[99] = "battery-080";
-        mLevelNameMapCharging[100] = "battery-charging";
-        mLevelNameMapDischarging[100] = "battery-100";
+    {                                                             // Means:
+        mLevelNameMapDischarging[10] = "battery-low";             // Use 'battery-low' for levels up to 20
+        mLevelNameMapDischarging[20] = "battery-caution";         //  -  'battery-caution' for levels between 20 and 40
+        mLevelNameMapDischarging[40] = "battery-040";             // etc..
+        mLevelNameMapDischarging[60] = "battery-060";
+        mLevelNameMapDischarging[80] = "battery-080";
+        mLevelNameMapDischarging[101] = "battery-100";
+        mLevelNameMapCharging[10] = "battery-charging-low";
+        mLevelNameMapCharging[20] = "battery-charging-caution";
+        mLevelNameMapCharging[40] = "battery-charging-040";
+        mLevelNameMapCharging[60] = "battery-charging-060";
+        mLevelNameMapCharging[80] = "battery-charging-080";
+        mLevelNameMapCharging[101] = "battery-charging";
     }
-    else if (QIcon::themeName() == "awoken")
+    else if (QIcon::themeName().startsWith("AwOken")) // AwOken, AwOkenWhite, AwOkenDark
     {
-        mLevelNameMapCharging[20] = "battery-000-charging";
-        mLevelNameMapDischarging[20] = "battery-000";
-        mLevelNameMapCharging[40] = "battery-020-charging";
-        mLevelNameMapDischarging[40] = "battery-020";
-        mLevelNameMapCharging[60] = "battery-040-charging";
-        mLevelNameMapDischarging[60] = "battery-040";
-        mLevelNameMapCharging[80] = "battery-060-charging";
-        mLevelNameMapDischarging[80] = "battery-060";
-        mLevelNameMapCharging[99] = "battery-080-charging";
-        mLevelNameMapDischarging[99] = "battery-080";
-        mLevelNameMapCharging[100] = "battery-100-charging";
-        mLevelNameMapDischarging[100] = "battery-100";
+        mLevelNameMapDischarging[5] = "battery-000";
+        mLevelNameMapDischarging[30] = "battery-020";
+        mLevelNameMapDischarging[50] = "battery-040";
+        mLevelNameMapDischarging[70] = "battery-060";
+        mLevelNameMapDischarging[95] = "battery-080";
+        mLevelNameMapDischarging[101] = "battery-100";
+        mLevelNameMapCharging[5] = "battery-000-charging";
+        mLevelNameMapCharging[30] = "battery-020-charging";
+        mLevelNameMapCharging[50] = "battery-040-charging";
+        mLevelNameMapCharging[70] = "battery-060-charging";
+        mLevelNameMapCharging[95] = "battery-080-charging";
+        mLevelNameMapCharging[101] = "battery-100-charging";
     }
-    else
+    else // As default we fall back to the freedesktop scheme.
     {
-        mLevelNameMapCharging[1] = "battery-empty";
-        mLevelNameMapDischarging[1] = "battery-empty";
-        mLevelNameMapCharging[20] = "battery-caution-charging";
-        mLevelNameMapDischarging[20] = "battery-caution";
-        mLevelNameMapCharging[40] = "battery-low-charging";
-        mLevelNameMapDischarging[40] = "battery-low";
-        mLevelNameMapCharging[60] = "battery-good-charging";
-        mLevelNameMapDischarging[60] = "battery-good";
-        mLevelNameMapCharging[100] = "battery-full-charging";
-        mLevelNameMapDischarging[100] = "battery-full";
+        mLevelNameMapDischarging[3] = "battery-empty";
+        mLevelNameMapDischarging[10] = "battery-caution";
+        mLevelNameMapDischarging[50] = "battery-low";
+        mLevelNameMapDischarging[90] = "battery-good";
+        mLevelNameMapDischarging[101] = "battery-full";
+        mLevelNameMapCharging[3] = "battery-empty";
+        mLevelNameMapCharging[10] = "battery-caution-charging";
+        mLevelNameMapCharging[50] = "battery-low-charging";
+        mLevelNameMapCharging[90] = "battery-good-charging";
+        mLevelNameMapCharging[101] = "battery-full-charging";
     }
+    qDebug() << "levelNameMapCharging:" << mLevelNameMapCharging;
+    qDebug() << "levelNameMapDischarging:" << mLevelNameMapDischarging;
 
     mLastThemeName = QIcon::themeName();
 }

@@ -28,6 +28,7 @@
 
 #include <QDebug>
 #include <QLabel>
+#include <QGroupBox>
 
 #include "batterywatchersettings.h"
 #include "ui_batterywatchersettings.h"
@@ -84,6 +85,8 @@ void BatteryWatcherSettings::saveSettings()
 
 void BatteryWatcherSettings::updatePreview()
 {
+    mUi->previewBox->setTitle(QString("Preview (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("Built in")));
+
     float chargeLevel = mUi->chargeLevelSlider->value();
     mUi->chargingIcon->setPixmap(mIconProducer.icon(chargeLevel, false).pixmap(QSize(48, 48)));
     mUi->chargingLabel->setText(mIconProducer.iconName(chargeLevel, false));
