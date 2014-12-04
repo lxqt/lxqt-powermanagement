@@ -33,7 +33,7 @@
 
 #include "batteryinfo.h"
 #include "battery.h"
-#include "themeiconfinder.h"
+#include "iconproducer.h"
 #include "../config/powermanagementsettings.h"
 
 class TrayIcon : public QSystemTrayIcon
@@ -55,16 +55,11 @@ private slots:
 
 private:
     void updateToolTip();
-    void updateThemeIcon();
-    void updateBuiltInIcon();
 
     QMenu contextMenu;
     PowerManagementSettings mSettings;
-
     Battery& mBattery;
-    ThemeIconFinder mThemeIconFinder;
-    QIcon mThemeIcon;
-    QIcon mBuiltInIcon;
+    IconProducer mIconProducer;
 };
 
 #endif // TRAYICON_H
