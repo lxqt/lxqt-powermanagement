@@ -33,83 +33,38 @@
 
 #include "batteryinfo.h"
 #include "battery.h"
-
-class IconNamingScheme
-{
-public:
-    static IconNamingScheme* getNamingSchemeForCurrentIconTheme();
-    QString iconName(float chargeLevel, bool discharging) const;
-    bool isValidForCurrentIconTheme() const;
-
-private:
-    IconNamingScheme(QString schemeName, QList<float> chargeLevels, QList<QString> iconNamesCharging, QList<QString> iconNamesDischarging);
-
-    QList<float> mChargeLevels;
-    QList<QString> mIconNamesCharging;
-    QList<QString> mIconNamesDischarging;
-    QString mSchemeName;
-};
-
+#include "themeiconfinder.h"
+#include "../config/powermanagementsettings.h"
 
 class TrayIcon : public QSystemTrayIcon
 {
     Q_OBJECT
 
 public:
-    TrayIcon(QObject *parent = 0);
+    TrayIcon(Battery& battery, QObject *parent = 0);
     ~TrayIcon();
 
-public:
-    void update(bool discharging, double chargeLevel, double lowLevel);
-    virtual bool isProperForCurrentSettings() = 0;
-
-protected:
-    void updateToolTip();
-    virtual void updateIcon() = 0;
-    bool discharging;
-    double chargeLevel;
-    double lowLevel;
-
 private slots:
+    void batteryChanged();
+    void settingsChanged();
+    void iconThemeChanged();
+
     void onConfigureTriggered();
     void onAboutTriggered();
     void onDisableIconTriggered();
 
 private:
+    void updateToolTip();
+    void updateThemeIcon();
+    void updateBuiltInIcon();
+
     QMenu contextMenu;
-};
+    PowerManagementSettings mSettings;
 
-class TrayIconBuiltIn : public TrayIcon
-{
-    Q_OBJECT
-
-public:
-    TrayIconBuiltIn(QObject *parent = 0);
-    ~TrayIconBuiltIn();
-
-    virtual bool isProperForCurrentSettings();
-
-protected:
-    virtual void updateIcon();
-
-};
-
-class TrayIconTheme : public TrayIcon
-{
-    Q_OBJECT
-
-public:
-    TrayIconTheme(IconNamingScheme *iconNamingScheme, QObject* parent);
-    ~TrayIconTheme();
-
-    virtual bool isProperForCurrentSettings();
-
-protected:
-    virtual void updateIcon();
-
-private:
-    IconNamingScheme *mIconNamingScheme;
-
+    Battery& mBattery;
+    ThemeIconFinder mThemeIconFinder;
+    QIcon mThemeIcon;
+    QIcon mBuiltInIcon;
 };
 
 #endif // TRAYICON_H

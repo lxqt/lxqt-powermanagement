@@ -32,127 +32,69 @@
 #include <QProcess>
 #include <QApplication>
 #include <QMessageBox>
-
+#include "themeiconfinder.h"
 #include "trayicon.h"
 #include "../config/powermanagementsettings.h"
 
-QString IconNamingScheme::iconName(float chargeLevel, bool discharging) const
+TrayIcon::TrayIcon(Battery &battery, QObject *parent) : QSystemTrayIcon(parent), contextMenu(), mSettings(), mBattery(battery), mThemeIconFinder()
 {
-    int i = 0;
-    while(i < mChargeLevels.size() - 1 && mChargeLevels.at(i+1) <= chargeLevel) i++;
+    connect(&mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
+    connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
+    connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(iconThemeChanged()));
 
-    return discharging ? mIconNamesDischarging.at(i) : mIconNamesCharging.at(i);
-}
-
-
-IconNamingScheme::IconNamingScheme(QString schemeName, QList<float> chargeLevels, QList<QString> iconNamesCharging, QList<QString> iconNamesDischarging)
-{
-    mSchemeName = schemeName;
-    mChargeLevels = chargeLevels;
-    mIconNamesCharging = iconNamesCharging;
-    mIconNamesDischarging = iconNamesDischarging;
-}
-
-IconNamingScheme* IconNamingScheme::getNamingSchemeForCurrentIconTheme()
-{
-    static QList<IconNamingScheme*> schemes;
-
-    if (schemes.isEmpty())
-    {
-        // Freedesktop naming scheme
-         schemes << new IconNamingScheme(
-                "freedesktop",
-                (QList<float>() << 0 << 1 << 20 << 40 << 60),
-                (QList<QString>() << "battery-empty" << "battery-caution-charging" << "battery-low-charging"
-                                  << "battery-good-charging" <<  "battery-full-charging"),
-                (QList<QString>() << "battery-empty" << "battery-caution" << "battery-low" << "battery-good" <<  "battery-full")
-                );
-
-         // Oxygen naming scheme
-         schemes << new IconNamingScheme(
-                "oxygen",
-                ((QList<float>()) << 0 << 20 << 40 << 60 << 80 << 99.5),
-                ((QList<QString>()) << "battery-charging-low" << "battery-charging-caution" << "battery-charging-040"
-                                    << "battery-charging-060" << "battery-charging-080" << "battery-charging"),
-                ((QList<QString>()) << "battery-low" << "battery-caution" << "battery-040"
-                                    << "battery-060" << "battery-080" << "battery-100")
-                );
-
-         // AwOken naming scheme
-         schemes << new IconNamingScheme(
-                "AwOken",
-                ((QList<float>()) << 0 << 20 << 40 << 60 << 80 << 99.5),
-                ((QList<QString>()) << "battery-000-charging" << "battery-020-charging" << "battery-040-charging"
-                                    << "battery-060-charging" << "battery-080-charging" << "battery-100-charging"),
-                ((QList<QString>()) << "battery-000" << "battery-020" << "battery-040"
-                                   << "battery-060" << "battery-080" << "battery-100")
-                );
-    }
-
-    foreach (IconNamingScheme* iconNamingScheme, schemes)
-    {
-        if (iconNamingScheme->isValidForCurrentIconTheme())
-        {
-            qDebug() << "Found IconNamingScheme:" << iconNamingScheme->mSchemeName;
-            return iconNamingScheme;
-        }
-    }
-
-    qDebug() << "Found no IconNamingScheme";
-    return 0;
-}
-
-
-bool IconNamingScheme::isValidForCurrentIconTheme() const
-{
-    for (int i = 0; i < mIconNamesCharging.size(); i++)
-    {
-        qDebug() << "Looking for"  << mIconNamesCharging.at(i);
-        if (!QIcon::hasThemeIcon(mIconNamesCharging.at(i)))
-        {
-            qDebug() << "Not found";
-            return false;
-        }
-
-        qDebug() << "Looking for"  << mIconNamesDischarging.at(i);
-        if (!QIcon::hasThemeIcon(mIconNamesDischarging.at(i)))
-        {
-            qDebug() << "Not found";
-            return false;
-        }
-    }
-    qDebug();
-
-    return true;
-}
-
-
-TrayIcon::TrayIcon(QObject *parent) : QSystemTrayIcon(parent), contextMenu()
-{
     contextMenu.addAction(tr("Configure"), this, SLOT(onConfigureTriggered()));
     contextMenu.addAction(tr("About"), this, SLOT(onAboutTriggered()));
     contextMenu.addAction(tr("Disable icon"), this, SLOT(onDisableIconTriggered()));
     setContextMenu(&contextMenu);
+    batteryChanged();
 }
 
 TrayIcon::~TrayIcon() {}
 
-void TrayIcon::update(bool discharging, double chargeLevel, double lowLevel)
+void TrayIcon::batteryChanged()
 {
-    this->discharging = discharging;
-    this->chargeLevel = chargeLevel;
-    this->lowLevel = lowLevel;
+    if (mSettings.isUseThemeIcons())
+    {
+        updateThemeIcon();
+        setIcon(mThemeIcon);
+    }
+    else
+    {
+        updateBuiltInIcon();
+        setIcon(mBuiltInIcon);
+    }
 
     updateToolTip();
-    updateIcon();
 }
 
+void TrayIcon::settingsChanged()
+{
+    if (mSettings.isUseThemeIcons())
+    {
+        updateThemeIcon();
+        setIcon(mThemeIcon);
+    }
+    else
+    {
+        updateBuiltInIcon();
+        setIcon(mBuiltInIcon);
+    }
+}
 
+void TrayIcon::iconThemeChanged()
+{
+   mThemeIconFinder.themeChanged();
+   if (mSettings.isUseThemeIcons())
+   {
+       updateThemeIcon();
+       setIcon(mThemeIcon);
+   }
+}
 
 void TrayIcon::updateToolTip()
 {
-    QString toolTip = discharging ? tr("discharging") : tr("charging"); // TODO Use states...
-    toolTip = toolTip + QString(" - %1 %").arg(chargeLevel, 0, 'f', 1);
+    QString toolTip = mBattery.discharging() ? tr("discharging") : tr("charging"); // TODO Use states...
+    toolTip = toolTip + QString(" - %1 %").arg(mBattery.chargeLevel(), 0, 'f', 1);
     setToolTip(toolTip);
 }
 
@@ -180,28 +122,14 @@ void TrayIcon::onAboutTriggered()
                         ));
 }
 
+
 void TrayIcon::onDisableIconTriggered()
 {
-    hide();
-    PowerManagementSettings().setShowIcon(false);
+    mSettings.setShowIcon(false);
 }
 
 
-TrayIconBuiltIn::TrayIconBuiltIn(QObject* parent) :
-    TrayIcon(parent)
-{
-}
-
-TrayIconBuiltIn::~TrayIconBuiltIn()
-{
-}
-
-bool TrayIconBuiltIn::isProperForCurrentSettings()
-{
-    return ! PowerManagementSettings().isUseThemeIcons();
-}
-
-void TrayIconBuiltIn::updateIcon()
+void TrayIcon::updateBuiltInIcon()
 {
     // See http://www.w3.org/TR/SVG/Overview.html
     // and regarding circle-arch in particular:
@@ -213,7 +141,7 @@ void TrayIconBuiltIn::updateIcon()
     // and it moves counter-clockwise as the charge increases
     // First we calculate in floating point numbers, using a circle with center
     // in (0,0) and a radius of 1
-    double angle = 2*M_PI*chargeLevel/100 + M_PI_2;
+    double angle = 2*M_PI*mBattery.chargeLevel()/100 + M_PI_2;
     qDebug() << "Angle:"  << angle;
     double segment_endpoint_x = cos(angle);
     double segment_endpoint_y = sin(angle);
@@ -225,11 +153,11 @@ void TrayIconBuiltIn::updateIcon()
     // where they go full circle) be radially connected at the endpoints.
     QString chargeGraphics;
 
-    if (chargeLevel < 0.5)
+    if (mBattery.chargeLevel() < 0.5)
     {
         chargeGraphics = "";
     }
-    else if (chargeLevel > 99.5)
+    else if (mBattery.chargeLevel() > 99.5)
     {
         chargeGraphics =
             "<path d='M 100,0 A 100,100 0 1,0 101,0 z M 100,40 A 60,60 0 1,0 101,40 z' stroke-width='0'/>";
@@ -245,13 +173,13 @@ void TrayIconBuiltIn::updateIcon()
     }
 
     QString chargeColor;
-    if (discharging && chargeLevel <= lowLevel + 10)
+    if (mBattery.discharging() && mBattery.chargeLevel() <= mSettings.getPowerLowLevel() + 10)
     {
         chargeColor = "rgb(200,40,40)";
     }
-    else if (discharging && chargeLevel <= lowLevel + 30)
+    else if (mBattery.discharging() && mBattery.chargeLevel() <= mSettings.getPowerLowLevel() + 30)
     {
-        int fac = chargeLevel - lowLevel - 10;
+        int fac = mBattery.chargeLevel() - mSettings.getPowerLowLevel() - 10;
         chargeColor = QString("rgb(%1,%2,40)").arg(40 + 200 - fac*8).arg(40 + fac*8);
     }
     else
@@ -259,7 +187,7 @@ void TrayIconBuiltIn::updateIcon()
 
 
     QString sign =
-            discharging ?
+            mBattery.discharging() ?
                 QString("<path d='M 60,100 h 80' stroke='black' stroke-width='20' />"):                // Minus
                 QString("<path d='M 60,100 h 80 M 100,60 v 80' stroke='black' stroke-width='20' />");  // Plus
 
@@ -283,28 +211,12 @@ void TrayIconBuiltIn::updateIcon()
     pixmap.fill(QColor(0,0,0,0));
     QPainter painter(&pixmap);
     render.render(&painter);
-    setIcon(QIcon(pixmap));
-}
-
-TrayIconTheme::TrayIconTheme(IconNamingScheme* iconNamingScheme, QObject* parent)
-{
-    this->mIconNamingScheme = iconNamingScheme;
-}
-
-TrayIconTheme::~TrayIconTheme()
-{
-}
-
-bool TrayIconTheme::isProperForCurrentSettings()
-{
-    return PowerManagementSettings().isUseThemeIcons() && mIconNamingScheme->isValidForCurrentIconTheme();
+    mBuiltInIcon = QIcon(pixmap);
 }
 
 
-
-void TrayIconTheme::updateIcon()
+void TrayIcon::updateThemeIcon()
 {
-    QString iconName = mIconNamingScheme->iconName(chargeLevel, discharging);
-    setIcon(QIcon::fromTheme(iconName));
-
+    QString iconName = mThemeIconFinder.iconName(mBattery.chargeLevel(), mBattery.discharging());
+    mThemeIcon = QIcon::fromTheme(iconName);
 }

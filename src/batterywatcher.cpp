@@ -134,14 +134,11 @@ void BatteryWatcher::batteryChanged()
     }
 
     mBatteryInfo.updateInfo(&mBattery);
-
-    if (mSettings.isShowIcon())
-        mTrayIcon->update(mBattery.discharging(), mBattery.chargeLevel(), mSettings.getPowerLowLevel());
 }
 
 void BatteryWatcher::settingsChanged()
 {
-    if (mTrayIcon != 0 && (!mTrayIcon->isProperForCurrentSettings() || !mSettings.isShowIcon()))
+    if (mTrayIcon != 0 && !mSettings.isShowIcon())
     {
         mTrayIcon->hide();
         mTrayIcon->deleteLater();
@@ -150,21 +147,9 @@ void BatteryWatcher::settingsChanged()
 
     if (mTrayIcon == 0 && mSettings.isShowIcon())
     {
-        IconNamingScheme *iconNamingScheme = 0;
-        if (mSettings.isUseThemeIcons() && (iconNamingScheme = IconNamingScheme::getNamingSchemeForCurrentIconTheme()))
-        {
-            mTrayIcon = new TrayIconTheme(iconNamingScheme, this);
-        }
-        else
-        {
-            mTrayIcon = new TrayIconBuiltIn(this);
-        }
-
-        bool discharging = mBattery.state() == 2;
-        qDebug() << "updating trayicon: " << discharging << mBattery.chargeLevel() << mSettings.getPowerLowLevel();
+        mTrayIcon = new TrayIcon(mBattery, this);
 
         connect(mTrayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(showBatteryInfo(QSystemTrayIcon::ActivationReason)));
-        mTrayIcon->update(discharging, mBattery.chargeLevel(), mSettings.getPowerLowLevel());
         mTrayIcon->show();
     }
 }
