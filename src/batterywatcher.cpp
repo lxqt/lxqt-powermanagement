@@ -43,7 +43,6 @@ BatteryWatcher::BatteryWatcher(QObject *parent) :
     mTrayIcon(0),
     mSettings()
 {
-    qDebug() << "Starting BatteryWatcher";
     if (!mBattery.haveBattery())
     {
         LxQt::Notification::notify(tr("No battery!"),

@@ -66,7 +66,6 @@ bool Lid::onBattery()
 void Lid::uPowerChange()
 {
     bool newIsClosed = mUPowerInterface->property("LidIsClosed").toBool();
-    qDebug() << "uPowerChange: newIscloded = " << newIsClosed;
     if (newIsClosed != mIsClosed)
     {
         mIsClosed = newIsClosed;

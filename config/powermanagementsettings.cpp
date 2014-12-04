@@ -137,7 +137,6 @@ bool PowerManagementSettings::isLidWatcherEnabled()
 
 void PowerManagementSettings::setLidWatcherEnabled(bool lidWatcherEnabled)
 {
-    qDebug() << "PowerManagementSettings, setLidWatcherEnabled(" << lidWatcherEnabled << ")";
     setValue(ENABLE_LID_WATCHER_KEY, lidWatcherEnabled);
 }
 

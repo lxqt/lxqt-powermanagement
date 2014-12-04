@@ -47,10 +47,8 @@ QString IconProducer::iconName(float chargeLevel, bool discharging)
 
 void IconProducer::updateLevelNameMaps()
 {
-    qDebug() << "themeName:" << QIcon::themeName();
     if (QIcon::themeName() == mLastThemeName) return;
 
-    qDebug() << "Updating";
     /*
      * We maintain specific charge-level-to-icon-name mappings for Oxygen and Awoken and
      * asume all other themes adhere to the freedesktop standard.
@@ -104,8 +102,6 @@ void IconProducer::updateLevelNameMaps()
         mLevelNameMapCharging[90] = "battery-good-charging";
         mLevelNameMapCharging[101] = "battery-full-charging";
     }
-    qDebug() << "levelNameMapCharging:" << mLevelNameMapCharging;
-    qDebug() << "levelNameMapDischarging:" << mLevelNameMapDischarging;
 
     mLastThemeName = QIcon::themeName();
 }
@@ -126,7 +122,6 @@ QIcon IconProducer::builtInIcon(float chargeLevel, bool discharging)
     // First we calculate in floating point numbers, using a circle with center
     // in (0,0) and a radius of 1
     double angle = 2*M_PI*chargeLevel/100 + M_PI_2;
-    qDebug() << "Angle:"  << angle;
     double segment_endpoint_x = cos(angle);
     double segment_endpoint_y = sin(angle);
 
@@ -186,8 +181,6 @@ QIcon IconProducer::builtInIcon(float chargeLevel, bool discharging)
                 "    </g>\n"
                 "    %3\n"
                 "</svg>\n").arg(chargeGraphics).arg(chargeColor).arg(sign);
-
-    qDebug() << svg;
 
     // Paint the svg on a pixmap and create an icon from that.
     QSvgRenderer render(svg.toLatin1());

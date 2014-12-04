@@ -41,9 +41,7 @@ void Watcher::doAction(int action)
 {
     if (action > -1)
     {   
-        qDebug() << "Watcher doing " << action;
         mPower.doAction((LxQt::Power::Action) action);
-        qDebug() << "Watcher done " << action;
     }
 }
 

@@ -55,7 +55,6 @@ IdlenessWatcherSettings::~IdlenessWatcherSettings()
 
 void IdlenessWatcherSettings::loadSettings()
 {
-    qDebug() << "IdlenessWatcherSettings:loadSettings";
 
     mUi->idlenessWatcherGroupBox->setChecked(mSettings.isIdlenessWatcherEnabled());
     setComboBoxToValue(mUi->idleActionComboBox, mSettings.getIdlenessAction());
@@ -103,7 +102,6 @@ void IdlenessWatcherSettings::secondsChanged(int newVal)
 
 void IdlenessWatcherSettings::saveSettings()
 {
-    qDebug() << "IdlenessWatcherSettings:saveSettings";
 
     mSettings.setIdlenessWatcherEnabled(mUi->idlenessWatcherGroupBox->isChecked());
     mSettings.setIdlenessAction(currentValue(mUi->idleActionComboBox));

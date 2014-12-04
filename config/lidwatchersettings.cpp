@@ -59,8 +59,6 @@ LidWatcherSettings::~LidWatcherSettings()
 
 void LidWatcherSettings::loadSettings()
 {
-    qDebug() << "LidWatcher::loadmSettings...";
-    
     mUi->lidWatcherSettingsGroupBox->setChecked(mSettings.isLidWatcherEnabled());
     
     setComboBoxToValue(mUi->onBatteryActionComboBox, mSettings.getLidClosedAction());
@@ -74,8 +72,6 @@ void LidWatcherSettings::loadSettings()
 
 void LidWatcherSettings::saveSettings()
 {
-    qDebug() << "LidWatcher::savemSettings...";
-    
     mSettings.setLidWatcherEnabled(mUi->lidWatcherSettingsGroupBox->isChecked());
     
     mSettings.setLidClosedAction(currentValue(mUi->onBatteryActionComboBox));

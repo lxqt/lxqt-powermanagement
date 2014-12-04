@@ -37,18 +37,15 @@
 
 LidWatcher::LidWatcher(QObject *parent) : Watcher(parent)
 {
-    qDebug() << "Starting lidwatcher";
     inhibitSystemdLogin();
     connect(&mLid, SIGNAL(changed(bool)), this, SLOT(lidChanged(bool)));
 }
 
 LidWatcher::~LidWatcher(){
-    qDebug() << "Stopping lidwatcher";
 }
 
 void LidWatcher::lidChanged(bool closed)
 {
-    qDebug() << "LidWatcherd#lidChanged: closed=" << closed;
     if (closed)
     {
         doAction(action());
@@ -128,28 +125,3 @@ void LidWatcher::inhibitSystemdLogin()
     }
 }
 
-/*gdbus introspect --system --dest org.freedesktop.login1 --object-path /org/freedesktop/login1
-node /org/freedesktop/login1 {
-  interface org.freedesktop.login1.Manager {
-    methods:
-      Inhibit(in  s what,
-              in  s who,
-              in  s why,
-              in  s mode,
-              out h fd);
-      ListInhibitors(out a(ssssuu) inhibitors);
-      ...
-    signals:
-      PrepareForShutdown(b active);
-      PrepareForSleep(b active);
-      ...
-    properties:
-      readonly s BlockInhibited = '';
-      readonly s DelayInhibited = '';
-      readonly t InhibitDelayMaxUSec = 5000000;
-      readonly b PreparingForShutdown = false;
-      readonly b PreparingForSleep = false;
-      ...
-  };
-  ...
-};*/

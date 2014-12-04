@@ -86,7 +86,6 @@ void Battery::uPowerBatteryChanged()
     {
         QDBusReply<QVariantMap> reply = mUPowerBatteryPropertiesInterface->call("GetAll", "org.freedesktop.UPower.Device");
         mProperties = reply.value();
-        qDebug() << "props:" << properties();
         emit batteryChanged();
     }
     else
