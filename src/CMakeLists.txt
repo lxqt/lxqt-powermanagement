@@ -7,6 +7,7 @@ set(lxqt-powermanagement_MOCS
     battery.h
     batteryinfo.h
     batterywatcher.h
+    batteryinfodialog.h
     idlenesswatcher.h
     lid.h
     lidwatcher.h
@@ -20,6 +21,7 @@ set(lxqt-powermanagement_SRCS
     watcher.cpp
     battery.cpp
     batteryinfo.cpp
+    batteryinfodialog.cpp
     batterywatcher.cpp
     idlenesswatcher.cpp
     lid.cpp
@@ -34,6 +36,7 @@ set(lxqt-powermanagement_SRCS
 
 set(lxqt-powermanagement_UIS
     batteryinfo.ui
+    batteryinfodialog.ui
 )
 
 set(DESKTOP_FILES_IN

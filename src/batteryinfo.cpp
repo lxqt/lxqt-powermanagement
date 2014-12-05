@@ -29,11 +29,13 @@
 #include "batteryinfo.h"
 #include "ui_batteryinfo.h"
 
-BatteryInfo::BatteryInfo() :
-    QDialog(),
+BatteryInfo::BatteryInfo(Battery* battery) :
+    QFrame(),
+    mBattery(battery),
     mUi(new Ui::BatteryInfo)
 {
     mUi->setupUi(this);
+    connect(mBattery, SIGNAL(batteryChanged()), this, SLOT(onBatteryChanged()));
 }
 
 BatteryInfo::~BatteryInfo()
@@ -41,34 +43,34 @@ BatteryInfo::~BatteryInfo()
     delete mUi;
 }
 
-void BatteryInfo::updateInfo(Battery* battery)
+void BatteryInfo::onBatteryChanged()
 {
     QDateTime UpdateTime;
-    UpdateTime.setTime_t(battery->properties().value("UpdateTime").toULongLong());
+    UpdateTime.setTime_t(mBattery->properties().value("UpdateTime").toULongLong());
     mUi->updatedValue->setText(UpdateTime.toString("hh:mm:ss"));
 
-    mUi->stateValue->setText(battery->stateAsString());
+    mUi->stateValue->setText(mBattery->stateAsString());
 
     QString energyFullDesign("%1 Wh");
-    double efd = battery->properties().value("EnergyFullDesign").toDouble();
+    double efd = mBattery->properties().value("EnergyFullDesign").toDouble();
     mUi->energyFullDesignValue->setText(energyFullDesign.arg(efd, 0, 'f', 2));
 
     QString energyFull("%1 Wh (%2 %)");
-    double ef = battery->properties().value("EnergyFull").toDouble();
-    double capacity = battery->properties().value("Capacity").toDouble();
+    double ef = mBattery->properties().value("EnergyFull").toDouble();
+    double capacity = mBattery->properties().value("Capacity").toDouble();
     mUi->energyFullValue->setText(energyFull.arg(ef, 0, 'f', 2).arg(capacity, 0, 'f', 1));
 
     QString energy("%1 Wh (%2 %)");
-    double e = battery->properties().value("Energy").toDouble();
-    double percentage = battery->properties().value("Percentage").toDouble();
+    double e = mBattery->properties().value("Energy").toDouble();
+    double percentage = mBattery->properties().value("Percentage").toDouble();
     mUi->energyValue->setText(energy.arg(e, 0, 'f', 2).arg(percentage, 0, 'f', 1));
 
-    mUi->energyRateValue->setText(QString::number(battery->properties().value("EnergyRate").toDouble(), 'f', 2) + " W");
+    mUi->energyRateValue->setText(QString::number(mBattery->properties().value("EnergyRate").toDouble(), 'f', 2) + " W");
 
 
-    mUi->modelValue->setText(battery->properties().value("Model").toString());
+    mUi->modelValue->setText(mBattery->properties().value("Model").toString());
 
-    int technology = battery->properties().value("Technology", 0).toInt();
+    int technology = mBattery->properties().value("Technology", 0).toInt();
     switch (technology)
     {
     case 1:  mUi->technologyValue->setText(tr("Lithium ion")); break;
@@ -80,5 +82,5 @@ void BatteryInfo::updateInfo(Battery* battery)
     default: mUi->technologyValue->setText(tr("Unknown")); break;
     }
 
-    mUi->voltageValue->setText(QString::number(battery->properties().value("Voltage").toDouble(), 'f', 2) + " V");
+    mUi->voltageValue->setText(QString::number(mBattery->properties().value("Voltage").toDouble(), 'f', 2) + " V");
 }

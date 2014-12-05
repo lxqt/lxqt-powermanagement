@@ -30,6 +30,7 @@
 #include "watcher.h"
 #include "battery.h"
 #include "trayicon.h"
+#include "batteryinfodialog.h"
 #include "../config/powermanagementsettings.h"
 
 class BatteryWatcher : public Watcher
@@ -45,10 +46,10 @@ private slots:
     void showBatteryInfo(QSystemTrayIcon::ActivationReason activationReason);
 
 private:
-    BatteryInfo mBatteryInfo;
     Battery mBattery;
-    TrayIcon* mTrayIcon;
     PowerManagementSettings mSettings;
+    TrayIcon* mTrayIcon;
+    BatteryInfoDialog *mBatteryInfoDialog;
 };
 
 #endif // BATTERYWATCHER_H

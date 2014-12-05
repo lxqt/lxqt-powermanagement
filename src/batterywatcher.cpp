@@ -38,10 +38,10 @@
 
 BatteryWatcher::BatteryWatcher(QObject *parent) :
     Watcher(parent),
-    mBatteryInfo(),
     mBattery(),
+    mSettings(),
     mTrayIcon(0),
-    mSettings()
+    mBatteryInfoDialog(0)
 {
     if (!mBattery.haveBattery())
     {
@@ -50,6 +50,9 @@ BatteryWatcher::BatteryWatcher(QObject *parent) :
                                   "lxqt-powermanagement");
     }
 
+    QList<Battery*> batteries;
+    batteries.append(&mBattery);
+    mBatteryInfoDialog = new BatteryInfoDialog(batteries);
 
 
     connect(&mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
@@ -59,10 +62,16 @@ BatteryWatcher::BatteryWatcher(QObject *parent) :
     batteryChanged();
 }
 
-BatteryWatcher::~BatteryWatcher(){
+BatteryWatcher::~BatteryWatcher()
+{
     if (mTrayIcon)
     {
-        delete mTrayIcon;
+        mTrayIcon->deleteLater();
+    }
+
+    if (mBatteryInfoDialog)
+    {
+        mBatteryInfoDialog->deleteLater();
     }
 }
 
@@ -132,7 +141,7 @@ void BatteryWatcher::batteryChanged()
         }
     }
 
-    mBatteryInfo.updateInfo(&mBattery);
+    //mBatteryInfoDialog.onBatteryChanged(&mBattery);
 }
 
 void BatteryWatcher::settingsChanged()
@@ -155,12 +164,12 @@ void BatteryWatcher::settingsChanged()
 
 void BatteryWatcher::showBatteryInfo(QSystemTrayIcon::ActivationReason activationReason)
 {
-    if (mBatteryInfo.isVisible())
+    if (mBatteryInfoDialog->isVisible())
     {
-        mBatteryInfo.close();
+        mBatteryInfoDialog->close();
     }
     else if (QSystemTrayIcon::Trigger == activationReason)
     {
-        mBatteryInfo.open();
+        mBatteryInfoDialog->open();
     }
 }

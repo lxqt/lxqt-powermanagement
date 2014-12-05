@@ -27,7 +27,7 @@
 #ifndef BATTERYINFO_H
 #define BATTERYINFO_H
 
-#include <QDialog>
+#include <QFrame>
 
 #include "battery.h"
 
@@ -35,16 +35,19 @@ namespace Ui {
 class BatteryInfo;
 }
 
-class BatteryInfo : public QDialog
+class BatteryInfo : public QFrame
 {
     Q_OBJECT
     
 public:
-    explicit BatteryInfo();
+    explicit BatteryInfo(Battery* battery);
     ~BatteryInfo();
-    void updateInfo(Battery* battery);
+
+private slots:
+    void onBatteryChanged();
 
 private:
+    Battery* mBattery;
     Ui::BatteryInfo *mUi;
 };
 
