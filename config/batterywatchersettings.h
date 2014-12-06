@@ -53,6 +53,8 @@ public slots:
 private slots:
     void saveSettings();
     void updatePreview();
+    void onChargeIconChanged();
+    void onDischargeIconChanged();
 
 private:
     PowerManagementSettings mSettings;

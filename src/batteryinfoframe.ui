@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>BatteryInfo</class>
- <widget class="QFrame" name="BatteryInfo">
+ <class>BatteryInfoFrame</class>
+ <widget class="QFrame" name="BatteryInfoFrame">
   <property name="geometry">
    <rect>
     <x>0</x>

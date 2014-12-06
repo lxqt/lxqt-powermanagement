@@ -49,24 +49,38 @@ public:
         PendingDischarge
     };
 
-   Battery(QObject* parent = 0);
+
+    Battery(QObject* parent = 0);
     ~Battery();
 
-    double  chargeLevel();
-    bool    discharging();
+    // This data is all available in mProperties, but we keep it
+    // here also for easy access
+    QString summary;
+    QString updated;
+    QString stateAsText;
+    QString energyFullDesign;
+    QString energyFull;
+    QString energyNow;
+    QString energyRate;
+    QString model;
+    QString technology;
+    QString voltage;
+    double  chargeLevel;
+    State   state;
+    // --
+
     bool    haveBattery();
-    State   state();
-    QString stateAsString(); 
-    QVariantMap properties();
 
 signals:
     void chargeStateChange(float newChargeLevel, Battery::State newState);
-
+    void summaryChanged(QString newSummary);
 
 private slots:
     void uPowerBatteryChanged();
 
 private:
+    static QString state2String(State state);
+
     QDBusInterface *mUPowerInterface;
     QDBusInterface *mUPowerBatteryDeviceInterface;
     QDBusInterface *mUPowerBatteryPropertiesInterface;

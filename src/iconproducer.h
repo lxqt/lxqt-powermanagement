@@ -13,8 +13,9 @@ class IconProducer : public QObject
 public:
     IconProducer(Battery* battery, QObject *parent = 0);
     IconProducer(QObject *parent = 0);
-    QIcon& icon() { return mIcon;}
-    QString iconName() { return mIconName; }
+
+    QIcon mIcon;
+    QString mIconName;
 
 signals:
     void iconChanged();
@@ -24,14 +25,11 @@ public slots:
 
 private slots:
     void themeChanged();
-    void updateIcon();
+    void update();
 
 private:
 
     QIcon buildCircleIcon();
-
-    QIcon mIcon;
-    QString mIconName;
 
     float mChargeLevel;
     Battery::State mState;

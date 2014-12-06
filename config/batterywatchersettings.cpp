@@ -56,7 +56,8 @@ BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     connect(mUi->useThemeIconsCheckBox, SIGNAL(clicked(bool)), this, SLOT(saveSettings()));
     connect(mUi->useThemeIconsCheckBox, SIGNAL(clicked(bool)), this, SLOT(updatePreview()));
     connect(mUi->chargeLevelSlider, SIGNAL(valueChanged(int)), this, SLOT(updatePreview()));
-    connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(updatePreview()));
+    connect(&mChargingIconProducer, SIGNAL(iconChanged()), this, SLOT(onChargeIconChanged()));
+    connect(&mDischargingIconProducer, SIGNAL(iconChanged()), this, SLOT(onDischargeIconChanged()));
     updatePreview();
 }
 
@@ -91,11 +92,18 @@ void BatteryWatcherSettings::updatePreview()
 
     float chargeLevel = mUi->chargeLevelSlider->value();
     mChargingIconProducer.update(chargeLevel, Battery::Charging);
-    mUi->chargingIcon->setPixmap(mChargingIconProducer.icon().pixmap(mUi->chargingIcon->size()));
-    mUi->chargingLabel->setText(mChargingIconProducer.iconName());
-
     mDischargingIconProducer.update(chargeLevel, Battery::Discharging);
-    mUi->dischargingIcon->setPixmap(mDischargingIconProducer.icon().pixmap(mUi->dischargingIcon->size()));
-    mUi->dischargingLabel->setText(mDischargingIconProducer.iconName());
     mUi->chargeLevelLabel->setText(tr("Level: %1%").arg(chargeLevel));
+}
+
+void BatteryWatcherSettings::onChargeIconChanged()
+{
+    mUi->chargingIcon->setPixmap(mChargingIconProducer.mIcon.pixmap(mUi->chargingIcon->size()));
+    mUi->chargingLabel->setText(mChargingIconProducer.mIconName);
+}
+
+void BatteryWatcherSettings::onDischargeIconChanged()
+{
+    mUi->dischargingIcon->setPixmap(mDischargingIconProducer.mIcon.pixmap(mUi->dischargingIcon->size()));
+    mUi->dischargingLabel->setText(mDischargingIconProducer.mIconName);
 }

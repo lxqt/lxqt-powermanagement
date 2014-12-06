@@ -5,8 +5,8 @@ set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
 set(lxqt-powermanagement_MOCS
     watcher.h
     battery.h
-    batteryinfo.h
     batterywatcher.h
+    batteryinfoframe.h
     batteryinfodialog.h
     idlenesswatcher.h
     lid.h
@@ -20,7 +20,7 @@ set(lxqt-powermanagement_MOCS
 set(lxqt-powermanagement_SRCS
     watcher.cpp
     battery.cpp
-    batteryinfo.cpp
+    batteryinfoframe.cpp
     batteryinfodialog.cpp
     batterywatcher.cpp
     idlenesswatcher.cpp
@@ -35,7 +35,7 @@ set(lxqt-powermanagement_SRCS
 )
 
 set(lxqt-powermanagement_UIS
-    batteryinfo.ui
+    batteryinfoframe.ui
     batteryinfodialog.ui
 )
 

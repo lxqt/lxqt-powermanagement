@@ -31,7 +31,6 @@
 #include <QSystemTrayIcon>
 #include <QMenu>
 
-#include "batteryinfo.h"
 #include "battery.h"
 #include "iconproducer.h"
 #include "../config/powermanagementsettings.h"
@@ -44,15 +43,22 @@ public:
     TrayIcon(Battery *battery, QObject *parent = 0);
     ~TrayIcon();
 
-private slots:
+signals:
+    void toggleShowInfo();
+
+public slots:
     void iconChanged();
+    void updateTooltip(QString newTooltip);
+
+private slots:
     void onConfigureTriggered();
     void onAboutTriggered();
     void onDisableIconTriggered();
+    void onActivated(QSystemTrayIcon::ActivationReason reason);
 
 private:
     IconProducer mIconProducer;
-    QMenu contextMenu;
+    QMenu mContextMenu;
 };
 
 #endif // TRAYICON_H

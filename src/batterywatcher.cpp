@@ -36,26 +36,23 @@
 #include "batterywatcher.h"
 #include "../config/powermanagementsettings.h"
 
-BatteryWatcher::BatteryWatcher(QObject *parent) :
-    Watcher(parent),
-    mBattery(),
-    mSettings(),
-    mTrayIcon(0),
-    mBatteryInfoDialog(0)
+BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent),
+    mBattery(0), mTrayIcon(0)
 {
-    if (!mBattery.haveBattery())
+    mBattery = new Battery(this);
+    if (!mBattery->haveBattery())
     {
         LxQt::Notification::notify(tr("No battery!"),
-                                  tr("LXQt could not find data about any battery - monitoring disabled"),
-                                  "lxqt-powermanagement");
+                                   tr("LXQt could not find data about any battery - monitoring disabled"),
+                                   "lxqt-powermanagement");
     }
 
+    connect(mBattery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(batteryChanged()));
+
     QList<Battery*> batteries;
-    batteries.append(&mBattery);
+    batteries.append(mBattery);
     mBatteryInfoDialog = new BatteryInfoDialog(batteries);
 
-
-    connect(&mBattery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(batteryChanged()));
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
     connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
     settingsChanged();
@@ -81,19 +78,13 @@ void BatteryWatcher::batteryChanged()
     static LxQt::Notification *notification = 0;
 
     qDebug() <<  "BatteryChanged"
-             <<  "state:"       << mBattery.stateAsString()
-             <<  "chargeLevel:" << mBattery.chargeLevel()
+             <<  "state:"       << mBattery->stateAsText
+             <<  "chargeLevel:" << mBattery->chargeLevel
              <<  "actionTime:"  << actionTime;
 
-    if (mTrayIcon)
-    {
-        mTrayIcon->setToolTip(mBattery.stateAsString());
-    }
-
-
     bool powerLowActionRequired =
-            mBattery.discharging() &&
-            mBattery.chargeLevel() < mSettings.getPowerLowLevel() &&
+            mBattery->state == Battery::Discharging &&
+            mBattery->chargeLevel < mSettings.getPowerLowLevel() &&
             mSettings.getPowerLowAction() > 0;
 
     if (powerLowActionRequired)
@@ -149,8 +140,6 @@ void BatteryWatcher::batteryChanged()
             notification = 0;
         }
     }
-
-    //mBatteryInfoDialog.onBatteryChanged(&mBattery);
 }
 
 void BatteryWatcher::settingsChanged()
@@ -159,27 +148,15 @@ void BatteryWatcher::settingsChanged()
     {
         mTrayIcon->hide();
         mTrayIcon->deleteLater();
+        mIconProducer->deleteLater();
         mTrayIcon = 0;
     }
 
     if (mTrayIcon == 0 && mSettings.isShowIcon())
     {
-        IconProducer *iconProducer = new IconProducer();
-        mTrayIcon = new TrayIcon(&mBattery, this);
-
-        connect(mTrayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(showBatteryInfo(QSystemTrayIcon::ActivationReason)));
+        mTrayIcon = new TrayIcon(mBattery, this);
+        connect(mTrayIcon, SIGNAL(toggleShowInfo()), mBatteryInfoDialog, SLOT(toggleShow()));
         mTrayIcon->show();
     }
 }
 
-void BatteryWatcher::showBatteryInfo(QSystemTrayIcon::ActivationReason activationReason)
-{
-    if (mBatteryInfoDialog->isVisible())
-    {
-        mBatteryInfoDialog->close();
-    }
-    else if (QSystemTrayIcon::Trigger == activationReason)
-    {
-        mBatteryInfoDialog->open();
-    }
-}

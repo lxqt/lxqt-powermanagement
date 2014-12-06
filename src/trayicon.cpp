@@ -32,23 +32,32 @@
 #include "trayicon.h"
 #include "../config/powermanagementsettings.h"
 
-TrayIcon::TrayIcon(Battery *battery, QObject *parent) : QSystemTrayIcon(parent), mIconProducer(battery), contextMenu()
+TrayIcon::TrayIcon(Battery *battery, QObject *parent) : QSystemTrayIcon(parent), mIconProducer(battery), mContextMenu()
 {
-    contextMenu.addAction(tr("Configure"), this, SLOT(onConfigureTriggered()));
-    contextMenu.addAction(tr("About"), this, SLOT(onAboutTriggered()));
-    contextMenu.addAction(tr("Disable icon"), this, SLOT(onDisableIconTriggered()));
-    setContextMenu(&contextMenu);
+    connect(battery, SIGNAL(summaryChanged(QString)), this, SLOT(updateTooltip(QString)));
+    updateTooltip(battery->summary);
 
-    mIconProducer.update(battery->chargeLevel(), battery->state());
     connect(&mIconProducer, SIGNAL(iconChanged()), this, SLOT(iconChanged()));
     iconChanged();
+
+    connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(onActivated(QSystemTrayIcon::ActivationReason)));
+
+    mContextMenu.addAction(tr("Configure"), this, SLOT(onConfigureTriggered()));
+    mContextMenu.addAction(tr("About"), this, SLOT(onAboutTriggered()));
+    mContextMenu.addAction(tr("Disable icon"), this, SLOT(onDisableIconTriggered()));
+    setContextMenu(&mContextMenu);
 }
 
 TrayIcon::~TrayIcon() {}
 
 void TrayIcon::iconChanged()
 {
-    setIcon(mIconProducer.icon());
+    setIcon(mIconProducer.mIcon);
+}
+
+void TrayIcon::updateTooltip(QString newTooltip)
+{
+    setToolTip(newTooltip);
 }
 
 void TrayIcon::onConfigureTriggered()
@@ -81,3 +90,8 @@ void TrayIcon::onDisableIconTriggered()
     PowerManagementSettings().setShowIcon(false);
 }
 
+void TrayIcon::onActivated(QSystemTrayIcon::ActivationReason reason)
+{
+    qDebug() << "onActivated" << reason;
+    if (Trigger == reason) emit toggleShowInfo();
+}

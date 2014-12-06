@@ -24,31 +24,31 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#ifndef BATTERYINFO_H
-#define BATTERYINFO_H
+#ifndef BATTERYINFOFRAME_H
+#define BATTERYINFOFRAME_H
 
 #include <QFrame>
 
 #include "battery.h"
 
 namespace Ui {
-class BatteryInfo;
+class BatteryInfoFrame;
 }
 
-class BatteryInfo : public QFrame
+class BatteryInfoFrame : public QFrame
 {
     Q_OBJECT
     
 public:
-    explicit BatteryInfo(Battery* battery);
-    ~BatteryInfo();
+    explicit BatteryInfoFrame(Battery* battery);
+    ~BatteryInfoFrame();
 
 private slots:
     void onBatteryChanged();
 
 private:
     Battery* mBattery;
-    Ui::BatteryInfo *mUi;
+    Ui::BatteryInfoFrame *mUi;
 };
 
-#endif // BATTERYINFO_H
+#endif // BATTERYINFOFRAME_H

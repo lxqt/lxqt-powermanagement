@@ -10,14 +10,17 @@
 IconProducer::IconProducer(Battery *battery, QObject *parent) : QObject(parent)
 {
     connect(battery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(update(float,Battery::State)));
+    connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(update()));
+
+    mChargeLevel = battery->chargeLevel;
+    mState = battery->state;
     themeChanged();
-    updateIcon();
 }
 
 IconProducer::IconProducer(QObject *parent):  QObject(parent)
 {
     themeChanged();
-    updateIcon();
+    update();
 }
 
 
@@ -27,36 +30,44 @@ void IconProducer::update(float newChargeLevel, Battery::State newState)
     mChargeLevel = newChargeLevel;
     mState = newState;
 
-    updateIcon();
+    update();
 }
 
-void IconProducer::updateIcon()
+void IconProducer::update()
 {
+    QString newIconName;
+
     if (mSettings.isUseThemeIcons())
     {
         QMap<float, QString> *levelNameMap =  (mState == Battery::Discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
-        mIconName = QString();
         foreach (float level, levelNameMap->keys())
         {
             if (level >= mChargeLevel)
             {
-                mIconName = levelNameMap->value(level);
+                newIconName = levelNameMap->value(level);
                 break;
             }
         }
+    }
 
+    if (mSettings.isUseThemeIcons() && newIconName == mIconName)
+    {
+        return;
+    }
+
+    mIconName = newIconName;
+
+    if (mSettings.isUseThemeIcons())
+    {
         mIcon = QIcon::fromTheme(mIconName);
     }
     else
     {
-        mIconName = "Built in";
         mIcon = buildCircleIcon();
     }
 
     emit iconChanged();
 }
-
-
 
 void IconProducer::themeChanged()
 {
@@ -114,7 +125,7 @@ void IconProducer::themeChanged()
         mLevelNameMapCharging[101] = "battery-full-charging";
     }
 
-    updateIcon();
+    update();
 }
 
 
