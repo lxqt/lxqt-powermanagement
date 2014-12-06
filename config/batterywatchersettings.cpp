@@ -33,12 +33,14 @@
 #include "batterywatchersettings.h"
 #include "ui_batterywatchersettings.h"
 #include "powermanagementsettings.h"
+#include "../src/battery.h"
 
 BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     QWidget(parent),
     mSettings(),
     mUi(new Ui::BatteryWatcherSettings),
-    mIconProducer()
+    mChargingIconProducer(),
+    mDischargingIconProducer()
 
 {
     mUi->setupUi(this);
@@ -88,9 +90,12 @@ void BatteryWatcherSettings::updatePreview()
     mUi->previewBox->setTitle(QString("Preview (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("Built in")));
 
     float chargeLevel = mUi->chargeLevelSlider->value();
-    mUi->chargingIcon->setPixmap(mIconProducer.icon(chargeLevel, false).pixmap(QSize(48, 48)));
-    mUi->chargingLabel->setText(mIconProducer.iconName(chargeLevel, false));
-    mUi->dischargingIcon->setPixmap(mIconProducer.icon(chargeLevel, true).pixmap(QSize(48, 48)));
-    mUi->dischargingLabel->setText(mIconProducer.iconName(chargeLevel, true));
+    mChargingIconProducer.update(chargeLevel, Battery::Charging);
+    mUi->chargingIcon->setPixmap(mChargingIconProducer.icon().pixmap(mUi->chargingIcon->size()));
+    mUi->chargingLabel->setText(mChargingIconProducer.iconName());
+
+    mDischargingIconProducer.update(chargeLevel, Battery::Discharging);
+    mUi->dischargingIcon->setPixmap(mDischargingIconProducer.icon().pixmap(mUi->dischargingIcon->size()));
+    mUi->dischargingLabel->setText(mDischargingIconProducer.iconName());
     mUi->chargeLevelLabel->setText(tr("Level: %1%").arg(chargeLevel));
 }

@@ -6,49 +6,60 @@
 #include <QPainter>
 #include <math.h>
 
-IconProducer::IconProducer(): mSettings(), mLastThemeName(), mLevelNameMapCharging(), mLevelNameMapDischarging()
+
+IconProducer::IconProducer(Battery *battery, QObject *parent) : QObject(parent)
 {
+    connect(battery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(update(float,Battery::State)));
+    themeChanged();
+    updateIcon();
+}
+
+IconProducer::IconProducer(QObject *parent):  QObject(parent)
+{
+    themeChanged();
+    updateIcon();
 }
 
 
-QIcon IconProducer::icon(float chargeLevel, bool discharging)
+void IconProducer::update(float newChargeLevel, Battery::State newState)
 {
-    return mSettings.isUseThemeIcons() ? themedIcon(chargeLevel, discharging) : builtInIcon(chargeLevel, discharging);
+    qDebug() << QString("IconProducer::update(%1, %2)").arg(newChargeLevel, newState);
+    mChargeLevel = newChargeLevel;
+    mState = newState;
+
+    updateIcon();
 }
 
-
-QIcon IconProducer::themedIcon(float chargeLevel, bool discharging)
+void IconProducer::updateIcon()
 {
-    return QIcon::fromTheme(iconName(chargeLevel, discharging));
-}
-
-QString IconProducer::iconName(float chargeLevel, bool discharging)
-{
-    if (! mSettings.isUseThemeIcons())
+    if (mSettings.isUseThemeIcons())
     {
-        return QString(discharging ? "discharging" : "charging");
-    }
-
-    updateLevelNameMaps();
-
-    QMap<float, QString> *levelNameMap =  (discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
-    foreach (float level, levelNameMap->keys())
-    {
-        if (level >= chargeLevel)
+        QMap<float, QString> *levelNameMap =  (mState == Battery::Discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
+        mIconName = QString();
+        foreach (float level, levelNameMap->keys())
         {
-            return levelNameMap->value(level);
+            if (level >= mChargeLevel)
+            {
+                mIconName = levelNameMap->value(level);
+                break;
+            }
         }
+
+        mIcon = QIcon::fromTheme(mIconName);
+    }
+    else
+    {
+        mIconName = "Built in";
+        mIcon = buildCircleIcon();
     }
 
-    return QString();
-
+    emit iconChanged();
 }
 
 
-void IconProducer::updateLevelNameMaps()
-{
-    if (QIcon::themeName() == mLastThemeName) return;
 
+void IconProducer::themeChanged()
+{
     /*
      * We maintain specific charge-level-to-icon-name mappings for Oxygen and Awoken and
      * asume all other themes adhere to the freedesktop standard.
@@ -61,9 +72,9 @@ void IconProducer::updateLevelNameMaps()
 
     if (QIcon::themeName() == "oxygen")
     {                                                             // Means:
-        mLevelNameMapDischarging[10] = "battery-low";             // Use 'battery-low' for levels up to 20
-        mLevelNameMapDischarging[20] = "battery-caution";         //  -  'battery-caution' for levels between 20 and 40
-        mLevelNameMapDischarging[40] = "battery-040";             // etc..
+        mLevelNameMapDischarging[10] = "battery-low";             // Use 'battery-low' for levels up to 10
+        mLevelNameMapDischarging[20] = "battery-caution";         //  -  'battery-caution' for levels between 10 and 20
+        mLevelNameMapDischarging[40] = "battery-040";             //  -  'battery-040' for levels between 20 and 40, etc..
         mLevelNameMapDischarging[60] = "battery-060";
         mLevelNameMapDischarging[80] = "battery-080";
         mLevelNameMapDischarging[101] = "battery-100";
@@ -103,13 +114,14 @@ void IconProducer::updateLevelNameMaps()
         mLevelNameMapCharging[101] = "battery-full-charging";
     }
 
-    mLastThemeName = QIcon::themeName();
+    updateIcon();
 }
 
 
-QIcon IconProducer::builtInIcon(float chargeLevel, bool discharging)
+QIcon IconProducer::buildCircleIcon()
 {
     float lowLevel = mSettings.getPowerLowLevel();
+    bool discharging = mState == Battery::Discharging;
 
     // See http://www.w3.org/TR/SVG/Overview.html
     // and regarding circle-arch in particular:
@@ -121,7 +133,7 @@ QIcon IconProducer::builtInIcon(float chargeLevel, bool discharging)
     // and it moves counter-clockwise as the charge increases
     // First we calculate in floating point numbers, using a circle with center
     // in (0,0) and a radius of 1
-    double angle = 2*M_PI*chargeLevel/100 + M_PI_2;
+    double angle = 2*M_PI*mChargeLevel/100 + M_PI_2;
     double segment_endpoint_x = cos(angle);
     double segment_endpoint_y = sin(angle);
 
@@ -132,11 +144,11 @@ QIcon IconProducer::builtInIcon(float chargeLevel, bool discharging)
     // where they go full circle) be radially connected at the endpoints.
     QString chargeGraphics;
 
-    if (chargeLevel < 0.5)
+    if (mChargeLevel < 0.5)
     {
         chargeGraphics = "";
     }
-    else if (chargeLevel > 99.5)
+    else if (mChargeLevel > 99.5)
     {
         chargeGraphics =
             "<path d='M 100,0 A 100,100 0 1,0 101,0 z M 100,40 A 60,60 0 1,0 101,40 z' stroke-width='0'/>";
@@ -152,13 +164,13 @@ QIcon IconProducer::builtInIcon(float chargeLevel, bool discharging)
     }
 
     QString chargeColor;
-    if (discharging && chargeLevel <= lowLevel + 10)
+    if (discharging && mChargeLevel <= lowLevel + 10)
     {
         chargeColor = "rgb(200,40,40)";
     }
-    else if (discharging && chargeLevel <= lowLevel + 30)
+    else if (discharging && mChargeLevel <= lowLevel + 30)
     {
-        int fac = chargeLevel - lowLevel - 10;
+        int fac = mChargeLevel - lowLevel - 10;
         chargeColor = QString("rgb(%1,%2,40)").arg(40 + 200 - fac*8).arg(40 + fac*8);
     }
     else

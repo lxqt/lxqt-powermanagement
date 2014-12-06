@@ -4,30 +4,42 @@
 #include <QMap>
 #include <QObject>
 #include "../config/powermanagementsettings.h"
+#include "battery.h"
 
-class IconProducer
+class IconProducer : public QObject
 {
+    Q_OBJECT
+
 public:
-    IconProducer();
-    void update(float chargeLevel);
-    QIcon icon(float chargeLevel, bool discharging);
-    QString iconName(float chargeLevel, bool discharging);
+    IconProducer(Battery* battery, QObject *parent = 0);
+    IconProducer(QObject *parent = 0);
+    QIcon& icon() { return mIcon;}
+    QString iconName() { return mIconName; }
+
+signals:
+    void iconChanged();
+
+public slots:
+    void update(float newChargeLevel, Battery::State newState);
+
+private slots:
+    void themeChanged();
+    void updateIcon();
 
 private:
-    QIcon themedIcon(float chargeLevel, bool discharging);
-    QIcon builtInIcon(float chargelevel, bool discharging);
-    void updateLevelNameMaps();
+
+    QIcon buildCircleIcon();
+
+    QIcon mIcon;
+    QString mIconName;
+
+    float mChargeLevel;
+    Battery::State mState;
 
     PowerManagementSettings mSettings;
-    QString mLastThemeName;
-    float mChargeLevel;
-
 
     QMap<float, QString> mLevelNameMapCharging;
     QMap<float, QString> mLevelNameMapDischarging;
-
-    QIcon mChargingIcon;
-    QIcon mDischargingIcon;
 
 };
 

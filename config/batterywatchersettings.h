@@ -57,7 +57,8 @@ private slots:
 private:
     PowerManagementSettings mSettings;
     Ui::BatteryWatcherSettings *mUi;
-    IconProducer mIconProducer;
+    IconProducer mChargingIconProducer;
+    IconProducer mDischargingIconProducer;
 };
 
 #endif // POWERLOWSETTINGS_H

@@ -87,7 +87,8 @@ void Battery::uPowerBatteryChanged()
     {
         QDBusReply<QVariantMap> reply = mUPowerBatteryPropertiesInterface->call("GetAll", "org.freedesktop.UPower.Device");
         mProperties = reply.value();
-        emit batteryChanged();
+        qDebug() << QString("emit batteryChanged(%1, %2);").arg(chargeLevel()).arg(state());
+        emit chargeStateChange(chargeLevel(), state());
     }
     else
         qWarning() << "uPowerBatteryProperties has not been initialized";

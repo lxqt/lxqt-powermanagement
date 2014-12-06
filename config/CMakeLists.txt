@@ -19,6 +19,7 @@ set(config-powermanagement_SRCS
     powermanagementsettings.cpp
     helpers.cpp
     ../src/iconproducer.cpp
+    ../src/battery.cpp
 )
 
 set(config-powermanagement_UIS

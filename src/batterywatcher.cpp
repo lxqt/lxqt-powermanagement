@@ -55,7 +55,7 @@ BatteryWatcher::BatteryWatcher(QObject *parent) :
     mBatteryInfoDialog = new BatteryInfoDialog(batteries);
 
 
-    connect(&mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
+    connect(&mBattery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(batteryChanged()));
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
     connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
     settingsChanged();
@@ -84,6 +84,12 @@ void BatteryWatcher::batteryChanged()
              <<  "state:"       << mBattery.stateAsString()
              <<  "chargeLevel:" << mBattery.chargeLevel()
              <<  "actionTime:"  << actionTime;
+
+    if (mTrayIcon)
+    {
+        mTrayIcon->setToolTip(mBattery.stateAsString());
+    }
+
 
     bool powerLowActionRequired =
             mBattery.discharging() &&
@@ -158,7 +164,8 @@ void BatteryWatcher::settingsChanged()
 
     if (mTrayIcon == 0 && mSettings.isShowIcon())
     {
-        mTrayIcon = new TrayIcon(mBattery, this);
+        IconProducer *iconProducer = new IconProducer();
+        mTrayIcon = new TrayIcon(&mBattery, this);
 
         connect(mTrayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(showBatteryInfo(QSystemTrayIcon::ActivationReason)));
         mTrayIcon->show();

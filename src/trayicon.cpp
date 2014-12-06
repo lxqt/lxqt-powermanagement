@@ -32,42 +32,23 @@
 #include "trayicon.h"
 #include "../config/powermanagementsettings.h"
 
-TrayIcon::TrayIcon(Battery &battery, QObject *parent) : QSystemTrayIcon(parent), contextMenu(), mSettings(), mBattery(battery), mIconProducer()
+TrayIcon::TrayIcon(Battery *battery, QObject *parent) : QSystemTrayIcon(parent), mIconProducer(battery), contextMenu()
 {
-    connect(&mBattery, SIGNAL(batteryChanged()), this, SLOT(batteryChanged()));
-    connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
-    connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(iconThemeChanged()));
-
     contextMenu.addAction(tr("Configure"), this, SLOT(onConfigureTriggered()));
     contextMenu.addAction(tr("About"), this, SLOT(onAboutTriggered()));
     contextMenu.addAction(tr("Disable icon"), this, SLOT(onDisableIconTriggered()));
     setContextMenu(&contextMenu);
-    batteryChanged();
+
+    mIconProducer.update(battery->chargeLevel(), battery->state());
+    connect(&mIconProducer, SIGNAL(iconChanged()), this, SLOT(iconChanged()));
+    iconChanged();
 }
 
 TrayIcon::~TrayIcon() {}
 
-void TrayIcon::batteryChanged()
+void TrayIcon::iconChanged()
 {
-    setIcon(mIconProducer.icon(mBattery.chargeLevel(), mBattery.discharging()));
-    updateToolTip();
-}
-
-void TrayIcon::settingsChanged()
-{
-    setIcon(mIconProducer.icon(mBattery.chargeLevel(), mBattery.discharging()));
-}
-
-void TrayIcon::iconThemeChanged()
-{
-    setIcon(mIconProducer.icon(mBattery.chargeLevel(), mBattery.discharging()));
-}
-
-void TrayIcon::updateToolTip()
-{
-    QString toolTip = mBattery.discharging() ? tr("discharging") : tr("charging"); // TODO Use states...
-    toolTip = toolTip + QString(" - %1 %").arg(mBattery.chargeLevel(), 0, 'f', 1);
-    setToolTip(toolTip);
+    setIcon(mIconProducer.icon());
 }
 
 void TrayIcon::onConfigureTriggered()
@@ -97,6 +78,6 @@ void TrayIcon::onAboutTriggered()
 
 void TrayIcon::onDisableIconTriggered()
 {
-    mSettings.setShowIcon(false);
+    PowerManagementSettings().setShowIcon(false);
 }
 

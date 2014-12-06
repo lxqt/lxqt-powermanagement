@@ -41,25 +41,18 @@ class TrayIcon : public QSystemTrayIcon
     Q_OBJECT
 
 public:
-    TrayIcon(Battery& battery, QObject *parent = 0);
+    TrayIcon(Battery *battery, QObject *parent = 0);
     ~TrayIcon();
 
 private slots:
-    void batteryChanged();
-    void settingsChanged();
-    void iconThemeChanged();
-
+    void iconChanged();
     void onConfigureTriggered();
     void onAboutTriggered();
     void onDisableIconTriggered();
 
 private:
-    void updateToolTip();
-
-    QMenu contextMenu;
-    PowerManagementSettings mSettings;
-    Battery& mBattery;
     IconProducer mIconProducer;
+    QMenu contextMenu;
 };
 
 #endif // TRAYICON_H

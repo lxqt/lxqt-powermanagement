@@ -35,6 +35,7 @@ class Battery : public QObject
 {
     Q_OBJECT
 
+public:
     // These must match the UPower api spec
     // See http://upower.freedesktop.org/docs/Device.html#Device:State
     enum State
@@ -48,12 +49,7 @@ class Battery : public QObject
         PendingDischarge
     };
 
-
-signals:
-    void batteryChanged();
-
-public:
-    Battery(QObject* parent = 0);
+   Battery(QObject* parent = 0);
     ~Battery();
 
     double  chargeLevel();
@@ -62,6 +58,9 @@ public:
     State   state();
     QString stateAsString(); 
     QVariantMap properties();
+
+signals:
+    void chargeStateChange(float newChargeLevel, Battery::State newState);
 
 
 private slots:
