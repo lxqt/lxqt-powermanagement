@@ -34,6 +34,21 @@
 class Battery : public QObject
 {
     Q_OBJECT
+
+    // These must match the UPower api spec
+    // See http://upower.freedesktop.org/docs/Device.html#Device:State
+    enum State
+    {
+        Unknown = 0,
+        Charging,
+        Discharging,
+        Empty,
+        FullyCharged,
+        PendingCharge,
+        PendingDischarge
+    };
+
+
 signals:
     void batteryChanged();
 
@@ -41,21 +56,18 @@ public:
     Battery(QObject* parent = 0);
     ~Battery();
 
-//    static const int POWER_LOW_LEVEL=15;
     double  chargeLevel();
-    bool    powerLow();
     bool    discharging();
     bool    haveBattery();
-    uint    state();
+    State   state();
     QString stateAsString(); 
     QVariantMap properties();
+
 
 private slots:
     void uPowerBatteryChanged();
 
 private:
-    QString state2string(uint state);
-
     QDBusInterface *mUPowerInterface;
     QDBusInterface *mUPowerBatteryDeviceInterface;
     QDBusInterface *mUPowerBatteryPropertiesInterface;

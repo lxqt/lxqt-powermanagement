@@ -29,6 +29,7 @@
 #include <QList>
 #include <QDBusObjectPath>
 #include <QDebug>
+#include <QMap>
 
 #include "battery.h"
 #include "../config/powermanagementsettings.h"
@@ -98,12 +99,6 @@ double Battery::chargeLevel()
     return mProperties.value("Percentage", 0).toDouble();
 }
 
-
-bool Battery::powerLow()
-{
-    return  discharging() && chargeLevel() <  PowerManagementSettings().getPowerLowLevel();
-}
-
 bool Battery::discharging()
 {
     return 2 == state();
@@ -114,30 +109,29 @@ bool Battery::haveBattery()
     return mUPowerBatteryDeviceInterface != 0;
 }
 
-uint Battery::state()
+Battery::State Battery::state()
 {
-    return mProperties.value("State").toUInt();
+    return State(mProperties.value("State").toUInt());
 }
 
 QString Battery::stateAsString()
 {
-    return state2string(state());
+    static QMap<State, QString> names;
+    if (names.isEmpty())
+    {
+        names.insert(Unknown, tr("Unknown"));
+        names.insert(Charging, tr("Charging"));
+        names.insert(Discharging, tr("Discharging"));
+        names.insert(Empty, tr("Empty"));
+        names.insert(FullyCharged, tr("Fully charged"));
+        names.insert(PendingCharge, tr("Pending charge"));
+        names.insert(PendingDischarge, tr("Pending discharge"));
+    }
+
+    return names.value(state());
 }
 
 QVariantMap Battery::properties()
 {
     return mProperties;
-}
-
-QString Battery::state2string(uint state) {
-    switch (state) 
-    {
-        case 1:  return  tr("Charging");
-        case 2:  return  tr("Discharging");
-        case 3:  return  tr("Empty");
-        case 4:  return  tr("Fully charged");
-        case 5:  return  tr("Pending charge");
-        case 6:  return  tr("Pending discharge");
-        default: return  tr("Unknown");
-    }
 }

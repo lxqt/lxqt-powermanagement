@@ -81,13 +81,16 @@ void BatteryWatcher::batteryChanged()
     static LxQt::Notification *notification = 0;
 
     qDebug() <<  "BatteryChanged"
-             <<  "discharging:"  << mBattery.discharging()
-             << "chargeLevel:" << mBattery.chargeLevel()
-             << "powerlow:"    << mBattery.powerLow()
-             << "actionTime:"  << actionTime;
+             <<  "state:"       << mBattery.stateAsString()
+             <<  "chargeLevel:" << mBattery.chargeLevel()
+             <<  "actionTime:"  << actionTime;
 
+    bool powerLowActionRequired =
+            mBattery.discharging() &&
+            mBattery.chargeLevel() < mSettings.getPowerLowLevel() &&
+            mSettings.getPowerLowAction() > 0;
 
-    if (mBattery.powerLow() && mSettings.getPowerLowAction() > 0)
+    if (powerLowActionRequired)
     {
         if (actionTime.isNull())
         {
