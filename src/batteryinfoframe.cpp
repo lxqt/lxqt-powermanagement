@@ -37,12 +37,7 @@ BatteryInfoFrame::BatteryInfoFrame(Battery *battery) :
 {
     mUi->setupUi(this);
 
-    qDebug() << "Ind i batteryFrame constructor..."
-             << "efd:" << mBattery->energyFullDesign
-             << "mod:" << mBattery->model
-             << "tech:" << mBattery->technology;
-
-    mUi->energyFullDesignValue->setText(mBattery->energyFullDesign);
+    mUi->energyFullDesignValue->setText(QString("%1 Wh").arg(mBattery->energyFullDesign, 0, 'f', 2));
     mUi->modelValue->setText(mBattery->model);
     mUi->technologyValue->setText(mBattery->technology);
 
@@ -57,13 +52,12 @@ BatteryInfoFrame::~BatteryInfoFrame()
 
 void BatteryInfoFrame::onBatteryChanged()
 {
-    qDebug() << "BatteryInfoFrame.onBatteryChanged"
-             << "updated:" << mBattery->updated;
+    qDebug() << "BatteryInfoFrame.onBatteryChanged" << "updated:" << mBattery->updated;
 
-    mUi->updatedValue->setText(mBattery->updated);
-    mUi->stateValue->setText(mBattery->stateAsText);
-    mUi->energyFullValue->setText(mBattery->energyFull);
-    mUi->energyValue->setText(mBattery->energyNow);
-    mUi->energyRateValue->setText(mBattery->energyRate);
-    mUi->voltageValue->setText(mBattery->voltage);
+    mUi->updatedValue->setText(mBattery->updated.toString("hh:mm:ss"));
+    mUi->stateValue->setText(Battery::state2String(mBattery->state));
+    mUi->energyFullValue->setText(QString("%1 Wh (%2 %)").arg(mBattery->energyFull, 0, 'f', 2).arg(mBattery->capacity, 0, 'f', 1));
+    mUi->energyValue->setText(QString("%1 Wh (%2 %)").arg(mBattery->energyNow, 0, 'f', 2).arg(mBattery->chargeLevel, 0, 'f', 1));
+    mUi->energyRateValue->setText(QString("%1 W").arg(mBattery->energyRate, 0, 'f', 2));
+    mUi->voltageValue->setText(QString("%1 V").arg(mBattery->voltage, 0, 'f', 2));
 }

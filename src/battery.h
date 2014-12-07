@@ -30,6 +30,7 @@
 #include <QObject>
 #include <QDBusInterface>
 #include <QVariantMap>
+#include <QDateTime>
 
 class Battery : public QObject
 {
@@ -49,24 +50,29 @@ public:
         PendingDischarge
     };
 
+    static QList<Battery*> batteries();
 
-    Battery(QObject* parent = 0);
+    static QString state2String(State state);
+    static QString technology2String(int tech);
+
+
+    Battery(QDBusInterface *deviceInterface, QDBusInterface *propertiesInterface, QObject* parent = 0);
     ~Battery();
 
     // This data is all available in mProperties, but we keep it
-    // here also for easy access
+    // here also for easy access (formatted)
     QString summary;
-    QString updated;
-    QString stateAsText;
-    QString energyFullDesign;
-    QString energyFull;
-    QString energyNow;
-    QString energyRate;
+    QDateTime updated;
+    State   state;
+    double energyFullDesign;
+    double energyFull;
+    double capacity;
+    double energyNow;
+    double energyRate;
     QString model;
     QString technology;
-    QString voltage;
+    double voltage;
     double  chargeLevel;
-    State   state;
     // --
 
     bool    haveBattery();
@@ -79,11 +85,8 @@ private slots:
     void uPowerBatteryChanged();
 
 private:
-    static QString state2String(State state);
-
-    QDBusInterface *mUPowerInterface;
-    QDBusInterface *mUPowerBatteryDeviceInterface;
-    QDBusInterface *mUPowerBatteryPropertiesInterface;
+        QDBusInterface *mDeviceInterface;
+    QDBusInterface *mPropertiesInterface;
     QVariantMap mProperties;
 };
 #endif

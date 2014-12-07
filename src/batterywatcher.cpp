@@ -36,40 +36,32 @@
 #include "batterywatcher.h"
 #include "../config/powermanagementsettings.h"
 
-BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent),
-    mBattery(0), mTrayIcon(0)
+BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 {
-    mBattery = new Battery(this);
-    if (!mBattery->haveBattery())
+    mBatteries = Battery::batteries();
+    if (mBatteries.isEmpty())
     {
         LxQt::Notification::notify(tr("No battery!"),
                                    tr("LXQt could not find data about any battery - monitoring disabled"),
                                    "lxqt-powermanagement");
     }
 
-    connect(mBattery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(batteryChanged()));
+    foreach (Battery* battery, mBatteries)
+    {
+        connect(battery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(batteryChanged()));
+    }
 
-    QList<Battery*> batteries;
-    batteries.append(mBattery);
-    mBatteryInfoDialog = new BatteryInfoDialog(batteries);
+    mBatteryInfoDialog = new BatteryInfoDialog(mBatteries);
 
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
     connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
+
     settingsChanged();
     batteryChanged();
 }
 
 BatteryWatcher::~BatteryWatcher()
 {
-    if (mTrayIcon)
-    {
-        mTrayIcon->deleteLater();
-    }
-
-    if (mBatteryInfoDialog)
-    {
-        mBatteryInfoDialog->deleteLater();
-    }
 }
 
 void BatteryWatcher::batteryChanged()
@@ -77,14 +69,30 @@ void BatteryWatcher::batteryChanged()
     static QTime actionTime;
     static LxQt::Notification *notification = 0;
 
+    double totalEnergyFull = 0;
+    double totalEnergyNow = 0;
+    bool discharging = true;
+    double chargeLevel;
+
+
+
+    foreach (Battery *battery, mBatteries)
+    {
+        totalEnergyFull += battery->energyFull;
+        totalEnergyNow += battery->energyNow;
+        discharging &= (battery->state == Battery::Discharging);  // hmm...
+    }
+
+    chargeLevel = 100*totalEnergyNow/totalEnergyFull;
+
     qDebug() <<  "BatteryChanged"
-             <<  "state:"       << mBattery->stateAsText
-             <<  "chargeLevel:" << mBattery->chargeLevel
+             <<  "discharging:" << discharging
+             <<  "chargeLevel:" << chargeLevel
              <<  "actionTime:"  << actionTime;
 
     bool powerLowActionRequired =
-            mBattery->state == Battery::Discharging &&
-            mBattery->chargeLevel < mSettings.getPowerLowLevel() &&
+            discharging &&
+            chargeLevel < mSettings.getPowerLowLevel() &&
             mSettings.getPowerLowAction() > 0;
 
     if (powerLowActionRequired)
@@ -144,19 +152,22 @@ void BatteryWatcher::batteryChanged()
 
 void BatteryWatcher::settingsChanged()
 {
-    if (mTrayIcon != 0 && !mSettings.isShowIcon())
+    if (!mSettings.isShowIcon())
     {
-        mTrayIcon->hide();
-        mTrayIcon->deleteLater();
-        mIconProducer->deleteLater();
-        mTrayIcon = 0;
+        while (!mTrayIcons.isEmpty())
+        {
+            mTrayIcons.first()->hide();
+            mTrayIcons.takeFirst()->deleteLater();
+        }
     }
-
-    if (mTrayIcon == 0 && mSettings.isShowIcon())
+    else if (mTrayIcons.isEmpty())
     {
-        mTrayIcon = new TrayIcon(mBattery, this);
-        connect(mTrayIcon, SIGNAL(toggleShowInfo()), mBatteryInfoDialog, SLOT(toggleShow()));
-        mTrayIcon->show();
+        foreach (Battery *battery, mBatteries)
+        {
+            mTrayIcons.append(new TrayIcon(battery, this));
+            connect(mTrayIcons.last(), SIGNAL(toggleShowInfo()), mBatteryInfoDialog, SLOT(toggleShow()));
+            mTrayIcons.last()->show();
+        }
     }
 }
 

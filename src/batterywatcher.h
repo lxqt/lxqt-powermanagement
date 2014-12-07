@@ -45,9 +45,8 @@ private slots:
     void settingsChanged();
 
 private:
-    Battery* mBattery;
-    IconProducer* mIconProducer;
-    TrayIcon* mTrayIcon;
+    QList<Battery*> mBatteries;
+    QList<TrayIcon*> mTrayIcons;
 
     PowerManagementSettings mSettings;
     BatteryInfoDialog *mBatteryInfoDialog;

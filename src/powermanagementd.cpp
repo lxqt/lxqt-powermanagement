@@ -98,7 +98,7 @@ void PowerManagementd::runConfigure()
 void PowerManagementd::performRunCheck()
 {
     mSettings.setLidWatcherEnabled(Lid().haveLid());
-    mSettings.setBatteryWatcherEnabled(Battery().haveBattery());
+    mSettings.setBatteryWatcherEnabled(! Battery::batteries().isEmpty());
     qDebug() << "performRunCheck, lidWatcherEnabled:" << mSettings.isLidWatcherEnabled() << ", batteryWatcherEnabled:" << mSettings.isBatteryWatcherEnabled();
     mSettings.sync();
     mNotification.setSummary(tr("Power Management"));

@@ -40,6 +40,12 @@
    </item>
    <item row="0" column="1">
     <widget class="QLabel" name="updatedValue">
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="text">
       <string notr="true">21:11:03</string>
      </property>
