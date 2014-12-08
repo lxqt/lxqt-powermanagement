@@ -25,17 +25,18 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/Application>
+#include <LXQt/SingleApplication>
 
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
-    LxQt::Application a(argc, argv);
+    LxQt::SingleApplication a(argc, argv);
 
     MainWindow mainWindow;
     mainWindow.setWindowIcon(QIcon::fromTheme("preferences-system-power-management"));
     mainWindow.show();
+    a.setActivationWindow(&mainWindow);
 
     return a.exec();
 }
