@@ -29,7 +29,9 @@ private slots:
 
 private:
 
-    QIcon buildCircleIcon();
+    QIcon &circleIcon();
+    QIcon buildCircleIcon(Battery::State state, double chargeLevel);
+
 
     float mChargeLevel;
     Battery::State mState;

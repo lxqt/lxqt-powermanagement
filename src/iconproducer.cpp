@@ -6,7 +6,6 @@
 #include <QPainter>
 #include <math.h>
 
-
 IconProducer::IconProducer(Battery *battery, QObject *parent) : QObject(parent)
 {
     connect(battery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(update(float,Battery::State)));
@@ -26,7 +25,6 @@ IconProducer::IconProducer(QObject *parent):  QObject(parent)
 
 void IconProducer::update(float newChargeLevel, Battery::State newState)
 {
-    qDebug() << QString("IconProducer::update(%1, %2)").arg(newChargeLevel, newState);
     mChargeLevel = newChargeLevel;
     mState = newState;
 
@@ -63,7 +61,7 @@ void IconProducer::update()
     }
     else
     {
-        mIcon = buildCircleIcon();
+        mIcon = circleIcon();
     }
 
     emit iconChanged();
@@ -129,81 +127,97 @@ void IconProducer::themeChanged()
 }
 
 
-QIcon IconProducer::buildCircleIcon()
+
+QIcon& IconProducer::circleIcon()
 {
-    float lowLevel = mSettings.getPowerLowLevel();
-    bool discharging = mState == Battery::Discharging;
+    static QMap<Battery::State, QMap<int, QIcon> > cache;
 
-    // See http://www.w3.org/TR/SVG/Overview.html
-    // and regarding circle-arch in particular:
-    // http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands
+    int chargeLevelAsInt = (int) (mChargeLevel + 0.49);
 
-    // We show charge with a segment of a circle.
-    // We start at the top of the circle
-    // The starting point of the circle segment is at the top (12 o'clock or (0,1) or pi/2
-    // and it moves counter-clockwise as the charge increases
-    // First we calculate in floating point numbers, using a circle with center
-    // in (0,0) and a radius of 1
-    double angle = 2*M_PI*mChargeLevel/100 + M_PI_2;
-    double segment_endpoint_x = cos(angle);
-    double segment_endpoint_y = sin(angle);
-
-    // svg uses a coordinate system with (0,0) at the topmost left corner,
-    // y increasing downwards and x increasing left-to-right.
-    // We draw the circle segments with center at (100,100) and radius 100 for the
-    // outer and radius 60 for the inner. The segments will (unless fully charged,
-    // where they go full circle) be radially connected at the endpoints.
-    QString chargeGraphics;
-
-    if (mChargeLevel < 0.5)
+    if (! cache[mState].contains(chargeLevelAsInt))
     {
-        chargeGraphics = "";
-    }
-    else if (mChargeLevel > 99.5)
-    {
-        chargeGraphics =
-            "<path d='M 100,0 A 100,100 0 1,0 101,0 z M 100,40 A 60,60 0 1,0 101,40 z' stroke-width='0'/>";
-    }
-    else {
-        chargeGraphics =
-            QString("<path d='M 100,0 A 100,100 0 %1,0 %2,%3 L %4,%5 A 60,60 0 %1,1 100,40 z'/>")
-                .arg(angle > M_PI + M_PI_2 ? 1 : 0)     // %1
-                .arg(round(100*(1 + segment_endpoint_x)))    // %2
-                .arg(round(100*(1 - segment_endpoint_y)))    // %3
-                .arg(round(100*(1 + 0.6*segment_endpoint_x)))    // %4
-                .arg(round(100*(1 - 0.6*segment_endpoint_y)));   // %5
+        cache[mState][chargeLevelAsInt] = buildCircleIcon(mState, mChargeLevel);
     }
 
-    QString chargeColor;
-    if (discharging && mChargeLevel <= lowLevel + 10)
+    return cache[mState][chargeLevelAsInt];
+}
+
+QIcon IconProducer::buildCircleIcon(Battery::State state, double chargeLevel)
+{
+    static QString svg_template =
+        "<svg\n"
+        "    xmlns:dc='http://purl.org/dc/elements/1.1/'\n"
+        "    xmlns:cc='http://creativecommons.org/ns#'\n"
+        "    xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'\n"
+        "    xmlns:svg='http://www.w3.org/2000/svg'\n"
+        "    xmlns='http://www.w3.org/2000/svg'\n"
+        "    version='1.1'\n"
+        "    width='200'\n"
+        "    height='200'>\n"
+        "\n"
+        "<defs>\n"
+        "    <linearGradient id='greenGradient' x1='0%' y1='0%' x2='100%' y2='100%'>\n"
+        "        <stop offset='0%' style='stop-color:rgb(125,255,125);stop-opacity:1' />\n"
+        "        <stop offset='150%' style='stop-color:rgb(15,125,15);stop-opacity:1' />\n"
+        "    </linearGradient>\n"
+        "</defs>\n"
+        "\n"
+        "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:url(#greenGradient); stroke-width:40;' />\n"
+        "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:red; stroke-width:40; opacity:RED_OPACITY' />\n"
+        "\n"
+        " STATE_MARKER\n"
+        "\n"
+        "</svg>";
+
+    static QString filledCircle   = "<circle cx='100' cy='100' r='40'/>";
+    static QString plus           = "<path d='M 60,100 L140,100 M100,60 L100,140' style='stroke:black; stroke-width:30;'/>";
+    static QString minus          = "<path d='M 60,100 L140,100' style='stroke:black; stroke-width:30;'/>";
+    static QString hollowCircle   = "<circle cx='100' cy='100' r='40' style='fill:none;stroke:black;stroke-width:10'/>";
+
+    QString svg = svg_template;
+
+    if (chargeLevel > 99.9)
     {
-        chargeColor = "rgb(200,40,40)";
+        chargeLevel = 99.9;
     }
-    else if (discharging && mChargeLevel <= lowLevel + 30)
+
+    double angle = M_PI_2 + 2*M_PI*chargeLevel/100;
+    double circle_endpoint_x = 80.0*cos(angle) + 100;
+    double circle_endpoint_y = -80.0*sin(angle) + 100;
+
+    QString largeArgFlag = chargeLevel > 50 ? "1" : "0";
+    QString sweepFlag = "0";
+
+    svg.replace(QString("END_X"), QString::number(circle_endpoint_x));
+    svg.replace(QString("END_Y"), QString::number(circle_endpoint_y));
+    svg.replace(QString("LARGE_ARC_FLAG"), largeArgFlag);
+    svg.replace(QString("SWEEP_FLAG"), sweepFlag);
+
+
+    switch (state)
     {
-        int fac = mChargeLevel - lowLevel - 10;
-        chargeColor = QString("rgb(%1,%2,40)").arg(40 + 200 - fac*8).arg(40 + fac*8);
+    case Battery::FullyCharged: svg.replace("STATE_MARKER", filledCircle); break;
+    case Battery::Charging:     svg.replace("STATE_MARKER", plus); break;
+    case Battery::Discharging:  svg.replace("STATE_MARKER", minus); break;
+    default:                    svg.replace("STATE_MARKER", hollowCircle);
+    }
+
+    if (state != Battery::FullyCharged && state != Battery::Charging &&  chargeLevel < mSettings.getPowerLowLevel() + 30)
+    {
+        if (chargeLevel <= mSettings.getPowerLowLevel() + 10)
+        {
+            svg.replace("RED_OPACITY", "1");
+        }
+        else
+        {
+            svg.replace("RED_OPACITY", QString::number((mSettings.getPowerLowLevel() + 30 - chargeLevel)/20));
+        }
     }
     else
-        chargeColor = "rgb(40,200,40)";
+    {
+        svg.replace("RED_OPACITY", "0");
+    }
 
-
-    QString sign =
-            discharging ?
-                QString("<path d='M 60,100 h 80' stroke='black' stroke-width='20' />"):                // Minus
-                QString("<path d='M 60,100 h 80 M 100,60 v 80' stroke='black' stroke-width='20' />");  // Plus
-
-    QString svg =
-        QString("<?xml version='1.0' standalone='no'?>\n"
-                "<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>\n"
-                "<svg xmlns='http://www.w3.org/2000/svg'  version='1.1' viewBox='0 0 210 210'>\n"
-                "    <circle cx='100' cy='100' r='100' fill='rgb(210,210,210)' stroke-width='0'/>\n"
-                "    <circle cx='100' cy='100' r='55' fill='rgb(255,255,255)' stroke-width='0'/>\n"
-                "    <g fill-rule='evenodd' fill='%2' stroke-width='0'>\n"
-                "        %1\n"
-                "    </g>\n"
-                "    %3\n"
-                "</svg>\n").arg(chargeGraphics).arg(chargeColor).arg(sign);
 
     // Paint the svg on a pixmap and create an icon from that.
     QSvgRenderer render(svg.toLatin1());
@@ -212,7 +226,6 @@ QIcon IconProducer::buildCircleIcon()
     QPainter painter(&pixmap);
     render.render(&painter);
     return QIcon(pixmap);
+
 }
-
-
 
