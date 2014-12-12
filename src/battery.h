@@ -60,7 +60,7 @@ public:
     ~Battery();
 
     // This data is all available in mProperties, but we keep it
-    // here also for easy access (formatted)
+    // here also for easy access (properly converted)
     QString summary;
     QDateTime updated;
     State   state;
