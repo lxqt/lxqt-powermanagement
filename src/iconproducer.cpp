@@ -170,10 +170,10 @@ QIcon IconProducer::buildCircleIcon(Battery::State state, double chargeLevel)
         "\n"
         "</svg>";
 
-    static QString filledCircle   = "<circle cx='100' cy='100' r='40'/>";
+    static QString filledCircle   = "<circle cx='100' cy='100' r='35'/>";
     static QString plus           = "<path d='M 60,100 L140,100 M100,60 L100,140' style='stroke:black; stroke-width:30;'/>";
     static QString minus          = "<path d='M 60,100 L140,100' style='stroke:black; stroke-width:30;'/>";
-    static QString hollowCircle   = "<circle cx='100' cy='100' r='40' style='fill:none;stroke:black;stroke-width:10'/>";
+    static QString hollowCircle   = "<circle cx='100' cy='100' r='30' style='fill:none;stroke:black;stroke-width:10'/>";
 
     QString svg = svg_template;
 
@@ -219,6 +219,7 @@ QIcon IconProducer::buildCircleIcon(Battery::State state, double chargeLevel)
         svg.replace("RED_OPACITY", "0");
     }
 
+    qDebug() << svg;
 
     // Paint the svg on a pixmap and create an icon from that.
     QSvgRenderer render(svg.toLatin1());
