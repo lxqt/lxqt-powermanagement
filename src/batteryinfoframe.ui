@@ -2,24 +2,10 @@
 <ui version="4.0">
  <class>BatteryInfoFrame</class>
  <widget class="QFrame" name="BatteryInfoFrame">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>341</width>
-    <height>254</height>
-   </rect>
-  </property>
   <property name="windowTitle">
    <string>Power Management</string>
   </property>
-  <layout class="QFormLayout" name="formLayout">
-   <property name="fieldGrowthPolicy">
-    <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-   </property>
-   <property name="labelAlignment">
-    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-   </property>
+  <layout class="QGridLayout" name="gridLayout">
    <property name="horizontalSpacing">
     <number>12</number>
    </property>
