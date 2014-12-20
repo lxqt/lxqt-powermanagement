@@ -13,7 +13,7 @@ find_package(Qt5DBus REQUIRED)
 find_package(Qt5X11Extras REQUIRED)
 find_package(Qt5Svg REQUIRED)
 find_package(Qt5LinguistTools REQUIRED QUIET)
-find_package(lxqt-qt5 REQUIRED QUIET)
+find_package(lxqt REQUIRED QUIET)
 find_package(Qt5Xdg REQUIRED)
 message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
 
