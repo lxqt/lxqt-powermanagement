@@ -88,7 +88,7 @@ void BatteryWatcherSettings::saveSettings()
 
 void BatteryWatcherSettings::updatePreview()
 {
-    mUi->previewBox->setTitle(QString("Preview (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("Built in")));
+    mUi->previewBox->setTitle(tr("Preview") +  QString(" (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("built in")));
 
     float chargeLevel = mUi->chargeLevelSlider->value();
     mChargingIconProducer.update(chargeLevel, Battery::Charging);
