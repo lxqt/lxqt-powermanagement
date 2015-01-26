@@ -59,7 +59,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="26"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Ativar monitorizador de inatividade</translation>
+        <translation>Ativar monitori&amp;zador de inatividade</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="47"/>
@@ -92,7 +92,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Ativar monitorizador de tampa</translation>
+        <translation>Ativar monitori&amp;zador da tampa</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="45"/>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="139"/>
         <source>When &amp;using external monitor</source>
-        <translation>Ao utilizar monitor externo</translation>
+        <translation>Ao &amp;utilizar monitor externo</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="177"/>
