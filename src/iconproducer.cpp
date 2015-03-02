@@ -173,8 +173,8 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
 
     QString svg = svg_template;
 
-    if (chargeLevel > 99.9)
-        chargeLevel = 99.9;
+    if (chargeLevel > 99)
+        chargeLevel = 99;
 
     double angle = M_PI_2 + 2 * M_PI * chargeLevel / 100;
     double circle_endpoint_x = 80.0 * cos(angle) + 100;
