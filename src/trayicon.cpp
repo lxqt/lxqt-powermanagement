@@ -44,6 +44,10 @@ TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
     mIconProducer(battery),
     mContextMenu()
 {
+    connect(mBattery, &Solid::Battery::chargePercentChanged, this, &TrayIcon::updateTooltip);
+    connect(mBattery, &Solid::Battery::chargeStateChanged, this, &TrayIcon::updateTooltip);
+    updateTooltip();
+
     connect(&mIconProducer, SIGNAL(iconChanged()), this, SLOT(iconChanged()));
     iconChanged();
 
@@ -63,6 +67,13 @@ TrayIcon::~TrayIcon()
 void TrayIcon::iconChanged()
 {
     setIcon(mIconProducer.mIcon);
+}
+
+void TrayIcon::updateTooltip()
+{
+    QString tooltip = BatteryHelper::stateToString(mBattery->chargeState());
+    tooltip += QString(" (%1 %)").arg(mBattery->chargePercent());
+    setToolTip(tooltip);
 }
 
 void TrayIcon::onConfigureTriggered()
@@ -99,17 +110,4 @@ void TrayIcon::onActivated(QSystemTrayIcon::ActivationReason reason)
 {
     qDebug() << "onActivated" << reason;
     if (Trigger == reason) emit toggleShowInfo();
-}
-
-bool TrayIcon::event(QEvent* event)
-{
-    if (event->type() == QEvent::ToolTip)
-    {
-        QString tooltip = BatteryHelper::stateToString(mBattery->chargeState());
-        tooltip += QString(" (%1 %)").arg(mBattery->chargePercent());
-        setToolTip(tooltip);
-        return true;
-    }
-
-    return QSystemTrayIcon::event(event);
 }

@@ -43,14 +43,12 @@ public:
     TrayIcon(Solid::Battery *battery, QObject *parent = 0);
     ~TrayIcon();
 
-protected:
-    bool event(QEvent *event);
-
 signals:
     void toggleShowInfo();
 
 public slots:
     void iconChanged();
+    void updateTooltip();
 
 private slots:
     void onConfigureTriggered();
