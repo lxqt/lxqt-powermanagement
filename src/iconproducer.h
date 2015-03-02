@@ -23,11 +23,10 @@ signals:
 public slots:
     void updateChargePercent(int newChargePercent);
     void updateState(int newState);
-
+    void update();
     void themeChanged();
 
 private:
-    void update();
 
     QIcon &circleIcon();
     QIcon buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel);

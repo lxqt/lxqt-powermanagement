@@ -75,7 +75,7 @@ void BatteryWatcher::batteryChanged()
 
     foreach (Solid::Battery *battery, mBatteries)
     {
-        totalEnergyFull += battery->capacity();
+        totalEnergyFull += battery->energyFull();
         totalEnergyNow += battery->energy();
         discharging &= (battery->chargeState() == Solid::Battery::Discharging);
     }
