@@ -48,8 +48,6 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
         mBatteries << battery;
         connect(battery, &Solid::Battery::energyChanged, this, &BatteryWatcher::batteryChanged);
         connect(battery, &Solid::Battery::chargeStateChanged, this, &BatteryWatcher::batteryChanged);
-        connect(battery, &Solid::Battery::powerSupplyStateChanged, this, &BatteryWatcher::batteryChanged);
-
     }
 
     mBatteryInfoDialog = new BatteryInfoDialog(mBatteries);

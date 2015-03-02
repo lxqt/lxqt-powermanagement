@@ -8,10 +8,11 @@
 
 IconProducer::IconProducer(Solid::Battery *battery, QObject *parent) : QObject(parent)
 {
-    connect(battery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(update(float,Battery::State)));
+    connect(battery, &Solid::Battery::chargeStateChanged, this, &IconProducer::updateState);
+    connect(battery, &Solid::Battery::chargePercentChanged, this, &IconProducer::updateChargePercent);
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(update()));
 
-    mChargeLevel = battery->chargePercent();
+    mChargePercent = battery->chargePercent();
     mState = battery->chargeState();
     themeChanged();
 }
@@ -23,10 +24,16 @@ IconProducer::IconProducer(QObject *parent):  QObject(parent)
 }
 
 
-void IconProducer::update(int newChargeLevel, Solid::Battery::ChargeState newState)
+void IconProducer::updateChargePercent(int newChargePercent)
 {
-    mChargeLevel = newChargeLevel;
-    mState = newState;
+    mChargePercent = newChargePercent;
+
+    update();
+}
+
+void IconProducer::updateState(int newState)
+{
+    mState = (Solid::Battery::ChargeState) newState;
 
     update();
 }
@@ -40,7 +47,7 @@ void IconProducer::update()
         QMap<float, QString> *levelNameMap = (mState == Solid::Battery::Discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
         foreach (float level, levelNameMap->keys())
         {
-            if (level >= mChargeLevel)
+            if (level >= mChargePercent)
             {
                 newIconName = levelNameMap->value(level);
                 break;
@@ -123,10 +130,10 @@ QIcon& IconProducer::circleIcon()
 {
     static QMap<Solid::Battery::ChargeState, QMap<int, QIcon> > cache;
 
-    int chargeLevelAsInt = (int) (mChargeLevel + 0.49);
+    int chargeLevelAsInt = (int) (mChargePercent + 0.49);
 
     if (!cache[mState].contains(chargeLevelAsInt))
-        cache[mState][chargeLevelAsInt] = buildCircleIcon(mState, mChargeLevel);
+        cache[mState][chargeLevelAsInt] = buildCircleIcon(mState, mChargePercent);
 
     return cache[mState][chargeLevelAsInt];
 }
