@@ -29,11 +29,11 @@
 #include <QDebug>
 #include <QLabel>
 #include <QGroupBox>
+#include <Solid/Battery>
 
 #include "batterywatchersettings.h"
 #include "ui_batterywatchersettings.h"
 #include "powermanagementsettings.h"
-#include "../src/battery.h"
 
 BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     QWidget(parent),
@@ -91,8 +91,8 @@ void BatteryWatcherSettings::updatePreview()
     mUi->previewBox->setTitle(QString("Preview (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("Built in")));
 
     float chargeLevel = mUi->chargeLevelSlider->value();
-    mChargingIconProducer.update(chargeLevel, Battery::Charging);
-    mDischargingIconProducer.update(chargeLevel, Battery::Discharging);
+    mChargingIconProducer.update(chargeLevel, Solid::Battery::Charging);
+    mDischargingIconProducer.update(chargeLevel, Solid::Battery::Discharging);
     mUi->chargeLevelLabel->setText(tr("Level: %1%").arg(chargeLevel));
 }
 

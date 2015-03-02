@@ -26,21 +26,29 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <QDebug>
-#include <QProcess>
 #include <QApplication>
+#include <QProcess>
 #include <QMessageBox>
+#include <QToolTip>
+#include <QHelpEvent>
+#include <Solid/Battery>
+#include <Solid/Device>
+
 #include "trayicon.h"
+#include "batteryhelper.h"
 #include "../config/powermanagementsettings.h"
 
-TrayIcon::TrayIcon(Battery *battery, QObject *parent) : QSystemTrayIcon(parent), mIconProducer(battery), mContextMenu()
+TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
+    : QSystemTrayIcon(parent),
+    mBattery(battery),
+    mIconProducer(battery),
+    mContextMenu()
 {
-    connect(battery, SIGNAL(summaryChanged(QString)), this, SLOT(updateTooltip(QString)));
-    updateTooltip(battery->summary);
-
     connect(&mIconProducer, SIGNAL(iconChanged()), this, SLOT(iconChanged()));
     iconChanged();
 
-    connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(onActivated(QSystemTrayIcon::ActivationReason)));
+    connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
+            SLOT(onActivated(QSystemTrayIcon::ActivationReason)));
 
     mContextMenu.addAction(tr("Configure"), this, SLOT(onConfigureTriggered()));
     mContextMenu.addAction(tr("About"), this, SLOT(onAboutTriggered()));
@@ -48,16 +56,13 @@ TrayIcon::TrayIcon(Battery *battery, QObject *parent) : QSystemTrayIcon(parent),
     setContextMenu(&mContextMenu);
 }
 
-TrayIcon::~TrayIcon() {}
+TrayIcon::~TrayIcon()
+{
+}
 
 void TrayIcon::iconChanged()
 {
     setIcon(mIconProducer.mIcon);
-}
-
-void TrayIcon::updateTooltip(QString newTooltip)
-{
-    setToolTip(newTooltip);
 }
 
 void TrayIcon::onConfigureTriggered()
@@ -94,4 +99,17 @@ void TrayIcon::onActivated(QSystemTrayIcon::ActivationReason reason)
 {
     qDebug() << "onActivated" << reason;
     if (Trigger == reason) emit toggleShowInfo();
+}
+
+bool TrayIcon::event(QEvent* event)
+{
+    if (event->type() == QEvent::ToolTip)
+    {
+        QString tooltip = BatteryHelper::stateToString(mBattery->chargeState());
+        tooltip += QString(" (%1 %)").arg(mBattery->chargePercent());
+        setToolTip(tooltip);
+        return true;
+    }
+
+    return QSystemTrayIcon::event(event);
 }

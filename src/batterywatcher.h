@@ -28,10 +28,11 @@
 #define BATTERYWATCHER_H
 
 #include "watcher.h"
-#include "battery.h"
 #include "trayicon.h"
 #include "batteryinfodialog.h"
 #include "../config/powermanagementsettings.h"
+
+#include <Solid/Battery>
 
 class BatteryWatcher : public Watcher
 {
@@ -45,7 +46,7 @@ private slots:
     void settingsChanged();
 
 private:
-    QList<Battery*> mBatteries;
+    QList<Solid::Battery*> mBatteries;
     QList<TrayIcon*> mTrayIcons;
 
     PowerManagementSettings mSettings;

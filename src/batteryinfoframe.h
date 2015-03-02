@@ -29,7 +29,7 @@
 
 #include <QFrame>
 
-#include "battery.h"
+#include <Solid/Battery>
 
 namespace Ui {
 class BatteryInfoFrame;
@@ -38,16 +38,16 @@ class BatteryInfoFrame;
 class BatteryInfoFrame : public QFrame
 {
     Q_OBJECT
-    
+
 public:
-    explicit BatteryInfoFrame(Battery* battery);
+    explicit BatteryInfoFrame(Solid::Battery* battery);
     ~BatteryInfoFrame();
 
 private slots:
     void onBatteryChanged();
 
 private:
-    Battery* mBattery;
+    Solid::Battery* mBattery;
     Ui::BatteryInfoFrame *mUi;
 };
 

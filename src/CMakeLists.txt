@@ -2,24 +2,9 @@ project(lxqt-powermanagement)
 
 set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
 
-set(lxqt-powermanagement_MOCS
-    watcher.h
-    battery.h
-    batterywatcher.h
-    batteryinfoframe.h
-    batteryinfodialog.h
-    idlenesswatcher.h
-    lid.h
-    lidwatcher.h
-    powermanagementd.h
-    trayicon.h
-    iconproducer.h
-    ../config/powermanagementsettings.h
-)
-
 set(lxqt-powermanagement_SRCS
     watcher.cpp
-    battery.cpp
+    batteryhelper.cpp
     batteryinfoframe.cpp
     batteryinfodialog.cpp
     batterywatcher.cpp
@@ -43,7 +28,6 @@ set(DESKTOP_FILES_IN
     lxqt-powermanagement.desktop.in
 )
 
-qt5_wrap_ui( UIS ${lxqt-powermanagement_UIS})
 qt5_add_dbus_adaptor(lxqt-powermanagement_SRCS
     org.freedesktop.ScreenSaver.xml
     idlenesswatcher.h
@@ -110,6 +94,7 @@ include_directories(
     ${QTXDG_INCLUDE_DIRS}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
+    ${Solid_INCLUDE_DIRS}
 )
 
 add_executable(lxqt-powermanagement
@@ -129,6 +114,7 @@ target_link_libraries(lxqt-powermanagement
     ${XCB_SCREENSAVER_LIBRARY}
     ${XCB_DPMS_LIBRARY}
     ${X11_XCB_LIBRARY}
+    KF5::Solid
 )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

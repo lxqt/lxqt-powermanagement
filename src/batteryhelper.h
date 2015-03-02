@@ -24,44 +24,21 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
+#ifndef BATTERYHELPER_H
+#define BATTERYHELPER_H
 
-#ifndef TRAYICON_H
-#define TRAYICON_H
-
-#include <QSystemTrayIcon>
-#include <QMenu>
+#include <QVariantMap>
+#include <QDateTime>
 #include <Solid/Battery>
+#include <Solid/Device>
 
-#include "iconproducer.h"
-#include "../config/powermanagementsettings.h"
-
-class TrayIcon : public QSystemTrayIcon
+class BatteryHelper : public QObject
 {
     Q_OBJECT
 
 public:
-    TrayIcon(Solid::Battery *battery, QObject *parent = 0);
-    ~TrayIcon();
-
-protected:
-    bool event(QEvent *event);
-
-signals:
-    void toggleShowInfo();
-
-public slots:
-    void iconChanged();
-
-private slots:
-    void onConfigureTriggered();
-    void onAboutTriggered();
-    void onDisableIconTriggered();
-    void onActivated(QSystemTrayIcon::ActivationReason reason);
-
-private:
-    Solid::Battery *mBattery;
-    IconProducer mIconProducer;
-    QMenu mContextMenu;
+    static QString stateToString(Solid::Battery::ChargeState state);
+    static QString technologyToString(Solid::Battery::Technology tech);
+    static QString typeToString(Solid::Battery::BatteryType type);
 };
-
-#endif // TRAYICON_H
+#endif
