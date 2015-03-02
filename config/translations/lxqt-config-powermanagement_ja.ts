@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ja">
 <context>
     <name>BatteryWatcherSettings</name>
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Настройки наблюдения за батареей</translation>
+        <translation>バッテリーの監視設定</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="37"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Разрешить наблюдение за батареей</translation>
+        <translation>バッテリー監視を有効にする(&amp;N)</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="55"/>
         <source>Warning:</source>
-        <translation>Предупреждение:</translation>
+        <translation>警告:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="68"/>
         <source> seconds</source>
-        <translation> секунд</translation>
+        <translation> 秒</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="78"/>
         <source>Level is low at:</source>
-        <translation>Низкий уровень при:</translation>
+        <translation>低いと判断するレベル:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="91"/>
@@ -36,17 +36,17 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="98"/>
         <source>Use icons from theme:</source>
-        <translation>Использовать значки из темы:</translation>
+        <translation>テーマのアイコンを用いる:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="112"/>
         <source>When power is low then:</source>
-        <translation>При низком заряде:</translation>
+        <translation>電源が低いときには:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="129"/>
         <source>Show icon:</source>
-        <translation>Показывать значок:</translation>
+        <translation>アイコンを表示:</translation>
     </message>
 </context>
 <context>
@@ -54,32 +54,32 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>フォーム</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="26"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Включить наблюдение за простоем</translation>
+        <translation>アイドル状態の監視</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="47"/>
         <source>When idle then:</source>
-        <translation>При простое:</translation>
+        <translation>アイドル時には:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="66"/>
         <source>IIdle time:</source>
-        <translation>Время простоя:</translation>
+        <translation>アイドル状態の時間</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="79"/>
         <source> minutes</source>
-        <translation> минут</translation>
+        <translation> 分</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="92"/>
         <source> seconds</source>
-        <translation> секунд</translation>
+        <translation> 秒</translation>
     </message>
 </context>
 <context>
@@ -87,58 +87,58 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>フォーム</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Включить наблюдение за крышкой</translation>
+        <translation>フタの監視を有効にする</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="45"/>
         <source>Action when lid is closed</source>
-        <translation>Действие при закрытии крышки</translation>
+        <translation>フタが閉じていたときの動作</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="57"/>
         <location filename="../lidwatchersettings.ui" line="160"/>
         <source>On Battery</source>
-        <translation>От батареи</translation>
+        <translation>バッテリー動作時</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="77"/>
         <source>Nothing</source>
-        <translation>Ничего</translation>
+        <translation>何もしない</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="82"/>
         <source>Suspend</source>
-        <translation>Ждущий режим</translation>
+        <translation>サスペンド</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="87"/>
         <source>Hibernate</source>
-        <translation>Спящий режим</translation>
+        <translation>ハイバネート</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="92"/>
         <source>Shut down</source>
-        <translation>Выключить</translation>
+        <translation>シャットダウン</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="100"/>
         <source>On AC</source>
-        <translation>От сети</translation>
+        <translation>AC電源時</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="139"/>
         <source>When &amp;using external monitor</source>
-        <translation>При использовании внешнего монитора</translation>
+        <translation>外部モニター使用時</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="177"/>
         <source>On Ac</source>
-        <translation>От сети</translation>
+        <translation>AC電源時</translation>
     </message>
 </context>
 <context>
@@ -146,22 +146,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="34"/>
         <source>LXQt Powermanagement Configuration</source>
-        <translation>Настройка энергопотребления LXQt</translation>
+        <translation>LXQt電源管理の設定</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Battery</source>
-        <translation>Батарея</translation>
+        <translation>バッテリー</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="41"/>
         <source>Lid</source>
-        <translation>Крышка</translation>
+        <translation>フタ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="45"/>
         <source>idle</source>
-        <translation>бездействие</translation>
+        <translation>アイドル</translation>
     </message>
 </context>
 <context>
@@ -169,27 +169,27 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation>Ничего</translation>
+        <translation>何もしない</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>Блокирвать экран</translation>
+        <translation>スクリーンをロック</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation>Ждущий режим</translation>
+        <translation>サスペンド</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation>Спящий режим</translation>
+        <translation>ハイバネート</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Shutdown</source>
-        <translation>Выключить компьютер</translation>
+        <translation>シャットダウン</translation>
     </message>
 </context>
 </TS>
