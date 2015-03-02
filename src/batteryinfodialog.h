@@ -1,11 +1,11 @@
 #ifndef BATTERYINFODIALOG_H
 #define BATTERYINFODIALOG_H
 
-#include "battery.h"
 #include "batteryinfoframe.h"
 
 #include <QDialog>
 #include <QList>
+#include <Solid/Battery>
 
 namespace Ui {
 class BatteryInfoDialog;
@@ -16,7 +16,7 @@ class BatteryInfoDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit BatteryInfoDialog(QList<Battery*> batteries, QWidget *parent = 0);
+    explicit BatteryInfoDialog(QList<Solid::Battery*> batteries, QWidget *parent = 0);
     ~BatteryInfoDialog();
 
 public slots:

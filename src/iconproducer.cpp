@@ -6,13 +6,14 @@
 #include <QPainter>
 #include <math.h>
 
-IconProducer::IconProducer(Battery *battery, QObject *parent) : QObject(parent)
+IconProducer::IconProducer(Solid::Battery *battery, QObject *parent) : QObject(parent)
 {
-    connect(battery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(update(float,Battery::State)));
+    connect(battery, &Solid::Battery::chargeStateChanged, this, &IconProducer::updateState);
+    connect(battery, &Solid::Battery::chargePercentChanged, this, &IconProducer::updateChargePercent);
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(update()));
 
-    mChargeLevel = battery->chargeLevel;
-    mState = battery->state;
+    mChargePercent = battery->chargePercent();
+    mState = battery->chargeState();
     themeChanged();
 }
 
@@ -23,10 +24,16 @@ IconProducer::IconProducer(QObject *parent):  QObject(parent)
 }
 
 
-void IconProducer::update(float newChargeLevel, Battery::State newState)
+void IconProducer::updateChargePercent(int newChargePercent)
 {
-    mChargeLevel = newChargeLevel;
-    mState = newState;
+    mChargePercent = newChargePercent;
+
+    update();
+}
+
+void IconProducer::updateState(int newState)
+{
+    mState = (Solid::Battery::ChargeState) newState;
 
     update();
 }
@@ -37,10 +44,10 @@ void IconProducer::update()
 
     if (mSettings.isUseThemeIcons())
     {
-        QMap<float, QString> *levelNameMap =  (mState == Battery::Discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
+        QMap<float, QString> *levelNameMap = (mState == Solid::Battery::Discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
         foreach (float level, levelNameMap->keys())
         {
-            if (level >= mChargeLevel)
+            if (level >= mChargePercent)
             {
                 newIconName = levelNameMap->value(level);
                 break;
@@ -49,21 +56,10 @@ void IconProducer::update()
     }
 
     if (mSettings.isUseThemeIcons() && newIconName == mIconName)
-    {
         return;
-    }
 
     mIconName = newIconName;
-
-    if (mSettings.isUseThemeIcons())
-    {
-        mIcon = QIcon::fromTheme(mIconName);
-    }
-    else
-    {
-        mIcon = circleIcon();
-    }
-
+    mIcon = mSettings.isUseThemeIcons() ? QIcon::fromTheme(mIconName) : circleIcon();
     emit iconChanged();
 }
 
@@ -80,10 +76,14 @@ void IconProducer::themeChanged()
     mLevelNameMapCharging.clear();
 
     if (QIcon::themeName() == "oxygen")
-    {                                                             // Means:
-        mLevelNameMapDischarging[10] = "battery-low";             // Use 'battery-low' for levels up to 10
-        mLevelNameMapDischarging[20] = "battery-caution";         //  -  'battery-caution' for levels between 10 and 20
-        mLevelNameMapDischarging[40] = "battery-040";             //  -  'battery-040' for levels between 20 and 40, etc..
+    {
+        // Means:
+        // Use 'battery-low' for levels up to 10
+        //  -  'battery-caution' for levels between 10 and 20
+        //  -  'battery-040' for levels between 20 and 40, etc..
+        mLevelNameMapDischarging[10] = "battery-low";
+        mLevelNameMapDischarging[20] = "battery-caution";
+        mLevelNameMapDischarging[40] = "battery-040";
         mLevelNameMapDischarging[60] = "battery-060";
         mLevelNameMapDischarging[80] = "battery-080";
         mLevelNameMapDischarging[101] = "battery-100";
@@ -126,23 +126,19 @@ void IconProducer::themeChanged()
     update();
 }
 
-
-
 QIcon& IconProducer::circleIcon()
 {
-    static QMap<Battery::State, QMap<int, QIcon> > cache;
+    static QMap<Solid::Battery::ChargeState, QMap<int, QIcon> > cache;
 
-    int chargeLevelAsInt = (int) (mChargeLevel + 0.49);
+    int chargeLevelAsInt = (int) (mChargePercent + 0.49);
 
-    if (! cache[mState].contains(chargeLevelAsInt))
-    {
-        cache[mState][chargeLevelAsInt] = buildCircleIcon(mState, mChargeLevel);
-    }
+    if (!cache[mState].contains(chargeLevelAsInt))
+        cache[mState][chargeLevelAsInt] = buildCircleIcon(mState, mChargePercent);
 
     return cache[mState][chargeLevelAsInt];
 }
 
-QIcon IconProducer::buildCircleIcon(Battery::State state, double chargeLevel)
+QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel)
 {
     static QString svg_template =
         "<svg\n"
@@ -177,14 +173,12 @@ QIcon IconProducer::buildCircleIcon(Battery::State state, double chargeLevel)
 
     QString svg = svg_template;
 
-    if (chargeLevel > 99.9)
-    {
-        chargeLevel = 99.9;
-    }
+    if (chargeLevel > 99)
+        chargeLevel = 99;
 
-    double angle = M_PI_2 + 2*M_PI*chargeLevel/100;
-    double circle_endpoint_x = 80.0*cos(angle) + 100;
-    double circle_endpoint_y = -80.0*sin(angle) + 100;
+    double angle = M_PI_2 + 2 * M_PI * chargeLevel / 100;
+    double circle_endpoint_x = 80.0 * cos(angle) + 100;
+    double circle_endpoint_y = -80.0 * sin(angle) + 100;
 
     QString largeArgFlag = chargeLevel > 50 ? "1" : "0";
     QString sweepFlag = "0";
@@ -194,32 +188,32 @@ QIcon IconProducer::buildCircleIcon(Battery::State state, double chargeLevel)
     svg.replace(QString("LARGE_ARC_FLAG"), largeArgFlag);
     svg.replace(QString("SWEEP_FLAG"), sweepFlag);
 
-
     switch (state)
     {
-    case Battery::FullyCharged: svg.replace("STATE_MARKER", filledCircle); break;
-    case Battery::Charging:     svg.replace("STATE_MARKER", plus); break;
-    case Battery::Discharging:  svg.replace("STATE_MARKER", minus); break;
-    default:                    svg.replace("STATE_MARKER", hollowCircle);
+    case Solid::Battery::FullyCharged:
+        svg.replace("STATE_MARKER", filledCircle);
+        break;
+    case Solid::Battery::Charging:
+        svg.replace("STATE_MARKER", plus);
+        break;
+    case Solid::Battery::Discharging:
+        svg.replace("STATE_MARKER", minus);
+        break;
+    default:
+        svg.replace("STATE_MARKER", hollowCircle);
     }
 
-    if (state != Battery::FullyCharged && state != Battery::Charging &&  chargeLevel < mSettings.getPowerLowLevel() + 30)
+    if (state != Solid::Battery::FullyCharged && state != Solid::Battery::Charging &&  chargeLevel < mSettings.getPowerLowLevel() + 30)
     {
         if (chargeLevel <= mSettings.getPowerLowLevel() + 10)
-        {
             svg.replace("RED_OPACITY", "1");
-        }
         else
-        {
             svg.replace("RED_OPACITY", QString::number((mSettings.getPowerLowLevel() + 30 - chargeLevel)/20));
-        }
     }
     else
-    {
         svg.replace("RED_OPACITY", "0");
-    }
 
-    qDebug() << svg;
+    // qDebug() << svg;
 
     // Paint the svg on a pixmap and create an icon from that.
     QSvgRenderer render(svg.toLatin1());
@@ -228,6 +222,4 @@ QIcon IconProducer::buildCircleIcon(Battery::State state, double chargeLevel)
     QPainter painter(&pixmap);
     render.render(&painter);
     return QIcon(pixmap);
-
 }
-

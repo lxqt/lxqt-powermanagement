@@ -4,14 +4,14 @@
 #include <QMap>
 #include <QObject>
 #include "../config/powermanagementsettings.h"
-#include "battery.h"
+#include <Solid/Battery>
 
 class IconProducer : public QObject
 {
     Q_OBJECT
 
 public:
-    IconProducer(Battery* battery, QObject *parent = 0);
+    IconProducer(Solid::Battery* battery, QObject *parent = 0);
     IconProducer(QObject *parent = 0);
 
     QIcon mIcon;
@@ -21,20 +21,19 @@ signals:
     void iconChanged();
 
 public slots:
-    void update(float newChargeLevel, Battery::State newState);
-
-private slots:
-    void themeChanged();
+    void updateChargePercent(int newChargePercent);
+    void updateState(int newState);
     void update();
+    void themeChanged();
 
 private:
 
     QIcon &circleIcon();
-    QIcon buildCircleIcon(Battery::State state, double chargeLevel);
+    QIcon buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel);
 
 
-    float mChargeLevel;
-    Battery::State mState;
+    int mChargePercent;
+    Solid::Battery::ChargeState mState;
 
     PowerManagementSettings mSettings;
 

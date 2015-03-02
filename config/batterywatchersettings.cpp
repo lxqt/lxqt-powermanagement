@@ -29,11 +29,11 @@
 #include <QDebug>
 #include <QLabel>
 #include <QGroupBox>
+#include <Solid/Battery>
 
 #include "batterywatchersettings.h"
 #include "ui_batterywatchersettings.h"
 #include "powermanagementsettings.h"
-#include "../src/battery.h"
 
 BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     QWidget(parent),
@@ -46,6 +46,8 @@ BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     mUi->setupUi(this);
     fillComboBox(mUi->actionComboBox);
     mUi->chargeLevelSlider->setValue(53);
+    mChargingIconProducer.updateState(Solid::Battery::Charging);
+    mDischargingIconProducer.updateState(Solid::Battery::Discharging);
 
     connect(mUi->groupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
     connect(mUi->actionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
@@ -90,10 +92,10 @@ void BatteryWatcherSettings::updatePreview()
 {
     mUi->previewBox->setTitle(tr("Preview") +  QString(" (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("built in")));
 
-    float chargeLevel = mUi->chargeLevelSlider->value();
-    mChargingIconProducer.update(chargeLevel, Battery::Charging);
-    mDischargingIconProducer.update(chargeLevel, Battery::Discharging);
-    mUi->chargeLevelLabel->setText(tr("Level: %1%").arg(chargeLevel));
+    int chargePercent = mUi->chargeLevelSlider->value();
+    mChargingIconProducer.updateChargePercent(chargePercent);
+    mDischargingIconProducer.updateChargePercent(chargePercent);
+    mUi->chargeLevelLabel->setText(tr("Level: %1%").arg(chargePercent));
 }
 
 void BatteryWatcherSettings::onChargeIconChanged()

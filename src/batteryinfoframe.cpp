@@ -28,20 +28,27 @@
 #include <QDebug>
 
 #include "batteryinfoframe.h"
+#include "batteryhelper.h"
 #include "ui_batteryinfoframe.h"
 
-BatteryInfoFrame::BatteryInfoFrame(Battery *battery) :
+BatteryInfoFrame::BatteryInfoFrame(Solid::Battery *battery) :
     QFrame(),
     mBattery(battery),
     mUi(new Ui::BatteryInfoFrame)
 {
     mUi->setupUi(this);
 
-    mUi->energyFullDesignValue->setText(QString("%1 Wh").arg(mBattery->energyFullDesign, 0, 'f', 2));
-    mUi->modelValue->setText(mBattery->model);
-    mUi->technologyValue->setText(mBattery->technology);
+    mUi->energyFullDesignValue->setText(QString("%1 Wh").arg(mBattery->energyFullDesign(), 0, 'f', 2));
+    mUi->typeValue->setText(BatteryHelper::typeToString(mBattery->type()));
+    mUi->technologyValue->setText(BatteryHelper::technologyToString(mBattery->technology()));
 
-    connect(mBattery, SIGNAL(chargeStateChange(float,Battery::State)), this, SLOT(onBatteryChanged()));
+    QString vendor = QString("%1 %2").arg(battery->recallVendor()).arg(battery->serial());
+    if (vendor.trimmed().isEmpty())
+        vendor = "Unkown";
+    mUi->vendorValue->setText(vendor);
+
+    connect(mBattery, SIGNAL(energyChanged(double, const QString)), this, SLOT(onBatteryChanged()));
+    connect(mBattery, SIGNAL(chargeStateChanged(int, const QString)), this, SLOT(onBatteryChanged()));
     onBatteryChanged();
 }
 
@@ -52,12 +59,10 @@ BatteryInfoFrame::~BatteryInfoFrame()
 
 void BatteryInfoFrame::onBatteryChanged()
 {
-    qDebug() << "BatteryInfoFrame.onBatteryChanged" << "updated:" << mBattery->updated;
-
-    mUi->updatedValue->setText(mBattery->updated.toString("hh:mm:ss"));
-    mUi->stateValue->setText(Battery::state2String(mBattery->state));
-    mUi->energyFullValue->setText(QString("%1 Wh (%2 %)").arg(mBattery->energyFull, 0, 'f', 2).arg(mBattery->capacity, 0, 'f', 1));
-    mUi->energyValue->setText(QString("%1 Wh (%2 %)").arg(mBattery->energyNow, 0, 'f', 2).arg(mBattery->chargeLevel, 0, 'f', 1));
-    mUi->energyRateValue->setText(QString("%1 W").arg(mBattery->energyRate, 0, 'f', 2));
-    mUi->voltageValue->setText(QString("%1 V").arg(mBattery->voltage, 0, 'f', 2));
+    mUi->stateValue->setText(BatteryHelper::stateToString(mBattery->chargeState()));
+    mUi->energyFullValue->setText(QString("%1 Wh (%2 %)").arg(mBattery->energyFull(), 0, 'f', 2).arg(mBattery->capacity()));
+    mUi->energyValue->setText(QString("%1 Wh (%2 %)").arg(mBattery->energy(), 0, 'f', 2).arg(mBattery->chargePercent()));
+    mUi->energyRateValue->setText(QString("%1 W").arg(mBattery->energyRate(), 0, 'f', 2));
+    mUi->voltageValue->setText(QString("%1 V").arg(mBattery->voltage(), 0, 'f', 2));
+    mUi->temperatureValue->setText(QString("%1 ºC").arg(mBattery->temperature()));
 }

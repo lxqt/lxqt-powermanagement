@@ -2,14 +2,6 @@ project(lxqt-config-powermanagement)
 
 set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg)
 
-set(config-powermanagement_MOCS
-    mainwindow.h
-    lidwatchersettings.h
-    batterywatchersettings.h
-    idlenesswatchersettings.h
-    powermanagementsettings.h
-)
-
 set(config-powermanagement_SRCS
     main.cpp
     mainwindow.cpp
@@ -19,7 +11,6 @@ set(config-powermanagement_SRCS
     powermanagementsettings.cpp
     helpers.cpp
     ../src/iconproducer.cpp
-    ../src/battery.cpp
 )
 
 set(config-powermanagement_UIS
@@ -55,9 +46,12 @@ lxqt_translate_ts(QM_FILES
 lxqt_app_translation_loader(config-powermanagement_QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
 
-
 qt5_add_resources(RSCS ${config-powermanagement_RSCS})
-qt5_wrap_ui(UIS ${config-powermanagement_UIS})
+
+include_directories(
+    "${CMAKE_CURRENT_BINARY_DIR}"
+    ${Solid_INCLUDE_DIRS}
+)
 
 add_executable(${PROJECT_NAME}
     ${config-powermanagement_SRCS}
@@ -71,6 +65,7 @@ target_link_libraries(lxqt-config-powermanagement
     ${LXQT_LIBRARIES}
     ${QTXDG_LIBRARIES}
     ${QTX_LIBRARIES}
+    KF5::Solid
 )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)

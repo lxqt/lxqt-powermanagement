@@ -26,6 +26,7 @@
 #include <QDebug>
 #include <QStringList>
 
+#include "batteryhelper.h"
 #include "powermanagementd.h"
 #include "../config/powermanagementsettings.h"
 #include "idlenesswatcher.h"
@@ -48,7 +49,6 @@ PowerManagementd::PowerManagementd() :
         performRunCheck();
         mSettings.setRunCheckLevel(CURRENT_RUNCHECK_LEVEL);
     }
-
 }
 
 PowerManagementd::~PowerManagementd()
@@ -58,9 +58,7 @@ PowerManagementd::~PowerManagementd()
 void PowerManagementd::settingsChanged()
 {
     if (mSettings.isBatteryWatcherEnabled() && !mBatterywatcherd)
-    {
         mBatterywatcherd = new BatteryWatcher(this);
-    }
     else if (mBatterywatcherd && ! mSettings.isBatteryWatcherEnabled())
     {
         mBatterywatcherd->deleteLater();
@@ -98,7 +96,7 @@ void PowerManagementd::runConfigure()
 void PowerManagementd::performRunCheck()
 {
     mSettings.setLidWatcherEnabled(Lid().haveLid());
-    mSettings.setBatteryWatcherEnabled(! Battery::batteries().isEmpty());
+    mSettings.setBatteryWatcherEnabled(!Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString()).isEmpty());
     qDebug() << "performRunCheck, lidWatcherEnabled:" << mSettings.isLidWatcherEnabled() << ", batteryWatcherEnabled:" << mSettings.isBatteryWatcherEnabled();
     mSettings.sync();
     mNotification.setSummary(tr("Power Management"));
