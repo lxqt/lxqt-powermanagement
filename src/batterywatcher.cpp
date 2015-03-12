@@ -45,6 +45,10 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
     foreach (Solid::Device device, devices)
     {
         Solid::Battery *battery = device.as<Solid::Battery>();
+		if (battery->type() != Solid::Battery::PrimaryBattery)
+		{
+			continue;
+		}
         mBatteries << battery;
         connect(battery, &Solid::Battery::energyChanged, this, &BatteryWatcher::batteryChanged);
         connect(battery, &Solid::Battery::chargeStateChanged, this, &BatteryWatcher::batteryChanged);
