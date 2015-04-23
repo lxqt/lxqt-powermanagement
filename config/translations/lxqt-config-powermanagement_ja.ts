@@ -68,7 +68,7 @@
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="66"/>
-        <source>IIdle time:</source>
+        <source>Idle time:</source>
         <translation>アイドル状態の時間</translation>
     </message>
     <message>

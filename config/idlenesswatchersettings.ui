@@ -57,7 +57,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>IIdle time:</string>
+         <string>Idle time:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
