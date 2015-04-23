@@ -33,6 +33,7 @@
 #include <QHelpEvent>
 #include <Solid/Battery>
 #include <Solid/Device>
+#include <XdgIcon>
 
 #include "trayicon.h"
 #include "batteryhelper.h"
@@ -54,9 +55,12 @@ TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
     connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             SLOT(onActivated(QSystemTrayIcon::ActivationReason)));
 
-    mContextMenu.addAction(tr("Configure"), this, SLOT(onConfigureTriggered()));
-    mContextMenu.addAction(tr("About"), this, SLOT(onAboutTriggered()));
-    mContextMenu.addAction(tr("Disable icon"), this, SLOT(onDisableIconTriggered()));
+    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("configure")), tr("Configure"),
+                           this, SLOT(onConfigureTriggered()));
+    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("help-about")), tr("About"),
+                           this, SLOT(onAboutTriggered()));
+    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("edit-delete")), tr("Disable icon"),
+                           this, SLOT(onDisableIconTriggered()));
     setContextMenu(&mContextMenu);
 }
 
