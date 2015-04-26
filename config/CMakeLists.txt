@@ -2,7 +2,7 @@ project(lxqt-config-powermanagement)
 
 set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg)
 
-set(config-powermanagement_SRCS
+set(SOURCES
     main.cpp
     mainwindow.cpp
     lidwatchersettings.cpp
@@ -13,13 +13,13 @@ set(config-powermanagement_SRCS
     ../src/iconproducer.cpp
 )
 
-set(config-powermanagement_UIS
+set(UI_FILES
     lidwatchersettings.ui
     batterywatchersettings.ui
     idlenesswatchersettings.ui
 )
 
-set(config-powermanagement_RSCS
+set(RESOURCES
     config-powermanagement.qrc
 )
 
@@ -36,9 +36,8 @@ set(DESKTOP_FILES_IN
 lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES
-        ${config-powermanagement_SRCS}
-        ${config-powermanagement_UIS}
-        ${config-powermanagement_MOCS}
+        ${SOURCES}
+        ${UI_FILES}
     INSTALL_DIR
         ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
@@ -46,7 +45,8 @@ lxqt_translate_ts(QM_FILES
 lxqt_app_translation_loader(config-powermanagement_QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
 
-qt5_add_resources(RSCS ${config-powermanagement_RSCS})
+qt5_wrap_ui(UI_HEADERS ${UI_FILES})
+qt5_add_resources(RSCS ${RESOURCES})
 
 include_directories(
     "${CMAKE_CURRENT_BINARY_DIR}"
@@ -54,8 +54,8 @@ include_directories(
 )
 
 add_executable(${PROJECT_NAME}
-    ${config-powermanagement_SRCS}
-    ${UIS}
+    ${SOURCES}
+    ${UI_HEADERS}
     ${DESKTOP_FILES}
     ${QM_FILES}
     ${config-powermanagement_QM_LOADER}
