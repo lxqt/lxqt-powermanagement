@@ -42,6 +42,13 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 {
     QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
 
+    if (devices.isEmpty())
+    {
+	    LxQt::Notification::notify(tr("No battery!"),
+	                               tr("LXQt could not find data about any battery - monitoring disabled"),
+	                               "lxqt-powermanagement");
+    }
+	    
     foreach (Solid::Device device, devices)
     {
         Solid::Battery *battery = device.as<Solid::Battery>();
