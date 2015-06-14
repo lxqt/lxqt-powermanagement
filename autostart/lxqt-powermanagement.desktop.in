@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=LXQt Powermanagement
+Name=Powermanagement
 TryExec=lxqt-powermanagement
 Exec=lxqt-powermanagement
 OnlyShowIn=LXQt;
