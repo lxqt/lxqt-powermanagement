@@ -96,9 +96,14 @@ void PowerManagementd::runConfigure()
 void PowerManagementd::performRunCheck()
 {
     mSettings.setLidWatcherEnabled(Lid().haveLid());
-    mSettings.setBatteryWatcherEnabled(!Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString()).isEmpty());
-    qDebug() << "performRunCheck, lidWatcherEnabled:" << mSettings.isLidWatcherEnabled() << ", batteryWatcherEnabled:" << mSettings.isBatteryWatcherEnabled();
+    bool hasBattery = false;
+    for (Solid::Device device : Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString()))
+        if (device.as<Solid::Battery>()->type() == Solid::Battery::PrimaryBattery)
+            hasBattery = true;
+    mSettings.setBatteryWatcherEnabled(hasBattery);
+    mSettings.setIdlenessWatcherEnabled(true);
     mSettings.sync();
+
     mNotification.setSummary(tr("Power Management"));
     mNotification.setBody(tr("You are running LXQt Power Management for the first time.\nYou can configure it from settings... "));
     mNotification.setActions(QStringList() << tr("Configure..."));
