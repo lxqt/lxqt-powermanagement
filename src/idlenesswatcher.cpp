@@ -142,22 +142,16 @@ uint IdlenessWatcher::getIdleTimeMs()
 
 uint IdlenessWatcher::getMaxIdleTimeoutMs()
 {
-    return 1000*mPSettings.getIdlenessTimeSecs();
+    return 1000 * mPSettings.getIdlenessTimeSecs();
 }
 
 void IdlenessWatcher::idleTimeout()
 {
     uint msSinceUserInput = getIdleTimeMs();
-    qDebug() << "    ms since user input:" << msSinceUserInput;
     if (msSinceUserInput >= getMaxIdleTimeoutMs())
-    {
-        doAction(mPSettings.getIdlenessAction());        
-    }
+        doAction(mPSettings.getIdlenessAction());
     else
-    {
-        qDebug() << "--- Locking screen in" << (getMaxIdleTimeoutMs() - msSinceUserInput) << "(maybe).";
         mTimer.start(getMaxIdleTimeoutMs() - msSinceUserInput);
-    }
 }
 
 void IdlenessWatcher::restartTimer()

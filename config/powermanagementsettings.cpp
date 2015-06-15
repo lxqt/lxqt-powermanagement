@@ -46,7 +46,6 @@ namespace PowerManagementSettingsConstants
     const QString SHOW_ICON_KEY = "showIcon";
     const QString USE_THEME_ICONS_KEY = "useThemeIcons";
     const QString IDLENESS_ACTION_KEY = "idlenessAction";
-    const QString IDLENESS_TIME_MINS_KEY = "idlenessTimeMins";
     const QString IDLENESS_TIME_SECS_KEY = "idlenessTimeSecs";
 }
 
@@ -192,7 +191,8 @@ void PowerManagementSettings::setEnableExtMonLidClosedActions(bool enableExtMonL
 
 int PowerManagementSettings::getIdlenessAction()
 {
-    return value(IDLENESS_ACTION_KEY, 0).toInt();
+    // default to nothing (-1)
+    return value(IDLENESS_ACTION_KEY, -1).toInt();
 }
 
 void PowerManagementSettings::setIdlenessAction(int idlenessAction)
@@ -202,7 +202,8 @@ void PowerManagementSettings::setIdlenessAction(int idlenessAction)
 
 int PowerManagementSettings::getIdlenessTimeSecs()
 {
-    return value(IDLENESS_TIME_SECS_KEY, 5).toInt();
+    // default to 15 minutes
+    return value(IDLENESS_TIME_SECS_KEY, 900).toInt();
 }
 
 void PowerManagementSettings::setIdlenessTimeSecs(int idlenessTimeSecs)

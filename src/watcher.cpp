@@ -40,8 +40,6 @@ Watcher::~Watcher()
 void Watcher::doAction(int action)
 {
     if (action > -1)
-    {   
         mPower.doAction((LxQt::Power::Action) action);
-    }
 }
 
