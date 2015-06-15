@@ -24,13 +24,14 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <QDebug>
-
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"
 
 Watcher::Watcher(QObject *parent) :
-    QObject(parent)
+    QObject(parent),
+    mScreenSaver(this)
 {
+    connect(&mScreenSaver, SIGNAL(done()), &mLoop, SLOT(quit()));
 }
 
 Watcher::~Watcher()
@@ -39,7 +40,14 @@ Watcher::~Watcher()
 
 void Watcher::doAction(int action)
 {
-    if (action > -1)
+    // if (action == -1) { }
+    if (action == -2)
+    {
+        mScreenSaver.lockScreen();
+        mLoop.exec();
+    }
+    else if (action >= 0)
         mPower.doAction((LxQt::Power::Action) action);
-}
 
+    emit done();
+}

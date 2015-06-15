@@ -1,12 +1,13 @@
 #ifndef WATCHER_H
-#define	WATCHER_H
+#define WATCHER_H
 
 #include <QObject>
+#include <QEventLoop>
 #include <LXQt/Power>
+#include <LXQt/ScreenSaver>
 
 class Watcher : public QObject
 {
-
     Q_OBJECT
 
 public:
@@ -16,10 +17,13 @@ public:
 protected:
     void doAction(int action);
 
+signals:
+    void done();
+
 private:
     LxQt::Power mPower;
-
+    LxQt::ScreenSaver mScreenSaver;
+    QEventLoop mLoop;
 };
 
-#endif	/* WATCHER_H */
-
+#endif // WATCHER_H
