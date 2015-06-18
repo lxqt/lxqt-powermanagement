@@ -73,7 +73,7 @@ int LidWatcher::action()
         }
         else
         {
-            return mSettings.getLidClosedAcAction(); 
+            return mSettings.getLidClosedAcAction();
         }
     }
 }

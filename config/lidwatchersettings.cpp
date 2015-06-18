@@ -38,12 +38,12 @@ LidWatcherSettings::LidWatcherSettings(QWidget *parent) :
     mUi(new Ui::LidWatcherSettings)
 {
     mUi->setupUi(this);
-    
+
     fillComboBox(mUi->onBatteryActionComboBox);
     fillComboBox(mUi->onAcActionComboBox);
     fillComboBox(mUi->extMonOnBatteryActionComboBox);
     fillComboBox(mUi->extMonOnAcActionComboBox);
-    
+
     connect(mUi->lidWatcherSettingsGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
     connect(mUi->onBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
     connect(mUi->onAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
@@ -60,10 +60,10 @@ LidWatcherSettings::~LidWatcherSettings()
 void LidWatcherSettings::loadSettings()
 {
     mUi->lidWatcherSettingsGroupBox->setChecked(mSettings.isLidWatcherEnabled());
-    
+
     setComboBoxToValue(mUi->onBatteryActionComboBox, mSettings.getLidClosedAction());
     setComboBoxToValue(mUi->onAcActionComboBox, mSettings.getLidClosedAcAction());
-    
+
     mUi->extMonGroupBox->setChecked(mSettings.isEnableExtMonLidClosedActions());
     setComboBoxToValue(mUi->extMonOnBatteryActionComboBox, mSettings.getLidClosedExtMonAction());
     setComboBoxToValue(mUi->extMonOnAcActionComboBox, mSettings.getLidClosedExtMonAcAction());
@@ -73,10 +73,10 @@ void LidWatcherSettings::loadSettings()
 void LidWatcherSettings::saveSettings()
 {
     mSettings.setLidWatcherEnabled(mUi->lidWatcherSettingsGroupBox->isChecked());
-    
+
     mSettings.setLidClosedAction(currentValue(mUi->onBatteryActionComboBox));
     mSettings.setLidClosedAcAction(currentValue(mUi->onAcActionComboBox));
-    
+
     mSettings.setEnableExtMonLidClosedActions(mUi->extMonGroupBox->isChecked());
     mSettings.setLidClosedExtMonAction(currentValue(mUi->extMonOnBatteryActionComboBox));
     mSettings.setLidClosedExtMonAcAction(currentValue(mUi->extMonOnAcActionComboBox));

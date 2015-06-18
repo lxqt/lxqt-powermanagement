@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Settings.h
  * Author: christian
  *

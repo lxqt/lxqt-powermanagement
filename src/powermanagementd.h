@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   powermanagementd.h
  * Author: Christian Surlykke
  *

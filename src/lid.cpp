@@ -38,7 +38,7 @@ Lid::Lid()
                                 QDBusConnection::systemBus(), this);
     mUPowerPropertiesInterface = new QDBusInterface("org.freedesktop.UPower", "/org/freedesktop/UPower", "org.freedesktop.DBus.Properties",
                                           QDBusConnection::systemBus(), this);
-    if (! connect(mUPowerInterface, SIGNAL(Changed()), this, SLOT(uPowerChange()))) 
+    if (! connect(mUPowerInterface, SIGNAL(Changed()), this, SLOT(uPowerChange())))
 	{
 		qDebug() << "Could not connect to org.freedesktop.UPower.changed(), connecting to org.freedesktop.DBus.Properties.PropertiesChanged(..) instead";
 		QDBusConnection::systemBus().connect("org.freedesktop.UPower",
@@ -48,7 +48,7 @@ Lid::Lid()
 											this,
 											SLOT(uPowerChange()));
 	}
-    
+
 	mIsClosed = mUPowerPropertiesInterface->property("LidIsClosed").toBool();
 }
 

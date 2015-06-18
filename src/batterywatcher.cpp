@@ -48,7 +48,7 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 	                               tr("LXQt could not find data about any battery - monitoring disabled"),
 	                               "lxqt-powermanagement");
     }
-	    
+
     foreach (Solid::Device device, devices)
     {
         Solid::Battery *battery = device.as<Solid::Battery>();

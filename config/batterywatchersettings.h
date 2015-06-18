@@ -42,7 +42,7 @@ class BatteryWatcherSettings;
 class BatteryWatcherSettings : public QWidget
 {
     Q_OBJECT
-    
+
 public:
     explicit BatteryWatcherSettings(QWidget *parent = 0);
     ~BatteryWatcherSettings();

@@ -35,8 +35,8 @@
 #define MINIMUM_SECONDS 30
 
 IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
-    QWidget(parent), 
-    mSettings(), 
+    QWidget(parent),
+    mSettings(),
     mUi(new Ui::IdlenessWatcherSettings)
 {
     mUi->setupUi(this);
@@ -80,7 +80,7 @@ void IdlenessWatcherSettings::minutesChanged(int newVal)
 
 void IdlenessWatcherSettings::secondsChanged(int newVal)
 {
-    if (newVal > 59) 
+    if (newVal > 59)
     {
         mUi->idleTimeSecondsSpinBox->setValue(0);
         mUi->idleTimeMinutesSpinBox->setValue(mUi->idleTimeMinutesSpinBox->value() + 1);

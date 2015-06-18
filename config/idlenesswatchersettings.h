@@ -39,7 +39,7 @@ namespace Ui {
 class IdlenessWatcherSettings : public QWidget
 {
     Q_OBJECT
-    
+
 public:
     explicit IdlenessWatcherSettings(QWidget *parent = 0);
     ~IdlenessWatcherSettings();

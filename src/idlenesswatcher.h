@@ -66,11 +66,11 @@ private slots:
     void notificationAction(int num);
     void serviceUnregistered(const QString& service);
     void restartTimer();
- 
+
 private:
     uint getIdleTimeMs();
     uint getMaxIdleTimeoutMs();
-    
+
     static xcb_screen_t* screenOfDisplay(xcb_connection_t* mConn, int screen);
 
     PowerManagementSettings mPSettings;

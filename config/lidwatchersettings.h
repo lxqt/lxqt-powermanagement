@@ -39,7 +39,7 @@ class LidWatcherSettings;
 class LidWatcherSettings : public QWidget
 {
     Q_OBJECT
-    
+
 public:
     explicit LidWatcherSettings(QWidget *parent = 0);
     ~LidWatcherSettings();
