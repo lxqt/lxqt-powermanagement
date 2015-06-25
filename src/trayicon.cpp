@@ -90,8 +90,8 @@ void TrayIcon::onAboutTriggered()
     QMessageBox::about(0,
                        tr("About"),
                        tr( "<p>"
-                           "  <b>LXQt Powermanagement</b><br/>"
-                           "  - Powermanagement for the LXQt Desktop Environment"
+                           "  <b>LXQt Power Management</b><br/>"
+                           "  - Power Management for the LXQt Desktop Environment"
                            "</p>"
                            "<p>"
                            "  Authors:<br/>"
