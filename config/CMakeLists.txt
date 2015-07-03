@@ -62,8 +62,7 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(lxqt-config-powermanagement
-    ${LXQT_LIBRARIES}
-    ${QTXDG_LIBRARIES}
+    lxqt
     ${QTX_LIBRARIES}
     KF5::Solid
 )

@@ -108,8 +108,7 @@ add_executable(lxqt-powermanagement
 )
 
 target_link_libraries(lxqt-powermanagement
-    ${LXQT_LIBRARIES}
-    ${QTXDG_LIBRARY}
+    lxqt
     ${QTX_LIBRARIES}
     ${XCB_LIBRARY}
     ${XCB_SCREENSAVER_LIBRARY}
