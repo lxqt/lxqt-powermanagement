@@ -48,11 +48,6 @@ lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 qt5_add_resources(RSCS ${RESOURCES})
 
-include_directories(
-    "${CMAKE_CURRENT_BINARY_DIR}"
-    ${Solid_INCLUDE_DIRS}
-)
-
 add_executable(${PROJECT_NAME}
     ${SOURCES}
     ${UI_HEADERS}

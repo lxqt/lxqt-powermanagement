@@ -88,14 +88,11 @@ find_library(XCB_DPMS_LIBRARY NAMES xcb-dpms
 
 
 include_directories(
-    "${CMAKE_CURRENT_BINARY_DIR}"
     ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
     ${XCB_INCLUDE_DIR}
     ${X11_XCB_INCLUDE_DIR}
-    ${QTXDG_INCLUDE_DIRS}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
-    ${Solid_INCLUDE_DIRS}
 )
 
 add_executable(lxqt-powermanagement
