@@ -57,12 +57,15 @@ target_link_libraries(lxqt-config-powermanagement
 install(TARGETS
     ${PROJECT_NAME}
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
 )
 install(FILES
     ${DESKTOP_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
 )
 install(FILES
     ${ICON_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/devices"
+    COMPONENT Runtime
 )
