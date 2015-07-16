@@ -28,8 +28,6 @@ set(DESKTOP_FILES_IN
     lxqt-powermanagement.desktop.in
 )
 
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
-
 qt5_add_dbus_adaptor(SOURCES
     org.freedesktop.ScreenSaver.xml
     idlenesswatcher.h
@@ -97,7 +95,6 @@ include_directories(
 
 add_executable(lxqt-powermanagement
     ${SOURCES}
-    ${UI_HEADERS}
     ${RSCS}
     ${QM_FILES}
     ${lxqt-powermanagement_QM_LOADER}

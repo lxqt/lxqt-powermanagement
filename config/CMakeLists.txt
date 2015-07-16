@@ -45,12 +45,10 @@ lxqt_translate_ts(QM_FILES
 lxqt_app_translation_loader(config-powermanagement_QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
 
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 qt5_add_resources(RSCS ${RESOURCES})
 
 add_executable(${PROJECT_NAME}
     ${SOURCES}
-    ${UI_HEADERS}
     ${DESKTOP_FILES}
     ${QM_FILES}
     ${config-powermanagement_QM_LOADER}
