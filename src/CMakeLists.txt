@@ -111,5 +111,5 @@ target_link_libraries(lxqt-powermanagement
     KF5::Solid
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION share/applications)
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
+install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")

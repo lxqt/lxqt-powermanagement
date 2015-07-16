@@ -54,6 +54,6 @@ target_link_libraries(lxqt-config-powermanagement
     KF5::Solid
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION share/applications)
-install(FILES ${ICON_FILES} DESTINATION share/icons/hicolor/scalable/devices)
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
+install(FILES ${DESKTOP_FILES} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+install(FILES ${ICON_FILES} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/devices")
