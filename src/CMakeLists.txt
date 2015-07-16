@@ -28,8 +28,6 @@ set(DESKTOP_FILES_IN
     lxqt-powermanagement.desktop.in
 )
 
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
-
 qt5_add_dbus_adaptor(SOURCES
     org.freedesktop.ScreenSaver.xml
     idlenesswatcher.h
@@ -88,19 +86,15 @@ find_library(XCB_DPMS_LIBRARY NAMES xcb-dpms
 
 
 include_directories(
-    "${CMAKE_CURRENT_BINARY_DIR}"
     ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
     ${XCB_INCLUDE_DIR}
     ${X11_XCB_INCLUDE_DIR}
-    ${QTXDG_INCLUDE_DIRS}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
-    ${Solid_INCLUDE_DIRS}
 )
 
 add_executable(lxqt-powermanagement
     ${SOURCES}
-    ${UI_HEADERS}
     ${RSCS}
     ${QM_FILES}
     ${lxqt-powermanagement_QM_LOADER}
@@ -117,5 +111,13 @@ target_link_libraries(lxqt-powermanagement
     KF5::Solid
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION share/applications)
+install(TARGETS
+    ${PROJECT_NAME}
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
+)

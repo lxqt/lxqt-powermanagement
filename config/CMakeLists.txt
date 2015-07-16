@@ -19,10 +19,6 @@ set(UI_FILES
     idlenesswatchersettings.ui
 )
 
-set(RESOURCES
-    config-powermanagement.qrc
-)
-
 set(ICON_FILES
     icons/laptop-lid.svg
 )
@@ -45,17 +41,8 @@ lxqt_translate_ts(QM_FILES
 lxqt_app_translation_loader(config-powermanagement_QM_LOADER ${PROJECT_NAME})
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
 
-qt5_wrap_ui(UI_HEADERS ${UI_FILES})
-qt5_add_resources(RSCS ${RESOURCES})
-
-include_directories(
-    "${CMAKE_CURRENT_BINARY_DIR}"
-    ${Solid_INCLUDE_DIRS}
-)
-
 add_executable(${PROJECT_NAME}
     ${SOURCES}
-    ${UI_HEADERS}
     ${DESKTOP_FILES}
     ${QM_FILES}
     ${config-powermanagement_QM_LOADER}
@@ -67,6 +54,18 @@ target_link_libraries(lxqt-config-powermanagement
     KF5::Solid
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION share/applications)
-install(FILES ${ICON_FILES} DESTINATION share/icons/hicolor/scalable/devices)
+install(TARGETS
+    ${PROJECT_NAME}
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
+)
+install(FILES
+    ${ICON_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/devices"
+    COMPONENT Runtime
+)
