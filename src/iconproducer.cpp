@@ -208,7 +208,7 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
         if (chargeLevel <= mSettings.getPowerLowLevel() + 10)
             svg.replace("RED_OPACITY", "1");
         else
-            svg.replace("RED_OPACITY", QString::number((mSettings.getPowerLowLevel() + 30 - chargeLevel)/20));
+            svg.replace("RED_OPACITY", QString::number((mSettings.getPowerLowLevel() + 30 - chargeLevel)/20.0));
     }
     else
         svg.replace("RED_OPACITY", "0");
