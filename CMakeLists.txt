@@ -18,6 +18,7 @@ find_package(lxqt REQUIRED QUIET)
 find_package(KF5Solid REQUIRED)
 
 include(GNUInstallDirs)
+include(LXQtCompilerSettings)
 include(LXQtTranslate)
 
 add_subdirectory(config)
