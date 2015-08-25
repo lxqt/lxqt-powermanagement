@@ -146,7 +146,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="34"/>
         <source>LXQt Powermanagement Configuration</source>
-        <translation>Configuração do gestor de energia do LxQt</translation>
+        <translation>Configuração do gestor de energia do LXQt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="37"/>

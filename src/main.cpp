@@ -33,7 +33,7 @@
 int main(int argc, char *argv[])
 {
 
-    LxQt::Application a(argc, argv);
+    LXQt::Application a(argc, argv);
     a.setQuitOnLastWindowClosed(false);
 
     // To ensure only one instance of lxqt-powermanagement is running we register as a DBus service and refuse to run

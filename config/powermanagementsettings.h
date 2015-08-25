@@ -33,7 +33,7 @@
 
 #include <LXQt/Settings>
 
-class PowerManagementSettings : public LxQt::Settings
+class PowerManagementSettings : public LXQt::Settings
 {
     Q_OBJECT
 

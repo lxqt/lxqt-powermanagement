@@ -36,7 +36,7 @@ private:
     IdlenessWatcher* mIdlenesswatcherd;
 
     PowerManagementSettings mSettings;
-    LxQt::Notification mNotification;
+    LXQt::Notification mNotification;
 };
 
 #endif	/* POWERMANAGEMENTD_H */

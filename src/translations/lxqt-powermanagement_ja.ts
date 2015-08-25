@@ -169,7 +169,7 @@
     <name>IdlenessWatcher</name>
     <message>
         <location filename="../idlenesswatcher.cpp" line="50"/>
-        <source>LxQt Idleness watcher failed to start</source>
+        <source>LXQt Idleness watcher failed to start</source>
         <translation>LXQtのアイドル状態監視は始動に失敗しました</translation>
     </message>
     <message>

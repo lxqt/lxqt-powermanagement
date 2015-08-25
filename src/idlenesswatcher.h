@@ -76,7 +76,7 @@ private:
     PowerManagementSettings mPSettings;
     QTimer mTimer;
     QProcess mLockProcess;
-    LxQt::Notification mErrorNotification;
+    LXQt::Notification mErrorNotification;
     QString mLockCommand;
     QDateTime mLockTime;
     QMap<uint,QString> mInhibitors;

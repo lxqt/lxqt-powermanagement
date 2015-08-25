@@ -142,7 +142,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="50"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>O LxQt não consegui encontrar qualquer bateria e a monitorização foi desativada</translation>
+        <translation>O LXQt não consegui encontrar qualquer bateria e a monitorização foi desativada</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="91"/>
@@ -169,7 +169,7 @@
     <name>IdlenessWatcher</name>
     <message>
         <location filename="../idlenesswatcher.cpp" line="50"/>
-        <source>LxQt Idleness watcher failed to start</source>
+        <source>LXQt Idleness watcher failed to start</source>
         <translation>O monitorizador de inatividade não foi iniciado</translation>
     </message>
     <message>
@@ -214,7 +214,7 @@
         <location filename="../powermanagementd.cpp" line="105"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>Está a executar a gestão de energia do LxQt pela primeira vez.
+        <translation>Está a executar a gestão de energia do LXQt pela primeira vez.
 Pode configurar as opções nas definições...</translation>
     </message>
     <message>
@@ -254,7 +254,7 @@ Pode configurar as opções nas definições...</translation>
     <message>
         <location filename="../trayicon.cpp" line="168"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - Powermanagement for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Gestor de energia do LxQt&lt;/b&gt;&lt;br/&gt;Gestão de energia para o ambiente de trabalho LxQt&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e outros colaboradores dos projetos Razor e LxQt&lt;/p&gt;&lt;p&gt; Direitos de autor &amp;copy; 2012-2015&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Gestor de energia do LXQt&lt;/b&gt;&lt;br/&gt;Gestão de energia para o ambiente de trabalho LXQt&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e outros colaboradores dos projetos Razor e LXQt&lt;/p&gt;&lt;p&gt; Direitos de autor &amp;copy; 2012-2015&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

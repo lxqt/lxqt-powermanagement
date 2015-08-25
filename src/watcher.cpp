@@ -47,7 +47,7 @@ void Watcher::doAction(int action)
         mLoop.exec();
     }
     else if (action >= 0)
-        mPower.doAction((LxQt::Power::Action) action);
+        mPower.doAction((LXQt::Power::Action) action);
 
     emit done();
 }

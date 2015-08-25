@@ -31,7 +31,7 @@
 #include "idlenesswatchersettings.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-    LxQt::ConfigDialog(tr("Power Management Settings"), new PowerManagementSettings(parent))
+    LXQt::ConfigDialog(tr("Power Management Settings"), new PowerManagementSettings(parent))
 {
     BatteryWatcherSettings* batteryWatcherSettings = new BatteryWatcherSettings(this);
     addPage(batteryWatcherSettings, tr("Battery"), "battery");

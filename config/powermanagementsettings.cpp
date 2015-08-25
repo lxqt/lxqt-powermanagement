@@ -51,7 +51,7 @@ namespace PowerManagementSettingsConstants
 
 using namespace PowerManagementSettingsConstants;
 
-PowerManagementSettings::PowerManagementSettings(QObject* parent) : LxQt::Settings("lxqt-powermanagement")
+PowerManagementSettings::PowerManagementSettings(QObject* parent) : LXQt::Settings("lxqt-powermanagement")
 {
 }
 

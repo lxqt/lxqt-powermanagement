@@ -47,7 +47,7 @@
 IdlenessWatcher::IdlenessWatcher(QObject* parent):
     Watcher(parent),
     mPSettings(),
-    mErrorNotification(tr("LxQt Idleness watcher failed to start")),
+    mErrorNotification(tr("LXQt Idleness watcher failed to start")),
     mDBusWatcher(this),
     mInhibitorCookie(0),
     mIsLocked(false)
@@ -61,7 +61,7 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     // Note that XCB is asynchronous, so we want to make requests ASAP and get the responses as late as possible.
 
     mScreen = screenOfDisplay(mConn, 0);
-    mErrorNotification.setUrgencyHint(LxQt::Notification::UrgencyCritical);
+    mErrorNotification.setUrgencyHint(LXQt::Notification::UrgencyCritical);
     mErrorNotification.setIcon("object-unlocked");
     mErrorNotification.setTimeout(0);
 
@@ -113,7 +113,7 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
 
     mErrorNotification.setActions(QStringList(tr("Configure...")));
 
-    qDebug() << "LxQt Screenlocker started.";
+    qDebug() << "LXQt Screenlocker started.";
     qDebug() << "timeout:" << getMaxIdleTimeoutMs() << "ms, lock command:" << mLockCommand;
     restartTimer();
 }

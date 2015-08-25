@@ -44,7 +44,7 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 
     if (devices.isEmpty())
     {
-	    LxQt::Notification::notify(tr("No battery!"),
+	    LXQt::Notification::notify(tr("No battery!"),
 	                               tr("LXQt could not find data about any battery - monitoring disabled"),
 	                               "lxqt-powermanagement");
     }
@@ -64,7 +64,7 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
     mBatteryInfoDialog = new BatteryInfoDialog(mBatteries);
 
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
-    connect(LxQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
+    connect(LXQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
 
     settingsChanged();
     batteryChanged();
@@ -77,7 +77,7 @@ BatteryWatcher::~BatteryWatcher()
 void BatteryWatcher::batteryChanged()
 {
     static QTime actionTime;
-    static LxQt::Notification *notification = 0;
+    static LXQt::Notification *notification = 0;
 
     double totalEnergyFull = 0;
     double totalEnergyNow = 0;
@@ -110,7 +110,7 @@ void BatteryWatcher::batteryChanged()
 
         if (!notification)
         {
-            notification = new LxQt::Notification(tr("Power low!"), this);
+            notification = new LXQt::Notification(tr("Power low!"), this);
             notification->setTimeout(2000);
         }
 
@@ -121,13 +121,13 @@ void BatteryWatcher::batteryChanged()
             int secondsToAction = milliSecondsToAction / 1000;
             switch (mSettings.getPowerLowAction())
             {
-            case LxQt::Power::PowerSuspend:
+            case LXQt::Power::PowerSuspend:
                 notification->setBody(tr("Suspending in %1 seconds").arg(secondsToAction));
                 break;
-            case LxQt::Power::PowerHibernate:
+            case LXQt::Power::PowerHibernate:
                 notification->setBody(tr("Hibernating in %1 seconds").arg(secondsToAction));
                 break;
-            case LxQt::Power::PowerShutdown:
+            case LXQt::Power::PowerShutdown:
                 notification->setBody(tr("Shutting down in %1 seconds").arg(secondsToAction));
                 break;
             }

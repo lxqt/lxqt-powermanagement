@@ -53,7 +53,7 @@ private:
     void inhibitSystemdLogin();
 
     Lid mLid;
-    LxQt::Power mLxQtPower;
+    LXQt::Power mLXQtPower;
     PowerManagementSettings mSettings;
     QDBusUnixFileDescriptor logindLock;
 };

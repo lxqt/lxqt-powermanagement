@@ -169,8 +169,8 @@
     <name>IdlenessWatcher</name>
     <message>
         <location filename="../idlenesswatcher.cpp" line="50"/>
-        <source>LxQt Idleness watcher failed to start</source>
-        <translation>Не удалось запустить наблюдение за простоем LxQt </translation>
+        <source>LXQt Idleness watcher failed to start</source>
+        <translation>Не удалось запустить наблюдение за простоем LXQt </translation>
     </message>
     <message>
         <location filename="../idlenesswatcher.cpp" line="73"/>

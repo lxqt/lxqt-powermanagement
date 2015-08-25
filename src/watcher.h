@@ -21,8 +21,8 @@ signals:
     void done();
 
 private:
-    LxQt::Power mPower;
-    LxQt::ScreenSaver mScreenSaver;
+    LXQt::Power mPower;
+    LXQt::ScreenSaver mScreenSaver;
     QEventLoop mLoop;
 };
 
