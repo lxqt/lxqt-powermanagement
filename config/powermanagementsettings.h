@@ -89,6 +89,15 @@ public:
 
     bool isIdlenessWatcherEnabled();
     void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
+
+    bool isBacklightWatcherEnabled();
+    void setBacklightWatcherEnabled(bool backlightWatcherEnabled);
+
+    int getBacklightBatteryLevel();
+    void setBacklightBatteryLevel(int level);
+
+    int getBacklightACLevel();
+    void setBacklightACLevel(int level);
 };
 
 

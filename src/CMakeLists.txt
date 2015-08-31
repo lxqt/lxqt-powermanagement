@@ -16,6 +16,11 @@ set(SOURCES
     trayicon.cpp
     iconproducer.cpp
     x11helper.cpp
+    backlightwatcher.cpp
+    backlight/backlight.cpp
+    backlight/backlightprovider.cpp
+    backlight/xrandrbacklight.cpp
+    backlight/sysbacklight.cpp
     ../config/powermanagementsettings.cpp
 )
 
@@ -84,6 +89,15 @@ find_library(XCB_DPMS_LIBRARY NAMES xcb-dpms
     ${PKG_XCB_DPMS_LIBRARY_DIRS}
 )
 
+pkg_check_modules(PKG_XCB_RANDR xcb-randr)
+find_path(XCB_RANDR_INCLUDE_DIR xcb/randr.h
+    ${PKG_XCB_RANDR_INCLUDE_DIRS}
+)
+find_library(XCB_RANDR_LIBRARY NAMES xcb-randr
+    PATHS
+    ${PKG_XCB_RANDR_LIBRARY_DIRS}
+)
+
 
 include_directories(
     ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
@@ -91,6 +105,7 @@ include_directories(
     ${X11_XCB_INCLUDE_DIR}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
+    ${XCB_RANDR_INCLUDE_DIR}
 )
 
 add_executable(lxqt-powermanagement
@@ -107,6 +122,7 @@ target_link_libraries(lxqt-powermanagement
     ${XCB_LIBRARY}
     ${XCB_SCREENSAVER_LIBRARY}
     ${XCB_DPMS_LIBRARY}
+    ${XCB_RANDR_LIBRARY}
     ${X11_XCB_LIBRARY}
     KF5::Solid
 )
