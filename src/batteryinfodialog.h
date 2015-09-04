@@ -1,3 +1,11 @@
+/*
+* Copyright (c) 2014 Christian Surlykke
+*
+* This file is part of the LXQt project. <http://lxqt.org>
+* It is distributed under the LGPL 2.1 or later license.
+* Please refer to the LICENSE file for a copy of the license.
+*/
+
 #ifndef BATTERYINFODIALOG_H
 #define BATTERYINFODIALOG_H
 
