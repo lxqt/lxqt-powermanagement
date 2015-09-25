@@ -44,7 +44,7 @@ BatteryInfoFrame::BatteryInfoFrame(Solid::Battery *battery) :
 
     QString vendor = QString("%1 %2").arg(battery->recallVendor()).arg(battery->serial());
     if (vendor.trimmed().isEmpty())
-        vendor = "Unkown";
+        vendor = "Unknown";
     mUi->vendorValue->setText(vendor);
 
     connect(mBattery, SIGNAL(energyChanged(double, const QString)), this, SLOT(onBatteryChanged()));
