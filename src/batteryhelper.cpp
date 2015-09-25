@@ -96,6 +96,6 @@ QString BatteryHelper::typeToString(Solid::Battery::BatteryType type)
             return tr("Monitor battery");
         case Solid::Battery::UnknownBattery:
         default:
-            return tr("Unkown battery");
+            return tr("Unknown battery");
     }
 }
