@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=LXQt Power Management
+Name=Power Management
 GenericName=Power Management Settings
 Comment=Various settings regarding Power Management like battery or idleness watcher
 Exec=lxqt-config-powermanagement
