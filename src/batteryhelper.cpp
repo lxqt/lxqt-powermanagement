@@ -77,7 +77,7 @@ QString BatteryHelper::typeToString(Solid::Battery::BatteryType type)
     switch (type)
     {
         case Solid::Battery::PdaBattery:
-            return tr("Personal Digital Assistent's battery");
+            return tr("Personal Digital Assistant's battery");
         case Solid::Battery::UpsBattery:
             return tr("Uninterruptible Power Supply's battery");
         case Solid::Battery::PrimaryBattery:
