@@ -125,7 +125,7 @@ padding-top: 30px;
          <item row="2" column="0">
           <widget class="QLabel" name="extMonOnAcActionLabel">
            <property name="text">
-            <string>On Ac</string>
+            <string>On AC</string>
            </property>
           </widget>
          </item>
