@@ -4,163 +4,317 @@
 <context>
     <name>Battery</name>
     <message>
-        <location filename="../battery.cpp" line="136"/>
         <source>Charging</source>
-        <translation>充電中</translation>
+        <translation type="vanished">充電中</translation>
     </message>
     <message>
-        <location filename="../battery.cpp" line="137"/>
         <source>Discharging</source>
-        <translation>放電中</translation>
+        <translation type="vanished">放電中</translation>
     </message>
     <message>
-        <location filename="../battery.cpp" line="138"/>
         <source>Empty</source>
-        <translation>空</translation>
+        <translation type="vanished">空</translation>
     </message>
     <message>
-        <location filename="../battery.cpp" line="139"/>
         <source>Fully charged</source>
-        <translation>満充電</translation>
+        <translation type="vanished">満充電</translation>
     </message>
     <message>
-        <location filename="../battery.cpp" line="140"/>
         <source>Pending charge</source>
-        <translation>充電中断中</translation>
+        <translation type="vanished">充電中断中</translation>
     </message>
     <message>
-        <location filename="../battery.cpp" line="141"/>
         <source>Pending discharge</source>
-        <translation>放電中断中</translation>
+        <translation type="vanished">放電中断中</translation>
     </message>
     <message>
-        <location filename="../battery.cpp" line="142"/>
         <source>Unknown</source>
-        <translation>不明</translation>
+        <translation type="vanished">不明</translation>
+    </message>
+</context>
+<context>
+    <name>BatteryHelper</name>
+    <message>
+        <location filename="../batteryhelper.cpp" line="42"/>
+        <source>Empty</source>
+        <translation type="unfinished">空</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="44"/>
+        <source>Discharging</source>
+        <translation type="unfinished">放電中</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="46"/>
+        <source>Fully charged</source>
+        <translation type="unfinished">満充電</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="49"/>
+        <source>Charging</source>
+        <translation type="unfinished">充電中</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="58"/>
+        <source>Lithium ion</source>
+        <translation type="unfinished">リチウムイオン</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="60"/>
+        <source>Lithium polymer</source>
+        <translation type="unfinished">リチウムポリマー</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="62"/>
+        <source>Lithium iron phosphate</source>
+        <translation type="unfinished">リン酸鉄リチウム</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="64"/>
+        <source>Lead acid</source>
+        <translation type="unfinished">鉛蓄電池</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="66"/>
+        <source>Nickel cadmium</source>
+        <translation type="unfinished">ニッカド</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="68"/>
+        <source>Nickel metal hydride</source>
+        <translation type="unfinished">ニッケル水素</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="71"/>
+        <source>Unknown</source>
+        <translation type="unfinished">不明</translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="80"/>
+        <source>Personal Digital Assistant&apos;s battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="82"/>
+        <source>Uninterruptible Power Supply&apos;s battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="84"/>
+        <source>Primary battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="86"/>
+        <source>Mouse battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="88"/>
+        <source>Keyboard battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="90"/>
+        <source>Keyboard and mouse&apos;s battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="92"/>
+        <source>Camera battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="94"/>
+        <source>Phone battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="96"/>
+        <source>Monitor battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="99"/>
+        <source>Unknown battery</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>BatteryInfo</name>
     <message>
-        <location filename="../batteryinfo.ui" line="14"/>
         <source>Power Management</source>
-        <translation>電源管理</translation>
+        <translation type="vanished">電源管理</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="25"/>
         <source>Battery info</source>
-        <translation>バッテリー情報</translation>
+        <translation type="vanished">バッテリー情報</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="40"/>
         <source>Energy Now:</source>
-        <translation>現在の容量:</translation>
+        <translation type="vanished">現在の容量:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="62"/>
         <source>Updated:</source>
-        <translation>更新:</translation>
+        <translation type="vanished">更新:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="72"/>
         <source>Technology:</source>
-        <translation>技術:</translation>
+        <translation type="vanished">技術:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="82"/>
         <source>Model:</source>
-        <translation>型式:</translation>
+        <translation type="vanished">型式:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="92"/>
         <source>Energy rate:</source>
-        <translation>エネルギー率:</translation>
+        <translation type="vanished">エネルギー率:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="102"/>
         <source>Voltage:</source>
-        <translation>電圧:</translation>
+        <translation type="vanished">電圧:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="112"/>
         <source>Energy Full, Design:</source>
-        <translation>満エネルギー、デザイン:</translation>
+        <translation type="vanished">満エネルギー、デザイン:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="129"/>
         <source>Energy Full:</source>
-        <translation>満エネルギー:</translation>
+        <translation type="vanished">満エネルギー:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.ui" line="181"/>
         <source>State:</source>
-        <translation>状態:</translation>
+        <translation type="vanished">状態:</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.cpp" line="74"/>
         <source>Lithium ion</source>
-        <translation>リチウムイオン</translation>
+        <translation type="vanished">リチウムイオン</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.cpp" line="75"/>
         <source>Lithium polymer</source>
-        <translation>リチウムポリマー</translation>
+        <translation type="vanished">リチウムポリマー</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.cpp" line="76"/>
         <source>Lithium iron phosphate</source>
-        <translation>リン酸鉄リチウム</translation>
+        <translation type="vanished">リン酸鉄リチウム</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.cpp" line="77"/>
         <source>Lead acid</source>
-        <translation>鉛蓄電池</translation>
+        <translation type="vanished">鉛蓄電池</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.cpp" line="78"/>
         <source>Nickel cadmium</source>
-        <translation>ニッカド</translation>
+        <translation type="vanished">ニッカド</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.cpp" line="79"/>
         <source>Nickel metal hydride</source>
-        <translation>ニッケル水素</translation>
+        <translation type="vanished">ニッケル水素</translation>
     </message>
     <message>
-        <location filename="../batteryinfo.cpp" line="80"/>
         <source>Unknown</source>
-        <translation>不明</translation>
+        <translation type="vanished">不明</translation>
+    </message>
+</context>
+<context>
+    <name>BatteryInfoDialog</name>
+    <message>
+        <location filename="../batteryinfodialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryinfodialog.cpp" line="22"/>
+        <source>Battery Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>BatteryInfoFrame</name>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="14"/>
+        <source>Power Management</source>
+        <translation type="unfinished">電源管理</translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="53"/>
+        <source>Temperature:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="63"/>
+        <source>Type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="73"/>
+        <source>State:</source>
+        <translation type="unfinished">状態:</translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="90"/>
+        <source>Energy Full Design:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="107"/>
+        <source>Energy Full:</source>
+        <translation type="unfinished">満エネルギー:</translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="124"/>
+        <source>Energy Now:</source>
+        <translation type="unfinished">現在の容量:</translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="141"/>
+        <source>Energy rate:</source>
+        <translation type="unfinished">エネルギー率:</translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="165"/>
+        <source>Technology:</source>
+        <translation type="unfinished">技術:</translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="182"/>
+        <source>Voltage:</source>
+        <translation type="unfinished">電圧:</translation>
+    </message>
+    <message>
+        <location filename="../batteryinfoframe.ui" line="192"/>
+        <source>Vendor:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>BatteryWatcher</name>
     <message>
-        <location filename="../batterywatcher.cpp" line="49"/>
+        <location filename="../batterywatcher.cpp" line="47"/>
         <source>No battery!</source>
         <translation>バッテリーがありません!</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="50"/>
+        <location filename="../batterywatcher.cpp" line="48"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
         <translation>バッテリーのデーターを見つけられませんので、監視機能は無効です</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="91"/>
+        <location filename="../batterywatcher.cpp" line="113"/>
         <source>Power low!</source>
         <translation>電源が少なくなっています!</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="103"/>
+        <location filename="../batterywatcher.cpp" line="125"/>
         <source>Suspending in %1 seconds</source>
         <translation>%1秒でサスペンドに入ります</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="106"/>
+        <location filename="../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %1 seconds</source>
         <translation>%1秒でハイバネートに入ります</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="109"/>
+        <location filename="../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %1 seconds</source>
         <translation>%1秒でシャットダウンします</translation>
     </message>
@@ -178,27 +332,27 @@
         <translation>D-Busインターフェース org.freedesktop.ScreenSaver が既に登録されています</translation>
     </message>
     <message>
-        <location filename="../idlenesswatcher.cpp" line="106"/>
+        <location filename="../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
         <translation>X11スクリーンセーバー拡張を使えません</translation>
     </message>
     <message>
-        <location filename="../idlenesswatcher.cpp" line="113"/>
+        <location filename="../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
         <translation>設定する</translation>
     </message>
     <message>
-        <location filename="../idlenesswatcher.cpp" line="181"/>
+        <location filename="../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
         <translation>エラー: スクリーンのロックが解除されました</translation>
     </message>
     <message>
-        <location filename="../idlenesswatcher.cpp" line="183"/>
+        <location filename="../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
         <translation>ロック用プログラム &quot;%1&quot; は、エラーコード %2 により終了しました</translation>
     </message>
     <message>
-        <location filename="../idlenesswatcher.cpp" line="185"/>
+        <location filename="../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
         <translation>ロック用プログラム &quot;%1&quot; は、エラーコード %2 によりクラッシュしました</translation>
     </message>
@@ -206,18 +360,18 @@
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../powermanagementd.cpp" line="104"/>
+        <location filename="../powermanagementd.cpp" line="107"/>
         <source>Power Management</source>
         <translation>電源管理</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="105"/>
+        <location filename="../powermanagementd.cpp" line="108"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>LXQt電源管理は初めて実行されましたので、設定を行ってください</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="106"/>
+        <location filename="../powermanagementd.cpp" line="109"/>
         <source>Configure...</source>
         <translation>設定する</translation>
     </message>
@@ -225,35 +379,52 @@ You can configure it from settings... </source>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="132"/>
+        <location filename="../trayicon.cpp" line="59"/>
         <source>Configure</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="133"/>
-        <location filename="../trayicon.cpp" line="167"/>
+        <location filename="../trayicon.cpp" line="61"/>
+        <location filename="../trayicon.cpp" line="92"/>
         <source>About</source>
         <translation>情報</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="134"/>
+        <location filename="../trayicon.cpp" line="63"/>
         <source>Disable icon</source>
         <translation>アイコンを無効</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="154"/>
+        <location filename="../trayicon.cpp" line="93"/>
+        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="111"/>
+        <source>LXQt Power Management info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="112"/>
+        <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="114"/>
+        <source>Configure now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>discharging</source>
-        <translation>放電中</translation>
+        <translation type="vanished">放電中</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="154"/>
         <source>charging</source>
-        <translation>充電中</translation>
+        <translation type="vanished">充電中</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="168"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - Powermanagement for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - LXQtデスクトップ環境の電源管理&lt;/p&gt;&lt;p&gt;  作者:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - その他 Razor-qtおよびLXQtプロジェクトのメンバー&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - LXQtデスクトップ環境の電源管理&lt;/p&gt;&lt;p&gt;  作者:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - その他 Razor-qtおよびLXQtプロジェクトのメンバー&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

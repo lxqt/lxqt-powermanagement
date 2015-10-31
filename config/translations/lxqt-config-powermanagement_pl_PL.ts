@@ -9,44 +9,70 @@
         <translation>Ustawienia monitorowania baterii</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.ui" line="37"/>
+        <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
         <translation>W&amp;łącz monitorowanie baterii</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.ui" line="55"/>
+        <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
         <translation>Ostrzeżenie:</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.ui" line="68"/>
+        <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
         <translation> sek</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.ui" line="78"/>
+        <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
         <translation>Poziom niski od:</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.ui" line="91"/>
+        <location filename="../batterywatchersettings.ui" line="90"/>
         <source> %</source>
         <translation> %</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.ui" line="98"/>
+        <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
         <translation>Użyj ikon z motywu:</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.ui" line="112"/>
+        <location filename="../batterywatchersettings.ui" line="125"/>
+        <location filename="../batterywatchersettings.cpp" line="93"/>
+        <source>Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batterywatchersettings.ui" line="162"/>
+        <source>Charging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batterywatchersettings.ui" line="200"/>
+        <source>Discharging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
         <translation>Gdy poziom jest niski:</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.ui" line="129"/>
+        <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
         <translation>Pokaż ikonę:</translation>
+    </message>
+    <message>
+        <location filename="../batterywatchersettings.cpp" line="93"/>
+        <source>built in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batterywatchersettings.cpp" line="98"/>
+        <source>Level: %1%</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -57,27 +83,27 @@
         <translation>Form</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="26"/>
+        <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
         <translation>W&amp;łącz monitorowanie bezczynności</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="47"/>
+        <location filename="../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
         <translation>Gdy bezczynny:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="66"/>
+        <location filename="../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
         <translation>Czas bezczynności:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="79"/>
+        <location filename="../idlenesswatchersettings.ui" line="73"/>
         <source> minutes</source>
         <translation>min</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="92"/>
+        <location filename="../idlenesswatchersettings.ui" line="86"/>
         <source> seconds</source>
         <translation>sek</translation>
     </message>
@@ -95,58 +121,62 @@
         <translation>W&amp;łącz monitorowanie pokrywy</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="45"/>
+        <location filename="../lidwatchersettings.ui" line="41"/>
         <source>Action when lid is closed</source>
         <translation>Reakcja na zamknięcie pokrywy</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="57"/>
-        <location filename="../lidwatchersettings.ui" line="160"/>
+        <location filename="../lidwatchersettings.ui" line="53"/>
+        <location filename="../lidwatchersettings.ui" line="118"/>
         <source>On Battery</source>
         <translation>Na baterii</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="77"/>
+        <location filename="../lidwatchersettings.ui" line="61"/>
         <source>Nothing</source>
         <translation>Brak</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="82"/>
+        <location filename="../lidwatchersettings.ui" line="66"/>
         <source>Suspend</source>
         <translation>Wstrzymaj</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="87"/>
+        <location filename="../lidwatchersettings.ui" line="71"/>
         <source>Hibernate</source>
         <translation>Hibernuj</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="92"/>
+        <location filename="../lidwatchersettings.ui" line="76"/>
         <source>Shut down</source>
         <translation>Wyłącz</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="100"/>
+        <location filename="../lidwatchersettings.ui" line="84"/>
+        <location filename="../lidwatchersettings.ui" line="128"/>
         <source>On AC</source>
         <translation>Na zasilaniu</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="139"/>
+        <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
         <translation>Przy używaniu &amp;zewnętrznego monitora</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="177"/>
         <source>On Ac</source>
-        <translation>Na zasilaniu</translation>
+        <translation type="vanished">Na zasilaniu</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="34"/>
         <source>LXQt Powermanagement Configuration</source>
-        <translation>LXQt Konfiguracja zarządzania energią</translation>
+        <translation type="vanished">LXQt Konfiguracja zarządzania energią</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="34"/>
+        <source>Power Management Settings</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
@@ -160,8 +190,12 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="45"/>
+        <source>Idle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>idle</source>
-        <translation>Bezczynność</translation>
+        <translation type="vanished">Bezczynność</translation>
     </message>
 </context>
 <context>
