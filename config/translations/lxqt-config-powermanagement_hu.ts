@@ -42,17 +42,17 @@
         <location filename="../batterywatchersettings.ui" line="125"/>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Előkép</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>Töltés</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>Kisütés</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>beépített</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Szint: %1%</translation>
     </message>
 </context>
 <context>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Fedélfelügyelet</translation>
+        <translation>Fedé&amp;lfelügyelet</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
@@ -176,7 +176,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Energiakezelés</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Tétlen</translation>
     </message>
     <message>
         <source>idle</source>
