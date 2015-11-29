@@ -296,7 +296,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>Το LXQT δεν μπόρεσε να βρει δεδομένα για οποιαδήποτε μπαταρία - η εποπτεία απενεργοποιήθηκε</translation>
+        <translation>Το LXQt δεν μπόρεσε να βρει δεδομένα για οποιαδήποτε μπαταρία - η εποπτεία απενεργοποιήθηκε</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="113"/>
