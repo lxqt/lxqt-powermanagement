@@ -42,17 +42,17 @@
         <location filename="../batterywatchersettings.ui" line="125"/>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Предварительный просмотр</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>Заряжается</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>Разряжается</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>встроенная</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Уровень: %1%</translation>
     </message>
 </context>
 <context>
@@ -80,12 +80,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Включить наблюдение за простоем</translation>
+        <translation>В&amp;ключить наблюдение за простоем</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
@@ -113,12 +113,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Включить наблюдение за крышкой</translation>
+        <translation>В&amp;ключить наблюдение за крышкой</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="76"/>
         <source>Shut down</source>
-        <translation>Выключить</translation>
+        <translation>Выключить компьютер</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="84"/>
@@ -160,23 +160,15 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation>При использовании внешнего монитора</translation>
-    </message>
-    <message>
-        <source>On Ac</source>
-        <translation type="vanished">От сети</translation>
+        <translation>При &amp;использовании внешнего монитора</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <source>LXQt Powermanagement Configuration</source>
-        <translation type="vanished">Настройка энергопотребления LXQt</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки управления энергопотреблением</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
@@ -191,11 +183,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>idle</source>
-        <translation type="vanished">бездействие</translation>
+        <translation>Бездействие</translation>
     </message>
 </context>
 <context>
@@ -208,7 +196,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>Блокирвать экран</translation>
+        <translation>Блокировать экран</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
