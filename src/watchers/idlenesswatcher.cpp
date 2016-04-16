@@ -25,14 +25,15 @@
 #include <xcb/dpms.h>
 #include <xcb/screensaver.h>
 #include <QCoreApplication>
-#include <QDebug>
 #include <QDBusServiceWatcher>
+#include <QDBusInterface>
+#include <QX11Info>
+#include <QDebug>
 
 #include <LXQt/ProgramFinder>
 
 #include "screensaveradaptor.h"
 #include "idlenesswatcher.h"
-#include "x11helper.h"
 
 /* lockers:
  *
@@ -53,7 +54,7 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     mIsLocked(false)
 {
     qDebug() << "Starting idlenesswatcher";
-    mConn = X11Helper::connection();
+    mConn = QX11Info::connection();
     xcb_prefetch_extension_data(mConn, &xcb_screensaver_id);
     xcb_prefetch_extension_data(mConn, &xcb_dpms_id);
     xcb_screensaver_query_version_cookie_t verCookie = xcb_screensaver_query_version_unchecked(mConn, XCB_SCREENSAVER_MAJOR_VERSION, XCB_SCREENSAVER_MINOR_VERSION);

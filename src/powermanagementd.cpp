@@ -26,12 +26,12 @@
 #include <QDebug>
 #include <QStringList>
 
+#include "watchers/idlenesswatcher.h"
+#include "watchers/lidwatcher.h"
+#include "watchers/batterywatcher.h"
 #include "batteryhelper.h"
 #include "powermanagementd.h"
 #include "../config/powermanagementsettings.h"
-#include "idlenesswatcher.h"
-#include "lidwatcher.h"
-#include "batterywatcher.h"
 
 #define CURRENT_RUNCHECK_LEVEL 1
 
