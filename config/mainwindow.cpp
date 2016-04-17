@@ -29,6 +29,7 @@
 #include "lidwatchersettings.h"
 #include "batterywatchersettings.h"
 #include "idlenesswatchersettings.h"
+#include "lockscreensettings.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     LXQt::ConfigDialog(tr("Power Management Settings"), new PowerManagementSettings(parent))
@@ -44,6 +45,10 @@ MainWindow::MainWindow(QWidget *parent) :
     IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(this);
     addPage(idlenessWatcherSettings, tr("Idle"), (QStringList() << "user-idle" << "user-away"));
     connect(this, SIGNAL(reset()), idlenessWatcherSettings, SLOT(loadSettings()));
+
+    LockScreenSettings* lockScreenSettings = new LockScreenSettings(this);
+    addPage(lockScreenSettings, tr("Lock Screen"), (QStringList() << "system-lock-screen"));
+    connect(this, SIGNAL(reset()), lockScreenSettings, SLOT(loadSettings()));
 
     emit reset();
 }

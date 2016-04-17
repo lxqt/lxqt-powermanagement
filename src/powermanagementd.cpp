@@ -26,12 +26,13 @@
 #include <QDebug>
 #include <QStringList>
 
+#include "watchers/idlenesswatcher.h"
+#include "watchers/lidwatcher.h"
+#include "watchers/batterywatcher.h"
+#include "watchers/lockscreenwatcher.h"
 #include "batteryhelper.h"
 #include "powermanagementd.h"
 #include "../config/powermanagementsettings.h"
-#include "idlenesswatcher.h"
-#include "lidwatcher.h"
-#include "batterywatcher.h"
 
 #define CURRENT_RUNCHECK_LEVEL 1
 
@@ -39,6 +40,7 @@ PowerManagementd::PowerManagementd() :
         mBatterywatcherd(0),
         mLidwatcherd(0),
         mIdlenesswatcherd(0),
+        mLockscreenwatcherd(0),
         mSettings()
  {
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
@@ -85,6 +87,15 @@ void PowerManagementd::settingsChanged()
         mIdlenesswatcherd = 0;
     }
 
+    if (mSettings.isLockScreenWatcherEnabled() && !mLockscreenwatcherd)
+    {
+        mLockscreenwatcherd = new LockScreenWatcher(this);
+    }
+    else if (mLockscreenwatcherd && !mSettings.isLockScreenWatcherEnabled())
+    {
+        mLockscreenwatcherd->deleteLater();
+        mLockscreenwatcherd = 0;
+    }
 }
 
 void PowerManagementd::runConfigure()

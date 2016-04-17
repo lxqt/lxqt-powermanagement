@@ -4,24 +4,25 @@ set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
 
 set(SOURCES
     watcher.cpp
-    batteryhelper.cpp
-    batteryinfoframe.cpp
-    batteryinfodialog.cpp
-    batterywatcher.cpp
-    idlenesswatcher.cpp
-    lid.cpp
-    lidwatcher.cpp
+    watchers/batterywatcher.cpp
+    watchers/batteryinfoframe.cpp
+    watchers/batteryinfodialog.cpp
+    watchers/idlenesswatcher.cpp
+    watchers/lid.cpp
+    watchers/lidwatcher.cpp
+    watchers/lockscreenwatcher.cpp
     main.cpp
+    batteryhelper.cpp
     powermanagementd.cpp
     trayicon.cpp
     iconproducer.cpp
-    x11helper.cpp
     ../config/powermanagementsettings.cpp
 )
 
 set(UI_FILES
-    batteryinfoframe.ui
-    batteryinfodialog.ui
+    watchers/batteryinfoframe.ui
+    watchers/batteryinfodialog.ui
+    watchers/lockscreenwatcher.ui
 )
 
 set(DESKTOP_FILES_IN
@@ -29,8 +30,8 @@ set(DESKTOP_FILES_IN
 )
 
 qt5_add_dbus_adaptor(SOURCES
-    org.freedesktop.ScreenSaver.xml
-    idlenesswatcher.h
+    watchers/org.freedesktop.ScreenSaver.xml
+    watchers/idlenesswatcher.h
     IdlenessWatcher
 )
 
