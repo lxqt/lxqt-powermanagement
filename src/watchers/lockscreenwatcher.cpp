@@ -31,6 +31,10 @@
 #include <QDebug>
 #include <unistd.h>
 
+/*
+ * Logind
+ */
+
 LogindProvider::LogindProvider(QObject *parent) :
     mInterface(QStringLiteral("org.freedesktop.login1"),
             QStringLiteral("/org/freedesktop/login1"),
@@ -79,13 +83,90 @@ void LogindProvider::release()
     }
 }
 
+/*
+ * ConsoleKit
+ */
+
+ConsoleKitProvider::ConsoleKitProvider(QObject *parent) :
+    mMethodInhibitNotPresent(false),
+    mInterface(QStringLiteral("org.freedesktop.ConsoleKit"),
+            QStringLiteral("/org/freedesktop/ConsoleKit/Manager"),
+            QStringLiteral("org.freedesktop.ConsoleKit.Manager"),
+            QDBusConnection::systemBus())
+
+{
+    connect(&mInterface, SIGNAL(PrepareForSleep(bool)),
+            this, SIGNAL(aboutToSleep(bool)));
+
+    // validate interface, look for melhod Inhibit
+    if (mInterface.isValid())
+    {
+        QDBusReply<QString> reply = QDBusInterface(
+                QStringLiteral("org.freedesktop.ConsoleKit"),
+                QStringLiteral("/org/freedesktop/ConsoleKit/Manager"),
+                QStringLiteral("org.freedesktop.DBus.Introspectable"),
+                QDBusConnection::systemBus())
+            .call(QStringLiteral("Introspect"));
+        mMethodInhibitNotPresent = reply.value().contains("Inhibit");
+    }
+}
+
+ConsoleKitProvider::~ConsoleKitProvider()
+{
+    release();
+}
+
+bool ConsoleKitProvider::isActive()
+{
+    return mInterface.isValid() && !mMethodInhibitNotPresent;
+}
+
+bool ConsoleKitProvider::inhibit()
+{
+    QDBusReply<QDBusUnixFileDescriptor> reply = mInterface.call(
+            QStringLiteral("Inhibit"),
+            QStringLiteral("sleep"),
+            QStringLiteral("LXQt Power Management"),
+            QStringLiteral("Start screen locker before sleep."),
+            QStringLiteral("delay"));
+    if (!reply.isValid())
+    {
+        qDebug() << "LockScreenWatcher: " << reply.error();
+        return false;
+    }
+    else
+        mFileDescriptor = reply.value();
+
+    return true;
+}
+
+void ConsoleKitProvider::release()
+{
+    if (mFileDescriptor.isValid())
+    {
+        ::close(mFileDescriptor.fileDescriptor());
+        mFileDescriptor.setFileDescriptor(-1);
+    }
+}
+
+/*
+ * Watcher
+ */
+
 LockScreenWatcher::LockScreenWatcher(QObject *parent)
 {
     mProvider = new LogindProvider(this);
     if (!mProvider->isActive())
     {
-        // mProvider->deleteLater();
-        // mProvider = new SomethingElse();
+        mProvider->deleteLater();
+        mProvider = nullptr;
+    }
+
+    mProvider = new ConsoleKitProvider(this);
+    if (mProvider->isActive())
+    {
+        mProvider->deleteLater();
+        mProvider = nullptr;
     }
 
     if (mProvider)

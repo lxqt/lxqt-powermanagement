@@ -76,6 +76,27 @@ private:
 };
 
 /*
+ * Provider for ConsoleKit
+ */
+class ConsoleKitProvider : public LockScreenProvider
+{
+    Q_OBJECT
+
+public:
+    explicit ConsoleKitProvider(QObject *parent = nullptr);
+    virtual ~ConsoleKitProvider();
+
+    bool isActive() override;
+    bool inhibit() override;
+    void release() override;
+
+private:
+    bool mMethodInhibitNotPresent;
+    QDBusInterface mInterface;
+    QDBusUnixFileDescriptor mFileDescriptor;
+};
+
+/*
  * Actual watcher
  */
 class LockScreenWatcher : public Watcher
