@@ -28,6 +28,7 @@
 #ifndef LOCKSCREENWATCHER_H
 #define LOCKSCREENWATCHER_H
 
+#include "watcher.h"
 #include "../config/powermanagementsettings.h"
 
 #include <QDBusInterface>
@@ -77,7 +78,7 @@ private:
 /*
  * Actual watcher
  */
-class LockScreenWatcher : public QObject
+class LockScreenWatcher : public Watcher
 {
     Q_OBJECT
 

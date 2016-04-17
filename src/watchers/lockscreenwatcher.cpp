@@ -29,7 +29,6 @@
 #include <LXQt/ScreenSaver>
 #include <QDBusReply>
 #include <QDebug>
-#include <QEventLoop>
 #include <unistd.h>
 
 LogindProvider::LogindProvider(QObject *parent) :
@@ -105,11 +104,7 @@ void LockScreenWatcher::aboutToSleep(bool beforeSleep)
 {
     if (beforeSleep)
     {
-        LXQt::ScreenSaver mScreenSaver;
-        QEventLoop loop;
-        connect(&mScreenSaver, &LXQt::ScreenSaver::activated,
-                &loop, &QEventLoop::quit);
-        mScreenSaver.lockScreen();
-        loop.exec();
+        // FIXME: don't use hardcoded value
+        doAction(-2);
     }
 }
