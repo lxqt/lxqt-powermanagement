@@ -10,6 +10,7 @@ set(SOURCES
     watchers/idlenesswatcher.cpp
     watchers/lid.cpp
     watchers/lidwatcher.cpp
+    watchers/lockscreenwatcher.cpp
     main.cpp
     batteryhelper.cpp
     powermanagementd.cpp
@@ -21,6 +22,7 @@ set(SOURCES
 set(UI_FILES
     watchers/batteryinfoframe.ui
     watchers/batteryinfodialog.ui
+    watchers/lockscreenwatcher.ui
 )
 
 set(DESKTOP_FILES_IN

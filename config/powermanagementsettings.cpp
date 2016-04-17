@@ -35,6 +35,7 @@ namespace PowerManagementSettingsConstants
     const QString ENABLE_BATTERY_WATCHER_KEY = "enableBatteryWatcher";
     const QString ENABLE_LID_WATCHER_KEY = "enableLidWatcher";
     const QString ENABLE_IDLENESS_WATCHER_KEY = "enableIdlenessWatcher";
+    const QString ENABLE_LOCKSCREEN_WATCHER_KEY = "enableLockScreenWatcher";
     const QString LID_CLOSED_ACTION_KEY = "lidClosedAction";
     const QString LID_CLOSED_AC_ACTION_KEY = "lidClosedAcAction";
     const QString LID_CLOSED_EXT_MON_ACTION_KEY = "lidClosedExtMonAction";
@@ -47,6 +48,7 @@ namespace PowerManagementSettingsConstants
     const QString USE_THEME_ICONS_KEY = "useThemeIcons";
     const QString IDLENESS_ACTION_KEY = "idlenessAction";
     const QString IDLENESS_TIME_SECS_KEY = "idlenessTimeSecs";
+    const QString LOCKSCREEN_CUSTOM_COMMAND_KEY = "lockScreenCustomCommand";
 }
 
 using namespace PowerManagementSettingsConstants;
@@ -222,4 +224,22 @@ void PowerManagementSettings::setIdlenessWatcherEnabled(bool idlenessWatcherEnab
     setValue(ENABLE_IDLENESS_WATCHER_KEY, idlenessWatcherEnabled);
 }
 
+bool PowerManagementSettings::isLockScreenWatcherEnabled()
+{
+    return value(ENABLE_LOCKSCREEN_WATCHER_KEY, true).toBool();
+}
 
+void PowerManagementSettings::setLockScreenWatcherEnabled(bool lockScreenWatcherEnabled)
+{
+    setValue(ENABLE_LOCKSCREEN_WATCHER_KEY, lockScreenWatcherEnabled);
+}
+
+QString PowerManagementSettings::customLockScreenCommand()
+{
+    return value(LOCKSCREEN_CUSTOM_COMMAND_KEY, QString()).toString();
+}
+
+void PowerManagementSettings::setCustomLockScreenCommand(QString command)
+{
+    setValue(LOCKSCREEN_CUSTOM_COMMAND_KEY, command.trimmed());
+}

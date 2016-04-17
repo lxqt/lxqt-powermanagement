@@ -89,6 +89,12 @@ public:
 
     bool isIdlenessWatcherEnabled();
     void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
+
+    bool isLockScreenWatcherEnabled();
+    void setLockScreenWatcherEnabled(bool lockScreenWatcherEnabled);
+
+    QString customLockScreenCommand();
+    void setCustomLockScreenCommand(QString command);
 };
 
 
