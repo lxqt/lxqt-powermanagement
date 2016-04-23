@@ -25,67 +25,24 @@
 #ifndef IDLENESSWATCHER_H
 #define IDLENESSWATCHER_H
 
-#include <xcb/xcb.h>
-#include <QMap>
-#include <QTimer>
-#include <QProcess>
-#include <QDateTime>
-#include <QDBusContext>
-#include <QDBusServiceWatcher>
-
-#include <LXQt/Settings>
-#include <LXQt/Notification>
-
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"
 
-class IdlenessWatcher : public Watcher, protected QDBusContext
+class IdlenessWatcher : public Watcher
 {
     Q_OBJECT
+
 public:
     explicit IdlenessWatcher(QObject* parent = 0);
-
-signals:
-    void ActiveChanged(bool in0);
-
-public slots:
-    void Lock();
-    uint GetSessionIdleTime();
-    uint GetActiveTime();
-    bool GetActive();
-    bool SetActive(bool activate);
-    void SimulateUserActivity();
-    uint Inhibit(const QString& applicationName, const QString& reasonForInhibit);
-    void UnInhibit(uint cookie);
-    uint Throttle(const QString& applicationName, const QString& reasonForThrottle);
-    void UnThrottle(uint cookie);
+    virtual ~IdlenessWatcher();
 
 private slots:
-    void idleTimeout();
-    void screenUnlocked(int exitCode, QProcess::ExitStatus exitStatus);
-    void notificationAction(int num);
-    void serviceUnregistered(const QString& service);
-    void restartTimer();
+    void setup();
+    void timeoutReached(int identifier);
+    void onSettingsChanged();
 
 private:
-    uint getIdleTimeMs();
-    uint getMaxIdleTimeoutMs();
-
-    static xcb_screen_t* screenOfDisplay(xcb_connection_t* mConn, int screen);
-
     PowerManagementSettings mPSettings;
-    QTimer mTimer;
-    QProcess mLockProcess;
-    LXQt::Notification mErrorNotification;
-    QString mLockCommand;
-    QDateTime mLockTime;
-    QMap<uint,QString> mInhibitors;
-    QDBusServiceWatcher mDBusWatcher;
-    xcb_connection_t* mConn;
-    xcb_screen_t* mScreen;
-    uint mInhibitorCookie;
-    bool mIsLocked;
-    bool mTurnOffDisplay;
 };
 
 #endif // IDLENESSWATCHER_H
