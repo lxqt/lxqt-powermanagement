@@ -1,5 +1,7 @@
 project(lxqt-powermanagement)
 
+find_package(X11 REQUIRED QUIET)
+
 set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
 
 set(SOURCES
@@ -118,6 +120,8 @@ target_link_libraries(lxqt-powermanagement
     ${XCB_SCREENSAVER_LIBRARY}
     ${XCB_DPMS_LIBRARY}
     ${X11_XCB_LIBRARY}
+    ${X11_Xscreensaver_LIB}
+    ${X11_X11_LIB}
     KF5::Solid
 )
 

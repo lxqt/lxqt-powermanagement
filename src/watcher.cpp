@@ -26,6 +26,7 @@
 #include <QDebug>
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"
+#include "x11helper.h"
 
 Watcher::Watcher(QObject *parent) :
     QObject(parent),
@@ -41,7 +42,7 @@ Watcher::~Watcher()
 void Watcher::doAction(int action)
 {
     // if (action == -1) { }
-    if (action == -2)
+    if (action == -2 && !X11Helper::isScreenSaverLocked())
     {
         mScreenSaver.lockScreen();
         mLoop.exec();
