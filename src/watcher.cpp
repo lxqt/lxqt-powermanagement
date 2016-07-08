@@ -31,7 +31,6 @@ Watcher::Watcher(QObject *parent) :
     QObject(parent),
     mScreenSaver(this)
 {
-    connect(&mScreenSaver, SIGNAL(done()), &mLoop, SLOT(quit()));
 }
 
 Watcher::~Watcher()
@@ -44,7 +43,6 @@ void Watcher::doAction(int action)
     if (action == -2)
     {
         mScreenSaver.lockScreen();
-        mLoop.exec();
     }
     else if (action >= 0)
         mPower.doAction((LXQt::Power::Action) action);

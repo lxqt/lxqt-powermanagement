@@ -31,7 +31,6 @@ signals:
 private:
     LXQt::Power mPower;
     LXQt::ScreenSaver mScreenSaver;
-    QEventLoop mLoop;
 };
 
 #endif // WATCHER_H
