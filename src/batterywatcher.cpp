@@ -122,13 +122,13 @@ void BatteryWatcher::batteryChanged()
             switch (mSettings.getPowerLowAction())
             {
             case LXQt::Power::PowerSuspend:
-                notification->setBody(tr("Suspending in %1 seconds").arg(secondsToAction));
+                notification->setBody(tr("Suspending in %n second(s)", nullptr, secondsToAction).arg(secondsToAction));
                 break;
             case LXQt::Power::PowerHibernate:
-                notification->setBody(tr("Hibernating in %1 seconds").arg(secondsToAction));
+                notification->setBody(tr("Hibernating in %n second(s)", nullptr, secondsToAction).arg(secondsToAction));
                 break;
             case LXQt::Power::PowerShutdown:
-                notification->setBody(tr("Shutting down in %1 seconds").arg(secondsToAction));
+                notification->setBody(tr("Shutting down in %n second(s)", nullptr, secondsToAction).arg(secondsToAction));
                 break;
             }
 
