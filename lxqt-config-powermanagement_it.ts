@@ -42,17 +42,17 @@
         <location filename="../../../batterywatchersettings.ui" line="125"/>
         <location filename="../../../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Anteprima</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>In carica</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>Scaricando</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="41"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>icone integrate</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Livello: %1%</translation>
     </message>
 </context>
 <context>
@@ -162,21 +162,13 @@
         <source>When &amp;using external monitor</source>
         <translation>Quando è in uso un monitor &amp;esterno</translation>
     </message>
-    <message>
-        <source>On Ac</source>
-        <translation type="vanished">Alimentazione di rete</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <source>LXQt Powermanagement Configuration</source>
-        <translation type="vanished">Configurazione gestione energetica di LXQt</translation>
-    </message>
-    <message>
         <location filename="../../../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni gestore energia</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="37"/>
@@ -191,13 +183,9 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Inattività</translation>
     </message>
-    <message>
-        <source>idle</source>
-        <translation type="vanished">Inattività</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>QObject</name>
     <message>
