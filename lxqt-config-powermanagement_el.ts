@@ -1,109 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE TS>
 <TS version="2.1" language="el">
 <context>
     <name>BatteryWatcherSettings</name>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="14"/>
+        <location line="14" filename="../../../batterywatchersettings.ui"/>
         <source>Battery Watcher Settings</source>
-        <translation>Ρυθμίσεις επόπτη μπαταρίας</translation>
+        <translation>Ρυθμίσεις του επόπτη συσσωρευτή</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="26"/>
+        <location line="26" filename="../../../batterywatchersettings.ui"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Ενεργοποίηση του επόπτη της μπαταρίας</translation>
+        <translation>&amp;Ενεργοποίηση του επόπτη του συσσωρευτή</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="54"/>
+        <location line="54" filename="../../../batterywatchersettings.ui"/>
         <source>Warning:</source>
         <translation>Προειδοποίηση:</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="67"/>
+        <location line="67" filename="../../../batterywatchersettings.ui"/>
         <source> seconds</source>
         <translation> δευτερόλεπτα</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="77"/>
+        <location line="77" filename="../../../batterywatchersettings.ui"/>
         <source>Level is low at:</source>
         <translation>Το επίπεδο είναι χαμηλό στο:</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="90"/>
+        <location line="90" filename="../../../batterywatchersettings.ui"/>
         <source> %</source>
         <translation> %</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="111"/>
+        <location line="111" filename="../../../batterywatchersettings.ui"/>
         <source>Use icons from theme:</source>
         <translation>Χρήση των εικονιδίων από το θέμα:</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="125"/>
-        <location filename="../../../batterywatchersettings.cpp" line="93"/>
+        <location line="125" filename="../../../batterywatchersettings.ui"/>
+        <location line="93" filename="../../../batterywatchersettings.cpp"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Προεπισκόπηση</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="162"/>
+        <location line="162" filename="../../../batterywatchersettings.ui"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>Φόρτιση</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="200"/>
+        <location line="200" filename="../../../batterywatchersettings.ui"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποφόρτιση</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="41"/>
+        <location line="41" filename="../../../batterywatchersettings.ui"/>
         <source>When power is low then:</source>
         <translation>Όταν η ενέργεια είναι χαμηλά τότε:</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.ui" line="97"/>
+        <location line="97" filename="../../../batterywatchersettings.ui"/>
         <source>Show icon:</source>
-        <translation>Εμφάνιση εικονιδίου:</translation>
+        <translation>Εμφάνιση του εικονιδίου:</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.cpp" line="93"/>
+        <location line="93" filename="../../../batterywatchersettings.cpp"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενσωματωμένο</translation>
     </message>
     <message>
-        <location filename="../../../batterywatchersettings.cpp" line="98"/>
+        <location line="98" filename="../../../batterywatchersettings.cpp"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Επίπεδο: %1%</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcherSettings</name>
     <message>
-        <location filename="../../../idlenesswatchersettings.ui" line="14"/>
+        <location line="14" filename="../../../idlenesswatchersettings.ui"/>
         <source>Form</source>
         <translation>Φόρμα</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatchersettings.ui" line="20"/>
+        <location line="20" filename="../../../idlenesswatchersettings.ui"/>
         <source>Enab&amp;le Idleness Watcher</source>
         <translation>Ενεργοποίηση του επόπτη α&amp;δράνειας</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatchersettings.ui" line="41"/>
+        <location line="41" filename="../../../idlenesswatchersettings.ui"/>
         <source>When idle then:</source>
         <translation>Όταν είναι αδρανής:</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatchersettings.ui" line="60"/>
+        <location line="60" filename="../../../idlenesswatchersettings.ui"/>
         <source>Idle time:</source>
         <translation>Χρόνος αδράνειας:</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatchersettings.ui" line="73"/>
+        <location line="73" filename="../../../idlenesswatchersettings.ui"/>
         <source> minutes</source>
         <translation> λεπτά</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatchersettings.ui" line="86"/>
+        <location line="86" filename="../../../idlenesswatchersettings.ui"/>
         <source> seconds</source>
         <translation> δευτερόλεπτα</translation>
     </message>
@@ -111,117 +111,117 @@
 <context>
     <name>LidWatcherSettings</name>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="14"/>
+        <location line="14" filename="../../../lidwatchersettings.ui"/>
         <source>Form</source>
         <translation>Φόρμα</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="26"/>
+        <location line="26" filename="../../../lidwatchersettings.ui"/>
         <source>Enable &amp;Lid Watcher</source>
         <translation>Ενεργοποίηση του επόπτη &amp;καλύμματος</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="41"/>
+        <location line="41" filename="../../../lidwatchersettings.ui"/>
         <source>Action when lid is closed</source>
         <translation>Ενέργεια κατά το κλείσιμο του καλύμματος</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="53"/>
-        <location filename="../../../lidwatchersettings.ui" line="118"/>
+        <location line="53" filename="../../../lidwatchersettings.ui"/>
+        <location line="118" filename="../../../lidwatchersettings.ui"/>
         <source>On Battery</source>
-        <translation>Σε μπαταρία</translation>
+        <translation>Σε συσσωρευτή</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="61"/>
+        <location line="61" filename="../../../lidwatchersettings.ui"/>
         <source>Nothing</source>
         <translation>Τίποτα</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="66"/>
+        <location line="66" filename="../../../lidwatchersettings.ui"/>
         <source>Suspend</source>
         <translation>Αναστολή</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="71"/>
+        <location line="71" filename="../../../lidwatchersettings.ui"/>
         <source>Hibernate</source>
         <translation>Νάρκη</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="76"/>
+        <location line="76" filename="../../../lidwatchersettings.ui"/>
         <source>Shut down</source>
         <translation>Τερματισμός</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="84"/>
-        <location filename="../../../lidwatchersettings.ui" line="128"/>
+        <location line="84" filename="../../../lidwatchersettings.ui"/>
+        <location line="128" filename="../../../lidwatchersettings.ui"/>
         <source>On AC</source>
         <translation>Σε τροφοδοτικό AC</translation>
     </message>
     <message>
-        <location filename="../../../lidwatchersettings.ui" line="97"/>
+        <location line="97" filename="../../../lidwatchersettings.ui"/>
         <source>When &amp;using external monitor</source>
         <translation>Όταν χρησιμοποιείται εξωτερική ο&amp;θόνη</translation>
     </message>
     <message>
         <source>On Ac</source>
-        <translation type="vanished">Σε τροφοδοτικό AC</translation>
+        <translation>Σε τροφοδοτικό AC</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>LXQt Powermanagement Configuration</source>
-        <translation type="vanished">Διαμόρφωση της διαχείρισης ενέργειας του LXQt</translation>
+        <translation>Διαμόρφωση της διαχείρισης ενέργειας του LXQt</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="34"/>
+        <location line="34" filename="../../../mainwindow.cpp"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ρυθμίσεις της διαχείρισης ενέργειας</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="37"/>
+        <location line="37" filename="../../../mainwindow.cpp"/>
         <source>Battery</source>
-        <translation>Μπαταρία</translation>
+        <translation>Συσσωρευτής</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="41"/>
+        <location line="41" filename="../../../mainwindow.cpp"/>
         <source>Lid</source>
         <translation>Κάλυμμα φορητού</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="45"/>
+        <location line="45" filename="../../../mainwindow.cpp"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Αδρανής</translation>
     </message>
     <message>
         <source>idle</source>
-        <translation type="vanished">Αδράνεια</translation>
+        <translation>Αδράνεια</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../../helpers.cpp" line="35"/>
+        <location line="35" filename="../../../helpers.cpp"/>
         <source>Nothing</source>
         <translation>Τίποτα</translation>
     </message>
     <message>
-        <location filename="../../../helpers.cpp" line="36"/>
+        <location line="36" filename="../../../helpers.cpp"/>
         <source>Lock screen</source>
         <translation>Κλείδωμα οθόνης</translation>
     </message>
     <message>
-        <location filename="../../../helpers.cpp" line="37"/>
+        <location line="37" filename="../../../helpers.cpp"/>
         <source>Suspend</source>
         <translation>Αναστολή</translation>
     </message>
     <message>
-        <location filename="../../../helpers.cpp" line="38"/>
+        <location line="38" filename="../../../helpers.cpp"/>
         <source>Hibernate</source>
         <translation>Νάρκη</translation>
     </message>
     <message>
-        <location filename="../../../helpers.cpp" line="39"/>
+        <location line="39" filename="../../../helpers.cpp"/>
         <source>Shutdown</source>
         <translation>Τερματισμός</translation>
     </message>
