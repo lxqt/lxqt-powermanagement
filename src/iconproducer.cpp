@@ -183,18 +183,18 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
     if (chargeLevel > 99)
         chargeLevel = 99;
 
-	double angle;
+    double angle;
     QString sweepFlag;
-	if (state == Solid::Battery::Discharging)
-	{
-		 angle = M_PI_2 + 2 * M_PI * chargeLevel/100;
-         sweepFlag = "0";
-	}
-	else 
-	{
-		angle = M_PI_2 - 2 *M_PI * chargeLevel/100;
-		sweepFlag = "1";
-	}
+    if (state == Solid::Battery::Discharging)
+    {
+        angle = M_PI_2 + 2 * M_PI * chargeLevel/100;
+        sweepFlag = "0";
+    }
+    else
+    {
+        angle = M_PI_2 - 2 *M_PI * chargeLevel/100;
+        sweepFlag = "1";
+    }
     double circle_endpoint_x = 80.0 * cos(angle) + 100;
     double circle_endpoint_y = -80.0 * sin(angle) + 100;
 
