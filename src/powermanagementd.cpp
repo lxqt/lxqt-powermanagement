@@ -25,6 +25,7 @@
 
 #include <QDebug>
 #include <QStringList>
+#include <QProcess>
 
 #include "batteryhelper.h"
 #include "powermanagementd.h"
