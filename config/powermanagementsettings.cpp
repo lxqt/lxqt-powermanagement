@@ -35,6 +35,7 @@ namespace PowerManagementSettingsConstants
     const QString ENABLE_BATTERY_WATCHER_KEY = "enableBatteryWatcher";
     const QString ENABLE_LID_WATCHER_KEY = "enableLidWatcher";
     const QString ENABLE_IDLENESS_WATCHER_KEY = "enableIdlenessWatcher";
+    const QString ENABLE_BACKLIGHT_WATCHER_KEY = "enableBacklightWatcher";
     const QString LID_CLOSED_ACTION_KEY = "lidClosedAction";
     const QString LID_CLOSED_AC_ACTION_KEY = "lidClosedAcAction";
     const QString LID_CLOSED_EXT_MON_ACTION_KEY = "lidClosedExtMonAction";
@@ -47,6 +48,8 @@ namespace PowerManagementSettingsConstants
     const QString USE_THEME_ICONS_KEY = "useThemeIcons";
     const QString IDLENESS_ACTION_KEY = "idlenessAction";
     const QString IDLENESS_TIME_SECS_KEY = "idlenessTimeSecs";
+    const QString BACKLIGHT_BATTERY_LEVEL_KEY = "backlightBatteryLevel";
+    const QString BACKLIGHT_AC_LEVEL_KEY = "backlightACLevel";
 }
 
 using namespace PowerManagementSettingsConstants;
@@ -222,4 +225,33 @@ void PowerManagementSettings::setIdlenessWatcherEnabled(bool idlenessWatcherEnab
     setValue(ENABLE_IDLENESS_WATCHER_KEY, idlenessWatcherEnabled);
 }
 
+bool PowerManagementSettings::isBacklightWatcherEnabled()
+{
+    return value(ENABLE_BACKLIGHT_WATCHER_KEY, false).toBool();
+}
+
+void PowerManagementSettings::setBacklightWatcherEnabled(bool backlightWatcherEnabled)
+{
+    setValue(ENABLE_BACKLIGHT_WATCHER_KEY, backlightWatcherEnabled);
+}
+
+int PowerManagementSettings::getBacklightACLevel()
+{
+    return value(BACKLIGHT_AC_LEVEL_KEY, 100).toInt();
+}
+
+void PowerManagementSettings::setBacklightACLevel(int level)
+{
+    setValue(BACKLIGHT_AC_LEVEL_KEY, level);
+}
+
+int PowerManagementSettings::getBacklightBatteryLevel()
+{
+    return value(BACKLIGHT_BATTERY_LEVEL_KEY, 70).toInt();
+}
+
+void PowerManagementSettings::setBacklightBatteryLevel(int level)
+{
+    setValue(BACKLIGHT_BATTERY_LEVEL_KEY, level);
+}
 

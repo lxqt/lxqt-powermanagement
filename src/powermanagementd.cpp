@@ -32,6 +32,7 @@
 #include "idlenesswatcher.h"
 #include "lidwatcher.h"
 #include "batterywatcher.h"
+#include "backlightwatcher.h"
 
 #define CURRENT_RUNCHECK_LEVEL 1
 
@@ -39,6 +40,7 @@ PowerManagementd::PowerManagementd() :
         mBatterywatcherd(0),
         mLidwatcherd(0),
         mIdlenesswatcherd(0),
+        mBacklightwatcherd(0),
         mSettings()
  {
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
@@ -85,6 +87,15 @@ void PowerManagementd::settingsChanged()
         mIdlenesswatcherd = 0;
     }
 
+    if (mSettings.isBacklightWatcherEnabled() && !mBacklightwatcherd)
+    {
+        mBacklightwatcherd = new BacklightWatcher(this);
+    }
+    else if (mBacklightwatcherd && ! mSettings.isBacklightWatcherEnabled())
+    {
+        mBacklightwatcherd->deleteLater();
+        mBacklightwatcherd = 0;
+    }
 }
 
 void PowerManagementd::runConfigure()

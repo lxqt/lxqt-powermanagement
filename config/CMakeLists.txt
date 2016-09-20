@@ -8,6 +8,7 @@ set(SOURCES
     lidwatchersettings.cpp
     batterywatchersettings.cpp
     idlenesswatchersettings.cpp
+    backlightwatchersettings.cpp
     powermanagementsettings.cpp
     helpers.cpp
     ../src/iconproducer.cpp
