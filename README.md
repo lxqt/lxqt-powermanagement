@@ -13,7 +13,7 @@ Warning messages are displayed on the desktop by [lxqt-notificationd](https://gi
 
 ### Compiling source code
 
-Runtime dependencies are UPower, X protocol C-language Binding (XCB), qtsvg and [liblxqt](https://github.com/lxde/liblxqt).   
+Runtime dependencies are UPower, KIdleTime, qtsvg and [liblxqt](https://github.com/lxde/liblxqt).   
 Additional build dependencies are CMake and Solid, optionally Git to pull latest VCS checkouts. The localization files were outsourced to repository [lxqt-l10n](https://github.com/lxde/lxqt-l10n) so the corresponding dependencies are needed, too. Please refer to this repository's `README.md` for further information.   
 
 Code configuration is handled by CMake. CMake variable `CMAKE_INSTALL_PREFIX` has to be set to `/usr` on most operating systems.   
