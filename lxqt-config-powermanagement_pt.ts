@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt">
+<TS version="2.0" language="pt">
 <context>
     <name>BatteryWatcherSettings</name>
     <message>
@@ -42,17 +42,17 @@
         <location filename="../../../batterywatchersettings.ui" line="125"/>
         <location filename="../../../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Pré-visualização</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>A carregar</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>A descarregar</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="41"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>incorporada</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Nível: %1%</translation>
     </message>
 </context>
 <context>
@@ -164,19 +164,19 @@
     </message>
     <message>
         <source>On Ac</source>
-        <translation type="vanished">Com corrente</translation>
+        <translation>Com corrente</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>LXQt Powermanagement Configuration</source>
-        <translation type="vanished">Configuração do gestor de energia do LXQt</translation>
+        <translation>Configuração do gestor de energia do LXQt</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Definições de energia</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="37"/>
@@ -191,11 +191,11 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Inatividade</translation>
     </message>
     <message>
         <source>idle</source>
-        <translation type="vanished">inatividade</translation>
+        <translation>inatividade</translation>
     </message>
 </context>
 <context>
