@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt">
+<TS version="2.1" language="pt">
 <context>
     <name>Battery</name>
     <message>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../../../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Bateria de PDA</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Bateria de UPS</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="84"/>
@@ -196,7 +196,7 @@
     </message>
     <message>
         <source>Lithium iron phosphate</source>
-        <translation>Fosfato de Ferro-Lítio</translation>
+        <translation>Fosfato de ferro-lítio</translation>
     </message>
     <message>
         <source>Lead acid</source>
@@ -204,11 +204,11 @@
     </message>
     <message>
         <source>Nickel cadmium</source>
-        <translation>Níquel-Cádmio</translation>
+        <translation>Níquel-cádmio</translation>
     </message>
     <message>
         <source>Nickel metal hydride</source>
-        <translation>Níquel-Hidreto Metálico</translation>
+        <translation>Níquel-hidreto metálico</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -225,7 +225,7 @@
     <message>
         <location filename="../../../batteryinfodialog.cpp" line="22"/>
         <source>Battery Info</source>
-        <translation>Info da bateria</translation>
+        <translation>Informações da bateria</translation>
     </message>
 </context>
 <context>
@@ -306,12 +306,12 @@
     <message>
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %1 seconds</source>
-        <translation>Suspensão dentro de %1 segundos</translation>
+        <translation>A suspender dentro de %1 segundos</translation>
     </message>
     <message>
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %1 seconds</source>
-        <translation>Hibernação dentro de %1 segundos</translation>
+        <translation>A hibernar dentro de %1 segundos</translation>
     </message>
     <message>
         <location filename="../../../batterywatcher.cpp" line="131"/>
@@ -334,7 +334,7 @@
     <message>
         <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>A extensão X 11 Screensaver não pode ser utilizada</translation>
+        <translation>A extensão X11 Screensaver não pode ser utilizada</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatcher.cpp" line="114"/>
@@ -349,12 +349,12 @@
     <message>
         <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>O bloqueio do programa &quot;%1&quot; terminou com o erro &quot;%2&quot;</translation>
+        <translation>O bloqueio do programa &quot;%1&quot; devolveu o erro &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>O bloqueio do programa &quot;%1&quot; crashou com o erro &quot;%2&quot;</translation>
+        <translation>O bloqueio do programa &quot;%1&quot; terminou com o erro &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -398,12 +398,12 @@ Pode configurar as opções nas definições...</translation>
     <message>
         <location filename="../../../trayicon.cpp" line="93"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt; &lt;b&gt;Gestão de energia do LxQt&lt;/b&gt;&lt;br/&gt; - Gestão de energia para o LxQt Desktop Environment&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt; &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e mais algumas pessoas das equipas de desenvolvimento do Razor e do LxQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2016&lt;/p&gt;</translation>
+        <translation>&lt;p&gt; &lt;b&gt;Gestão de energia do LXQt&lt;/b&gt;&lt;br/&gt; - Gestão de energia para o LXQt Desktop Environment&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt; &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e mais algumas pessoas das equipas de desenvolvimento do Razor e do LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2016&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="111"/>
         <source>LXQt Power Management info</source>
-        <translation>Informações da gestão de energia do LxQt</translation>
+        <translation>Informações da gestão de energia do LXQt</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="112"/>
@@ -425,7 +425,7 @@ Pode configurar as opções nas definições...</translation>
     </message>
     <message>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - Powermanagement for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Gestor de energia do LXQt&lt;/b&gt;&lt;br/&gt;Gestão de energia para o ambiente de trabalho LXQt&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e outros colaboradores dos projetos Razor e LXQt&lt;/p&gt;&lt;p&gt; Direitos de autor &amp;copy; 2012-2015&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Gestor de energia do LXQt&lt;/b&gt;&lt;br/&gt;Gestão de energia para o  LXQt Desktop Environment&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e outros colaboradores dos projetos Razor e LXQt&lt;/p&gt;&lt;p&gt; Copyright &amp;copy; 2012-2016&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
