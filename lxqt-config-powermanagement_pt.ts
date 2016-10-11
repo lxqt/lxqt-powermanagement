@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt">
+<TS version="2.1" language="pt">
 <context>
     <name>BatteryWatcherSettings</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location filename="../../../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Ativar monitorizador de energia</translation>
+        <translation>Ativar mo&amp;nitorizador de energia</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="54"/>
