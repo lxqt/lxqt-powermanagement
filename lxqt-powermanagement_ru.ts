@@ -5,31 +5,31 @@
     <name>Battery</name>
     <message>
         <source>Charging</source>
-        <translation type="vanished">Заряжается</translation>
+        <translation>Заряжается</translation>
     </message>
     <message>
         <source>Discharging</source>
-        <translation type="vanished">Разряжается</translation>
+        <translation>Разряжается</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation type="vanished">Пустая</translation>
+        <translation>Пустая</translation>
     </message>
     <message>
         <source>Fully charged</source>
-        <translation type="vanished">Полностью заряжена</translation>
+        <translation>Полностью заряжена</translation>
     </message>
     <message>
         <source>Pending charge</source>
-        <translation type="vanished">Ожидает заряда</translation>
+        <translation>Ожидает заряда</translation>
     </message>
     <message>
         <source>Pending discharge</source>
-        <translation type="vanished">Ожидает разряда</translation>
+        <translation>Ожидает разряда</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="vanished">Неизвестно</translation>
+        <translation>Неизвестно</translation>
     </message>
 </context>
 <context>
@@ -37,178 +37,178 @@
     <message>
         <location filename="../../../batteryhelper.cpp" line="42"/>
         <source>Empty</source>
-        <translation type="unfinished">Пустая</translation>
+        <translation>Пустая</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="44"/>
         <source>Discharging</source>
-        <translation type="unfinished">Разряжается</translation>
+        <translation>Разряжается</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="46"/>
         <source>Fully charged</source>
-        <translation type="unfinished">Полностью заряжена</translation>
+        <translation>Полностью заряжена</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="49"/>
         <source>Charging</source>
-        <translation type="unfinished">Заряжается</translation>
+        <translation>Заряжается</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="58"/>
         <source>Lithium ion</source>
-        <translation type="unfinished">Литий-ионная</translation>
+        <translation>Литий-ионная</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="60"/>
         <source>Lithium polymer</source>
-        <translation type="unfinished">Литий-полимерная</translation>
+        <translation>Литий-полимерная</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="62"/>
         <source>Lithium iron phosphate</source>
-        <translation type="unfinished">Литий-железо-фосфатная</translation>
+        <translation>Литий-железо-фосфатная</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="64"/>
         <source>Lead acid</source>
-        <translation type="unfinished">Свинцово-кислотная</translation>
+        <translation>Свинцово-кислотная</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="66"/>
         <source>Nickel cadmium</source>
-        <translation type="unfinished">Никель-кадмиевая</translation>
+        <translation>Никель-кадмиевая</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="68"/>
         <source>Nickel metal hydride</source>
-        <translation type="unfinished">Никель-металл-гидридная</translation>
+        <translation>Никель-метал-гидридная</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="71"/>
         <source>Unknown</source>
-        <translation type="unfinished">Неизвестно</translation>
+        <translation>Неизвестно</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея карманного персонального компьютера</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея источника бесперебойного электропитания</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="84"/>
         <source>Primary battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Основная батарея</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="86"/>
         <source>Mouse battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея мыши</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="88"/>
         <source>Keyboard battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея клавиатуры</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="90"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея мыши и клавиатуры</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="92"/>
         <source>Camera battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея камеры</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="94"/>
         <source>Phone battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея телефона</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="96"/>
         <source>Monitor battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея монитора</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="99"/>
         <source>Unknown battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Неизвестная батарея </translation>
     </message>
 </context>
 <context>
     <name>BatteryInfo</name>
     <message>
         <source>Power Management</source>
-        <translation type="vanished">Управление энергопотреблением</translation>
+        <translation>Управление энергопотреблением</translation>
     </message>
     <message>
         <source>Battery info</source>
-        <translation type="vanished">Информация о батарее</translation>
+        <translation>Информация о батарее</translation>
     </message>
     <message>
         <source>Energy Now:</source>
-        <translation type="vanished">Заряд сейчас:</translation>
+        <translation>Заряд сейчас:</translation>
     </message>
     <message>
         <source>Updated:</source>
-        <translation type="vanished">Обновлено:</translation>
+        <translation>Обновлено:</translation>
     </message>
     <message>
         <source>Technology:</source>
-        <translation type="vanished">Технология:</translation>
+        <translation>Технология:</translation>
     </message>
     <message>
         <source>Model:</source>
-        <translation type="vanished">Модель:</translation>
+        <translation>Модель:</translation>
     </message>
     <message>
         <source>Energy rate:</source>
-        <translation type="vanished">Мощность тока:</translation>
+        <translation>Мощность тока:</translation>
     </message>
     <message>
         <source>Voltage:</source>
-        <translation type="vanished">Напряжение:</translation>
+        <translation>Напряжение:</translation>
     </message>
     <message>
         <source>Energy Full, Design:</source>
-        <translation type="vanished">Максимальный заряд:</translation>
+        <translation>Максимальный заряд:</translation>
     </message>
     <message>
         <source>State:</source>
-        <translation type="vanished">Состояние:</translation>
+        <translation>Состояние:</translation>
     </message>
     <message>
         <source>Lithium ion</source>
-        <translation type="vanished">Литий-ионная</translation>
+        <translation>Литий-ионная</translation>
     </message>
     <message>
         <source>Lithium polymer</source>
-        <translation type="vanished">Литий-полимерная</translation>
+        <translation>Литий-полимерная</translation>
     </message>
     <message>
         <source>Lithium iron phosphate</source>
-        <translation type="vanished">Литий-железо-фосфатная</translation>
+        <translation>Литий-железо-фосфатная</translation>
     </message>
     <message>
         <source>Lead acid</source>
-        <translation type="vanished">Свинцово-кислотная</translation>
+        <translation>Свинцово-кислотная</translation>
     </message>
     <message>
         <source>Nickel cadmium</source>
-        <translation type="vanished">Никель-кадмиевая</translation>
+        <translation>Никель-кадмиевая</translation>
     </message>
     <message>
         <source>Nickel metal hydride</source>
-        <translation type="vanished">Никель-металл-гидридная</translation>
+        <translation>Никель-металл-гидридная</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="vanished">Неизвестно</translation>
+        <translation>Неизвестно</translation>
     </message>
 </context>
 <context>
@@ -216,12 +216,12 @@
     <message>
         <location filename="../../../batteryinfodialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Диалог</translation>
     </message>
     <message>
         <location filename="../../../batteryinfodialog.cpp" line="22"/>
         <source>Battery Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Информация о батарее</translation>
     </message>
 </context>
 <context>
@@ -229,57 +229,57 @@
     <message>
         <location filename="../../../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation type="unfinished">Управление энергопотреблением</translation>
+        <translation>Управление энергопотреблением</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="53"/>
         <source>Temperature:</source>
-        <translation type="unfinished"></translation>
+        <translation>Температура:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="63"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="73"/>
         <source>State:</source>
-        <translation type="unfinished">Состояние:</translation>
+        <translation>Состояние:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальный заряд:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="107"/>
         <source>Energy Full:</source>
-        <translation type="unfinished"></translation>
+        <translation>Полный заряд:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation type="unfinished">Заряд сейчас:</translation>
+        <translation>Заряд сейчас:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation type="unfinished">Мощность тока:</translation>
+        <translation>Мощность тока:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="165"/>
         <source>Technology:</source>
-        <translation type="unfinished">Технология:</translation>
+        <translation>Технология:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="182"/>
         <source>Voltage:</source>
-        <translation type="unfinished">Напряжение:</translation>
+        <translation>Напряжение:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Производитель:</translation>
     </message>
 </context>
 <context>
@@ -377,11 +377,11 @@ You can configure it from settings... </source>
     <name>TrayIcon</name>
     <message>
         <source>discharging</source>
-        <translation type="vanished">разряжается</translation>
+        <translation>разряжается</translation>
     </message>
     <message>
         <source>charging</source>
-        <translation type="vanished">заряжается</translation>
+        <translation>заряжается</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="61"/>
@@ -402,26 +402,26 @@ You can configure it from settings... </source>
     <message>
         <location filename="../../../trayicon.cpp" line="93"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Управление энергопотреблением LXQt&lt;/b&gt;&lt;br/&gt;  - Управление энергопотреблением для окружения рабочего стола LXQt&lt;/p&gt;&lt;p&gt; Авторы:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и другие из проектов Razor и LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="111"/>
         <source>LXQt Power Management info</source>
-        <translation type="unfinished"></translation>
+        <translation>Сведения об управлении энергопотреблением LXQt</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="112"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Значок в системном локе для управление энергопотреблением может быть включен в &lt;i&gt;Настройках управления энергопотреблением&lt;</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="114"/>
         <source>Configure now</source>
-        <translation type="unfinished"></translation>
+        <translation>Настроить сейчас</translation>
     </message>
     <message>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - Powermanagement for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;  &lt;b&gt;Управление энергопотреблением LXQt&lt;/b&gt;&lt;br/&gt;  - Управление энергопотреблением для окружения рабочего стола LXQt&lt;/p&gt;&lt;p&gt;  Авторы:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и другие из проектов Razor и LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Управление энергопотреблением LXQt&lt;/b&gt;&lt;br/&gt;  - Управление энергопотреблением для окружения рабочего стола LXQt&lt;/p&gt;&lt;p&gt;  Авторы:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и другие из проектов Razor и LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
