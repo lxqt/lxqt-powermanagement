@@ -2,23 +2,29 @@ cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 
 project(lxqt-powermanagement)
 
-option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
+include(GNUInstallDirs)
 
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-find_package(Qt5Widgets REQUIRED)
+option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
+
 find_package(Qt5DBus REQUIRED)
-find_package(Qt5X11Extras REQUIRED)
-find_package(Qt5Svg REQUIRED)
 find_package(Qt5LinguistTools REQUIRED QUIET)
-find_package(lxqt REQUIRED QUIET)
+find_package(Qt5Svg REQUIRED)
+find_package(Qt5Widgets REQUIRED)
+find_package(Qt5X11Extras REQUIRED)
+message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
+
 find_package(KF5Solid REQUIRED)
 
-include(GNUInstallDirs)
+find_package(lxqt REQUIRED)
+
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
+
+# Translations **********************************
 include(LXQtTranslate)
 
 add_subdirectory(config)
