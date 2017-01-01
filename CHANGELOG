@@ -1,7 +1,16 @@
 
-lxqt-powermanagement-0.11.0 / 2016-09-24
+lxqt-powermanagement-0.11.1 / 2017-01-01
 ========================================
 
+  * Add lxqt-config-powermanagement_da.desktop
+  * Create lxqt-config-powermanagement_fr.desktop
+  * Make CMakeLists.txt more uniform.
+  * Remove cpack (#43)
+
+0.11.0 / 2016-09-24
+===================
+
+  * Release 0.11.0: Add changelog
   * README.md: Replace dependency XCB with KIdleTime
   * Idleness Watcher: rely on KIdleTime instead of XCB (#33)
   * fix indents
