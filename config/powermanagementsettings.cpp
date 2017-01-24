@@ -81,7 +81,7 @@ void PowerManagementSettings::setBatteryWatcherEnabled(bool batteryWatcherEnable
 
 int PowerManagementSettings::getPowerLowAction()
 {
-    return value(POWER_LOW_ACTION_KEY, 0).toInt();
+    return value(POWER_LOW_ACTION_KEY, -1).toInt();
 }
 
 void PowerManagementSettings::setPowerLowAction(int powerLowAction)
@@ -141,7 +141,7 @@ void PowerManagementSettings::setLidWatcherEnabled(bool lidWatcherEnabled)
 
 int PowerManagementSettings::getLidClosedAcAction()
 {
-    return value(LID_CLOSED_AC_ACTION_KEY, 0).toInt();
+    return value(LID_CLOSED_AC_ACTION_KEY, -1).toInt();
 }
 
 void PowerManagementSettings::setLidClosedAcAction(int lidClosedAcAction)
@@ -151,7 +151,7 @@ void PowerManagementSettings::setLidClosedAcAction(int lidClosedAcAction)
 
 int PowerManagementSettings::getLidClosedAction()
 {
-    return value(LID_CLOSED_ACTION_KEY, 0).toInt();
+    return value(LID_CLOSED_ACTION_KEY, -1).toInt();
 }
 
 void PowerManagementSettings::setLidClosedAction(int lidClosedAction)
@@ -161,7 +161,7 @@ void PowerManagementSettings::setLidClosedAction(int lidClosedAction)
 
 int PowerManagementSettings::getLidClosedExtMonAcAction()
 {
-    return value(LID_CLOSED_EXT_MON_AC_ACTION_KEY, 0).toInt();
+    return value(LID_CLOSED_EXT_MON_AC_ACTION_KEY, -1).toInt();
 }
 
 void PowerManagementSettings::setLidClosedExtMonAcAction(int lidClosedExtMonAcAction)
@@ -171,7 +171,7 @@ void PowerManagementSettings::setLidClosedExtMonAcAction(int lidClosedExtMonAcAc
 
 int PowerManagementSettings::getLidClosedExtMonAction()
 {
-    return value(LID_CLOSED_EXT_MON_ACTION_KEY, 0).toInt();
+    return value(LID_CLOSED_EXT_MON_ACTION_KEY, -1).toInt();
 }
 
 void PowerManagementSettings::setLidClosedExtMonAction(int lidClosedExtMonAction)
