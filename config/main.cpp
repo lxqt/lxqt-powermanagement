@@ -27,11 +27,23 @@
 
 #include <LXQt/SingleApplication>
 
+#include <QCommandLineParser>
+
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
     LXQt::SingleApplication a(argc, argv);
+
+    QCommandLineParser parser;
+    parser.setApplicationDescription(QStringLiteral("LXQt Config Powermanagement"));
+    const QString VERINFO = QStringLiteral(LXQT_POWERMANAGEMENT_VERSION
+                                           "\nliblxqt   " LXQT_VERSION
+                                           "\nQt        " QT_VERSION_STR);
+    a.setApplicationVersion(VERINFO);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    parser.process(a);
 
     MainWindow mainWindow;
     mainWindow.setWindowIcon(QIcon::fromTheme("preferences-system-power-management"));

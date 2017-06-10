@@ -25,6 +25,7 @@
 
 #include <QDBusConnection>
 #include <QDebug>
+#include <QCommandLineParser>
 
 #include <LXQt/Application>
 
@@ -35,6 +36,16 @@ int main(int argc, char *argv[])
 
     LXQt::Application a(argc, argv);
     a.setQuitOnLastWindowClosed(false);
+
+    QCommandLineParser parser;
+    parser.setApplicationDescription(QStringLiteral("LXQt Powermanagement Daemon"));
+    const QString VERINFO = LXQT_POWERMANAGEMENT_VERSION \
+                            "\nliblxqt   " LXQT_VERSION \
+                            "\nQt        " QT_VERSION_STR;
+    a.setApplicationVersion(VERINFO);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    parser.process(a);
 
     // To ensure only one instance of lxqt-powermanagement is running we register as a DBus service and refuse to run
     // if not able to do so.
