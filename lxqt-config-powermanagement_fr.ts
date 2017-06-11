@@ -6,22 +6,22 @@
     <message>
         <location filename="../../../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Paramétrage du contrôle des batteries</translation>
+        <translation>Paramétrage de la surveillance de la batterie</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Valider le contrôle des datteries</translation>
+        <translation>&amp;Activer la surveillance de la batterie</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Que faire si la batterie est faible :</translation>
+        <translation>Quand la batterie est faible :</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation>Attention :</translation>
+        <translation>Avertissement :</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="67"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation>Niveau %1%</translation>
+        <translation>Niveau : %1%</translation>
     </message>
 </context>
 <context>
@@ -85,22 +85,22 @@
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Valider le contrôle de &amp;veille</translation>
+        <translation>Configurer le comportement en cas d&apos;&amp;inactivité</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
-        <translation>En veille, alors :</translation>
+        <translation>En cas d&apos;inactivité :</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
-        <translation>Durée de veille :</translation>
+        <translation>Temps d&apos;inactivité :</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="73"/>
         <source> minutes</source>
-        <translation> mn</translation>
+        <translation> min</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="86"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../../../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Valider le &amp;contrôle du capot</translation>
+        <translation>Activer la &amp;surveillance du capot</translation>
     </message>
     <message>
         <location filename="../../../lidwatchersettings.ui" line="41"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../../../lidwatchersettings.ui" line="61"/>
         <source>Nothing</source>
-        <translation>Rien</translation>
+        <translation>Ne rien faire</translation>
     </message>
     <message>
         <location filename="../../../lidwatchersettings.ui" line="66"/>
@@ -155,7 +155,7 @@
         <location filename="../../../lidwatchersettings.ui" line="84"/>
         <location filename="../../../lidwatchersettings.ui" line="128"/>
         <source>On AC</source>
-        <translation>Sur prise de courant</translation>
+        <translation>Branché</translation>
     </message>
     <message>
         <location filename="../../../lidwatchersettings.ui" line="97"/>
@@ -183,7 +183,7 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation>Veille</translation>
+        <translation>Inactivité</translation>
     </message>
 </context>
 <context>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../../../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation>Aucun</translation>
+        <translation>Ne rien faire</translation>
     </message>
     <message>
         <location filename="../../../helpers.cpp" line="36"/>
@@ -201,17 +201,17 @@
     <message>
         <location filename="../../../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation>Suspension</translation>
+        <translation>Suspendre</translation>
     </message>
     <message>
         <location filename="../../../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation>Hibernation</translation>
+        <translation>Hiberner</translation>
     </message>
     <message>
         <location filename="../../../helpers.cpp" line="39"/>
         <source>Shutdown</source>
-        <translation>Arrêt</translation>
+        <translation>Arrêter</translation>
     </message>
 </context>
 </TS>
