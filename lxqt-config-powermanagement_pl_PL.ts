@@ -42,17 +42,17 @@
         <location filename="../../../batterywatchersettings.ui" line="125"/>
         <location filename="../../../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Podgląd</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>Ładowanie</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozładowywanie</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="41"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>wbudowana</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Poziom: %1%</translation>
     </message>
 </context>
 <context>
@@ -176,7 +176,7 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia zarządzania energią</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="37"/>
