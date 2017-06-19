@@ -57,7 +57,7 @@
     <message>
         <location filename="../../../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation type="unfinished">Pil durumu kritik seviyedeyken:</translation>
+        <translation>Pil durumu kritik seviyedeyken:</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="97"/>
