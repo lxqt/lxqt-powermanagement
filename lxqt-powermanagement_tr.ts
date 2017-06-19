@@ -36,22 +36,22 @@
     <message>
         <location filename="../../../batteryhelper.cpp" line="62"/>
         <source>Lithium iron phosphate</source>
-        <translation type="unfinished"></translation>
+        <translation>Lityum demir fosfat</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="64"/>
         <source>Lead acid</source>
-        <translation type="unfinished"></translation>
+        <translation>Kurşun asit</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="66"/>
         <source>Nickel cadmium</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikel Kadmiyum</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="68"/>
         <source>Nickel metal hydride</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikel metal hidrid</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="71"/>
@@ -61,17 +61,17 @@
     <message>
         <location filename="../../../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Kişisel Dijital Pil Asistan&apos;ları</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Kesintisiz Güç Kaynak&apos;ları</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="84"/>
         <source>Primary battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Birincil pil</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="86"/>
