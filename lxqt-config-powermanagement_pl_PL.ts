@@ -155,7 +155,7 @@
         <location filename="../../../lidwatchersettings.ui" line="84"/>
         <location filename="../../../lidwatchersettings.ui" line="128"/>
         <source>On AC</source>
-        <translation>Na zasilaniu</translation>
+        <translation>Zasilany</translation>
     </message>
     <message>
         <location filename="../../../lidwatchersettings.ui" line="97"/>
@@ -164,14 +164,14 @@
     </message>
     <message>
         <source>On Ac</source>
-        <translation type="vanished">Na zasilaniu</translation>
+        <translation>Zasilany</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>LXQt Powermanagement Configuration</source>
-        <translation type="vanished">LXQt Konfiguracja zarządzania energią</translation>
+        <translation>LXQt Konfiguracja zarządzania energią</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="34"/>
@@ -191,11 +191,11 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezczynność</translation>
     </message>
     <message>
         <source>idle</source>
-        <translation type="vanished">Bezczynność</translation>
+        <translation>bezczynność</translation>
     </message>
 </context>
 <context>
