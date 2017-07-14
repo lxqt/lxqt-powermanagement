@@ -209,7 +209,7 @@
     <message>
         <location filename="../../../batteryinfoframe.ui" line="165"/>
         <source>Technology:</source>
-        <translation type="unfinished">Technologia:</translation>
+        <translation>Technologia:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="182"/>
