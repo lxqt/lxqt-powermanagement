@@ -263,7 +263,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Jūs pirmą kartą paleidote LXQt maitinimo tvarkytuvę.
-Jūs galite ją konfigūruoti nustatymuose...</translation>
+Jūs galite ją konfigūruoti nustatymuose... </translation>
     </message>
     <message>
         <location filename="../../../powermanagementd.cpp" line="109"/>
