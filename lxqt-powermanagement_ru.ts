@@ -5,31 +5,31 @@
     <name>Battery</name>
     <message>
         <source>Charging</source>
-        <translation>Заряжается</translation>
+        <translation type="vanished">Заряжается</translation>
     </message>
     <message>
         <source>Discharging</source>
-        <translation>Разряжается</translation>
+        <translation type="vanished">Разряжается</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Пустая</translation>
+        <translation type="vanished">Пустая</translation>
     </message>
     <message>
         <source>Fully charged</source>
-        <translation>Полностью заряжена</translation>
+        <translation type="vanished">Полностью заряжена</translation>
     </message>
     <message>
         <source>Pending charge</source>
-        <translation>Ожидает заряда</translation>
+        <translation type="vanished">Ожидает заряда</translation>
     </message>
     <message>
         <source>Pending discharge</source>
-        <translation>Ожидает разряда</translation>
+        <translation type="vanished">Ожидает разряда</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Неизвестно</translation>
+        <translation type="vanished">Неизвестно</translation>
     </message>
 </context>
 <context>
@@ -144,71 +144,71 @@
     <name>BatteryInfo</name>
     <message>
         <source>Power Management</source>
-        <translation>Управление энергопотреблением</translation>
+        <translation type="vanished">Управление энергопотреблением</translation>
     </message>
     <message>
         <source>Battery info</source>
-        <translation>Информация о батарее</translation>
+        <translation type="vanished">Информация о батарее</translation>
     </message>
     <message>
         <source>Energy Now:</source>
-        <translation>Заряд сейчас:</translation>
+        <translation type="vanished">Заряд сейчас:</translation>
     </message>
     <message>
         <source>Updated:</source>
-        <translation>Обновлено:</translation>
+        <translation type="vanished">Обновлено:</translation>
     </message>
     <message>
         <source>Technology:</source>
-        <translation>Технология:</translation>
+        <translation type="vanished">Технология:</translation>
     </message>
     <message>
         <source>Model:</source>
-        <translation>Модель:</translation>
+        <translation type="vanished">Модель:</translation>
     </message>
     <message>
         <source>Energy rate:</source>
-        <translation>Мощность тока:</translation>
+        <translation type="vanished">Мощность тока:</translation>
     </message>
     <message>
         <source>Voltage:</source>
-        <translation>Напряжение:</translation>
+        <translation type="vanished">Напряжение:</translation>
     </message>
     <message>
         <source>Energy Full, Design:</source>
-        <translation>Максимальный заряд:</translation>
+        <translation type="vanished">Максимальный заряд:</translation>
     </message>
     <message>
         <source>State:</source>
-        <translation>Состояние:</translation>
+        <translation type="vanished">Состояние:</translation>
     </message>
     <message>
         <source>Lithium ion</source>
-        <translation>Литий-ионная</translation>
+        <translation type="vanished">Литий-ионная</translation>
     </message>
     <message>
         <source>Lithium polymer</source>
-        <translation>Литий-полимерная</translation>
+        <translation type="vanished">Литий-полимерная</translation>
     </message>
     <message>
         <source>Lithium iron phosphate</source>
-        <translation>Литий-железо-фосфатная</translation>
+        <translation type="vanished">Литий-железо-фосфатная</translation>
     </message>
     <message>
         <source>Lead acid</source>
-        <translation>Свинцово-кислотная</translation>
+        <translation type="vanished">Свинцово-кислотная</translation>
     </message>
     <message>
         <source>Nickel cadmium</source>
-        <translation>Никель-кадмиевая</translation>
+        <translation type="vanished">Никель-кадмиевая</translation>
     </message>
     <message>
         <source>Nickel metal hydride</source>
-        <translation>Никель-металл-гидридная</translation>
+        <translation type="vanished">Никель-металл-гидридная</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Неизвестно</translation>
+        <translation type="vanished">Неизвестно</translation>
     </message>
 </context>
 <context>
@@ -299,76 +299,93 @@
         <source>Power low!</source>
         <translation>Низкий заряд!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>Ждущий режим через %1 секунд</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>Спящий режим через %1 секунд</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">Ждущий режим через %1 секунд</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">Спящий режим через %1 секунд</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>Выключение компьютера через %1 секунд</translation>
+        <translation type="vanished">Выключение компьютера через %1 секунд</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>Не удалось запустить наблюдение за простоем LXQt </translation>
+        <translation type="vanished">Не удалось запустить наблюдение за простоем LXQt </translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation>Интерфейс D-Bus org.freedesktop.ScreenSaver уже зарегистрирован</translation>
+        <translation type="vanished">Интерфейс D-Bus org.freedesktop.ScreenSaver уже зарегистрирован</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>Расширение X11 Скринсейвер непригодно для использования</translation>
+        <translation type="vanished">Расширение X11 Скринсейвер непригодно для использования</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Настроить…</translation>
+        <translation type="vanished">Настроить…</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>ОШИБКА: экран разблокирован</translation>
+        <translation type="vanished">ОШИБКА: экран разблокирован</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>Программа блокировки экрана &quot;%1&quot; вышла с кодом ошибки %2</translation>
+        <translation type="vanished">Программа блокировки экрана &quot;%1&quot; вышла с кодом ошибки %2</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>Программа блокировки экрана &quot;%1&quot; упала с кодом ошибки %2</translation>
+        <translation type="vanished">Программа блокировки экрана &quot;%1&quot; упала с кодом ошибки %2</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>Управление энергопотреблением</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Вы запускаете управление энергопотреблением LXQt впервые.
 Вы можете сконфигурировать его в настройках…</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>Настроить…</translation>
     </message>
@@ -377,11 +394,11 @@ You can configure it from settings... </source>
     <name>TrayIcon</name>
     <message>
         <source>discharging</source>
-        <translation>разряжается</translation>
+        <translation type="vanished">разряжается</translation>
     </message>
     <message>
         <source>charging</source>
-        <translation>заряжается</translation>
+        <translation type="vanished">заряжается</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="61"/>
@@ -421,7 +438,7 @@ You can configure it from settings... </source>
     </message>
     <message>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - Powermanagement for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Управление энергопотреблением LXQt&lt;/b&gt;&lt;br/&gt;  - Управление энергопотреблением для окружения рабочего стола LXQt&lt;/p&gt;&lt;p&gt;  Авторы:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и другие из проектов Razor и LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;  &lt;b&gt;Управление энергопотреблением LXQt&lt;/b&gt;&lt;br/&gt;  - Управление энергопотреблением для окружения рабочего стола LXQt&lt;/p&gt;&lt;p&gt;  Авторы:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и другие из проектов Razor и LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

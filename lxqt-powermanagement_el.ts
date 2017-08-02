@@ -5,31 +5,31 @@
     <name>Battery</name>
     <message>
         <source>Charging</source>
-        <translation>Φόρτιση</translation>
+        <translation type="vanished">Φόρτιση</translation>
     </message>
     <message>
         <source>Discharging</source>
-        <translation>Αποφόρτιση</translation>
+        <translation type="vanished">Αποφόρτιση</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Αποφορτισμένη</translation>
+        <translation type="vanished">Αποφορτισμένη</translation>
     </message>
     <message>
         <source>Fully charged</source>
-        <translation>Φορτισμένος πλήρως</translation>
+        <translation type="vanished">Φορτισμένος πλήρως</translation>
     </message>
     <message>
         <source>Pending charge</source>
-        <translation>Φορτίζεται</translation>
+        <translation type="vanished">Φορτίζεται</translation>
     </message>
     <message>
         <source>Pending discharge</source>
-        <translation>Αποφορτίζεται</translation>
+        <translation type="vanished">Αποφορτίζεται</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Άγνωστος</translation>
+        <translation type="vanished">Άγνωστος</translation>
     </message>
 </context>
 <context>
@@ -144,75 +144,75 @@
     <name>BatteryInfo</name>
     <message>
         <source>Power Management</source>
-        <translation>Διαχείριση ενέργειας</translation>
+        <translation type="vanished">Διαχείριση ενέργειας</translation>
     </message>
     <message>
         <source>Battery info</source>
-        <translation>Πληροφορίες του συσσωρευτή</translation>
+        <translation type="vanished">Πληροφορίες του συσσωρευτή</translation>
     </message>
     <message>
         <source>Energy Now:</source>
-        <translation>Η τρέχουσα ενέργεια:</translation>
+        <translation type="vanished">Η τρέχουσα ενέργεια:</translation>
     </message>
     <message>
         <source>Updated:</source>
-        <translation>Ενημερώθηκε:</translation>
+        <translation type="vanished">Ενημερώθηκε:</translation>
     </message>
     <message>
         <source>Technology:</source>
-        <translation>Τεχνολογία:</translation>
+        <translation type="vanished">Τεχνολογία:</translation>
     </message>
     <message>
         <source>Model:</source>
-        <translation>Μοντέλο:</translation>
+        <translation type="vanished">Μοντέλο:</translation>
     </message>
     <message>
         <source>Energy rate:</source>
-        <translation>Ρυθμός ενέργειας:</translation>
+        <translation type="vanished">Ρυθμός ενέργειας:</translation>
     </message>
     <message>
         <source>Voltage:</source>
-        <translation>Τάση:</translation>
+        <translation type="vanished">Τάση:</translation>
     </message>
     <message>
         <source>Energy Full, Design:</source>
-        <translation>Πλήρης ενέργεια, σχεδιασμός:</translation>
+        <translation type="vanished">Πλήρης ενέργεια, σχεδιασμός:</translation>
     </message>
     <message>
         <source>Energy Full:</source>
-        <translation>Πλήρης ενέργεια:</translation>
+        <translation type="vanished">Πλήρης ενέργεια:</translation>
     </message>
     <message>
         <source>State:</source>
-        <translation>Κατάσταση:</translation>
+        <translation type="vanished">Κατάσταση:</translation>
     </message>
     <message>
         <source>Lithium ion</source>
-        <translation>Ιόντων λιθίου</translation>
+        <translation type="vanished">Ιόντων λιθίου</translation>
     </message>
     <message>
         <source>Lithium polymer</source>
-        <translation>Πολυμερούς λιθίου</translation>
+        <translation type="vanished">Πολυμερούς λιθίου</translation>
     </message>
     <message>
         <source>Lithium iron phosphate</source>
-        <translation>Λίθιου φωσφορικού άλατος σιδήρου</translation>
+        <translation type="vanished">Λίθιου φωσφορικού άλατος σιδήρου</translation>
     </message>
     <message>
         <source>Lead acid</source>
-        <translation>Μολύβδου οξέος</translation>
+        <translation type="vanished">Μολύβδου οξέος</translation>
     </message>
     <message>
         <source>Nickel cadmium</source>
-        <translation>Νικελίου καδμίου</translation>
+        <translation type="vanished">Νικελίου καδμίου</translation>
     </message>
     <message>
         <source>Nickel metal hydride</source>
-        <translation>Υβριδικός νικελίου μετάλλου</translation>
+        <translation type="vanished">Υβριδικός νικελίου μετάλλου</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Άγνωστος</translation>
+        <translation type="vanished">Άγνωστος</translation>
     </message>
 </context>
 <context>
@@ -303,69 +303,83 @@
         <source>Power low!</source>
         <translation>Η ενέργεια είναι χαμηλή!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>Αναστολή σε %1 δευτερόλεπτα</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>Νάρκωση σε %1 δευτερόλεπτα</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">Αναστολή σε %1 δευτερόλεπτα</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">Νάρκωση σε %1 δευτερόλεπτα</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>Τερματισμός σε %1 δευτερόλεπτα</translation>
+        <translation type="vanished">Τερματισμός σε %1 δευτερόλεπτα</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>Η εκκίνηση του επόπτη αδράνειας του LXQt απέτυχε</translation>
+        <translation type="vanished">Η εκκίνηση του επόπτη αδράνειας του LXQt απέτυχε</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation>Η διεπαφή του D-Bus org.freedesktop.ScreenSaver έχει καταχωρηθεί ήδη</translation>
+        <translation type="vanished">Η διεπαφή του D-Bus org.freedesktop.ScreenSaver έχει καταχωρηθεί ήδη</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>Η επέκταση της προστασίας οθόνης X11 δεν μπορεί να χρησιμοποιηθεί</translation>
+        <translation type="vanished">Η επέκταση της προστασίας οθόνης X11 δεν μπορεί να χρησιμοποιηθεί</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Διαμόρφωση...</translation>
+        <translation type="vanished">Διαμόρφωση...</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>ΣΦΑΛΜΑ: Οθόνη ξεκλείδωτη</translation>
+        <translation type="vanished">ΣΦΑΛΜΑ: Οθόνη ξεκλείδωτη</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>Το πρόγραμμα κλειδώματος «%1» τερματίστηκε με τον κωδικό σφάλματος %2</translation>
+        <translation type="vanished">Το πρόγραμμα κλειδώματος «%1» τερματίστηκε με τον κωδικό σφάλματος %2</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>Το πρόγραμμα κλειδώματος «%1» κατέρρευσε με τον κωδικό σφάλματος %2</translation>
+        <translation type="vanished">Το πρόγραμμα κλειδώματος «%1» κατέρρευσε με τον κωδικό σφάλματος %2</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>Διαχείριση ενέργειας</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Εκτελείτε την διαχείριση ενέργειας του LXQt για πρώτη φορά.
@@ -373,7 +387,7 @@ You can configure it from settings... </source>
 </translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>Διαμόρφωση...</translation>
     </message>
@@ -418,15 +432,15 @@ You can configure it from settings... </source>
     </message>
     <message>
         <source>discharging</source>
-        <translation>αποφόρτιση</translation>
+        <translation type="vanished">αποφόρτιση</translation>
     </message>
     <message>
         <source>charging</source>
-        <translation>φόρτιση</translation>
+        <translation type="vanished">φόρτιση</translation>
     </message>
     <message>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - Powermanagement for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Διαχείριση ενέργειας του LXQt&lt;/b&gt;&lt;br/&gt;  - Διαχείριση της ενέργειας για το γραφικό περιβάλλον LXQt&lt;/p&gt;&lt;p&gt;  Συγγραφείς:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - και άλλοι από τα έργα Razor και LXQt&lt;/p&gt;&lt;p&gt;  Πνευματικά δικαιώματα &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;  &lt;b&gt;Διαχείριση ενέργειας του LXQt&lt;/b&gt;&lt;br/&gt;  - Διαχείριση της ενέργειας για το γραφικό περιβάλλον LXQt&lt;/p&gt;&lt;p&gt;  Συγγραφείς:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - και άλλοι από τα έργα Razor και LXQt&lt;/p&gt;&lt;p&gt;  Πνευματικά δικαιώματα &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

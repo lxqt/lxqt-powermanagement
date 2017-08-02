@@ -197,75 +197,43 @@
         <source>Power low!</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation type="unfinished"></translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation type="unfinished"></translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
-        <source>Shutting down in %1 seconds</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>IdlenessWatcher</name>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
-        <source>LXQt Idleness watcher failed to start</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
-        <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
-        <source>The X11 Screensaver extension is not usable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
-        <source>Configure...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
-        <source>ERROR: Screen unlocked</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
-        <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
-        <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation type="unfinished"></translation>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation type="unfinished"></translation>
     </message>

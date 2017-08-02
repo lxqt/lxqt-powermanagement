@@ -197,76 +197,89 @@
         <source>Power low!</source>
         <translation>Málo energie!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>Uspání za %1 sekund</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>Hibernace (zazimování) za %1 sekund</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">Uspání za %1 sekund</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">Hibernace (zazimování) za %1 sekund</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>Vypnutí za %1 sekund</translation>
+        <translation type="vanished">Vypnutí za %1 sekund</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>Sledování nečinnosti LXQt se nepodařilo spustit</translation>
+        <translation type="vanished">Sledování nečinnosti LXQt se nepodařilo spustit</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
-        <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>Rozšíření šetřiče obrazovky X11 je nepoužitelné</translation>
+        <translation type="vanished">Rozšíření šetřiče obrazovky X11 je nepoužitelné</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Nastavit...</translation>
+        <translation type="vanished">Nastavit...</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>Chyba: Obrazovka odemknuta</translation>
+        <translation type="vanished">Chyba: Obrazovka odemknuta</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>Uzamykací program &quot;%1&quot; skončil s kódem chyby %2</translation>
+        <translation type="vanished">Uzamykací program &quot;%1&quot; skončil s kódem chyby %2</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>Uzamykací program &quot;%1&quot; spadl s kódem chyby %2</translation>
+        <translation type="vanished">Uzamykací program &quot;%1&quot; spadl s kódem chyby %2</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>Správa energie</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Spouštíte správu energie LXQt poprvé.
 Můžete ji nastavit v Nastavení... </translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>Nastavit...</translation>
     </message>

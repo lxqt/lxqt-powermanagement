@@ -239,76 +239,85 @@
         <source>Power low!</source>
         <translation>Niski poziom zasilania!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>Wstrzymanie nastąpi w ciągu %1 sekund</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>Hibernacja nastąpi w ciągu %1 sekund</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">Wstrzymanie nastąpi w ciągu %1 sekund</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">Hibernacja nastąpi w ciągu %1 sekund</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>Wyłączenie systemu nastąpi w ciągu %1 sekund</translation>
+        <translation type="vanished">Wyłączenie systemu nastąpi w ciągu %1 sekund</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
-        <source>LXQt Idleness watcher failed to start</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
-        <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>Rozszerzenie wygaszacza ekranu X11 nie może być użyte</translation>
+        <translation type="vanished">Rozszerzenie wygaszacza ekranu X11 nie może być użyte</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Konfiguruj...</translation>
+        <translation type="vanished">Konfiguruj...</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>BŁĄD: Ekran odblokowany</translation>
+        <translation type="vanished">BŁĄD: Ekran odblokowany</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>Blokada programu &quot;%1&quot; została zatrzymana się z kodem błędu %2</translation>
+        <translation type="vanished">Blokada programu &quot;%1&quot; została zatrzymana się z kodem błędu %2</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>Blokada programu &quot;%1&quot; nie powiodła się z kodem błędu %2</translation>
+        <translation type="vanished">Blokada programu &quot;%1&quot; nie powiodła się z kodem błędu %2</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>Zarządzanie zasilaniem</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Uruchamiasz zarządzanie energią LXQt po raz pierwszy.
 Możesz skonfiguroweć jego ustawienia...</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>Konfiguruj...</translation>
     </message>

@@ -197,76 +197,90 @@
         <source>Power low!</source>
         <translation>Energia baixa!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>Se suspèn en %1 segons</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>S&apos;hiberna en %1 segons</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">Se suspèn en %1 segons</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">S&apos;hiberna en %1 segons</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>S&apos;apaga en %1 segons</translation>
+        <translation type="vanished">S&apos;apaga en %1 segons</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>L&apos;observador de l&apos;ociositat de LXQt ha fallat en iniciar-se</translation>
+        <translation type="vanished">L&apos;observador de l&apos;ociositat de LXQt ha fallat en iniciar-se</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation>La interfície de D-Bus org.freedesktop.ScreenSaver ja està registrada</translation>
+        <translation type="vanished">La interfície de D-Bus org.freedesktop.ScreenSaver ja està registrada</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>L&apos;extensió de l&apos;estalvi de pantalla de X11 no és usable</translation>
+        <translation type="vanished">L&apos;extensió de l&apos;estalvi de pantalla de X11 no és usable</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Configura...</translation>
+        <translation type="vanished">Configura...</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>ERROR: Pantalla desbloquejada</translation>
+        <translation type="vanished">ERROR: Pantalla desbloquejada</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>S&apos;està bloquejant el programa &quot;%1&quot; que va sortir amb el codi d&apos;error %2</translation>
+        <translation type="vanished">S&apos;està bloquejant el programa &quot;%1&quot; que va sortir amb el codi d&apos;error %2</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>S&apos;està bloquejant el programa &quot;%1&quot; que va estavellar-se amb el codi d&apos;error %2</translation>
+        <translation type="vanished">S&apos;està bloquejant el programa &quot;%1&quot; que va estavellar-se amb el codi d&apos;error %2</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>Gestió de l&apos;energia</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Esteu executant per primera vegada la gestió de l&apos;energia de LXQt.
 Podeu configurar-ho a partir dels ajusts... </translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>Configura...</translation>
     </message>

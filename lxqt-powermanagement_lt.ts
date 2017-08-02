@@ -197,76 +197,93 @@
         <source>Power low!</source>
         <translation>Liko mažai energijos!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>Pristabdoma po %1 sekundžių</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>Užmigdoma po %1 sekundžių</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">Pristabdoma po %1 sekundžių</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">Užmigdoma po %1 sekundžių</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>Išjungiama po %1 sekundžių</translation>
+        <translation type="vanished">Išjungiama po %1 sekundžių</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>LXQt neveiklumo stebėtojui nepavyko pasileisti</translation>
+        <translation type="vanished">LXQt neveiklumo stebėtojui nepavyko pasileisti</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation>D-Bus sąsaja org.freedesktop.ScreenSaver jau yra registruota</translation>
+        <translation type="vanished">D-Bus sąsaja org.freedesktop.ScreenSaver jau yra registruota</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>X11 ekrano užsklandos plėtinys nėra tinkamas naudojimui</translation>
+        <translation type="vanished">X11 ekrano užsklandos plėtinys nėra tinkamas naudojimui</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Konfigūruoti...</translation>
+        <translation type="vanished">Konfigūruoti...</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>KLAIDA: Ekranas atrakintas</translation>
+        <translation type="vanished">KLAIDA: Ekranas atrakintas</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>Užrakinimo programa &quot;%1&quot; išėjo su klaidos kodu %2</translation>
+        <translation type="vanished">Užrakinimo programa &quot;%1&quot; išėjo su klaidos kodu %2</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>Užrakinimo programa &quot;%1&quot; užstrigo su klaidos kodu %2</translation>
+        <translation type="vanished">Užrakinimo programa &quot;%1&quot; užstrigo su klaidos kodu %2</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>Maitinimo valdymas</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Jūs pirmą kartą paleidote LXQt maitinimo tvarkytuvę.
 Jūs galite ją konfigūruoti nustatymuose... </translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>Konfigūruoti...</translation>
     </message>

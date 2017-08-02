@@ -303,75 +303,86 @@
         <source>Power low!</source>
         <translation>電源が少なくなっています!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>%1秒でサスペンドに入ります</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>%1秒でハイバネートに入ります</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">%1秒でサスペンドに入ります</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">%1秒でハイバネートに入ります</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>%1秒でシャットダウンします</translation>
+        <translation type="vanished">%1秒でシャットダウンします</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>LXQtのアイドル状態監視は始動に失敗しました</translation>
+        <translation type="vanished">LXQtのアイドル状態監視は始動に失敗しました</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation>D-Busインターフェース org.freedesktop.ScreenSaver が既に登録されています</translation>
+        <translation type="vanished">D-Busインターフェース org.freedesktop.ScreenSaver が既に登録されています</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>X11スクリーンセーバー拡張を使えません</translation>
+        <translation type="vanished">X11スクリーンセーバー拡張を使えません</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>設定する</translation>
+        <translation type="vanished">設定する</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>エラー: スクリーンのロックが解除されました</translation>
+        <translation type="vanished">エラー: スクリーンのロックが解除されました</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>ロック用プログラム &quot;%1&quot; は、エラーコード %2 により終了しました</translation>
+        <translation type="vanished">ロック用プログラム &quot;%1&quot; は、エラーコード %2 により終了しました</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>ロック用プログラム &quot;%1&quot; は、エラーコード %2 によりクラッシュしました</translation>
+        <translation type="vanished">ロック用プログラム &quot;%1&quot; は、エラーコード %2 によりクラッシュしました</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>電源管理</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>LXQt電源管理は初めて実行されましたので、設定を行ってください</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>設定する</translation>
     </message>

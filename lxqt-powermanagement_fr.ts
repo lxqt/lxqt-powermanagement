@@ -197,20 +197,29 @@
         <source>Power low!</source>
         <translation>Énergie faible !</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation>Veille dans %n seconde(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Veille dans %n seconde(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation>Hibernation dans %n seconde(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Hibernation dans %n seconde(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation>Arrêt dans %n seconde(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Arrêt dans %n seconde(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>

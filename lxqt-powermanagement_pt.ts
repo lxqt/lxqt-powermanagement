@@ -5,31 +5,31 @@
     <name>Battery</name>
     <message>
         <source>Charging</source>
-        <translation>A carregar</translation>
+        <translation type="vanished">A carregar</translation>
     </message>
     <message>
         <source>Discharging</source>
-        <translation>A descarregar</translation>
+        <translation type="vanished">A descarregar</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Vazia</translation>
+        <translation type="vanished">Vazia</translation>
     </message>
     <message>
         <source>Fully charged</source>
-        <translation>Totalmente carregada</translation>
+        <translation type="vanished">Totalmente carregada</translation>
     </message>
     <message>
         <source>Pending charge</source>
-        <translation>Por carregar</translation>
+        <translation type="vanished">Por carregar</translation>
     </message>
     <message>
         <source>Pending discharge</source>
-        <translation>Por descarregar</translation>
+        <translation type="vanished">Por descarregar</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Desconhecido</translation>
+        <translation type="vanished">Desconhecido</translation>
     </message>
 </context>
 <context>
@@ -144,75 +144,75 @@
     <name>BatteryInfo</name>
     <message>
         <source>Power Management</source>
-        <translation>Gestão de energia</translation>
+        <translation type="vanished">Gestão de energia</translation>
     </message>
     <message>
         <source>Battery info</source>
-        <translation>Informações da bateria</translation>
+        <translation type="vanished">Informações da bateria</translation>
     </message>
     <message>
         <source>Energy Now:</source>
-        <translation>Energia atual:</translation>
+        <translation type="vanished">Energia atual:</translation>
     </message>
     <message>
         <source>Updated:</source>
-        <translation>Atualização:</translation>
+        <translation type="vanished">Atualização:</translation>
     </message>
     <message>
         <source>Technology:</source>
-        <translation>Tecnologia:</translation>
+        <translation type="vanished">Tecnologia:</translation>
     </message>
     <message>
         <source>Model:</source>
-        <translation>Modelo:</translation>
+        <translation type="vanished">Modelo:</translation>
     </message>
     <message>
         <source>Energy rate:</source>
-        <translation>Taxa de energia:</translation>
+        <translation type="vanished">Taxa de energia:</translation>
     </message>
     <message>
         <source>Voltage:</source>
-        <translation>Tensão:</translation>
+        <translation type="vanished">Tensão:</translation>
     </message>
     <message>
         <source>Energy Full, Design:</source>
-        <translation>Energia máxima teórica:</translation>
+        <translation type="vanished">Energia máxima teórica:</translation>
     </message>
     <message>
         <source>Energy Full:</source>
-        <translation>Energia máxima:</translation>
+        <translation type="vanished">Energia máxima:</translation>
     </message>
     <message>
         <source>State:</source>
-        <translation>Estado:</translation>
+        <translation type="vanished">Estado:</translation>
     </message>
     <message>
         <source>Lithium ion</source>
-        <translation>Ião de lítio</translation>
+        <translation type="vanished">Ião de lítio</translation>
     </message>
     <message>
         <source>Lithium polymer</source>
-        <translation>Polímero de lítio</translation>
+        <translation type="vanished">Polímero de lítio</translation>
     </message>
     <message>
         <source>Lithium iron phosphate</source>
-        <translation>Fosfato de ferro-lítio</translation>
+        <translation type="vanished">Fosfato de ferro-lítio</translation>
     </message>
     <message>
         <source>Lead acid</source>
-        <translation>Ácido de chumbo</translation>
+        <translation type="vanished">Ácido de chumbo</translation>
     </message>
     <message>
         <source>Nickel cadmium</source>
-        <translation>Níquel-cádmio</translation>
+        <translation type="vanished">Níquel-cádmio</translation>
     </message>
     <message>
         <source>Nickel metal hydride</source>
-        <translation>Níquel-hidreto metálico</translation>
+        <translation type="vanished">Níquel-hidreto metálico</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Desconhecido</translation>
+        <translation type="vanished">Desconhecido</translation>
     </message>
 </context>
 <context>
@@ -303,76 +303,90 @@
         <source>Power low!</source>
         <translation>Energia baixa!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>A suspender dentro de %1 segundos</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>A hibernar dentro de %1 segundos</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">A suspender dentro de %1 segundos</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">A hibernar dentro de %1 segundos</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>A desligar dentro de %1 segundos</translation>
+        <translation type="vanished">A desligar dentro de %1 segundos</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>O monitorizador de inatividade não foi iniciado</translation>
+        <translation type="vanished">O monitorizador de inatividade não foi iniciado</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation>A interface D-Bus org.freedesktop.ScreenSaver já está registada</translation>
+        <translation type="vanished">A interface D-Bus org.freedesktop.ScreenSaver já está registada</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>A extensão X11 Screensaver não pode ser utilizada</translation>
+        <translation type="vanished">A extensão X11 Screensaver não pode ser utilizada</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Configurar...</translation>
+        <translation type="vanished">Configurar...</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>Erro: ecrã não bloqueado</translation>
+        <translation type="vanished">Erro: ecrã não bloqueado</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>O bloqueio do programa &quot;%1&quot; devolveu o erro &quot;%2&quot;</translation>
+        <translation type="vanished">O bloqueio do programa &quot;%1&quot; devolveu o erro &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>O bloqueio do programa &quot;%1&quot; terminou com o erro &quot;%2&quot;</translation>
+        <translation type="vanished">O bloqueio do programa &quot;%1&quot; terminou com o erro &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>Gestão de energia</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Está a executar a gestão de energia do LXQt pela primeira vez.
 Pode configurar as opções nas definições...</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
@@ -417,15 +431,15 @@ Pode configurar as opções nas definições...</translation>
     </message>
     <message>
         <source>discharging</source>
-        <translation>a descarregar</translation>
+        <translation type="vanished">a descarregar</translation>
     </message>
     <message>
         <source>charging</source>
-        <translation>a carregar</translation>
+        <translation type="vanished">a carregar</translation>
     </message>
     <message>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Powermanagement&lt;/b&gt;&lt;br/&gt;  - Powermanagement for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Gestor de energia do LXQt&lt;/b&gt;&lt;br/&gt;Gestão de energia para o  LXQt Desktop Environment&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e outros colaboradores dos projetos Razor e LXQt&lt;/p&gt;&lt;p&gt; Copyright &amp;copy; 2012-2016&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;  &lt;b&gt;Gestor de energia do LXQt&lt;/b&gt;&lt;br/&gt;Gestão de energia para o  LXQt Desktop Environment&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e outros colaboradores dos projetos Razor e LXQt&lt;/p&gt;&lt;p&gt; Copyright &amp;copy; 2012-2016&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

@@ -197,76 +197,90 @@
         <source>Power low!</source>
         <translation>Potenza scarsa!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
-        <source>Suspending in %1 seconds</source>
-        <translation>Sospensioni tra %1 secondi</translation>
+        <source>Suspending in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
-        <source>Hibernating in %1 seconds</source>
-        <translation>Ibernazione tra %1 secondi</translation>
+        <source>Hibernating in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Shutting down in %n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../../../batterywatcher.cpp" line="131"/>
+        <source>Suspending in %1 seconds</source>
+        <translation type="vanished">Sospensioni tra %1 secondi</translation>
+    </message>
+    <message>
+        <source>Hibernating in %1 seconds</source>
+        <translation type="vanished">Ibernazione tra %1 secondi</translation>
+    </message>
+    <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>Spegnimento tra %1 secondi</translation>
+        <translation type="vanished">Spegnimento tra %1 secondi</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="50"/>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>L&apos;avvio del controllo di inattività di LXQt non è riuscito</translation>
+        <translation type="vanished">L&apos;avvio del controllo di inattività di LXQt non è riuscito</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="73"/>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation>L&apos;interfaccia D-Bus org.freedesktop.ScreenSaver è già registrata</translation>
+        <translation type="vanished">L&apos;interfaccia D-Bus org.freedesktop.ScreenSaver è già registrata</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="107"/>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>L&apos;estensione X11 Screensaver non è utilizzabile</translation>
+        <translation type="vanished">L&apos;estensione X11 Screensaver non è utilizzabile</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Configura...</translation>
+        <translation type="vanished">Configura...</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="179"/>
         <source>ERROR: Screen unlocked</source>
-        <translation>ERRORE: schermo sbloccato</translation>
+        <translation type="vanished">ERRORE: schermo sbloccato</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="181"/>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>Il programma di blocco &quot;%1&quot; è uscito con il codice di errore %2</translation>
+        <translation type="vanished">Il programma di blocco &quot;%1&quot; è uscito con il codice di errore %2</translation>
     </message>
     <message>
-        <location filename="../../../idlenesswatcher.cpp" line="183"/>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>Il programma di blocco &quot;%1&quot; si è chiuso in modo inatteso con il codice di errore %2</translation>
+        <translation type="vanished">Il programma di blocco &quot;%1&quot; si è chiuso in modo inatteso con il codice di errore %2</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="107"/>
+        <location filename="../../../powermanagementd.cpp" line="108"/>
         <source>Power Management</source>
         <translation>Gestione energetica</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Stai eseguendo la gestione energetica di LXQt per la prima volta.
 Puoi configurarla dalle impostazioni... </translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
         <translation>Configura...</translation>
     </message>
