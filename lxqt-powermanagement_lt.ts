@@ -200,72 +200,72 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Pristabdoma po %n sekundės</numerusform>
+            <numerusform>Pristabdoma po %n sekundžių</numerusform>
+            <numerusform>Pristabdoma po %n sekundžių</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Užmigdoma po %n sekundės</numerusform>
+            <numerusform>Užmigdoma po %n sekundžių</numerusform>
+            <numerusform>Užmigdoma po %n sekundžių</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Išjungiama po %n sekundės</numerusform>
+            <numerusform>Išjungiama po %n sekundžių</numerusform>
+            <numerusform>Išjungiama po %n sekundžių</numerusform>
         </translation>
     </message>
     <message>
         <source>Suspending in %1 seconds</source>
-        <translation type="vanished">Pristabdoma po %1 sekundžių</translation>
+        <translation>Pristabdoma po %1 sekundžių</translation>
     </message>
     <message>
         <source>Hibernating in %1 seconds</source>
-        <translation type="vanished">Užmigdoma po %1 sekundžių</translation>
+        <translation>Užmigdoma po %1 sekundžių</translation>
     </message>
     <message>
         <source>Shutting down in %1 seconds</source>
-        <translation type="vanished">Išjungiama po %1 sekundžių</translation>
+        <translation>Išjungiama po %1 sekundžių</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation type="vanished">LXQt neveiklumo stebėtojui nepavyko pasileisti</translation>
+        <translation>LXQt neveiklumo stebėtojui nepavyko pasileisti</translation>
     </message>
     <message>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation type="vanished">D-Bus sąsaja org.freedesktop.ScreenSaver jau yra registruota</translation>
+        <translation>D-Bus sąsaja org.freedesktop.ScreenSaver jau yra registruota</translation>
     </message>
     <message>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation type="vanished">X11 ekrano užsklandos plėtinys nėra tinkamas naudojimui</translation>
+        <translation>X11 ekrano užsklandos plėtinys nėra tinkamas naudojimui</translation>
     </message>
     <message>
         <source>Configure...</source>
-        <translation type="vanished">Konfigūruoti...</translation>
+        <translation>Konfigūruoti...</translation>
     </message>
     <message>
         <source>ERROR: Screen unlocked</source>
-        <translation type="vanished">KLAIDA: Ekranas atrakintas</translation>
+        <translation>KLAIDA: Ekranas atrakintas</translation>
     </message>
     <message>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation type="vanished">Užrakinimo programa &quot;%1&quot; išėjo su klaidos kodu %2</translation>
+        <translation>Užrakinimo programa &quot;%1&quot; išėjo su klaidos kodu %2</translation>
     </message>
     <message>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation type="vanished">Užrakinimo programa &quot;%1&quot; užstrigo su klaidos kodu %2</translation>
+        <translation>Užrakinimo programa &quot;%1&quot; užstrigo su klaidos kodu %2</translation>
     </message>
 </context>
 <context>
