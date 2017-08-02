@@ -164,14 +164,14 @@
     </message>
     <message>
         <source>On Ac</source>
-        <translation>Zasilany</translation>
+        <translation type="vanished">Zasilany</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>LXQt Powermanagement Configuration</source>
-        <translation>LXQt Konfiguracja zarządzania energią</translation>
+        <translation type="vanished">LXQt Konfiguracja zarządzania energią</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="34"/>
@@ -195,7 +195,7 @@
     </message>
     <message>
         <source>idle</source>
-        <translation>bezczynność</translation>
+        <translation type="vanished">bezczynność</translation>
     </message>
 </context>
 <context>

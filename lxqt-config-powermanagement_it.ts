@@ -162,7 +162,7 @@
         <source>When &amp;using external monitor</source>
         <translation>Quando è in uso un monitor &amp;esterno</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>MainWindow</name>
     <message>
@@ -185,7 +185,7 @@
         <source>Idle</source>
         <translation>Inattività</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>QObject</name>
     <message>
