@@ -242,8 +242,8 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Uśpienie nastąpi za %n sekund</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -251,8 +251,8 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Hibernacja nastąpi za %n sekund</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -260,8 +260,8 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Komputer zostanie wyłączony za %n sekund</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
