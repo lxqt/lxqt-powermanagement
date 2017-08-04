@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Battery</name>
     <message>
@@ -59,22 +59,22 @@
     <message>
         <location filename="../../../batteryhelper.cpp" line="62"/>
         <source>Lithium iron phosphate</source>
-        <translation type="unfinished"></translation>
+        <translation>Litowo-żelazowo-fosforanowa</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="64"/>
         <source>Lead acid</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwasowo-azotowa</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="66"/>
         <source>Nickel cadmium</source>
-        <translation type="unfinished"></translation>
+        <translation>Niklowo-kadmowa</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="68"/>
         <source>Nickel metal hydride</source>
-        <translation type="unfinished"></translation>
+        <translation>Wodorowo-niklowa</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="71"/>
@@ -84,12 +84,12 @@
     <message>
         <location filename="../../../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Bateria PDA</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Bateria zasilacza awaryjnego</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="84"/>
@@ -189,12 +189,12 @@
     <message>
         <location filename="../../../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wskazywana całkowita energia:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="107"/>
         <source>Energy Full:</source>
-        <translation type="unfinished"></translation>
+        <translation>Całkowita energia:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="124"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../../../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wskaźnik energii:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="165"/>
@@ -314,7 +314,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Uruchamiasz zarządzanie energią LXQt po raz pierwszy.
-Możesz skonfiguroweć jego ustawienia...</translation>
+Możesz skonfiguroweć jego ustawienia… </translation>
     </message>
     <message>
         <location filename="../../../powermanagementd.cpp" line="110"/>
