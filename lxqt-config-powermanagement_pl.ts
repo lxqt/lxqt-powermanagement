@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>BatteryWatcherSettings</name>
     <message>
@@ -100,12 +100,12 @@
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="73"/>
         <source> minutes</source>
-        <translation>min</translation>
+        <translation> min</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="86"/>
         <source> seconds</source>
-        <translation>sek</translation>
+        <translation> sek</translation>
     </message>
 </context>
 <context>
