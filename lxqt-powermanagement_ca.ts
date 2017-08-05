@@ -200,69 +200,69 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Se suspèn en %n segon</numerusform>
+            <numerusform>Se suspèn en %n segons</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>S&apos;hiberna en %n segon</numerusform>
+            <numerusform>S&apos;hiberna en %n segons</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>S&apos;apaga en %n segon</numerusform>
+            <numerusform>S&apos;apaga en %n segons</numerusform>
         </translation>
     </message>
     <message>
         <source>Suspending in %1 seconds</source>
-        <translation type="vanished">Se suspèn en %1 segons</translation>
+        <translation>Se suspèn en %1 segons</translation>
     </message>
     <message>
         <source>Hibernating in %1 seconds</source>
-        <translation type="vanished">S&apos;hiberna en %1 segons</translation>
+        <translation>S&apos;hiberna en %1 segons</translation>
     </message>
     <message>
         <source>Shutting down in %1 seconds</source>
-        <translation type="vanished">S&apos;apaga en %1 segons</translation>
+        <translation>S&apos;apaga en %1 segons</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation type="vanished">L&apos;observador de l&apos;ociositat de LXQt ha fallat en iniciar-se</translation>
+        <translation>L&apos;observador de l&apos;ociositat de LXQt ha fallat en iniciar-se</translation>
     </message>
     <message>
         <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation type="vanished">La interfície de D-Bus org.freedesktop.ScreenSaver ja està registrada</translation>
+        <translation>La interfície de D-Bus org.freedesktop.ScreenSaver ja està registrada</translation>
     </message>
     <message>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation type="vanished">L&apos;extensió de l&apos;estalvi de pantalla de X11 no és usable</translation>
+        <translation>L&apos;extensió de l&apos;estalvi de pantalla de X11 no és usable</translation>
     </message>
     <message>
         <source>Configure...</source>
-        <translation type="vanished">Configura...</translation>
+        <translation>Configura...</translation>
     </message>
     <message>
         <source>ERROR: Screen unlocked</source>
-        <translation type="vanished">ERROR: Pantalla desbloquejada</translation>
+        <translation>ERROR: Pantalla desbloquejada</translation>
     </message>
     <message>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation type="vanished">S&apos;està bloquejant el programa &quot;%1&quot; que va sortir amb el codi d&apos;error %2</translation>
+        <translation>S&apos;està bloquejant el programa &quot;%1&quot; que va sortir amb el codi d&apos;error %2</translation>
     </message>
     <message>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation type="vanished">S&apos;està bloquejant el programa &quot;%1&quot; que va estavellar-se amb el codi d&apos;error %2</translation>
+        <translation>S&apos;està bloquejant el programa &quot;%1&quot; que va estavellar-se amb el codi d&apos;error %2</translation>
     </message>
 </context>
 <context>
