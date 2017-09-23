@@ -200,69 +200,26 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Går i hvile om %n sekund</numerusform>
+            <numerusform>Går i hvile om %n sekunder</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Går i dvale om %n sekund</numerusform>
+            <numerusform>Går i dvale om %n sekunder</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lukker ned om %n sekund</numerusform>
+            <numerusform>Lukker ned om %n sekunder</numerusform>
         </translation>
-    </message>
-    <message>
-        <source>Suspending in %1 seconds</source>
-        <translation type="vanished">Hviler om %1 sekunder</translation>
-    </message>
-    <message>
-        <source>Hibernating in %1 seconds</source>
-        <translation type="vanished">Dvaler om %1 sekunder</translation>
-    </message>
-    <message>
-        <source>Shutting down in %1 seconds</source>
-        <translation type="vanished">Lukker ned om %1 sekunder</translation>
-    </message>
-</context>
-<context>
-    <name>IdlenessWatcher</name>
-    <message>
-        <source>LXQt Idleness watcher failed to start</source>
-        <translation type="vanished">LXQt tomgangsovervåger kunne ikke starte</translation>
-    </message>
-    <message>
-        <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation type="vanished">D-Bus-grænsefladen org.freedesktop.ScreenSaver er allerede registreret</translation>
-    </message>
-    <message>
-        <source>The X11 Screensaver extension is not usable</source>
-        <translation type="vanished">X11-pauseskærm-udvidelsen er ikke brugbar</translation>
-    </message>
-    <message>
-        <source>Configure...</source>
-        <translation type="vanished">Konfigurér...</translation>
-    </message>
-    <message>
-        <source>ERROR: Screen unlocked</source>
-        <translation type="vanished">FEJL: skærmen er låst op</translation>
-    </message>
-    <message>
-        <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation type="vanished">Låsningsprogrammet &quot;%1&quot; afsluttede med fejlkoden %2</translation>
-    </message>
-    <message>
-        <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation type="vanished">Låsningsprogrammet &quot;%1&quot; stoppede med at virke med fejlkoden %2</translation>
     </message>
 </context>
 <context>
