@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="cs">
+<TS version="2.1" language="cs">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -226,42 +226,42 @@
     </message>
     <message>
         <source>Suspending in %1 seconds</source>
-        <translation>Uspání do paměti za %1 sekund</translation>
+        <translation type="vanished">Uspání do paměti za %1 sekund</translation>
     </message>
     <message>
         <source>Hibernating in %1 seconds</source>
-        <translation>Uspání na disk za %1 sekund</translation>
+        <translation type="vanished">Uspání na disk za %1 sekund</translation>
     </message>
     <message>
         <source>Shutting down in %1 seconds</source>
-        <translation>Vypnutí za %1 sekund</translation>
+        <translation type="vanished">Vypnutí za %1 sekund</translation>
     </message>
 </context>
 <context>
     <name>IdlenessWatcher</name>
     <message>
         <source>LXQt Idleness watcher failed to start</source>
-        <translation>Sledování nečinnosti LXQt se nepodařilo spustit</translation>
+        <translation type="vanished">Sledování nečinnosti LXQt se nepodařilo spustit</translation>
     </message>
     <message>
         <source>The X11 Screensaver extension is not usable</source>
-        <translation>Rozšíření šetřiče obrazovky X11 je nepoužitelné</translation>
+        <translation type="vanished">Rozšíření šetřiče obrazovky X11 je nepoužitelné</translation>
     </message>
     <message>
         <source>Configure...</source>
-        <translation>Nastavit...</translation>
+        <translation type="vanished">Nastavit...</translation>
     </message>
     <message>
         <source>ERROR: Screen unlocked</source>
-        <translation>Chyba: Obrazovka odemknuta</translation>
+        <translation type="vanished">Chyba: Obrazovka odemknuta</translation>
     </message>
     <message>
         <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation>Uzamykací program &quot;%1&quot; skončil s kódem chyby %2</translation>
+        <translation type="vanished">Uzamykací program &quot;%1&quot; skončil s kódem chyby %2</translation>
     </message>
     <message>
         <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation>Uzamykací program &quot;%1&quot; spadl s kódem chyby %2</translation>
+        <translation type="vanished">Uzamykací program &quot;%1&quot; spadl s kódem chyby %2</translation>
     </message>
 </context>
 <context>
