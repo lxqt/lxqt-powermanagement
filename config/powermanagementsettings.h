@@ -89,6 +89,15 @@ public:
 
     bool isIdlenessWatcherEnabled();
     void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
+
+    int getIdlenessAcAction();
+    void setIdlenessAcAction(int idlenessAcAction);
+
+    int getIdlenessAcTimeSecs();
+    void setIdlenessAcTimeSecs(int idlenessAcTimeSecs);
+
+    bool isIdlenessAcWatcherEnabled();
+    void setIdlenessAcWatcherEnabled(bool idlenessAcWatcherEnabled);
 };
 
 

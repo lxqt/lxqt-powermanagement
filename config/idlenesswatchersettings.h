@@ -50,6 +50,8 @@ public slots:
 private slots:
     void minutesChanged(int newVal);
     void secondsChanged(int newVal);
+    void acMinutesChanged(int newVal);
+    void acSecondsChanged(int newVal);
     void saveSettings();
 
 private:

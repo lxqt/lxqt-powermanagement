@@ -35,6 +35,7 @@ namespace PowerManagementSettingsConstants
     const QString ENABLE_BATTERY_WATCHER_KEY = "enableBatteryWatcher";
     const QString ENABLE_LID_WATCHER_KEY = "enableLidWatcher";
     const QString ENABLE_IDLENESS_WATCHER_KEY = "enableIdlenessWatcher";
+    const QString ENABLE_IDLENESS_AC_WATCHER_KEY = "enableIdlenessAcWatcher";
     const QString LID_CLOSED_ACTION_KEY = "lidClosedAction";
     const QString LID_CLOSED_AC_ACTION_KEY = "lidClosedAcAction";
     const QString LID_CLOSED_EXT_MON_ACTION_KEY = "lidClosedExtMonAction";
@@ -47,6 +48,8 @@ namespace PowerManagementSettingsConstants
     const QString USE_THEME_ICONS_KEY = "useThemeIcons";
     const QString IDLENESS_ACTION_KEY = "idlenessAction";
     const QString IDLENESS_TIME_SECS_KEY = "idlenessTimeSecs";
+    const QString IDLENESS_AC_ACTION_KEY = "idlenessAcAction";
+    const QString IDLENESS_AC_TIME_SECS_KEY = "idlenessAcTimeSecs";
 }
 
 using namespace PowerManagementSettingsConstants;
@@ -222,4 +225,35 @@ void PowerManagementSettings::setIdlenessWatcherEnabled(bool idlenessWatcherEnab
     setValue(ENABLE_IDLENESS_WATCHER_KEY, idlenessWatcherEnabled);
 }
 
+int PowerManagementSettings::getIdlenessAcAction()
+{
+    // default to nothing (-1)
+    return value(IDLENESS_AC_ACTION_KEY, -1).toInt();
+}
 
+void PowerManagementSettings::setIdlenessAcAction(int idlenessAcAction)
+{
+    setValue(IDLENESS_AC_ACTION_KEY, idlenessAcAction);
+}
+
+int PowerManagementSettings::getIdlenessAcTimeSecs()
+{
+    // default to 15 minutes
+    return value(IDLENESS_AC_TIME_SECS_KEY, 900).toInt();
+}
+
+void PowerManagementSettings::setIdlenessAcTimeSecs(int idlenessAcTimeSecs)
+{
+    setValue(IDLENESS_AC_TIME_SECS_KEY, idlenessAcTimeSecs);
+}
+
+
+bool PowerManagementSettings::isIdlenessAcWatcherEnabled()
+{
+    return value(ENABLE_IDLENESS_AC_WATCHER_KEY, false).toBool();
+}
+
+void PowerManagementSettings::setIdlenessAcWatcherEnabled(bool idlenessAcWatcherEnabled)
+{
+    setValue(ENABLE_IDLENESS_AC_WATCHER_KEY, idlenessAcWatcherEnabled);
+}

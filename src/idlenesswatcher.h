@@ -27,6 +27,7 @@
 
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"
+#include "lid.h"
 
 class IdlenessWatcher : public Watcher
 {
@@ -43,6 +44,9 @@ private slots:
 
 private:
     PowerManagementSettings mPSettings;
+    Lid mLid;
+    int mBatteryId;
+    int mAcId;
 };
 
 #endif // IDLENESSWATCHER_H

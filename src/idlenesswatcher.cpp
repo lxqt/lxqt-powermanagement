@@ -29,7 +29,9 @@
 #include <QDebug>
 
 IdlenessWatcher::IdlenessWatcher(QObject* parent):
-    Watcher(parent)
+    Watcher(parent),
+    mBatteryId(),
+    mAcId()
 {
     qDebug() << "Starting idlenesswatcher";
 
@@ -51,13 +53,24 @@ IdlenessWatcher::~IdlenessWatcher()
 
 void IdlenessWatcher::setup()
 {
-    int timeout = 1000 * mPSettings.getIdlenessTimeSecs();
-    KIdleTime::instance()->addIdleTimeout(timeout);
+    if (mPSettings.isIdlenessWatcherEnabled()) {
+        int timeout = 1000 * mPSettings.getIdlenessTimeSecs();
+        mBatteryId = KIdleTime::instance()->addIdleTimeout(timeout);
+    }
+    if (mPSettings.isIdlenessAcWatcherEnabled()) {
+        int timeout = 1000 * mPSettings.getIdlenessAcTimeSecs();
+        mAcId = KIdleTime::instance()->addIdleTimeout(timeout);
+    }
 }
 
 void IdlenessWatcher::timeoutReached(int identifier)
 {
-    doAction(mPSettings.getIdlenessAction());
+    if (identifier == mBatteryId && mLid.onBattery()) {
+        doAction(mPSettings.getIdlenessAction());
+    }
+    if (identifier == mAcId && !mLid.onBattery()) {
+        doAction(mPSettings.getIdlenessAcAction());
+    }
 }
 
 void IdlenessWatcher::onSettingsChanged()
