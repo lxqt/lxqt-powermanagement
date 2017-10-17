@@ -12,7 +12,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
 find_package(Qt5DBus REQUIRED)
-find_package(Qt5LinguistTools REQUIRED QUIET)
+find_package(Qt5LinguistTools REQUIRED)
 find_package(Qt5Svg REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5X11Extras REQUIRED)
@@ -26,7 +26,9 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-set(LXQT_POWERMANAGEMENT_PATCH_VERSION 2)
+# Patch Version
+set(LXQT_POWERMANAGEMENT_PATCH_VERSION 0)
+
 set(LXQT_POWERMANAGEMENT_VERSION ${LXQT_MAJOR_VERSION}.${LXQT_MINOR_VERSION}.${LXQT_POWERMANAGEMENT_PATCH_VERSION})
 add_definitions("-DLXQT_POWERMANAGEMENT_VERSION=\"${LXQT_POWERMANAGEMENT_VERSION}\"")
 
