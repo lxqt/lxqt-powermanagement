@@ -1,7 +1,45 @@
 
-lxqt-powermanagement-0.11.1 / 2017-01-01
+lxqt-powermanagement-0.12.0 / 2017-10-21
 ========================================
 
+  * Set patch version
+  * Spell check (add "," and "-")
+  * Don't export github templates
+  * Adding missing "Comment" section to .desktop files. Fix for https://github.com/lxde/lxqt/issues/1339
+  * Added Lithuanian language
+  * Drops Qt5Core_VERSION_STRING
+  * lxqt-config-powermanagement: set Qt::AA_UseHighDpiPixmaps to true
+  * Added QCommandLineParser and basic cli interface to lxqt-config-powermanagement and lxqt-powermanagement
+  * Added default CMAKE_BUILD_TYPE and LXQT_POWERMANAGEMENT_PATCH_VERSION
+  * added *pl.desktop
+  * Fixes a FTBFS in superbuild mode
+  * Added merged autostart to CMakeLists.txt
+  * Updated *_da.desktop files and removed *_da_DK.desktop files
+  * Update desktop entries and Replace fr_FR by fr
+  * Move Italian desktop entry to correct path
+  * Update Greek translation (el) Remove country variant from language code
+  * Rename LxQt to LXQt everywhere
+  * CMake: Adds Runtime and Devel install COMPONENTs
+  * Coding style changes
+  * Updates the build system to use the Targets infrastructure
+  * Rename Power Management module name again
+  * Rename LXQt Power Management module name
+  * Drops hardcoded /etc/xdg paths
+  * Updated german translation, replaced Qt4 by Qt in all xsession/translations
+  * Portuguese update for .desktop files
+  * Updates translations infrastructure
+  * Update the required minimum cmake version
+  * remove dead template lines switch OnlyShowIn from Razor -> LXQt stringchanges LxQt -> LXQt
+  * Renamed lxqt-autosuspend.desktop.in --> lxqt-powermanagement.desktop.in
+  * Support lxqt-session and add necessary xdg autostart desktop entry files.
+  * Default to no action if the action is not specified in the config file
+  * BatteryWatcher: Fix indentation
+  * Bump year
+
+0.11.1 / 2017-01-01
+===================
+
+  * Release 0.11.1: Update changelog
   * Add lxqt-config-powermanagement_da.desktop
   * Create lxqt-config-powermanagement_fr.desktop
   * Make CMakeLists.txt more uniform.
