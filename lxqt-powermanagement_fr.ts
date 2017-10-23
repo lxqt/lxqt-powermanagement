@@ -197,60 +197,20 @@
         <source>Power low!</source>
         <translation>Énergie faible !</translation>
     </message>
-    <message numerus="yes">
+    <message>
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Veille dans %n seconde(s)</numerusform>
-            <numerusform></numerusform>
-        </translation>
+        <translation>Veille dans %n seconde(s)</translation>
     </message>
-    <message numerus="yes">
+    <message>
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Hibernation dans %n seconde(s)</numerusform>
-            <numerusform></numerusform>
-        </translation>
+        <translation>Hibernation dans %n seconde(s)</translation>
     </message>
-    <message numerus="yes">
+    <message>
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Arrêt dans %n seconde(s)</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-</context>
-<context>
-    <name>IdlenessWatcher</name>
-    <message>
-        <source>LXQt Idleness watcher failed to start</source>
-        <translation type="vanished">Le contrôleur d&apos;activité de LXQt n&apos;a pas pu démarrer</translation>
-    </message>
-    <message>
-        <source>D-Bus interface org.freedesktop.ScreenSaver is already registered</source>
-        <translation type="vanished">Interface DBus de org.freedesktop. L&apos;économiseur d&apos;écran est déjà enregistré</translation>
-    </message>
-    <message>
-        <source>The X11 Screensaver extension is not usable</source>
-        <translation type="vanished">L&apos;extension X11 Screensaver n&apos;est pas utilisable</translation>
-    </message>
-    <message>
-        <source>Configure...</source>
-        <translation type="vanished">Configuration ...</translation>
-    </message>
-    <message>
-        <source>ERROR: Screen unlocked</source>
-        <translation type="vanished">ERREUR : écran non verrouillé</translation>
-    </message>
-    <message>
-        <source>Locking program &quot;%1&quot; exited with error code %2</source>
-        <translation type="vanished">Sortie du programme de verrouillage &quot;%1&quot; avec code erreur %2</translation>
-    </message>
-    <message>
-        <source>Locking program &quot;%1&quot; crashed with error code %2</source>
-        <translation type="vanished">Plantage du programme de verrouillage &quot;%1&quot; avec code erreur %2</translation>
+        <translation>Arrêt dans %n seconde(s)</translation>
     </message>
 </context>
 <context>
