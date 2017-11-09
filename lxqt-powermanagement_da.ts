@@ -157,12 +157,12 @@
     <message>
         <location filename="../../../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation>Aktuel energi:</translation>
+        <translation>Nuværende energi:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Energihastighed:</translation>
+        <translation>Energirate:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="165"/>
