@@ -37,57 +37,57 @@
     <message>
         <location filename="../../../batteryhelper.cpp" line="42"/>
         <source>Empty</source>
-        <translation type="unfinished">空</translation>
+        <translation>空</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="44"/>
         <source>Discharging</source>
-        <translation type="unfinished">放電中</translation>
+        <translation>放電中</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="46"/>
         <source>Fully charged</source>
-        <translation type="unfinished">満充電</translation>
+        <translation>満充電</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="49"/>
         <source>Charging</source>
-        <translation type="unfinished">充電中</translation>
+        <translation>充電中</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="58"/>
         <source>Lithium ion</source>
-        <translation type="unfinished">リチウムイオン</translation>
+        <translation>リチウムイオン</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="60"/>
         <source>Lithium polymer</source>
-        <translation type="unfinished">リチウムポリマー</translation>
+        <translation>リチウムポリマー</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="62"/>
         <source>Lithium iron phosphate</source>
-        <translation type="unfinished">リン酸鉄リチウム</translation>
+        <translation>リン酸鉄リチウム</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="64"/>
         <source>Lead acid</source>
-        <translation type="unfinished">鉛蓄電池</translation>
+        <translation>鉛蓄電池</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="66"/>
         <source>Nickel cadmium</source>
-        <translation type="unfinished">ニッカド</translation>
+        <translation>ニッカド</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="68"/>
         <source>Nickel metal hydride</source>
-        <translation type="unfinished">ニッケル水素</translation>
+        <translation>ニッケル水素</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="71"/>
         <source>Unknown</source>
-        <translation type="unfinished">不明</translation>
+        <translation>不明</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="80"/>
@@ -97,12 +97,12 @@
     <message>
         <location filename="../../../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>無停電電源装置のバッテリー</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="84"/>
         <source>Primary battery</source>
-        <translation type="unfinished"></translation>
+        <translation>一次電池</translation>
     </message>
     <message>
         <location filename="../../../batteryhelper.cpp" line="86"/>
@@ -220,12 +220,12 @@
     <message>
         <location filename="../../../batteryinfodialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ダイアログ</translation>
     </message>
     <message>
         <location filename="../../../batteryinfodialog.cpp" line="22"/>
         <source>Battery Info</source>
-        <translation type="unfinished"></translation>
+        <translation>バッテリー情報</translation>
     </message>
 </context>
 <context>
@@ -233,22 +233,22 @@
     <message>
         <location filename="../../../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation type="unfinished">電源管理</translation>
+        <translation>電源管理</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="53"/>
         <source>Temperature:</source>
-        <translation type="unfinished"></translation>
+        <translation>温度:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="63"/>
         <source>Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>タイプ:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="73"/>
         <source>State:</source>
-        <translation type="unfinished">状態:</translation>
+        <translation>状態:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="90"/>
@@ -258,32 +258,32 @@
     <message>
         <location filename="../../../batteryinfoframe.ui" line="107"/>
         <source>Energy Full:</source>
-        <translation type="unfinished">満エネルギー:</translation>
+        <translation>満エネルギー:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation type="unfinished">現在の容量:</translation>
+        <translation>現在の容量:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation type="unfinished">エネルギー率:</translation>
+        <translation>エネルギー率:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="165"/>
         <source>Technology:</source>
-        <translation type="unfinished">技術:</translation>
+        <translation>技術:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="182"/>
         <source>Voltage:</source>
-        <translation type="unfinished">電圧:</translation>
+        <translation>電圧:</translation>
     </message>
     <message>
         <location filename="../../../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation type="unfinished"></translation>
+        <translation>ベンダー:</translation>
     </message>
 </context>
 <context>
@@ -306,22 +306,22 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 秒でサスペンド</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 秒でハイバーネート</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 秒でシャットダウン</numerusform>
         </translation>
     </message>
     <message>
@@ -379,12 +379,13 @@
         <location filename="../../../powermanagementd.cpp" line="109"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>LXQt電源管理は初めて実行されましたので、設定を行ってください</translation>
+        <translation>LXQt電源管理は初めて実行されました。
+設定を行うことができます。 </translation>
     </message>
     <message>
         <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
-        <translation>設定する</translation>
+        <translation>設定する...</translation>
     </message>
 </context>
 <context>
