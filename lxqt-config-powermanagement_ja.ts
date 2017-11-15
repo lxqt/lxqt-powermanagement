@@ -42,17 +42,17 @@
         <location filename="../../../batterywatchersettings.ui" line="125"/>
         <location filename="../../../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>プレビュー</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>充電中</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>放電中</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="41"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>ビルトイン</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>レベル: %1%</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>アイドル状態の監視</translation>
+        <translation>アイドル状態の監視(&amp;l)</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="41"/>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
-        <translation>アイドル状態の時間</translation>
+        <translation>アイドル状態の時間:</translation>
     </message>
     <message>
         <location filename="../../../idlenesswatchersettings.ui" line="73"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../../../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>フタの監視を有効にする</translation>
+        <translation>フタの監視を有効にする(&amp;L)</translation>
     </message>
     <message>
         <location filename="../../../lidwatchersettings.ui" line="41"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../../../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation>外部モニター使用時</translation>
+        <translation>外部モニター使用時(&amp;u)</translation>
     </message>
     <message>
         <source>On Ac</source>
@@ -176,7 +176,7 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>電源管理の設定</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="37"/>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>アイドル</translation>
     </message>
     <message>
         <source>idle</source>
