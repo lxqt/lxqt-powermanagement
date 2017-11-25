@@ -232,7 +232,7 @@
     <message>
         <location filename="../../../batterywatcher.cpp" line="48"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt nie znalazł danych o żadnej baterii - monitorowanie wyłączone</translation>
+        <translation>LXQt nie znalazł danych o żadnej baterii – monitorowanie wyłączone</translation>
     </message>
     <message>
         <location filename="../../../batterywatcher.cpp" line="113"/>
@@ -287,7 +287,7 @@
     </message>
     <message>
         <source>Configure...</source>
-        <translation type="vanished">Konfiguruj...</translation>
+        <translation type="vanished">Konfiguruj…</translation>
     </message>
     <message>
         <source>ERROR: Screen unlocked</source>
@@ -314,12 +314,12 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Uruchamiasz zarządzanie energią LXQt po raz pierwszy.
-Możesz skonfiguroweć jego ustawienia… </translation>
+Możesz skonfigurować jego ustawienia… </translation>
     </message>
     <message>
         <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Configure...</source>
-        <translation>Konfiguruj...</translation>
+        <translation>Konfiguruj…</translation>
     </message>
 </context>
 <context>
