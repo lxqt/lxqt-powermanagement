@@ -200,22 +200,22 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Készenlét %n másodperc múlva</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Mélykészenlét %n másodperc múlva</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Kikapcsolás %n másodperc múlva</numerusform>
         </translation>
     </message>
     <message>
@@ -274,7 +274,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Az LXQt energiakezelő első alkalommal fut.
-A beállításokban konfigurálható...</translation>
+A beállításokban konfigurálható... </translation>
     </message>
     <message>
         <location filename="../../../powermanagementd.cpp" line="110"/>
