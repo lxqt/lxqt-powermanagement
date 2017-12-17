@@ -306,25 +306,25 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Suspensão dentro de %n segundo</numerusform>
+            <numerusform>Suspensão dentro de %n segundos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Hibernação dentro de %n segundo</numerusform>
+            <numerusform>Hibernação dentro de %n segundos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Encerramento dentro de %n segundo</numerusform>
+            <numerusform>Encerramento dentro de %n segundos</numerusform>
         </translation>
     </message>
     <message>
@@ -383,7 +383,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Está a executar a gestão de energia do LXQt pela primeira vez.
-Pode configurar as opções nas definições...</translation>
+Pode configurar o módulo nas definições... </translation>
     </message>
     <message>
         <location filename="../../../powermanagementd.cpp" line="110"/>
