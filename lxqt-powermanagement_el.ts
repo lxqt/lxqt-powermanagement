@@ -306,25 +306,25 @@
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Αναστολή σε %n δευτερόλεπτο(α)</numerusform>
+            <numerusform>Αναστολή σε %n δευτερόλεπτο(α)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Νάρκωση σε %n δευτερόλεπτο(α)</numerusform>
+            <numerusform>Νάρκωση σε %n δευτερόλεπτο(α)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Τερματισμός σε %n δευτερόλεπτο(α)</numerusform>
+            <numerusform>Τερματισμός σε %n δευτερόλεπτο(α)</numerusform>
         </translation>
     </message>
     <message>
