@@ -52,7 +52,8 @@ void IconProducer::update()
     if (mSettings.isUseThemeIcons())
     {
         QMap<float, QString> *levelNameMap = (mState == Solid::Battery::Discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
-        foreach (float level, levelNameMap->keys())
+        const auto levels = levelNameMap->keys();
+        for (const float level : levels)
         {
             if (level >= mChargePercent)
             {

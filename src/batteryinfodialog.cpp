@@ -30,7 +30,7 @@ BatteryInfoDialog::BatteryInfoDialog(QList<Solid::Battery*> batteries, QWidget *
     {
         QTabWidget *tabWidget = new QTabWidget(this);
         ui->verticalLayout->insertWidget(0, tabWidget);
-        foreach (Solid::Battery *battery, batteries)
+        for (Solid::Battery *const battery : qAsConst(batteries))
         {
             BatteryInfoFrame *batteryInfoFrame = new BatteryInfoFrame(battery);
             tabWidget->addTab(batteryInfoFrame, "BAT");
