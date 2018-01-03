@@ -40,7 +40,7 @@
 
 BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 {
-    QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
+    const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
 
     if (devices.isEmpty())
     {
@@ -49,7 +49,7 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
                 "lxqt-powermanagement");
     }
 
-    foreach (Solid::Device device, devices)
+    for (Solid::Device device : devices)
     {
         Solid::Battery *battery = device.as<Solid::Battery>();
         if (battery->type() != Solid::Battery::PrimaryBattery)
@@ -84,7 +84,7 @@ void BatteryWatcher::batteryChanged()
     bool discharging = true;
     double chargeLevel;
 
-    foreach (Solid::Battery *battery, mBatteries)
+    for (const Solid::Battery *battery : qAsConst(mBatteries))
     {
         totalEnergyFull += battery->energyFull();
         totalEnergyNow += battery->energy();
@@ -166,7 +166,7 @@ void BatteryWatcher::settingsChanged()
     }
     else if (mTrayIcons.isEmpty())
     {
-        foreach (Solid::Battery *battery, mBatteries)
+        for (Solid::Battery *battery : qAsConst(mBatteries))
         {
             mTrayIcons.append(new TrayIcon(battery, this));
             connect(mTrayIcons.last(), SIGNAL(toggleShowInfo()), mBatteryInfoDialog, SLOT(toggleShow()));

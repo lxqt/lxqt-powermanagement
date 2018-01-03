@@ -98,7 +98,9 @@ void PowerManagementd::performRunCheck()
 {
     mSettings.setLidWatcherEnabled(Lid().haveLid());
     bool hasBattery = false;
-    foreach (Solid::Device device, Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString()))
+
+    const auto devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
+    for (const Solid::Device& device : devices)
         if (device.as<Solid::Battery>()->type() == Solid::Battery::PrimaryBattery)
             hasBattery = true;
     mSettings.setBatteryWatcherEnabled(hasBattery);
