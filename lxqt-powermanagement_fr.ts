@@ -197,38 +197,47 @@
         <source>Power low!</source>
         <translation>Énergie faible !</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation>Veille dans %n seconde(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Veille dans %n seconde(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation>Hibernation dans %n seconde(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Hibernation dans %n seconde(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../../../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation>Arrêt dans %n seconde(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Arrêt dans %n seconde(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Power Management</source>
         <translation>Gestion de l&apos;énergie</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="111"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Le programme de gestion d&apos;énergie de LXQt est exécuté pour la première fois.
 Vous pouvez le configurer depuis Configuration ...</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="110"/>
+        <location filename="../../../powermanagementd.cpp" line="112"/>
         <source>Configure...</source>
         <translation>Configuration ...</translation>
     </message>

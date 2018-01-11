@@ -268,19 +268,19 @@
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="108"/>
+        <location filename="../../../powermanagementd.cpp" line="110"/>
         <source>Power Management</source>
         <translation>Energiebeheer</translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="109"/>
+        <location filename="../../../powermanagementd.cpp" line="111"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>U voert LXQt-energiebeheer voor de eerste keer uit.
 U kunt hem configureren in de instellingen... </translation>
     </message>
     <message>
-        <location filename="../../../powermanagementd.cpp" line="110"/>
+        <location filename="../../../powermanagementd.cpp" line="112"/>
         <source>Configure...</source>
         <translation>Instellen...</translation>
     </message>
