@@ -37,6 +37,7 @@ void fillComboBox(QComboBox* comboBox)
     comboBox->addItem(QObject::tr("Suspend"), LXQt::Power::PowerSuspend);
     comboBox->addItem(QObject::tr("Hibernate"), LXQt::Power::PowerHibernate);
     comboBox->addItem(QObject::tr("Shutdown"), LXQt::Power::PowerShutdown);
+    comboBox->addItem(QObject::tr("Turn Off monitor(s)"), LXQt::Power::PowerMonitorOff);
 }
 
 void setComboBoxToValue(QComboBox* comboBox, int value)
