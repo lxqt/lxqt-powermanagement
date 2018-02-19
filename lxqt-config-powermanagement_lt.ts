@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="lt">
+<TS version="2.0" language="lt">
 <context>
     <name>BatteryWatcherSettings</name>
     <message>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../../../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti monitorių(-ius)</translation>
     </message>
 </context>
 </TS>
