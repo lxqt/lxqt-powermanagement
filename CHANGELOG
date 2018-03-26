@@ -5,7 +5,7 @@ lxqt-powermanagement-0.12.0 / 2017-10-21
   * Set patch version
   * Spell check (add "," and "-")
   * Don't export github templates
-  * Adding missing "Comment" section to .desktop files. Fix for https://github.com/lxde/lxqt/issues/1339
+  * Adding missing "Comment" section to .desktop files. Fix for https://github.com/lxqt/lxqt/issues/1339
   * Added Lithuanian language
   * Drops Qt5Core_VERSION_STRING
   * lxqt-config-powermanagement: set Qt::AA_UseHighDpiPixmaps to true
