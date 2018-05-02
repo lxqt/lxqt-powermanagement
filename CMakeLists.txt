@@ -35,6 +35,7 @@ add_definitions(
     "-DQT_NO_FOREACH"
 )
 
+include(LXQtPreventInSourceBuilds)
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
 # Translations **********************************
