@@ -11,7 +11,7 @@
     <message>
         <location filename="../../../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>Habilitar el monitor de batería</translation>
+        <translation>Habilitar el mo&amp;nitor de batería</translation>
     </message>
     <message>
         <location filename="../../../batterywatchersettings.ui" line="54"/>
