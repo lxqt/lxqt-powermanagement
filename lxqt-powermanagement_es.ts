@@ -233,8 +233,8 @@
         <location filename="../../../powermanagementd.cpp" line="111"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>Está ejecutando LXQt Power Management por primera vez.
-Puede configurarlo en la configuración...</translation>
+        <translation>Está ejecutando Gestión de energía de LXQt por primera vez.
+Puede ajustarlo en la configuración...</translation>
     </message>
     <message>
         <location filename="../../../powermanagementd.cpp" line="112"/>
@@ -263,17 +263,17 @@ Puede configurarlo en la configuración...</translation>
     <message>
         <location filename="../../../trayicon.cpp" line="93"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Gestión de energía para el Entorno de escritorio LXQt&lt;/p&gt;&lt;p&gt;  Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - y otros de los proyectos Razor y LXQt&lt;/p&gt;&lt;p&gt;  Derechos de autor &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Gestión de energía de LXQt&lt;/b&gt;&lt;br/&gt;  - Gestión de energía para el Entorno de escritorio LXQt&lt;/p&gt;&lt;p&gt;  Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - y otros de los proyectos Razor y LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="111"/>
         <source>LXQt Power Management info</source>
-        <translation>Información de LXQt Power Management</translation>
+        <translation>Información de Gestión de energía de LXQt</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="112"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>El icono de la bandeja del sistema de LXQt Power Management se puede (re)habilitar en &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
+        <translation>El icono de la bandeja del sistema de Gestión de energía de LXQt se puede (re)habilitar en &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../../trayicon.cpp" line="114"/>
