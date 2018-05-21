@@ -1,11 +1,25 @@
 
-lxqt-powermanagement-0.12.0 / 2017-10-21
+lxqt-powermanagement-0.13.0 / 2018-05-21
 ========================================
 
+  * Spanish translation update
+  * CMake: Prevent in-source builds
+  * fix razor-qt -> lxqt and http -> https
+  * Fix mentions of LXDE
+  * Add Simplified Chinese translations
+  * Add support for turning monitor(s) off
+  * Add Traditional Chinese desktop entry
+  * Add Simplified Chinese desktop entry
+  * Drop Qt foreach
+
+0.12.0 / 2017-10-21
+===================
+
+  * Release 0.12.0: Update changelog
   * Set patch version
   * Spell check (add "," and "-")
   * Don't export github templates
-  * Adding missing "Comment" section to .desktop files. Fix for https://github.com/lxqt/lxqt/issues/1339
+  * Adding missing "Comment" section to .desktop files. Fix for https://github.com/lxde/lxqt/issues/1339
   * Added Lithuanian language
   * Drops Qt5Core_VERSION_STRING
   * lxqt-config-powermanagement: set Qt::AA_UseHighDpiPixmaps to true
