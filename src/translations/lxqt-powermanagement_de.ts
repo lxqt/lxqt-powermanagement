@@ -216,11 +216,9 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Fahre in %n Sekunde herunter</numerusform>
+        <numerusform>Fahre in %n Sekunden herunter</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
