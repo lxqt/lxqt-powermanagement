@@ -6,27 +6,27 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation></translation>
+        <translation>הגדרות עוקב סוללה</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation></translation>
+        <translation>ה&amp;פעלת עוקב סוללה</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation></translation>
+        <translation>אזהרה:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation></translation>
+        <translation> שניות</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation></translation>
+        <translation>העצמה נמוכה בערך:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
@@ -36,43 +36,43 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation></translation>
+        <translation>שימוש בסמלים מערכת העיצוב:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation></translation>
+        <translation>תצוגה מקדימה</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation></translation>
+        <translation>בטעינה</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation></translation>
+        <translation>בפריקה</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation></translation>
+        <translation>כאשר עצמת המתח יורדת מתחת ל־:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation></translation>
+        <translation>הצגת סמל:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation></translation>
+        <translation>מובנית</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation></translation>
+        <translation>רמה: %1%</translation>
     </message>
 </context>
 <context>
@@ -80,32 +80,32 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>טופס</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation></translation>
+        <translation>הפ&amp;עלת עוקב השהיה</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
-        <translation></translation>
+        <translation>בזמן השהיה:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
-        <translation></translation>
+        <translation>זמן השהיה:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="73"/>
         <source> minutes</source>
-        <translation></translation>
+        <translation> דקות</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="86"/>
         <source> seconds</source>
-        <translation></translation>
+        <translation> שניות</translation>
     </message>
 </context>
 <context>
@@ -113,54 +113,54 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>טופס</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation></translation>
+        <translation>הפעלת עוקב &amp;כיסוי</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
         <source>Action when lid is closed</source>
-        <translation></translation>
+        <translation>פעולה עם סגירת הכיסוי</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="53"/>
         <location filename="../lidwatchersettings.ui" line="118"/>
         <source>On Battery</source>
-        <translation></translation>
+        <translation>על סוללה</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="61"/>
         <source>Nothing</source>
-        <translation></translation>
+        <translation>כלום</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="66"/>
         <source>Suspend</source>
-        <translation></translation>
+        <translation>השהיה</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="71"/>
         <source>Hibernate</source>
-        <translation></translation>
+        <translation>תרדמת</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="76"/>
         <source>Shut down</source>
-        <translation></translation>
+        <translation>כיבוי</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="84"/>
         <location filename="../lidwatchersettings.ui" line="128"/>
         <source>On AC</source>
-        <translation></translation>
+        <translation>על חיבור לחשמל</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation></translation>
+        <translation>בעת &amp;שימוש במסך חיצוני</translation>
     </message>
 </context>
 <context>
@@ -168,22 +168,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation></translation>
+        <translation>הגדרות ניהול צריכת חשמל</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Battery</source>
-        <translation></translation>
+        <translation>סוללה</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="41"/>
         <source>Lid</source>
-        <translation></translation>
+        <translation>כיסוי</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation></translation>
+        <translation>השהיה</translation>
     </message>
 </context>
 <context>
@@ -191,32 +191,32 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation></translation>
+        <translation>כלום</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation></translation>
+        <translation>לנעול מסך</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation></translation>
+        <translation>להשהות</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation></translation>
+        <translation>תרדמת</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Shutdown</source>
-        <translation></translation>
+        <translation>לכבות</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation></translation>
+        <translation>לכבות צגים</translation>
     </message>
 </context>
 </TS>
