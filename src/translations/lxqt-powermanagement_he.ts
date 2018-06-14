@@ -6,107 +6,107 @@
     <message>
         <location filename="../batteryhelper.cpp" line="42"/>
         <source>Empty</source>
-        <translation></translation>
+        <translation>ריק</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Discharging</source>
-        <translation></translation>
+        <translation>בפריקה</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
         <source>Fully charged</source>
-        <translation></translation>
+        <translation>טעינה מלאה</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="49"/>
         <source>Charging</source>
-        <translation></translation>
+        <translation>בטעינה</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
         <source>Lithium ion</source>
-        <translation></translation>
+        <translation>ליתיום יון</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
         <source>Lithium polymer</source>
-        <translation></translation>
+        <translation>ליתיום פולימר</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="62"/>
         <source>Lithium iron phosphate</source>
-        <translation></translation>
+        <translation>ליתיום ברזל פוספט</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="64"/>
         <source>Lead acid</source>
-        <translation></translation>
+        <translation>עופרת חומצה</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="66"/>
         <source>Nickel cadmium</source>
-        <translation></translation>
+        <translation>ניקל קדמיום</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="68"/>
         <source>Nickel metal hydride</source>
-        <translation></translation>
+        <translation>ניקל מתכת הידריד</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="71"/>
         <source>Unknown</source>
-        <translation></translation>
+        <translation>לא ידוע</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation></translation>
+        <translation>סוללת התקן כף היד</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation></translation>
+        <translation>סוללת האל־פסק</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
         <source>Primary battery</source>
-        <translation></translation>
+        <translation>סוללה עיקרית</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Mouse battery</source>
-        <translation></translation>
+        <translation>סוללת העכבר</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
         <source>Keyboard battery</source>
-        <translation></translation>
+        <translation>סוללת המקלדת</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation></translation>
+        <translation>סוללת המקלדת והעכבר</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Camera battery</source>
-        <translation></translation>
+        <translation>סוללת המצלמה</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Phone battery</source>
-        <translation></translation>
+        <translation>סוללת הטלפון</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Monitor battery</source>
-        <translation></translation>
+        <translation>סוללת המסך</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="99"/>
         <source>Unknown battery</source>
-        <translation></translation>
+        <translation>סוללה בלתי ידועה</translation>
     </message>
 </context>
 <context>
@@ -114,12 +114,12 @@
     <message>
         <location filename="../batteryinfodialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation></translation>
+        <translation>תיבת דו־שיח</translation>
     </message>
     <message>
         <location filename="../batteryinfodialog.cpp" line="22"/>
         <source>Battery Info</source>
-        <translation></translation>
+        <translation>פרטי סוללה</translation>
     </message>
 </context>
 <context>
@@ -127,57 +127,57 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation></translation>
+        <translation>ניהול צריכת חשמל</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="53"/>
         <source>Temperature:</source>
-        <translation></translation>
+        <translation>טמפרטורה:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="63"/>
         <source>Type:</source>
-        <translation></translation>
+        <translation>סוג:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="73"/>
         <source>State:</source>
-        <translation></translation>
+        <translation>מצב:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation></translation>
+        <translation>אנרגיה מלאה להגדרת היצרן:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
         <source>Energy Full:</source>
-        <translation></translation>
+        <translation>אנרגיה מלאה:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation></translation>
+        <translation>אנרגיה כעת:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation></translation>
+        <translation>רמת אנרגיה:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
         <source>Technology:</source>
-        <translation></translation>
+        <translation>טכנולוגיה:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="182"/>
         <source>Voltage:</source>
-        <translation></translation>
+        <translation>מתח:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation></translation>
+        <translation>יצרן:</translation>
     </message>
 </context>
 <context>
@@ -185,57 +185,61 @@
     <message>
         <location filename="../batterywatcher.cpp" line="47"/>
         <source>No battery!</source>
-        <translation></translation>
+        <translation>אין סוללה!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation></translation>
+        <translation>ל־LXQt אין אפשרות למצוא נתונים על סוללות כלשהן - המעקב מושבת</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="113"/>
         <source>Power low!</source>
-        <translation></translation>
+        <translation>העצמה נמוכה!</translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>כניסה למצב השהיה בעוד שנייה</numerusform>
+        <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+        <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+        <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>כניסה לתרדמת בעוד שנייה</numerusform>
+        <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+        <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+        <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>כיבוי בעוד שנייה</numerusform>
+        <numerusform>כיבוי בעוד %n שניות</numerusform>
+        <numerusform>כיבוי בעוד %n שניות</numerusform>
+        <numerusform>כיבוי בעוד %n שניות</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
         <location filename="../powermanagementd.cpp" line="110"/>
         <source>Power Management</source>
-        <translation></translation>
+        <translation>ניהול צריכת חשמל</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="111"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation></translation>
+        <translation>זו הפעם הראשונה שמנהל צריכת החשמל של LXQt מופעל.
+ניתן להגדיר הכול מההגדרות… </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="112"/>
         <source>Configure...</source>
-        <translation></translation>
+        <translation>הגדרה…</translation>
     </message>
 </context>
 <context>
@@ -243,38 +247,38 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="59"/>
         <source>Configure</source>
-        <translation></translation>
+        <translation>הגדרה</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="61"/>
         <location filename="../trayicon.cpp" line="92"/>
         <source>About</source>
-        <translation></translation>
+        <translation>על אודות</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="63"/>
         <source>Disable icon</source>
-        <translation></translation>
+        <translation>השבתת סמל</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation></translation>
+        <translation>&lt;p&gt;  &lt;b&gt;מנהל צריכת החשמל שלLXQt&lt;/b&gt;&lt;br/&gt;  - ניהול צריכת חשמל לסביבת שולחן העבודה LXQt&lt;/p&gt;&lt;p&gt;  יוצרים:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - ופעילים נוספים ממיזמי Razor ו־LXQt&lt;/p&gt;&lt;p&gt;  כל הזכויות שמורות &amp;copy; 2012‏-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="111"/>
         <source>LXQt Power Management info</source>
-        <translation></translation>
+        <translation>פרטי צריכת חשמל של LXQt</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="112"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>ניתן להפעיל (מחדש) את סמל המערכת לניהול צריכת החשמל של LXQt תחת &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
         <source>Configure now</source>
-        <translation></translation>
+        <translation>להגדיר כעת</translation>
     </message>
 </context>
 </TS>
