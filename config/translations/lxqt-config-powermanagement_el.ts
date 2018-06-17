@@ -57,7 +57,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Όταν η ενέργεια είναι χαμηλά τότε:</translation>
+        <translation>Όταν η φόρτιση είναι χαμηλή:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation>Ενσωματωμένο</translation>
+        <translation>ενσωματωμένο</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
@@ -90,7 +90,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
-        <translation>Όταν είναι αδρανής:</translation>
+        <translation>Σε κατάσταση αδράνειας:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="60"/>
