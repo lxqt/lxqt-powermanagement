@@ -276,7 +276,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="112"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>Значок в системном локе для управление энергопотреблением может быть включен в &lt;i&gt;Настройках управления энергопотреблением&lt;</translation>
+        <translation>Значок в системном локе для управление энергопотреблением может быть включен в &lt;i&gt;Настройках управления энергопотреблением&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
