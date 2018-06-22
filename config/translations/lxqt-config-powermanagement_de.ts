@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation>Dialogfenster</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation>Dialogfenster</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
