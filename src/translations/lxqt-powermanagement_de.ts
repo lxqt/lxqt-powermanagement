@@ -200,19 +200,15 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Bereitschaftsmodus in %n second(s)</numerusform>
+        <numerusform>Bereitschaftsmodus in %n seconds</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Ruhezustand in %n second(s)</numerusform>
+        <numerusform>Ruhezustand in %n seconds</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
