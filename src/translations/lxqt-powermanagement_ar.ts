@@ -246,8 +246,8 @@
         <location filename="../powermanagementd.cpp" line="111"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>أنت تشغّل إدارة لكسكيوت للطّاقة للمرّة الأولى.
-يمكنك ضبطها من الإعدادات...</translation>
+        <translation>أنت تشغّل إدارة LXQt للطّاقة للمرّة الأولى.
+يمكنك ضبطها من الإعدادات ... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="112"/>
