@@ -85,17 +85,17 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>&amp;Aktivér overvågning af tomgang</translation>
+        <translation>&amp;Aktivér overvågning af inaktivitet</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
-        <translation>Ved tomgang:</translation>
+        <translation>Ved inaktivitet:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
-        <translation>Tomgangstid:</translation>
+        <translation>Inaktivitetstid:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="73"/>
@@ -183,7 +183,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="45"/>
         <source>Idle</source>
-        <translation>Tomgang</translation>
+        <translation>Inaktivitet</translation>
     </message>
 </context>
 <context>
