@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>Batterieüberwachu&amp;ng aktivieren</translation>
+        <translation>&amp;Batterieüberwachung aktivieren</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation>Ladung ist niedrig bei:</translation>
+        <translation>Niedriger Ladezustand bei:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>Symbole vom Thema nutzen:</translation>
+        <translation>Symbole des Themas nutzen:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
@@ -47,17 +47,17 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation>Laden</translation>
+        <translation>Lade</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation>Entladen</translation>
+        <translation>Entlade</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Falls Ladung niedrig:</translation>
+        <translation>Bei niedrigem Ladezustand:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation>Ladung: %1 %</translation>
+        <translation>Ladung: %1%</translation>
     </message>
 </context>
 <context>
@@ -85,17 +85,17 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Leer&amp;laufüberwachung aktivieren</translation>
+        <translation>&amp;Leerlaufüberwachung aktivieren</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
-        <translation>Falls Leerlauf:</translation>
+        <translation>Bei Leerlauf:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
-        <translation>Zeit im Leerlauf:</translation>
+        <translation>Inaktivitätsdauer:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="73"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Decke&amp;lüberwachung aktivieren</translation>
+        <translation>&amp;Deckelüberwachung aktivieren</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
@@ -139,12 +139,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="66"/>
         <source>Suspend</source>
-        <translation>Ruhen</translation>
+        <translation>Bereitschaft</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="71"/>
         <source>Hibernate</source>
-        <translation>Schlafen</translation>
+        <translation>Ruhezustand</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="76"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation>Falls externer Bildschirm ben&amp;utzt</translation>
+        <translation>&amp;Bei Benutzung des externen Bildschirms</translation>
     </message>
 </context>
 <context>
@@ -201,12 +201,12 @@
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation>Ruhen</translation>
+        <translation>Bereitschaft</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation>Schlafen</translation>
+        <translation>Ruhezustand</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
