@@ -21,7 +21,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="49"/>
         <source>Charging</source>
-        <translation>Laden</translation>
+        <translation>Lade</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
