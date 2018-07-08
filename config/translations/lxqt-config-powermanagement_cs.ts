@@ -6,12 +6,12 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Nastavení sledování baterie</translation>
+        <translation>Nastavení sledování akumulátoru</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>P&amp;ovolit sledování baterie</translation>
+        <translation>&amp;Sledovat akumulátor</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Povolit sledování &amp;víka</translation>
+        <translation>&amp;Sledovat víko obrazovky</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
@@ -129,7 +129,7 @@
         <location filename="../lidwatchersettings.ui" line="53"/>
         <location filename="../lidwatchersettings.ui" line="118"/>
         <source>On Battery</source>
-        <translation>Baterie</translation>
+        <translation>Při napájení z akumulátoru</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="61"/>
@@ -155,12 +155,12 @@
         <location filename="../lidwatchersettings.ui" line="84"/>
         <location filename="../lidwatchersettings.ui" line="128"/>
         <source>On AC</source>
-        <translation>Na síť</translation>
+        <translation>Při napájení ze zásuvky</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation>Při používání vnější obrazovky</translation>
+        <translation>Při po&amp;užívání vnější obrazovky</translation>
     </message>
 </context>
 <context>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Battery</source>
-        <translation>Baterie</translation>
+        <translation>Akumulátor</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="41"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>Uzamknout</translation>
+        <translation>Uzamknout obrazovku</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout monitory</translation>
     </message>
 </context>
 </TS>
