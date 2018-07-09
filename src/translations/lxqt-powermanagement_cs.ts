@@ -36,7 +36,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="62"/>
         <source>Lithium iron phosphate</source>
-        <translation>Lithium ion fosfát</translation>
+        <translation>Lithium železo fosfát</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="64"/>
@@ -96,12 +96,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Phone battery</source>
-        <translation>Baterie telefonu</translation>
+        <translation>Akumulátor telefonu</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Monitor battery</source>
-        <translation>Baterie obrazovky</translation>
+        <translation>Akumulátor obrazovky</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="99"/>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../batteryinfodialog.cpp" line="22"/>
         <source>Battery Info</source>
-        <translation>Informace o baterii</translation>
+        <translation>Informace o akumulátoru</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation>Správa energie</translation>
+        <translation>Správa napájení</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="53"/>
@@ -147,7 +147,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation>Vzhled při nabití:</translation>
+        <translation>Kapacita z výroby:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
@@ -177,7 +177,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation>Dodavatel:</translation>
+        <translation>Výrobce:</translation>
     </message>
 </context>
 <context>
@@ -190,7 +190,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt se nepodařilo najít údaje o žádné baterii - sledování zakázáno</translation>
+        <translation>LXQt se nepodařilo najít údaje o žádné baterii – sledování vypnuto</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="113"/>
@@ -230,19 +230,19 @@
     <message>
         <location filename="../powermanagementd.cpp" line="110"/>
         <source>Power Management</source>
-        <translation>Správa energie</translation>
+        <translation>Správa napájení</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="111"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Spouštíte správu energie LXQt poprvé.
-Můžete ji nastavit v Nastavení... </translation>
+Můžete ji nastavit v Nastavení… </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="112"/>
         <source>Configure...</source>
-        <translation>Nastavit...</translation>
+        <translation>Nastavit…</translation>
     </message>
 </context>
 <context>
@@ -261,7 +261,7 @@ Můžete ji nastavit v Nastavení... </translation>
     <message>
         <location filename="../trayicon.cpp" line="63"/>
         <source>Disable icon</source>
-        <translation>Zakázat ikonu</translation>
+        <translation>Nezobrazovat ikonu</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
@@ -271,7 +271,7 @@ Můžete ji nastavit v Nastavení... </translation>
     <message>
         <location filename="../trayicon.cpp" line="111"/>
         <source>LXQt Power Management info</source>
-        <translation>Údaje o správě energie LXQt</translation>
+        <translation>Údaje o správě napájení LXQt</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="112"/>
