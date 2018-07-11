@@ -66,12 +66,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation>Baterie nepřerušitelné dodávky elektřiny</translation>
+        <translation>Akumulátor zdroje nepřerušitelného napájení (UPS)</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
         <source>Primary battery</source>
-        <translation>Hlavní baterie</translation>
+        <translation>Hlavní akumulátor</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Camera battery</source>
-        <translation>Baterie kamery</translation>
+        <translation>Akumulátor kamery</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
@@ -101,12 +101,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Monitor battery</source>
-        <translation>Akumulátor obrazovky</translation>
+        <translation>Monitorovat akumulátor</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="99"/>
         <source>Unknown battery</source>
-        <translation>Neznámá baterie</translation>
+        <translation>Neznámý akumulátor</translation>
     </message>
 </context>
 <context>
@@ -157,12 +157,12 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation>Nynější energie:</translation>
+        <translation>Stávající nabití:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Úroveň nabití:</translation>
+        <translation>Intenzita vybíjení:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -185,12 +185,12 @@
     <message>
         <location filename="../batterywatcher.cpp" line="47"/>
         <source>No battery!</source>
-        <translation>Žádná baterie!</translation>
+        <translation>Žádný akumulátor!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt se nepodařilo najít údaje o žádné baterii – sledování vypnuto</translation>
+        <translation>LXQt se nepodařilo najít údaje o žádném akumulátoru/baterii – sledování vypnuto</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="113"/>
@@ -236,7 +236,7 @@
         <location filename="../powermanagementd.cpp" line="111"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>Spouštíte správu energie LXQt poprvé.
+        <translation>Spouštíte správu napájení LXQt poprvé.
 Můžete ji nastavit v Nastavení… </translation>
     </message>
     <message>
@@ -266,7 +266,7 @@ Můžete ji nastavit v Nastavení… </translation>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Správa energie&lt;/b&gt;&lt;br/&gt;  - Správa energie pro prostředí plochy LXQt&lt;/p&gt;&lt;p&gt;  Autoři:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - a další z projektů Razor a LXQt&lt;/p&gt;&lt;p&gt;  Autorské právo &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Správa napájení&lt;/b&gt;&lt;br/&gt;  - Správa napájení pro pracovní prostředí LXQt&lt;/p&gt;&lt;p&gt;  Autoři:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; – a další z projektů Razor a LXQt&lt;/p&gt;&lt;p&gt;  Autorské právo &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="111"/>
@@ -276,7 +276,7 @@ Můžete ji nastavit v Nastavení… </translation>
     <message>
         <location filename="../trayicon.cpp" line="112"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>Ikonu v panelu pro správu energie v LXQt lze (znovu)povolit v &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
+        <translation>Ikonu v panelu pro správu napájení v LXQt lze (znovu)povolit v &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
