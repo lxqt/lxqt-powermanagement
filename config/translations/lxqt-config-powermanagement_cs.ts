@@ -85,7 +85,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>&amp;Povolit sledování nečinnosti (chodu naprázdno)</translation>
+        <translation>Povo&amp;lit sledování nečinnosti (chodu naprázdno)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>&amp;Sledovat víko obrazovky</translation>
+        <translation>S&amp;ledovat víko obrazovky</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="71"/>
         <source>Hibernate</source>
-        <translation>Hibernovat</translation>
+        <translation>Uspat na úložiště</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="76"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation>Nastavení správy energie</translation>
+        <translation>Nastavení správy napájení</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation>Hibernovat</translation>
+        <translation>Uspat na úložiště</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
