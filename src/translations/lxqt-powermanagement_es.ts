@@ -36,12 +36,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="62"/>
         <source>Lithium iron phosphate</source>
-        <translation>Fosfato de litio y hierro</translation>
+        <translation>Litio y fosfato de hierro</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="64"/>
         <source>Lead acid</source>
-        <translation>Plomo ácido</translation>
+        <translation>Plomo y ácido</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="66"/>
@@ -76,32 +76,32 @@
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Mouse battery</source>
-        <translation>Batería del ratón</translation>
+        <translation>Batería de ratón</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
         <source>Keyboard battery</source>
-        <translation>Batería del teclado</translation>
+        <translation>Batería de teclado</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation>Batería del teclado y ratón</translation>
+        <translation>Batería de teclado y ratón</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Camera battery</source>
-        <translation>Batería de la cámara</translation>
+        <translation>Batería de cámara</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Phone battery</source>
-        <translation>Batería del teléfono</translation>
+        <translation>Batería de teléfono</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Monitor battery</source>
-        <translation>Batería del monitor</translation>
+        <translation>Batería de monitor</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="99"/>
@@ -157,7 +157,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation>Carga ahora:</translation>
+        <translation>Carga actual:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
@@ -185,12 +185,12 @@
     <message>
         <location filename="../batterywatcher.cpp" line="47"/>
         <source>No battery!</source>
-        <translation>¡No hay batería!</translation>
+        <translation>¡Sin batería!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt no ha podido encontrar datos sobre ninguna batería - monitorización inhabilitada</translation>
+        <translation>LXQt no pudo encontrar datos sobre ninguna batería - monitoreo deshabilitado</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="113"/>
@@ -200,27 +200,21 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="125"/>
         <source>Suspending in %n second(s)</source>
-        <translation>
-            <numerusform>Se va a suspender en %n segundo</numerusform>
-            <numerusform>Se va a suspender en %n segundos</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Suspensión en %n segundo</numerusform>
+        <numerusform>Suspensión en %n segundos</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="128"/>
         <source>Hibernating in %n second(s)</source>
-        <translation>
-            <numerusform>Se va a hibernar en %n segundo</numerusform>
-            <numerusform>Se va a hibernar en %n segundos</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Hibernando en %n segundo</numerusform>
+        <numerusform>Hibernando en %n segundos</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Shutting down in %n second(s)</source>
-        <translation>
-            <numerusform>Se va a apagar en %n segundo</numerusform>
-            <numerusform>Se va a apagar en %n segundos</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Apagado en %n segundo</numerusform>
+        <numerusform>Apagado en %n segundos</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
@@ -234,7 +228,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Está ejecutando Gestión de energía de LXQt por primera vez.
-Puede ajustarlo en la configuración...</translation>
+Puede configurarlo desde ajustes... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="112"/>
@@ -258,12 +252,12 @@ Puede ajustarlo en la configuración...</translation>
     <message>
         <location filename="../trayicon.cpp" line="63"/>
         <source>Disable icon</source>
-        <translation>Inhabilitar el icono</translation>
+        <translation>Deshabilitar icono</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Gestión de energía de LXQt&lt;/b&gt;&lt;br/&gt;  - Gestión de energía para el Entorno de escritorio LXQt&lt;/p&gt;&lt;p&gt;  Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - y otros de los proyectos Razor y LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Gestión de energía de LXQt&lt;/b&gt;&lt;br/&gt;  - Gestión de energía para el entorno de escritorio LXQt&lt;/p&gt;&lt;p&gt;  Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - y otros de los proyectos Razor y LXQt&lt;/p&gt;&lt;p&gt;  Derechos de autor &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="111"/>
