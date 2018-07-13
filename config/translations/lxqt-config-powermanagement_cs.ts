@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Sledovat akumulátor</translation>
+        <translation>&amp;Sledovat stav akumulátor</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation>Úroveň je nízká při:</translation>
+        <translation>Téměř vybito je při:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
@@ -57,12 +57,12 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Při nízké úrovni energie:</translation>
+        <translation>Při téměř vybitém akumulátoru:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Ukázat ikonu:</translation>
+        <translation>Zobrazovat ikonu:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation>Úroveň: %1%</translation>
+        <translation>Nabití: %1%</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Povo&amp;lit sledování nečinnosti (chodu naprázdno)</translation>
+        <translation>S&amp;ledovat nečinnost (chod naprázdno)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
@@ -123,7 +123,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
         <source>Action when lid is closed</source>
-        <translation>Činnost při zavření víka</translation>
+        <translation>Akce při zavření víka</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="53"/>
@@ -139,12 +139,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="66"/>
         <source>Suspend</source>
-        <translation>Uspat</translation>
+        <translation>Uspat do paměti</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="71"/>
         <source>Hibernate</source>
-        <translation>Uspat na úložiště</translation>
+        <translation>Uspat na disk</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="76"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation>Při po&amp;užívání vnější obrazovky</translation>
+        <translation>Při po&amp;užívání externí obrazovky</translation>
     </message>
 </context>
 <context>
@@ -201,12 +201,12 @@
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation>Uspat</translation>
+        <translation>Uspat do paměti</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation>Uspat na úložiště</translation>
+        <translation>Uspat na disk</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
