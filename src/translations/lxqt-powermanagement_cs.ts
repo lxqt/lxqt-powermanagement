@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="42"/>
         <source>Empty</source>
-        <translation>Téměř vybitý</translation>
+        <translation>Téměř vybito</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
@@ -256,7 +256,7 @@ Parametry je možné upravit v Nastavení… </translation>
         <location filename="../trayicon.cpp" line="61"/>
         <location filename="../trayicon.cpp" line="92"/>
         <source>About</source>
-        <translation>O programu</translation>
+        <translation>O aplikaci</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="63"/>
