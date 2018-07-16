@@ -6,17 +6,17 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>إعدادات مراقب البطّاريّة</translation>
+        <translation>إعدادات مراقب البطارية</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>ف&amp;عّل مراقب البطّاريّة</translation>
+        <translation>ف&amp;عّل مراقب البطارية</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation>التّحذير:</translation>
+        <translation>التحذير:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
         <source> %</source>
-        <translation> %</translation>
+        <translation> ٪</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>استخدم الأيقونات من السّمة:</translation>
+        <translation>استخدم الأيقونات من السمة:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
@@ -47,22 +47,22 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation>الشّحن</translation>
+        <translation>الشحن</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation>تفريغ الشّحن</translation>
+        <translation>تفريغ الشحن</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>عندما تكون البطّاريّة منخفضة:</translation>
+        <translation>عندما تكون البطارية منخفضة:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>أظهر الأيقونة:</translation>
+        <translation>اعرض الأيقونة:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation>المستوى: %1%</translation>
+        <translation>المستوى: %1٪</translation>
     </message>
 </context>
 <context>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation>نموذج</translation>
+        <translation>استمارة</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation>نموذج</translation>
+        <translation>استمارة</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
@@ -129,7 +129,7 @@
         <location filename="../lidwatchersettings.ui" line="53"/>
         <location filename="../lidwatchersettings.ui" line="118"/>
         <source>On Battery</source>
-        <translation>على البطّاريّة</translation>
+        <translation>على البطارية</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="61"/>
@@ -144,23 +144,23 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="71"/>
         <source>Hibernate</source>
-        <translation>أسبت</translation>
+        <translation>أسبِت</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="76"/>
         <source>Shut down</source>
-        <translation>أطفئ</translation>
+        <translation>أطفِئ</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="84"/>
         <location filename="../lidwatchersettings.ui" line="128"/>
         <source>On AC</source>
-        <translation>على محوّل الطّاقة</translation>
+        <translation>على محوّل الطاقة</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation>عند استخدام شاشة &amp;خارجيّة</translation>
+        <translation>عند استخدام شاشة &amp;خارجية</translation>
     </message>
 </context>
 <context>
@@ -168,12 +168,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="34"/>
         <source>Power Management Settings</source>
-        <translation>إعدادات إدارة الطّاقة</translation>
+        <translation>إعدادات إدارة الطاقة</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Battery</source>
-        <translation>البطّاريّة</translation>
+        <translation>البطارية</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="41"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>اقفل الشّاشة</translation>
+        <translation>اقفل الشاشة</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
@@ -206,17 +206,17 @@
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation>أسبت</translation>
+        <translation>أسبِت</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Shutdown</source>
-        <translation>أطفئ</translation>
+        <translation>أطفِئ</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>أطفِئ الشاشة/الشاشات</translation>
     </message>
 </context>
 </TS>
