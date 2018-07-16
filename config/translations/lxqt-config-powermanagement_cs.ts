@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Sledovat stav akumulátor</translation>
+        <translation>&amp;Sledovat stav akumulátoru</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
