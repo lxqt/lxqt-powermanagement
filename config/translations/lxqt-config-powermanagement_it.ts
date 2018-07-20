@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Finestra di dialogo</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Finestra di dialogo</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Spegni (tutti) i monitor</translation>
     </message>
 </context>
 </TS>
