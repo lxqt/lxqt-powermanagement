@@ -35,6 +35,8 @@
 #include "lidwatcher.h"
 #include "../config/powermanagementsettings.h"
 
+#include <LXQt/Globals>
+
 LidWatcher::LidWatcher(QObject *parent) : Watcher(parent)
 {
     inhibitSystemdLogin();
@@ -83,7 +85,7 @@ bool LidWatcher::externalMonitorPlugged()
     int monitorCount = 0;
 
     QProcess xrandr(this);
-    xrandr.start("xrandr", QIODevice::ReadOnly);
+    xrandr.start(QSL("xrandr"), QIODevice::ReadOnly);
     xrandr.waitForFinished(1000);
 
     if (xrandr.exitCode() != 0)
@@ -96,7 +98,7 @@ bool LidWatcher::externalMonitorPlugged()
     {
         QString line = xrandr_stdout.readLine();
         qDebug() << ">>" << line;
-        if (line.indexOf(" connected", 0) > -1)
+        if (line.indexOf(QL1S(" connected"), 0) > -1)
         {
             monitorCount++;
         }
@@ -109,11 +111,11 @@ bool LidWatcher::externalMonitorPlugged()
 
 void LidWatcher::inhibitSystemdLogin()
 {
-    QDBusInterface manager("org.freedesktop.login1",
-                           "/org/freedesktop/login1",
-                           "org.freedesktop.login1.Manager",
+    QDBusInterface manager(QSL("org.freedesktop.login1"),
+                           QSL("/org/freedesktop/login1"),
+                           QSL("org.freedesktop.login1.Manager"),
                            QDBusConnection::systemBus(), this);
-    QDBusReply<QDBusUnixFileDescriptor> reply = manager.call("Inhibit", "handle-lid-switch", "lxqt-powermanagment", "LidWatcher is in da house!", "block");
+    QDBusReply<QDBusUnixFileDescriptor> reply = manager.call(QSL("Inhibit"), QSL("handle-lid-switch"), QSL("lxqt-powermanagment"), QSL("LidWatcher is in da house!"), QSL("block"));
     if (reply.isValid())
     {
         logindLock = reply.value();

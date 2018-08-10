@@ -31,27 +31,27 @@
 
 namespace PowerManagementSettingsConstants
 {
-    const QString RUN_CHECK_LEVEL = "runCheckLevel";
-    const QString ENABLE_BATTERY_WATCHER_KEY = "enableBatteryWatcher";
-    const QString ENABLE_LID_WATCHER_KEY = "enableLidWatcher";
-    const QString ENABLE_IDLENESS_WATCHER_KEY = "enableIdlenessWatcher";
-    const QString LID_CLOSED_ACTION_KEY = "lidClosedAction";
-    const QString LID_CLOSED_AC_ACTION_KEY = "lidClosedAcAction";
-    const QString LID_CLOSED_EXT_MON_ACTION_KEY = "lidClosedExtMonAction";
-    const QString LID_CLOSED_EXT_MON_AC_ACTION_KEY = "lidClosedExtMonAcAction";
-    const QString ENABLE_EXT_MON_LIDCLOSED_ACTIONS_KEY = "enableExtMonLidClosedActions";
-    const QString POWER_LOW_ACTION_KEY = "powerLowAction";
-    const QString POWER_LOW_WARNING_KEY = "powerLowWarning";
-    const QString POWER_LOW_LEVEL_KEY = "powerLowLevel";
-    const QString SHOW_ICON_KEY = "showIcon";
-    const QString USE_THEME_ICONS_KEY = "useThemeIcons";
-    const QString IDLENESS_ACTION_KEY = "idlenessAction";
-    const QString IDLENESS_TIME_SECS_KEY = "idlenessTimeSecs";
+    const QString RUN_CHECK_LEVEL { QSL("runCheckLevel") };
+    const QString ENABLE_BATTERY_WATCHER_KEY { QSL("enableBatteryWatcher") };
+    const QString ENABLE_LID_WATCHER_KEY { QSL("enableLidWatcher") };
+    const QString ENABLE_IDLENESS_WATCHER_KEY { QL1S("enableIdlenessWatcher") };
+    const QString LID_CLOSED_ACTION_KEY { QL1S("lidClosedAction") };
+    const QString LID_CLOSED_AC_ACTION_KEY { QL1S("lidClosedAcAction") };
+    const QString LID_CLOSED_EXT_MON_ACTION_KEY { QL1S("lidClosedExtMonAction") };
+    const QString LID_CLOSED_EXT_MON_AC_ACTION_KEY { QL1S("lidClosedExtMonAcAction") };
+    const QString ENABLE_EXT_MON_LIDCLOSED_ACTIONS_KEY { QL1S("enableExtMonLidClosedActions") };
+    const QString POWER_LOW_ACTION_KEY { QL1S("powerLowAction") };
+    const QString POWER_LOW_WARNING_KEY { QL1S("powerLowWarning") };
+    const QString POWER_LOW_LEVEL_KEY { QL1S("powerLowLevel") };
+    const QString SHOW_ICON_KEY { QL1S("showIcon") };
+    const QString USE_THEME_ICONS_KEY { QL1S("useThemeIcons") };
+    const QString IDLENESS_ACTION_KEY { QL1S("idlenessAction") };
+    const QString IDLENESS_TIME_SECS_KEY { QL1S("idlenessTimeSecs") };
 }
 
 using namespace PowerManagementSettingsConstants;
 
-PowerManagementSettings::PowerManagementSettings(QObject* parent) : LXQt::Settings("lxqt-powermanagement")
+PowerManagementSettings::PowerManagementSettings(QObject* parent) : LXQt::Settings(QSL("lxqt-powermanagement"))
 {
 }
 

@@ -90,7 +90,7 @@ void BatteryWatcherSettings::saveSettings()
 
 void BatteryWatcherSettings::updatePreview()
 {
-    mUi->previewBox->setTitle(tr("Preview") +  QString(" (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("built in")));
+    mUi->previewBox->setTitle(tr("Preview") +  QString::fromLatin1(" (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("built in")));
 
     int chargePercent = mUi->chargeLevelSlider->value();
     mChargingIconProducer.updateChargePercent(chargePercent);

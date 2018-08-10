@@ -32,22 +32,24 @@
 
 #include "lid.h"
 
+#include <LXQt/Globals>
+
 Lid::Lid()
 {
-    mUPowerInterface = new QDBusInterface("org.freedesktop.UPower",
-                                          "/org/freedesktop/UPower",
-                                          "org.freedesktop.UPower",
+    mUPowerInterface = new QDBusInterface(QL1S("org.freedesktop.UPower"),
+                                          QL1S("/org/freedesktop/UPower"),
+                                          QL1S("org.freedesktop.UPower"),
                                           QDBusConnection::systemBus(), this);
 
-    mUPowerPropertiesInterface = new QDBusInterface("org.freedesktop.UPower",
-                                                    "/org/freedesktop/UPower",
-                                                    "org.freedesktop.DBus.Properties",
+    mUPowerPropertiesInterface = new QDBusInterface(QL1S("org.freedesktop.UPower"),
+                                                    QL1S("/org/freedesktop/UPower"),
+                                                    QL1S("org.freedesktop.DBus.Properties"),
                                                     QDBusConnection::systemBus(), this);
 
-    if (!QDBusConnection::systemBus().connect("org.freedesktop.UPower",
-                                        "/org/freedesktop/UPower",
-                                        "org.freedesktop.DBus.Properties",
-                                        "PropertiesChanged",
+    if (!QDBusConnection::systemBus().connect(QL1S("org.freedesktop.UPower"),
+                                        QL1S("/org/freedesktop/UPower"),
+                                        QL1S("org.freedesktop.DBus.Properties"),
+                                        QL1S("PropertiesChanged"),
                                         this,
                                         SLOT(uPowerChange())))
         qDebug() << "Could not connect to org.freedesktop.DBus.Properties.PropertiesChanged()";

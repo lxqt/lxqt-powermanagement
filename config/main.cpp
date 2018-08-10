@@ -25,6 +25,7 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
+#include <LXQt/Globals>
 #include <LXQt/SingleApplication>
 
 #include <QCommandLineParser>
@@ -47,7 +48,7 @@ int main(int argc, char *argv[])
     parser.process(a);
 
     MainWindow mainWindow;
-    mainWindow.setWindowIcon(QIcon::fromTheme("preferences-system-power-management"));
+    mainWindow.setWindowIcon(QIcon::fromTheme(QSL("preferences-system-power-management")));
     mainWindow.show();
     a.setActivationWindow(&mainWindow);
 

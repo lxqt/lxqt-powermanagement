@@ -6,6 +6,8 @@
 * Please refer to the LICENSE file for a copy of the license.
 */
 #include "iconproducer.h"
+
+#include <LXQt/Globals>
 #include <LXQt/Settings>
 #include <XdgIcon>
 #include <QDebug>
@@ -83,52 +85,52 @@ void IconProducer::themeChanged()
     mLevelNameMapDischarging.clear();
     mLevelNameMapCharging.clear();
 
-    if (QIcon::themeName() == "oxygen")
+    if (QIcon::themeName() == QL1S("oxygen"))
     {
         // Means:
         // Use 'battery-low' for levels up to 10
         //  -  'battery-caution' for levels between 10 and 20
         //  -  'battery-040' for levels between 20 and 40, etc..
-        mLevelNameMapDischarging[10] = "battery-low";
-        mLevelNameMapDischarging[20] = "battery-caution";
-        mLevelNameMapDischarging[40] = "battery-040";
-        mLevelNameMapDischarging[60] = "battery-060";
-        mLevelNameMapDischarging[80] = "battery-080";
-        mLevelNameMapDischarging[101] = "battery-100";
-        mLevelNameMapCharging[10] = "battery-charging-low";
-        mLevelNameMapCharging[20] = "battery-charging-caution";
-        mLevelNameMapCharging[40] = "battery-charging-040";
-        mLevelNameMapCharging[60] = "battery-charging-060";
-        mLevelNameMapCharging[80] = "battery-charging-080";
-        mLevelNameMapCharging[101] = "battery-charging";
+        mLevelNameMapDischarging[10] = QL1S("battery-low");
+        mLevelNameMapDischarging[20] = QL1S("battery-caution");
+        mLevelNameMapDischarging[40] = QL1S("battery-040");
+        mLevelNameMapDischarging[60] = QL1S("battery-060");
+        mLevelNameMapDischarging[80] = QL1S("battery-080");
+        mLevelNameMapDischarging[101] = QL1S("battery-100");
+        mLevelNameMapCharging[10] = QL1S("battery-charging-low");
+        mLevelNameMapCharging[20] = QL1S("battery-charging-caution");
+        mLevelNameMapCharging[40] = QL1S("battery-charging-040");
+        mLevelNameMapCharging[60] = QL1S("battery-charging-060");
+        mLevelNameMapCharging[80] = QL1S("battery-charging-080");
+        mLevelNameMapCharging[101] = QL1S("battery-charging");
     }
-    else if (QIcon::themeName().startsWith("AwOken")) // AwOken, AwOkenWhite, AwOkenDark
+    else if (QIcon::themeName().startsWith(QL1S("AwOken"))) // AwOken, AwOkenWhite, AwOkenDark
     {
-        mLevelNameMapDischarging[5] = "battery-000";
-        mLevelNameMapDischarging[30] = "battery-020";
-        mLevelNameMapDischarging[50] = "battery-040";
-        mLevelNameMapDischarging[70] = "battery-060";
-        mLevelNameMapDischarging[95] = "battery-080";
-        mLevelNameMapDischarging[101] = "battery-100";
-        mLevelNameMapCharging[5] = "battery-000-charging";
-        mLevelNameMapCharging[30] = "battery-020-charging";
-        mLevelNameMapCharging[50] = "battery-040-charging";
-        mLevelNameMapCharging[70] = "battery-060-charging";
-        mLevelNameMapCharging[95] = "battery-080-charging";
-        mLevelNameMapCharging[101] = "battery-100-charging";
+        mLevelNameMapDischarging[5] = QL1S("battery-000");
+        mLevelNameMapDischarging[30] = QL1S("battery-020");
+        mLevelNameMapDischarging[50] = QL1S("battery-040");
+        mLevelNameMapDischarging[70] = QL1S("battery-060");
+        mLevelNameMapDischarging[95] = QL1S("battery-080");
+        mLevelNameMapDischarging[101] = QL1S("battery-100");
+        mLevelNameMapCharging[5] = QL1S("battery-000-charging");
+        mLevelNameMapCharging[30] = QL1S("battery-020-charging");
+        mLevelNameMapCharging[50] = QL1S("battery-040-charging");
+        mLevelNameMapCharging[70] = QL1S("battery-060-charging");
+        mLevelNameMapCharging[95] = QL1S("battery-080-charging");
+        mLevelNameMapCharging[101] = QL1S("battery-100-charging");
     }
     else // As default we fall back to the freedesktop scheme.
     {
-        mLevelNameMapDischarging[3] = "battery-empty";
-        mLevelNameMapDischarging[10] = "battery-caution";
-        mLevelNameMapDischarging[50] = "battery-low";
-        mLevelNameMapDischarging[90] = "battery-good";
-        mLevelNameMapDischarging[101] = "battery-full";
-        mLevelNameMapCharging[3] = "battery-empty";
-        mLevelNameMapCharging[10] = "battery-caution-charging";
-        mLevelNameMapCharging[50] = "battery-low-charging";
-        mLevelNameMapCharging[90] = "battery-good-charging";
-        mLevelNameMapCharging[101] = "battery-full-charging";
+        mLevelNameMapDischarging[3] = QL1S("battery-empty");
+        mLevelNameMapDischarging[10] = QL1S("battery-caution");
+        mLevelNameMapDischarging[50] = QL1S("battery-low");
+        mLevelNameMapDischarging[90] = QL1S("battery-good");
+        mLevelNameMapDischarging[101] = QL1S("battery-full");
+        mLevelNameMapCharging[3] = QL1S("battery-empty");
+        mLevelNameMapCharging[10] = QL1S("battery-caution-charging");
+        mLevelNameMapCharging[50] = QL1S("battery-low-charging");
+        mLevelNameMapCharging[90] = QL1S("battery-good-charging");
+        mLevelNameMapCharging[101] = QL1S("battery-full-charging");
     }
 
     update();
@@ -148,7 +150,7 @@ QIcon& IconProducer::circleIcon()
 
 QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel)
 {
-    static QString svg_template =
+    static QString svg_template = QL1S(
         "<svg\n"
         "    xmlns:dc='http://purl.org/dc/elements/1.1/'\n"
         "    xmlns:cc='http://creativecommons.org/ns#'\n"
@@ -172,12 +174,12 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
         "\n"
         " STATE_MARKER\n"
         "\n"
-        "</svg>";
+        "</svg>");
 
-    static QString filledCircle   = "<circle cx='100' cy='100' r='35'/>";
-    static QString plus           = "<path d='M 60,100 L140,100 M100,60 L100,140' style='stroke:black; stroke-width:30;'/>";
-    static QString minus          = "<path d='M 60,100 L140,100' style='stroke:black; stroke-width:30;'/>";
-    static QString hollowCircle   = "<circle cx='100' cy='100' r='30' style='fill:none;stroke:black;stroke-width:10'/>";
+    static QString filledCircle   = QL1S("<circle cx='100' cy='100' r='35'/>");
+    static QString plus           = QL1S("<path d='M 60,100 L140,100 M100,60 L100,140' style='stroke:black; stroke-width:30;'/>");
+    static QString minus          = QL1S("<path d='M 60,100 L140,100' style='stroke:black; stroke-width:30;'/>");
+    static QString hollowCircle   = QL1S("<circle cx='100' cy='100' r='30' style='fill:none;stroke:black;stroke-width:10'/>");
 
     QString svg = svg_template;
 
@@ -189,47 +191,47 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
     if (state == Solid::Battery::Discharging)
     {
         angle = M_PI_2 + 2 * M_PI * chargeLevel/100;
-        sweepFlag = "0";
+        sweepFlag = QL1C('0');
     }
     else
     {
         angle = M_PI_2 - 2 *M_PI * chargeLevel/100;
-        sweepFlag = "1";
+        sweepFlag = QL1C('1');
     }
     double circle_endpoint_x = 80.0 * cos(angle) + 100;
     double circle_endpoint_y = -80.0 * sin(angle) + 100;
 
-    QString largeArgFlag = chargeLevel > 50 ? "1" : "0";
+    QString largeArgFlag = chargeLevel > 50 ? QL1S("1") : QL1S("0");
 
-    svg.replace(QString("END_X"), QString::number(circle_endpoint_x));
-    svg.replace(QString("END_Y"), QString::number(circle_endpoint_y));
-    svg.replace(QString("LARGE_ARC_FLAG"), largeArgFlag);
-    svg.replace(QString("SWEEP_FLAG"), sweepFlag);
+    svg.replace(QL1S("END_X"), QString::number(circle_endpoint_x));
+    svg.replace(QL1S("END_Y"), QString::number(circle_endpoint_y));
+    svg.replace(QL1S("LARGE_ARC_FLAG"), largeArgFlag);
+    svg.replace(QL1S("SWEEP_FLAG"), sweepFlag);
 
     switch (state)
     {
     case Solid::Battery::FullyCharged:
-        svg.replace("STATE_MARKER", filledCircle);
+        svg.replace(QL1S("STATE_MARKER"), filledCircle);
         break;
     case Solid::Battery::Charging:
-        svg.replace("STATE_MARKER", plus);
+        svg.replace(QL1S("STATE_MARKER"), plus);
         break;
     case Solid::Battery::Discharging:
-        svg.replace("STATE_MARKER", minus);
+        svg.replace(QL1S("STATE_MARKER"), minus);
         break;
     default:
-        svg.replace("STATE_MARKER", hollowCircle);
+        svg.replace(QL1S("STATE_MARKER"), hollowCircle);
     }
 
     if (state != Solid::Battery::FullyCharged && state != Solid::Battery::Charging &&  chargeLevel < mSettings.getPowerLowLevel() + 30)
     {
         if (chargeLevel <= mSettings.getPowerLowLevel() + 10)
-            svg.replace("RED_OPACITY", "1");
+            svg.replace(QL1S("RED_OPACITY"), QL1S("1"));
         else
-            svg.replace("RED_OPACITY", QString::number((mSettings.getPowerLowLevel() + 30 - chargeLevel)/20.0));
+            svg.replace(QL1S("RED_OPACITY"), QString::number((mSettings.getPowerLowLevel() + 30 - chargeLevel)/20.0));
     }
     else
-        svg.replace("RED_OPACITY", "0");
+        svg.replace(QL1S("RED_OPACITY"), QL1S("0"));
 
     // qDebug() << svg;
 

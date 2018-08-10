@@ -9,6 +9,8 @@
 #include "batteryinfodialog.h"
 #include "ui_batteryinfodialog.h"
 
+#include <LXQt/Globals>
+
 #include <QFormLayout>
 #include <QTabWidget>
 #include <QDebug>
@@ -33,7 +35,7 @@ BatteryInfoDialog::BatteryInfoDialog(QList<Solid::Battery*> batteries, QWidget *
         for (Solid::Battery *const battery : qAsConst(batteries))
         {
             BatteryInfoFrame *batteryInfoFrame = new BatteryInfoFrame(battery);
-            tabWidget->addTab(batteryInfoFrame, "BAT");
+            tabWidget->addTab(batteryInfoFrame, QSL("BAT"));
         }
     }
 }
