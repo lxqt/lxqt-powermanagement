@@ -31,6 +31,8 @@
 #include "batteryhelper.h"
 #include "ui_batteryinfoframe.h"
 
+#include <LXQt/Globals>
+
 BatteryInfoFrame::BatteryInfoFrame(Solid::Battery *battery) :
     QFrame(),
     mBattery(battery),
@@ -38,13 +40,13 @@ BatteryInfoFrame::BatteryInfoFrame(Solid::Battery *battery) :
 {
     mUi->setupUi(this);
 
-    mUi->energyFullDesignValue->setText(QString("%1 Wh").arg(mBattery->energyFullDesign(), 0, 'f', 2));
+    mUi->energyFullDesignValue->setText(QString::fromLatin1("%1 Wh").arg(mBattery->energyFullDesign(), 0, 'f', 2));
     mUi->typeValue->setText(BatteryHelper::typeToString(mBattery->type()));
     mUi->technologyValue->setText(BatteryHelper::technologyToString(mBattery->technology()));
 
-    QString vendor = QString("%1 %2").arg(battery->recallVendor()).arg(battery->serial());
+    QString vendor = QString::fromLatin1("%1 %2").arg(battery->recallVendor()).arg(battery->serial());
     if (vendor.trimmed().isEmpty())
-        vendor = "Unknown";
+        vendor = QSL("Unknown");
     mUi->vendorValue->setText(vendor);
 
     connect(mBattery, SIGNAL(energyChanged(double, const QString)), this, SLOT(onBatteryChanged()));
@@ -60,9 +62,9 @@ BatteryInfoFrame::~BatteryInfoFrame()
 void BatteryInfoFrame::onBatteryChanged()
 {
     mUi->stateValue->setText(BatteryHelper::stateToString(mBattery->chargeState()));
-    mUi->energyFullValue->setText(QString("%1 Wh (%2 %)").arg(mBattery->energyFull(), 0, 'f', 2).arg(mBattery->capacity()));
-    mUi->energyValue->setText(QString("%1 Wh (%2 %)").arg(mBattery->energy(), 0, 'f', 2).arg(mBattery->chargePercent()));
-    mUi->energyRateValue->setText(QString("%1 W").arg(mBattery->energyRate(), 0, 'f', 2));
-    mUi->voltageValue->setText(QString("%1 V").arg(mBattery->voltage(), 0, 'f', 2));
-    mUi->temperatureValue->setText(QString("%1 ºC").arg(mBattery->temperature()));
+    mUi->energyFullValue->setText(QString::fromLatin1("%1 Wh (%2 %)").arg(mBattery->energyFull(), 0, 'f', 2).arg(mBattery->capacity()));
+    mUi->energyValue->setText(QString::fromLatin1("%1 Wh (%2 %)").arg(mBattery->energy(), 0, 'f', 2).arg(mBattery->chargePercent()));
+    mUi->energyRateValue->setText(QString::fromLatin1("%1 W").arg(mBattery->energyRate(), 0, 'f', 2));
+    mUi->voltageValue->setText(QString::fromLatin1("%1 V").arg(mBattery->voltage(), 0, 'f', 2));
+    mUi->temperatureValue->setText(QString::fromLatin1("%1 ºC").arg(mBattery->temperature()));
 }

@@ -30,19 +30,21 @@
 #include "batterywatchersettings.h"
 #include "idlenesswatchersettings.h"
 
+#include <LXQt/Globals>
+
 MainWindow::MainWindow(QWidget *parent) :
     LXQt::ConfigDialog(tr("Power Management Settings"), new PowerManagementSettings(parent))
 {
     BatteryWatcherSettings* batteryWatcherSettings = new BatteryWatcherSettings(this);
-    addPage(batteryWatcherSettings, tr("Battery"), "battery");
+    addPage(batteryWatcherSettings, tr("Battery"), QSL("battery"));
     connect(this, SIGNAL(reset()), batteryWatcherSettings, SLOT(loadSettings()));
 
     LidWatcherSettings *lidwatcherSettings = new LidWatcherSettings(this);
-    addPage(lidwatcherSettings, tr("Lid"), "laptop-lid");
+    addPage(lidwatcherSettings, tr("Lid"), QSL("laptop-lid"));
     connect(this, SIGNAL(reset()), lidwatcherSettings, SLOT(loadSettings()));
 
     IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(this);
-    addPage(idlenessWatcherSettings, tr("Idle"), (QStringList() << "user-idle" << "user-away"));
+    addPage(idlenessWatcherSettings, tr("Idle"), (QStringList() << QSL("user-idle") << QSL("user-away")));
     connect(this, SIGNAL(reset()), idlenessWatcherSettings, SLOT(loadSettings()));
 
     emit reset();

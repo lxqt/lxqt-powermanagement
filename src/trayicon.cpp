@@ -38,6 +38,8 @@
 #include "trayicon.h"
 #include "batteryhelper.h"
 #include "../config/powermanagementsettings.h"
+
+#include <LXQt/Globals>
 #include <LXQt/Notification>
 
 TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
@@ -77,13 +79,13 @@ void TrayIcon::iconChanged()
 void TrayIcon::updateTooltip()
 {
     QString tooltip = BatteryHelper::stateToString(mBattery->chargeState());
-    tooltip += QString(" (%1 %)").arg(mBattery->chargePercent());
+    tooltip += QString::fromLatin1(" (%1 %)").arg(mBattery->chargePercent());
     setToolTip(tooltip);
 }
 
 void TrayIcon::onConfigureTriggered()
 {
-    QProcess::startDetached("lxqt-config-powermanagement");
+    QProcess::startDetached(QL1S("lxqt-config-powermanagement"));
 }
 
 void TrayIcon::onAboutTriggered()
@@ -110,10 +112,10 @@ void TrayIcon::onDisableIconTriggered()
 {
     auto notification = new LXQt::Notification{tr("LXQt Power Management info"), nullptr};
     notification->setBody(tr("The LXQt Power Management tray icon can be (re)enabled in <i>lxqt-config-powermanagement</i>"));
-    notification->setIcon("preferences-system-power-management");
+    notification->setIcon(QSL("preferences-system-power-management"));
     notification->setActions({tr("Configure now")});
     notification->setUrgencyHint(LXQt::Notification::UrgencyLow);
-    connect(notification, &LXQt::Notification::actionActivated, [notification] { notification->close(); QProcess::startDetached("lxqt-config-powermanagement"); });
+    connect(notification, &LXQt::Notification::actionActivated, [notification] { notification->close(); QProcess::startDetached(QL1S("lxqt-config-powermanagement")); });
     connect(notification, &LXQt::Notification::notificationClosed, notification, &QObject::deleteLater);
     notification->update();
 

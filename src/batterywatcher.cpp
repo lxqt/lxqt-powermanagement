@@ -31,6 +31,7 @@
 
 #include <LXQt/Notification>
 #include <LXQt/AutostartEntry>
+#include <LXQt/Globals>
 #include <LXQt/Power>
 #include <Solid/Device>
 #include <Solid/Battery>
@@ -46,7 +47,7 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
     {
         LXQt::Notification::notify(tr("No battery!"),
                 tr("LXQt could not find data about any battery - monitoring disabled"),
-                "lxqt-powermanagement");
+                QSL("lxqt-powermanagement"));
     }
 
     for (Solid::Device device : devices)

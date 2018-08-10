@@ -34,6 +34,8 @@
 #include "lidwatcher.h"
 #include "batterywatcher.h"
 
+#include <LXQt/Globals>
+
 #define CURRENT_RUNCHECK_LEVEL 1
 
 PowerManagementd::PowerManagementd() :
@@ -91,7 +93,7 @@ void PowerManagementd::settingsChanged()
 void PowerManagementd::runConfigure()
 {
     mNotification.close();
-    QProcess::startDetached("lxqt-config-powermanagement");
+    QProcess::startDetached(QSL("lxqt-config-powermanagement"));
 }
 
 void PowerManagementd::performRunCheck()

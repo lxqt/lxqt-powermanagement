@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     parser.setApplicationDescription(QStringLiteral("LXQt Powermanagement Daemon"));
-    const QString VERINFO = LXQT_POWERMANAGEMENT_VERSION \
+    const QString VERINFO = QSL(LXQT_POWERMANAGEMENT_VERSION \
                             "\nliblxqt   " LXQT_VERSION \
-                            "\nQt        " QT_VERSION_STR;
+                            "\nQt        " QT_VERSION_STR);
     a.setApplicationVersion(VERINFO);
     parser.addVersionOption();
     parser.addHelpOption();
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     // To ensure only one instance of lxqt-powermanagement is running we register as a DBus service and refuse to run
     // if not able to do so.
     // We do not register any object as we don't have any dbus-operations to expose.
-    if (! QDBusConnection::sessionBus().registerService("org.lxqt.lxqt-powermanagement"))
+    if (! QDBusConnection::sessionBus().registerService(QSL("org.lxqt.lxqt-powermanagement")))
     {
         qWarning() << "Unable to register 'org.lxqt.lxqt-powermanagement' service - is another instance of lxqt-powermanagement running?";
         return 1;
