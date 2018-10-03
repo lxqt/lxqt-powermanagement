@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr">
+<TS version="2.0" language="tr">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -117,7 +117,7 @@
         <translation>Pencere</translation>
     </message>
     <message>
-        <location filename="../batteryinfodialog.cpp" line="22"/>
+        <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
         <translation>Pil Bilgisi</translation>
     </message>
@@ -183,58 +183,52 @@
 <context>
     <name>BatteryWatcher</name>
     <message>
-        <location filename="../batterywatcher.cpp" line="47"/>
+        <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
         <translation>Pil yok!</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="48"/>
+        <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
         <translation>LXQT bir batarya verisi bulmadı - izleme iptal edildi</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="113"/>
+        <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
         <translation>Pil Zayıf!</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="125"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
+        <translation type="unfinished"></translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="128"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
+        <translation type="unfinished"></translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="131"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../powermanagementd.cpp" line="110"/>
+        <location filename="../powermanagementd.cpp" line="112"/>
         <source>Power Management</source>
         <translation>Güç Yönetimi</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="111"/>
+        <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>LXQT Güç Yönetimini ilk defa çalıştırıyorsunuz. 
 Güç yönetimini ayarladan yapılandırabilirsiniz...</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="112"/>
+        <location filename="../powermanagementd.cpp" line="114"/>
         <source>Configure...</source>
         <translation>Yapılandır...</translation>
     </message>
@@ -242,38 +236,38 @@ Güç yönetimini ayarladan yapılandırabilirsiniz...</translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="59"/>
+        <location filename="../trayicon.cpp" line="61"/>
         <source>Configure</source>
         <translation>Yapılandır</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
-        <location filename="../trayicon.cpp" line="92"/>
+        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
         <translation>Simgeyi kapat</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="93"/>
+        <location filename="../trayicon.cpp" line="95"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt Güç Yönetimi&lt;/b&gt;&lt;br/&gt;  -LXQt Masaüstü Ortamı için Güç Yöneticisi&lt;/p&gt;&lt;p&gt;  Yazarlar:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - ve Razor ve LXQt projelerinden diğerleri&lt;/p&gt;&lt;p&gt;  Telif Hakkı: &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="111"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
         <translation>LXQT Güç Yönetimi Bilgi</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="112"/>
+        <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>LXQT Güç Yönetimi sistem çekmecesi simgesi &lt;i&gt;LXQT güç yönetimi ayarları&lt;/i&gt;dan etkinleştirilebilir</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="116"/>
         <source>Configure now</source>
         <translation>Şimdi yapılandır</translation>
     </message>
