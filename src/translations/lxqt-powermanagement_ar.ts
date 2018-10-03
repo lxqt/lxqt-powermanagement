@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ar">
+<TS version="2.0" language="ar">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -118,7 +118,7 @@
         <translation>حواريّ</translation>
     </message>
     <message>
-        <location filename="../batteryinfodialog.cpp" line="22"/>
+        <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
         <translation>معلومات البطارية</translation>
     </message>
@@ -184,67 +184,52 @@
 <context>
     <name>BatteryWatcher</name>
     <message>
-        <location filename="../batterywatcher.cpp" line="47"/>
+        <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
         <translation>لا بطارية!</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="48"/>
+        <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
         <translation>تعذر على لكسكيوت العثور على أي بطارية - عُطّلت المراقبة</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="113"/>
+        <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
         <translation>البطارية ضعيفة!</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="125"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation><numerusform>سيُعلّق الحاسوب بعد أقل من ثانية</numerusform>
-        <numerusform>سيُعلّق الحاسوب بعد ثانية واحدة</numerusform>
-        <numerusform>سيُعلّق الحاسوب بعد ثانيتين</numerusform>
-        <numerusform>سيُعلّق الحاسوب بعد %n ثوان</numerusform>
-        <numerusform>سيُعلّق الحاسوب بعد %n ثانية</numerusform>
-        <numerusform>سيُعلّق الحاسوب بعد %n ثانية</numerusform>
-        </translation></message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="128"/>
+        <translation type="unfinished">سيُعلّق الحاسوب بعد أقل من ثانية</translation>
+    </message>
+    <message>
+        <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation><numerusform>سيُسبت الحاسوب بعد أقل من ثانية</numerusform>
-        <numerusform>سيُسبت الحاسوب بعد ثانية واحدة</numerusform>
-        <numerusform>سيُسبت الحاسوب بعد ثانيتين</numerusform>
-        <numerusform>سيُسبت الحاسوب بعد %n ثوان</numerusform>
-        <numerusform>سيُسبت الحاسوب بعد %n ثانية</numerusform>
-        <numerusform>سيُسبت الحاسوب بعد %n ثانية</numerusform>
-        </translation></message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="131"/>
+        <translation type="unfinished">سيُسبت الحاسوب بعد أقل من ثانية</translation>
+    </message>
+    <message>
+        <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation><numerusform>سيُطفأ الحاسوب بعد أقل من ثانية</numerusform>
-        <numerusform>سيُطفأ الحاسوب بعد ثانية واحدة</numerusform>
-        <numerusform>سيُطفأ الحاسوب بعد ثانيتين</numerusform>
-        <numerusform>سيُطفأ الحاسوب بعد %n ثوان</numerusform>
-        <numerusform>سيُطفأ الحاسوب بعد %n ثانية</numerusform>
-        <numerusform>سيُطفأ الحاسوب بعد %n ثانية</numerusform>
-        </translation></message>
+        <translation type="unfinished">سيُطفأ الحاسوب بعد أقل من ثانية</translation>
+    </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../powermanagementd.cpp" line="110"/>
+        <location filename="../powermanagementd.cpp" line="112"/>
         <source>Power Management</source>
         <translation>إدارة الطاقة</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="111"/>
+        <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>أنت تشغّل إدارة لكسكيوت للطاقة للمرة الأولى.
 يمكنك ضبطها من الإعدادات… </translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="112"/>
+        <location filename="../powermanagementd.cpp" line="114"/>
         <source>Configure...</source>
         <translation>اضبط…</translation>
     </message>
@@ -252,38 +237,38 @@ You can configure it from settings... </source>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="59"/>
+        <location filename="../trayicon.cpp" line="61"/>
         <source>Configure</source>
         <translation>اضبط</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
-        <location filename="../trayicon.cpp" line="92"/>
+        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>About</source>
         <translation>عن</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
         <translation>عطّل الأيقونة</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="93"/>
+        <location filename="../trayicon.cpp" line="95"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;إدارة لكسكيوت للطاقة&lt;/b&gt;&lt;br/&gt;  - إدارة طاقة لبيئة سطح مكتب لكسكيوت&lt;/p&gt;&lt;p&gt;  المؤلفون:&lt;br/&gt;  &amp;nbsp; Christian Surlykke و Alec Moskvin&lt;br/&gt;  &amp;nbsp; - وآخرين من مشروعي ريزر ولكسكيوت&lt;/p&gt;&lt;p&gt;  الحقوق محفوظة &amp;copy; ٢٠١٢-٢٠١٤&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="111"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
         <translation>معلومات لكسكيوت لإدارة الطاقة</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="112"/>
+        <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>يمكن تفعيل/إعادة تفعيل أيقونة صينية النظام لإدارة لكسكيوت للطاقة من &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="116"/>
         <source>Configure now</source>
         <translation>اضبط الآن</translation>
     </message>

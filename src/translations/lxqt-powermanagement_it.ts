@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it">
+<TS version="2.0" language="it">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -117,7 +117,7 @@
         <translation>Finestra</translation>
     </message>
     <message>
-        <location filename="../batteryinfodialog.cpp" line="22"/>
+        <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
         <translation>Informazioni batteria</translation>
     </message>
@@ -183,55 +183,52 @@
 <context>
     <name>BatteryWatcher</name>
     <message>
-        <location filename="../batterywatcher.cpp" line="47"/>
+        <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
         <translation>Nessuna batteria!</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="48"/>
+        <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
         <translation>LXQt non è in grado di trovare dati sulla batteria - monitoraggio disabilitato</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="113"/>
+        <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
         <translation>Potenza scarsa!</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="125"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation><numerusform>Sospensione tra %n secondo</numerusform>
-        <numerusform>Sospensione tra %n secondi</numerusform>
-        </translation></message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="128"/>
+        <translation type="unfinished">Sospensione tra %n secondo</translation>
+    </message>
+    <message>
+        <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation><numerusform>Ibernazione tra %n secondo</numerusform>
-        <numerusform>Ibernazione tra %n secondi</numerusform>
-        </translation></message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="131"/>
+        <translation type="unfinished">Ibernazione tra %n secondo</translation>
+    </message>
+    <message>
+        <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation><numerusform>Arresto tra %n secondo</numerusform>
-        <numerusform>Arresto tra %n secondi</numerusform>
-        </translation></message>
+        <translation type="unfinished">Arresto tra %n secondo</translation>
+    </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../powermanagementd.cpp" line="110"/>
+        <location filename="../powermanagementd.cpp" line="112"/>
         <source>Power Management</source>
         <translation>Gestione energetica</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="111"/>
+        <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Stai eseguendo la gestione energetica di LXQt per la prima volta.
 Puoi configurarla dalle impostazioni... </translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="112"/>
+        <location filename="../powermanagementd.cpp" line="114"/>
         <source>Configure...</source>
         <translation>Configura...</translation>
     </message>
@@ -239,38 +236,38 @@ Puoi configurarla dalle impostazioni... </translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="59"/>
+        <location filename="../trayicon.cpp" line="61"/>
         <source>Configure</source>
         <translation>Configura</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
-        <location filename="../trayicon.cpp" line="92"/>
+        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>About</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
         <translation>Disabilita l&apos;icona</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="93"/>
+        <location filename="../trayicon.cpp" line="95"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;Gestione energetica di LXQt&lt;/b&gt;&lt;br/&gt;  - Gestione energetica per l&apos;ambiente desktop LXQt&lt;/p&gt;&lt;p&gt;  Autori:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - e altri dai progetti Razor e LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="111"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
         <translation>Informazioni sulla gestione energetica di LXQt</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="112"/>
+        <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>L&apos;icona del vassoio di sistema della gestione energetica di LXQt può essere abilitata in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="116"/>
         <source>Configure now</source>
         <translation>Configura ora</translation>
     </message>

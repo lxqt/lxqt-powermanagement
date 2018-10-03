@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh_CN">
+<TS version="2.0" language="zh_CN">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -117,7 +117,7 @@
         <translation>对话框</translation>
     </message>
     <message>
-        <location filename="../batteryinfodialog.cpp" line="22"/>
+        <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
         <translation>电池信息</translation>
     </message>
@@ -183,58 +183,52 @@
 <context>
     <name>BatteryWatcher</name>
     <message>
-        <location filename="../batterywatcher.cpp" line="47"/>
+        <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
         <translation>没有电池！</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="48"/>
+        <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
         <translation>LXQt 找不到任何关于电池的数据 - 监视已关闭</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="113"/>
+        <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
         <translation>电量不足！</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="125"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation>
-            <numerusform>%n 秒后挂起</numerusform>
-        </translation>
+        <translation type="unfinished">%n 秒后挂起</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="128"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation>
-            <numerusform>%n 秒后休眠</numerusform>
-        </translation>
+        <translation type="unfinished">%n 秒后休眠</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="131"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation>
-            <numerusform>%n 秒后关机</numerusform>
-        </translation>
+        <translation type="unfinished">%n 秒后关机</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../powermanagementd.cpp" line="110"/>
+        <location filename="../powermanagementd.cpp" line="112"/>
         <source>Power Management</source>
         <translation>电源管理</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="111"/>
+        <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>这是您第一次使用 LXQt 电源管理器
 您可以从设置配置... </translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="112"/>
+        <location filename="../powermanagementd.cpp" line="114"/>
         <source>Configure...</source>
         <translation>配置...</translation>
     </message>
@@ -242,38 +236,38 @@ You can configure it from settings... </source>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="59"/>
+        <location filename="../trayicon.cpp" line="61"/>
         <source>Configure</source>
         <translation>配置</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
-        <location filename="../trayicon.cpp" line="92"/>
+        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
         <translation>关闭图标</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="93"/>
+        <location filename="../trayicon.cpp" line="95"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt 电源管理器&lt;/b&gt;&lt;br/&gt;  - LXQt 桌面环境的电源管理器&lt;/p&gt;&lt;p&gt;  作者：&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - 及其他来自 Razor 和 LXQt 项目的贡献者&lt;/p&gt;&lt;p&gt;  版权所有 &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="111"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
         <translation>LXQt 电源管理器信息</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="112"/>
+        <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>LXQt 电源管理器的通知图标可以在&lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;中开启</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="116"/>
         <source>Configure now</source>
         <translation>现在配置</translation>
     </message>

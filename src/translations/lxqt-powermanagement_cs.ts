@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.0" language="cs">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -117,7 +117,7 @@
         <translation>Dialog</translation>
     </message>
     <message>
-        <location filename="../batteryinfodialog.cpp" line="22"/>
+        <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
         <translation>Informace o akumulátoru</translation>
     </message>
@@ -183,64 +183,52 @@
 <context>
     <name>BatteryWatcher</name>
     <message>
-        <location filename="../batterywatcher.cpp" line="47"/>
+        <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
         <translation>Žádný akumulátor!</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="48"/>
+        <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
         <translation>LXQt se nepodařilo najít údaje o žádném akumulátoru/baterii – sledování proto vypnuto</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="113"/>
+        <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
         <translation>Téměř vybito!</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="125"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation>
-            <numerusform>Uspání do paměti za %n sekundu</numerusform>
-            <numerusform>Uspání do paměti za %n sekundy</numerusform>
-            <numerusform>Uspání do paměti za %n sekund</numerusform>
-        </translation>
+        <translation type="unfinished">Uspání do paměti za %n sekundu</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="128"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation>
-            <numerusform>Uspání na disk za %n sekundu</numerusform>
-            <numerusform>Uspání na disk za %n sekundy</numerusform>
-            <numerusform>Uspání na disk za %n sekund</numerusform>
-        </translation>
+        <translation type="unfinished">Uspání na disk za %n sekundu</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="131"/>
+    <message>
+        <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation>
-            <numerusform>Vypnutí za %n sekundu</numerusform>
-            <numerusform>Vypnutí za %n sekundy</numerusform>
-            <numerusform>Vypnutí za %n sekund</numerusform>
-        </translation>
+        <translation type="unfinished">Vypnutí za %n sekundu</translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../powermanagementd.cpp" line="110"/>
+        <location filename="../powermanagementd.cpp" line="112"/>
         <source>Power Management</source>
         <translation>Správa napájení</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="111"/>
+        <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>LXQt správa napájení je spuštěna poprvé.
 Parametry je možné upravit v Nastavení… </translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="112"/>
+        <location filename="../powermanagementd.cpp" line="114"/>
         <source>Configure...</source>
         <translation>Nastavit…</translation>
     </message>
@@ -248,38 +236,38 @@ Parametry je možné upravit v Nastavení… </translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="59"/>
+        <location filename="../trayicon.cpp" line="61"/>
         <source>Configure</source>
         <translation>Nastavit</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
-        <location filename="../trayicon.cpp" line="92"/>
+        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
+        <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
         <translation>Nezobrazovat ikonu</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="93"/>
+        <location filename="../trayicon.cpp" line="95"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;Správa napájení&lt;/b&gt;&lt;br/&gt;  – správa napájení pro pracovní prostředí LXQt&lt;/p&gt;&lt;p&gt;  Autoři:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; – a další z projektů Razor a LXQt&lt;/p&gt;&lt;p&gt;  Autorské právo &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="111"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
         <translation>Informace z LXQt správy napájení</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="112"/>
+        <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Zobrazování ikony správy napájení v systémovém panelu lze (znovu)zapnout v &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="116"/>
         <source>Configure now</source>
         <translation>Nastavit nyní</translation>
     </message>
