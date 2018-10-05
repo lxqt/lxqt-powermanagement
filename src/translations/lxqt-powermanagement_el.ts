@@ -200,17 +200,17 @@
     <message>
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">Αναστολή σε %n δευτερόλεπτο(α)</translation>
+        <translation>Αναστολή σε %n δευτερόλεπτο(α)</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">Νάρκωση σε %n δευτερόλεπτο(α)</translation>
+        <translation>Νάρκωση σε %n δευτερόλεπτο(α)</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">Τερματισμός σε %n δευτερόλεπτο(α)</translation>
+        <translation>Τερματισμός σε %n δευτερόλεπτο(α)</translation>
     </message>
 </context>
 <context>
