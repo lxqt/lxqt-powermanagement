@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
-
 project(lxqt-powermanagement)
+# CMP0000 - A minimum required CMake version must be specified.
+# Note that the command invocation must appear in the CMakeLists.txt
+# file itself; a call in an included file is not sufficient.
+cmake_minimum_required(VERSION 3.6.2 FATAL_ERROR)
 
 include(GNUInstallDirs)
 
@@ -21,10 +23,6 @@ message(STATUS "Building with Qt${Qt5Core_VERSION}")
 find_package(KF5Solid REQUIRED)
 
 find_package(lxqt REQUIRED)
-
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
-endif()
 
 # Patch Version
 set(LXQT_POWERMANAGEMENT_PATCH_VERSION 0)
