@@ -26,7 +26,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
         <source>Lithium ion</source>
-        <translation>Lithium-Ion</translation>
+        <translation>Lithium-ion</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
