@@ -200,17 +200,17 @@
     <message>
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">Uspání do paměti za %n sekundu</translation>
+        <translation>Uspání do paměti za %n sekund</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">Uspání na disk za %n sekundu</translation>
+        <translation>Uspání na disk za %n sekund</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">Vypnutí za %n sekundu</translation>
+        <translation>Vypnutí za %n sekund</translation>
     </message>
 </context>
 <context>
