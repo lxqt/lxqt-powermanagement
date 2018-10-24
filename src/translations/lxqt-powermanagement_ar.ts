@@ -201,17 +201,17 @@
     <message>
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">سيُعلّق الحاسوب بعد أقل من ثانية</translation>
+        <translation>سيُعلّق الحاسوب بعد %n ثوان</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">سيُسبت الحاسوب بعد أقل من ثانية</translation>
+        <translation>سيُسبت الحاسوب بعد %n ثوان</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">سيُطفأ الحاسوب بعد أقل من ثانية</translation>
+        <translation>سيُطفأ الحاسوب بعد %n ثوان</translation>
     </message>
 </context>
 <context>
