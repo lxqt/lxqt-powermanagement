@@ -16,12 +16,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
         <source>Fully charged</source>
-        <translation>Vollständig geladen</translation>
+        <translation>Vollständig aufgeladen</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="49"/>
         <source>Charging</source>
-        <translation>Lade</translation>
+        <translation>Aufladen</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
@@ -225,12 +225,12 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Sie führen die LXQt-Energieverwaltung erstmals aus.
-Sie können sie in den Einstellungen konfigurieren ... </translation>
+Sie können sie in den Einstellungen konfigurieren... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Konfiguriere ...</translation>
+        <translation>Konfigurieren...</translation>
     </message>
 </context>
 <context>
