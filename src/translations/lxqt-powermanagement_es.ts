@@ -200,17 +200,17 @@
     <message>
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">Suspensión en %n segundo</translation>
+        <translation>Suspensión en %n segundo(s)</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">Hibernando en %n segundo</translation>
+        <translation>Hibernando en %n segundo(s)</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">Apagado en %n segundo</translation>
+        <translation>Apagado en %n segundo(s)</translation>
     </message>
 </context>
 <context>
