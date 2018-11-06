@@ -6,17 +6,17 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Definições do monitorizador de energia</translation>
+        <translation>Configurações do monitor de energia</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>Ativar mo&amp;nitorizador de energia</translation>
+        <translation>&amp;Habilitar monitor de energia</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation>Aviso:</translation>
+        <translation>Atenção:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
@@ -47,27 +47,27 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation>A carregar</translation>
+        <translation>Carregando</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation>A descarregar</translation>
+        <translation>Descarregando</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Se a energia estiver baixa:</translation>
+        <translation>Quando a energia estiver baixa, então:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Mostrar ícone:</translation>
+        <translation>Exibir ícone:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation>incorporada</translation>
+        <translation>embutida</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
@@ -85,17 +85,17 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Ativar monitori&amp;zador de inatividade</translation>
+        <translation>Habi&amp;litar monitor de inatividade</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
-        <translation>Se existir inatividade:</translation>
+        <translation>Quando inativo, então:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
-        <translation>Tempo para inatividade:</translation>
+        <translation>Tempo de inatividade:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="73"/>
