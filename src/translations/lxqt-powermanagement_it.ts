@@ -114,7 +114,7 @@
     <message>
         <location filename="../batteryinfodialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Finestra</translation>
+        <translation>Dialogo</translation>
     </message>
     <message>
         <location filename="../batteryinfodialog.cpp" line="24"/>
@@ -200,17 +200,17 @@
     <message>
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">Sospensione tra %n secondo</translation>
+        <translation>Sospensione tra %n secondi</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">Ibernazione tra %n secondo</translation>
+        <translation>Ibernazione tra %n secondi</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">Arresto tra %n secondo</translation>
+        <translation>Arresto tra %n secondi</translation>
     </message>
 </context>
 <context>
@@ -254,7 +254,7 @@ Puoi configurarla dalle impostazioni... </translation>
     <message>
         <location filename="../trayicon.cpp" line="95"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Gestione energetica di LXQt&lt;/b&gt;&lt;br/&gt;  - Gestione energetica per l&apos;ambiente desktop LXQt&lt;/p&gt;&lt;p&gt;  Autori:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - e altri dai progetti Razor e LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Gestione energetica di LXQt&lt;/b&gt;&lt;br/&gt;  - Gestione energetica per l&apos;ambiente desktop LXQt&lt;/p&gt;&lt;p&gt;  Autori:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - e altri dai progetti Razor e LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2018&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
