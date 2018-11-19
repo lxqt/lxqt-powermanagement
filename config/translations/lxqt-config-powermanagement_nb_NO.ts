@@ -6,27 +6,27 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation></translation>
+        <translation>Batteriinnstillinger</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation></translation>
+        <translation>F&amp;ølg med på batteriet</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation></translation>
+        <translation>Advarsel:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation></translation>
+        <translation> sekunder</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation></translation>
+        <translation>Nivået er lavt ved:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
@@ -36,43 +36,43 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation></translation>
+        <translation>Bruk symboler fra tema:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation></translation>
+        <translation>Forhåndsvisning</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation></translation>
+        <translation>Lader</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation></translation>
+        <translation>Utlader</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation></translation>
+        <translation>Når det er lite strøm:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation></translation>
+        <translation>Vis symbol:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation></translation>
+        <translation>innebygd</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation></translation>
+        <translation>Nivå: %1%</translation>
     </message>
 </context>
 <context>
@@ -85,27 +85,27 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation></translation>
+        <translation>Følg&amp; med på når ingenting skjer</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
-        <translation></translation>
+        <translation>Når ingenting skjer:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
-        <translation></translation>
+        <translation>Ingenting skjer etter:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="73"/>
         <source> minutes</source>
-        <translation></translation>
+        <translation> minutter</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="86"/>
         <source> seconds</source>
-        <translation></translation>
+        <translation> sekunder</translation>
     </message>
 </context>
 <context>
@@ -118,49 +118,49 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation></translation>
+        <translation>Følg me&amp;d på lokket</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
         <source>Action when lid is closed</source>
-        <translation></translation>
+        <translation>Når lokket er lukket</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="53"/>
         <location filename="../lidwatchersettings.ui" line="118"/>
         <source>On Battery</source>
-        <translation></translation>
+        <translation>På batteri</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="61"/>
         <source>Nothing</source>
-        <translation></translation>
+        <translation>Ingenting</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="66"/>
         <source>Suspend</source>
-        <translation></translation>
+        <translation>Dvale</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="71"/>
         <source>Hibernate</source>
-        <translation></translation>
+        <translation>Dyp dvale</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="76"/>
         <source>Shut down</source>
-        <translation></translation>
+        <translation>Skru av</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="84"/>
         <location filename="../lidwatchersettings.ui" line="128"/>
         <source>On AC</source>
-        <translation></translation>
+        <translation>På strømnettet</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation></translation>
+        <translation>Når m&amp;an bruker ekstern skjerm</translation>
     </message>
 </context>
 <context>
@@ -168,22 +168,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="36"/>
         <source>Power Management Settings</source>
-        <translation></translation>
+        <translation>Strøminnstillinger</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="39"/>
         <source>Battery</source>
-        <translation></translation>
+        <translation>Batteri</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="43"/>
         <source>Lid</source>
-        <translation></translation>
+        <translation>Lokk</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="47"/>
         <source>Idle</source>
-        <translation></translation>
+        <translation>Når ingenting skjer</translation>
     </message>
 </context>
 <context>
@@ -191,32 +191,32 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation></translation>
+        <translation>Ingenting</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation></translation>
+        <translation>Låseskjerm</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation></translation>
+        <translation>Dvale</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation></translation>
+        <translation>Dyp dvale</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Shutdown</source>
-        <translation></translation>
+        <translation>Skru av</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation></translation>
+        <translation>Skru av skjerm(er)</translation>
     </message>
 </context>
 </TS>
