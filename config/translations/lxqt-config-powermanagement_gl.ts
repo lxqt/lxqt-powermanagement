@@ -6,27 +6,27 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation></translation>
+        <translation>Axustes da supervisión da batería</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation></translation>
+        <translation>Activar o &amp;supervisor da batería</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation></translation>
+        <translation>Aviso:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation></translation>
+        <translation> segundos</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation></translation>
+        <translation>O nivel está baixo ao:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation></translation>
+        <translation>Usar as iconas do tema:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
