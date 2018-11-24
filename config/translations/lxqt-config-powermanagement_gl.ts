@@ -42,37 +42,37 @@
         <location filename="../batterywatchersettings.ui" line="125"/>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation></translation>
+        <translation>Vista previa</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation></translation>
+        <translation>Cargando</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation></translation>
+        <translation>Descargando</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation></translation>
+        <translation>Cando a carga sexa baixa:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation></translation>
+        <translation>Amosar a icona:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation></translation>
+        <translation>integrado</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation></translation>
+        <translation>Nivel: %1%</translation>
     </message>
 </context>
 <context>
@@ -80,32 +80,32 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formulario</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="20"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation></translation>
+        <translation>Activar o supervisor de &amp;inactividade</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="41"/>
         <source>When idle then:</source>
-        <translation></translation>
+        <translation>Ao estar inactivo:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="60"/>
         <source>Idle time:</source>
-        <translation></translation>
+        <translation>Tempo inactivo:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="73"/>
         <source> minutes</source>
-        <translation></translation>
+        <translation> minutos</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="86"/>
         <source> seconds</source>
-        <translation></translation>
+        <translation> segundos</translation>
     </message>
 </context>
 <context>
@@ -113,54 +113,54 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formulario</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="26"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation></translation>
+        <translation>Activar o supervisor da &amp;tapa</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="41"/>
         <source>Action when lid is closed</source>
-        <translation></translation>
+        <translation>Acción ao pechar a tapa</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="53"/>
         <location filename="../lidwatchersettings.ui" line="118"/>
         <source>On Battery</source>
-        <translation></translation>
+        <translation>Coa batería</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="61"/>
         <source>Nothing</source>
-        <translation></translation>
+        <translation>Ren</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="66"/>
         <source>Suspend</source>
-        <translation></translation>
+        <translation>Suspender</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="71"/>
         <source>Hibernate</source>
-        <translation></translation>
+        <translation>Hibernar</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="76"/>
         <source>Shut down</source>
-        <translation></translation>
+        <translation>Apagar</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="84"/>
         <location filename="../lidwatchersettings.ui" line="128"/>
         <source>On AC</source>
-        <translation></translation>
+        <translation>Con corrente</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="97"/>
         <source>When &amp;using external monitor</source>
-        <translation></translation>
+        <translation>Cando se &amp;utilice un monitor externo</translation>
     </message>
 </context>
 <context>
@@ -168,22 +168,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="36"/>
         <source>Power Management Settings</source>
-        <translation></translation>
+        <translation>Axustes da xestión de enerxía</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="39"/>
         <source>Battery</source>
-        <translation></translation>
+        <translation>Batería</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="43"/>
         <source>Lid</source>
-        <translation></translation>
+        <translation>Tapa</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="47"/>
         <source>Idle</source>
-        <translation></translation>
+        <translation>Inactividade</translation>
     </message>
 </context>
 <context>
@@ -191,32 +191,32 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation></translation>
+        <translation>Ren</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation></translation>
+        <translation>Bloquear a pantalla</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation></translation>
+        <translation>Suspender</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation></translation>
+        <translation>Hibernar</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Shutdown</source>
-        <translation></translation>
+        <translation>Apagar</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation></translation>
+        <translation>Apagar o(s) monitor(es)</translation>
     </message>
 </context>
 </TS>
