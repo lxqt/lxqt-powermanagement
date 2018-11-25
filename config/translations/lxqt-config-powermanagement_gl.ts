@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>Activar o &amp;supervisor da batería</translation>
+        <translation>Activar o supervisor da &amp;batería</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation>integrado</translation>
+        <translation>integrada</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="61"/>
         <source>Nothing</source>
-        <translation>Ren</translation>
+        <translation>Non facer ren</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="66"/>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation>Ren</translation>
+        <translation>Non facer ren</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
