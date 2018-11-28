@@ -7,7 +7,7 @@ lxqt-powermanagement-0.14.0 / 2018-05-21
   * Improved cmake scripting
     - set cmake_minimum_required to 3.1.0
     - removed locale compile definitons
-  * Moved translations from lxqt-l10n back to compton-conf
+  * Moved translations from lxqt-l10n back to lxqt-powermanagement
     - removed obsolete translation fuctionality
     - Added translation promo in README.md
   * Translation updates
