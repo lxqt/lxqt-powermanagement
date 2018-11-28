@@ -4,12 +4,13 @@ lxqt-powermanagement-0.14.0 / 2018-05-21
 
   * Bumped version to 0.14.0
   * Don't use automatic string conversions
-  * Translation updates
   * Improved cmake scripting
     - set cmake_minimum_required to 3.1.0
     - removed locale compile definitons
   * Moved translations from lxqt-l10n back to compton-conf
     - removed obsolete translation fuctionality
+    - Added translation promo in README.md
+  * Translation updates
 
 lxqt-powermanagement-0.13.0 / 2018-05-21
 ========================================
