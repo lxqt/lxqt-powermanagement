@@ -29,3 +29,11 @@ Official binary packages are provided by all major Linux distributions like Arch
 Daemon-like `lxqt-powermanagement` can be adjusted from section "Basic Settings" in configuration dialogue "LXQt Session Settings" (binary `lxqt-config-session`) of [lxqt-session](https://github.com/lxqt/lxqt-session).
 
 To customize settings there's configuration dialogue "Power Management Settings" (binary `lxqt-config-powermanagement`). It can be opened from the panel's main menu - Preferences - LXQt Settings - Power Management and is provided by the "Configuration Center" (binary `lxqt-config`) of [lxqt-config](https://github.com/lxqt/lxqt-config) as well.
+
+## Translation (Weblate)
+
+<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-powermanagement">
+<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-powermanagement/287x66-white.png" alt="Translation status" />
+</a>    <a href="https://weblate.lxqt.org/projects/lxqt/lxqt-config-powermanagement">
+<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-config-powermanagement/287x66-white.png" alt="Translation status" />
+</a>
