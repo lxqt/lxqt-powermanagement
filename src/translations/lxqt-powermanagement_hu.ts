@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="hu">
+<TS version="2.1" language="hu">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -197,20 +197,26 @@
         <source>Power low!</source>
         <translation>Alacsony feszültség!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">Készenlét %n másodperc múlva</translation>
+        <translation type="unfinished">
+            <numerusform>Készenlét %n másodperc múlva</numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">Mélykészenlét %n másodperc múlva</translation>
+        <translation type="unfinished">
+            <numerusform>Mélykészenlét %n másodperc múlva</numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">Kikapcsolás %n másodperc múlva</translation>
+        <translation type="unfinished">
+            <numerusform>Kikapcsolás %n másodperc múlva</numerusform>
+        </translation>
     </message>
 </context>
 <context>

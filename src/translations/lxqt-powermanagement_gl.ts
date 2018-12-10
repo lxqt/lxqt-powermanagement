@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="gl">
+<TS version="2.1" language="gl">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -197,20 +197,29 @@
         <source>Power low!</source>
         <translation>Carga baixa!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation>Suspenderase en %n segundo(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Suspenderase en %n segundo(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation>Hibernará en %n segundo(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Hibernará en %n segundo(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation>Apagarase en %n segundo(s)</translation>
+        <translation type="unfinished">
+            <numerusform>Apagarase en %n segundo(s)</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
