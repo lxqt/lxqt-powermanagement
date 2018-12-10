@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru">
+<TS version="2.1" language="ru">
 <context>
     <name>BatteryHelper</name>
     <message>
@@ -197,20 +197,32 @@
         <source>Power low!</source>
         <translation>Низкий заряд!</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation>Ждущий режим через %n секунд</translation>
+        <translation type="unfinished">
+            <numerusform>Ждущий режим через %n секунд</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation>Гибернация через %n секунд</translation>
+        <translation type="unfinished">
+            <numerusform>Гибернация через %n секунд</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation>Выключение через %n секунд</translation>
+        <translation type="unfinished">
+            <numerusform>Выключение через %n секунд</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
