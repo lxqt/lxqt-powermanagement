@@ -228,7 +228,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Esteu executant per primera vegada la gestió de l&apos;energia de LXQt.
-Podeu configurar-ho a partir dels ajusts... </translation>
+Podeu configurar-ho des dels ajusts... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="114"/>
