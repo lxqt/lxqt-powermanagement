@@ -200,27 +200,21 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Se suspèn d&apos;aquí a %n segon(s)</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Se suspèn d&apos;aquí a %n segon</numerusform>
+        <numerusform>Se suspèn d&apos;aquí a %n segons</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>S&apos;hiberna d&apos;aquí a %n segon(s)</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>S&apos;hiberna d&apos;aquí a %n segon</numerusform>
+        <numerusform>S&apos;hiberna d&apos;aquí a %n segons</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>S&apos;apaga d&apos;aquí a %n segon(s)</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>S&apos;apaga d&apos;aquí a %n segon</numerusform>
+        <numerusform>S&apos;apaga d&apos;aquí a %n segons</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
