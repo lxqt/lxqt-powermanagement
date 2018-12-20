@@ -66,5 +66,5 @@ void BatteryInfoFrame::onBatteryChanged()
     mUi->energyValue->setText(QString::fromLatin1("%1 Wh (%2 %)").arg(mBattery->energy(), 0, 'f', 2).arg(mBattery->chargePercent()));
     mUi->energyRateValue->setText(QString::fromLatin1("%1 W").arg(mBattery->energyRate(), 0, 'f', 2));
     mUi->voltageValue->setText(QString::fromLatin1("%1 V").arg(mBattery->voltage(), 0, 'f', 2));
-    mUi->temperatureValue->setText(QString::fromLatin1("%1 ºC").arg(mBattery->temperature()));
+    mUi->temperatureValue->setText(QString::fromUtf8("%1 ºC").arg(mBattery->temperature()));
 }
