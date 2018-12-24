@@ -200,12 +200,10 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Ждущий режим через %n секунд</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Ждущий режим через %n секунду</numerusform>
+        <numerusform>Ждущий режим через %n секунды</numerusform>
+        <numerusform>Ждущий режим через %n секунд</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
