@@ -200,24 +200,30 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation><numerusform>Uspání do paměti za %n sekundu</numerusform>
-        <numerusform>Uspání do paměti za %n sekundy</numerusform>
-        <numerusform>Uspání do paměti za %n sekund</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Uspání do paměti za %n sekundu</numerusform>
+            <numerusform>Uspání do paměti za %n sekundy</numerusform>
+            <numerusform>Uspání do paměti za %n sekund</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation><numerusform>Uspání na disk za %n sekundu</numerusform>
-        <numerusform>Uspání na disk za %n sekundy</numerusform>
-        <numerusform>Uspání na disk za %n sekund</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Uspání na disk za %n sekundu</numerusform>
+            <numerusform>Uspání na disk za %n sekundy</numerusform>
+            <numerusform>Uspání na disk za %n sekund</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation><numerusform>Vypnutí za %n sekundu</numerusform>
-        <numerusform>Vypnutí za %n sekundy</numerusform>
-        <numerusform>Vypnutí za %n sekund</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Vypnutí za %n sekundu</numerusform>
+            <numerusform>Vypnutí za %n sekundy</numerusform>
+            <numerusform>Vypnutí za %n sekund</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>PowerManagementd</name>

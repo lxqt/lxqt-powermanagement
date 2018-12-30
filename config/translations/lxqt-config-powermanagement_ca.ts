@@ -78,32 +78,27 @@
 <context>
     <name>IdlenessWatcherSettings</name>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="14"/>
-        <source>Form</source>
-        <translation>Formulari</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="20"/>
+        <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
         <translation>Habi&amp;lita l&apos;observador de l&apos;ociositat</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="41"/>
+        <location filename="../idlenesswatchersettings.ui" line="38"/>
         <source>When idle then:</source>
         <translation>Quan estigui inactiu aleshores:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="60"/>
+        <location filename="../idlenesswatchersettings.ui" line="57"/>
         <source>Idle time:</source>
         <translation>Temps d&apos;inactivitat:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="73"/>
+        <location filename="../idlenesswatchersettings.ui" line="70"/>
         <source> minutes</source>
         <translation> minuts</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="86"/>
+        <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source> seconds</source>
         <translation> segons</translation>
     </message>
@@ -111,54 +106,49 @@
 <context>
     <name>LidWatcherSettings</name>
     <message>
-        <location filename="../lidwatchersettings.ui" line="14"/>
-        <source>Form</source>
-        <translation>Formulari</translation>
-    </message>
-    <message>
-        <location filename="../lidwatchersettings.ui" line="26"/>
+        <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
         <translation>Habi&amp;lita l&apos;observador de la tapa</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="41"/>
+        <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
         <translation>Acció quan la tapa és tancada</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="53"/>
-        <location filename="../lidwatchersettings.ui" line="118"/>
+        <location filename="../lidwatchersettings.ui" line="50"/>
+        <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery</source>
         <translation>Amb bateria</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="61"/>
+        <location filename="../lidwatchersettings.ui" line="58"/>
         <source>Nothing</source>
         <translation>Res</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="66"/>
+        <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
         <translation>Suspèn</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="71"/>
+        <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
         <translation>Hiberna</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="76"/>
+        <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
         <translation>Apaga</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="84"/>
-        <location filename="../lidwatchersettings.ui" line="128"/>
+        <location filename="../lidwatchersettings.ui" line="81"/>
+        <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC</source>
         <translation>Amb CA</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="97"/>
+        <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
         <translation>Quan s&apos;&amp;utilitzi un monitor extern</translation>
     </message>
