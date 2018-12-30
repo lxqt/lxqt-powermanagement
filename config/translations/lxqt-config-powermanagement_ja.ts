@@ -78,32 +78,27 @@
 <context>
     <name>IdlenessWatcherSettings</name>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="14"/>
-        <source>Form</source>
-        <translation>フォーム</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="20"/>
+        <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
         <translation>アイドル状態の監視(&amp;l)</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="41"/>
+        <location filename="../idlenesswatchersettings.ui" line="38"/>
         <source>When idle then:</source>
         <translation>アイドル時には:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="60"/>
+        <location filename="../idlenesswatchersettings.ui" line="57"/>
         <source>Idle time:</source>
         <translation>アイドル状態の時間:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="73"/>
+        <location filename="../idlenesswatchersettings.ui" line="70"/>
         <source> minutes</source>
         <translation> 分</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="86"/>
+        <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source> seconds</source>
         <translation> 秒</translation>
     </message>
@@ -111,54 +106,49 @@
 <context>
     <name>LidWatcherSettings</name>
     <message>
-        <location filename="../lidwatchersettings.ui" line="14"/>
-        <source>Form</source>
-        <translation>フォーム</translation>
-    </message>
-    <message>
-        <location filename="../lidwatchersettings.ui" line="26"/>
+        <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
         <translation>フタの監視を有効にする(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="41"/>
+        <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
         <translation>フタが閉じていたときの動作</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="53"/>
-        <location filename="../lidwatchersettings.ui" line="118"/>
+        <location filename="../lidwatchersettings.ui" line="50"/>
+        <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery</source>
         <translation>バッテリー動作時</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="61"/>
+        <location filename="../lidwatchersettings.ui" line="58"/>
         <source>Nothing</source>
         <translation>何もしない</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="66"/>
+        <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
         <translation>サスペンド</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="71"/>
+        <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
         <translation>ハイバネート</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="76"/>
+        <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
         <translation>シャットダウン</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="84"/>
-        <location filename="../lidwatchersettings.ui" line="128"/>
+        <location filename="../lidwatchersettings.ui" line="81"/>
+        <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC</source>
         <translation>AC電源時</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="97"/>
+        <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
         <translation>外部モニター使用時(&amp;u)</translation>
     </message>

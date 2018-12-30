@@ -200,24 +200,30 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation><numerusform>Pristabdoma po %n sekundės</numerusform>
-        <numerusform>Pristabdoma po %n sekundžių</numerusform>
-        <numerusform>Pristabdoma po %n sekundžių</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Pristabdoma po %n sekundės</numerusform>
+            <numerusform>Pristabdoma po %n sekundžių</numerusform>
+            <numerusform>Pristabdoma po %n sekundžių</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation><numerusform>Užmigdoma po %n sekundės</numerusform>
-        <numerusform>Užmigdoma po %n sekundžių</numerusform>
-        <numerusform>Užmigdoma po %n sekundžių</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Užmigdoma po %n sekundės</numerusform>
+            <numerusform>Užmigdoma po %n sekundžių</numerusform>
+            <numerusform>Užmigdoma po %n sekundžių</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation><numerusform>Išjungiama po %n sekundės</numerusform>
-        <numerusform>Išjungiama po %n sekundžių</numerusform>
-        <numerusform>Išjungiama po %n sekundžių</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Išjungiama po %n sekundės</numerusform>
+            <numerusform>Išjungiama po %n sekundžių</numerusform>
+            <numerusform>Išjungiama po %n sekundžių</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>PowerManagementd</name>
