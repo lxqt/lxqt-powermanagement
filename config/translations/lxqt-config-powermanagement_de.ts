@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>Symbole des Themas nutzen:</translation>
+        <translation>Symbole des Themas verwenden:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
@@ -47,12 +47,12 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation>Lade</translation>
+        <translation>Aufladen</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation>Entlade</translation>
+        <translation>Entladen</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Zeige Symbol:</translation>
+        <translation>Symbol anzeigen:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
@@ -113,13 +113,13 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
-        <translation>Aktion falls Deckel geschlossen wird</translation>
+        <translation>Aktion bei geschlossenem Deckel</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery</source>
-        <translation>Batterie</translation>
+        <translation>Batteriebetrieb</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -150,7 +150,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation>&amp;Bei Benutzung des externen Bildschirms</translation>
+        <translation>Bei &amp;Verwendung eines externen Bildschirms</translation>
     </message>
 </context>
 <context>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation>Monitor(e) ausschalten</translation>
+        <translation>Bildschirm(e) ausschalten</translation>
     </message>
 </context>
 </TS>
