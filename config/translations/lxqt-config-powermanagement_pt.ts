@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Habi&amp;litar monitor de inatividade</translation>
+        <translation>At&amp;ivar monitor de inatividade</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
