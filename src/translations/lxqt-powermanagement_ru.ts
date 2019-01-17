@@ -106,7 +106,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="99"/>
         <source>Unknown battery</source>
-        <translation>Неизвестная батарея </translation>
+        <translation>Неизвестная батарея</translation>
     </message>
 </context>
 <context>
@@ -233,7 +233,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Вы запускаете управление энергопотреблением LXQt впервые.
-Вы можете сконфигурировать его в настройках…</translation>
+Вы можете изменить конфигурацию в настройках… </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="114"/>
