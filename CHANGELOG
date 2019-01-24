@@ -1,4 +1,17 @@
 
+lxqt-powermanagement-0.14.0 / 2019-01-25
+========================================
+
+  * Bumped version to 0.14.0
+  * Don't use automatic string conversions
+  * Improved cmake scripting
+    - set cmake_minimum_required to 3.1.0
+    - removed locale compile definitons
+  * Moved translations from lxqt-l10n back to lxqt-powermanagement
+    - removed obsolete translation fuctionality
+    - Added translation promo in README.md
+  * Translation updates
+
 lxqt-powermanagement-0.13.0 / 2018-05-21
 ========================================
 
@@ -12,8 +25,8 @@ lxqt-powermanagement-0.13.0 / 2018-05-21
   * Add Simplified Chinese desktop entry
   * Drop Qt foreach
 
-0.12.0 / 2017-10-21
-===================
+lxqt-powermanagement-0.12.0 / 2017-10-21
+========================================
 
   * Release 0.12.0: Update changelog
   * Set patch version
@@ -50,8 +63,8 @@ lxqt-powermanagement-0.13.0 / 2018-05-21
   * BatteryWatcher: Fix indentation
   * Bump year
 
-0.11.1 / 2017-01-01
-===================
+lxqt-powermanagement-0.11.1 / 2017-01-01
+========================================
 
   * Release 0.11.1: Update changelog
   * Add lxqt-config-powermanagement_da.desktop
@@ -59,8 +72,8 @@ lxqt-powermanagement-0.13.0 / 2018-05-21
   * Make CMakeLists.txt more uniform.
   * Remove cpack (#43)
 
-0.11.0 / 2016-09-24
-===================
+lxqt-powermanagement-0.11.0 / 2016-09-24
+========================================
 
   * Release 0.11.0: Add changelog
   * README.md: Replace dependency XCB with KIdleTime
@@ -81,8 +94,8 @@ lxqt-powermanagement-0.13.0 / 2018-05-21
   * update: lxqt-powermanagement_hu.ts
   * Add German translation
 
-0.10.0 / 2015-10-31
-===================
+lxqt-powermanagement-0.10.0 / 2015-10-31
+========================================
 
   * Update translations
   * Fix LICENSE file
@@ -129,8 +142,8 @@ lxqt-powermanagement-0.13.0 / 2018-05-21
   * Make batterywatcher react to energylevel- and powersupplystate changes
   * Port to KF5's Solid
 
-0.9.0 / 2015-01-26
-==================
+lxqt-powermanagement-0.9.0 / 2015-01-26
+=======================================
 
   * Portuguese update
   * Fix some translation keys
@@ -167,8 +180,8 @@ lxqt-powermanagement-0.13.0 / 2018-05-21
   * Clean up CMakeLists.txt, drop Qt4 support
   * Adds option to disable systray icon in preferences and on the icon's context menu
 
-0.8.0 / 2014-06-29
-==================
+lxqt-powermanagement-0.8.0 / 2014-06-29
+=======================================
 
   * Fix incorrect lib linking.
   * Add initial Qt5 support.
@@ -184,8 +197,8 @@ lxqt-powermanagement-0.13.0 / 2018-05-21
   * Temporary fix for #86
   * Corrected badly formed includes. Fix for #81
 
-0.7.0 / 2014-05-01
-==================
+lxqt-powermanagement-0.7.0 / 2014-05-01
+=======================================
 
   * Remove outdated and unused manpage
   * Add AUTHORS
