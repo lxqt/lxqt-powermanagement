@@ -21,7 +21,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation>saniye</translation>
+        <translation> saniye</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
         <source> minutes</source>
-        <translation>dakika</translation>
+        <translation> dakika</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source> seconds</source>
-        <translation>saniye</translation>
+        <translation> saniye</translation>
     </message>
 </context>
 <context>
@@ -119,12 +119,12 @@
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery</source>
-        <translation>Pil durumunda</translation>
+        <translation>Pil Durumunda</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
         <source>Nothing</source>
-        <translation>Hiçbirşey</translation>
+        <translation>Hiçbir şey</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
@@ -139,7 +139,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
-        <translation>Kapat</translation>
+        <translation>Bilgisayarı Kapat</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
@@ -181,7 +181,7 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation>Hiçbirşey</translation>
+        <translation>Hiçbir şey</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Shutdown</source>
-        <translation>Kapat</translation>
+        <translation>Bilgisayarı Kapat</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
