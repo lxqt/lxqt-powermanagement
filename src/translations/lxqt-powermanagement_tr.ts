@@ -61,12 +61,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation>Kişisel Dijital Pil Asistan&apos;ları</translation>
+        <translation>Kişisel Dijital Asistan Pili</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation>Kesintisiz Güç Kaynak&apos;ları</translation>
+        <translation>Kesintisiz Güç Kaynağı Pili</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
@@ -157,7 +157,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation>Şimdiki Eneji:</translation>
+        <translation>Şimdiki Enerji:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
@@ -190,7 +190,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQT bir batarya verisi bulmadı - izleme iptal edildi</translation>
+        <translation>LXQT bir batarya verisi bulamadı - izleme iptal edildi</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="114"/>
@@ -200,24 +200,21 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n saniyedir beklemede</numerusform>
+        <numerusform>%n saniyedir beklemede</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n saniyedir uykuda</numerusform>
+        <numerusform>%n saniyedir uykuda</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n saniyede kapanıyor</numerusform>
+        <numerusform>%n saniyede kapanıyor</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
@@ -231,7 +228,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>LXQT Güç Yönetimini ilk defa çalıştırıyorsunuz. 
-Güç yönetimini ayarladan yapılandırabilirsiniz...</translation>
+Güç yönetimini ayarlardan yapılandırabilirsiniz... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="114"/>
@@ -265,7 +262,7 @@ Güç yönetimini ayarladan yapılandırabilirsiniz...</translation>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
-        <translation>LXQT Güç Yönetimi Bilgi</translation>
+        <translation>LXQT Güç Yönetim Bilgisi</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
