@@ -200,27 +200,21 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Sospensione tra %n secondi</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Sospensione tra %n secondo/i</numerusform>
+        <numerusform>Sospensione tra %n secondi</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Ibernazione tra %n secondi</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Ibernazione tra %n secondo</numerusform>
+        <numerusform>Ibernazione tra %n secondi</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Arresto tra %n secondi</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Arresto tra %n secondo/i</numerusform>
+        <numerusform>Arresto tra %n secondi</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
