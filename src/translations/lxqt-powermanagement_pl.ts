@@ -200,30 +200,24 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Uśpienie nastąpi za %n sekundę</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Uśpienie nastąpi za %n sekundę</numerusform>
+        <numerusform>Uśpienie nastąpi za %n sekundy</numerusform>
+        <numerusform>Uśpienie nastąpi za %n sekund</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Hibernacja nastąpi za %n sekundę</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Hibernacja nastąpi za %n sekundę</numerusform>
+        <numerusform>Hibernacja nastąpi za %n sekundy</numerusform>
+        <numerusform>Hibernacja nastąpi za %n sekund</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Komputer zostanie wyłączony za %n sekundę</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Komputer zostanie wyłączony za %n sekundę</numerusform>
+        <numerusform>Komputer zostanie wyłączony za %n sekundy</numerusform>
+        <numerusform>Komputer zostanie wyłączony za %n sekund</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
