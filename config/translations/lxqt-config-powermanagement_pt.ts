@@ -6,17 +6,17 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Configurações do monitor de energia</translation>
+        <translation>Definições do monitor de energia</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Habilitar monitor de energia</translation>
+        <translation>Ativar mo&amp;nitor de energia</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation>Atenção:</translation>
+        <translation>Aviso:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
@@ -47,27 +47,27 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation>Carregando</translation>
+        <translation>A carregar</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
         <source>Discharging</source>
-        <translation>Descarregando</translation>
+        <translation>A descarregar</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Quando a energia estiver baixa, então:</translation>
+        <translation>Se a energia estiver baixa:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Exibir ícone:</translation>
+        <translation>Mostrar ícone:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation>embutida</translation>
+        <translation>nativo</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <source>When idle then:</source>
-        <translation>Quando inativo, então:</translation>
+        <translation>Se inativo:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="57"/>
