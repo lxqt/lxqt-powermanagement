@@ -186,7 +186,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>Layar kunci</translation>
+        <translation>Kunci layar</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Matikan monitor</translation>
     </message>
 </context>
 </TS>
