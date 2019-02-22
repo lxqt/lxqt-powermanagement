@@ -206,7 +206,7 @@
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭显示器(s)</translation>
     </message>
 </context>
 </TS>
