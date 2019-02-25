@@ -26,7 +26,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation> s</translation>
+        <translation> seconde(s)</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
         <source> minutes</source>
-        <translation> min</translation>
+        <translation> minute(s)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source> seconds</source>
-        <translation> s</translation>
+        <translation> seconde(s)</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="36"/>
         <source>Power Management Settings</source>
-        <translation>Paramétrage de la gestion de l&apos;énergie</translation>
+        <translation>Paramètres de gestion de l&apos;alimentation</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="39"/>
