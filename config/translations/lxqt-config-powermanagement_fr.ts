@@ -26,7 +26,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation> seconde(s)</translation>
+        <translation> secondes</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
         <source> minutes</source>
-        <translation> minute(s)</translation>
+        <translation> minutes</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source> seconds</source>
-        <translation> seconde(s)</translation>
+        <translation> secondes</translation>
     </message>
 </context>
 <context>
