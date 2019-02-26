@@ -127,7 +127,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation>Gestion de l&apos;énergie</translation>
+        <translation>Gestionnaire d&apos;alimentation</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="53"/>
@@ -221,19 +221,19 @@
     <message>
         <location filename="../powermanagementd.cpp" line="112"/>
         <source>Power Management</source>
-        <translation>Gestion de l&apos;énergie</translation>
+        <translation>Gestionnaire d&apos;alimentation</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>Le programme de gestion d&apos;énergie de LXQt est exécuté pour la première fois.
-Vous pouvez le paramétrer à partir de Configuration ... </translation>
+        <translation>Vous exécutez le gestionnaire de l&apos;alimentation de LXQt pour la première fois.
+Vous pouvez le paramétrer à partir de l&apos;onglet de Configuration... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="114"/>
         <source>Configure...</source>
-        <translation>Configuration ...</translation>
+        <translation>Configuration...</translation>
     </message>
 </context>
 <context>
