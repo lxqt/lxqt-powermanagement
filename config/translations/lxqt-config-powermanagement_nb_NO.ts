@@ -129,12 +129,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation>Dvale</translation>
+        <translation>Hvile</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>Dyp dvale</translation>
+        <translation>Dvale</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
@@ -191,12 +191,12 @@
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation>Dvale</translation>
+        <translation>Hvile</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation>Dyp dvale</translation>
+        <translation>Dvale</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
