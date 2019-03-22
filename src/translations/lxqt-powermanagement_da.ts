@@ -16,7 +16,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
         <source>Fully charged</source>
-        <translation>Fuldt opladt</translation>
+        <translation>Fuldt opladet</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="49"/>
