@@ -71,7 +71,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
         <source>Primary battery</source>
-        <translation>Bateria primária</translation>
+        <translation>Bateria principal</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
@@ -162,7 +162,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Taxa:</translation>
+        <translation>Taxa de energia:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -227,7 +227,7 @@
         <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>O Gerenciador de Energia do LXQt está sendo executado pela primeira vez.
+        <translation>O Gerenciamento de Energia do LXQt está sendo executado pela primeira vez.
 Você pode ajustá-lo como quiser pelo menu de configurações... </translation>
     </message>
     <message>
@@ -262,12 +262,12 @@ Você pode ajustá-lo como quiser pelo menu de configurações... </translation>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
-        <translation>Informações sobre o Gerenciador de Energia do LXQt</translation>
+        <translation>Informações sobre o Gerenciamento de Energia do LXQt</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>O ícone do Gerenciador de Energia do LXQt pode ser (re)ativado em &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
+        <translation>O ícone do Gerenciamento de Energia do LXQt pode ser (re)ativado em &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="116"/>
