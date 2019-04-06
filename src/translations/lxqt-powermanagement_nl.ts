@@ -21,7 +21,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="49"/>
         <source>Charging</source>
-        <translation>Laden</translation>
+        <translation>Opladen</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Mouse battery</source>
-        <translation>Muisaccu</translation>
+        <translation>Batterij van muis</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Monitor battery</source>
-        <translation>Bildschirm-Batterie</translation>
+        <translation>Beeldschermaccu</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="99"/>
@@ -190,37 +190,31 @@
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt kon geen gegevens vinden over een accu - bewaking uitgeschakeld</translation>
+        <translation>LXQt kon geen gegevens vinden over een accu; bewaking uitgeschakeld</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
-        <translation>Lage lading!</translation>
+        <translation>Lage accuspanning!</translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Pauzestand over %n seconde(n)</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Slaapstand over %n seconde(n)</numerusform>
+        <numerusform>Slaapstand over %n seconden</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Slaapstand over %n seconde(n)</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Sluimerstand over %n seconde(n)</numerusform>
+        <numerusform>Sluimerstand over %n seconden</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Afsluiten over %n seconde(n)</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Afsluiten over %n seconde(n)</numerusform>
+        <numerusform>Afsluiten over %n seconden</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
@@ -234,7 +228,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>U voert LXQt-energiebeheer voor de eerste keer uit.
-U kunt hem configureren in de instellingen... </translation>
+U kunt het configureren in de instellingen... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="114"/>
@@ -268,7 +262,7 @@ U kunt hem configureren in de instellingen... </translation>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
-        <translation>Infor over LXQt-energiebeheer</translation>
+        <translation>Info over LXQt-energiebeheer</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
