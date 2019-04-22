@@ -38,7 +38,7 @@ class PowerManagementSettings : public LXQt::Settings
     Q_OBJECT
 
 public:
-    PowerManagementSettings(QObject* parent = 0);
+    PowerManagementSettings(QObject* parent = nullptr);
     ~PowerManagementSettings();
 
     int getRunCheckLevel();

@@ -44,7 +44,7 @@ class BatteryWatcherSettings : public QWidget
     Q_OBJECT
 
 public:
-    explicit BatteryWatcherSettings(QWidget *parent = 0);
+    explicit BatteryWatcherSettings(QWidget *parent = nullptr);
     ~BatteryWatcherSettings();
 
 public slots:

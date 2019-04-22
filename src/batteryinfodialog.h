@@ -24,7 +24,7 @@ class BatteryInfoDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit BatteryInfoDialog(QList<Solid::Battery*> batteries, QWidget *parent = 0);
+    explicit BatteryInfoDialog(QList<Solid::Battery*> batteries, QWidget *parent = nullptr);
     ~BatteryInfoDialog();
 
 public slots:

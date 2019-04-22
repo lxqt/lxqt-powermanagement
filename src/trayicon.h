@@ -40,7 +40,7 @@ class TrayIcon : public QSystemTrayIcon
     Q_OBJECT
 
 public:
-    TrayIcon(Solid::Battery *battery, QObject *parent = 0);
+    TrayIcon(Solid::Battery *battery, QObject *parent = nullptr);
     ~TrayIcon();
 
 signals:

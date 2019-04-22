@@ -34,7 +34,7 @@ class MainWindow : public LXQt::ConfigDialog
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = 0);
+    MainWindow(QWidget *parent = nullptr);
 };
 
 #endif // MAINWINDOW_H

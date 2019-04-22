@@ -19,8 +19,8 @@ class IconProducer : public QObject
     Q_OBJECT
 
 public:
-    IconProducer(Solid::Battery* battery, QObject *parent = 0);
-    IconProducer(QObject *parent = 0);
+    IconProducer(Solid::Battery* battery, QObject *parent = nullptr);
+    IconProducer(QObject *parent = nullptr);
 
     QIcon mIcon;
     QString mIconName;

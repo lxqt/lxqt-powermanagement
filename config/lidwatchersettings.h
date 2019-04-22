@@ -41,7 +41,7 @@ class LidWatcherSettings : public QWidget
     Q_OBJECT
 
 public:
-    explicit LidWatcherSettings(QWidget *parent = 0);
+    explicit LidWatcherSettings(QWidget *parent = nullptr);
     ~LidWatcherSettings();
 
 public slots:
