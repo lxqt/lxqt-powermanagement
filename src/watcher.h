@@ -20,7 +20,7 @@ class Watcher : public QObject
 
 public:
     Watcher(QObject *parent = nullptr);
-    virtual ~Watcher();
+    ~Watcher() override;
 
 protected:
     void doAction(int action);

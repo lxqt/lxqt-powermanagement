@@ -34,7 +34,7 @@ class IdlenessWatcher : public Watcher
 
 public:
     explicit IdlenessWatcher(QObject* parent = nullptr);
-    virtual ~IdlenessWatcher();
+    ~IdlenessWatcher() override;
 
 private slots:
     void setup();

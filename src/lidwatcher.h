@@ -42,7 +42,7 @@ class LidWatcher : public Watcher
     Q_OBJECT
 public:
     explicit LidWatcher(QObject *parent = nullptr);
-    virtual ~LidWatcher();
+    ~LidWatcher() override;
 
 private slots:
     void lidChanged(bool closed);

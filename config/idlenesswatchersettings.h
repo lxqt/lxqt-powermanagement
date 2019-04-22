@@ -42,7 +42,7 @@ class IdlenessWatcherSettings : public QWidget
 
 public:
     explicit IdlenessWatcherSettings(QWidget *parent = nullptr);
-    ~IdlenessWatcherSettings();
+    ~IdlenessWatcherSettings() override;
 
 public slots:
     void loadSettings();

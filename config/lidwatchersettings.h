@@ -42,7 +42,7 @@ class LidWatcherSettings : public QWidget
 
 public:
     explicit LidWatcherSettings(QWidget *parent = nullptr);
-    ~LidWatcherSettings();
+    ~LidWatcherSettings() override;
 
 public slots:
     void loadSettings();
