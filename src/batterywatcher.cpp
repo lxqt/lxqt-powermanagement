@@ -78,7 +78,7 @@ BatteryWatcher::~BatteryWatcher()
 void BatteryWatcher::batteryChanged()
 {
     static QTime actionTime;
-    static LXQt::Notification *notification = 0;
+    static LXQt::Notification *notification = nullptr;
 
     double totalEnergyFull = 0;
     double totalEnergyNow = 0;
@@ -150,7 +150,7 @@ void BatteryWatcher::batteryChanged()
         if (notification)
         {
             delete notification;
-            notification = 0;
+            notification = nullptr;
         }
     }
 }

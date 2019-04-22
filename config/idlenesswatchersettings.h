@@ -41,7 +41,7 @@ class IdlenessWatcherSettings : public QWidget
     Q_OBJECT
 
 public:
-    explicit IdlenessWatcherSettings(QWidget *parent = 0);
+    explicit IdlenessWatcherSettings(QWidget *parent = nullptr);
     ~IdlenessWatcherSettings();
 
 public slots:

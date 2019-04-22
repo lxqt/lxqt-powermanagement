@@ -39,9 +39,9 @@
 #define CURRENT_RUNCHECK_LEVEL 1
 
 PowerManagementd::PowerManagementd() :
-        mBatterywatcherd(0),
-        mLidwatcherd(0),
-        mIdlenesswatcherd(0),
+        mBatterywatcherd(nullptr),
+        mLidwatcherd(nullptr),
+        mIdlenesswatcherd(nullptr),
         mSettings()
  {
     connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
@@ -65,7 +65,7 @@ void PowerManagementd::settingsChanged()
     else if (mBatterywatcherd && ! mSettings.isBatteryWatcherEnabled())
     {
         mBatterywatcherd->deleteLater();
-        mBatterywatcherd = 0;
+        mBatterywatcherd = nullptr;
     }
 
     if (mSettings.isLidWatcherEnabled() && !mLidwatcherd)
@@ -75,7 +75,7 @@ void PowerManagementd::settingsChanged()
     else if (mLidwatcherd && ! mSettings.isLidWatcherEnabled())
     {
         mLidwatcherd->deleteLater();
-        mLidwatcherd = 0;
+        mLidwatcherd = nullptr;
     }
 
     if (mSettings.isIdlenessWatcherEnabled() && !mIdlenesswatcherd)
@@ -85,7 +85,7 @@ void PowerManagementd::settingsChanged()
     else if (mIdlenesswatcherd && !mSettings.isIdlenessWatcherEnabled())
     {
         mIdlenesswatcherd->deleteLater();
-        mIdlenesswatcherd = 0;
+        mIdlenesswatcherd = nullptr;
     }
 
 }

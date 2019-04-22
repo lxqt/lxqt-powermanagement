@@ -19,7 +19,7 @@ class Watcher : public QObject
     Q_OBJECT
 
 public:
-    Watcher(QObject *parent = 0);
+    Watcher(QObject *parent = nullptr);
     virtual ~Watcher();
 
 protected:

@@ -41,7 +41,7 @@ class LidWatcher : public Watcher
 {
     Q_OBJECT
 public:
-    explicit LidWatcher(QObject *parent = 0);
+    explicit LidWatcher(QObject *parent = nullptr);
     virtual ~LidWatcher();
 
 private slots:

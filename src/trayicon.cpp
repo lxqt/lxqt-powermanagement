@@ -90,7 +90,7 @@ void TrayIcon::onConfigureTriggered()
 
 void TrayIcon::onAboutTriggered()
 {
-    QMessageBox::about(0,
+    QMessageBox::about(nullptr,
                        tr("About"),
                        tr( "<p>"
                            "  <b>LXQt Power Management</b><br/>"
