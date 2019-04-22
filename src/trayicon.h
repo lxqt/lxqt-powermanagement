@@ -41,7 +41,7 @@ class TrayIcon : public QSystemTrayIcon
 
 public:
     TrayIcon(Solid::Battery *battery, QObject *parent = nullptr);
-    ~TrayIcon();
+    ~TrayIcon() override;
 
 signals:
     void toggleShowInfo();

@@ -25,7 +25,7 @@ class BatteryInfoDialog : public QDialog
 
 public:
     explicit BatteryInfoDialog(QList<Solid::Battery*> batteries, QWidget *parent = nullptr);
-    ~BatteryInfoDialog();
+    ~BatteryInfoDialog() override;
 
 public slots:
     void toggleShow();

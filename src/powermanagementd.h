@@ -23,7 +23,7 @@ class PowerManagementd : public QObject
 
 public:
     PowerManagementd();
-    virtual ~PowerManagementd();
+    ~PowerManagementd() override;
 
 private slots:
     void settingsChanged();

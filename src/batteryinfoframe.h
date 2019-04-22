@@ -41,7 +41,7 @@ class BatteryInfoFrame : public QFrame
 
 public:
     explicit BatteryInfoFrame(Solid::Battery* battery);
-    ~BatteryInfoFrame();
+    ~BatteryInfoFrame() override;
 
 private slots:
     void onBatteryChanged();
