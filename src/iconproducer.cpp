@@ -13,7 +13,7 @@
 #include <QDebug>
 #include <QtSvg/QSvgRenderer>
 #include <QPainter>
-#include <math.h>
+#include <cmath>
 
 IconProducer::IconProducer(Solid::Battery *battery, QObject *parent) : QObject(parent)
 {
