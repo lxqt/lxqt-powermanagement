@@ -61,7 +61,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>携帯情報端末のバッテリー</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
@@ -76,37 +76,37 @@
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Mouse battery</source>
-        <translation type="unfinished"></translation>
+        <translation>マウスのバッテリー</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
         <source>Keyboard battery</source>
-        <translation type="unfinished"></translation>
+        <translation>キーボードのバッテリー</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>キーボードとマウスのバッテリー</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Camera battery</source>
-        <translation type="unfinished"></translation>
+        <translation>カメラのバッテリー</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Phone battery</source>
-        <translation type="unfinished"></translation>
+        <translation>携帯電話のバッテリー</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Monitor battery</source>
-        <translation type="unfinished"></translation>
+        <translation>モニターのバッテリー</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="99"/>
         <source>Unknown battery</source>
-        <translation type="unfinished"></translation>
+        <translation>不明なデバイスのバッテリー</translation>
     </message>
 </context>
 <context>
@@ -147,7 +147,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation type="unfinished"></translation>
+        <translation>エネルギー容量の設計値:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
@@ -200,24 +200,18 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>%n 秒でサスペンド</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n 秒でサスペンドします</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>%n 秒でハイバーネート</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n 秒でハイバーネートします</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform>%n 秒でシャットダウン</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n 秒でシャットダウンします</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>PowerManagementd</name>
@@ -260,22 +254,22 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="95"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;  &lt;b&gt;LXQt 電源管理&lt;/b&gt;&lt;br/&gt;  - LXQt デスクトップ環境の電源管理&lt;/p&gt;&lt;p&gt;  作者:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - そして Razor と LXQt projects の人々&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt 電源管理の情報</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt 電源管理のトレイアイコンは、 &lt;i&gt;LXQt 電源管理の設定&lt;/i&gt;から(再)表示できます</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="116"/>
         <source>Configure now</source>
-        <translation type="unfinished"></translation>
+        <translation>今すぐ設定します</translation>
     </message>
 </context>
 </TS>
