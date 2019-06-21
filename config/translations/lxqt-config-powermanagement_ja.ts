@@ -113,13 +113,13 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
-        <translation>フタが閉じていたときの動作</translation>
+        <translation>フタを閉じたときの動作</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery</source>
-        <translation>バッテリー動作時</translation>
+        <translation>バッテリー電源の時</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -145,7 +145,7 @@
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC</source>
-        <translation>AC電源時</translation>
+        <translation>AC電源の時</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
