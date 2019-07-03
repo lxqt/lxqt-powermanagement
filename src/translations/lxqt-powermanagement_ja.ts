@@ -147,12 +147,12 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation>エネルギー容量の設計値:</translation>
+        <translation>容量の設計値:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
         <source>Energy Full:</source>
-        <translation>満エネルギー:</translation>
+        <translation>完全充電の容量:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
@@ -224,8 +224,8 @@
         <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>LXQt電源管理は初めて実行されました。
-設定を行うことができます。 </translation>
+        <translation>LXQt 電源管理 は初めて実行されました。
+設定を行うことができます... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="114"/>
@@ -244,12 +244,12 @@ You can configure it from settings... </source>
         <location filename="../trayicon.cpp" line="63"/>
         <location filename="../trayicon.cpp" line="94"/>
         <source>About</source>
-        <translation>情報</translation>
+        <translation>このアプリケーションについて</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
-        <translation>アイコンを無効</translation>
+        <translation>アイコンを非表示にします</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="95"/>
@@ -264,12 +264,12 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>LXQt 電源管理のトレイアイコンは、 &lt;i&gt;LXQt 電源管理の設定&lt;/i&gt;から(再)表示できます</translation>
+        <translation>LXQt 電源管理のトレイアイコンは、&lt;i&gt;LXQt 電源管理の設定&lt;/i&gt; から(再)表示できます</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="116"/>
         <source>Configure now</source>
-        <translation>今すぐ設定します</translation>
+        <translation>今すぐに設定します</translation>
     </message>
 </context>
 </TS>
