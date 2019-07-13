@@ -150,7 +150,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation>外部モニター使用時(&amp;u)</translation>
+        <translation>外部モニターの使用時には(&amp;U)</translation>
     </message>
 </context>
 <context>
