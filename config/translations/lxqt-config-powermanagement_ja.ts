@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>アイドル状態の監視(&amp;l)</translation>
+        <translation>アイドル状態の監視(&amp;L)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
@@ -108,12 +108,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>フタの監視を有効にする(&amp;L)</translation>
+        <translation>ふたの監視を有効にする(&amp;L)</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
-        <translation>フタを閉じたときの動作</translation>
+        <translation>ふたを閉じたときの動作</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="43"/>
         <source>Lid</source>
-        <translation>フタ</translation>
+        <translation>ふた</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="47"/>
