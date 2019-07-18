@@ -62,12 +62,12 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>アイコンを表示:</translation>
+        <translation>トレイにアイコンを表示:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation>ビルトイン</translation>
+        <translation>内蔵のアイコン</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
