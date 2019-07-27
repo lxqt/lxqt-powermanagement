@@ -205,7 +205,7 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation><numerusform>%n 秒でハイバーネートします</numerusform>
+        <translation><numerusform>%n 秒でハイバネートします</numerusform>
         </translation></message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
