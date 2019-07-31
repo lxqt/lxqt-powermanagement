@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>バッテリー監視を有効にする(&amp;N)</translation>
+        <translation>バッテリーを監視する(&amp;N)</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>アイドル状態の監視(&amp;L)</translation>
+        <translation>アイドル状態を監視する(&amp;L)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
@@ -108,7 +108,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>ふたの監視を有効にする(&amp;L)</translation>
+        <translation>ふたを監視する(&amp;L)</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
