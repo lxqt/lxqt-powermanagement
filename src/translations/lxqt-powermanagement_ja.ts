@@ -185,7 +185,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
-        <translation>バッテリーがありません!</translation>
+        <translation>バッテリーがありません！</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
-        <translation>電源が少なくなっています!</translation>
+        <translation>電源が少なくなっています！</translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
@@ -249,7 +249,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
-        <translation>アイコンを非表示にします</translation>
+        <translation>トレイのアイコンを非表示にする</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="95"/>
@@ -269,7 +269,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="116"/>
         <source>Configure now</source>
-        <translation>今すぐに設定します</translation>
+        <translation>今すぐに設定する</translation>
     </message>
 </context>
 </TS>
