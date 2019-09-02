@@ -57,7 +57,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>電源が低いときには:</translation>
+        <translation>電源が低い時には:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
-        <translation>ふたを閉じたときの動作</translation>
+        <translation>ふたを閉じた時の動作</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
@@ -145,7 +145,7 @@
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC</source>
-        <translation>AC電源の時</translation>
+        <translation>AC 電源の時</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>スクリーンをロック</translation>
+        <translation>画面のロック</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
