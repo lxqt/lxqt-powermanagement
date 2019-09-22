@@ -200,24 +200,30 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation><numerusform>Uspanie do pamäti za %n sekundu</numerusform>
-        <numerusform>Uspanie do pamäti za %n sekundy</numerusform>
-        <numerusform>Uspanie do pamäti za %n sekúnd</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Uspanie do pamäti za %n sekundu</numerusform>
+            <numerusform>Uspanie do pamäti za %n sekundy</numerusform>
+            <numerusform>Uspanie do pamäti za %n sekúnd</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation><numerusform>Uspanie na disk za %n sekundu</numerusform>
-        <numerusform>Uspanie na disk za %n sekundy</numerusform>
-        <numerusform>Uspanie na disk za %n sekúnd</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Uspanie na disk za %n sekundu</numerusform>
+            <numerusform>Uspanie na disk za %n sekundy</numerusform>
+            <numerusform>Uspanie na disk za %n sekúnd</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation><numerusform>Vypnutie za %n sekundu</numerusform>
-        <numerusform>Vypnutie za %n sekundy</numerusform>
-        <numerusform>Vypnutie za %n sekúnd</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Vypnutie za %n sekundu</numerusform>
+            <numerusform>Vypnutie za %n sekundy</numerusform>
+            <numerusform>Vypnutie za %n sekúnd</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>PowerManagementd</name>
