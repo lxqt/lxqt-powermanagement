@@ -209,17 +209,21 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation><numerusform>Гибернация через %n секунду</numerusform>
-        <numerusform>Гибернация через %n секунды</numerusform>
-        <numerusform>Гибернация через %n секунд</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Гибернация через %n секунду</numerusform>
+            <numerusform>Гибернация через %n секунды</numerusform>
+            <numerusform>Гибернация через %n секунд</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation><numerusform>Выключение через %n секунду</numerusform>
-        <numerusform>Выключение через %n секунды</numerusform>
-        <numerusform>Выключение через %n секунд</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Выключение через %n секунду</numerusform>
+            <numerusform>Выключение через %n секунды</numerusform>
+            <numerusform>Выключение через %n секунд</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>PowerManagementd</name>
