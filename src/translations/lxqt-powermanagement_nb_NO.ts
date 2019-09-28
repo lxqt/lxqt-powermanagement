@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="42"/>
         <source>Empty</source>
-        <translation>Tom</translation>
+        <translation>Tomt</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
         <source>Fully charged</source>
-        <translation>Fult oppladet</translation>
+        <translation>Fullt oppladet</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="49"/>
@@ -201,16 +201,16 @@
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
         <translation>
-            <numerusform>Dvale om %n sekund</numerusform>
-            <numerusform>Dvale om %n sekunder</numerusform>
+            <numerusform>Hvile om %n sekund</numerusform>
+            <numerusform>Hvile om %n sekunder</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
         <translation>
-            <numerusform>Dyp dvale om %n sekund</numerusform>
-            <numerusform>Dyp dvale om %n sekunder</numerusform>
+            <numerusform>Dvale om %n sekund</numerusform>
+            <numerusform>Dvale om %n sekunder</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -263,7 +263,7 @@ Du kan konfigurere det fra innstillinger... </translation>
     <message>
         <location filename="../trayicon.cpp" line="95"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;LXQt strømstyring&lt;/b&gt;&lt;br/&gt;  - strømstyring for LXQt skrivebordsmiljøet&lt;/p&gt;&lt;p&gt;  Opphavsmenn:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - og andre fra Razor og LXQt prosjektene&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;LXQt strømstyring&lt;/b&gt;&lt;br/&gt;  - strømstyring for LXQt skrivebordsmiljøet&lt;/p&gt;&lt;p&gt;  Opphavsmenn:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - og andre fra Razor-Qt og LXQt prosjektene&lt;/p&gt;&lt;p&gt;  Opphavsrett &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
