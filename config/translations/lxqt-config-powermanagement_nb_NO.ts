@@ -6,7 +6,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Batteriinnstillinger</translation>
+        <translation>Batteriovervåkningsinnstillinger</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
@@ -80,17 +80,17 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Følg&amp; med på når ingenting skjer</translation>
+        <translation>Aktiver overvåking av &amp;inaktivitet</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <source>When idle then:</source>
-        <translation>Når ingenting skjer:</translation>
+        <translation>Ved inaktivitet:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="57"/>
         <source>Idle time:</source>
-        <translation>Ingenting skjer etter:</translation>
+        <translation>Inaktivitetstid:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
@@ -108,12 +108,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Følg me&amp;d på lokket</translation>
+        <translation>Aktiver overvåking av &amp;lokket</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
-        <translation>Når lokket er lukket</translation>
+        <translation>Handling når lokket er lukket</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
@@ -150,7 +150,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation>Når m&amp;an bruker ekstern skjerm</translation>
+        <translation>Når man br&amp;uker ekstern skjerm</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="36"/>
         <source>Power Management Settings</source>
-        <translation>Strøminnstillinger</translation>
+        <translation>Strømstyringsinnstillinger</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="39"/>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="47"/>
         <source>Idle</source>
-        <translation>Når ingenting skjer</translation>
+        <translation>Inaktivitet</translation>
     </message>
 </context>
 <context>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>Låseskjerm</translation>
+        <translation>Lås skjerm</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
