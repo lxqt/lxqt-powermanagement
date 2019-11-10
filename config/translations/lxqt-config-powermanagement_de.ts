@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Batterieüberwachung aktivieren</translation>
+        <translation>&amp;Aktiviere Batterieüberwachung</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>Symbole des Themas verwenden:</translation>
+        <translation>Nutze Symbole des Themas:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Bei niedrigem Ladezustand:</translation>
+        <translation>Bei niedrigem Ladestand:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation>Ladung: %1%</translation>
+        <translation>Ladezustand: %1%</translation>
     </message>
 </context>
 <context>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>&amp;Leerlaufüberwachung aktivieren</translation>
+        <translation>&amp;Aktiviere Leerlaufüberwachung</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
@@ -90,7 +90,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="57"/>
         <source>Idle time:</source>
-        <translation>Inaktivitätsdauer:</translation>
+        <translation>Leerlaufzeit:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
@@ -108,7 +108,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>&amp;Deckelüberwachung aktivieren</translation>
+        <translation>&amp;Aktiviere Deckelüberwachung</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>Bildschirm sperren</translation>
+        <translation>Sperre Bildschirm</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
