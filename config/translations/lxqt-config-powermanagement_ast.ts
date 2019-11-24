@@ -6,43 +6,43 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Axustes del supervidor de batería</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Ac&amp;tivar el supervisor de batería</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation type="unfinished"></translation>
+        <translation>Alvertir:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translation> segundos</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation type="unfinished"></translation>
+        <translation>El nivel ye baxu al:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar los iconos del estilu</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Previsualización</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
@@ -57,12 +57,12 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuando&apos;l nivel de batería seya baxu:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Amosar l&apos;iconu</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Nivel: %1%</translation>
     </message>
 </context>
 <context>
@@ -80,27 +80,27 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Activar el supervisor d&apos;inactividá</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <source>When idle then:</source>
-        <translation type="unfinished"></translation>
+        <translation>Al haber inactividá:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="57"/>
         <source>Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiempu d&apos;inactividá:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
         <source> minutes</source>
-        <translation type="unfinished"></translation>
+        <translation> minutos</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translation> segundos</translation>
     </message>
 </context>
 <context>
@@ -113,44 +113,44 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;aición al baxar la tapa</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Cola batería</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
         <source>Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nada</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation type="unfinished"></translation>
+        <translation>Suspender</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ivernar</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagar</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC</source>
-        <translation type="unfinished"></translation>
+        <translation>Col cargador</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Al &amp;usar una pantalla esterna</translation>
     </message>
 </context>
 <context>
@@ -158,22 +158,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="36"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Axustes de la xestión d&apos;enerxía</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="39"/>
         <source>Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Batería</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="43"/>
         <source>Lid</source>
-        <translation type="unfinished"></translation>
+        <translation>Tapa</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="47"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactividá</translation>
     </message>
 </context>
 <context>
@@ -181,32 +181,32 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nada</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloquiar la pantalla</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Suspend</source>
-        <translation type="unfinished"></translation>
+        <translation>Suspender</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ivernar</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Shutdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagar</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagar pantalles</translation>
     </message>
 </context>
 </TS>
