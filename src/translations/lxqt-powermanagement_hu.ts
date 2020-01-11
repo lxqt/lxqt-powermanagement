@@ -119,7 +119,7 @@
     <message>
         <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
-        <translation>Akku infó</translation>
+        <translation>Akkumulátor infó</translation>
     </message>
 </context>
 <context>
@@ -200,21 +200,24 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>Készenlét %n másodperc múlva</numerusform>
             <numerusform>Készenlét %n másodperc múlva</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>Mélykészenlét %n másodperc múlva</numerusform>
             <numerusform>Mélykészenlét %n másodperc múlva</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>Kikapcsolás %n másodperc múlva</numerusform>
             <numerusform>Kikapcsolás %n másodperc múlva</numerusform>
         </translation>
     </message>
@@ -250,7 +253,7 @@ A beállításokban konfigurálható... </translation>
         <location filename="../trayicon.cpp" line="63"/>
         <location filename="../trayicon.cpp" line="94"/>
         <source>About</source>
-        <translation>Rólunk</translation>
+        <translation>Névjegy</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="65"/>
@@ -265,7 +268,7 @@ A beállításokban konfigurálható... </translation>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
-        <translation>LXQt Power Management infó</translation>
+        <translation>LXQt Power Management információ</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
