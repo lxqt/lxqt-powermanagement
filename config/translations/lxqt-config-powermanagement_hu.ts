@@ -42,7 +42,7 @@
         <location filename="../batterywatchersettings.ui" line="125"/>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation>Előkép</translation>
+        <translation>Előnézet</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Alacsony energiánál:</translation>
+        <translation>Alacsony energiaszintnél:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed</source>
-        <translation>Teendő fedélzáráskor</translation>
+        <translation>Teendő lecsukáskor</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>Alvás</translation>
+        <translation>Mélykészenlét</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Lock screen</source>
-        <translation>Képernyőzár</translation>
+        <translation>Zárolás</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Hibernate</source>
-        <translation>Alvás</translation>
+        <translation>Mélykészenlét</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitor(ok) kikapcsolása</translation>
     </message>
 </context>
 </TS>
