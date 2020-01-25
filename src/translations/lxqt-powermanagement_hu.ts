@@ -26,7 +26,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
         <source>Lithium ion</source>
-        <translation>Lítium ion</translation>
+        <translation>Lítiumion</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
-        <translation>Akkumulátor infó</translation>
+        <translation>Akkumulátor információ</translation>
     </message>
 </context>
 <context>
@@ -157,7 +157,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation>Mostani kapacitás:</translation>
+        <translation type="unfinished">Mostani kapacitás:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
@@ -185,12 +185,12 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
-        <translation>Nincs akku!</translation>
+        <translation>Nincs akkumulátor!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>Az LXQt nem ismert fel akkut - figyelés tiltva</translation>
+        <translation>Az LXQt nem ismert fel akkut - figyelés kikapcsolva</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="114"/>
@@ -258,7 +258,7 @@ A beállításokban konfigurálható... </translation>
     <message>
         <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
-        <translation>Ikon tiltása</translation>
+        <translation>Ikon kikapcsolása</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="95"/>
@@ -268,7 +268,7 @@ A beállításokban konfigurálható... </translation>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
-        <translation>LXQt Power Management információ</translation>
+        <translation>LXQt Energiakezelő információ</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
