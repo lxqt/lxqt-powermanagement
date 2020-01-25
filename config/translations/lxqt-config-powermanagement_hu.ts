@@ -6,7 +6,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Akkumulátor figyelő beállítás</translation>
+        <translation>Akkumulátorfigyelő beállítások</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Ikon mutatás:</translation>
+        <translation>Ikon megjelenítése:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
