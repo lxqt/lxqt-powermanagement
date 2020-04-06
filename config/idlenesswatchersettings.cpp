@@ -71,6 +71,7 @@ void IdlenessWatcherSettings::mConnectSignals()
     connect(mUi->idlenessBacklightWatcherGroupBox, SIGNAL(clicked()), SLOT(saveSettings()));
     connect(mUi->backlightSlider, SIGNAL(valueChanged(int)), SLOT(saveSettings()));
     connect(mUi->idleTimeBacklightTimeEdit, SIGNAL(timeChanged(const QTime &)), SLOT(saveSettings()));
+    connect(mUi->onBatteryDischargingCheckBox, SIGNAL(toggled(bool)), SLOT(saveSettings()));
 }
 
 void IdlenessWatcherSettings::mDisconnectSignals()
@@ -86,6 +87,7 @@ void IdlenessWatcherSettings::mDisconnectSignals()
     disconnect(mUi->idlenessBacklightWatcherGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
     disconnect(mUi->backlightSlider, SIGNAL(valueChanged(int)), this, SLOT(saveSettings()));
     disconnect(mUi->idleTimeBacklightTimeEdit, SIGNAL(timeChanged(const QTime &)), this, SLOT(saveSettings()));
+    disconnect(mUi->onBatteryDischargingCheckBox, SIGNAL(toggled(bool)), this, SLOT(saveSettings()));
 }
 
 IdlenessWatcherSettings::~IdlenessWatcherSettings()
@@ -112,6 +114,7 @@ void IdlenessWatcherSettings::loadSettings()
         mUi->idlenessBacklightWatcherGroupBox->setChecked(mSettings.isIdlenessBacklightWatcherEnabled());
         mUi->idleTimeBacklightTimeEdit->setTime(mSettings.getIdlenessBacklightTime());
         mUi->backlightSlider->setValue(mSettings.getBacklight());
+        mUi->onBatteryDischargingCheckBox->setChecked(mSettings.isIdlenessBacklightOnBatteryDischargingEnabled());
     }
     mConnectSignals();
 }
@@ -164,6 +167,7 @@ void IdlenessWatcherSettings::saveSettings()
     mSettings.setIdlenessBacklightWatcherEnabled(mBacklight->isBacklightAvailable() ? mUi->idlenessBacklightWatcherGroupBox->isChecked() : false);
     mSettings.setIdlenessBacklightTime(mUi->idleTimeBacklightTimeEdit->time());
     mSettings.setBacklight(mUi->backlightSlider->value());
+    mSettings.setIdlenessBacklightOnBatteryDischargingEnabled(mUi->onBatteryDischargingCheckBox->isChecked());
 }
 
 void IdlenessWatcherSettings::backlightCheckButtonPressed()
@@ -180,3 +184,4 @@ void IdlenessWatcherSettings::backlightCheckButtonReleased()
         mBacklight->setBacklight(mBacklightActualValue);
     }
 }
+

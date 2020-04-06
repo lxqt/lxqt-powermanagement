@@ -50,6 +50,7 @@ namespace PowerManagementSettingsConstants
     const QString IDLENESS_TIME_SECS_KEY { QL1S("idlenessTimeSecs") };
     const QString IDLENESS_BACKLIGHT_TIME { QL1S("idlenessTime") };
     const QString IDLENESS_BACKLIGHT { QL1S("backlightIdleness") };
+    const QString IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING { QL1S("backlightIdlenessOnBatteryDischarging") };
 }
 
 using namespace PowerManagementSettingsConstants;
@@ -254,4 +255,14 @@ int PowerManagementSettings::getBacklight()
 void PowerManagementSettings::setBacklight(int backlight)
 {
     setValue(IDLENESS_BACKLIGHT, backlight);
+}
+
+bool PowerManagementSettings::isIdlenessBacklightOnBatteryDischargingEnabled()
+{
+    return value(IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING, true).toBool();
+}
+
+void PowerManagementSettings::setIdlenessBacklightOnBatteryDischargingEnabled(bool enabled)
+{
+    setValue(IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING, enabled);
 }

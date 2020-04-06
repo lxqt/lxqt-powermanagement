@@ -37,10 +37,11 @@ public:
     explicit IdlenessWatcher(QObject* parent = nullptr);
     ~IdlenessWatcher() override;
 
-private slots:
+private Q_SLOTS:
     void setup();
     void timeoutReached(int identifier);
     void resumingFromIdle();
+    void onBatteryChanged(int newState, const QString &udi = QString());
     void onSettingsChanged();
 
 private:
@@ -49,6 +50,7 @@ private:
     int mIdleBacklightWatcher;
     LXQt::Backlight *mBacklight;
     int mBacklightActualValue;
+    bool mDischarging;
 };
 
 #endif // IDLENESSWATCHER_H

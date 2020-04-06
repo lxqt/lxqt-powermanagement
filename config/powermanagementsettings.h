@@ -99,6 +99,9 @@ public:
     
     int getBacklight();
     void setBacklight(int backlight);
+    
+    bool isIdlenessBacklightOnBatteryDischargingEnabled();
+    void setIdlenessBacklightOnBatteryDischargingEnabled(bool enabled);
 };
 
 
