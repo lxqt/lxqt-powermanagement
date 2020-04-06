@@ -112,7 +112,6 @@ void IdlenessWatcherSettings::loadSettings()
         mUi->idlenessBacklightWatcherGroupBox->setChecked(mSettings.isIdlenessBacklightWatcherEnabled());
         mUi->idleTimeBacklightTimeEdit->setTime(mSettings.getIdlenessBacklightTime());
         mUi->backlightSlider->setValue(mSettings.getBacklight());
-        printf("Backlight %d\n", mSettings.getBacklight());
     }
     mConnectSignals();
 }
