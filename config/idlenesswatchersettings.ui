@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>309</width>
-    <height>177</height>
+    <width>321</width>
+    <height>280</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -87,6 +87,62 @@
         </property>
         <property name="maximum">
          <number>60</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="idlenessBacklightWatcherGroupBox">
+     <property name="title">
+      <string>Enable change backlight</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="1" column="0">
+       <widget class="QLabel" name="backlightLabel">
+        <property name="text">
+         <string>Backlight (%):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSlider" name="backlightSlider">
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="idleTimeBacklightLabel">
+        <property name="text">
+         <string>Idle time:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTimeEdit" name="idleTimeBacklightTimeEdit">
+        <property name="toolTip">
+         <string>Minutes:Seconds</string>
+        </property>
+        <property name="displayFormat">
+         <string>mm:ss</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="checkBacklightButton">
+        <property name="text">
+         <string>Check backlight</string>
         </property>
        </widget>
       </item>

@@ -32,12 +32,21 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     Watcher(parent)
 {
     qDebug() << "Starting idlenesswatcher";
+    
+    mIdleWatcher = mIdleBacklightWatcher = mBacklightActualValue = -1;
+    mBacklight = new LXQt::Backlight(this);
 
     connect(KIdleTime::instance(),
             static_cast<void (KIdleTime::*)(int)>(&KIdleTime::timeoutReached),
             this,
             &IdlenessWatcher::timeoutReached);
 
+    if(mBacklight->isBacklightAvailable()) {
+        connect(KIdleTime::instance(),
+                &KIdleTime::resumingFromIdle,
+                this,
+                &IdlenessWatcher::resumingFromIdle);
+    }
     connect(&mPSettings, &LXQt::Settings::settingsChanged,
             this, &IdlenessWatcher::onSettingsChanged);
 
@@ -51,13 +60,38 @@ IdlenessWatcher::~IdlenessWatcher()
 
 void IdlenessWatcher::setup()
 {
-    int timeout = 1000 * mPSettings.getIdlenessTimeSecs();
-    KIdleTime::instance()->addIdleTimeout(timeout);
+    if(mPSettings.isIdlenessWatcherEnabled()) {
+        int timeout = 1000 * mPSettings.getIdlenessTimeSecs();
+        mIdleWatcher = KIdleTime::instance()->addIdleTimeout(timeout);
+    }
+    if(mBacklight->isBacklightAvailable()) {
+        if(mPSettings.isIdlenessBacklightWatcherEnabled()) {
+            QTime time = mPSettings.getIdlenessBacklightTime();
+            mIdleBacklightWatcher = KIdleTime::instance()->addIdleTimeout((time.second() + time.minute() * 60) * 1000);
+        }
+    }
 }
 
 void IdlenessWatcher::timeoutReached(int identifier)
 {
-    doAction(mPSettings.getIdlenessAction());
+    if(identifier == mIdleWatcher) {
+        doAction(mPSettings.getIdlenessAction());
+    }
+    if(identifier == mIdleBacklightWatcher) {
+        mBacklightActualValue = mBacklight->getBacklight();
+        mBacklight->setBacklight((float)mBacklightActualValue * (float)(mPSettings.getBacklight())/100.0f);
+        KIdleTime::instance()->catchNextResumeEvent();
+    }
+}
+
+void IdlenessWatcher::resumingFromIdle()
+{
+    if(mBacklight->isBacklightAvailable() && mBacklightActualValue > -1) {
+        if(mPSettings.isIdlenessBacklightWatcherEnabled()) {
+            mBacklight->setBacklight(mBacklightActualValue);
+            mBacklightActualValue = -1;
+        }
+    }
 }
 
 void IdlenessWatcher::onSettingsChanged()

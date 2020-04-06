@@ -30,6 +30,7 @@
 
 #include <QComboBox>
 #include <QString>
+#include <QTime>
 
 #include <LXQt/Settings>
 
@@ -89,6 +90,15 @@ public:
 
     bool isIdlenessWatcherEnabled();
     void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
+    
+    bool isIdlenessBacklightWatcherEnabled();
+    void setIdlenessBacklightWatcherEnabled(bool idlenessBacklightWatcherEnabled);
+    
+    QTime getIdlenessBacklightTime();
+    void setIdlenessBacklightTime(QTime idlenessBacklightTime);
+    
+    int getBacklight();
+    void setBacklight(int backlight);
 };
 
 

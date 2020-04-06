@@ -29,6 +29,7 @@
 
 #include <QGroupBox>
 #include <LXQt/Settings>
+#include <LXQt/lxqtbacklight.h>
 
 #include "powermanagementsettings.h"
 
@@ -44,17 +45,24 @@ public:
     explicit IdlenessWatcherSettings(QWidget *parent = nullptr);
     ~IdlenessWatcherSettings() override;
 
-public slots:
+public Q_SLOTS:
     void loadSettings();
 
-private slots:
+private Q_SLOTS:
     void minutesChanged(int newVal);
     void secondsChanged(int newVal);
     void saveSettings();
+    void backlightCheckButtonPressed();
+    void backlightCheckButtonReleased();
 
 private:
     PowerManagementSettings mSettings;
     Ui::IdlenessWatcherSettings *mUi;
+    LXQt::Backlight *mBacklight;
+    int mBacklightActualValue;
+    
+    void mConnectSignals();
+    void mDisconnectSignals();
 };
 
 #endif // IDLE_SETTINGS_H
