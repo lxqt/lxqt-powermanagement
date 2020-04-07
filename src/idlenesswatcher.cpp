@@ -99,7 +99,7 @@ void IdlenessWatcher::timeoutReached(int identifier)
 {
     if(identifier == mIdleWatcher) {
         doAction(mPSettings.getIdlenessAction());
-    } else if(identifier == mIdleBacklightWatcher) {
+    } else if(identifier == mIdleBacklightWatcher && mBacklightActualValue < 0) {
         mBacklightActualValue = mBacklight->getBacklight();
         mBacklight->setBacklight((float)mBacklightActualValue * (float)(mPSettings.getBacklight())/100.0f);
         KIdleTime::instance()->removeIdleTimeout(mIdleBacklightWatcher);
