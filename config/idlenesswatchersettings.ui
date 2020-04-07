@@ -134,6 +134,23 @@
         <property name="toolTip">
          <string>Minutes:Seconds</string>
         </property>
+        <property name="maximumTime">
+         <time>
+          <hour>22</hour>
+          <minute>59</minute>
+          <second>59</second>
+         </time>
+        </property>
+        <property name="minimumTime">
+         <time>
+          <hour>0</hour>
+          <minute>0</minute>
+          <second>1</second>
+         </time>
+        </property>
+        <property name="currentSection">
+         <enum>QDateTimeEdit::SecondSection</enum>
+        </property>
         <property name="displayFormat">
          <string>mm:ss</string>
         </property>

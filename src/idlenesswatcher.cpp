@@ -90,7 +90,10 @@ void IdlenessWatcher::setup()
             )
           ) {
             QTime time = mPSettings.getIdlenessBacklightTime();
-            mIdleBacklightWatcher = KIdleTime::instance()->addIdleTimeout((time.second() + time.minute() * 60) * 1000);
+            int milliseconds = (time.second() + time.minute() * 60) * 1000;
+            if(milliseconds < 1000)
+                milliseconds = 1000;
+            mIdleBacklightWatcher = KIdleTime::instance()->addIdleTimeout(milliseconds);
         }
     }
 }
