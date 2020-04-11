@@ -43,6 +43,7 @@ private Q_SLOTS:
     void resumingFromIdle();
     void onBatteryChanged(int newState, const QString &udi = QString());
     void onSettingsChanged();
+    void onBacklightChanged(int value);
 
 private:
     PowerManagementSettings mPSettings;

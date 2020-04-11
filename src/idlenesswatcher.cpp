@@ -62,6 +62,8 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     }
     connect(&mPSettings, &LXQt::Settings::settingsChanged,
             this, &IdlenessWatcher::onSettingsChanged);
+    
+    connect(mBacklight, &LXQt::Backlight::backlightChanged, this, &IdlenessWatcher::onBacklightChanged);
 
     setup();
 }
@@ -76,24 +78,26 @@ void IdlenessWatcher::setup()
     if(mPSettings.isIdlenessWatcherEnabled()) {
         int timeout = 1000 * mPSettings.getIdlenessTimeSecs();
         mIdleWatcher = KIdleTime::instance()->addIdleTimeout(timeout);
-    }
-    if(mBacklight->isBacklightAvailable()) {
-        if(mPSettings.isIdlenessBacklightWatcherEnabled() &&
-            (
-                !mPSettings.isIdlenessBacklightOnBatteryDischargingEnabled()
-                  ||
+    
+        // Enable backlight control:
+        if(mBacklight->isBacklightAvailable() && !mBacklight->isBacklightOff()) {
+            if(mPSettings.isIdlenessBacklightWatcherEnabled() &&
                 (
-                    mPSettings.isIdlenessBacklightOnBatteryDischargingEnabled()
-                      &&
-                    mDischarging
+                    !mPSettings.isIdlenessBacklightOnBatteryDischargingEnabled()
+                      ||
+                    (
+                        mPSettings.isIdlenessBacklightOnBatteryDischargingEnabled()
+                          &&
+                        mDischarging
+                    )
                 )
-            )
-          ) {
-            QTime time = mPSettings.getIdlenessBacklightTime();
-            int milliseconds = (time.second() + time.minute() * 60) * 1000;
-            if(milliseconds < 1000)
-                milliseconds = 1000;
-            mIdleBacklightWatcher = KIdleTime::instance()->addIdleTimeout(milliseconds);
+              ) {
+                QTime time = mPSettings.getIdlenessBacklightTime();
+                int milliseconds = (time.second() + time.minute() * 60) * 1000;
+                if(milliseconds < 1000)
+                    milliseconds = 1000;
+                mIdleBacklightWatcher = KIdleTime::instance()->addIdleTimeout(milliseconds);
+            }
         }
     }
 }
@@ -103,8 +107,11 @@ void IdlenessWatcher::timeoutReached(int identifier)
     if(identifier == mIdleWatcher) {
         doAction(mPSettings.getIdlenessAction());
     } else if(identifier == mIdleBacklightWatcher && mBacklightActualValue < 0) {
-        mBacklightActualValue = mBacklight->getBacklight();
-        mBacklight->setBacklight((float)mBacklightActualValue * (float)(mPSettings.getBacklight())/100.0f);
+        disconnect(mBacklight, &LXQt::Backlight::backlightChanged, this, &IdlenessWatcher::onBacklightChanged);
+            mBacklightActualValue = mBacklight->getBacklight();
+            mBacklight->setBacklight((float)mBacklightActualValue * (float)(mPSettings.getBacklight())/100.0f);
+        connect(mBacklight, &LXQt::Backlight::backlightChanged, this, &IdlenessWatcher::onBacklightChanged);
+        
         KIdleTime::instance()->removeIdleTimeout(mIdleBacklightWatcher);
         KIdleTime::instance()->catchNextResumeEvent();
     }
@@ -112,10 +119,12 @@ void IdlenessWatcher::timeoutReached(int identifier)
 
 void IdlenessWatcher::resumingFromIdle()
 {
-    if(mBacklight->isBacklightAvailable() && mBacklightActualValue > -1) {
+    if(mBacklight->isBacklightAvailable() && !mBacklight->isBacklightOff() && mBacklightActualValue > -1) {
         if(mPSettings.isIdlenessBacklightWatcherEnabled()) {
-            mBacklight->setBacklight(mBacklightActualValue);
-            mBacklightActualValue = -1;
+            disconnect(mBacklight, &LXQt::Backlight::backlightChanged, this, &IdlenessWatcher::onBacklightChanged);
+                mBacklight->setBacklight(mBacklightActualValue);
+                mBacklightActualValue = -1;
+            connect(mBacklight, &LXQt::Backlight::backlightChanged, this, &IdlenessWatcher::onBacklightChanged);
             onSettingsChanged();
         }
     }
@@ -123,13 +132,12 @@ void IdlenessWatcher::resumingFromIdle()
 
 void IdlenessWatcher::onBatteryChanged(int, const QString &)
 {
-    if(mBacklight->isBacklightAvailable()) {
+    if(mBacklight->isBacklightAvailable() && !mBacklight->isBacklightOff()) {
         const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
         
         mDischarging = false;
     
-        for (Solid::Device device : devices)
-        {
+        for (Solid::Device device : devices) {
             Solid::Battery *battery = device.as<Solid::Battery>();
             if (battery->type() == Solid::Battery::PrimaryBattery) {
                 mDischarging |= battery->chargeState() == Solid::Battery::ChargeState::Discharging;
@@ -139,8 +147,16 @@ void IdlenessWatcher::onBatteryChanged(int, const QString &)
     onSettingsChanged();
 }
 
+void IdlenessWatcher::onBacklightChanged(int )
+{
+	// If maximum backlight is -1, the display is power off
+	// int max = mBacklight->getMaxBacklight();
+	onSettingsChanged();
+}
+
 void IdlenessWatcher::onSettingsChanged()
 {
     KIdleTime::instance()->removeAllIdleTimeouts();
+    mIdleWatcher = mIdleBacklightWatcher = -1;
     setup();
 }
