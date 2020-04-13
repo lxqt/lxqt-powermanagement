@@ -91,7 +91,7 @@
       <item>
        <widget class="QGroupBox" name="idlenessBacklightWatcherGroupBox">
         <property name="title">
-         <string>Enable change backlight</string>
+         <string>Enable Backlight Change</string>
         </property>
         <property name="checkable">
          <bool>true</bool>
