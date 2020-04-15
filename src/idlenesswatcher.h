@@ -25,6 +25,7 @@
 #ifndef IDLENESSWATCHER_H
 #define IDLENESSWATCHER_H
 
+#include <LXQt/lxqtbacklight.h>
 #include "../config/powermanagementsettings.h"
 #include "watcher.h"
 
@@ -36,13 +37,20 @@ public:
     explicit IdlenessWatcher(QObject* parent = nullptr);
     ~IdlenessWatcher() override;
 
-private slots:
+private Q_SLOTS:
     void setup();
     void timeoutReached(int identifier);
+    void resumingFromIdle();
+    void onBatteryChanged(int newState, const QString &udi = QString());
     void onSettingsChanged();
 
 private:
     PowerManagementSettings mPSettings;
+    int mIdleWatcher;
+    int mIdleBacklightWatcher;
+    LXQt::Backlight *mBacklight;
+    int mBacklightActualValue;
+    bool mDischarging;
 };
 
 #endif // IDLENESSWATCHER_H

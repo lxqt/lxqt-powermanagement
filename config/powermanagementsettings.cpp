@@ -35,6 +35,7 @@ namespace PowerManagementSettingsConstants
     const QString ENABLE_BATTERY_WATCHER_KEY { QSL("enableBatteryWatcher") };
     const QString ENABLE_LID_WATCHER_KEY { QSL("enableLidWatcher") };
     const QString ENABLE_IDLENESS_WATCHER_KEY { QL1S("enableIdlenessWatcher") };
+    const QString ENABLE_IDLENESS_BACKLIGHT_WATCHER_KEY { QL1S("enableIdlenessBacklightWatcher") };
     const QString LID_CLOSED_ACTION_KEY { QL1S("lidClosedAction") };
     const QString LID_CLOSED_AC_ACTION_KEY { QL1S("lidClosedAcAction") };
     const QString LID_CLOSED_EXT_MON_ACTION_KEY { QL1S("lidClosedExtMonAction") };
@@ -47,11 +48,14 @@ namespace PowerManagementSettingsConstants
     const QString USE_THEME_ICONS_KEY { QL1S("useThemeIcons") };
     const QString IDLENESS_ACTION_KEY { QL1S("idlenessAction") };
     const QString IDLENESS_TIME_SECS_KEY { QL1S("idlenessTimeSecs") };
+    const QString IDLENESS_BACKLIGHT_TIME { QL1S("idlenessTime") };
+    const QString IDLENESS_BACKLIGHT { QL1S("backlightIdleness") };
+    const QString IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING { QL1S("backlightIdlenessOnBatteryDischarging") };
 }
 
 using namespace PowerManagementSettingsConstants;
 
-PowerManagementSettings::PowerManagementSettings(QObject* parent) : LXQt::Settings(QSL("lxqt-powermanagement"))
+PowerManagementSettings::PowerManagementSettings(QObject* parent) : LXQt::Settings(QSL("lxqt-powermanagement"), parent)
 {
 }
 
@@ -222,4 +226,43 @@ void PowerManagementSettings::setIdlenessWatcherEnabled(bool idlenessWatcherEnab
     setValue(ENABLE_IDLENESS_WATCHER_KEY, idlenessWatcherEnabled);
 }
 
+bool PowerManagementSettings::isIdlenessBacklightWatcherEnabled()
+{
+    return value(ENABLE_IDLENESS_BACKLIGHT_WATCHER_KEY, false).toBool();
+}
 
+void PowerManagementSettings::setIdlenessBacklightWatcherEnabled(bool idlenessBacklightWatcherEnabled)
+{
+    setValue(ENABLE_IDLENESS_BACKLIGHT_WATCHER_KEY, idlenessBacklightWatcherEnabled);
+}
+
+QTime PowerManagementSettings::getIdlenessBacklightTime()
+{
+    // default to 1 minute
+    return value(IDLENESS_BACKLIGHT_TIME, QTime(0, 1)).toTime();
+}
+
+void PowerManagementSettings::setIdlenessBacklightTime(QTime idlenessBacklightTime)
+{
+    setValue(IDLENESS_BACKLIGHT_TIME, idlenessBacklightTime);
+}
+
+int PowerManagementSettings::getBacklight()
+{
+    return value(IDLENESS_BACKLIGHT, 50).toInt();
+}
+
+void PowerManagementSettings::setBacklight(int backlight)
+{
+    setValue(IDLENESS_BACKLIGHT, backlight);
+}
+
+bool PowerManagementSettings::isIdlenessBacklightOnBatteryDischargingEnabled()
+{
+    return value(IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING, true).toBool();
+}
+
+void PowerManagementSettings::setIdlenessBacklightOnBatteryDischargingEnabled(bool enabled)
+{
+    setValue(IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING, enabled);
+}
