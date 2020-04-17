@@ -79,8 +79,6 @@ void IdlenessWatcher::setup()
     if(mPSettings.isIdlenessWatcherEnabled()) {
         int timeout = 1000 * mPSettings.getIdlenessTimeSecs();
         mIdleWatcher = KIdleTime::instance()->addIdleTimeout(timeout);
-        
-    
         {
             // Enable backlight control:
             if(mPSettings.isIdlenessBacklightWatcherEnabled() &&
@@ -114,17 +112,17 @@ void IdlenessWatcher::timeoutReached(int identifier)
             connect(mBacklight, &QObject::destroyed, [this](QObject *) {mBacklight = nullptr;} );
         }
             
-        //LXQt::Notification::notify(QStringLiteral("IdlenessWatcher::timeoutReached"), 
-        //    mBacklight->isBacklightAvailable() ?  
+        //LXQt::Notification::notify(QStringLiteral("IdlenessWatcher::timeoutReached"),
+        //    mBacklight->isBacklightAvailable() ?
         //     QStringLiteral("").setNum(mBacklightActualValue):QStringLiteral("Error!!"));
-        
+
         mBacklightActualValue = mBacklight->getBacklight();
         if(mBacklight->isBacklightAvailable() && !mBacklight->isBacklightOff())
             mBacklight->setBacklight((float)mBacklightActualValue * (float)(mPSettings.getBacklight())/100.0f);
         
         KIdleTime::instance()->removeIdleTimeout(mIdleBacklightWatcher);
         KIdleTime::instance()->catchNextResumeEvent();
-        
+
         mBacklight->deleteLater();
     }
 }
@@ -137,12 +135,12 @@ void IdlenessWatcher::resumingFromIdle()
                 mBacklight = new LXQt::Backlight();
                 connect(mBacklight, &QObject::destroyed, [this](QObject *) {mBacklight = nullptr;} );
             }
-            
+
             if(mBacklight->isBacklightAvailable() && !mBacklight->isBacklightOff())
                 mBacklight->setBacklight(mBacklightActualValue);
             mBacklightActualValue = -1;
             onSettingsChanged();
-            
+
             mBacklight->deleteLater();
         }
     }
