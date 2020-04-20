@@ -33,6 +33,7 @@
 #include "idlenesswatcher.h"
 #include "lidwatcher.h"
 #include "batterywatcher.h"
+#include "powerbutton.h"
 
 #include <LXQt/Globals>
 
@@ -52,6 +53,8 @@ PowerManagementd::PowerManagementd() :
         performRunCheck();
         mSettings.setRunCheckLevel(CURRENT_RUNCHECK_LEVEL);
     }
+
+    mPowerButton = new PowerButton(this);
 }
 
 PowerManagementd::~PowerManagementd()

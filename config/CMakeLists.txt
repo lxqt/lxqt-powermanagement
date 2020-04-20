@@ -9,6 +9,7 @@ set(SOURCES
     batterywatchersettings.cpp
     idlenesswatchersettings.cpp
     powermanagementsettings.cpp
+    powerkeyssettings.cpp
     helpers.cpp
     ../src/iconproducer.cpp
 )
@@ -17,6 +18,7 @@ set(UI_FILES
     lidwatchersettings.ui
     batterywatchersettings.ui
     idlenesswatchersettings.ui
+    powerkeyssettings.ui
 )
 
 set(ICON_FILES

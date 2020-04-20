@@ -15,6 +15,7 @@ set(SOURCES
     powermanagementd.cpp
     trayicon.cpp
     iconproducer.cpp
+    powerbutton.cpp
     ../config/powermanagementsettings.cpp
 )
 
@@ -55,6 +56,7 @@ target_link_libraries(lxqt-powermanagement
     ${QTX_LIBRARIES}
     KF5::Solid
     KF5::IdleTime
+    lxqt-globalkeys
 )
 
 install(TARGETS

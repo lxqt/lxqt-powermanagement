@@ -90,18 +90,21 @@ public:
 
     bool isIdlenessWatcherEnabled();
     void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
-    
+
     bool isIdlenessBacklightWatcherEnabled();
     void setIdlenessBacklightWatcherEnabled(bool idlenessBacklightWatcherEnabled);
-    
+
     QTime getIdlenessBacklightTime();
     void setIdlenessBacklightTime(QTime idlenessBacklightTime);
-    
+
     int getBacklight();
     void setBacklight(int backlight);
-    
+
     bool isIdlenessBacklightOnBatteryDischargingEnabled();
     void setIdlenessBacklightOnBatteryDischargingEnabled(bool enabled);
+
+    int getPowerKeyAction();
+    void setPowerKeyAction(int lidClosedAction);
 };
 
 

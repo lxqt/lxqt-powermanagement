@@ -29,6 +29,7 @@
 #include "lidwatchersettings.h"
 #include "batterywatchersettings.h"
 #include "idlenesswatchersettings.h"
+#include "powerkeyssettings.h"
 
 #include <LXQt/Globals>
 
@@ -46,6 +47,10 @@ MainWindow::MainWindow(QWidget *parent) :
     IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(this);
     addPage(idlenessWatcherSettings, tr("Idle"), (QStringList() << QSL("user-idle") << QSL("user-away")));
     connect(this, SIGNAL(reset()), idlenessWatcherSettings, SLOT(loadSettings()));
+
+    PowerKeysSettings* powerKeysSettings = new PowerKeysSettings(this);
+    addPage(powerKeysSettings, tr("Power keys"), QSL("sleep"));
+    connect(this, SIGNAL(reset()), powerKeysSettings, SLOT(loadSettings()));
 
     emit reset();
 }
