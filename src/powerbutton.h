@@ -50,11 +50,18 @@ public:
 
 private Q_SLOTS:
     void handleShortcutPoweroff();
+    void handleShortcutSuspend();
+    void handleShortcutHibernate();
+    
 private:
     QDBusInterface *mLogindInterface;
     QDBusInterface *mLogindPropertiesInterface;
-    QDBusReply<QDBusUnixFileDescriptor> mFd;
+    QDBusReply<QDBusUnixFileDescriptor> mFdPower, mFdSuspend, mFdHibernate;
     GlobalKeyShortcut::Action *mKeyPowerButton;
+    GlobalKeyShortcut::Action *mKeySuspendButton;
+    GlobalKeyShortcut::Action *mKeyHibernateButton;
+    
+    void runAction(int action);
 };
 
 #endif // LID_H

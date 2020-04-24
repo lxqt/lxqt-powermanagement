@@ -104,7 +104,13 @@ public:
     void setIdlenessBacklightOnBatteryDischargingEnabled(bool enabled);
 
     int getPowerKeyAction();
-    void setPowerKeyAction(int lidClosedAction);
+    void setPowerKeyAction(int action);
+    
+    int getSuspendKeyAction();
+    void setSuspendKeyAction(int action);
+    
+    int getHibernateKeyAction();
+    void setHibernateKeyAction(int action);
 };
 
 

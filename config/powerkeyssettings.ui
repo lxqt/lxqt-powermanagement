@@ -21,7 +21,7 @@
      </property>
      <layout class="QFormLayout" name="formLayout">
       <item row="0" column="0">
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="powerKeyLabel">
         <property name="text">
          <string>Power Key Action</string>
         </property>
@@ -29,6 +29,26 @@
       </item>
       <item row="0" column="1">
        <widget class="QComboBox" name="powerKeyActionComboBox"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="suspendKeyActionComboBox"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="hibernateKeyActionComboBox"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="suspendKeyLabel">
+        <property name="text">
+         <string>Suspend Key Action</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="hibernateKeyLabel">
+        <property name="text">
+         <string>Hibernate Key Action</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

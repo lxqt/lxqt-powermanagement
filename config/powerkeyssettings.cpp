@@ -36,8 +36,12 @@ PowerKeysSettings::PowerKeysSettings(QWidget *parent) :
 {
     mUi->setupUi(this);
     fillComboBox(mUi->powerKeyActionComboBox);
+    fillComboBox(mUi->suspendKeyActionComboBox);
+    fillComboBox(mUi->hibernateKeyActionComboBox);
 
     connect(mUi->powerKeyActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
+    connect(mUi->suspendKeyActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
+    connect(mUi->hibernateKeyActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
 }
 
 
@@ -49,10 +53,14 @@ PowerKeysSettings::~PowerKeysSettings()
 void PowerKeysSettings::loadSettings()
 {
     setComboBoxToValue(mUi->powerKeyActionComboBox, mSettings.getPowerKeyAction());
+    setComboBoxToValue(mUi->suspendKeyActionComboBox, mSettings.getSuspendKeyAction());
+    setComboBoxToValue(mUi->hibernateKeyActionComboBox, mSettings.getHibernateKeyAction());
 }
 
 
 void PowerKeysSettings::saveSettings()
 {
     mSettings.setPowerKeyAction(currentValue(mUi->powerKeyActionComboBox));
+    mSettings.setSuspendKeyAction(currentValue(mUi->suspendKeyActionComboBox));
+    mSettings.setHibernateKeyAction(currentValue(mUi->hibernateKeyActionComboBox));
 }

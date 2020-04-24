@@ -28,12 +28,14 @@
 #include <QDBusConnection>
 #include <QDBusReply>
 #include <QObject>
+#include <QTimer>
 #include <QDebug>
 
 #include "powerbutton.h"
 
 #include <LXQt/Globals>
 #include <LXQt/Notification>
+#include <LXQt/Power>
 #include <lxqt-globalkeys.h>
 #include <unistd.h>
 
@@ -49,34 +51,84 @@ PowerButton::PowerButton(QObject *parent) : Watcher(parent)
     // QString powerKeyAction = mLogindInterface->property("HandlePowerKey").toString();
     //LXQt::Notification::notify(powerKeyAction, powerKeyAction);
 
-    mFd = manager.call(QL1S("Inhibit"), QL1S("handle-power-key"), QL1S("lxqt-powermanager"), QL1S("lxqt-powermanager controls power key"), QL1S("block"));
-
+    mFdPower = manager.call(QL1S("Inhibit"), QL1S("handle-power-key"), QL1S("lxqt-powermanager"), 
+        QL1S("lxqt-powermanager controls power key"), QL1S("block"));
     QDBusError error = manager.lastError();
     qDebug() << QStringLiteral("PowerButton") << error.name() << error.message() ;
+    
+    mFdSuspend = manager.call(QL1S("Inhibit"), QL1S("handle-suspend-key"), QL1S("lxqt-powermanager"), 
+        QL1S("lxqt-powermanager controls suspend key"), QL1S("block"));
+    error = manager.lastError();
+    qDebug() << QStringLiteral("SuspendButton") << error.name() << error.message() ;
+    
+    mFdHibernate = manager.call(QL1S("Inhibit"), QL1S("handle-hibernate-key"), QL1S("lxqt-powermanager"), 
+        QL1S("lxqt-powermanager controls hibernate key"), QL1S("block"));
+    error = manager.lastError();
+    qDebug() << QStringLiteral("HibenateButton") << error.name() << error.message() ;
 
     //LXQt::Notification::notify(QL1S("powermanager"), QStringLiteral("Fd %1").arg(mFd.value().fileDescriptor()));
 
-    mKeyPowerButton = GlobalKeyShortcut::Client::instance()->addAction(QStringLiteral("XF86PowerOff"), QStringLiteral("/powermanager/keypoweroff"), tr("Power off key action"), this);
+    mKeyPowerButton = GlobalKeyShortcut::Client::instance()->addAction(QStringLiteral("XF86PowerOff"), 
+        QStringLiteral("/powermanager/keypoweroff"), tr("Power off key action"), this);
 
     if (mKeyPowerButton) {
-        //connect(m_keyVolumeUp, &GlobalKeyShortcut::Action::registrationFinished, this, &LXQtVolume::shortcutRegistered);
         connect(mKeyPowerButton, SIGNAL(activated()), this, SLOT(handleShortcutPoweroff()));
+    }
+    
+    mKeySuspendButton = GlobalKeyShortcut::Client::instance()->addAction(QStringLiteral("XF86Suspend"), 
+        QStringLiteral("/powermanager/keysuspend"), tr("Suspend key action"), this);
+
+    if (mKeySuspendButton) {
+        connect(mKeySuspendButton, SIGNAL(activated()), this, SLOT(handleShortcutSuspend()));
+    }
+    
+    mKeyHibernateButton = GlobalKeyShortcut::Client::instance()->addAction(QStringLiteral("XF86Sleep"), 
+        QStringLiteral("/powermanager/keyhibernate"), tr("Hibernate key action"), this);
+
+    if (mKeyHibernateButton) {
+        connect(mKeyHibernateButton, SIGNAL(activated()), this, SLOT(handleShortcutHibernate()));
     }
 }
 
 
 PowerButton::~PowerButton()
 {
-    close(mFd.value().fileDescriptor());
+    close(mFdPower.value().fileDescriptor());
+    close(mFdSuspend.value().fileDescriptor());
+    close(mFdHibernate.value().fileDescriptor());
 }
 
 
 void PowerButton::handleShortcutPoweroff()
 {
-    //mLogindInterface->call(QL1S("Suspend"), false);
-    //QDBusError error = mLogindInterface->lastError();
-    //qDebug() << QStringLiteral("PowerButton") << error.name() << error.message() ;
+    qDebug() << "Power off";
     PowerManagementSettings mSettings;
-    qDebug() << "Suspend" << mSettings.getPowerKeyAction();
-    doAction(mSettings.getPowerKeyAction());
+    runAction(mSettings.getPowerKeyAction());
+}
+
+void PowerButton::handleShortcutSuspend()
+{
+    qDebug() << "Suspend";
+    PowerManagementSettings mSettings;
+    runAction(mSettings.getSuspendKeyAction());
+}
+
+void PowerButton::handleShortcutHibernate()
+{
+    qDebug() << "Hibernate";
+    PowerManagementSettings mSettings;
+    runAction(mSettings.getHibernateKeyAction());
+}
+
+void PowerButton::runAction(int action)
+{
+    PowerManagementSettings mSettings;
+    if(action != LXQt::Power::PowerMonitorOff)
+        doAction(mSettings.getPowerKeyAction());
+    else {
+        QTimer::singleShot(1000, this, [this]() {
+            qDebug() << "LXQt::Power::PowerMonitorOff";
+            doAction(LXQt::Power::PowerMonitorOff);
+        });
+    }
 }
