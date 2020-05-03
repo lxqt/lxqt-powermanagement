@@ -51,6 +51,9 @@ namespace PowerManagementSettingsConstants
     const QString IDLENESS_BACKLIGHT_TIME { QL1S("idlenessTime") };
     const QString IDLENESS_BACKLIGHT { QL1S("backlightIdleness") };
     const QString IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING { QL1S("backlightIdlenessOnBatteryDischarging") };
+    const QString POWER_KEY_ACTION { QL1S("powerKeyAction") };
+    const QString SUSPEND_KEY_ACTION { QL1S("suspendKeyAction") };
+    const QString HIBERNATE_KEY_ACTION { QL1S("hibernateKeyAction") };
 }
 
 using namespace PowerManagementSettingsConstants;
@@ -265,4 +268,34 @@ bool PowerManagementSettings::isIdlenessBacklightOnBatteryDischargingEnabled()
 void PowerManagementSettings::setIdlenessBacklightOnBatteryDischargingEnabled(bool enabled)
 {
     setValue(IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING, enabled);
+}
+
+int PowerManagementSettings::getPowerKeyAction()
+{
+    return value(POWER_KEY_ACTION, LXQt::Power::Action::PowerShutdown).toInt();
+}
+
+void PowerManagementSettings::setPowerKeyAction(int action)
+{
+    setValue(POWER_KEY_ACTION, action);
+}
+
+int PowerManagementSettings::getSuspendKeyAction()
+{
+    return value(SUSPEND_KEY_ACTION, LXQt::Power::Action::PowerSuspend).toInt();
+}
+
+void PowerManagementSettings::setSuspendKeyAction(int action)
+{
+    setValue(SUSPEND_KEY_ACTION, action);
+}
+
+int PowerManagementSettings::getHibernateKeyAction()
+{
+    return value(HIBERNATE_KEY_ACTION, LXQt::Power::Action::PowerHibernate).toInt();
+}
+
+void PowerManagementSettings::setHibernateKeyAction(int action)
+{
+    setValue(HIBERNATE_KEY_ACTION, action);
 }
