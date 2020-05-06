@@ -123,12 +123,12 @@ void PowerButton::handleShortcutHibernate()
 void PowerButton::runAction(int action)
 {
     PowerManagementSettings mSettings;
-    if(action != LXQt::Power::PowerMonitorOff)
-        doAction(mSettings.getPowerKeyAction());
-    else {
+    if(action == LXQt::Power::PowerMonitorOff) {
         QTimer::singleShot(1000, this, [this]() {
             qDebug() << "LXQt::Power::PowerMonitorOff";
             doAction(LXQt::Power::PowerMonitorOff);
         });
+    } else {
+        doAction(mSettings.getPowerKeyAction());
     }
 }
