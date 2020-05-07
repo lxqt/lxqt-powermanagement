@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this, SIGNAL(reset()), idlenessWatcherSettings, SLOT(loadSettings()));
 
     PowerKeysSettings* powerKeysSettings = new PowerKeysSettings(this);
-    addPage(powerKeysSettings, tr("Power keys"), QSL("keyboard"));
+    addPage(powerKeysSettings, tr("Power keys"), QSL("system-shutdown"));
     connect(this, SIGNAL(reset()), powerKeysSettings, SLOT(loadSettings()));
 
     emit reset();
