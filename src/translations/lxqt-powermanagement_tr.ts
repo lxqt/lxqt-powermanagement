@@ -26,7 +26,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
         <source>Lithium ion</source>
-        <translation>Lityum İyon</translation>
+        <translation>Lityum iyon</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="66"/>
         <source>Nickel cadmium</source>
-        <translation>Nikel Kadmiyum</translation>
+        <translation>Nikel kadmiyum</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="68"/>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation>Kişisel Dijital Asistan Pili</translation>
+        <translation>Kişisel Dijital Asistan&apos;ın pili</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation>Kesintisiz Güç Kaynağı Pili</translation>
+        <translation>Kesintisiz Güç Kaynağı&apos;nın pili</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
