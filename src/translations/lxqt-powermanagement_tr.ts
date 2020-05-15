@@ -26,7 +26,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
         <source>Lithium ion</source>
-        <translation>Lityum İyon</translation>
+        <translation>Lityum iyon</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="66"/>
         <source>Nickel cadmium</source>
-        <translation>Nikel Kadmiyum</translation>
+        <translation>Nikel kadmiyum</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="68"/>
@@ -61,52 +61,52 @@
     <message>
         <location filename="../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation>Kişisel Dijital Asistan Pili</translation>
+        <translation>Kişisel Dijital Asistan&apos;ın bataryası</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation>Kesintisiz Güç Kaynağı Pili</translation>
+        <translation>Kesintisiz Güç Kaynağı&apos;nın bataryası</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
         <source>Primary battery</source>
-        <translation>Birincil pil</translation>
+        <translation>Birincil batarya</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Mouse battery</source>
-        <translation>Fare pili</translation>
+        <translation>Fare bataryası</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
         <source>Keyboard battery</source>
-        <translation>Klavye pili</translation>
+        <translation>Klavye batarya</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation>Klavye ve fare pili</translation>
+        <translation>Klavye ve fare&apos;nin bataryası</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Camera battery</source>
-        <translation>Kamera pili</translation>
+        <translation>Kamera bataryası</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Phone battery</source>
-        <translation>Telefon pili</translation>
+        <translation>Telefon bataryası</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Monitor battery</source>
-        <translation>Ekran pili</translation>
+        <translation>Ekran bataryası</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="99"/>
         <source>Unknown battery</source>
-        <translation>Bilinmeyen pil</translation>
+        <translation>Bilinmeyen batarya</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
-        <translation>Pil Bilgisi</translation>
+        <translation>Batarya Bilgisi</translation>
     </message>
 </context>
 <context>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="53"/>
         <source>Temperature:</source>
-        <translation>Isı:</translation>
+        <translation>Sıcaklık:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="63"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="182"/>
         <source>Voltage:</source>
-        <translation>Voltaj:</translation>
+        <translation>Gerilim:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
@@ -185,17 +185,17 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
-        <translation>Pil yok!</translation>
+        <translation>Batarya yok!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQT bir batarya verisi bulamadı - izleme iptal edildi</translation>
+        <translation>LXQt bir batarya verisi bulamadı - izleme iptal edildi</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
-        <translation>Pil Zayıf!</translation>
+        <translation>Düşük güç!</translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
@@ -230,8 +230,8 @@
         <location filename="../powermanagementd.cpp" line="113"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>LXQT Güç Yönetimini ilk defa çalıştırıyorsunuz. 
-Güç yönetimini ayarlardan yapılandırabilirsiniz... </translation>
+        <translation>LXQT Güç Yönetimi&apos;ni ilk defa çalıştırıyorsunuz. 
+Bunu ayarlardan yapılandırabilirsiniz... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="114"/>
@@ -255,7 +255,7 @@ Güç yönetimini ayarlardan yapılandırabilirsiniz... </translation>
     <message>
         <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
-        <translation>Simgeyi kapat</translation>
+        <translation>Simgeyi etkisizleştir</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="95"/>
@@ -265,12 +265,12 @@ Güç yönetimini ayarlardan yapılandırabilirsiniz... </translation>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
         <source>LXQt Power Management info</source>
-        <translation>LXQT Güç Yönetim Bilgisi</translation>
+        <translation>LXQT Güç Yönetimi bilgisi</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>LXQT Güç Yönetimi sistem çekmecesi simgesi &lt;i&gt;LXQT güç yönetimi ayarları&lt;/i&gt;dan etkinleştirilebilir</translation>
+        <translation>LXQt Güç Yönetimi sistem çekmecesi simgesi &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;&apos;tan (yeniden) etkinleştirilebilir</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="116"/>
