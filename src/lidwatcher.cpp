@@ -85,7 +85,7 @@ bool LidWatcher::externalMonitorPlugged()
     int monitorCount = 0;
 
     QProcess xrandr(this);
-    xrandr.start(QSL("xrandr"), QIODevice::ReadOnly);
+    xrandr.start(QSL("xrandr"), QStringList(), QIODevice::ReadOnly);
     xrandr.waitForFinished(1000);
 
     if (xrandr.exitCode() != 0)
