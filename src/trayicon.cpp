@@ -85,7 +85,7 @@ void TrayIcon::updateTooltip()
 
 void TrayIcon::onConfigureTriggered()
 {
-    QProcess::startDetached(QL1S("lxqt-config-powermanagement"));
+    QProcess::startDetached(QL1S("lxqt-config-powermanagement"), QStringList());
 }
 
 void TrayIcon::onAboutTriggered()
@@ -115,7 +115,7 @@ void TrayIcon::onDisableIconTriggered()
     notification->setIcon(QSL("preferences-system-power-management"));
     notification->setActions({tr("Configure now")});
     notification->setUrgencyHint(LXQt::Notification::UrgencyLow);
-    connect(notification, &LXQt::Notification::actionActivated, [notification] { notification->close(); QProcess::startDetached(QL1S("lxqt-config-powermanagement")); });
+    connect(notification, &LXQt::Notification::actionActivated, [notification] { notification->close(); QProcess::startDetached(QL1S("lxqt-config-powermanagement"), QStringList()); });
     connect(notification, &LXQt::Notification::notificationClosed, notification, &QObject::deleteLater);
     notification->update();
 
