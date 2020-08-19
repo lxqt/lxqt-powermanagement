@@ -83,24 +83,55 @@
         <translation>Bekleme İzeyicisini Etkin&amp;leştir</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="38"/>
+        <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle then:</source>
         <translation>Boştayken:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="57"/>
+        <location filename="../idlenesswatchersettings.ui" line="53"/>
+        <location filename="../idlenesswatchersettings.ui" line="123"/>
         <source>Idle time:</source>
         <translation>Boşta bekleme süresi:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="70"/>
+        <location filename="../idlenesswatchersettings.ui" line="66"/>
         <source> minutes</source>
         <translation> dakika</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="83"/>
+        <location filename="../idlenesswatchersettings.ui" line="79"/>
         <source> seconds</source>
         <translation> saniye</translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="94"/>
+        <source>Enable Backlight Change</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="103"/>
+        <source>Backlight (%):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="130"/>
+        <source>Minutes:Seconds</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="150"/>
+        <source>mm:ss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="157"/>
+        <source>Check backlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="164"/>
+        <source>On battery discharging </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -156,24 +187,57 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="36"/>
+        <location filename="../mainwindow.cpp" line="37"/>
         <source>Power Management Settings</source>
         <translation>Güç Yönetim Ayarları</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="39"/>
+        <location filename="../mainwindow.cpp" line="40"/>
         <source>Battery</source>
         <translation>Pil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="43"/>
+        <location filename="../mainwindow.cpp" line="44"/>
         <source>Lid</source>
         <translation>Kapak</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="47"/>
+        <location filename="../mainwindow.cpp" line="48"/>
         <source>Idle</source>
         <translation>Bekleme</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="52"/>
+        <source>Power keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PowerKeysSettings</name>
+    <message>
+        <location filename="../powerkeyssettings.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../powerkeyssettings.ui" line="20"/>
+        <source>Handle Power Keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../powerkeyssettings.ui" line="26"/>
+        <source>Power Key Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../powerkeyssettings.ui" line="42"/>
+        <source>Suspend Key Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../powerkeyssettings.ui" line="49"/>
+        <source>Hibernate Key Action</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -185,26 +249,31 @@
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
+        <source>Ask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../helpers.cpp" line="37"/>
         <source>Lock screen</source>
         <translation>Ekranı kilitle</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="37"/>
+        <location filename="../helpers.cpp" line="38"/>
         <source>Suspend</source>
         <translation>Beklemeye Al</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="38"/>
+        <location filename="../helpers.cpp" line="39"/>
         <source>Hibernate</source>
         <translation>Uykuya Al</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="39"/>
+        <location filename="../helpers.cpp" line="40"/>
         <source>Shutdown</source>
         <translation>Bilgisayarı Kapat</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="40"/>
+        <location filename="../helpers.cpp" line="41"/>
         <source>Turn Off monitor(s)</source>
         <translation>Ekran(lar)ı kapat</translation>
     </message>

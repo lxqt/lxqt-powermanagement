@@ -202,14 +202,12 @@
         <source>Suspending in %n second(s)</source>
         <translation>
             <numerusform>Készenlét %n másodperc múlva</numerusform>
-            <numerusform>Készenlét %n másodperc múlva</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
         <translation>
-            <numerusform>Mélykészenlét %n másodperc múlva</numerusform>
             <numerusform>Mélykészenlét %n másodperc múlva</numerusform>
         </translation>
     </message>
@@ -218,26 +216,43 @@
         <source>Shutting down in %n second(s)</source>
         <translation>
             <numerusform>Kikapcsolás %n másodperc múlva</numerusform>
-            <numerusform>Kikapcsolás %n másodperc múlva</numerusform>
         </translation>
+    </message>
+</context>
+<context>
+    <name>PowerButton</name>
+    <message>
+        <location filename="../powerbutton.cpp" line="72"/>
+        <source>Power off key action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../powerbutton.cpp" line="79"/>
+        <source>Suspend key action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../powerbutton.cpp" line="86"/>
+        <source>Hibernate key action</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../powermanagementd.cpp" line="112"/>
+        <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
         <translation>Energiakezelés</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="113"/>
+        <location filename="../powermanagementd.cpp" line="116"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Az LXQt energiakezelő első alkalommal fut.
 A beállításokban konfigurálható... </translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="114"/>
+        <location filename="../powermanagementd.cpp" line="117"/>
         <source>Configure...</source>
         <translation>Beállítás...</translation>
     </message>
