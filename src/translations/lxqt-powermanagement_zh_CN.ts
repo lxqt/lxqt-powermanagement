@@ -220,21 +220,39 @@
     </message>
 </context>
 <context>
+    <name>PowerButton</name>
+    <message>
+        <location filename="../powerbutton.cpp" line="72"/>
+        <source>Power off key action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../powerbutton.cpp" line="79"/>
+        <source>Suspend key action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../powerbutton.cpp" line="86"/>
+        <source>Hibernate key action</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PowerManagementd</name>
     <message>
-        <location filename="../powermanagementd.cpp" line="112"/>
+        <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
         <translation>电源管理</translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="113"/>
+        <location filename="../powermanagementd.cpp" line="116"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>这是您第一次使用 LXQt 电源管理器
 您可以从设置配置... </translation>
     </message>
     <message>
-        <location filename="../powermanagementd.cpp" line="114"/>
+        <location filename="../powermanagementd.cpp" line="117"/>
         <source>Configure...</source>
         <translation>配置...</translation>
     </message>
