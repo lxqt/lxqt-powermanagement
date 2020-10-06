@@ -106,12 +106,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="94"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>הפעלת שינוי תאורה אחורית</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>תאורה אחורית (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="130"/>
@@ -121,12 +121,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="157"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>בדיקת התאורה האחורית</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="164"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>טופס</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
