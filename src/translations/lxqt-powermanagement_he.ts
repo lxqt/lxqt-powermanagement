@@ -200,25 +200,31 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>כניסה למצב השהיה בעוד שנייה %n</numerusform>
             <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
-            <numerusform></numerusform>
+            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>כניסה לתרדמת בעוד שנייה %n</numerusform>
             <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
-            <numerusform></numerusform>
+            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>כיבוי בעוד שנייה %n</numerusform>
             <numerusform>כיבוי בעוד %n שניות</numerusform>
-            <numerusform></numerusform>
+            <numerusform>כיבוי בעוד %n שניות</numerusform>
+            <numerusform>כיבוי בעוד %n שניות</numerusform>
         </translation>
     </message>
 </context>
@@ -227,17 +233,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>פעולת מקש הכיבוי</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>פעולת מקש ההשהיה</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>פעולת מקש התרדמת</translation>
     </message>
 </context>
 <context>

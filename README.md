@@ -30,10 +30,10 @@ Daemon-like `lxqt-powermanagement` can be adjusted from section "Basic Settings"
 
 To customize settings there's configuration dialogue "Power Management Settings" (binary `lxqt-config-powermanagement`). It can be opened from the panel's main menu - Preferences - LXQt Settings - Power Management and is provided by the "Configuration Center" (binary `lxqt-config`) of [lxqt-config](https://github.com/lxqt/lxqt-config) as well.
 
-## Translation (Weblate)
+## Translations
 
-<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-powermanagement">
-<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-powermanagement/287x66-white.png" alt="Translation status" />
-</a>    <a href="https://weblate.lxqt.org/projects/lxqt/lxqt-config-powermanagement">
-<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-config-powermanagement/287x66-white.png" alt="Translation status" />
+Translations can be done in [LXQt-Weblate/powermanagement](https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-powermanagment-battery-info/) and [LXQt-Weblate/config-powermanagement](https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-powermanagment/)
+
+<a href="https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-powermanagment/">
+<img src="https://translate.lxqt-project.org/widgets/lxqt-configuration/-/lxqt-powermanagment/multi-auto.svg" alt="Translation status" />
 </a>
