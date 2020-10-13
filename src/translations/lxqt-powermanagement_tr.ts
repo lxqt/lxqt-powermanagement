@@ -224,17 +224,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapatma tuşu eylemi</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Askıya al tuşu eylemi</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Uykuya al tuşu eylemi</translation>
     </message>
 </context>
 <context>
