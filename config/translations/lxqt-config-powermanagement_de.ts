@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>&amp;Aktiviere Leerlaufüberwachung</translation>
+        <translation>&amp;Leerlaufüberwachung aktivieren</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
@@ -106,32 +106,32 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="94"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Änderung der Hintergrundbeleuchtung aktivieren</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>Hintergrundbeleuchtung (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="130"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuten:Sekunden</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="157"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Hintergrundbeleuchtung prüfen</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="164"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>Beim Entladen der Batterie </translation>
     </message>
 </context>
 <context>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation>Bereitschaft</translation>
+        <translation>Bereitschaftszustand</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein/Aus-Tasten</translation>
     </message>
 </context>
 <context>
@@ -232,12 +232,12 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Bereitschaftszustand-Tastenaktion</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruhezustand-Tastenaktion</translation>
     </message>
 </context>
 <context>
@@ -250,7 +250,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachfragen</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
