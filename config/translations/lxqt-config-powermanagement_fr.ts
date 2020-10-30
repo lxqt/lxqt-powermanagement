@@ -111,7 +111,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>Backlight (%):</source>
-        <translation>Rétroéclairage (%) :</translation>
+        <translation>Rétroéclairage (%) :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="130"/>
