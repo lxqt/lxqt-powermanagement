@@ -232,7 +232,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation>Αναστολή της ενέργειας πλήκτρου</translation>
+        <translation>Ενέργεια του πλήκτρου αναστολής</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>

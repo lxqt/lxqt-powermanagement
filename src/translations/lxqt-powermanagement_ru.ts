@@ -230,12 +230,12 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Действие кнопки питания</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Действие кнопки сна</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
