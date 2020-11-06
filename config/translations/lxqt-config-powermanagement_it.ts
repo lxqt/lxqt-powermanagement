@@ -227,7 +227,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action</source>
-        <translation>Azione del pulsante</translation>
+        <translation>Azione del pulsante di accensione</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
