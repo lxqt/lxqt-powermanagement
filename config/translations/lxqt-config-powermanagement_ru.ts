@@ -116,12 +116,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="130"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Минуты:Секунды</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>мм:сс</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="157"/>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Кнопки питания</translation>
     </message>
 </context>
 <context>
@@ -227,17 +227,17 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Действие кнопки питания</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>При переходе в ждущий режим</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>При переходе в спящий режим</translation>
     </message>
 </context>
 <context>
@@ -250,7 +250,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Спросить</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>

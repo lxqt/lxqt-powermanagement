@@ -106,32 +106,32 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="94"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Povolit změnu podsvícení</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>Podsvícení (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="130"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuty:Sekundy</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="157"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Zkontrolovat podsvícení</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="164"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>Při vybíjení baterie </translation>
     </message>
 </context>
 <context>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypínací klávesy</translation>
     </message>
 </context>
 <context>
@@ -217,27 +217,27 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulář</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Zacházení s vypínacími klávesami</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Činnost vypínací klávesy</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Činnost klávesy pro uspání</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Činnost klávesy pro uspání na disk</translation>
     </message>
 </context>
 <context>
@@ -250,7 +250,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeptat se</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
