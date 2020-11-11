@@ -96,7 +96,7 @@ void PowerManagementd::settingsChanged()
 void PowerManagementd::runConfigure()
 {
     mNotification.close();
-    QProcess::startDetached(QSL("lxqt-config-powermanagement"));
+    QProcess::startDetached(QSL("lxqt-config-powermanagement"), QStringList());
 }
 
 void PowerManagementd::performRunCheck()
