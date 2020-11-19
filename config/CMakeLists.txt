@@ -41,7 +41,7 @@ lxqt_translate_ts(QM_FILES
 )
 
 lxqt_app_translation_loader(config-powermanagement_QM_LOADER ${PROJECT_NAME})
-lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN})
+lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN} USE_YAML)
 
 add_executable(${PROJECT_NAME}
     ${SOURCES}
