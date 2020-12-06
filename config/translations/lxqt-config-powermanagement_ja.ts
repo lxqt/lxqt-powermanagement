@@ -232,7 +232,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation>[サスペンド]キーのアクション</translation>
+        <translation>[サスペンド]キーの動作</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
