@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>Ikonok a témából:</translation>
+        <translation>Ikonok használata a témából:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Tétle&amp;nségi felügyelet</translation>
+        <translation>Tétle&amp;nségi felügyelet engedélyezése</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>mm:ss</source>
-        <translation>pp:mpmp</translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="157"/>
@@ -139,7 +139,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Fedé&amp;lfelügyelet</translation>
+        <translation>Fedé&amp;lfelügyelet engedélyezése</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
@@ -165,12 +165,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>Mélykészenlét</translation>
+        <translation>Hibernálás</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
-        <translation>Kikapcsolás</translation>
+        <translation>Leállítás</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
@@ -189,7 +189,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Power Management Settings</source>
-        <translation>Energiakezelés</translation>
+        <translation>Energiakezelés beállítások</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="40"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="48"/>
         <source>Idle</source>
-        <translation>Tétlen</translation>
+        <translation>Tétlenség</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation>Forma</translation>
+        <translation>Űrlap</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
@@ -265,12 +265,12 @@
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Hibernate</source>
-        <translation>Mélykészenlét</translation>
+        <translation>Hibernálás</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Shutdown</source>
-        <translation>Kikapcsolás</translation>
+        <translation>Leállítás</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="41"/>
