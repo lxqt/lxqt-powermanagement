@@ -106,32 +106,32 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="94"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>启用背光修改</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>背光 (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="130"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>分钟：秒钟</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="157"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>检测背光</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="164"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>电池放电 </translation>
     </message>
 </context>
 <context>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>电源键</translation>
     </message>
 </context>
 <context>
@@ -217,27 +217,27 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>表单</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>处理电源键</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>电源键的动作</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>挂起键的动作</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Hibernate 的按键操作</translation>
     </message>
 </context>
 <context>
@@ -250,7 +250,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>提问</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>

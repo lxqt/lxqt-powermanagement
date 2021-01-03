@@ -227,17 +227,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling for sluktast</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling for suspendertast</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling for dvaletast</translation>
     </message>
 </context>
 <context>
