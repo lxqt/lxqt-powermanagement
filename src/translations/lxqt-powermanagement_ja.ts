@@ -190,7 +190,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>バッテリーのデーターを見つけられませんので、監視機能は無効です</translation>
+        <translation>バッテリーのデータを見つけられませんので監視機能は無効です</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="114"/>
