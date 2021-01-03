@@ -240,7 +240,7 @@
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Действие кнопки «Спящий режим»</translation>
     </message>
 </context>
 <context>
