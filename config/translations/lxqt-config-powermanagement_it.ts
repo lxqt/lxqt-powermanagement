@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation>Pulsanti</translation>
+        <translation type="unfinished">Tasti</translation>
     </message>
 </context>
 <context>
@@ -222,22 +222,22 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation>Gestisci pulsanti</translation>
+        <translation>Gestisci tasti</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action</source>
-        <translation>Azione del pulsante di accensione</translation>
+        <translation>Azione del tasto di accensione</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation>Azione per pulsante di sospensione</translation>
+        <translation>Azione del tasto di sospensione</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action</source>
-        <translation>Azione per pulsante di ibernazione</translation>
+        <translation>Azione tasto di ibernazione</translation>
     </message>
 </context>
 <context>
