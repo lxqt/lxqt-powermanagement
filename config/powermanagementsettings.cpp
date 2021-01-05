@@ -51,6 +51,7 @@ namespace PowerManagementSettingsConstants
     const QString IDLENESS_BACKLIGHT_TIME { QL1S("idlenessTime") };
     const QString IDLENESS_BACKLIGHT { QL1S("backlightIdleness") };
     const QString IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING { QL1S("backlightIdlenessOnBatteryDischarging") };
+    const QString DISABLE_IDLENESS_WHEN_FULLSCREEN { QL1S("disableIdlenessWhenFullscreen") };
     const QString POWER_KEY_ACTION { QL1S("powerKeyAction") };
     const QString SUSPEND_KEY_ACTION { QL1S("suspendKeyAction") };
     const QString HIBERNATE_KEY_ACTION { QL1S("hibernateKeyAction") };
@@ -270,6 +271,16 @@ void PowerManagementSettings::setIdlenessBacklightOnBatteryDischargingEnabled(bo
     setValue(IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING, enabled);
 }
 
+bool PowerManagementSettings::isDisableIdlenessWhenFullscreenEnabled()
+{
+    return value(DISABLE_IDLENESS_WHEN_FULLSCREEN, false).toBool();
+}
+
+void PowerManagementSettings::setDisableIdlenessWhenFullscreen(bool enabled)
+{
+    setValue(DISABLE_IDLENESS_WHEN_FULLSCREEN, enabled);
+}
+
 int PowerManagementSettings::getPowerKeyAction()
 {
     return value(POWER_KEY_ACTION, LXQt::Power::Action::PowerShutdown).toInt();
@@ -299,3 +310,4 @@ void PowerManagementSettings::setHibernateKeyAction(int action)
 {
     setValue(HIBERNATE_KEY_ACTION, action);
 }
+

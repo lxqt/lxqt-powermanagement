@@ -39,7 +39,7 @@ public:
 
 private Q_SLOTS:
     void setup();
-    void timeoutReached(int identifier);
+    void timeoutReached(int identifier,int msec);
     void resumingFromIdle();
     void onBatteryChanged(int newState, const QString &udi = QString());
     void onSettingsChanged();

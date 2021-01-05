@@ -103,6 +103,9 @@ public:
     bool isIdlenessBacklightOnBatteryDischargingEnabled();
     void setIdlenessBacklightOnBatteryDischargingEnabled(bool enabled);
 
+    bool isDisableIdlenessWhenFullscreenEnabled();
+    void setDisableIdlenessWhenFullscreen(bool enabled);
+
     int getPowerKeyAction();
     void setPowerKeyAction(int action);
     
