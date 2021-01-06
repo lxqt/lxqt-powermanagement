@@ -112,6 +112,7 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
         KWindowInfo info(w, NET::WMState);
         if (info.hasState(NET::FullScreen)) {
             qDebug() << "idleness timeout reached with fullscreen window. Postponing...";
+            KIdleTime::instance()->simulateUserActivity();
             return;
         }
     }
