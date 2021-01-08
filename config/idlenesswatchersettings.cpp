@@ -90,7 +90,7 @@ void IdlenessWatcherSettings::mDisconnectSignals()
     disconnect(mUi->backlightSlider, SIGNAL(valueChanged(int)), this, SLOT(saveSettings()));
     disconnect(mUi->idleTimeBacklightTimeEdit, SIGNAL(timeChanged(const QTime &)), this, SLOT(saveSettings()));
     disconnect(mUi->onBatteryDischargingCheckBox, SIGNAL(toggled(bool)), this, SLOT(saveSettings()));
-    disconnect(mUi->disableIdlenessFullscreenBox, SIGNAL(toggled(bool)), this, SLOT(saveSettings()));
+    disconnect(mUi->disableIdlenessFullscreenBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::saveSettings);
 }
 
 IdlenessWatcherSettings::~IdlenessWatcherSettings()
