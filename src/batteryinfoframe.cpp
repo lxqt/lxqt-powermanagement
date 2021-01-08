@@ -49,8 +49,8 @@ BatteryInfoFrame::BatteryInfoFrame(Solid::Battery *battery) :
         vendor = QSL("Unknown");
     mUi->vendorValue->setText(vendor);
 
-    connect(mBattery, SIGNAL(energyChanged(double, const QString)), this, SLOT(onBatteryChanged()));
-    connect(mBattery, SIGNAL(chargeStateChanged(int, const QString)), this, SLOT(onBatteryChanged()));
+    connect(mBattery, &Solid::Battery::energyChanged, this, &BatteryInfoFrame::onBatteryChanged);
+    connect(mBattery, &Solid::Battery::chargeStateChanged, this, &BatteryInfoFrame::onBatteryChanged);
     onBatteryChanged();
 }
 

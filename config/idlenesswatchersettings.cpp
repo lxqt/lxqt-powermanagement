@@ -57,40 +57,44 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
 
 void IdlenessWatcherSettings::mConnectSignals()
 {
-    connect(mUi->idlenessWatcherGroupBox, SIGNAL(clicked()), SLOT(saveSettings()));
-    connect(mUi->idleActionComboBox, SIGNAL(activated(int)), SLOT(saveSettings()));
-    connect(mUi->idleTimeMinutesSpinBox, SIGNAL(editingFinished()), SLOT(saveSettings()));
-    connect(mUi->idleTimeMinutesSpinBox, SIGNAL(valueChanged(int)), SLOT(minutesChanged(int)));
-    connect(mUi->idleTimeSecondsSpinBox, SIGNAL(valueChanged(int)), SLOT(secondsChanged(int)));
+    connect(mUi->idlenessWatcherGroupBox,          &QGroupBox::clicked,                         this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->idleActionComboBox,               QOverload<int>::of(&QComboBox::activated),   this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->idleTimeMinutesSpinBox,           &QSpinBox::editingFinished,                  this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->idleTimeMinutesSpinBox,           QOverload<int>::of(&QSpinBox::valueChanged), this, &IdlenessWatcherSettings::minutesChanged);
+    connect(mUi->idleTimeSecondsSpinBox,           QOverload<int>::of(&QSpinBox::valueChanged), this, &IdlenessWatcherSettings::secondsChanged);
 
-    connect(mUi->idleTimeSecondsSpinBox, SIGNAL(editingFinished()), SLOT(saveSettings()));
+    connect(mUi->idleTimeSecondsSpinBox,           &QSpinBox::editingFinished,                  this, &IdlenessWatcherSettings::saveSettings);
     
-    connect(mUi->checkBacklightButton, SIGNAL(pressed()), SLOT(backlightCheckButtonPressed()));
-    connect(mUi->checkBacklightButton, SIGNAL(released()), SLOT(backlightCheckButtonReleased()));
+    connect(mUi->checkBacklightButton,             &QPushButton::pressed,                       this, &IdlenessWatcherSettings::backlightCheckButtonPressed);
+    connect(mUi->checkBacklightButton,             &QPushButton::released,                      this, &IdlenessWatcherSettings::backlightCheckButtonReleased);
     
-    connect(mUi->idlenessBacklightWatcherGroupBox, SIGNAL(clicked()), SLOT(saveSettings()));
-    connect(mUi->backlightSlider, SIGNAL(valueChanged(int)), SLOT(saveSettings()));
-    connect(mUi->idleTimeBacklightTimeEdit, SIGNAL(timeChanged(const QTime &)), SLOT(saveSettings()));
-    connect(mUi->onBatteryDischargingCheckBox, SIGNAL(toggled(bool)), SLOT(saveSettings()));
+    connect(mUi->idlenessBacklightWatcherGroupBox, &QGroupBox::clicked,                         this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->backlightSlider,                  &QSlider::valueChanged,                      this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->idleTimeBacklightTimeEdit,        &QTimeEdit::timeChanged,                     this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->onBatteryDischargingCheckBox,     &QCheckBox::toggled,                         this, &IdlenessWatcherSettings::saveSettings);
 
-    connect(mUi->disableIdlenessFullscreenBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->disableIdlenessFullscreenBox,     &QCheckBox::toggled,                         this, &IdlenessWatcherSettings::saveSettings);
 }
 
 void IdlenessWatcherSettings::mDisconnectSignals()
 {
-    disconnect(mUi->idlenessWatcherGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
-    disconnect(mUi->idleActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
-    disconnect(mUi->idleTimeMinutesSpinBox, SIGNAL(editingFinished()), this, SLOT(saveSettings()));
-    disconnect(mUi->idleTimeMinutesSpinBox, SIGNAL(valueChanged(int)), this, SLOT(minutesChanged(int)));
-    disconnect(mUi->idleTimeSecondsSpinBox, SIGNAL(valueChanged(int)), this, SLOT(secondsChanged(int)));
-    disconnect(mUi->idleTimeSecondsSpinBox, SIGNAL(editingFinished()), this, SLOT(saveSettings()));    
-    disconnect(mUi->checkBacklightButton, SIGNAL(pressed()), this, SLOT(backlightCheckButtonPressed()));
-    disconnect(mUi->checkBacklightButton, SIGNAL(released()), this, SLOT(backlightCheckButtonReleased()));    
-    disconnect(mUi->idlenessBacklightWatcherGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
-    disconnect(mUi->backlightSlider, SIGNAL(valueChanged(int)), this, SLOT(saveSettings()));
-    disconnect(mUi->idleTimeBacklightTimeEdit, SIGNAL(timeChanged(const QTime &)), this, SLOT(saveSettings()));
-    disconnect(mUi->onBatteryDischargingCheckBox, SIGNAL(toggled(bool)), this, SLOT(saveSettings()));
-    disconnect(mUi->disableIdlenessFullscreenBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::saveSettings);
+    disconnect(mUi->idlenessWatcherGroupBox,          &QGroupBox::clicked,                         this, &IdlenessWatcherSettings::saveSettings);
+    disconnect(mUi->idleActionComboBox,               QOverload<int>::of(&QComboBox::activated),   this, &IdlenessWatcherSettings::saveSettings);
+    disconnect(mUi->idleTimeMinutesSpinBox,           &QSpinBox::editingFinished,                  this, &IdlenessWatcherSettings::saveSettings);
+    disconnect(mUi->idleTimeMinutesSpinBox,           QOverload<int>::of(&QSpinBox::valueChanged), this, &IdlenessWatcherSettings::minutesChanged);
+    disconnect(mUi->idleTimeSecondsSpinBox,           QOverload<int>::of(&QSpinBox::valueChanged), this, &IdlenessWatcherSettings::secondsChanged);
+
+    disconnect(mUi->idleTimeSecondsSpinBox,           &QSpinBox::editingFinished,                  this, &IdlenessWatcherSettings::saveSettings);
+
+    disconnect(mUi->checkBacklightButton,             &QPushButton::pressed,                       this, &IdlenessWatcherSettings::backlightCheckButtonPressed);
+    disconnect(mUi->checkBacklightButton,             &QPushButton::released,                      this, &IdlenessWatcherSettings::backlightCheckButtonReleased);
+
+    disconnect(mUi->idlenessBacklightWatcherGroupBox, &QGroupBox::clicked,                         this, &IdlenessWatcherSettings::saveSettings);
+    disconnect(mUi->backlightSlider,                  &QSlider::valueChanged,                      this, &IdlenessWatcherSettings::saveSettings);
+    disconnect(mUi->idleTimeBacklightTimeEdit,        &QTimeEdit::timeChanged,                     this, &IdlenessWatcherSettings::saveSettings);
+    disconnect(mUi->onBatteryDischargingCheckBox,     &QCheckBox::toggled,                         this, &IdlenessWatcherSettings::saveSettings);
+
+    disconnect(mUi->disableIdlenessFullscreenBox,     &QCheckBox::toggled,                         this, &IdlenessWatcherSettings::saveSettings);
 }
 
 IdlenessWatcherSettings::~IdlenessWatcherSettings()

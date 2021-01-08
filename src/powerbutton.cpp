@@ -72,21 +72,21 @@ PowerButton::PowerButton(QObject *parent) : Watcher(parent)
         QStringLiteral("/powermanager/keypoweroff"), tr("Power off key action"), this);
 
     if (mKeyPowerButton) {
-        connect(mKeyPowerButton, SIGNAL(activated()), this, SLOT(handleShortcutPoweroff()));
+        connect(mKeyPowerButton, &GlobalKeyShortcut::Action::activated, this, &PowerButton::handleShortcutPoweroff);
     }
     
     mKeySuspendButton = GlobalKeyShortcut::Client::instance()->addAction(QStringLiteral("XF86Suspend"), 
         QStringLiteral("/powermanager/keysuspend"), tr("Suspend key action"), this);
 
     if (mKeySuspendButton) {
-        connect(mKeySuspendButton, SIGNAL(activated()), this, SLOT(handleShortcutSuspend()));
+        connect(mKeySuspendButton, &GlobalKeyShortcut::Action::activated, this, &PowerButton::handleShortcutSuspend);
     }
     
     mKeyHibernateButton = GlobalKeyShortcut::Client::instance()->addAction(QStringLiteral("XF86Sleep"), 
         QStringLiteral("/powermanager/keyhibernate"), tr("Hibernate key action"), this);
 
     if (mKeyHibernateButton) {
-        connect(mKeyHibernateButton, SIGNAL(activated()), this, SLOT(handleShortcutHibernate()));
+        connect(mKeyHibernateButton, &GlobalKeyShortcut::Action::activated, this, &PowerButton::handleShortcutHibernate);
     }
 }
 

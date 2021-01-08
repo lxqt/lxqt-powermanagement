@@ -44,12 +44,12 @@ LidWatcherSettings::LidWatcherSettings(QWidget *parent) :
     fillComboBox(mUi->extMonOnBatteryActionComboBox);
     fillComboBox(mUi->extMonOnAcActionComboBox);
 
-    connect(mUi->lidWatcherSettingsGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
-    connect(mUi->onBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
-    connect(mUi->onAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
-    connect(mUi->extMonOnBatteryActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
-    connect(mUi->extMonOnAcActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
-    connect(mUi->extMonGroupBox, SIGNAL(clicked()), this, SLOT(saveSettings()));
+    connect(mUi->lidWatcherSettingsGroupBox, &QGroupBox::clicked, this, &LidWatcherSettings::saveSettings);
+    connect(mUi->onBatteryActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &LidWatcherSettings::saveSettings);
+    connect(mUi->onAcActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &LidWatcherSettings::saveSettings);
+    connect(mUi->extMonOnBatteryActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &LidWatcherSettings::saveSettings);
+    connect(mUi->extMonOnAcActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &LidWatcherSettings::saveSettings);
+    connect(mUi->extMonGroupBox, &QGroupBox::clicked, this, &LidWatcherSettings::saveSettings);
 }
 
 LidWatcherSettings::~LidWatcherSettings()

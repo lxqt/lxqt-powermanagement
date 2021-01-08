@@ -45,7 +45,7 @@ PowerManagementd::PowerManagementd() :
         mIdlenesswatcherd(nullptr),
         mSettings()
  {
-    connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
+    connect(&mSettings, &PowerManagementSettings::settingsChanged, this, &PowerManagementd::settingsChanged);
     settingsChanged();
 
     if (mSettings.getRunCheckLevel() < CURRENT_RUNCHECK_LEVEL)
@@ -116,6 +116,6 @@ void PowerManagementd::performRunCheck()
     mNotification.setBody(tr("You are running LXQt Power Management for the first time.\nYou can configure it from settings... "));
     mNotification.setActions(QStringList() << tr("Configure..."));
     mNotification.setTimeout(10000);
-    connect(&mNotification, SIGNAL(actionActivated(int)), SLOT(runConfigure()));
+    connect(&mNotification, &LXQt::Notification::actionActivated, this, &PowerManagementd::runConfigure);
     mNotification.update();
 }
