@@ -28,6 +28,8 @@
 #include <KIdleTime>
 #include <Solid/Device>
 #include <Solid/Battery>
+#include <KWindowSystem/KWindowSystem>
+#include <KWindowSystem/KWindowInfo>
 #include <QDebug>
 #include <LXQt/lxqtnotification.h>
 #include <QObject>
@@ -42,7 +44,7 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     mDischarging = false;
 
     connect(KIdleTime::instance(),
-            static_cast<void (KIdleTime::*)(int)>(&KIdleTime::timeoutReached),
+            static_cast<void (KIdleTime::*)(int,int)>(&KIdleTime::timeoutReached),
             this,
             &IdlenessWatcher::timeoutReached);
 
@@ -102,8 +104,18 @@ void IdlenessWatcher::setup()
     }
 }
 
-void IdlenessWatcher::timeoutReached(int identifier)
+void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
 {
+    // check if disable Idleness when fullscreen is enabled
+    if (mPSettings.isDisableIdlenessWhenFullscreenEnabled()) {
+        WId w = KWindowSystem::activeWindow();
+        KWindowInfo info(w, NET::WMState);
+        if (info.hasState(NET::FullScreen)) {
+            KIdleTime::instance()->simulateUserActivity();
+            return;
+        }
+    }
+
     if(identifier == mIdleWatcher) {
         doAction(mPSettings.getIdlenessAction());
     } else if(identifier == mIdleBacklightWatcher && mBacklightActualValue < 0) {
@@ -163,10 +175,10 @@ void IdlenessWatcher::onBatteryChanged(int, const QString &)
     onSettingsChanged();
 }
 
-
 void IdlenessWatcher::onSettingsChanged()
 {
     KIdleTime::instance()->removeAllIdleTimeouts();
     mIdleWatcher = mIdleBacklightWatcher = -1;
     setup();
 }
+

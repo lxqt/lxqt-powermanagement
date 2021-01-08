@@ -72,6 +72,8 @@ void IdlenessWatcherSettings::mConnectSignals()
     connect(mUi->backlightSlider, SIGNAL(valueChanged(int)), SLOT(saveSettings()));
     connect(mUi->idleTimeBacklightTimeEdit, SIGNAL(timeChanged(const QTime &)), SLOT(saveSettings()));
     connect(mUi->onBatteryDischargingCheckBox, SIGNAL(toggled(bool)), SLOT(saveSettings()));
+
+    connect(mUi->disableIdlenessFullscreenBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::saveSettings);
 }
 
 void IdlenessWatcherSettings::mDisconnectSignals()
@@ -88,6 +90,7 @@ void IdlenessWatcherSettings::mDisconnectSignals()
     disconnect(mUi->backlightSlider, SIGNAL(valueChanged(int)), this, SLOT(saveSettings()));
     disconnect(mUi->idleTimeBacklightTimeEdit, SIGNAL(timeChanged(const QTime &)), this, SLOT(saveSettings()));
     disconnect(mUi->onBatteryDischargingCheckBox, SIGNAL(toggled(bool)), this, SLOT(saveSettings()));
+    disconnect(mUi->disableIdlenessFullscreenBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::saveSettings);
 }
 
 IdlenessWatcherSettings::~IdlenessWatcherSettings()
@@ -116,6 +119,7 @@ void IdlenessWatcherSettings::loadSettings()
         mUi->backlightSlider->setValue(mSettings.getBacklight());
         mUi->onBatteryDischargingCheckBox->setChecked(mSettings.isIdlenessBacklightOnBatteryDischargingEnabled());
     }
+    mUi->disableIdlenessFullscreenBox->setChecked(mSettings.isDisableIdlenessWhenFullscreenEnabled());
     mConnectSignals();
 }
 
@@ -168,6 +172,7 @@ void IdlenessWatcherSettings::saveSettings()
     mSettings.setIdlenessBacklightTime(mUi->idleTimeBacklightTimeEdit->time());
     mSettings.setBacklight(mUi->backlightSlider->value());
     mSettings.setIdlenessBacklightOnBatteryDischargingEnabled(mUi->onBatteryDischargingCheckBox->isChecked());
+    mSettings.setDisableIdlenessWhenFullscreen(mUi->disableIdlenessFullscreenBox->isChecked());
 }
 
 void IdlenessWatcherSettings::backlightCheckButtonPressed()
