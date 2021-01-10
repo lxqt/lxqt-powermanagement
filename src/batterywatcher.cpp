@@ -65,8 +65,7 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
     mBatteryInfoDialog = new BatteryInfoDialog(mBatteries);
 
     connect(&mSettings, &PowerManagementSettings::settingsChanged, this, &BatteryWatcher::settingsChanged);
-    // connect(LXQt::Settings::globalSettings(), &LXQt::GlobalSettings::iconThemeChanged, this, &BatteryWatcher::settingsChanged);
-    connect(LXQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
+    connect(LXQt::Settings::globalSettings(), &LXQt::GlobalSettings::iconThemeChanged, this, &BatteryWatcher::settingsChanged);
 
     settingsChanged();
     batteryChanged();
