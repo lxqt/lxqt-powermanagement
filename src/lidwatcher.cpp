@@ -40,7 +40,7 @@
 LidWatcher::LidWatcher(QObject *parent) : Watcher(parent)
 {
     inhibitSystemdLogin();
-    connect(&mLid, SIGNAL(changed(bool)), this, SLOT(lidChanged(bool)));
+    connect(&mLid, &Lid::changed, this, &LidWatcher::lidChanged);
 }
 
 LidWatcher::~LidWatcher(){

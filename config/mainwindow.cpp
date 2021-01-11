@@ -38,19 +38,19 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     BatteryWatcherSettings* batteryWatcherSettings = new BatteryWatcherSettings(this);
     addPage(batteryWatcherSettings, tr("Battery"), QSL("battery"));
-    connect(this, SIGNAL(reset()), batteryWatcherSettings, SLOT(loadSettings()));
+    connect(this, &MainWindow::reset, batteryWatcherSettings, &BatteryWatcherSettings::loadSettings);
 
     LidWatcherSettings *lidwatcherSettings = new LidWatcherSettings(this);
     addPage(lidwatcherSettings, tr("Lid"), QSL("laptop-lid"));
-    connect(this, SIGNAL(reset()), lidwatcherSettings, SLOT(loadSettings()));
+    connect(this, &MainWindow::reset, lidwatcherSettings, &LidWatcherSettings::loadSettings);
 
     IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(this);
     addPage(idlenessWatcherSettings, tr("Idle"), (QStringList() << QSL("user-idle") << QSL("user-away")));
-    connect(this, SIGNAL(reset()), idlenessWatcherSettings, SLOT(loadSettings()));
+    connect(this, &MainWindow::reset, idlenessWatcherSettings, &IdlenessWatcherSettings::loadSettings);
 
     PowerKeysSettings* powerKeysSettings = new PowerKeysSettings(this);
     addPage(powerKeysSettings, tr("Power keys"), QSL("system-shutdown"));
-    connect(this, SIGNAL(reset()), powerKeysSettings, SLOT(loadSettings()));
+    connect(this, &MainWindow::reset, powerKeysSettings, &PowerKeysSettings::loadSettings);
 
     emit reset();
 }

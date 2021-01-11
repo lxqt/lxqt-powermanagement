@@ -19,7 +19,7 @@ IconProducer::IconProducer(Solid::Battery *battery, QObject *parent) : QObject(p
 {
     connect(battery, &Solid::Battery::chargeStateChanged, this, &IconProducer::updateState);
     connect(battery, &Solid::Battery::chargePercentChanged, this, &IconProducer::updateChargePercent);
-    connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(update()));
+    connect(&mSettings, &PowerManagementSettings::settingsChanged, this, &IconProducer::update);
 
     mChargePercent = battery->chargePercent();
     mState = battery->chargeState();

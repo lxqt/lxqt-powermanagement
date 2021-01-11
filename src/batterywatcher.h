@@ -37,6 +37,7 @@
 class BatteryWatcher : public Watcher
 {
     Q_OBJECT
+
 public:
     explicit BatteryWatcher(QObject *parent = nullptr);
     ~BatteryWatcher() override;

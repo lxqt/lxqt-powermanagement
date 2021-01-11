@@ -64,8 +64,8 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 
     mBatteryInfoDialog = new BatteryInfoDialog(mBatteries);
 
-    connect(&mSettings, SIGNAL(settingsChanged()), this, SLOT(settingsChanged()));
-    connect(LXQt::Settings::globalSettings(), SIGNAL(iconThemeChanged()), this, SLOT(settingsChanged()));
+    connect(&mSettings, &PowerManagementSettings::settingsChanged, this, &BatteryWatcher::settingsChanged);
+    connect(LXQt::Settings::globalSettings(), &LXQt::GlobalSettings::iconThemeChanged, this, &BatteryWatcher::settingsChanged);
 
     settingsChanged();
     batteryChanged();
@@ -135,7 +135,7 @@ void BatteryWatcher::batteryChanged()
 
             notification->update();
 
-            QTimer::singleShot(200, this, SLOT(batteryChanged()));
+            QTimer::singleShot(200, this, &BatteryWatcher::batteryChanged);
         }
         else
         {
@@ -170,9 +170,8 @@ void BatteryWatcher::settingsChanged()
         for (Solid::Battery *battery : qAsConst(mBatteries))
         {
             mTrayIcons.append(new TrayIcon(battery, this));
-            connect(mTrayIcons.last(), SIGNAL(toggleShowInfo()), mBatteryInfoDialog, SLOT(toggleShow()));
+            connect(mTrayIcons.last(), &TrayIcon::toggleShowInfo, mBatteryInfoDialog, &BatteryInfoDialog::toggleShow);
             mTrayIcons.last()->show();
         }
     }
 }
-

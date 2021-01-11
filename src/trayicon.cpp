@@ -52,18 +52,17 @@ TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
     connect(mBattery, &Solid::Battery::chargeStateChanged, this, &TrayIcon::updateTooltip);
     updateTooltip();
 
-    connect(&mIconProducer, SIGNAL(iconChanged()), this, SLOT(iconChanged()));
+    connect(&mIconProducer, &IconProducer::iconChanged, this, &TrayIcon::iconChanged);
     iconChanged();
 
-    connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
-            SLOT(onActivated(QSystemTrayIcon::ActivationReason)));
+    connect(this, &TrayIcon::activated, this, &TrayIcon::onActivated);
 
     mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("configure")), tr("Configure"),
-                           this, SLOT(onConfigureTriggered()));
+                           this, &TrayIcon::onConfigureTriggered);
     mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("help-about")), tr("About"),
-                           this, SLOT(onAboutTriggered()));
+                           this, &TrayIcon::onAboutTriggered);
     mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("edit-delete")), tr("Disable icon"),
-                           this, SLOT(onDisableIconTriggered()));
+                           this, &TrayIcon::onDisableIconTriggered);
     setContextMenu(&mContextMenu);
 }
 

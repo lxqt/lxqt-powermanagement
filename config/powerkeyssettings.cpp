@@ -39,16 +39,14 @@ PowerKeysSettings::PowerKeysSettings(QWidget *parent) :
     fillComboBox(mUi->suspendKeyActionComboBox);
     fillComboBox(mUi->hibernateKeyActionComboBox);
 
-    connect(mUi->powerKeyActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
-    connect(mUi->suspendKeyActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
-    connect(mUi->hibernateKeyActionComboBox, SIGNAL(activated(int)), this, SLOT(saveSettings()));
+    connect(mUi->powerKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
+    connect(mUi->suspendKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
+    connect(mUi->hibernateKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
 }
-
 
 PowerKeysSettings::~PowerKeysSettings()
 {
 }
-
 
 void PowerKeysSettings::loadSettings()
 {
@@ -56,7 +54,6 @@ void PowerKeysSettings::loadSettings()
     setComboBoxToValue(mUi->suspendKeyActionComboBox, mSettings.getSuspendKeyAction());
     setComboBoxToValue(mUi->hibernateKeyActionComboBox, mSettings.getHibernateKeyAction());
 }
-
 
 void PowerKeysSettings::saveSettings()
 {
