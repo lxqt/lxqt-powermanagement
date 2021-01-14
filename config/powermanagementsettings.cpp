@@ -46,8 +46,10 @@ namespace PowerManagementSettingsConstants
     const QString POWER_LOW_LEVEL_KEY { QL1S("powerLowLevel") };
     const QString SHOW_ICON_KEY { QL1S("showIcon") };
     const QString USE_THEME_ICONS_KEY { QL1S("useThemeIcons") };
-    const QString IDLENESS_ACTION_KEY { QL1S("idlenessAction") };
-    const QString IDLENESS_TIME_SECS_KEY { QL1S("idlenessTimeSecs") };
+    const QString IDLENESS_AC_ACTION_KEY { QL1S("idlenessACAction") };
+    const QString IDLENESS_AC_TIME { QL1S("idlenessACTime") };
+    const QString IDLENESS_BATTERY_ACTION_KEY { QL1S("idlenessBatteryAction") };
+    const QString IDLENESS_BATTERY_TIME { QL1S("idlenessBatteryTime") };
     const QString IDLENESS_BACKLIGHT_TIME { QL1S("idlenessTime") };
     const QString IDLENESS_BACKLIGHT { QL1S("backlightIdleness") };
     const QString IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING { QL1S("backlightIdlenessOnBatteryDischarging") };
@@ -197,28 +199,6 @@ void PowerManagementSettings::setEnableExtMonLidClosedActions(bool enableExtMonL
     setValue(ENABLE_EXT_MON_LIDCLOSED_ACTIONS_KEY, enableExtMonLidClosedActions);
 }
 
-int PowerManagementSettings::getIdlenessAction()
-{
-    // default to nothing (-1)
-    return value(IDLENESS_ACTION_KEY, -1).toInt();
-}
-
-void PowerManagementSettings::setIdlenessAction(int idlenessAction)
-{
-    setValue(IDLENESS_ACTION_KEY, idlenessAction);
-}
-
-int PowerManagementSettings::getIdlenessTimeSecs()
-{
-    // default to 15 minutes
-    return value(IDLENESS_TIME_SECS_KEY, 900).toInt();
-}
-
-void PowerManagementSettings::setIdlenessTimeSecs(int idlenessTimeSecs)
-{
-    setValue(IDLENESS_TIME_SECS_KEY, idlenessTimeSecs);
-}
-
 
 bool PowerManagementSettings::isIdlenessWatcherEnabled()
 {
@@ -228,6 +208,50 @@ bool PowerManagementSettings::isIdlenessWatcherEnabled()
 void PowerManagementSettings::setIdlenessWatcherEnabled(bool idlenessWatcherEnabled)
 {
     setValue(ENABLE_IDLENESS_WATCHER_KEY, idlenessWatcherEnabled);
+}
+
+int PowerManagementSettings::getIdlenessACAction()
+{
+    // default to nothing (-1)
+    return value(IDLENESS_AC_ACTION_KEY, -1).toInt();
+}
+
+void PowerManagementSettings::setIdlenessACAction(int idlenessAction)
+{
+    setValue(IDLENESS_AC_ACTION_KEY, idlenessAction);
+}
+
+QTime PowerManagementSettings::getIdlenessACTime()
+{
+    // default to 1 minute
+    return value(IDLENESS_AC_TIME, QTime(0, 1)).toTime();
+}
+
+void PowerManagementSettings::setIdlenessACTime(QTime idlenessTime)
+{
+    setValue(IDLENESS_AC_TIME, idlenessTime);
+}
+
+int PowerManagementSettings::getIdlenessBatteryAction()
+{
+    // default to nothing (-1)
+    return value(IDLENESS_BATTERY_ACTION_KEY, -1).toInt();
+}
+
+void PowerManagementSettings::setIdlenessBatteryAction(int idlenessAction)
+{
+    setValue(IDLENESS_BATTERY_ACTION_KEY, idlenessAction);
+}
+
+QTime PowerManagementSettings::getIdlenessBatteryTime()
+{
+    // default to 1 minute
+    return value(IDLENESS_BATTERY_TIME, QTime(0, 1)).toTime();
+}
+
+void PowerManagementSettings::setIdlenessBatteryTime(QTime idlenessTime)
+{
+    setValue(IDLENESS_BATTERY_TIME, idlenessTime);
 }
 
 bool PowerManagementSettings::isIdlenessBacklightWatcherEnabled()

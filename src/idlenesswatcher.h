@@ -46,7 +46,8 @@ private Q_SLOTS:
 
 private:
     PowerManagementSettings mPSettings;
-    int mIdleWatcher;
+    int mIdleACWatcher;
+    int mIdleBatteryWatcher;
     int mIdleBacklightWatcher;
     LXQt::Backlight *mBacklight;
     int mBacklightActualValue;

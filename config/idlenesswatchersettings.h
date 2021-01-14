@@ -49,8 +49,6 @@ public Q_SLOTS:
     void loadSettings();
 
 private Q_SLOTS:
-    void minutesChanged(int newVal);
-    void secondsChanged(int newVal);
     void saveSettings();
     void backlightCheckButtonPressed();
     void backlightCheckButtonReleased();
