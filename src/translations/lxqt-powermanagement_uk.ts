@@ -279,7 +279,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="65"/>
         <source>Disable icon</source>
-        <translation>Виключити значок</translation>
+        <translation>Вимкнути піктограму</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="95"/>
@@ -294,7 +294,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="114"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>Іконкe системного лотка менеджера живлення LXQT можна включити в програмі &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt; </translation>
+        <translation>Піктограму системного лотка менеджера живлення LXQT можна вимкнути в програмі &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="116"/>

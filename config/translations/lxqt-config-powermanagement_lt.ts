@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>Naudoti piktogramas iš temos:</translation>
+        <translation>Naudoti piktogramas iš apipavidalinimo:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>

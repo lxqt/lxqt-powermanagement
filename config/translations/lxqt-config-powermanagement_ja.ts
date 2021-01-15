@@ -255,7 +255,7 @@
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Lock screen</source>
-        <translation>画面のロック</translation>
+        <translation>画面ロック</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
