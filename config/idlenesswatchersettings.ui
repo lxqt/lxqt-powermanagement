@@ -62,12 +62,8 @@
           <property name="toolTip">
            <string>Minutes:Seconds (min: 00:30)</string>
           </property>
-          <property name="minimumTime">
-           <time>
-            <hour>0</hour>
-            <minute>0</minute>
-            <second>30</second>
-           </time>
+          <property name="displayFormat">
+           <string>mm:ss</string>
           </property>
          </widget>
         </item>
@@ -90,12 +86,8 @@
           <property name="toolTip">
            <string>Minutes:Seconds (min: 00:30)</string>
           </property>
-          <property name="minimumTime">
-           <time>
-            <hour>0</hour>
-            <minute>0</minute>
-            <second>30</second>
-           </time>
+          <property name="displayFormat">
+           <string>mm:ss</string>
           </property>
          </widget>
         </item>

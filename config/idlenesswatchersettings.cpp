@@ -42,7 +42,10 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     mUi->setupUi(this);
     fillComboBox(mUi->idleACActionComboBox);
     fillComboBox(mUi->idleBatteryActionComboBox);
-    
+
+    mUi->idleACTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
+    mUi->idleBatteryTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
+
     mBacklight = new LXQt::Backlight(this);
     // If if no backlight support then disable backlight control:
     if(! mBacklight->isBacklightAvailable()) {
@@ -108,7 +111,7 @@ void IdlenessWatcherSettings::loadSettings()
     mUi->idleACTimeEdit->setTime(mSettings.getIdlenessACTime());
     
     setComboBoxToValue(mUi->idleBatteryActionComboBox, mSettings.getIdlenessBatteryAction());
-    mUi->idleACTimeEdit->setTime(mSettings.getIdlenessBatteryTime());
+    mUi->idleBatteryTimeEdit->setTime(mSettings.getIdlenessBatteryTime());
     
     if(mBacklight->isBacklightAvailable()) {
         mUi->idlenessBacklightWatcherGroupBox->setChecked(mSettings.isIdlenessBacklightWatcherEnabled());
@@ -151,4 +154,3 @@ void IdlenessWatcherSettings::backlightCheckButtonReleased()
         mBacklight->setBacklight(mBacklightActualValue);
     }
 }
-
