@@ -212,8 +212,8 @@ void PowerManagementSettings::setIdlenessWatcherEnabled(bool idlenessWatcherEnab
 
 int PowerManagementSettings::getIdlenessACAction()
 {
-    // default to nothing (-1)
-    return value(IDLENESS_AC_ACTION_KEY, -1).toInt();
+    int oldValue = value(QL1S("idlenessAction"), -1).toInt();
+    return value(IDLENESS_AC_ACTION_KEY, oldValue).toInt();
 }
 
 void PowerManagementSettings::setIdlenessACAction(int idlenessAction)
@@ -223,8 +223,11 @@ void PowerManagementSettings::setIdlenessACAction(int idlenessAction)
 
 QTime PowerManagementSettings::getIdlenessACTime()
 {
-    // default to 1 minute
-    return value(IDLENESS_AC_TIME, QTime(0, 1)).toTime();
+    // defaults to 15 minutes (as before)
+    int oldValue = value(QL1S("idlenessTimeSecs"), 900).toInt();
+    int m = oldValue % 60;
+    int s = oldValue / 60;
+    return value(IDLENESS_AC_TIME, QTime(m,s)).toTime();
 }
 
 void PowerManagementSettings::setIdlenessACTime(QTime idlenessTime)
@@ -234,8 +237,8 @@ void PowerManagementSettings::setIdlenessACTime(QTime idlenessTime)
 
 int PowerManagementSettings::getIdlenessBatteryAction()
 {
-    // default to nothing (-1)
-    return value(IDLENESS_BATTERY_ACTION_KEY, -1).toInt();
+    int oldValue = value(QL1S("idlenessAction"), -1).toInt();
+    return value(IDLENESS_BATTERY_ACTION_KEY, oldValue).toInt();
 }
 
 void PowerManagementSettings::setIdlenessBatteryAction(int idlenessAction)
@@ -245,8 +248,11 @@ void PowerManagementSettings::setIdlenessBatteryAction(int idlenessAction)
 
 QTime PowerManagementSettings::getIdlenessBatteryTime()
 {
-    // default to 1 minute
-    return value(IDLENESS_BATTERY_TIME, QTime(0, 1)).toTime();
+    // defaults to 15 minutes (as before)
+    int oldValue = value(QL1S("idlenessTimeSecs"), 900).toInt();
+    int m = oldValue % 60;
+    int s = oldValue / 60;
+    return value(IDLENESS_BATTERY_TIME, QTime(m,s)).toTime();
 }
 
 void PowerManagementSettings::setIdlenessBatteryTime(QTime idlenessTime)
