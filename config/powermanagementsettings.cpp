@@ -212,6 +212,7 @@ void PowerManagementSettings::setIdlenessWatcherEnabled(bool idlenessWatcherEnab
 
 int PowerManagementSettings::getIdlenessACAction()
 {
+    // defaults to nothing (-1) and eventually load legacy value
     int oldValue = value(QL1S("idlenessAction"), -1).toInt();
     return value(IDLENESS_AC_ACTION_KEY, oldValue).toInt();
 }
@@ -223,7 +224,7 @@ void PowerManagementSettings::setIdlenessACAction(int idlenessAction)
 
 QTime PowerManagementSettings::getIdlenessACTime()
 {
-    // defaults to 15 minutes (as before)
+    // defaults to 15 minutes (as before) and eventually load legacy value
     int oldValue = value(QL1S("idlenessTimeSecs"), 900).toInt();
     int m = oldValue % 60;
     int s = oldValue / 60;
@@ -237,6 +238,7 @@ void PowerManagementSettings::setIdlenessACTime(QTime idlenessTime)
 
 int PowerManagementSettings::getIdlenessBatteryAction()
 {
+    // defaults to nothing (-1) and eventually load legacy value
     int oldValue = value(QL1S("idlenessAction"), -1).toInt();
     return value(IDLENESS_BATTERY_ACTION_KEY, oldValue).toInt();
 }
@@ -248,7 +250,7 @@ void PowerManagementSettings::setIdlenessBatteryAction(int idlenessAction)
 
 QTime PowerManagementSettings::getIdlenessBatteryTime()
 {
-    // defaults to 15 minutes (as before)
+    // defaults to 15 minutes (as before) and eventually load legacy value
     int oldValue = value(QL1S("idlenessTimeSecs"), 900).toInt();
     int m = oldValue % 60;
     int s = oldValue / 60;
