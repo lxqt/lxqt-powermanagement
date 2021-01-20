@@ -248,8 +248,8 @@
         <location filename="../powermanagementd.cpp" line="116"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>LXQt 電源管理 は初めて実行されました。
-設定を行うことができます... </translation>
+        <translation>LXQt 電源管理 が初めて実行されました。
+「設定する...」から設定して下さい。 </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>
