@@ -250,7 +250,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished">Demander</translation>
+        <translation>Demander</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
