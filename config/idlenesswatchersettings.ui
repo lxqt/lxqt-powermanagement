@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>393</width>
-    <height>410</height>
+    <width>400</width>
+    <height>452</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -23,7 +23,7 @@
       <item>
        <layout class="QFormLayout" name="formLayout">
         <item row="0" column="0">
-         <widget class="QLabel" name="idleTimeLabel">
+         <widget class="QLabel" name="idleTimeACLabel">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
             <horstretch>0</horstretch>
@@ -31,7 +31,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>When idle then:</string>
+           <string>When idle on AC:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -39,10 +39,10 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QComboBox" name="idleActionComboBox"/>
+         <widget class="QComboBox" name="idleACActionComboBox"/>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="idleActionLabel">
+         <widget class="QLabel" name="idleACActionLabel">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
             <horstretch>0</horstretch>
@@ -50,7 +50,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Idle time:</string>
+           <string>AC Idle time:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -58,33 +58,41 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QSpinBox" name="idleTimeMinutesSpinBox">
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <widget class="QTimeEdit" name="idleACTimeEdit">
+          <property name="toolTip">
+           <string>Minutes:Seconds (min: 00:30)</string>
           </property>
-          <property name="suffix">
-           <string> minutes</string>
+          <property name="displayFormat">
+           <string>mm:ss</string>
           </property>
-          <property name="maximum">
-           <number>999</number>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="idleTimeBatteryLabel">
+          <property name="text">
+           <string>When idle on Battery</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="idleBatteryActionLabel">
+          <property name="text">
+           <string>Battery Idle time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTimeEdit" name="idleBatteryTimeEdit">
+          <property name="toolTip">
+           <string>Minutes:Seconds (min: 00:30)</string>
+          </property>
+          <property name="displayFormat">
+           <string>mm:ss</string>
           </property>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QSpinBox" name="idleTimeSecondsSpinBox">
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-          <property name="suffix">
-           <string> seconds</string>
-          </property>
-          <property name="minimum">
-           <number>-1</number>
-          </property>
-          <property name="maximum">
-           <number>60</number>
-          </property>
-         </widget>
+         <widget class="QComboBox" name="idleBatteryActionComboBox"/>
         </item>
        </layout>
       </item>

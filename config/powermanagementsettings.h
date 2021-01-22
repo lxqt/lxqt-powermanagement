@@ -82,14 +82,21 @@ public:
     bool isEnableExtMonLidClosedActions();
     void setEnableExtMonLidClosedActions(bool enableExtMonLidClosedActions);
 
-    int getIdlenessAction();
-    void setIdlenessAction(int idlenessAction);
-
-    int getIdlenessTimeSecs();
-    void setIdlenessTimeSecs(int idlenessTimeSecs);
 
     bool isIdlenessWatcherEnabled();
     void setIdlenessWatcherEnabled(bool idlenessWatcherEnabled);
+
+    int getIdlenessACAction();
+    void setIdlenessACAction(int idlenessAction);
+
+    QTime getIdlenessACTime();
+    void setIdlenessACTime(QTime idlenessTime);
+
+    int getIdlenessBatteryAction();
+    void setIdlenessBatteryAction(int idlenessAction);
+
+    QTime getIdlenessBatteryTime();
+    void setIdlenessBatteryTime(QTime idlenessTime);
 
     bool isIdlenessBacklightWatcherEnabled();
     void setIdlenessBacklightWatcherEnabled(bool idlenessBacklightWatcherEnabled);
