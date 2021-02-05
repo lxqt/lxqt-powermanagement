@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation>Teclas de energia</translation>
+        <translation>Botões de energia</translation>
     </message>
 </context>
 <context>
@@ -222,22 +222,22 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation>Lidar com teclas de energia</translation>
+        <translation>Lidar com Botões de Energia</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action</source>
-        <translation>Ação da Tecla Energia</translation>
+        <translation>Ação do Botão de Energia</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation>Ação da Tecla Suspender</translation>
+        <translation>Ação do Botão de Suspender</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action</source>
-        <translation>Ação da Tecla Hibernar</translation>
+        <translation>Ação do Botão de Hibernar</translation>
     </message>
 </context>
 <context>
