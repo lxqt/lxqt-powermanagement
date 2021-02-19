@@ -200,28 +200,28 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Призупинення через %n секунду</numerusform>
+            <numerusform>Призупинення через %n секунди</numerusform>
+            <numerusform>Призупинення через %n секунд</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Перехід у режим сну через %n секунду</numerusform>
+            <numerusform>Перехід у режим сну через %n секунди</numerusform>
+            <numerusform>Перехід у режим сну через %n секунд</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Вимикання через %n секунду</numerusform>
+            <numerusform>Вимикання через %n секунди</numerusform>
+            <numerusform>Вимикання через %n секунд</numerusform>
         </translation>
     </message>
 </context>
@@ -230,17 +230,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Дія клавіші живлення</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Дія клавіші призупинення</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Дія клавіші режиму сну</translation>
     </message>
 </context>
 <context>
