@@ -227,12 +227,12 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action</source>
-        <translation>Azione del tasto di accensione</translation>
+        <translation>Azione tasto di accensione</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation>Azione del tasto di sospensione</translation>
+        <translation>Azione tasto di sospensione</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
