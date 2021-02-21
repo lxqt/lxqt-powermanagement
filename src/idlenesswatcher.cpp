@@ -141,7 +141,7 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
     if(identifier == mIdleBacklightWatcher && mBacklightActualValue < 0) {
         if(mBacklight == nullptr) {
             mBacklight = new LXQt::Backlight();
-            connect(mBacklight, &QObject::destroyed, [this](QObject *) {mBacklight = nullptr;} );
+            connect(mBacklight, &QObject::destroyed, this, [this](QObject *) {mBacklight = nullptr;} );
         }
             
         //LXQt::Notification::notify(QStringLiteral("IdlenessWatcher::timeoutReached"),
@@ -165,7 +165,7 @@ void IdlenessWatcher::resumingFromIdle()
         if(mPSettings.isIdlenessBacklightWatcherEnabled()) {
             if(mBacklight == nullptr) {
                 mBacklight = new LXQt::Backlight();
-                connect(mBacklight, &QObject::destroyed, [this](QObject *) {mBacklight = nullptr;} );
+                connect(mBacklight, &QObject::destroyed, this, [this](QObject *) {mBacklight = nullptr;} );
             }
 
             if(mBacklight->isBacklightAvailable() && !mBacklight->isBacklightOff())

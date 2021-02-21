@@ -1,6 +1,6 @@
 project(lxqt-powermanagement)
 
-set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
+set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg)
 
 set(SOURCES
     watcher.cpp
