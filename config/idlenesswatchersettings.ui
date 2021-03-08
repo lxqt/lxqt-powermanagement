@@ -60,7 +60,17 @@
         <item row="1" column="1">
          <widget class="QTimeEdit" name="idleACTimeEdit">
           <property name="toolTip">
-           <string>Minutes:Seconds (min: 00:30)</string>
+           <string>Minutes:Seconds (min: 01:30)</string>
+          </property>
+          <property name="minimumDateTime">
+           <datetime>
+            <hour>0</hour>
+            <minute>1</minute>
+            <second>0</second>
+            <year>2000</year>
+            <month>1</month>
+            <day>1</day>
+           </datetime>
           </property>
           <property name="displayFormat">
            <string>mm:ss</string>
@@ -84,7 +94,17 @@
         <item row="3" column="1">
          <widget class="QTimeEdit" name="idleBatteryTimeEdit">
           <property name="toolTip">
-           <string>Minutes:Seconds (min: 00:30)</string>
+           <string>Minutes:Seconds (min: 01:30)</string>
+          </property>
+          <property name="minimumDateTime">
+           <datetime>
+            <hour>0</hour>
+            <minute>1</minute>
+            <second>0</second>
+            <year>2000</year>
+            <month>1</month>
+            <day>1</day>
+           </datetime>
           </property>
           <property name="displayFormat">
            <string>mm:ss</string>

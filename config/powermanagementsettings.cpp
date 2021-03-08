@@ -224,11 +224,13 @@ void PowerManagementSettings::setIdlenessACAction(int idlenessAction)
 
 QTime PowerManagementSettings::getIdlenessACTime()
 {
-    // defaults to 15 minutes (as before) and eventually load legacy value
-    int oldValue = value(QL1S("idlenessTimeSecs"), 900).toInt();
-    int m = oldValue % 60;
-    int s = oldValue / 60;
-    return value(IDLENESS_AC_TIME, QTime(m,s)).toTime();
+    // 1. The default value is 15 minutes (the legacy key is also read);
+    // 2. Intervals greater than or equal to one hour aren't supported; and
+    // 3. Intervals smaller than one minute are prevented.
+    int oldValue = qBound(60, value(QL1S("idlenessTimeSecs"), 900).toInt(), 3599);
+    int m = oldValue / 60;
+    int s = oldValue - m * 60;
+    return value(IDLENESS_AC_TIME, QTime(0, m, s)).toTime();
 }
 
 void PowerManagementSettings::setIdlenessACTime(QTime idlenessTime)
@@ -250,11 +252,13 @@ void PowerManagementSettings::setIdlenessBatteryAction(int idlenessAction)
 
 QTime PowerManagementSettings::getIdlenessBatteryTime()
 {
-    // defaults to 15 minutes (as before) and eventually load legacy value
-    int oldValue = value(QL1S("idlenessTimeSecs"), 900).toInt();
-    int m = oldValue % 60;
-    int s = oldValue / 60;
-    return value(IDLENESS_BATTERY_TIME, QTime(m,s)).toTime();
+    // 1. The default value is 15 minutes (the legacy key is also read);
+    // 2. Intervals greater than or equal to one hour aren't supported; and
+    // 3. Intervals smaller than one minute are prevented.
+    int oldValue = qBound(60, value(QL1S("idlenessTimeSecs"), 900).toInt(), 3599);
+    int m = oldValue / 60;
+    int s = oldValue - m * 60;
+    return value(IDLENESS_BATTERY_TIME, QTime(0, m, s)).toTime();
 }
 
 void PowerManagementSettings::setIdlenessBatteryTime(QTime idlenessTime)
