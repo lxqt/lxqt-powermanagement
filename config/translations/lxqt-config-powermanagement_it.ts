@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished">Tasti</translation>
+        <translation>Tasti di alimentazione</translation>
     </message>
 </context>
 <context>
@@ -222,7 +222,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation>Gestisci tasti</translation>
+        <translation>Gestisci tasti di alimentazione</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
