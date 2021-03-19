@@ -106,32 +106,32 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="94"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Skru på bakgrunnsbelysningsendring</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>Bagrunnsbelysning (%)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="130"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Minutter:Sekunder</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="157"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjekk bakgrunnsbelysning</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="164"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Når batteriet utlades </translation>
     </message>
 </context>
 <context>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Effekt-taster</translation>
     </message>
 </context>
 <context>
@@ -217,27 +217,27 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Form</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Håndter effekt-taster</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling for på/av-knapp</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling for hviletast</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling for dvaletast</translation>
     </message>
 </context>
 <context>
@@ -250,7 +250,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Spør</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
