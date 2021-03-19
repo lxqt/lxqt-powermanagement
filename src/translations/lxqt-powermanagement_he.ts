@@ -203,8 +203,6 @@
         <translation>
             <numerusform>כניסה למצב השהיה בעוד שנייה %n</numerusform>
             <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
-            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
-            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -213,8 +211,6 @@
         <translation>
             <numerusform>כניסה לתרדמת בעוד שנייה %n</numerusform>
             <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
-            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
-            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -222,8 +218,6 @@
         <source>Shutting down in %n second(s)</source>
         <translation>
             <numerusform>כיבוי בעוד שנייה %n</numerusform>
-            <numerusform>כיבוי בעוד %n שניות</numerusform>
-            <numerusform>כיבוי בעוד %n שניות</numerusform>
             <numerusform>כיבוי בעוד %n שניות</numerusform>
         </translation>
     </message>
@@ -269,38 +263,38 @@ You can configure it from settings... </source>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
+        <location filename="../trayicon.cpp" line="60"/>
         <source>Configure</source>
         <translation>הגדרה</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
-        <location filename="../trayicon.cpp" line="94"/>
+        <location filename="../trayicon.cpp" line="62"/>
+        <location filename="../trayicon.cpp" line="93"/>
         <source>About</source>
         <translation>על אודות</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="65"/>
+        <location filename="../trayicon.cpp" line="64"/>
         <source>Disable icon</source>
         <translation>השבתת סמל</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="95"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;מנהל צריכת החשמל שלLXQt&lt;/b&gt;&lt;br/&gt;  - ניהול צריכת חשמל לסביבת שולחן העבודה LXQt&lt;/p&gt;&lt;p&gt;  יוצרים:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - ופעילים נוספים ממיזמי Razor ו־LXQt&lt;/p&gt;&lt;p&gt;  כל הזכויות שמורות &amp;copy; 2012‏-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="113"/>
+        <location filename="../trayicon.cpp" line="112"/>
         <source>LXQt Power Management info</source>
         <translation>פרטי צריכת חשמל של LXQt</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>ניתן להפעיל (מחדש) את סמל המערכת לניהול צריכת החשמל של LXQt תחת &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="116"/>
+        <location filename="../trayicon.cpp" line="115"/>
         <source>Configure now</source>
         <translation>להגדיר כעת</translation>
     </message>

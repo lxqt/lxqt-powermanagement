@@ -260,38 +260,38 @@ Bunu ayarlardan yapılandırabilirsiniz... </translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
+        <location filename="../trayicon.cpp" line="60"/>
         <source>Configure</source>
         <translation>Yapılandır</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
-        <location filename="../trayicon.cpp" line="94"/>
+        <location filename="../trayicon.cpp" line="62"/>
+        <location filename="../trayicon.cpp" line="93"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="65"/>
+        <location filename="../trayicon.cpp" line="64"/>
         <source>Disable icon</source>
         <translation>Simgeyi etkisizleştir</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="95"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt Güç Yönetimi&lt;/b&gt;&lt;br/&gt;  -LXQt Masaüstü Ortamı için Güç Yöneticisi&lt;/p&gt;&lt;p&gt;  Yazarlar:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - ve Razor ve LXQt projelerinden diğerleri&lt;/p&gt;&lt;p&gt;  Telif Hakkı: &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="113"/>
+        <location filename="../trayicon.cpp" line="112"/>
         <source>LXQt Power Management info</source>
         <translation>LXQT Güç Yönetimi bilgisi</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>LXQt Güç Yönetimi sistem çekmecesi simgesi &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;&apos;tan (yeniden) etkinleştirilebilir</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="116"/>
+        <location filename="../trayicon.cpp" line="115"/>
         <source>Configure now</source>
         <translation>Şimdi yapılandır</translation>
     </message>
