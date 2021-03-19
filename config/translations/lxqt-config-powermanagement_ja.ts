@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>テーマのアイコンを用いる:</translation>
+        <translation>テーマのアイコンを使用する:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
