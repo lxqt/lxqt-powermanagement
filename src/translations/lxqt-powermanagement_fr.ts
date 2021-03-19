@@ -232,7 +232,7 @@
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation>Suspendre l&apos;action de la touche</translation>
+        <translation>Action de la touche suspendre</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
