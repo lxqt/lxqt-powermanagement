@@ -201,18 +201,18 @@
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
         <translation>
-            <numerusform>Призупинення через %n секунду</numerusform>
-            <numerusform>Призупинення через %n секунди</numerusform>
-            <numerusform>Призупинення через %n секунд</numerusform>
+            <numerusform>Засинання через %n секунду</numerusform>
+            <numerusform>Засинання через %n секунди</numerusform>
+            <numerusform>Засинання через %n секунд</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
         <translation>
-            <numerusform>Перехід у режим сну через %n секунду</numerusform>
-            <numerusform>Перехід у режим сну через %n секунди</numerusform>
-            <numerusform>Перехід у режим сну через %n секунд</numerusform>
+            <numerusform>Гібернація через %n секунду</numerusform>
+            <numerusform>Гібернація через %n секунди</numerusform>
+            <numerusform>Гібернація через %n секунд</numerusform>
         </translation>
     </message>
     <message numerus="yes">
