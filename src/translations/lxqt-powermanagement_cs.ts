@@ -266,38 +266,38 @@ Parametry je možné upravit v Nastavení… </translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
+        <location filename="../trayicon.cpp" line="60"/>
         <source>Configure</source>
         <translation>Nastavit</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
-        <location filename="../trayicon.cpp" line="94"/>
+        <location filename="../trayicon.cpp" line="62"/>
+        <location filename="../trayicon.cpp" line="93"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="65"/>
+        <location filename="../trayicon.cpp" line="64"/>
         <source>Disable icon</source>
         <translation>Nezobrazovat ikonu</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="95"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;Správa napájení&lt;/b&gt;&lt;br/&gt;  – správa napájení pro pracovní prostředí LXQt&lt;/p&gt;&lt;p&gt;  Autoři:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; – a další z projektů Razor a LXQt&lt;/p&gt;&lt;p&gt;  Autorské právo &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="113"/>
+        <location filename="../trayicon.cpp" line="112"/>
         <source>LXQt Power Management info</source>
         <translation>Informace z LXQt správy napájení</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Zobrazování ikony správy napájení v systémovém panelu lze (znovu)zapnout v &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="116"/>
+        <location filename="../trayicon.cpp" line="115"/>
         <source>Configure now</source>
         <translation>Nastavit nyní</translation>
     </message>

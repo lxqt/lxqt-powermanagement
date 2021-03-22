@@ -266,38 +266,38 @@ You can configure it from settings... </source>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="61"/>
+        <location filename="../trayicon.cpp" line="60"/>
         <source>Configure</source>
         <translation>Налаштування</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="63"/>
-        <location filename="../trayicon.cpp" line="94"/>
+        <location filename="../trayicon.cpp" line="62"/>
+        <location filename="../trayicon.cpp" line="93"/>
         <source>About</source>
         <translation>Про</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="65"/>
+        <location filename="../trayicon.cpp" line="64"/>
         <source>Disable icon</source>
         <translation>Вимкнути піктограму</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="95"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;Менеджер живлення LXQt&lt;/b&gt;&lt;br/&gt;  - Менеджер живлення для середовища стільниці LXQt&lt;/p&gt;&lt;p&gt;  Автори:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - та інші з проектів Razor і LXQt&lt;/p&gt;&lt;p&gt;  Всі права застережено &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="113"/>
+        <location filename="../trayicon.cpp" line="112"/>
         <source>LXQt Power Management info</source>
         <translation>Інформація про менеджер живлення LXQT</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="114"/>
+        <location filename="../trayicon.cpp" line="113"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Піктограму системного лотка менеджера живлення LXQT можна вимкнути в програмі &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="116"/>
+        <location filename="../trayicon.cpp" line="115"/>
         <source>Configure now</source>
         <translation>Налаштувати зараз</translation>
     </message>
