@@ -112,14 +112,14 @@
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
-        <source>Action when lid is closed</source>
-        <translation>L&apos;aición al baxar la tapa</translation>
+        <source>Action when lid is closed:</source>
+        <translation>L&apos;aición al baxar la tapa:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
-        <source>On Battery</source>
-        <translation>Cola batería</translation>
+        <source>On Battery:</source>
+        <translation>Cola batería:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -144,8 +144,8 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
-        <source>On AC</source>
-        <translation>Col cargador</translation>
+        <source>On AC:</source>
+        <translation>Col cargador:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>

@@ -160,14 +160,14 @@
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
-        <source>Action when lid is closed</source>
-        <translation>Дія коли кришку закрито</translation>
+        <source>Action when lid is closed:</source>
+        <translation>Дія коли кришку закрито:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
-        <source>On Battery</source>
-        <translation>На батареї</translation>
+        <source>On Battery:</source>
+        <translation>На батареї:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -192,8 +192,8 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
-        <source>On AC</source>
-        <translation>На живленні від мережі</translation>
+        <source>On AC:</source>
+        <translation>На живленні від мережі:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -243,18 +243,18 @@
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
-        <source>Power Key Action</source>
-        <translation>Дія кнопки живлення</translation>
+        <source>Power Key Action:</source>
+        <translation>Дія кнопки живлення:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
-        <source>Suspend Key Action</source>
-        <translation>Дія кнопки зупинки</translation>
+        <source>Suspend Key Action:</source>
+        <translation>Дія кнопки зупинки:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
-        <source>Hibernate Key Action</source>
-        <translation>Дія кнопки сну</translation>
+        <source>Hibernate Key Action:</source>
+        <translation>Дія кнопки сну:</translation>
     </message>
 </context>
 <context>

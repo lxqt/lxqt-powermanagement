@@ -93,6 +93,16 @@
         <translation>Activar cambio de retroiluminación</translation>
     </message>
     <message>
+        <location filename="../idlenesswatchersettings.ui" line="83"/>
+        <source>When idle on Battery:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="90"/>
+        <source>Battery Idle time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
         <translation>Retroiluminación (%):</translation>
@@ -126,16 +136,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="83"/>
-        <source>When idle on Battery</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="90"/>
-        <source>Battery Idle time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
         <translation>Comprobar retroiluminación</translation>
@@ -160,14 +160,14 @@
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
-        <source>Action when lid is closed</source>
-        <translation>Acción al cerrar la tapa</translation>
+        <source>Action when lid is closed:</source>
+        <translation>Acción al cerrar la tapa:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
-        <source>On Battery</source>
-        <translation>En batería</translation>
+        <source>On Battery:</source>
+        <translation>En batería:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -192,8 +192,8 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
-        <source>On AC</source>
-        <translation>Enchufado</translation>
+        <source>On AC:</source>
+        <translation>Enchufado:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -243,18 +243,18 @@
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
-        <source>Power Key Action</source>
-        <translation>Acción de tecla de apagado</translation>
+        <source>Power Key Action:</source>
+        <translation>Acción de tecla de apagado:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
-        <source>Suspend Key Action</source>
-        <translation>Acción de tecla de suspensión</translation>
+        <source>Suspend Key Action:</source>
+        <translation>Acción de tecla de suspensión:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
-        <source>Hibernate Key Action</source>
-        <translation>Acción de tecla de hibernación</translation>
+        <source>Hibernate Key Action:</source>
+        <translation>Acción de tecla de hibernación:</translation>
     </message>
 </context>
 <context>

@@ -93,6 +93,16 @@
         <translation>Aktiviraj mijenjanje pozadinskog osvjetljenja</translation>
     </message>
     <message>
+        <location filename="../idlenesswatchersettings.ui" line="83"/>
+        <source>When idle on Battery:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="90"/>
+        <source>Battery Idle time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
         <translation>Pozadinsko osvjetljenje (%):</translation>
@@ -126,16 +136,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="83"/>
-        <source>When idle on Battery</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="90"/>
-        <source>Battery Idle time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
         <translation>Provjeri pozadinsko osvjetljenje</translation>
@@ -160,14 +160,14 @@
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
-        <source>Action when lid is closed</source>
-        <translation>Radnja kad je poklopac zatvoren</translation>
+        <source>Action when lid is closed:</source>
+        <translation>Radnja kad je poklopac zatvoren:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
-        <source>On Battery</source>
-        <translation>Napajanje baterijom</translation>
+        <source>On Battery:</source>
+        <translation>Napajanje baterijom:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -192,8 +192,8 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
-        <source>On AC</source>
-        <translation>Napajanje strujom</translation>
+        <source>On AC:</source>
+        <translation>Napajanje strujom:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -243,18 +243,18 @@
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
-        <source>Power Key Action</source>
-        <translation>Gumb za gašenje računala</translation>
+        <source>Power Key Action:</source>
+        <translation>Gumb za gašenje računala:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
-        <source>Suspend Key Action</source>
-        <translation>Gumb za pripravno stanje</translation>
+        <source>Suspend Key Action:</source>
+        <translation>Gumb za pripravno stanje:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
-        <source>Hibernate Key Action</source>
-        <translation>Gumb za stanje mirovanja</translation>
+        <source>Hibernate Key Action:</source>
+        <translation>Gumb za stanje mirovanja:</translation>
     </message>
 </context>
 <context>
