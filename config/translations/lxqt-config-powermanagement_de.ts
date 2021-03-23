@@ -93,6 +93,16 @@
         <translation>Änderung der Hintergrundbeleuchtung aktivieren</translation>
     </message>
     <message>
+        <location filename="../idlenesswatchersettings.ui" line="83"/>
+        <source>When idle on Battery:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="90"/>
+        <source>Battery Idle time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
         <translation>Hintergrundbeleuchtung (%):</translation>
@@ -126,16 +136,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="83"/>
-        <source>When idle on Battery</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="90"/>
-        <source>Battery Idle time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
         <translation>Hintergrundbeleuchtung prüfen</translation>
@@ -160,14 +160,14 @@
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
-        <source>Action when lid is closed</source>
-        <translation>Aktion bei geschlossenem Deckel</translation>
+        <source>Action when lid is closed:</source>
+        <translation>Aktion bei geschlossenem Deckel:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
-        <source>On Battery</source>
-        <translation>Batteriebetrieb</translation>
+        <source>On Battery:</source>
+        <translation>Batteriebetrieb:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -192,8 +192,8 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
-        <source>On AC</source>
-        <translation>Am Netz</translation>
+        <source>On AC:</source>
+        <translation>Am Netz:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -243,18 +243,18 @@
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
-        <source>Power Key Action</source>
+        <source>Power Key Action:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
-        <source>Suspend Key Action</source>
-        <translation>Bereitschaftszustand-Tastenaktion</translation>
+        <source>Suspend Key Action:</source>
+        <translation>Bereitschaftszustand-Tastenaktion:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
-        <source>Hibernate Key Action</source>
-        <translation>Ruhezustand-Tastenaktion</translation>
+        <source>Hibernate Key Action:</source>
+        <translation>Ruhezustand-Tastenaktion:</translation>
     </message>
 </context>
 <context>

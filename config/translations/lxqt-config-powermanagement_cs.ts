@@ -93,6 +93,16 @@
         <translation>Povolit změnu podsvícení</translation>
     </message>
     <message>
+        <location filename="../idlenesswatchersettings.ui" line="83"/>
+        <source>When idle on Battery:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="90"/>
+        <source>Battery Idle time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
         <translation>Podsvícení (%):</translation>
@@ -126,16 +136,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="83"/>
-        <source>When idle on Battery</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="90"/>
-        <source>Battery Idle time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
         <translation>Zkontrolovat podsvícení</translation>
@@ -160,14 +160,14 @@
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
-        <source>Action when lid is closed</source>
-        <translation>Akce při zavření víka</translation>
+        <source>Action when lid is closed:</source>
+        <translation>Akce při zavření víka:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
-        <source>On Battery</source>
-        <translation>Při napájení z akumulátoru</translation>
+        <source>On Battery:</source>
+        <translation>Při napájení z akumulátoru:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -192,8 +192,8 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
-        <source>On AC</source>
-        <translation>Při napájení ze zásuvky</translation>
+        <source>On AC:</source>
+        <translation>Při napájení ze zásuvky:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -243,18 +243,18 @@
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
-        <source>Power Key Action</source>
-        <translation>Činnost vypínací klávesy</translation>
+        <source>Power Key Action:</source>
+        <translation>Činnost vypínací klávesy:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
-        <source>Suspend Key Action</source>
-        <translation>Činnost klávesy pro uspání</translation>
+        <source>Suspend Key Action:</source>
+        <translation>Činnost klávesy pro uspání:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
-        <source>Hibernate Key Action</source>
-        <translation>Činnost klávesy pro uspání na disk</translation>
+        <source>Hibernate Key Action:</source>
+        <translation>Činnost klávesy pro uspání na disk:</translation>
     </message>
 </context>
 <context>

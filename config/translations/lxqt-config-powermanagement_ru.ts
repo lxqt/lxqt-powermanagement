@@ -93,6 +93,16 @@
         <translation>Включить изменение подсветки</translation>
     </message>
     <message>
+        <location filename="../idlenesswatchersettings.ui" line="83"/>
+        <source>When idle on Battery:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="90"/>
+        <source>Battery Idle time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
         <translation>Подсветка (%):</translation>
@@ -126,16 +136,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="83"/>
-        <source>When idle on Battery</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="90"/>
-        <source>Battery Idle time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
         <translation>Проверить подсветку</translation>
@@ -160,14 +160,14 @@
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
-        <source>Action when lid is closed</source>
-        <translation>Действие при закрытии крышки</translation>
+        <source>Action when lid is closed:</source>
+        <translation>Действие при закрытии крышки:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
-        <source>On Battery</source>
-        <translation>От батареи</translation>
+        <source>On Battery:</source>
+        <translation>От батареи:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -192,8 +192,8 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
-        <source>On AC</source>
-        <translation>От сети</translation>
+        <source>On AC:</source>
+        <translation>От сети:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -243,18 +243,18 @@
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
-        <source>Power Key Action</source>
-        <translation>Действие кнопки питания</translation>
+        <source>Power Key Action:</source>
+        <translation>Действие кнопки питания:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
-        <source>Suspend Key Action</source>
-        <translation>При переходе в ждущий режим</translation>
+        <source>Suspend Key Action:</source>
+        <translation>При переходе в ждущий режим:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
-        <source>Hibernate Key Action</source>
-        <translation>При переходе в спящий режим</translation>
+        <source>Hibernate Key Action:</source>
+        <translation>При переходе в спящий режим:</translation>
     </message>
 </context>
 <context>
