@@ -35,7 +35,7 @@ padding-top: 30px;
          <string notr="true"/>
         </property>
         <property name="title">
-         <string>Action when lid is closed</string>
+         <string>Action when lid is closed:</string>
         </property>
         <layout class="QFormLayout" name="formLayout_2">
          <property name="fieldGrowthPolicy">
@@ -47,7 +47,7 @@ padding-top: 30px;
          <item row="0" column="0">
           <widget class="QLabel" name="onBatteryActionLabel">
            <property name="text">
-            <string>On Battery</string>
+            <string>On Battery:</string>
            </property>
           </widget>
          </item>
@@ -78,7 +78,7 @@ padding-top: 30px;
          <item row="1" column="0">
           <widget class="QLabel" name="onAcActionLabel">
            <property name="text">
-            <string>On AC</string>
+            <string>On AC:</string>
            </property>
           </widget>
          </item>
@@ -112,7 +112,7 @@ padding-top: 30px;
             </sizepolicy>
            </property>
            <property name="text">
-            <string>On Battery</string>
+            <string>On Battery:</string>
            </property>
           </widget>
          </item>
@@ -122,7 +122,7 @@ padding-top: 30px;
          <item row="2" column="0">
           <widget class="QLabel" name="extMonOnAcActionLabel">
            <property name="text">
-            <string>On AC</string>
+            <string>On AC:</string>
            </property>
           </widget>
          </item>

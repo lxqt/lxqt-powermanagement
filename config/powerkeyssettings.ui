@@ -23,7 +23,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="powerKeyLabel">
         <property name="text">
-         <string>Power Key Action</string>
+         <string>Power Key Action:</string>
         </property>
        </widget>
       </item>
@@ -39,14 +39,14 @@
       <item row="1" column="0">
        <widget class="QLabel" name="suspendKeyLabel">
         <property name="text">
-         <string>Suspend Key Action</string>
+         <string>Suspend Key Action:</string>
         </property>
        </widget>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="hibernateKeyLabel">
         <property name="text">
-         <string>Hibernate Key Action</string>
+         <string>Hibernate Key Action:</string>
         </property>
        </widget>
       </item>
