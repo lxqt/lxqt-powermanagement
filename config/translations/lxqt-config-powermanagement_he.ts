@@ -122,12 +122,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>כשאין פעילות בעת חיבור לחשמל:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>זמן חוסר פעילות בעת חיבור לחשמל:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
