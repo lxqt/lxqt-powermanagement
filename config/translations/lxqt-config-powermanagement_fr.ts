@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation>En cas d&apos;inactivité sur batterie:</translation>
+        <translation>En cas d&apos;inactivité sur batterie :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation>Temps d&apos;inactivité sur batterie:</translation>
+        <translation>Temps d&apos;inactivité sur batterie :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -122,12 +122,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>En cas d&apos;inactivité branché :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps d&apos;inactivité branché :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
