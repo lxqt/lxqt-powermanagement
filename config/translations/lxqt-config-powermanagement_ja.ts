@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>バッテリー電源でアイドル時に:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>バッテリーアイドル時間:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -122,18 +122,18 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>AC 電源でアイドル時に:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>AC アイドル時間:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>分:秒 (最小: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>全画面時にアイドル状態の確認を無効にする</translation>
     </message>
 </context>
 <context>
@@ -292,7 +292,7 @@
     <message>
         <location filename="../helpers.cpp" line="41"/>
         <source>Turn Off monitor(s)</source>
-        <translation>モニターを消す</translation>
+        <translation>モニターの電源オフ</translation>
     </message>
 </context>
 </TS>

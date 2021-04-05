@@ -201,7 +201,9 @@
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
         <translation>
-            <numerusform>כניסה למצב השהיה בעוד שנייה %n</numerusform>
+            <numerusform>כניסה למצב השהיה בעוד שנייה</numerusform>
+            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
             <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
         </translation>
     </message>
@@ -209,7 +211,9 @@
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
         <translation>
-            <numerusform>כניסה לתרדמת בעוד שנייה %n</numerusform>
+            <numerusform>כניסה לתרדמת בעוד שנייה</numerusform>
+            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
             <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
         </translation>
     </message>
@@ -217,7 +221,9 @@
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
         <translation>
-            <numerusform>כיבוי בעוד שנייה %n</numerusform>
+            <numerusform>כיבוי בעוד שנייה</numerusform>
+            <numerusform>כיבוי בעוד %n שניות</numerusform>
+            <numerusform>כיבוי בעוד %n שניות</numerusform>
             <numerusform>כיבוי בעוד %n שניות</numerusform>
         </translation>
     </message>

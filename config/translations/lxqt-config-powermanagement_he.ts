@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>כשאין פעילות עם סוללה:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>זמן חוסר פעילות על סוללה:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -133,7 +133,7 @@
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>דקות:שניות (01:30 לכל הפחות)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>להשבית בדיקות חוסר פעילות כשבמסך מלא</translation>
     </message>
 </context>
 <context>
@@ -161,13 +161,13 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed:</source>
-        <translation>:פעולה עם סגירת הכיסוי</translation>
+        <translation>פעולה כשהכיסוי נסגר:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery:</source>
-        <translation>:על סוללה</translation>
+        <translation>על סוללה:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -193,7 +193,7 @@
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC:</source>
-        <translation>:על חיבור לחשמל</translation>
+        <translation>עם חיבור לחשמל:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -244,17 +244,17 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation>:פעולת מקש ההפעלה</translation>
+        <translation>פעולת מקש הכיבוי:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>:פעולת מקש ההשהיה</translation>
+        <translation>פעולת מקש ההשהיה:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>:פעולת מקש התרדמת</translation>
+        <translation>פעולת מקש התרדמת:</translation>
     </message>
 </context>
 <context>
