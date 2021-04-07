@@ -95,7 +95,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Amikor nincs töltőn és tétlen:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
