@@ -16,7 +16,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
 set(KF5_MINIMUM_VERSION "5.36.0")
-set(LXQT_MINIMUM_VERSION "0.16.0")
+set(LXQT_MINIMUM_VERSION "0.17.0")
 set(QT_MINIMUM_VERSION "5.12.0")
 
 find_package(Qt5DBus ${QT_MINIMUM_VERSION} REQUIRED)

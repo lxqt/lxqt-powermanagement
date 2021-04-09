@@ -1,3 +1,10 @@
+lxqt-powermanagement-0.17.0 / 2021-04-15
+========================================
+  * Handled Qt5.15's deprecations.
+  * Added an option to disable idle watcher on fullscreen.
+  * Completely moved to new signal/slot syntax.
+  * Separate idle watchers for AC and battery.
+
 lxqt-powermanagement-0.16.0 / 2020-11-01
 ========================================
   * Added a Power keys section for customizing actions of power, suspend and hibernate keys.
