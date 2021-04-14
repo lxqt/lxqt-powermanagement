@@ -11,7 +11,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Discharging</source>
-        <translation>Ontladen</translation>
+        <translation>Bezig met ontladen</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="49"/>
         <source>Charging</source>
-        <translation>Opladen</translation>
+        <translation>Bezig met opladen</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="58"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="80"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation>Accu voor PDA</translation>
+        <translation>PDA-accu</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Mouse battery</source>
-        <translation>Batterij van muis</translation>
+        <translation>Muisaccu</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
@@ -86,7 +86,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation>Accu voor toetsenbord en muis</translation>
+        <translation>Muis- en toetsenbordaccu</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../batteryinfodialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Dialoog</translation>
+        <translation>Dialoogvenster</translation>
     </message>
     <message>
         <location filename="../batteryinfodialog.cpp" line="24"/>
@@ -147,7 +147,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation>Maximale lading volgens ontwerp:</translation>
+        <translation>Maximale lading volgens berekening:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
@@ -162,7 +162,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Ladingssnelheid:</translation>
+        <translation>Laadsnelheid:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -190,7 +190,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt kon geen gegevens vinden over een accu; bewaking uitgeschakeld</translation>
+        <translation>LXQt heeft geen gegevens vinden over een accu gevonden - de monitor is uitgeschakeld</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="114"/>
@@ -201,23 +201,23 @@
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
         <translation>
-            <numerusform>Slaapstand over %n seconde(n)</numerusform>
-            <numerusform>Slaapstand over %n seconden</numerusform>
+            <numerusform>Pauzestand over %n seconde</numerusform>
+            <numerusform>Pauzestand over %n seconden</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
         <translation>
-            <numerusform>Sluimerstand over %n seconde(n)</numerusform>
-            <numerusform>Sluimerstand over %n seconden</numerusform>
+            <numerusform>Slaapstand over %n seconde</numerusform>
+            <numerusform>Slaapstand over %n seconden</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
         <translation>
-            <numerusform>Afsluiten over %n seconde(n)</numerusform>
+            <numerusform>Afsluiten over %n seconde</numerusform>
             <numerusform>Afsluiten over %n seconden</numerusform>
         </translation>
     </message>
@@ -227,17 +227,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Afsluitknopactie</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Pauzestandknopactie</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Slaapstandknopactie</translation>
     </message>
 </context>
 <context>
@@ -252,12 +252,12 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>U voert LXQt-energiebeheer voor de eerste keer uit.
-U kunt het configureren in de instellingen... </translation>
+U kunt energiebeheer instellen in de instellingen… </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>
         <source>Configure...</source>
-        <translation>Instellen...</translation>
+        <translation>Instellen…</translation>
     </message>
 </context>
 <context>
@@ -276,22 +276,22 @@ U kunt het configureren in de instellingen... </translation>
     <message>
         <location filename="../trayicon.cpp" line="64"/>
         <source>Disable icon</source>
-        <translation>Pictogram uitschakelen</translation>
+        <translation>Pictogram verbergen</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="94"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;LXQt-energiebeheer&lt;/b&gt;&lt;br/&gt;  - Energiebeheer voor de LXQt-werkomgeving&lt;/p&gt;&lt;p&gt;  Auteurs:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - en anderen uit de Razor- en LXQt-projecten&lt;/p&gt;&lt;p&gt;  Auteursrecht &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;LXQt-energiebeheer&lt;/b&gt;&lt;br/&gt;  - Energiebeheer van de LXQt-werkomgeving&lt;/p&gt;&lt;p&gt;  Makers:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - en anderen uit de Razor- en LXQt-projecten&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="112"/>
         <source>LXQt Power Management info</source>
-        <translation>Info over LXQt-energiebeheer</translation>
+        <translation>LXQt-energiebeheerinformatie</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="113"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>Het systeemvakpictogram van LXQt-energiebeheer kan (opnieuw) worden ingeschakeld in  &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
+        <translation>Het systeemvakpictogram van LXQt-energiebeheer kan (opnieuw) worden getoond via &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="115"/>

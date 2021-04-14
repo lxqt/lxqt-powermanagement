@@ -6,12 +6,12 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Instellingen voor Accubewaker</translation>
+        <translation>Accumonitor-instellingen</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>Accubewaker &amp;inschakelen</translation>
+        <translation>Accumonitor i&amp;nschakelen</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation>Niveau is laag bij:</translation>
+        <translation>Laag niveau:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
@@ -36,18 +36,18 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>gebruik pictogrammen van thema:</translation>
+        <translation>Pictogrammen van thema gebruiken:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>Preview</source>
-        <translation>Voorbeeldweergave</translation>
+        <translation>Voorvertoning</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation>Laden</translation>
+        <translation>Opladen</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
@@ -57,22 +57,22 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>Bij lage lading:</translation>
+        <translation>Bij laag niveau:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Toon pictogram:</translation>
+        <translation>Pictogram tonen:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation>ingebouwd</translation>
+        <translation>meegeleverd</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation>Lading: %1 %</translation>
+        <translation>Niveau: %1%</translation>
     </message>
 </context>
 <context>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>&amp;Inactiviteitsbewaking inschakelen</translation>
+        <translation>Inactiviteitsmonitor inschake&amp;len</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
@@ -90,65 +90,65 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrondverlichting bijstellen</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bij inactiviteit op accu:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactiviteitsduur (accu):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrondverlichting (in %):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuten:Seconden</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="76"/>
         <location filename="../idlenesswatchersettings.ui" line="110"/>
         <location filename="../idlenesswatchersettings.ui" line="178"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bij inactiviteit op netstroom:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactiviteitsduur (netstroom):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuten:Seconden (min: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrondverlichting controleren</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>Bij ontladen van accu </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactiviteitscontroles overslaan bij beeldvullende activiteiten</translation>
     </message>
 </context>
 <context>
@@ -156,12 +156,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>&amp;Dekselbewaking inschakelen</translation>
+        <translation>Dekse&amp;lmonitor inschakelen</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed:</source>
-        <translation>Actie wanneer deksel wordt gesloten:</translation>
+        <translation>Actie na sluiten van deksel:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation>Bij gebr&amp;uik van een extern beeldscherm</translation>
+        <translation>Bij gebr&amp;uik van extern beeldscherm</translation>
     </message>
 </context>
 <context>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Power Management Settings</source>
-        <translation>Instellingen van Energiebeheer</translation>
+        <translation>Energiebeheer-instellingen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="40"/>
@@ -226,7 +226,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Energieknoppen</translation>
     </message>
 </context>
 <context>
@@ -234,27 +234,27 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialoogvenster</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Energieknoppen gebruiken</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Energieknopactie:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pauzestandknopactie:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Slaapstandknopactie:</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Vragen</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
