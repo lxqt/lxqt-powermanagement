@@ -6,12 +6,12 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Configurações do Monitor de Bateria</translation>
+        <translation>Configurações do monitor de bateria</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>A&amp;tivar Monitor de Bateria</translation>
+        <translation>A&amp;tivar monitor de bateria</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="162"/>
         <source>Charging</source>
-        <translation>Recarregando</translation>
+        <translation>Carregando</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="200"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Mostrar ícone:</translation>
+        <translation>Exibir ícone:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
@@ -90,17 +90,17 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
         <source>Enable Backlight Change</source>
-        <translation>Habilitar Alteração de Luz de fundo</translation>
+        <translation>Habilitar alteração de luz de fundo</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Quando inativo na bateria:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo de inatividade na bateria:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
         <source>Minutes:Seconds</source>
-        <translation>Minutos:Segundos</translation>
+        <translation>Minutos:segundos</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="76"/>
@@ -122,18 +122,18 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Quando inativo na tomada:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo de inatividade na tomada:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>Minutos:segundos (min: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Desabilitar verificações de inatividade quando em tela cheia</translation>
     </message>
 </context>
 <context>
@@ -193,7 +193,7 @@
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC:</source>
-        <translation>Com corrente:</translation>
+        <translation>Na tomada:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Power Management Settings</source>
-        <translation>Configurações do Gerenciador de Energia</translation>
+        <translation>Configurações do gerenciador de energia</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="40"/>
@@ -239,22 +239,22 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation>Lidar com Botões de Energia</translation>
+        <translation>Lidar com botões de energia</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation>Ação do Botão de Energia:</translation>
+        <translation>Ação do botão de energia:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>Ação do Botão de Suspender:</translation>
+        <translation>Ação do botão de suspender:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>Ação do Botão de Hibernar:</translation>
+        <translation>Ação do botão de hibernar:</translation>
     </message>
 </context>
 <context>
@@ -272,7 +272,7 @@
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Lock screen</source>
-        <translation>Bloquear a tela</translation>
+        <translation>Bloquear tela</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>

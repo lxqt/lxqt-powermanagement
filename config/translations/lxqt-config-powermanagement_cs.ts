@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Při nečinnosti na baterii:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Doba nečinnosti baterie:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -133,7 +133,7 @@
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuty:Sekundy (min: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Zakázat kontroly nečinnosti při zobrazení na celou obrazovku</translation>
     </message>
 </context>
 <context>

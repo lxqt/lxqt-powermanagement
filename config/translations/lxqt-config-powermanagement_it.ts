@@ -122,12 +122,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation>Se inattivo alimentato di rete:</translation>
+        <translation>Se inattivo alimentato da rete:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation>Tempo di inattività alimentato di rete:</translation>
+        <translation>Tempo di inattività alimentato da rete:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
