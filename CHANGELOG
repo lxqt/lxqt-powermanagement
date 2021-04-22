@@ -1,3 +1,7 @@
+lxqt-powermanagement-0.17.1 / 2021-04-22
+========================================
+  * Fixed permanent stopping of idleness checks by a fullscreen window.
+
 lxqt-powermanagement-0.17.0 / 2021-04-15
 ========================================
   * Handled Qt5.15's deprecations.
