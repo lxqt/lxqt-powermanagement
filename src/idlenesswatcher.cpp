@@ -25,6 +25,7 @@
 #include "idlenesswatcher.h"
 
 #include <QCoreApplication>
+#include <QTimer>
 #include <KIdleTime>
 #include <Solid/Device>
 #include <Solid/Battery>
@@ -38,7 +39,7 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     Watcher(parent)
 {
     qDebug() << "Starting idlenesswatcher";
-    
+
     mIdleACWatcher = mIdleBatteryWatcher = mIdleBacklightWatcher = mBacklightActualValue = -1;
     mBacklight = nullptr;
     mDischarging = false;
@@ -65,7 +66,7 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     }
 
     connect(&mPSettings, &LXQt::Settings::settingsChanged, this, &IdlenessWatcher::onSettingsChanged);
-    
+
     setup();
 }
 
@@ -88,7 +89,7 @@ void IdlenessWatcher::setup()
             BATmsecs -= 10; // just 10 msecs less... ;)
         }
         mIdleBatteryWatcher = KIdleTime::instance()->addIdleTimeout(BATmsecs);
-        
+
         // Enable backlight control:
         if(mPSettings.isIdlenessBacklightWatcherEnabled() &&
             (
@@ -117,7 +118,9 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
         WId w = KWindowSystem::activeWindow();
         KWindowInfo info(w, NET::WMState);
         if (info.hasState(NET::FullScreen)) {
-            KIdleTime::instance()->simulateUserActivity();
+            QTimer::singleShot(0, this, [] {
+                KIdleTime::instance()->simulateUserActivity();
+            });
             return;
         }
     }
@@ -137,13 +140,13 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
         doAction(mPSettings.getIdlenessBatteryAction());
         return;
     }
-    
+
     if(identifier == mIdleBacklightWatcher && mBacklightActualValue < 0) {
         if(mBacklight == nullptr) {
             mBacklight = new LXQt::Backlight();
             connect(mBacklight, &QObject::destroyed, this, [this](QObject *) {mBacklight = nullptr;} );
         }
-            
+
         //LXQt::Notification::notify(QStringLiteral("IdlenessWatcher::timeoutReached"),
         //    mBacklight->isBacklightAvailable() ?
         //     QStringLiteral("").setNum(mBacklightActualValue):QStringLiteral("Error!!"));
@@ -151,7 +154,7 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
         mBacklightActualValue = mBacklight->getBacklight();
         if(mBacklight->isBacklightAvailable() && !mBacklight->isBacklightOff())
             mBacklight->setBacklight((float)mBacklightActualValue * (float)(mPSettings.getBacklight())/100.0f);
-        
+
         KIdleTime::instance()->removeIdleTimeout(mIdleBacklightWatcher);
         KIdleTime::instance()->catchNextResumeEvent();
 
@@ -181,7 +184,7 @@ void IdlenessWatcher::resumingFromIdle()
 void IdlenessWatcher::onBatteryChanged(int, const QString &)
 {
     const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
-    
+
     mDischarging = false;
 
     for (Solid::Device device : devices) {
