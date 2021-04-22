@@ -113,6 +113,13 @@ void IdlenessWatcher::setup()
 
 void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
 {
+    if (mPSettings.isIdlenessWatcherPaused()) {
+        QTimer::singleShot(0, this, [] {
+            KIdleTime::instance()->simulateUserActivity();
+        });
+        return;
+    }
+
     // check if disable Idleness when fullscreen is enabled
     if (mPSettings.isDisableIdlenessWhenFullscreenEnabled()) {
         WId w = KWindowSystem::activeWindow();

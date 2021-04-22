@@ -115,12 +115,18 @@ public:
 
     int getPowerKeyAction();
     void setPowerKeyAction(int action);
-    
+
     int getSuspendKeyAction();
     void setSuspendKeyAction(int action);
-    
+
     int getHibernateKeyAction();
     void setHibernateKeyAction(int action);
+
+    bool isIdlenessWatcherPaused() const;
+    void setIdlenessWatcherPaused(bool idlenessWatcherPaused);
+
+private:
+    static bool mIdlenessWatcherPaused;
 };
 
 

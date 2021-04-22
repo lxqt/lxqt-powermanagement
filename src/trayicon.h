@@ -40,11 +40,25 @@ class TrayIcon : public QSystemTrayIcon
     Q_OBJECT
 
 public:
+    enum PAUSE {
+        None  = 0,
+        Half  = 1,
+        One   = 2, // two halves
+        Two   = 4,
+        Three = 6,
+        Four  = 8
+    };
+
     TrayIcon(Solid::Battery *battery, QObject *parent = nullptr);
     ~TrayIcon() override;
 
+    static int getPauseInterval(PAUSE duration);
+
+    void setPause(PAUSE duration);
+
 signals:
     void toggleShowInfo();
+    void pauseChanged(PAUSE duration);
 
 public slots:
     void iconChanged();
@@ -52,14 +66,19 @@ public slots:
 
 private slots:
     void onConfigureTriggered();
+    void onPauseTriggered(QAction *action);
     void onAboutTriggered();
     void onDisableIconTriggered();
     void onActivated(QSystemTrayIcon::ActivationReason reason);
 
 private:
+    QIcon emblemizedIcon();
+
     Solid::Battery *mBattery;
     IconProducer mIconProducer;
     QMenu mContextMenu;
+    QActionGroup *mPauseActions;
+    bool mHasPauseEmblem;
 };
 
 #endif // TRAYICON_H
