@@ -292,7 +292,7 @@
     <message>
         <location filename="../helpers.cpp" line="41"/>
         <source>Turn Off monitor(s)</source>
-        <translation>Spegni (tutti) i monitor</translation>
+        <translation>Spegni (tutti) monitor</translation>
     </message>
 </context>
 </TS>
