@@ -90,65 +90,65 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Povoliť zmenu podsvietenia</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri nečinnosti na batériu:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Doba nečinnosti batérie:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>Podsvietenie (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Minúty:Sekundy</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="76"/>
         <location filename="../idlenesswatchersettings.ui" line="110"/>
         <location filename="../idlenesswatchersettings.ui" line="178"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm: ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri nečinnosti počas nabíjania:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Doba nečinnosti počas nabíjania:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>Minúty:Sekundy (min: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Skontrolovať podsvietenie</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>Pri vybíjaní batérie </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Zakázať kontrolu nečinnosti počas zobrazenia na celú obrazovku</translation>
     </message>
 </context>
 <context>
@@ -226,7 +226,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypínacie tlačidlá</translation>
     </message>
 </context>
 <context>
@@ -234,27 +234,27 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulár</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Manipulovanie s klávesmi napájania</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Akcia napájania:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tlačítko vypnutia</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tlačítko pre uspatie</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Opýtať sa</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
