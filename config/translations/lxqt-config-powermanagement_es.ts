@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>Habilitar el mo&amp;nitor de batería</translation>
+        <translation>Activar el mo&amp;nitor de batería</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Use icons from theme:</source>
-        <translation>Usar iconos del tema:</translation>
+        <translation>Utilizar iconos del tema:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="125"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation>Nivel: %1%</translation>
+        <translation>Nivel: %1 %</translation>
     </message>
 </context>
 <context>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>En caso de inactividad, con batería:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>En caso de inactividad, con CA:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
