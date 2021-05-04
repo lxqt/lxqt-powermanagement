@@ -72,7 +72,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Tase: %1%</translation>
     </message>
 </context>
 <context>
@@ -90,7 +90,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta taustavalguse muutmist</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
@@ -105,19 +105,19 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>Taustavalgus (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Minutit:sekundit</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="76"/>
         <location filename="../idlenesswatchersettings.ui" line="110"/>
         <location filename="../idlenesswatchersettings.ui" line="178"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
@@ -133,17 +133,17 @@
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>Minutit:sekundit (vähemalt 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrolli taustavalgust</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>Kui aku on tühjenemas </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui kasutad &amp;välist monitori</translation>
     </message>
 </context>
 <context>
@@ -206,27 +206,27 @@
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Toitehalduse seadistused</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="40"/>
         <source>Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Aku</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="44"/>
         <source>Lid</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="48"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ootel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Toitenupud</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorm</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
