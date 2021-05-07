@@ -147,22 +147,22 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation type="unfinished"></translation>
+        <translation>Projektikohane täislaetus:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
         <source>Energy Full:</source>
-        <translation type="unfinished"></translation>
+        <translation>Täislaetus:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation type="unfinished"></translation>
+        <translation>Laetus hetkel:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Laetuse määr:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -195,27 +195,30 @@
     <message>
         <location filename="../batterywatcher.cpp" line="114"/>
         <source>Power low!</source>
-        <translation type="unfinished"></translation>
+        <translation>Aku on peaaegu tühi!</translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="126"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Vajun unne %n sekundi möödumisel</numerusform>
+            <numerusform>Vajun unne %n sekundi möödumisel</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="129"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Vajun sügavasse unne %n sekundi möödumisel</numerusform>
+            <numerusform>Vajun sügavasse unne %n sekundi möödumisel</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="132"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Seiskan arvuti %n sekundi möödumisel</numerusform>
+            <numerusform>Seiskan arvuti %n sekundi möödumisel</numerusform>
         </translation>
     </message>
 </context>
@@ -224,17 +227,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegevus toitenupu vajutamisel</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegevus uinakunupu vajutamisel</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegevus sügava uinaku nupu vajutamisel</translation>
     </message>
 </context>
 <context>
@@ -242,7 +245,7 @@
     <message>
         <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
-        <translation type="unfinished"></translation>
+        <translation>Toitehaldus</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="116"/>
@@ -273,7 +276,7 @@ Eelistusi võid muuta seadistuse vaatest... </translation>
     <message>
         <location filename="../trayicon.cpp" line="64"/>
         <source>Disable icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ära kasuta ikooni</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="94"/>

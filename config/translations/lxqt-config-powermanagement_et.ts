@@ -67,7 +67,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>sisseehitatud</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
@@ -80,12 +80,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta &amp;jõudeoleku jälgijat</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
         <source>Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jõudeaeg on:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jõudeolek akutoitel:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jõudeoleku aeg akutoitel:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -122,12 +122,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jõudeolek võrgutoitel:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jõudeoleku aeg võrgutoitel:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui mõni rakendus on täisekraanivaates, siis ära kasuta jõudeoleku seadistusi</translation>
     </message>
 </context>
 <context>
@@ -156,49 +156,49 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta &amp;kaane jälgijat</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegevus kaane sulgemisel:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Akutoitel:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
         <source>Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Ära tee midagi</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaju unne</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaju sügavasse unne</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
-        <translation type="unfinished"></translation>
+        <translation>Seiska</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Võrgutoitel:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation>Kui kasutad &amp;välist monitori</translation>
+        <translation>Kui kasutad &amp;täiendavat monitori</translation>
     </message>
 </context>
 <context>
@@ -239,22 +239,22 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegevused toitenupu vajutamisel</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Toitenupp:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uinakunupu vajutamisel:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sügava uinaku nupu vajutamisel:</translation>
     </message>
 </context>
 <context>
@@ -262,37 +262,37 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Ära tee midagi</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Küsi</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Lock screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Lukusta ekraan</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Suspend</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaju unne</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Hibernate</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaju sügavasse unne</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Shutdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Seiska</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="41"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lülita monitor(id) välja</translation>
     </message>
 </context>
 </TS>
