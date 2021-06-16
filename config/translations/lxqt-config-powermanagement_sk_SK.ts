@@ -156,7 +156,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>&amp;Sledovať veko obrazovky</translation>
+        <translation>&amp;Sledovať kryt obrazovky</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="44"/>
         <source>Lid</source>
-        <translation>Veko</translation>
+        <translation>Kryt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="48"/>
@@ -249,12 +249,12 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>Tlačítko vypnutia</translation>
+        <translation>Tlačítko vypnutia:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>Tlačítko pre uspatie</translation>
+        <translation>Tlačítko pre uspatie:</translation>
     </message>
 </context>
 <context>
