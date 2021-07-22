@@ -32,6 +32,8 @@
 #include "batteryinfodialog.h"
 #include "../config/powermanagementsettings.h"
 
+#include <QTimer>
+
 #include <Solid/Battery>
 
 class BatteryWatcher : public Watcher
@@ -45,10 +47,13 @@ public:
 private slots:
     void batteryChanged();
     void settingsChanged();
+    void onPauseTimeout();
+    void setPause(TrayIcon::PAUSE duration);
 
 private:
     QList<Solid::Battery*> mBatteries;
     QList<TrayIcon*> mTrayIcons;
+    QTimer mPauseTimer;
 
     PowerManagementSettings mSettings;
     BatteryInfoDialog *mBatteryInfoDialog;

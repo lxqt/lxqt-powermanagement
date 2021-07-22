@@ -29,6 +29,9 @@
 
 #include "powermanagementsettings.h"
 
+// the pause state is only for the tray icon and is not saved
+bool PowerManagementSettings::mIdlenessWatcherPaused = false;
+
 namespace PowerManagementSettingsConstants
 {
     const QString RUN_CHECK_LEVEL { QSL("runCheckLevel") };
@@ -345,5 +348,14 @@ int PowerManagementSettings::getHibernateKeyAction()
 void PowerManagementSettings::setHibernateKeyAction(int action)
 {
     setValue(HIBERNATE_KEY_ACTION, action);
+}
+
+bool PowerManagementSettings::isIdlenessWatcherPaused() const
+{
+    return mIdlenessWatcherPaused;
+}
+
+void PowerManagementSettings::setIdlenessWatcherPaused(bool idlenessWatcherPaused) {
+    mIdlenessWatcherPaused = idlenessWatcherPaused;
 }
 

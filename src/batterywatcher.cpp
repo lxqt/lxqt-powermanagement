@@ -69,6 +69,11 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 
     settingsChanged();
     batteryChanged();
+
+    // pause timer
+    mPauseTimer.setSingleShot(true);
+    mPauseTimer.setTimerType(Qt::VeryCoarseTimer);
+    connect(&mPauseTimer, &QTimer::timeout, this, &BatteryWatcher::onPauseTimeout);
 }
 
 BatteryWatcher::~BatteryWatcher()
@@ -159,6 +164,9 @@ void BatteryWatcher::settingsChanged()
 {
     if (!mSettings.isShowIcon())
     {
+        // first remove the pause state because it is only for the tray
+        mSettings.setIdlenessWatcherPaused(false);
+
         while (!mTrayIcons.isEmpty())
         {
             mTrayIcons.first()->hide();
@@ -171,7 +179,29 @@ void BatteryWatcher::settingsChanged()
         {
             mTrayIcons.append(new TrayIcon(battery, this));
             connect(mTrayIcons.last(), &TrayIcon::toggleShowInfo, mBatteryInfoDialog, &BatteryInfoDialog::toggleShow);
+            connect(mTrayIcons.last(), &TrayIcon::pauseChanged, this, &BatteryWatcher::setPause);
             mTrayIcons.last()->show();
         }
+    }
+}
+
+void BatteryWatcher::onPauseTimeout()
+{
+    for (const auto &trayIcon : qAsConst(mTrayIcons))
+        trayIcon->setPause(TrayIcon::PAUSE::None);
+}
+
+void BatteryWatcher::setPause(TrayIcon::PAUSE duration)
+{
+    if (duration == TrayIcon::PAUSE::None)
+    {
+        onPauseTimeout();
+        mPauseTimer.stop();
+    }
+    else
+    {
+        for (const auto &trayIcon : qAsConst(mTrayIcons))
+            trayIcon->setPause(duration);
+        mPauseTimer.start(TrayIcon::getPauseInterval(duration));
     }
 }
