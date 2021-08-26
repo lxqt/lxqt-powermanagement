@@ -93,6 +93,16 @@
         <translation>Увімкнути зміну підсвічування</translation>
     </message>
     <message>
+        <location filename="../idlenesswatchersettings.ui" line="83"/>
+        <source>When idle on Battery:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="90"/>
+        <source>Battery Idle time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
         <translation>Підсвічування (%):</translation>
@@ -124,16 +134,6 @@
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
         <translation>Хвилини:Секунди (хв: 01:30)</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="83"/>
-        <source>When idle on Battery</source>
-        <translation>Під час простою в режимі живлення від АКБ</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="90"/>
-        <source>Battery Idle time</source>
-        <translation>Час простою в режимі живлення від АКБ</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
