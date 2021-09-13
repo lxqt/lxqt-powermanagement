@@ -162,7 +162,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Частота заряду:</translation>
+        <translation>Оцінка потужності:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -248,7 +248,7 @@
     <message>
         <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
-        <translation>Керування живленням</translation>
+        <translation>Менеджер живлення</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="116"/>
@@ -273,32 +273,32 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="72"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 хвилин</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="76"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1 година</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="80"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 години</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="84"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 години</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="88"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 години</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Призупинити перевірку бездіяльності</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="98"/>

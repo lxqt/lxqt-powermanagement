@@ -80,12 +80,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Увімкнути &amp;вартового бездіяльности</translation>
+        <translation>Увімкнути &amp;вартового бездіяльності</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
         <source>Idle time:</source>
-        <translation>Час бездіяльности:</translation>
+        <translation>Час бездіяльності:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>За бездіяльності під час роботи від акумулятора:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Час бездіяльності під час роботи від акумулятора:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -167,7 +167,7 @@
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery:</source>
-        <translation>На батареї:</translation>
+        <translation>Від акумулятора:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>Сон</translation>
+        <translation>Приспати</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
@@ -282,7 +282,7 @@
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Hibernate</source>
-        <translation>Сон</translation>
+        <translation>Приспати</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
