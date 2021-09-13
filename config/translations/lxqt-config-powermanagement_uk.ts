@@ -182,7 +182,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>Сон</translation>
+        <translation>Приспати</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
@@ -282,7 +282,7 @@
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Hibernate</source>
-        <translation>Сон</translation>
+        <translation>Приспати</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>

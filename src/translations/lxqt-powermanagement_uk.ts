@@ -162,7 +162,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Частота заряду:</translation>
+        <translation>Оцінка потужності:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -248,7 +248,7 @@
     <message>
         <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
-        <translation>Керування живленням</translation>
+        <translation>Менеджер живлення</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="116"/>
