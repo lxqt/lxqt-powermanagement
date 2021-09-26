@@ -203,6 +203,8 @@
         <translation>
             <numerusform>כניסה למצב השהיה בעוד שנייה</numerusform>
             <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -211,6 +213,8 @@
         <translation>
             <numerusform>כניסה לתרדמת בעוד שנייה</numerusform>
             <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -218,6 +222,8 @@
         <source>Shutting down in %n second(s)</source>
         <translation>
             <numerusform>כיבוי בעוד שנייה</numerusform>
+            <numerusform>כיבוי בעוד %n שניות</numerusform>
+            <numerusform>כיבוי בעוד %n שניות</numerusform>
             <numerusform>כיבוי בעוד %n שניות</numerusform>
         </translation>
     </message>
@@ -270,32 +276,32 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="72"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>חצי שעה</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="76"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>שעה</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="80"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>שעתיים</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="84"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 שעות</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="88"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 שעות</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>השהיית בדיקות חוסר פעילות</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="98"/>

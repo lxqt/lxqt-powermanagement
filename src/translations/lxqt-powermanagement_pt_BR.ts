@@ -270,32 +270,32 @@ Você pode ajustá-lo como quiser pelo menu de configurações... </translation>
     <message>
         <location filename="../trayicon.cpp" line="72"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 minutos</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="76"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1hora</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="80"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 horas</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="84"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 horas</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="88"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 horas</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausar verificações de ociosidade</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="98"/>
