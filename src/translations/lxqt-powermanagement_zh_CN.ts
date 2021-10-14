@@ -267,32 +267,32 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="72"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30分钟</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="76"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1小时</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="80"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2小时</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="84"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3小时</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="88"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4小时</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>暂停空闲检查</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="98"/>
