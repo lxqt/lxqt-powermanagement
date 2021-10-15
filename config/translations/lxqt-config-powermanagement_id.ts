@@ -143,7 +143,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>Pada pengurasan batery </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Borang</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksi Kunci Power:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksi Kunci Hibernasi:</translation>
     </message>
 </context>
 <context>

@@ -224,17 +224,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksi kunci pematian</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksi kunci penghentian</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksi kunci hibernasi</translation>
     </message>
 </context>
 <context>
@@ -267,32 +267,32 @@ Anda dapat mengkonfigurasikannya dari pengaturan... </translation>
     <message>
         <location filename="../trayicon.cpp" line="72"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 menit</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="76"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1 jam</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="80"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 jam</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="84"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 jam</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="88"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 jam</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunda sementara, pemeriksaan ketidakterpakaian</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="98"/>
