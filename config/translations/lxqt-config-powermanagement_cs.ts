@@ -122,12 +122,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation>Při nečinnosti na střídavý proud:</translation>
+        <translation>Při nečinnosti při napájení ze zásuvky:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation>Doba nečinnosti střídavého proudu:</translation>
+        <translation>Doba nečinnosti při napájení ze zásuvky:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
@@ -226,7 +226,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation>Vypínací klávesy</translation>
+        <translation>Klávesy napájení</translation>
     </message>
 </context>
 <context>
@@ -244,17 +244,17 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation>Činnost vypínací klávesy:</translation>
+        <translation>Akce při stisknutí klávesy napájení:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>Činnost klávesy pro uspání:</translation>
+        <translation>Akce při stisknutí klávesy pro uspání:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>Činnost klávesy pro uspání na disk:</translation>
+        <translation>Akce při stisknutí klávesy pro uspání na disk:</translation>
     </message>
 </context>
 <context>
@@ -292,7 +292,7 @@
     <message>
         <location filename="../helpers.cpp" line="41"/>
         <source>Turn Off monitor(s)</source>
-        <translation>Vypnout monitory</translation>
+        <translation>Vypnout monitor(y)</translation>
     </message>
 </context>
 </TS>
