@@ -1,3 +1,8 @@
+lxqt-powermanagement-1.0.0 / 2021-11-04
+========================================
+ * Bumped minimum required Qt version to 5.15.
+ * Allow pausing of idleness checks from tray icon.
+
 lxqt-powermanagement-0.17.1 / 2021-04-22
 ========================================
   * Fixed permanent stopping of idleness checks by a fullscreen window.
