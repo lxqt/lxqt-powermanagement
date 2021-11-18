@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>S&amp;ledovat nečinnost (chod naprázdno)</translation>
+        <translation>S&amp;ledovat nečinnost (nepoužívání)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
@@ -95,12 +95,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation>Při nečinnosti na baterii:</translation>
+        <translation>Při nečinnost při napájení z akumulátoru:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation>Doba nečinnosti baterie:</translation>
+        <translation>Doba nečinnosti při napájení z akumulátoru:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation>Zacházení s vypínacími klávesami</translation>
+        <translation>Zacházení s klávesami napájení</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>

@@ -227,17 +227,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acció del botó d&apos;aturada</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acció del botó de suspensió</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acció del botó d&apos;hibernació</translation>
     </message>
 </context>
 <context>
@@ -270,32 +270,32 @@ Podeu configurar-ho des dels ajusts... </translation>
     <message>
         <location filename="../trayicon.cpp" line="72"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 minuts</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="76"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1 hora</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="80"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 hores</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="84"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 hores</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="88"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 hores</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausa les comprovacions d&apos;inactivitat</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="98"/>

@@ -80,7 +80,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>Habi&amp;lita l&apos;observador de l&apos;ociositat</translation>
+        <translation>Habi&amp;lita el monitor d&apos;inactivitat</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
@@ -90,65 +90,65 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilita el canvi de retroil·luminació</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Quan estigui inactiu amb bateria:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps d&apos;inactivitat bateria:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>Retroil·luminació (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuts:Segons</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="76"/>
         <location filename="../idlenesswatchersettings.ui" line="110"/>
         <location filename="../idlenesswatchersettings.ui" line="178"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Quan estigui inactiu endollat:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps inactiu endollat:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuts: Segons (mínim: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprova la retroil·luminació</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>En la descàrrega de la bateria </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactiva les comprovacions d&apos;inactivitat en pantalla completa</translation>
     </message>
 </context>
 <context>
@@ -156,12 +156,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>Habi&amp;lita l&apos;observador de la tapa</translation>
+        <translation>Habi&amp;lita el monitor de la tapa</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed:</source>
-        <translation>Acció quan la tapa és tancada:</translation>
+        <translation>Acció al tancar la tapa:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
@@ -193,7 +193,7 @@
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC:</source>
-        <translation>Amb CA:</translation>
+        <translation>Endollat:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -226,7 +226,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Botons d&apos;energia</translation>
     </message>
 </context>
 <context>
@@ -234,27 +234,27 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Formulari</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestió dels botons d&apos;energia</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Acció botó d&apos;energia:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Acció botó de suspensió:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Acció botó d&apos;hibernació:</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Pregunta</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
