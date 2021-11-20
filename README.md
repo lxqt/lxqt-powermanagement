@@ -22,7 +22,8 @@ To build run `make`, to install `make install` which accepts variable `DESTDIR` 
 
 ### Binary packages
 
-Official binary packages are provided by all major Linux distributions like Arch Linux, Debian (as of Debian stretch only), Fedora and openSUSE. Just use your package manager to search for string `lxqt-powermanagement`.
+Official binary packages are provided by all major Linux and BSD distributions. 
+Just use your package manager to search for string `lxqt-powermanagement`.
 
 ## Configuration, Usage
 
