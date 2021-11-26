@@ -255,7 +255,7 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>LXQt správa napájení je spuštěna poprvé.
-Parametry je možné upravit v Nastavení… </translation>
+Parametry je možné upravit v nastavení… </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>
@@ -298,7 +298,7 @@ Parametry je možné upravit v Nastavení… </translation>
     <message>
         <location filename="../trayicon.cpp" line="93"/>
         <source>Pause idleness checks</source>
-        <translation>Pozastavit kontroly nečinnosti</translation>
+        <translation>Pozastavit zjišťování nečinnosti</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="98"/>
