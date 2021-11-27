@@ -67,7 +67,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="93"/>
         <source>built in</source>
-        <translation>vestavěno</translation>
+        <translation>vestavěný</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="98"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
-        <translation>Zkontrolovat podsvícení</translation>
+        <translation>Vyzkoušet podsvícení</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="48"/>
         <source>Idle</source>
-        <translation>Nečinný</translation>
+        <translation>Nečinnost</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
