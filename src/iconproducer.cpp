@@ -152,10 +152,6 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
 {
     static QString svg_template = QL1S(
         "<svg\n"
-        "    xmlns:dc='http://purl.org/dc/elements/1.1/'\n"
-        "    xmlns:cc='http://creativecommons.org/ns#'\n"
-        "    xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'\n"
-        "    xmlns:svg='http://www.w3.org/2000/svg'\n"
         "    xmlns='http://www.w3.org/2000/svg'\n"
         "    version='1.1'\n"
         "    width='200'\n"
