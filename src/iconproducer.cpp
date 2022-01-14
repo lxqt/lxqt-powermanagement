@@ -164,11 +164,14 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
         "\n"
         "<rect x='0' y='0' width='200' height='200' rx='30' style='stroke:white;fill:white;opacity:0.7;'/>\n"
         "STATE_MARKER\n"
-        "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:url(#greenGradient); stroke-width:38;' />\n"
-        "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:red; stroke-width:38; opacity:RED_OPACITY' />\n"
+        "ARC_LEVEL\n"
         "<text x='100' y='135' text-anchor='middle' font-size='100' font-weight='bolder' fill='black'>PERCENT</text>\n"
         "</svg>");
 
+    static QString levelArcs      = QL1S(
+        "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:url(#greenGradient); stroke-width:38;' />\n"
+        "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:red; stroke-width:38; opacity:RED_OPACITY' />\n");
+    static QString levelCircle    = QL1S("<circle cx='100' cy='100' r='80' style='fill:none; stroke:url(#greenGradient); stroke-width:38;' />");
     static QString filledCircle   = QL1S("<circle cx='35' cy='35' r='35'/>");
     static QString plus           = QL1S("<path d='M 0,35 L70,35 M35,0 L35,70' style='stroke:black; stroke-width:25;'/>");
     static QString minus          = QL1S("<path d='M 130,35 L200,35' style='stroke:black; stroke-width:25;'/>");
@@ -177,29 +180,33 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
     QString svg = svg_template;
 
     if (chargeLevel > 99)
-        chargeLevel = 99;
-
-    double angle;
-    QString sweepFlag;
-    if (state == Solid::Battery::Discharging)
     {
+      svg.replace(QL1S("ARC_LEVEL"), levelCircle);
+    } else
+    {
+      svg.replace(QL1S("ARC_LEVEL"), levelArcs);
+      double angle;
+      QString sweepFlag;
+      if (state == Solid::Battery::Discharging)
+      {
         angle = M_PI_2 + 2 * M_PI * chargeLevel/100;
         sweepFlag = QL1C('0');
-    }
-    else
-    {
+      }
+      else
+      {
         angle = M_PI_2 - 2 *M_PI * chargeLevel/100;
         sweepFlag = QL1C('1');
+      }
+      double circle_endpoint_x = 80.0 * cos(angle) + 100;
+      double circle_endpoint_y = -80.0 * sin(angle) + 100;
+
+      QString largeArgFlag = chargeLevel > 50 ? QL1S("1") : QL1S("0");
+
+      svg.replace(QL1S("END_X"), QString::number(circle_endpoint_x));
+      svg.replace(QL1S("END_Y"), QString::number(circle_endpoint_y));
+      svg.replace(QL1S("LARGE_ARC_FLAG"), largeArgFlag);
+      svg.replace(QL1S("SWEEP_FLAG"), sweepFlag);
     }
-    double circle_endpoint_x = 80.0 * cos(angle) + 100;
-    double circle_endpoint_y = -80.0 * sin(angle) + 100;
-
-    QString largeArgFlag = chargeLevel > 50 ? QL1S("1") : QL1S("0");
-
-    svg.replace(QL1S("END_X"), QString::number(circle_endpoint_x));
-    svg.replace(QL1S("END_Y"), QString::number(circle_endpoint_y));
-    svg.replace(QL1S("LARGE_ARC_FLAG"), largeArgFlag);
-    svg.replace(QL1S("SWEEP_FLAG"), sweepFlag);
     svg.replace(QL1S("PERCENT"), QString::number(chargeLevel));
 
     switch (state)
