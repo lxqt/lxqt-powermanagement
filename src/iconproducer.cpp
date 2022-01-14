@@ -140,12 +140,10 @@ QIcon& IconProducer::circleIcon()
 {
     static QMap<Solid::Battery::ChargeState, QMap<int, QIcon> > cache;
 
-    int chargeLevelAsInt = (int) (mChargePercent + 0.49);
+    if (!cache[mState].contains(mChargePercent))
+        cache[mState][mChargePercent] = buildCircleIcon(mState, mChargePercent);
 
-    if (!cache[mState].contains(chargeLevelAsInt))
-        cache[mState][chargeLevelAsInt] = buildCircleIcon(mState, mChargePercent);
-
-    return cache[mState][chargeLevelAsInt];
+    return cache[mState][mChargePercent];
 }
 
 QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel)
