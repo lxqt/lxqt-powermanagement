@@ -37,6 +37,7 @@
 #include <Solid/Battery>
 #include <Solid/Device>
 #include <XdgIcon>
+#include <QStringBuilder>
 
 #include "trayicon.h"
 #include "batteryhelper.h"
@@ -54,6 +55,8 @@ TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
 {
     connect(mBattery, &Solid::Battery::chargePercentChanged, this, &TrayIcon::updateTooltip);
     connect(mBattery, &Solid::Battery::chargeStateChanged, this, &TrayIcon::updateTooltip);
+    connect(mBattery, &Solid::Battery::timeToEmptyChanged, this, &TrayIcon::updateTooltip);
+    connect(mBattery, &Solid::Battery::timeToFullChanged, this, &TrayIcon::updateTooltip);
     updateTooltip();
 
     connect(&mIconProducer, &IconProducer::iconChanged, this, &TrayIcon::iconChanged);
@@ -155,8 +158,19 @@ QIcon TrayIcon::emblemizedIcon()
 
 void TrayIcon::updateTooltip()
 {
-    QString tooltip = BatteryHelper::stateToString(mBattery->chargeState());
-    tooltip += QString::fromLatin1(" (%1 %)").arg(mBattery->chargePercent());
+    QString tooltip = BatteryHelper::stateToString(mBattery->chargeState()) % QString::fromLatin1(" (%1%)").arg(mBattery->chargePercent());
+    switch (mBattery->chargeState())
+    {
+        case Solid::Battery::Charging:
+            tooltip += QL1S(", ") % BatteryHelper::timeToFullString(mBattery->timeToFull());
+            break;
+        case Solid::Battery::Discharging:
+            tooltip += QL1S(", ") % BatteryHelper::timeToEmptyString(mBattery->timeToEmpty());
+            break;
+        default:
+            break;
+    }
+
     setToolTip(tooltip);
 }
 

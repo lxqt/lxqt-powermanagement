@@ -29,7 +29,9 @@
 #include <QDebug>
 #include <QMap>
 #include <QDateTime>
+#include <QStringBuilder>
 #include <cmath>
+#include <chrono>
 
 #include "batteryhelper.h"
 #include "../config/powermanagementsettings.h"
@@ -98,4 +100,24 @@ QString BatteryHelper::typeToString(Solid::Battery::BatteryType type)
         default:
             return tr("Unknown battery");
     }
+}
+
+QString BatteryHelper::formatTime(qlonglong s)
+{
+    std::chrono::seconds sec{s};
+    std::chrono::hours hour{sec.count() / 3600};
+    sec -= hour;
+    std::chrono::minutes min{(sec.count() + 30) / 60};
+    return (hour.count() > 0 ? (tr("%n hour(s)", "", hour.count()).arg(hour.count()) % QString::fromLatin1(" ")) : QString{})
+            % tr("%n minute(s)", "", min.count()).arg(min.count());
+}
+
+QString BatteryHelper::timeToEmptyString(qlonglong remaingSec)
+{
+    return tr("remaining %1").arg(formatTime(remaingSec));
+}
+
+QString BatteryHelper::timeToFullString(qlonglong fullSec)
+{
+    return tr("to full %1").arg(formatTime(fullSec));
 }
