@@ -159,23 +159,22 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
         "\n"
         "<defs>\n"
         "    <linearGradient id='greenGradient' x1='0%' y1='0%' x2='100%' y2='100%'>\n"
-        "        <stop offset='0%' style='stop-color:rgb(125,255,125);stop-opacity:1' />\n"
-        "        <stop offset='150%' style='stop-color:rgb(15,125,15);stop-opacity:1' />\n"
+        "        <stop offset='0%' style='stop-color:rgb(125,255,125);stop-opacity:0.7' />\n"
+        "        <stop offset='150%' style='stop-color:rgb(15,125,15);stop-opacity:0.7' />\n"
         "    </linearGradient>\n"
         "</defs>\n"
         "\n"
-        "<circle cx='100' cy='100' r='99' style='fill:#FFFFFF;stroke:none; opacity:0.2;'/>\n"
+        "<rect x='0' y='0' width='200' height='200' rx='30' style='stroke:white;fill:white;opacity:0.7;'/>\n"
+        "STATE_MARKER\n"
         "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:url(#greenGradient); stroke-width:38;' />\n"
         "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:red; stroke-width:38; opacity:RED_OPACITY' />\n"
-        "\n"
-        " STATE_MARKER\n"
-        "\n"
+        "<text x='100' y='135' text-anchor='middle' font-size='100' font-weight='bolder' fill='black'>PERCENT</text>\n"
         "</svg>");
 
-    static QString filledCircle   = QL1S("<circle cx='100' cy='100' r='35'/>");
-    static QString plus           = QL1S("<path d='M 60,100 L140,100 M100,60 L100,140' style='stroke:black; stroke-width:30;'/>");
-    static QString minus          = QL1S("<path d='M 60,100 L140,100' style='stroke:black; stroke-width:30;'/>");
-    static QString hollowCircle   = QL1S("<circle cx='100' cy='100' r='30' style='fill:none;stroke:black;stroke-width:10'/>");
+    static QString filledCircle   = QL1S("<circle cx='35' cy='35' r='35'/>");
+    static QString plus           = QL1S("<path d='M 0,35 L70,35 M35,0 L35,70' style='stroke:black; stroke-width:25;'/>");
+    static QString minus          = QL1S("<path d='M 130,35 L200,35' style='stroke:black; stroke-width:25;'/>");
+    static QString hollowCircle   = QL1S("<circle cx='165' cy='35' r='30' style='fill:none;stroke:black;stroke-width:10'/>");
 
     QString svg = svg_template;
 
@@ -203,6 +202,7 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
     svg.replace(QL1S("END_Y"), QString::number(circle_endpoint_y));
     svg.replace(QL1S("LARGE_ARC_FLAG"), largeArgFlag);
     svg.replace(QL1S("SWEEP_FLAG"), sweepFlag);
+    svg.replace(QL1S("PERCENT"), QString::number(chargeLevel));
 
     switch (state)
     {
