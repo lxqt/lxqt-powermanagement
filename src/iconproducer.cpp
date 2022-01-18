@@ -241,8 +241,8 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_CIRCLE_ENHANCED>(S
         "</defs>\n"
         "\n"
         "<rect x='0' y='0' width='200' height='200' rx='30' style='stroke:white;fill:white;opacity:0.7;'/>\n"
-        "STATE_MARKER\n"
         "ARC_LEVEL\n"
+        "STATE_MARKER\n"
         "<text x='100' y='135' text-anchor='middle' font-size='100' font-weight='bolder' fill='black'>PERCENT</text>\n"
         "</svg>");
 
