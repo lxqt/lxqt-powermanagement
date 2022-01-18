@@ -42,6 +42,7 @@ public:
     enum IconType {
         ICON_THEME
             , ICON_CIRCLE
+            , ICON_CIRCLE_ENHANCED
             , ICON_BATTERY
     };
 
