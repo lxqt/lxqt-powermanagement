@@ -106,18 +106,14 @@
        </widget>
       </item>
       <item row="4" column="0">
-       <widget class="QLabel" name="useThemeIconsLabel">
+       <widget class="QLabel" name="iconTypeLabel">
         <property name="text">
-         <string>Use icons from theme:</string>
+         <string>Use icons:</string>
         </property>
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QCheckBox" name="useThemeIconsCheckBox">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
+        <widget class="QComboBox" name="iconTypeComboBox" />
       </item>
       <item row="6" column="0" colspan="2">
        <widget class="QGroupBox" name="previewBox">

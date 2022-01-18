@@ -39,6 +39,13 @@ class PowerManagementSettings : public LXQt::Settings
     Q_OBJECT
 
 public:
+    enum IconType {
+        ICON_THEME
+            , ICON_CIRCLE
+            , ICON_BATTERY
+    };
+
+public:
     PowerManagementSettings(QObject* parent = nullptr);
     ~PowerManagementSettings() override;
 
@@ -60,8 +67,9 @@ public:
     bool isShowIcon();
     void setShowIcon(bool showIcon);
 
-    bool isUseThemeIcons();
-    void setUseThemeIcons(bool useThemeIcons);
+    inline bool isUseThemeIcons() { return getIconType() == ICON_THEME; }
+    IconType getIconType() const;
+    void setIconType(IconType type);
 
 
     bool isLidWatcherEnabled();
@@ -128,6 +136,8 @@ public:
 private:
     static bool mIdlenessWatcherPaused;
 };
+
+Q_DECLARE_METATYPE(PowerManagementSettings::IconType);
 
 
 #endif // COMMON_H

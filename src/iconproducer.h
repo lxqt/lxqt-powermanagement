@@ -36,8 +36,9 @@ public slots:
 
 private:
 
-    QIcon &circleIcon();
-    QIcon buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel);
+    QIcon &generatedIcon();
+    QString buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel);
+    QString buildBatteryIcon(Solid::Battery::ChargeState state, int chargeLevel);
 
 
     int mChargePercent;

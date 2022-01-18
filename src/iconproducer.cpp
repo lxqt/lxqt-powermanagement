@@ -13,7 +13,9 @@
 #include <QDebug>
 #include <QtSvg/QSvgRenderer>
 #include <QPainter>
+#include <QStringBuilder>
 #include <cmath>
+#include <tuple>
 
 IconProducer::IconProducer(Solid::Battery *battery, QObject *parent) : QObject(parent)
 {
@@ -69,7 +71,7 @@ void IconProducer::update()
         return;
 
     mIconName = newIconName;
-    mIcon = mSettings.isUseThemeIcons() ? QIcon::fromTheme(mIconName) : circleIcon();
+    mIcon = mSettings.isUseThemeIcons() ? QIcon::fromTheme(mIconName) : generatedIcon();
     emit iconChanged();
 }
 
@@ -136,17 +138,29 @@ void IconProducer::themeChanged()
     update();
 }
 
-QIcon& IconProducer::circleIcon()
+QIcon& IconProducer::generatedIcon()
 {
-    static QMap<Solid::Battery::ChargeState, QMap<int, QIcon> > cache;
+    static QMap<std::tuple<PowerManagementSettings::IconType, Solid::Battery::ChargeState, int>, QIcon> cache;
 
-    if (!cache[mState].contains(mChargePercent))
-        cache[mState][mChargePercent] = buildCircleIcon(mState, mChargePercent);
+    const decltype(cache)::key_type key = {mSettings.getIconType(), mState , mChargePercent};
+    if (!cache.contains(key))
+    {
+        const QString svg = std::get<0>(key) == PowerManagementSettings::ICON_CIRCLE ? buildCircleIcon(mState, mChargePercent) : buildBatteryIcon(mState, mChargePercent);
+        // qDebug() << svg;
 
-    return cache[mState][mChargePercent];
+        // Paint the svg on a pixmap and create an icon from that.
+        QSvgRenderer render{svg.toLatin1()};
+        QPixmap pixmap{QSize{256, 256}};
+        pixmap.fill(QColor{0,0,0,0});
+        QPainter painter{&pixmap};
+        render.render(&painter);
+        cache[key] = QIcon{pixmap};
+    }
+
+    return cache[key];
 }
 
-QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel)
+QString IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int chargeLevel)
 {
     static QString svg_template = QL1S(
         "<svg\n"
@@ -234,13 +248,31 @@ QIcon IconProducer::buildCircleIcon(Solid::Battery::ChargeState state, int charg
     else
         svg.replace(QL1S("RED_OPACITY"), QL1S("0"));
 
-    // qDebug() << svg;
+    return svg;
+}
 
-    // Paint the svg on a pixmap and create an icon from that.
-    QSvgRenderer render(svg.toLatin1());
-    QPixmap pixmap(render.defaultSize());
-    pixmap.fill(QColor(0,0,0,0));
-    QPainter painter(&pixmap);
-    render.render(&painter);
-    return QIcon(pixmap);
+QString IconProducer::buildBatteryIcon(Solid::Battery::ChargeState state, int chargeLevel)
+{
+    const double red_opacity = state == Solid::Battery::Charging ? 0.0 : qBound(0.0, 1 - ((chargeLevel + 70) / 100 + static_cast<double>(chargeLevel) / 30), 1.0);
+    return QL1S("<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='130' height='130' viewBox='0 0 130 130'>\n"
+        "\n"
+        "<defs>\n"
+        "  <linearGradient id='greenGradient' x1='0%' y1='0%' x2='100%' y2='100%'>\n"
+        "    <stop offset='0%' style='stop-color:rgb(125,255,125);stop-opacity:0.7' />\n"
+        "    <stop offset='100%' style='stop-color:rgb(15,125,15);stop-opacity:0.7' />\n"
+        "  </linearGradient>\n"
+        "</defs>\n"
+        "\n"
+        "<rect x='0' y='0' width='130' height='130' rx='15' style='stroke:white;fill:white;opacity:0.7;'/>\n"
+        "<g transform='translate(14 65)'>\n"
+        "  <path d='M -2 -32 h 104 v 23 h 6 v 18 h -6 v 23 h -104 z' style='stroke:rgb(113,193,113); stroke-width:4; stroke-linejoin: round; fill:lightgrey; opacity:0.7'/>\n"
+        "  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='stroke:none; stroke-width:0; fill:url(#greenGradient);'/>\n"
+        "  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='stroke:none; stroke-width:0; fill:red; opacity:") % QString::number(red_opacity) % QL1S("'/>\n"
+        "  <text x='50' y='18' text-anchor='middle' font-size='54' font-weight='bolder' fill='black'>") % QString::number(chargeLevel) % QL1S("</text>\n"
+        "</g>\n")
+        % (state == Solid::Battery::Charging
+                ? QL1S("<g transform='translate(30 10) scale(1.5)'><path d='M 0 0 l -10 25 10 -5 -5 20 10 -25 -10 5 z' style='stroke:tomato; stroke-width:1; stroke-linejoin: round; fill:gold; opacity:0.85'/></g>\n")
+                : QString{}
+          )
+        % QL1S("</svg>");
 }
