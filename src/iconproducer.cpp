@@ -314,32 +314,49 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_CIRCLE_ENHANCED>(S
     return svg;
 }
 
-template <>
-QString IconProducer::buildIcon<PowerManagementSettings::ICON_BATTERY>(Solid::Battery::ChargeState state, int chargeLevel)
+static QString buildBatteryIcon(Solid::Battery::ChargeState state, int chargeLevel, bool opaque)
 {
     const double red_opacity = state == Solid::Battery::Charging ? 0.0 : qBound(0.0, 1 - ((chargeLevel + 70) / 100 + static_cast<double>(chargeLevel) / 30), 1.0);
     return QL1S("<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='130' height='130' viewBox='0 0 130 130'>\n"
         "\n"
         "<defs>\n"
         "  <linearGradient id='greenGradient' x1='0%' y1='0%' x2='100%' y2='100%'>\n"
-        "    <stop offset='0%' style='stop-color:rgb(125,255,125);stop-opacity:0.7' />\n"
-        "    <stop offset='100%' style='stop-color:rgb(15,125,15);stop-opacity:0.7' />\n"
+        "    <stop offset='0%' style='stop-color:rgb(125,255,125);") % (opaque ? QString{} : QL1S("stop-opacity:0.7")) % QL1S("' />\n"
+        "    <stop offset='100%' style='stop-color:rgb(15,125,15);") % (opaque ? QString{} : QL1S("stop-opacity:0.7")) % QL1S("' />\n"
         "  </linearGradient>\n"
         "</defs>\n"
-        "\n"
-        "<rect x='0' y='0' width='130' height='130' rx='15' style='stroke:white;fill:white;opacity:0.7;'/>\n"
-        "<g transform='translate(14 65)'>\n"
-        "  <path d='M -2 -32 h 104 v 23 h 6 v 18 h -6 v 23 h -104 z' style='stroke:rgb(113,193,113); stroke-width:4; stroke-linejoin: round; fill:lightgrey; opacity:0.7'/>\n"
-        "  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='stroke:none; stroke-width:0; fill:url(#greenGradient);'/>\n"
-        "  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='stroke:none; stroke-width:0; fill:red; opacity:") % QString::number(red_opacity) % QL1S("'/>\n"
-        "  <text x='50' y='18' text-anchor='middle' font-size='54' font-weight='bolder' fill='black'>") % QString::number(chargeLevel) % QL1S("</text>\n"
+        "\n")
+        % (opaque ? QString{} : QL1S("<rect x='0' y='0' width='130' height='130' rx='25' style='stroke:white;fill:white;opacity:0.7;'/>\n"))
+        % QL1S("<g transform='translate(14 65)'>\n"
+        "  <path d='M -2 -32 h 104 v 23 h 6 v 18 h -6 v 23 h -104 z' style='stroke:rgb(113,193,113); stroke-width:4; stroke-linejoin: round; fill:lightgrey;") % (opaque ? QL1S("") : QL1S(" opacity:0.7;")) % QL1S("'/>\n"
+        "  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='stroke:none; stroke-width:0; fill:url(#greenGradient);'/>\n")
+        % (red_opacity > 0.0
+                ? QL1S("  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='stroke:none; stroke-width:0; fill:red; opacity:") % QString::number(red_opacity) % QL1S("'/>\n")
+                : QString{}
+          )
+        % QL1S("  <text x='50' y='18' text-anchor='middle' font-size='54' font-weight='bolder' fill='black'>") % QString::number(chargeLevel) % QL1S("</text>\n"
         "</g>\n")
         % ((state == Solid::Battery::Charging || state == Solid::Battery::FullyCharged)
-                ? QL1S("<g transform='translate(30 10) scale(1.5)'><path d='M 0 0 l -10 25 10 -5 -5 20 10 -25 -10 5 z' style='stroke:tomato; stroke-width:1; stroke-linejoin: round; fill:gold; opacity:0.85'/></g>\n")
+                ? QL1S("<g transform='translate(30 ")
+                    % (opaque ? QL1S("35") : QL1S("10"))
+                    % QL1S(") scale(1.5)'><path d='M 0 0 l -10 25 10 -5 -5 20 10 -25 -10 5 z' style='stroke:tomato; stroke-width:1; stroke-linejoin: round; fill:gold; opacity:0.85'/></g>\n")
                 : QString{}
           )
         % QL1S("</svg>");
 }
+
+template <>
+QString IconProducer::buildIcon<PowerManagementSettings::ICON_BATTERY>(Solid::Battery::ChargeState state, int chargeLevel)
+{
+    return buildBatteryIcon(state, chargeLevel, false);
+}
+
+template <>
+QString IconProducer::buildIcon<PowerManagementSettings::ICON_BATTERY_OPAQUE>(Solid::Battery::ChargeState state, int chargeLevel)
+{
+    return buildBatteryIcon(state, chargeLevel, true);
+}
+
 QIcon& IconProducer::generatedIcon()
 {
     static QMap<std::tuple<PowerManagementSettings::IconType, Solid::Battery::ChargeState, int>, QIcon> cache;
@@ -358,6 +375,9 @@ QIcon& IconProducer::generatedIcon()
                 break;
             case PowerManagementSettings::ICON_BATTERY:
                 svg = buildIcon<PowerManagementSettings::ICON_BATTERY>(mState, mChargePercent);
+                break;
+            case PowerManagementSettings::ICON_BATTERY_OPAQUE:
+                svg = buildIcon<PowerManagementSettings::ICON_BATTERY_OPAQUE>(mState, mChargePercent);
                 break;
             case PowerManagementSettings::ICON_THEME:
                 Q_ASSERT(false);

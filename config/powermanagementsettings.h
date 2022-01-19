@@ -44,6 +44,7 @@ public:
             , ICON_CIRCLE
             , ICON_CIRCLE_ENHANCED
             , ICON_BATTERY
+            , ICON_BATTERY_OPAQUE
     };
 
 public:
