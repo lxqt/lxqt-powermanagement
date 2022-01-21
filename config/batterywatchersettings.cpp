@@ -35,6 +35,16 @@
 #include "ui_batterywatchersettings.h"
 #include "powermanagementsettings.h"
 
+static inline void fillIconTypeCombo(QComboBox* comboBox)
+{
+    comboBox->clear();
+    comboBox->addItem(BatteryWatcherSettings::tr("from theme", "icons"), PowerManagementSettings::ICON_THEME);
+    comboBox->addItem(BatteryWatcherSettings::tr("built in - circle", "icons"), PowerManagementSettings::ICON_CIRCLE);
+    comboBox->addItem(BatteryWatcherSettings::tr("built in - circle enhanced", "icons"), PowerManagementSettings::ICON_CIRCLE_ENHANCED);
+    comboBox->addItem(BatteryWatcherSettings::tr("built in - battery", "icons"), PowerManagementSettings::ICON_BATTERY);
+    comboBox->addItem(BatteryWatcherSettings::tr("built in - battery opaque", "icons"), PowerManagementSettings::ICON_BATTERY_OPAQUE);
+}
+
 BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     QWidget(parent),
     mSettings(),
@@ -45,6 +55,7 @@ BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
 {
     mUi->setupUi(this);
     fillComboBox(mUi->actionComboBox);
+    fillIconTypeCombo(mUi->iconTypeComboBox);
     mUi->chargeLevelSlider->setValue(53);
     mChargingIconProducer.updateState(Solid::Battery::Charging);
     mDischargingIconProducer.updateState(Solid::Battery::Discharging);
@@ -55,8 +66,8 @@ BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     connect(mUi->levelSpinBox, &QSpinBox::editingFinished, this, &BatteryWatcherSettings::saveSettings);
     connect(mUi->showIconCheckBox, &QCheckBox::clicked, this, &BatteryWatcherSettings::saveSettings);
     connect(mUi->showIconCheckBox, &QCheckBox::clicked, mUi->previewBox, &QGroupBox::setEnabled);
-    connect(mUi->useThemeIconsCheckBox, &QCheckBox::clicked, this, &BatteryWatcherSettings::saveSettings);
-    connect(mUi->useThemeIconsCheckBox, &QCheckBox::clicked, this, &BatteryWatcherSettings::updatePreview);
+    connect(mUi->iconTypeComboBox, QOverload<int>::of(&QComboBox::activated), this, &BatteryWatcherSettings::saveSettings);
+    connect(mUi->iconTypeComboBox, QOverload<int>::of(&QComboBox::activated), this, &BatteryWatcherSettings::updatePreview);
     connect(mUi->chargeLevelSlider, &QSlider::valueChanged, this, &BatteryWatcherSettings::updatePreview);
     connect(&mChargingIconProducer, &IconProducer::iconChanged, this, &BatteryWatcherSettings::onChargeIconChanged);
     connect(&mDischargingIconProducer, &IconProducer::iconChanged, this, &BatteryWatcherSettings::onDischargeIconChanged);
@@ -75,7 +86,7 @@ void BatteryWatcherSettings::loadSettings()
     mUi->warningSpinBox->setValue(mSettings.getPowerLowWarningTime());
     mUi->levelSpinBox->setValue(mSettings.getPowerLowLevel());
     mUi->showIconCheckBox->setChecked(mSettings.isShowIcon());
-    mUi->useThemeIconsCheckBox->setChecked(mSettings.isUseThemeIcons());
+    setComboBoxToValue(mUi->iconTypeComboBox, mSettings.getIconType());
 }
 
 void BatteryWatcherSettings::saveSettings()
@@ -85,7 +96,7 @@ void BatteryWatcherSettings::saveSettings()
     mSettings.setPowerLowWarningTime(mUi->warningSpinBox->value());
     mSettings.setPowerLowLevel(mUi->levelSpinBox->value());
     mSettings.setShowIcon(mUi->showIconCheckBox->isChecked());
-    mSettings.setUseThemeIcons(mUi->useThemeIconsCheckBox->isChecked());
+    mSettings.setIconType(static_cast<PowerManagementSettings::IconType>(currentValue(mUi->iconTypeComboBox)));
 }
 
 void BatteryWatcherSettings::updatePreview()

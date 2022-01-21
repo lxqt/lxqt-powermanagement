@@ -49,6 +49,7 @@ namespace PowerManagementSettingsConstants
     const QString POWER_LOW_LEVEL_KEY { QL1S("powerLowLevel") };
     const QString SHOW_ICON_KEY { QL1S("showIcon") };
     const QString USE_THEME_ICONS_KEY { QL1S("useThemeIcons") };
+    const QString ICON_TYPE_KEY { QL1S("iconType") };
     const QString IDLENESS_AC_ACTION_KEY { QL1S("idlenessACAction") };
     const QString IDLENESS_AC_TIME { QL1S("idlenessACTime") };
     const QString IDLENESS_BATTERY_ACTION_KEY { QL1S("idlenessBatteryAction") };
@@ -132,15 +133,21 @@ void PowerManagementSettings::setShowIcon(bool showIcon)
     setValue(SHOW_ICON_KEY, showIcon);
 }
 
-bool PowerManagementSettings::isUseThemeIcons()
+PowerManagementSettings::IconType PowerManagementSettings::getIconType() const
 {
-    return value(USE_THEME_ICONS_KEY, false).toBool();
+    const QVariant v = value(ICON_TYPE_KEY);
+    if (v.isValid())
+        return v.value<IconType>();
+
+    // fallback to legacy values
+    return value(USE_THEME_ICONS_KEY, false).toBool() ? ICON_THEME : ICON_CIRCLE;
 }
 
-void PowerManagementSettings::setUseThemeIcons(bool useThemeIcons)
+void PowerManagementSettings::setIconType(IconType type)
 {
-    setValue(USE_THEME_ICONS_KEY, useThemeIcons);
+    setValue(ICON_TYPE_KEY, type);
 }
+
 
 bool PowerManagementSettings::isLidWatcherEnabled()
 {

@@ -36,9 +36,13 @@ class BatteryHelper : public QObject
 {
     Q_OBJECT
 
+private:
+    static QString formatTime(qlonglong sec);
 public:
     static QString stateToString(Solid::Battery::ChargeState state);
     static QString technologyToString(Solid::Battery::Technology tech);
     static QString typeToString(Solid::Battery::BatteryType type);
+    static QString timeToEmptyString(qlonglong remaingSec);
+    static QString timeToFullString(qlonglong fullSec);
 };
 #endif
