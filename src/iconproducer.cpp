@@ -240,17 +240,17 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_CIRCLE_ENHANCED>(S
         "    </linearGradient>\n"
         "</defs>\n"
         "\n"
-        "<rect x='0' y='0' width='200' height='200' rx='30' style='stroke:white;fill:white;opacity:0.7;'/>\n"
+        "<rect x='0' y='0' width='200' height='200' rx='30' style='fill:white;opacity:0.7;'/>\n"
         "ARC_LEVEL\n"
         "STATE_MARKER\n"
-        "<text x='100' y='135' text-anchor='middle' font-size='100' font-weight='bolder' fill='black'>PERCENT</text>\n"
+        "<text x='100' y='135' text-anchor='middle' font-size='80' font-weight='bold' fill='black'>PERCENT</text>\n"
         "</svg>");
 
     static QString levelArcs      = QL1S(
         "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:url(#greenGradient); stroke-width:38;' />\n"
         "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:red; stroke-width:38; opacity:RED_OPACITY' />\n");
     static QString levelCircle    = QL1S("<circle cx='100' cy='100' r='80' style='fill:none; stroke:url(#greenGradient); stroke-width:38;' />");
-    static QString filledCircle   = QL1S("<circle cx='35' cy='35' r='35'/>");
+    static QString star   = QL1S("<path style='fill:yellow' d='m 118.5833,57.0395 -18.3781,-13.4538 -18.7005,13.4978 7.1079,-21.6316 -18.6126,-13.615 22.7748,.0733 7.1959,-21.9101 6.9614,21.6756 23.0679,.0879 -18.466,13.322 Z '/>");
     static QString plus           = QL1S("<path d='M 0,35 L70,35 M35,0 L35,70' style='stroke:black; stroke-width:25;'/>");
     static QString minus          = QL1S("<path d='M 130,35 L200,35' style='stroke:black; stroke-width:25;'/>");
 
@@ -289,7 +289,7 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_CIRCLE_ENHANCED>(S
     switch (state)
     {
     case Solid::Battery::FullyCharged:
-        svg.replace(QL1S("STATE_MARKER"), filledCircle);
+        svg.replace(QL1S("STATE_MARKER"), star);
         break;
     case Solid::Battery::Charging:
         svg.replace(QL1S("STATE_MARKER"), plus);
@@ -320,26 +320,25 @@ static QString buildBatteryIcon(Solid::Battery::ChargeState state, int chargeLev
     return QL1S("<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='130' height='130' viewBox='0 0 130 130'>\n"
         "\n"
         "<defs>\n"
-        "  <linearGradient id='greenGradient' x1='0%' y1='0%' x2='100%' y2='100%'>\n"
+        "  <linearGradient id='greenGradient' x1='0' y1='-30' x2='0' y2='30' gradientUnits='userSpaceOnUse'>\n"
         "    <stop offset='0%' style='stop-color:rgb(125,255,125);") % (opaque ? QString{} : QL1S("stop-opacity:0.7")) % QL1S("' />\n"
         "    <stop offset='100%' style='stop-color:rgb(15,125,15);") % (opaque ? QString{} : QL1S("stop-opacity:0.7")) % QL1S("' />\n"
         "  </linearGradient>\n"
         "</defs>\n"
         "\n")
-        % (opaque ? QString{} : QL1S("<rect x='0' y='0' width='130' height='130' rx='25' style='stroke:white;fill:white;opacity:0.7;'/>\n"))
+        % (opaque ? QString{} : QL1S("<rect x='0' y='0' width='130' height='130' rx='20' style='fill:white;opacity:0.7;'/>\n"))
         % QL1S("<g transform='translate(14 65)'>\n"
         "  <path d='M -2 -32 h 104 v 23 h 6 v 18 h -6 v 23 h -104 z' style='stroke:rgb(113,193,113); stroke-width:4; stroke-linejoin: round; fill:lightgrey;") % (opaque ? QL1S("") : QL1S(" opacity:0.7;")) % QL1S("'/>\n"
-        "  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='stroke:none; stroke-width:0; fill:url(#greenGradient);'/>\n")
+        "  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='fill:url(#greenGradient);'/>\n")
         % (red_opacity > 0.0
-                ? QL1S("  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='stroke:none; stroke-width:0; fill:red; opacity:") % QString::number(red_opacity) % QL1S("'/>\n")
+                ? QL1S("  <rect x='0' y='-30' width='") % QString::number(chargeLevel) % QL1S("' height='60' style='fill:red; opacity:") % QString::number(red_opacity) % QL1S("'/>\n")
                 : QString{}
           )
-        % QL1S("  <text x='50' y='18' text-anchor='middle' font-size='54' font-weight='bolder' fill='black'>") % QString::number(chargeLevel) % QL1S("</text>\n"
+        % QL1S("  <text x='50' y='18' text-anchor='middle' font-size='50' font-weight='bold' fill='black'>") % QString::number(chargeLevel) % QL1S("</text>\n"
         "</g>\n")
         % ((state == Solid::Battery::Charging || state == Solid::Battery::FullyCharged)
-                ? QL1S("<g transform='translate(30 ")
-                    % (opaque ? QL1S("35") : QL1S("10"))
-                    % QL1S(") scale(1.5)'><path d='M 0 0 l -10 25 10 -5 -5 20 10 -25 -10 5 z' style='stroke:tomato; stroke-width:1; stroke-linejoin: round; fill:gold; opacity:0.85'/></g>\n")
+                ? QL1S("<path d='M 127.5,30 68,13.5 v 14 L 5.5,9 l 54,5 V 0 Z' style='fill:#ffc800'/>\n"
+                       "<path d='m 127.5,30 -50,-4 V 42.5 L 5.5,9 68,27.5 v -14 z' style='fill:#dc3800'/>\n")
                 : QString{}
           )
         % QL1S("</svg>");
