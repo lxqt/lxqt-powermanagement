@@ -36,7 +36,7 @@ public slots:
 
 private:
 
-    QIcon &generatedIcon();
+    QIcon generatedIcon();
     template <int iconType>
         QString buildIcon(Solid::Battery::ChargeState state, int chargeLevel);
 
