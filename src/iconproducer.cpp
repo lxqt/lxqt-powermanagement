@@ -12,6 +12,7 @@
 #include <XdgIcon>
 #include <QDebug>
 #include <QtSvg/QSvgRenderer>
+#include <QPixmapCache>
 #include <QPainter>
 #include <QStringBuilder>
 #include <cmath>
@@ -356,15 +357,17 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_BATTERY_OPAQUE>(So
     return buildBatteryIcon(state, chargeLevel, true);
 }
 
-QIcon& IconProducer::generatedIcon()
+QIcon IconProducer::generatedIcon()
 {
-    static QMap<std::tuple<PowerManagementSettings::IconType, Solid::Battery::ChargeState, int>, QIcon> cache;
-
-    const decltype(cache)::key_type key = {mSettings.getIconType(), mState , mChargePercent};
-    if (!cache.contains(key))
+    PowerManagementSettings::IconType icnType = mSettings.getIconType();
+    const QString cacheStr = QString::number(icnType)
+                             + QString::number(mState)
+                             + QString::number(mChargePercent);
+    QPixmap pixmap;
+    if (!QPixmapCache::find(cacheStr, &pixmap))
     {
         QString svg;
-        switch (std::get<0>(key))
+        switch (icnType)
         {
             case PowerManagementSettings::ICON_CIRCLE:
                 svg = buildIcon<PowerManagementSettings::ICON_CIRCLE>(mState, mChargePercent);
@@ -387,12 +390,12 @@ QIcon& IconProducer::generatedIcon()
 
         // Paint the svg on a pixmap and create an icon from that.
         QSvgRenderer render{svg.toLatin1()};
-        QPixmap pixmap{QSize{256, 256}};
+        pixmap = QPixmap{QSize{256, 256}};
         pixmap.fill(QColor{0,0,0,0});
         QPainter painter{&pixmap};
         render.render(&painter);
-        cache[key] = QIcon{pixmap};
+        QPixmapCache::insert(cacheStr, pixmap);
     }
 
-    return cache[key];
+    return QIcon(pixmap);
 }
