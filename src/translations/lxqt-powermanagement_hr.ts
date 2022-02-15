@@ -4,109 +4,137 @@
 <context>
     <name>BatteryHelper</name>
     <message>
-        <location filename="../batteryhelper.cpp" line="42"/>
+        <location filename="../batteryhelper.cpp" line="44"/>
         <source>Empty</source>
         <translation>Prazna</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="44"/>
+        <location filename="../batteryhelper.cpp" line="46"/>
         <source>Discharging</source>
         <translation>Pražnjenje</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="46"/>
+        <location filename="../batteryhelper.cpp" line="48"/>
         <source>Fully charged</source>
         <translation>Napunjena</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="49"/>
+        <location filename="../batteryhelper.cpp" line="51"/>
         <source>Charging</source>
         <translation>Punjenje</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="58"/>
+        <location filename="../batteryhelper.cpp" line="60"/>
         <source>Lithium ion</source>
         <translation>Litij-ionska</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="60"/>
+        <location filename="../batteryhelper.cpp" line="62"/>
         <source>Lithium polymer</source>
         <translation>Litij-polimer</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="62"/>
+        <location filename="../batteryhelper.cpp" line="64"/>
         <source>Lithium iron phosphate</source>
         <translation>Litij-željezni fosfat</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="64"/>
+        <location filename="../batteryhelper.cpp" line="66"/>
         <source>Lead acid</source>
         <translation>Olovna kiselina</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="66"/>
+        <location filename="../batteryhelper.cpp" line="68"/>
         <source>Nickel cadmium</source>
         <translation>Nikal-kadmij</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="68"/>
+        <location filename="../batteryhelper.cpp" line="70"/>
         <source>Nickel metal hydride</source>
         <translation>Nikal-metal hidrid</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="71"/>
+        <location filename="../batteryhelper.cpp" line="73"/>
         <source>Unknown</source>
         <translation>Nepoznato</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="80"/>
+        <location filename="../batteryhelper.cpp" line="82"/>
         <source>Personal Digital Assistant&apos;s battery</source>
         <translation>Baterija PDA uređaja</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="82"/>
+        <location filename="../batteryhelper.cpp" line="84"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
         <translation>Baterija neprekidnog izvora napajanja</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="84"/>
+        <location filename="../batteryhelper.cpp" line="86"/>
         <source>Primary battery</source>
         <translation>Primarna baterija</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="86"/>
+        <location filename="../batteryhelper.cpp" line="88"/>
         <source>Mouse battery</source>
         <translation>Baterija miša</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="88"/>
+        <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard battery</source>
         <translation>Baterija tipkovnice</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="90"/>
+        <location filename="../batteryhelper.cpp" line="92"/>
         <source>Keyboard and mouse&apos;s battery</source>
         <translation>Baterija tipkovnice i miša</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="92"/>
+        <location filename="../batteryhelper.cpp" line="94"/>
         <source>Camera battery</source>
         <translation>Baterija kamere</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="94"/>
+        <location filename="../batteryhelper.cpp" line="96"/>
         <source>Phone battery</source>
         <translation>Baterija telefona</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="96"/>
+        <location filename="../batteryhelper.cpp" line="98"/>
         <source>Monitor battery</source>
         <translation>Baterija monitora</translation>
     </message>
     <message>
-        <location filename="../batteryhelper.cpp" line="99"/>
+        <location filename="../batteryhelper.cpp" line="101"/>
         <source>Unknown battery</source>
         <translation>Nepoznata baterija</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../batteryhelper.cpp" line="111"/>
+        <source>%n hour(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../batteryhelper.cpp" line="112"/>
+        <source>%n minute(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="117"/>
+        <source>remaining %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../batteryhelper.cpp" line="122"/>
+        <source>to full %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -193,12 +221,12 @@
         <translation>LXQt nije pronašao podatke baterija – praćenje je deaktivirano</translation>
     </message>
     <message>
-        <location filename="../batterywatcher.cpp" line="114"/>
+        <location filename="../batterywatcher.cpp" line="119"/>
         <source>Power low!</source>
         <translation>Skoro prazna!</translation>
     </message>
     <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="126"/>
+        <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %n second(s)</source>
         <translation>
             <numerusform>Pripravno stanje za %n sekundu</numerusform>
@@ -207,7 +235,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="129"/>
+        <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %n second(s)</source>
         <translation>
             <numerusform>Stanje mirovanja za %n sekundu</numerusform>
@@ -216,7 +244,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../batterywatcher.cpp" line="132"/>
+        <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %n second(s)</source>
         <translation>
             <numerusform>Uređaj se gasi za %n sekundu</numerusform>
@@ -266,38 +294,68 @@ Možeš ga konfigurirati u postavkama … </translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="60"/>
+        <location filename="../trayicon.cpp" line="67"/>
         <source>Configure</source>
         <translation>Konfiguriraj</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="62"/>
-        <location filename="../trayicon.cpp" line="93"/>
+        <location filename="../trayicon.cpp" line="75"/>
+        <source>30 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="79"/>
+        <source>1 hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="83"/>
+        <source>2 hours</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="87"/>
+        <source>3 hours</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="91"/>
+        <source>4 hours</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="96"/>
+        <source>Pause idleness checks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="101"/>
+        <location filename="../trayicon.cpp" line="191"/>
         <source>About</source>
         <translation>Informacije</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="64"/>
+        <location filename="../trayicon.cpp" line="103"/>
         <source>Disable icon</source>
         <translation>Deaktiviraj ikonu</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="94"/>
+        <location filename="../trayicon.cpp" line="192"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt upravljanje energijom&lt;/b&gt;&lt;br/&gt;  – upravljanje energijom za LXQt okruženje&lt;/p&gt;&lt;p&gt;  Autori:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; – i drugi u projektima Razor i LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012. – 2014.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="112"/>
+        <location filename="../trayicon.cpp" line="210"/>
         <source>LXQt Power Management info</source>
         <translation>Informacije o modulu „LXQt upravljanje energijom”</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="113"/>
+        <location filename="../trayicon.cpp" line="211"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Ikona za „LXQt upravljanje energijom” u programskoj traci može se (ponovo) aktivirati u &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="115"/>
+        <location filename="../trayicon.cpp" line="213"/>
         <source>Configure now</source>
         <translation>Konfiguriraj sada</translation>
     </message>
