@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Икона:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
@@ -68,31 +68,31 @@
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>от тема</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>Circle</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Кръг</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Кръг с проценти</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Батерия с проценти</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage, opaque</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Батерия с проценти, прозрачна</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="104"/>
@@ -125,12 +125,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>На батерия:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Време на бездействие:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -152,18 +152,18 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>В захранване:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Време на бездействие:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished"></translation>
+        <translation>Минути:Секунди (мин: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
@@ -178,7 +178,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Деактивиране на проверка за бездействие при режим на цял екран</translation>
     </message>
 </context>
 <context>

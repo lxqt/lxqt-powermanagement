@@ -111,28 +111,28 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n ώρα</numerusform>
+            <numerusform>%n ώρες</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n λεπτό</numerusform>
+            <numerusform>%n λεπτά</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>υπολείπεται %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>για πλήρη φόρτιση %1</translation>
     </message>
 </context>
 <context>

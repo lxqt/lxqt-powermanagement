@@ -111,28 +111,28 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n час</numerusform>
+            <numerusform>%n часа</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n минута</numerusform>
+            <numerusform>%n минути</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>оставащи %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>до пълно зареждане %1</translation>
     </message>
 </context>
 <context>
@@ -227,24 +227,24 @@
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %n second(s)</source>
         <translation>
-            <numerusform>Приспиване след %n s</numerusform>
-            <numerusform>Приспиване след %n s</numerusform>
+            <numerusform>Приспиване след %n секунда</numerusform>
+            <numerusform>Приспиване след %n секунди</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %n second(s)</source>
         <translation>
-            <numerusform>Хибернация след %n s</numerusform>
-            <numerusform>Хибернация след %n s</numerusform>
+            <numerusform>Хибернация след %n секунда</numerusform>
+            <numerusform>Хибернация след %n секунди</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %n second(s)</source>
         <translation>
-            <numerusform>Изключване след %n s</numerusform>
-            <numerusform>Изключване след %n s</numerusform>
+            <numerusform>Изключване след %n секунда</numerusform>
+            <numerusform>Изключване след %n секунди</numerusform>
         </translation>
     </message>
 </context>
@@ -296,32 +296,32 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="75"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 минути</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="79"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1 час</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="83"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 часа</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="87"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 часа</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="91"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 часа</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="96"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Спиране на проверка за бездействие</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
