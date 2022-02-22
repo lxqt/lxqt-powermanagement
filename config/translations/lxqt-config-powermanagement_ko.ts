@@ -26,7 +26,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation>낮은 배터리 임계값:</translation>
+        <translation>배터리 단계 낮음:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>아이콘:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
@@ -68,41 +68,41 @@
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>테마에서</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>Circle</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>원</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>백분율이 있는 원</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>백분율이 있는 배터리</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage, opaque</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>백분율이 있는 배터리, 불투명</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="104"/>
         <source>built in</source>
-        <translation>기본 제공 아이콘</translation>
+        <translation>기본 제공</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>Level: %1%</source>
-        <translation>레벨: %1%</translation>
+        <translation>단계: %1%</translation>
     </message>
 </context>
 <context>
@@ -110,12 +110,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>유휴 감시자 활성화(&amp;L)</translation>
+        <translation>유휴상태 감시자 활성화(&amp;L)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
         <source>Idle time:</source>
-        <translation>유휴 시간:</translation>
+        <translation>유휴상태 시간:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation>배터리에서 유휴 상태일 때:</translation>
+        <translation>배터리에서 유휴상태일 때:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation>AC에서 유휴 상태일 때:</translation>
+        <translation>AC에서 유휴상태일 때:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
-        <translation>백라이트 확인</translation>
+        <translation>백라이트 검사</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
@@ -178,7 +178,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation>전체 화면일 때 유휴 상태 확인 비활성화</translation>
+        <translation>전체 화면에서 유휴상태 검사 비활성화</translation>
     </message>
 </context>
 <context>
@@ -186,18 +186,18 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>리드 감시자 활성화(&amp;L)</translation>
+        <translation>덮개 감시자 활성화(&amp;L)</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed:</source>
-        <translation>리드를 닫았을 때의 동작 :</translation>
+        <translation>덮개가 닫혔을 때 동작 :</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery:</source>
-        <translation>배터리로 전원 공급:</translation>
+        <translation>배터리 사용:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
@@ -207,12 +207,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation>대기 모드</translation>
+        <translation>절전</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>최대 절전 모드</translation>
+        <translation>최대 절전</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
@@ -223,7 +223,7 @@
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC:</source>
-        <translation>AC로 전원 공급:</translation>
+        <translation>AC 사용:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="44"/>
         <source>Lid</source>
-        <translation>리드</translation>
+        <translation>덮개</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="48"/>
@@ -279,12 +279,12 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>대기 모드 키 동작:</translation>
+        <translation>절전 키 동작:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>최대 절전 모드 키 동작:</translation>
+        <translation>최대 절전 키 동작:</translation>
     </message>
 </context>
 <context>
@@ -307,12 +307,12 @@
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Suspend</source>
-        <translation>대기 모드</translation>
+        <translation>절전</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Hibernate</source>
-        <translation>최대 절전 모드</translation>
+        <translation>최대 절전</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
