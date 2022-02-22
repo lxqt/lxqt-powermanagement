@@ -11,7 +11,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
         <source>Discharging</source>
-        <translation>방전</translation>
+        <translation>방전 중</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="48"/>
@@ -26,32 +26,32 @@
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
         <source>Lithium ion</source>
-        <translation>리튬 이온</translation>
+        <translation>리튬 이온 전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="62"/>
         <source>Lithium polymer</source>
-        <translation>리튬 폴리머</translation>
+        <translation>리튬 폴리머 전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="64"/>
         <source>Lithium iron phosphate</source>
-        <translation>리튬 철 인산염</translation>
+        <translation>리튬 철 인산염 전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="66"/>
         <source>Lead acid</source>
-        <translation>납축</translation>
+        <translation>납 축 전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="68"/>
         <source>Nickel cadmium</source>
-        <translation>니켈 카드뮴</translation>
+        <translation>니켈 카드뮴 전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="70"/>
         <source>Nickel metal hydride</source>
-        <translation>니켈 금속 수소화물</translation>
+        <translation>니켈 수소 전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="73"/>
@@ -76,27 +76,27 @@
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
         <source>Mouse battery</source>
-        <translation>마우스 배터리</translation>
+        <translation>마우스 건전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard battery</source>
-        <translation>키보드 배터리</translation>
+        <translation>키보드 건전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation>키보드 및 마우스의 배터리</translation>
+        <translation>키보드 및 마우스의 건전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Camera battery</source>
-        <translation>카메라 배터리</translation>
+        <translation>카메라 건전지</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Phone battery</source>
-        <translation>전화 배터리</translation>
+        <translation>휴대폰 배터리</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="98"/>
@@ -111,26 +111,26 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n시간</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n분</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 남음</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>완충까지 %1</translation>
     </message>
 </context>
 <context>
