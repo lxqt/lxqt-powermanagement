@@ -252,7 +252,7 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_CIRCLE_ENHANCED>(S
         "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:red; stroke-width:38; opacity:RED_OPACITY' />\n");
     static QString levelCircle    = QL1S("<circle cx='100' cy='100' r='80' style='fill:none; stroke:url(#greenGradient); stroke-width:38;' />");
     static QString star   = QL1S("<path style='fill:yellow' d='m 118.5833,57.0395 -18.3781,-13.4538 -18.7005,13.4978 7.1079,-21.6316 -18.6126,-13.615 22.7748,.0733 7.1959,-21.9101 6.9614,21.6756 23.0679,.0879 -18.466,13.322 Z '/>");
-       static QString plus           = QL1S("<path d='M 10,35 L60,35 M35,10 L35,60' style='stroke:#346334; stroke-width:15;'/>");
+    static QString plus           = QL1S("<path d='M 10,35 L60,35 M35,10 L35,60' style='stroke:#346334; stroke-width:15;'/>");
     static QString minus          = QL1S("<path d='M 135,30 L185,30' style='stroke:#a82424; stroke-width:15;'/>");
 
     QString svg = svg_template;
