@@ -62,7 +62,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>표시 아이콘:</translation>
+        <translation>아이콘 표시:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="41"/>
