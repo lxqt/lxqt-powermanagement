@@ -236,15 +236,15 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_CIRCLE_ENHANCED>(S
         "\n"
         "<defs>\n"
         "    <linearGradient id='greenGradient' x1='0%' y1='0%' x2='100%' y2='100%'>\n"
-        "        <stop offset='0%' style='stop-color:rgb(125,255,125);stop-opacity:0.7' />\n"
-        "        <stop offset='150%' style='stop-color:rgb(15,125,15);stop-opacity:0.7' />\n"
+        "        <stop offset='0%' style='stop-color:rgb(125,255,125);stop-opacity:1' />\n"
+        "        <stop offset='150%' style='stop-color:rgb(15,125,15);stop-opacity:1' />\n"
         "    </linearGradient>\n"
         "</defs>\n"
         "\n"
         "<rect x='0' y='0' width='200' height='200' rx='30' style='fill:white;opacity:0.7;'/>\n"
         "ARC_LEVEL\n"
         "STATE_MARKER\n"
-        "<text x='100' y='135' text-anchor='middle' font-size='80' font-weight='bold' fill='black'>PERCENT</text>\n"
+        "<text x='100' y='130' text-anchor='middle' font-size='80' font-weight='bold' fill='black'>PERCENT</text>\n"
         "</svg>");
 
     static QString levelArcs      = QL1S(
@@ -252,8 +252,8 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_CIRCLE_ENHANCED>(S
         "<path d='M 100,20 A80,80 0, LARGE_ARC_FLAG, SWEEP_FLAG, END_X,END_Y' style='fill:none; stroke:red; stroke-width:38; opacity:RED_OPACITY' />\n");
     static QString levelCircle    = QL1S("<circle cx='100' cy='100' r='80' style='fill:none; stroke:url(#greenGradient); stroke-width:38;' />");
     static QString star   = QL1S("<path style='fill:yellow' d='m 118.5833,57.0395 -18.3781,-13.4538 -18.7005,13.4978 7.1079,-21.6316 -18.6126,-13.615 22.7748,.0733 7.1959,-21.9101 6.9614,21.6756 23.0679,.0879 -18.466,13.322 Z '/>");
-    static QString plus           = QL1S("<path d='M 0,35 L70,35 M35,0 L35,70' style='stroke:black; stroke-width:25;'/>");
-    static QString minus          = QL1S("<path d='M 130,35 L200,35' style='stroke:black; stroke-width:25;'/>");
+    static QString plus           = QL1S("<path d='M 10,35 L60,35 M35,10 L35,60' style='stroke:#346334; stroke-width:15;'/>");
+    static QString minus          = QL1S("<path d='M 135,30 L185,30' style='stroke:#a82424; stroke-width:15;'/>");
 
     QString svg = svg_template;
 
