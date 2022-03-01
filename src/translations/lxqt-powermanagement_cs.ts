@@ -111,30 +111,30 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n hodina</numerusform>
+            <numerusform>%n hodiny</numerusform>
+            <numerusform>%n hodin</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuta</numerusform>
+            <numerusform>%n minuty</numerusform>
+            <numerusform>%n minut</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>přejmenovává se %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>do úplného %1</translation>
     </message>
 </context>
 <context>
