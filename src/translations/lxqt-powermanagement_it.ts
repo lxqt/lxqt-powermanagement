@@ -127,7 +127,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation>rimane %1</translation>
+        <translation>%1 rimanenti</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
