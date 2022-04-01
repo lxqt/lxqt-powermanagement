@@ -111,30 +111,30 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n sat</numerusform>
+            <numerusform>%n sata</numerusform>
+            <numerusform>%n sati</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuta</numerusform>
+            <numerusform>%n minute</numerusform>
+            <numerusform>%n minuta</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>preostalo %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>do potpune napunjenosti %1</translation>
     </message>
 </context>
 <context>
@@ -301,32 +301,32 @@ Možeš ga konfigurirati u postavkama … </translation>
     <message>
         <location filename="../trayicon.cpp" line="75"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 minuta</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="79"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1 sat</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="83"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 sata</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="87"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 sata</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="91"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 sata</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="96"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaustavi provjere neaktivnosti</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
