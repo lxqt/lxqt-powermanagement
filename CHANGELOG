@@ -3,7 +3,7 @@ lxqt-powermanagement-1.1.0 / 2022-04-15
  * Updated `README.md`.
  * Removed unused xml namespaces from IconProducer.
  * Add percentage to generated icon in IconProducer.
- * Remove unneded computation from IconProducer.
+ * Remove unneeded computation from IconProducer.
  * Added info on remaining time to full charge to the tray icon tooltip.
  * Added three tray icons, with the charge percentage inside them. Now, the built-in tray icon can be circular or shaped like a battery.
  * Prevented high memory usage by tray icon.
