@@ -111,28 +111,32 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>שעה</numerusform>
+            <numerusform>שעתיים</numerusform>
+            <numerusform>%n שעות</numerusform>
+            <numerusform>%n שעות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>דקה</numerusform>
+            <numerusform>שתי דקות</numerusform>
+            <numerusform>%n דקות</numerusform>
+            <numerusform>%n דקות</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 נותרו</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 עד למילוי</translation>
     </message>
 </context>
 <context>
@@ -229,6 +233,8 @@
         <translation>
             <numerusform>כניסה למצב השהיה בעוד שנייה</numerusform>
             <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -237,6 +243,8 @@
         <translation>
             <numerusform>כניסה לתרדמת בעוד שנייה</numerusform>
             <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -244,6 +252,8 @@
         <source>Shutting down in %n second(s)</source>
         <translation>
             <numerusform>כיבוי בעוד שנייה</numerusform>
+            <numerusform>כיבוי בעוד %n שניות</numerusform>
+            <numerusform>כיבוי בעוד %n שניות</numerusform>
             <numerusform>כיבוי בעוד %n שניות</numerusform>
         </translation>
     </message>
