@@ -111,28 +111,28 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tunti</numerusform>
+            <numerusform>%n tuntia</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuutti</numerusform>
+            <numerusform>%n minuuttia</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>jäljellä %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>täyteen %1</translation>
     </message>
 </context>
 <context>
@@ -188,7 +188,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Lataus aste:</translation>
+        <translation>Latausaste:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -277,7 +277,7 @@
         <location filename="../powermanagementd.cpp" line="116"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>Käytät LXQt Virranhallintaa ensimmäistä kertaa.
+        <translation>Käytät LXQt:n virranhallintaa ensimmäistä kertaa.
 Voit muuttaa sen toimintaa asetuksista… </translation>
     </message>
     <message>
@@ -337,17 +337,17 @@ Voit muuttaa sen toimintaa asetuksista… </translation>
     <message>
         <location filename="../trayicon.cpp" line="192"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;LXQt Virranhallinta&lt;/b&gt;&lt;br/&gt;  - Virranhallinta LXQt Työpöytäympäristölle&lt;/p&gt;&lt;p&gt; Tekijät:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - ja muita Razor- ja LXQt-projekteista&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;LXQt:n virranhallinta&lt;/b&gt;&lt;br/&gt;  - Virranhallinta LXQt-työpöytäympäristölle&lt;/p&gt;&lt;p&gt; Tekijät:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - ja muita Razor- ja LXQt-projekteista&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="210"/>
         <source>LXQt Power Management info</source>
-        <translation>LXQt Virranhallinta info</translation>
+        <translation>LXQt:n virranhallinnan tiedot</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="211"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>LXQt Virranhallinnan tehtäväpalkin kuvake voidaan ottaa käyttöön ohjelmassa &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
+        <translation>LXQt:n virranhallinnan tehtäväpalkin kuvake voidaan ottaa käyttöön ohjelmassa &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="213"/>
