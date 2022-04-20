@@ -41,8 +41,8 @@ static inline void fillIconTypeCombo(QComboBox* comboBox)
     comboBox->addItem(BatteryWatcherSettings::tr("from theme", "icons"), PowerManagementSettings::ICON_THEME);
     comboBox->addItem(BatteryWatcherSettings::tr("Circle", "icons"), PowerManagementSettings::ICON_CIRCLE);
     comboBox->addItem(BatteryWatcherSettings::tr("Circle with percentage", "icons"), PowerManagementSettings::ICON_CIRCLE_ENHANCED);
-    comboBox->addItem(BatteryWatcherSettings::tr("Battery with percentage", "icons"), PowerManagementSettings::ICON_BATTERY);
-    comboBox->addItem(BatteryWatcherSettings::tr("Battery with percentage, opaque", "icons"), PowerManagementSettings::ICON_BATTERY_OPAQUE);
+    comboBox->addItem(BatteryWatcherSettings::tr("Battery with percentage and background", "icons"), PowerManagementSettings::ICON_BATTERY);
+    comboBox->addItem(BatteryWatcherSettings::tr("Battery with percentage", "icons"), PowerManagementSettings::ICON_BATTERY_OPAQUE);
 }
 
 BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
