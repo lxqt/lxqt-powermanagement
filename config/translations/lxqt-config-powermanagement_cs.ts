@@ -84,15 +84,15 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
-        <source>Battery with percentage</source>
+        <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation>Akumulátor s procenty</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
-        <source>Battery with percentage, opaque</source>
+        <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation>Akumulátor s procenty – přibližné</translation>
+        <translation>Akumulátor s procenty</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="104"/>

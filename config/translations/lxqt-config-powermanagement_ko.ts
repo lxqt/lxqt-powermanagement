@@ -84,15 +84,15 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
-        <source>Battery with percentage</source>
+        <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation>백분율이 있는 배터리</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
-        <source>Battery with percentage, opaque</source>
+        <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation>백분율이 있는 배터리, 불투명</translation>
+        <translation>백분율이 있는 배터리</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="104"/>

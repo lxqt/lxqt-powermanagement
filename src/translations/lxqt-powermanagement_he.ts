@@ -114,8 +114,6 @@
         <translation>
             <numerusform>שעה</numerusform>
             <numerusform>שעתיים</numerusform>
-            <numerusform>%n שעות</numerusform>
-            <numerusform>%n שעות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -124,8 +122,6 @@
         <translation>
             <numerusform>דקה</numerusform>
             <numerusform>שתי דקות</numerusform>
-            <numerusform>%n דקות</numerusform>
-            <numerusform>%n דקות</numerusform>
         </translation>
     </message>
     <message>
@@ -233,8 +229,6 @@
         <translation>
             <numerusform>כניסה למצב השהיה בעוד שנייה</numerusform>
             <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
-            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
-            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -243,8 +237,6 @@
         <translation>
             <numerusform>כניסה לתרדמת בעוד שנייה</numerusform>
             <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
-            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
-            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -252,8 +244,6 @@
         <source>Shutting down in %n second(s)</source>
         <translation>
             <numerusform>כיבוי בעוד שנייה</numerusform>
-            <numerusform>כיבוי בעוד %n שניות</numerusform>
-            <numerusform>כיבוי בעוד %n שניות</numerusform>
             <numerusform>כיבוי בעוד %n שניות</numerusform>
         </translation>
     </message>
