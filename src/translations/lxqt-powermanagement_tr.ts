@@ -113,14 +113,12 @@
         <source>%n hour(s)</source>
         <translation>
             <numerusform>%n saat</numerusform>
-            <numerusform>%n saat</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
         <translation>
-            <numerusform>%n dakika</numerusform>
             <numerusform>%n dakika</numerusform>
         </translation>
     </message>

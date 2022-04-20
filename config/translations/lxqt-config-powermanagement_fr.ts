@@ -46,7 +46,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation>Icône :</translation>
+        <translation>Icône&#xa0;:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
@@ -84,15 +84,15 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
-        <source>Battery with percentage</source>
+        <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation>Batterie avec pourcentage</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
-        <source>Battery with percentage, opaque</source>
+        <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation>Batterie avec pourcentage, opaque</translation>
+        <translation>Batterie avec pourcentage</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="104"/>
@@ -125,12 +125,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation>En cas d&apos;inactivité sur batterie :</translation>
+        <translation>En cas d&apos;inactivité sur batterie&#x202f;:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation>Temps d&apos;inactivité sur batterie :</translation>
+        <translation>Temps d&apos;inactivité sur batterie&#x202f;:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -152,18 +152,18 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation>En cas d&apos;inactivité branché :</translation>
+        <translation>En cas d&apos;inactivité branché&#xa0;:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation>Temps d&apos;inactivité branché :</translation>
+        <translation>Temps d&apos;inactivité branché&#xa0;:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation>Minutes:Secondes (min : 01:30)</translation>
+        <translation>Minutes:Secondes (min&#xa0;: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
