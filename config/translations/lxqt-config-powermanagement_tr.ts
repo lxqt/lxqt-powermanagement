@@ -86,7 +86,7 @@
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Yüzdesi ve arka planı olan pil</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>

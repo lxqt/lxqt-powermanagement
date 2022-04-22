@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Aktiviere Batterieüberwachung</translation>
+        <translation>Batterieüberwachu&amp;ng aktivieren</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Symbol:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
@@ -68,31 +68,31 @@
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>aus Thema</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>Circle</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kreis</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kreis mit Prozentangabe</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Batterie mit Prozentangabe und Hintergrund</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Batterie mit Prozentangabe</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="104"/>
