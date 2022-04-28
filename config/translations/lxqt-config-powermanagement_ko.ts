@@ -86,7 +86,7 @@
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>백분율과 배경이 있는 배터리</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
