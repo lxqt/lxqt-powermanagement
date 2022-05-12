@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>アイコン:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
@@ -68,7 +68,7 @@
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>テーマから</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
