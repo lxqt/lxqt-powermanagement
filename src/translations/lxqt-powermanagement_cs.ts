@@ -129,7 +129,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation>přejmenovává se %1</translation>
+        <translation>zbývá %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
