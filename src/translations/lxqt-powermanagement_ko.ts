@@ -186,12 +186,12 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>에너지 비율:</translation>
+        <translation>용량 등급:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
         <source>Technology:</source>
-        <translation>기술:</translation>
+        <translation>장비:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="182"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation>공급업체:</translation>
+        <translation>벤더:</translation>
     </message>
 </context>
 <context>
@@ -225,21 +225,21 @@
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %n second(s)</source>
         <translation>
-            <numerusform>%n초 후에 대기 모드</numerusform>
+            <numerusform>%n초 후 절전모드 진입</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %n second(s)</source>
         <translation>
-            <numerusform>%n초 후 최대 절전 모드</numerusform>
+            <numerusform>%n초 후 최대 절전모드 진입</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %n second(s)</source>
         <translation>
-            <numerusform>%n초 후에 종료</numerusform>
+            <numerusform>%n초 후 시스템 끄기</numerusform>
         </translation>
     </message>
 </context>
@@ -258,7 +258,7 @@
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation>최대 절전 모드 키 작업</translation>
+        <translation>최대 절전모드 키 동작</translation>
     </message>
 </context>
 <context>
