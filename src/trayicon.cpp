@@ -158,7 +158,9 @@ QIcon TrayIcon::emblemizedIcon()
 
 void TrayIcon::updateTooltip()
 {
-    QString tooltip = BatteryHelper::stateToString(mBattery->chargeState()) % QString::fromLatin1(" (%1%)").arg(mBattery->chargePercent());
+    QString stateStr = mBattery->chargePercent() <= 0 && mBattery->chargeState() == Solid::Battery::NoCharge ?
+                       tr("Empty") : BatteryHelper::stateToString(mBattery->chargeState());
+    QString tooltip = stateStr % QString::fromLatin1(" (%1%)").arg(mBattery->chargePercent());
     switch (mBattery->chargeState())
     {
         case Solid::Battery::Charging:

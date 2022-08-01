@@ -41,7 +41,7 @@ QString BatteryHelper::stateToString(Solid::Battery::ChargeState state)
     switch (state)
     {
     case Solid::Battery::NoCharge:
-        return tr("Empty");
+        return tr("Stable");
     case Solid::Battery::Discharging:
         return tr("Discharging");
     case Solid::Battery::FullyCharged:
