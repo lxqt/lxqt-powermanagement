@@ -61,7 +61,8 @@ BatteryInfoFrame::~BatteryInfoFrame()
 
 void BatteryInfoFrame::onBatteryChanged()
 {
-    mUi->stateValue->setText(BatteryHelper::stateToString(mBattery->chargeState()));
+    mUi->stateValue->setText(mBattery->chargePercent() <= 0 && mBattery->chargeState() == Solid::Battery::NoCharge ?
+                             tr("Empty") : BatteryHelper::stateToString(mBattery->chargeState()));
     mUi->energyFullValue->setText(QString::fromLatin1("%1 Wh (%2 %)").arg(mBattery->energyFull(), 0, 'f', 2).arg(mBattery->capacity()));
     mUi->energyValue->setText(QString::fromLatin1("%1 Wh (%2 %)").arg(mBattery->energy(), 0, 'f', 2).arg(mBattery->chargePercent()));
     mUi->energyRateValue->setText(QString::fromLatin1("%1 W").arg(mBattery->energyRate(), 0, 'f', 2));
