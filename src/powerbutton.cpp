@@ -64,7 +64,7 @@ PowerButton::PowerButton(QObject *parent) : Watcher(parent)
     mFdHibernate = manager.call(QL1S("Inhibit"), QL1S("handle-hibernate-key"), QL1S("lxqt-powermanager"), 
         QL1S("lxqt-powermanager controls hibernate key"), QL1S("block"));
     error = manager.lastError();
-    qDebug() << QStringLiteral("HibenateButton") << error.name() << error.message() ;
+    qDebug() << QStringLiteral("HibernateButton") << error.name() << error.message() ;
 
     //LXQt::Notification::notify(QL1S("powermanager"), QStringLiteral("Fd %1").arg(mFd.value().fileDescriptor()));
 
