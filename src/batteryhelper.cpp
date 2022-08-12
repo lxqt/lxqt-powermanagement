@@ -108,8 +108,8 @@ QString BatteryHelper::formatTime(qlonglong s)
     std::chrono::hours hour{sec.count() / 3600};
     sec -= hour;
     std::chrono::minutes min{(sec.count() + 30) / 60};
-    return (hour.count() > 0 ? (tr("%n hour(s)", "", hour.count()).arg(hour.count()) % QString::fromLatin1(" ")) : QString{})
-            % tr("%n minute(s)", "", min.count()).arg(min.count());
+    return (hour.count() > 0 ? (tr("%Ln hour(s)", "", hour.count()) % QString::fromLatin1(" ")) : QString{})
+            % tr("%Ln minute(s)", "", min.count());
 }
 
 QString BatteryHelper::timeToEmptyString(qlonglong remaingSec)
