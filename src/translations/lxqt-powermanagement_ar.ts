@@ -112,36 +112,36 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>0</numerusform>
+            <numerusform>ساعة</numerusform>
+            <numerusform>ساعتان</numerusform>
+            <numerusform>%n ساعة</numerusform>
+            <numerusform>%n ساعة</numerusform>
+            <numerusform>%n ساعة</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>0</numerusform>
+            <numerusform>دقيقة</numerusform>
+            <numerusform>دقيقتان</numerusform>
+            <numerusform>%n دقيقة</numerusform>
+            <numerusform>%n دقيقة</numerusform>
+            <numerusform>%n دقيقة</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>النسبة المتبقية %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>إلى %1 كاملة</translation>
     </message>
 </context>
 <context>
@@ -235,37 +235,37 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>سيُعلّق الحاسوب بعد %n ثوان</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>سيُعلّق الحاسوب بعد ثانية</numerusform>
+            <numerusform>سيُعلّق الحاسوب بعد ثانيتين</numerusform>
+            <numerusform>سيُعلّق الحاسوب بعد %n ثوان</numerusform>
+            <numerusform>سيُعلّق الحاسوب بعد %n ثوان</numerusform>
+            <numerusform>سيُعلّق الحاسوب بعد %n ثوان</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>سيُسبت الحاسوب بعد %n ثوان</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>سيُسبت الحاسوب بعد ثانية</numerusform>
+            <numerusform>سيُسبت الحاسوب بعد ثانيتين</numerusform>
+            <numerusform>سيُسبت الحاسوب بعد %n ثوان</numerusform>
+            <numerusform>سيُسبت الحاسوب بعد %n ثوان</numerusform>
+            <numerusform>سيُسبت الحاسوب بعد %n ثوان</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %n second(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>سيُطفأ الحاسوب بعد %n ثوان</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>سيُطفأ الحاسوب بعد ثانية</numerusform>
+            <numerusform>سيُطفأ الحاسوب بعد ثانيتين</numerusform>
+            <numerusform>سيُطفأ الحاسوب بعد %n ثوان</numerusform>
+            <numerusform>سيُطفأ الحاسوب بعد %n ثوان</numerusform>
+            <numerusform>سيُطفأ الحاسوب بعد %n ثوان</numerusform>
         </translation>
     </message>
 </context>
@@ -274,17 +274,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>إيقاف تشغيل الإجراء الرئيسي</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>تعليق الإجراء الرئيسي</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>الإجراء الرئيسي للسبات</translation>
     </message>
 </context>
 <context>
@@ -317,32 +317,32 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="75"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 دقیقة</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="79"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1 ساعة</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="83"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 ساعة</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="87"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 ساعات</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="91"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 ساعات</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="96"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>إيقاف فحوصات الخمول مؤقتا</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
