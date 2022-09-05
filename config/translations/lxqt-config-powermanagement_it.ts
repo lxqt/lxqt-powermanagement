@@ -86,7 +86,7 @@
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Batteria con percentuale e sfondo</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
