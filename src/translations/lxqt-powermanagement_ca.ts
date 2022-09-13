@@ -111,28 +111,28 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n hora</numerusform>
+            <numerusform>%n hores</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minut</numerusform>
+            <numerusform>%n minuts</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 restant</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 per a càrrega completa</translation>
     </message>
 </context>
 <context>
