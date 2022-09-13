@@ -68,7 +68,7 @@
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>del tema</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
@@ -264,7 +264,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished">Formulari</translation>
+        <translation>Formulari</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
