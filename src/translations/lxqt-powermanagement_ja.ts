@@ -130,7 +130,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 で完全充電</translation>
     </message>
 </context>
 <context>
