@@ -132,7 +132,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished">jusqu&apos;à charge complète %1</translation>
+        <translation>Chargement %1</translation>
     </message>
 </context>
 <context>
