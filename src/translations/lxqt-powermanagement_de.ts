@@ -5,8 +5,8 @@
     <name>BatteryHelper</name>
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
-        <source>Empty</source>
-        <translation>Leer</translation>
+        <source>Stable</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -110,18 +110,18 @@
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
-        <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n Stunde</numerusform>
-            <numerusform>%n Stunden</numerusform>
+        <source>%Ln hour(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
-        <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n Minute</numerusform>
-            <numerusform>%n Minuten</numerusform>
+        <source>%Ln minute(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -205,6 +205,11 @@
         <source>Vendor:</source>
         <translation>Hersteller:</translation>
     </message>
+    <message>
+        <location filename="../batteryinfoframe.cpp" line="65"/>
+        <source>Empty</source>
+        <translation type="unfinished">Leer</translation>
+    </message>
 </context>
 <context>
     <name>BatteryWatcher</name>
@@ -225,26 +230,26 @@
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
-        <source>Suspending in %n second(s)</source>
-        <translation>
-            <numerusform>Bereitschaftsmodus in %n Sekunde(n)</numerusform>
-            <numerusform>Bereitschaftsmodus in %n Sekunden</numerusform>
+        <source>Suspending in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
-        <source>Hibernating in %n second(s)</source>
-        <translation>
-            <numerusform>Ruhezustand in %n Sekunde(n)</numerusform>
-            <numerusform>Ruhezustand in %n Sekunden</numerusform>
+        <source>Hibernating in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
-        <source>Shutting down in %n second(s)</source>
-        <translation>
-            <numerusform>Herunterfahren in %n Sekunde(n)</numerusform>
-            <numerusform>Herunterfahren in %n Sekunden</numerusform>
+        <source>Shutting down in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -325,7 +330,7 @@ Sie können sie in den Einstellungen konfigurieren... </translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
-        <location filename="../trayicon.cpp" line="191"/>
+        <location filename="../trayicon.cpp" line="193"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
@@ -335,22 +340,27 @@ Sie können sie in den Einstellungen konfigurieren... </translation>
         <translation>Symbol deaktivieren</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="192"/>
+        <location filename="../trayicon.cpp" line="162"/>
+        <source>Empty</source>
+        <translation type="unfinished">Leer</translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="194"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt-Energieverwaltung&lt;/b&gt;&lt;br/&gt;  - Energieverwaltung für die LXQt-Desktop-Umgebung&lt;/p&gt;&lt;p&gt;  Autoren:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - und Andere aus den Razor- und LXQt-Projekten&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="210"/>
+        <location filename="../trayicon.cpp" line="212"/>
         <source>LXQt Power Management info</source>
         <translation>LXQt-Energieverwaltung-Info</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="211"/>
+        <location filename="../trayicon.cpp" line="213"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Das LXQt-Energieverwaltung-Systemleistensymbol kann in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt; (wieder) aktiviert werden</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="215"/>
         <source>Configure now</source>
         <translation>Jetzt konfigurieren</translation>
     </message>

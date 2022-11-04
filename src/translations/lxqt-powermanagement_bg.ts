@@ -5,8 +5,8 @@
     <name>BatteryHelper</name>
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
-        <source>Empty</source>
-        <translation>Празна</translation>
+        <source>Stable</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -110,18 +110,18 @@
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
-        <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n час</numerusform>
-            <numerusform>%n часа</numerusform>
+        <source>%Ln hour(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
-        <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n минута</numerusform>
-            <numerusform>%n минути</numerusform>
+        <source>%Ln minute(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -205,6 +205,11 @@
         <source>Vendor:</source>
         <translation>Vendor:</translation>
     </message>
+    <message>
+        <location filename="../batteryinfoframe.cpp" line="65"/>
+        <source>Empty</source>
+        <translation type="unfinished">Празна</translation>
+    </message>
 </context>
 <context>
     <name>BatteryWatcher</name>
@@ -225,26 +230,26 @@
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
-        <source>Suspending in %n second(s)</source>
-        <translation>
-            <numerusform>Приспиване след %n секунда</numerusform>
-            <numerusform>Приспиване след %n секунди</numerusform>
+        <source>Suspending in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
-        <source>Hibernating in %n second(s)</source>
-        <translation>
-            <numerusform>Хибернация след %n секунда</numerusform>
-            <numerusform>Хибернация след %n секунди</numerusform>
+        <source>Hibernating in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
-        <source>Shutting down in %n second(s)</source>
-        <translation>
-            <numerusform>Изключване след %n секунда</numerusform>
-            <numerusform>Изключване след %n секунди</numerusform>
+        <source>Shutting down in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -325,7 +330,7 @@ You can configure it from settings... </source>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
-        <location filename="../trayicon.cpp" line="191"/>
+        <location filename="../trayicon.cpp" line="193"/>
         <source>About</source>
         <translation>Относно</translation>
     </message>
@@ -335,22 +340,27 @@ You can configure it from settings... </source>
         <translation>Деактивиране на икона</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="192"/>
+        <location filename="../trayicon.cpp" line="162"/>
+        <source>Empty</source>
+        <translation type="unfinished">Празна</translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="194"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt Управление на захранването&lt;/b&gt;&lt;br/&gt;  - Управление на захранването на LXQt работна среда&lt;/p&gt;&lt;p&gt;  Автори:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и други от Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="210"/>
+        <location filename="../trayicon.cpp" line="212"/>
         <source>LXQt Power Management info</source>
         <translation>Управление на захранването Инфо</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="211"/>
+        <location filename="../trayicon.cpp" line="213"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Иконата за зоната на системния обмен може да бъде активирана в&lt;i&gt;Настройки-&gt;LXQt-&gt;Управление на захранването&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="215"/>
         <source>Configure now</source>
         <translation>Конфигурирай сега</translation>
     </message>

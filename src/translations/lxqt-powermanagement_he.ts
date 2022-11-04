@@ -5,8 +5,8 @@
     <name>BatteryHelper</name>
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
-        <source>Empty</source>
-        <translation>ריק</translation>
+        <source>Stable</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -110,18 +110,18 @@
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
-        <source>%n hour(s)</source>
-        <translation>
-            <numerusform>שעה</numerusform>
-            <numerusform>שעתיים</numerusform>
+        <source>%Ln hour(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
-        <source>%n minute(s)</source>
-        <translation>
-            <numerusform>דקה</numerusform>
-            <numerusform>שתי דקות</numerusform>
+        <source>%Ln minute(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -205,6 +205,11 @@
         <source>Vendor:</source>
         <translation>יצרן:</translation>
     </message>
+    <message>
+        <location filename="../batteryinfoframe.cpp" line="65"/>
+        <source>Empty</source>
+        <translation type="unfinished">ריק</translation>
+    </message>
 </context>
 <context>
     <name>BatteryWatcher</name>
@@ -225,26 +230,26 @@
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
-        <source>Suspending in %n second(s)</source>
-        <translation>
-            <numerusform>כניסה למצב השהיה בעוד שנייה</numerusform>
-            <numerusform>כניסה למצב השהיה בעוד %n שניות</numerusform>
+        <source>Suspending in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
-        <source>Hibernating in %n second(s)</source>
-        <translation>
-            <numerusform>כניסה לתרדמת בעוד שנייה</numerusform>
-            <numerusform>כניסה לתרדמת בעוד %n שניות</numerusform>
+        <source>Hibernating in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
-        <source>Shutting down in %n second(s)</source>
-        <translation>
-            <numerusform>כיבוי בעוד שנייה</numerusform>
-            <numerusform>כיבוי בעוד %n שניות</numerusform>
+        <source>Shutting down in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -325,7 +330,7 @@ You can configure it from settings... </source>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
-        <location filename="../trayicon.cpp" line="191"/>
+        <location filename="../trayicon.cpp" line="193"/>
         <source>About</source>
         <translation>על אודות</translation>
     </message>
@@ -335,22 +340,27 @@ You can configure it from settings... </source>
         <translation>השבתת סמל</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="192"/>
+        <location filename="../trayicon.cpp" line="162"/>
+        <source>Empty</source>
+        <translation type="unfinished">ריק</translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="194"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;מנהל צריכת החשמל שלLXQt&lt;/b&gt;&lt;br/&gt;  - ניהול צריכת חשמל לסביבת שולחן העבודה LXQt&lt;/p&gt;&lt;p&gt;  יוצרים:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - ופעילים נוספים ממיזמי Razor ו־LXQt&lt;/p&gt;&lt;p&gt;  כל הזכויות שמורות &amp;copy; 2012‏-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="210"/>
+        <location filename="../trayicon.cpp" line="212"/>
         <source>LXQt Power Management info</source>
         <translation>פרטי צריכת חשמל של LXQt</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="211"/>
+        <location filename="../trayicon.cpp" line="213"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>ניתן להפעיל (מחדש) את סמל המערכת לניהול צריכת החשמל של LXQt תחת &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="215"/>
         <source>Configure now</source>
         <translation>להגדיר כעת</translation>
     </message>

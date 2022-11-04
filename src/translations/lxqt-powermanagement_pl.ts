@@ -5,8 +5,8 @@
     <name>BatteryHelper</name>
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
-        <source>Empty</source>
-        <translation>Pusta</translation>
+        <source>Stable</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -110,20 +110,20 @@
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
-        <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n godzina</numerusform>
-            <numerusform>%n godziny</numerusform>
-            <numerusform>%n godzin</numerusform>
+        <source>%Ln hour(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
-        <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minuta</numerusform>
-            <numerusform>%n minuty</numerusform>
-            <numerusform>%n minut</numerusform>
+        <source>%Ln minute(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -207,6 +207,11 @@
         <source>Vendor:</source>
         <translation>Producent:</translation>
     </message>
+    <message>
+        <location filename="../batteryinfoframe.cpp" line="65"/>
+        <source>Empty</source>
+        <translation type="unfinished">Pusta</translation>
+    </message>
 </context>
 <context>
     <name>BatteryWatcher</name>
@@ -227,29 +232,29 @@
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
-        <source>Suspending in %n second(s)</source>
-        <translation>
-            <numerusform>Uśpienie nastąpi za %n sekundę</numerusform>
-            <numerusform>Uśpienie nastąpi za %n sekundy</numerusform>
-            <numerusform>Uśpienie nastąpi za %n sekund</numerusform>
+        <source>Suspending in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
-        <source>Hibernating in %n second(s)</source>
-        <translation>
-            <numerusform>Hibernacja nastąpi za %n sekundę</numerusform>
-            <numerusform>Hibernacja nastąpi za %n sekundy</numerusform>
-            <numerusform>Hibernacja nastąpi za %n sekund</numerusform>
+        <source>Hibernating in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
-        <source>Shutting down in %n second(s)</source>
-        <translation>
-            <numerusform>Komputer zostanie wyłączony za %n sekundę</numerusform>
-            <numerusform>Komputer zostanie wyłączony za %n sekundy</numerusform>
-            <numerusform>Komputer zostanie wyłączony za %n sekund</numerusform>
+        <source>Shutting down in %Ln second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -330,7 +335,7 @@ Możesz skonfigurować jego ustawienia… </translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
-        <location filename="../trayicon.cpp" line="191"/>
+        <location filename="../trayicon.cpp" line="193"/>
         <source>About</source>
         <translation>Info</translation>
     </message>
@@ -340,22 +345,27 @@ Możesz skonfigurować jego ustawienia… </translation>
         <translation>Wyłącz ikonę</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="192"/>
+        <location filename="../trayicon.cpp" line="162"/>
+        <source>Empty</source>
+        <translation type="unfinished">Pusta</translation>
+    </message>
+    <message>
+        <location filename="../trayicon.cpp" line="194"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;Zarządzanie energią LXQt&lt;/b&gt;&lt;br/&gt;  - Zarządzanie energią w środowisku LXQt&lt;/p&gt;&lt;p&gt;  Autorzy:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - i inni z projektu Razor i LXQt&lt;/p&gt;&lt;p&gt;  Prawa autorskie &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="210"/>
+        <location filename="../trayicon.cpp" line="212"/>
         <source>LXQt Power Management info</source>
         <translation>Informacje o Zarządzaniu energią LXQt</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="211"/>
+        <location filename="../trayicon.cpp" line="213"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Ikona w pasku zadań może być włączona ponownie w ustawieniach Zarządzania energią LXQt</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="215"/>
         <source>Configure now</source>
         <translation>Konfiguruj teraz</translation>
     </message>
