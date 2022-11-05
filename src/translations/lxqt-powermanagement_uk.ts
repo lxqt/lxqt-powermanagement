@@ -6,12 +6,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Стабільний</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
         <source>Discharging</source>
-        <translation>Розрядження</translation>
+        <translation>Розряджання</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="48"/>
@@ -111,19 +111,19 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln година</numerusform>
+            <numerusform>%Ln години</numerusform>
+            <numerusform>%Ln годин</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln хвилина</numerusform>
+            <numerusform>%Ln хвилини</numerusform>
+            <numerusform>%Ln хвилин</numerusform>
         </translation>
     </message>
     <message>
@@ -210,7 +210,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation type="unfinished">Повністю розряджено</translation>
+        <translation>Розряджена</translation>
     </message>
 </context>
 <context>
@@ -233,28 +233,28 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Режим сну за %Ln секунду</numerusform>
+            <numerusform>Режим сну за %Ln секунди</numerusform>
+            <numerusform>Режим сну за %Ln секунд</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Режим глибокого сну за %Ln секунду</numerusform>
+            <numerusform>Режим глибокого сну за %Ln секунди</numerusform>
+            <numerusform>Режим глибокого сну за %Ln секунд</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Вимкнення за %Ln секунду</numerusform>
+            <numerusform>Вимкнення за %Ln секунди</numerusform>
+            <numerusform>Вимкнення за %Ln секунд</numerusform>
         </translation>
     </message>
 </context>
@@ -347,7 +347,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="162"/>
         <source>Empty</source>
-        <translation type="unfinished">Повністю розряджено</translation>
+        <translation>Розряджена</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="194"/>
