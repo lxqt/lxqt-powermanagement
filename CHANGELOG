@@ -1,3 +1,9 @@
+lxqt-powermanagement-1.2.0 / 2022-11-05
+========================================
+ * Better tray icon descriptions.
+ * Consider the stable state of battery (neither charging nor discharging).
+ * Fixed the error message "QString::arg: Argument missing".
+
 lxqt-powermanagement-1.1.0 / 2022-04-15
 ========================================
  * Updated `README.md`.
