@@ -231,9 +231,9 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform>Suspendre dans %Ln seconde</numerusform>
-            <numerusform>Suspendre dans %Ln secondes</numerusform>
+        <translation>
+            <numerusform>Suspension dans %Ln seconde</numerusform>
+            <numerusform>Suspension dans %Ln secondes</numerusform>
         </translation>
     </message>
     <message numerus="yes">

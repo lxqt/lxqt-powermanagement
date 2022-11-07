@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Stabiel</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -111,17 +111,17 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln uur</numerusform>
+            <numerusform>%Ln uur</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln minuut</numerusform>
+            <numerusform>%Ln minuten</numerusform>
         </translation>
     </message>
     <message>
@@ -208,7 +208,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation type="unfinished">Leeg</translation>
+        <translation>Leeg</translation>
     </message>
 </context>
 <context>
@@ -231,25 +231,25 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>De pauzestand wordt over %Ln seconde ingeschakeld</numerusform>
+            <numerusform>De pauzestand wordt over %Ln seconden ingeschakeld</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>De slaapstand wordt over %Ln seconde ingeschakeld</numerusform>
+            <numerusform>De slaapstand wordt over %Ln seconden ingeschakeld</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>De computer wordt over %Ln seconde uitgeschakeld</numerusform>
+            <numerusform>De computer wordt over %Ln seconden uitgeschakeld</numerusform>
         </translation>
     </message>
 </context>
@@ -342,7 +342,7 @@ U kunt energiebeheer instellen in de instellingen… </translation>
     <message>
         <location filename="../trayicon.cpp" line="162"/>
         <source>Empty</source>
-        <translation type="unfinished">Leeg</translation>
+        <translation>Leeg</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="194"/>
