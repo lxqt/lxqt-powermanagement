@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikon:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
@@ -68,31 +68,31 @@
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>fra tema</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>Circle</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel med procent</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Batteri med procent og baggrund</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Batteri med procent</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="104"/>

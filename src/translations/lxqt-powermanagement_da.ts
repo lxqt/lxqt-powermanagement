@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Stabil</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -111,28 +111,28 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln time</numerusform>
+            <numerusform>%Ln timer</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln minut</numerusform>
+            <numerusform>%Ln minutter</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>resterende %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>til fuld %1</translation>
     </message>
 </context>
 <context>
@@ -208,7 +208,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation type="unfinished">Tomt</translation>
+        <translation>Tom</translation>
     </message>
 </context>
 <context>
@@ -231,25 +231,25 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Suspenderer om %Ln sekund</numerusform>
+            <numerusform>Suspenderer om %Ln sekunder</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Går i dvale om %Ln sekund</numerusform>
+            <numerusform>Går i dvale om %Ln sekunder</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lukker ned om %Ln sekund</numerusform>
+            <numerusform>Lukker ned om %Ln sekunder</numerusform>
         </translation>
     </message>
 </context>
@@ -301,32 +301,32 @@ Du kan konfigurere den fra indstillinger... </translation>
     <message>
         <location filename="../trayicon.cpp" line="75"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 minutter</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="79"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1 time</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="83"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 timer</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="87"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 timer</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="91"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 timer</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="96"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Sæt tomgangskontrol på pause</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
@@ -342,7 +342,7 @@ Du kan konfigurere den fra indstillinger... </translation>
     <message>
         <location filename="../trayicon.cpp" line="162"/>
         <source>Empty</source>
-        <translation type="unfinished">Tomt</translation>
+        <translation>Tom</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="194"/>

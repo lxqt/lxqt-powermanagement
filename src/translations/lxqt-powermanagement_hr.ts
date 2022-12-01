@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Stabilno</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -111,19 +111,19 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln sat</numerusform>
+            <numerusform>%Ln sata</numerusform>
+            <numerusform>%Ln sati</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln minuta</numerusform>
+            <numerusform>%Ln minute</numerusform>
+            <numerusform>%Ln minuta</numerusform>
         </translation>
     </message>
     <message>
@@ -210,7 +210,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation type="unfinished">Prazna</translation>
+        <translation>Prazna</translation>
     </message>
 </context>
 <context>
@@ -347,7 +347,7 @@ Možeš ga konfigurirati u postavkama … </translation>
     <message>
         <location filename="../trayicon.cpp" line="162"/>
         <source>Empty</source>
-        <translation type="unfinished">Prazna</translation>
+        <translation>Prazno</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="194"/>
