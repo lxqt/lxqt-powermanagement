@@ -36,7 +36,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikon:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>

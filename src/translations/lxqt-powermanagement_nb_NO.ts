@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Stabil</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -111,17 +111,17 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln time</numerusform>
+            <numerusform>%Ln timer</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln minutt</numerusform>
+            <numerusform>%Ln minutter</numerusform>
         </translation>
     </message>
     <message>
