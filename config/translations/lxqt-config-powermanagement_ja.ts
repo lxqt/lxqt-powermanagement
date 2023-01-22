@@ -80,7 +80,7 @@
         <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished">パーセント付きの円</translation>
+        <translation>パーセント付きの円</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
