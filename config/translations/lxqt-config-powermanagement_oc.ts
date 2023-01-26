@@ -236,7 +236,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres de gestion energetica</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="40"/>
@@ -256,7 +256,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Botons d’alimentacion</translation>
     </message>
 </context>
 <context>

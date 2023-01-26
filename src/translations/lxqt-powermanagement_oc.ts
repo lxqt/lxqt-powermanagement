@@ -153,7 +153,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation>Gestionari d’energia</translation>
+        <translation>Gestion energetica</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="53"/>
@@ -276,7 +276,7 @@
     <message>
         <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
-        <translation>Gestionari d’energia</translation>
+        <translation>Gestion energetica</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="116"/>
