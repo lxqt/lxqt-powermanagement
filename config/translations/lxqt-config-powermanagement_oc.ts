@@ -147,7 +147,7 @@
         <location filename="../idlenesswatchersettings.ui" line="110"/>
         <location filename="../idlenesswatchersettings.ui" line="178"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
@@ -197,33 +197,33 @@
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sus batariá :</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
         <source>Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Res</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation type="unfinished"></translation>
+        <translation>Suspendre</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ivernar</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
-        <translation type="unfinished"></translation>
+        <translation>Atudar</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sul sector</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
@@ -241,7 +241,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="40"/>
         <source>Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Batariá</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="44"/>
@@ -251,7 +251,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="48"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactiu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
@@ -264,7 +264,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulari</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
@@ -292,32 +292,32 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Res</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="36"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Demandar</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="37"/>
         <source>Lock screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Verrolhar l’ecran</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Suspend</source>
-        <translation type="unfinished"></translation>
+        <translation>Suspendre</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Hibernate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ivernar</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Shutdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Atudar</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="41"/>
