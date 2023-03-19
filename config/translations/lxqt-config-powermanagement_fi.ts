@@ -86,7 +86,7 @@
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Akku ja prosentit taustalla</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
@@ -207,12 +207,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation>Lepotila</translation>
+        <translation>Valmiustila</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>Horrostila</translation>
+        <translation>Lepotila</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
@@ -279,12 +279,12 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>Lepotila-näppäimen toiminto:</translation>
+        <translation>Valmiustila-näppäimen toiminto:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>Horrostilanäppäimen toiminto:</translation>
+        <translation>Lepotilanäppäimen toiminto:</translation>
     </message>
 </context>
 <context>
@@ -307,12 +307,12 @@
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Suspend</source>
-        <translation>Siirry lepotilaan</translation>
+        <translation>Siirry valmiustilaan</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="39"/>
         <source>Hibernate</source>
-        <translation>Siirry horrostilaan</translation>
+        <translation>Siirry lepotilaan</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
