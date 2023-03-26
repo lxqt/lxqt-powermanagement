@@ -188,7 +188,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Latausaste:</translation>
+        <translation>Latausnopeus:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
