@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Estável</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -111,28 +111,28 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln hora</numerusform>
+            <numerusform>%Ln horas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln minuto</numerusform>
+            <numerusform>%Ln minutos</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 restante</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 para carga completa</translation>
     </message>
 </context>
 <context>
@@ -208,7 +208,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation type="unfinished">Descarregada</translation>
+        <translation>Vazia</translation>
     </message>
 </context>
 <context>
@@ -231,25 +231,25 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Suspendendo em %Ln segundo</numerusform>
+            <numerusform>Suspendendo em %Ln segundos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Hibernando em %Ln segundo</numerusform>
+            <numerusform>Hibernando em %Ln segundos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Desligando em %Ln segundo</numerusform>
+            <numerusform>Desligando em %Ln segundos</numerusform>
         </translation>
     </message>
 </context>
@@ -342,7 +342,7 @@ Você pode ajustá-lo como quiser pelo menu de configurações... </translation>
     <message>
         <location filename="../trayicon.cpp" line="162"/>
         <source>Empty</source>
-        <translation type="unfinished">Descarregada</translation>
+        <translation>Descarregada</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="194"/>
