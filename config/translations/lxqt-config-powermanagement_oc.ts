@@ -197,7 +197,7 @@
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery:</source>
-        <translation>Sus batariá :</translation>
+        <translation>Sus batariá&#x202f;:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>

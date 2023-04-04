@@ -193,17 +193,17 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
         <source>Technology:</source>
-        <translation>Tecnologia :</translation>
+        <translation>Tecnologia&#xa0;:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="182"/>
         <source>Voltage:</source>
-        <translation>Voltatge :</translation>
+        <translation>Voltatge&#xa0;:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation>Fabricant :</translation>
+        <translation>Fabricant&#xa0;:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
@@ -216,7 +216,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
-        <translation>Cap de batariá !</translation>
+        <translation>Cap de batariá&#xa0;!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
@@ -226,7 +226,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="119"/>
         <source>Power low!</source>
-        <translation>Energia febla !</translation>
+        <translation>Energia febla&#xa0;!</translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>

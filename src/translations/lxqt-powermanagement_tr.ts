@@ -113,14 +113,12 @@
         <source>%Ln hour(s)</source>
         <translation>
             <numerusform>%Ln saat</numerusform>
-            <numerusform>%Ln saat</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
         <translation>
-            <numerusform>%Ln dakika</numerusform>
             <numerusform>%Ln dakika</numerusform>
         </translation>
     </message>
@@ -233,7 +231,6 @@
         <source>Suspending in %Ln second(s)</source>
         <translation>
             <numerusform>%Ln saniye içinde askıya alınacak</numerusform>
-            <numerusform>%Ln saniye içinde askıya alınacak</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -241,14 +238,12 @@
         <source>Hibernating in %Ln second(s)</source>
         <translation>
             <numerusform>%Ln saniye içinde beklemeye alınacak</numerusform>
-            <numerusform>%Ln saniye içinde hazırda bekletme</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
         <translation>
-            <numerusform>%Ln saniye içinde kapanacak</numerusform>
             <numerusform>%Ln saniye içinde kapanacak</numerusform>
         </translation>
     </message>
