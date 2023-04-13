@@ -233,28 +233,28 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Pripravno stanje za %Ln sekundu</numerusform>
+            <numerusform>Pripravno stanje za %Ln sekunde</numerusform>
+            <numerusform>Pripravno stanje za %Ln sekundi</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Stanje mirovanja za %Ln sekundu</numerusform>
+            <numerusform>Stanje mirovanja za %Ln sekunde</numerusform>
+            <numerusform>Stanje mirovanja za %Ln sekundi</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Gašenje za %Ln sekundu</numerusform>
+            <numerusform>Gašenje za %Ln sekunde</numerusform>
+            <numerusform>Gašenje za %Ln sekundi</numerusform>
         </translation>
     </message>
 </context>
