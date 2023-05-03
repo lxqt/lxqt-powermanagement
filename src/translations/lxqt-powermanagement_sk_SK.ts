@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Stabilný</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -111,19 +111,19 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln hodina</numerusform>
+            <numerusform>%Ln hodín</numerusform>
+            <numerusform>%Ln hodiny</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln minúta</numerusform>
+            <numerusform>%Ln minút</numerusform>
+            <numerusform>%Ln minuty</numerusform>
         </translation>
     </message>
     <message>
@@ -210,7 +210,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation type="unfinished">Takmer vybité</translation>
+        <translation>Vybitá</translation>
     </message>
 </context>
 <context>
@@ -233,28 +233,28 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Vypnutie za %Ln sekundu</numerusform>
+            <numerusform>Vypnutie za %Ln sekúnd</numerusform>
+            <numerusform>Vypnutie za %Ln sekundy</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Uspanie za %Ln sekundu</numerusform>
+            <numerusform>Uspanie za %Ln sekúnd</numerusform>
+            <numerusform>Uspanie za %Ln sekundy</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Vypnutie za %Ln sekunda</numerusform>
+            <numerusform>Vypnutie za %Ln sekúnd</numerusform>
+            <numerusform>Vypnutie za %Ln sekundy</numerusform>
         </translation>
     </message>
 </context>
@@ -347,7 +347,7 @@ Parametre je možné upraviť v Nastaveniach… </translation>
     <message>
         <location filename="../trayicon.cpp" line="162"/>
         <source>Empty</source>
-        <translation type="unfinished">Takmer vybité</translation>
+        <translation>Vybitá</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="194"/>
