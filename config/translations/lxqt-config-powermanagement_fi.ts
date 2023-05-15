@@ -178,7 +178,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation>Poista toimettomuuden tarkistukset koko näytön tilassa</translation>
+        <translation>Älä valvo joutilasta aikaa koko näytön tilassa</translation>
     </message>
 </context>
 <context>
