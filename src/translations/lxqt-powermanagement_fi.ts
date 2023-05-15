@@ -326,7 +326,7 @@ Voit muuttaa sen toimintaa asetuksista… </translation>
     <message>
         <location filename="../trayicon.cpp" line="96"/>
         <source>Pause idleness checks</source>
-        <translation>Pysäytä toimettomuuden tarkkailu</translation>
+        <translation>Pysäytä joutilaan ajan valvonta</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="101"/>
