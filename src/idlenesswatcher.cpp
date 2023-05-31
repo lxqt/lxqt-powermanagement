@@ -30,6 +30,7 @@
 #include <Solid/Device>
 #include <Solid/Battery>
 #include <KWindowSystem/KWindowSystem>
+#include <KWindowSystem/KX11Extras>
 #include <KWindowSystem/KWindowInfo>
 #include <QDebug>
 #include <LXQt/lxqtnotification.h>
@@ -122,7 +123,7 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
 
     // check if disable Idleness when fullscreen is enabled
     if (mPSettings.isDisableIdlenessWhenFullscreenEnabled()) {
-        WId w = KWindowSystem::activeWindow();
+        WId w = KX11Extras::activeWindow();
         KWindowInfo info(w, NET::WMState);
         if (info.hasState(NET::FullScreen)) {
             QTimer::singleShot(0, this, [] {
