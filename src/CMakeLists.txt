@@ -57,6 +57,8 @@ target_link_libraries(lxqt-powermanagement
     KF5::Solid
     KF5::IdleTime
     lxqt-globalkeys
+    Qt5::X11Extras
+    ${XCB_LIBRARIES}
 )
 
 install(TARGETS

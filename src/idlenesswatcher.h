@@ -45,6 +45,8 @@ private Q_SLOTS:
     void onSettingsChanged();
 
 private:
+    void setDpmsTimeouts(bool restore);
+
     PowerManagementSettings mPSettings;
     int mIdleACWatcher;
     int mIdleBatteryWatcher;
@@ -52,6 +54,7 @@ private:
     LXQt::Backlight *mBacklight;
     int mBacklightActualValue;
     bool mDischarging;
+    quint16 mDpmsStandby, mDpmsSuspend, mDpmsOff;
 };
 
 #endif // IDLENESSWATCHER_H
