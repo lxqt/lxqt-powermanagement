@@ -34,7 +34,7 @@
 int main(int argc, char *argv[])
 {
 
-    LXQt::Application a(argc, argv);
+    LXQt::Application a(argc, argv, true);
     a.setQuitOnLastWindowClosed(false);
 
     QCommandLineParser parser;

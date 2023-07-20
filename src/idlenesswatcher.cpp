@@ -24,7 +24,7 @@
 
 #include "idlenesswatcher.h"
 
-#include <QCoreApplication>
+#include <QGuiApplication>
 #include <QTimer>
 #include <KIdleTime>
 #include <Solid/Device>
@@ -35,6 +35,8 @@
 #include <QDebug>
 #include <LXQt/lxqtnotification.h>
 #include <QObject>
+#include <QX11Info>
+#include <xcb/dpms.h>
 
 IdlenessWatcher::IdlenessWatcher(QObject* parent):
     Watcher(parent)
@@ -68,12 +70,38 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
 
     connect(&mPSettings, &LXQt::Settings::settingsChanged, this, &IdlenessWatcher::onSettingsChanged);
 
+    // retrieve DPMS timeouts
+    mDpmsStandby = mDpmsSuspend = mDpmsOff = 0;
+    if (QGuiApplication::platformName() == QStringLiteral("xcb")) {
+        xcb_connection_t* c = QX11Info::connection();
+        xcb_dpms_get_timeouts_cookie_t cookie = xcb_dpms_get_timeouts(c);
+        xcb_dpms_get_timeouts_reply_t* reply = xcb_dpms_get_timeouts_reply(c, cookie, nullptr);
+        if (reply) {
+            mDpmsStandby = reply->standby_timeout;
+            mDpmsSuspend = reply->suspend_timeout;
+            mDpmsOff = reply->off_timeout;
+            free(reply);
+        }
+    }
+
     setup();
 }
 
 IdlenessWatcher::~IdlenessWatcher()
 {
+    setDpmsTimeouts(true);
     KIdleTime::instance()->removeAllIdleTimeouts();
+}
+
+void IdlenessWatcher::setDpmsTimeouts(bool restore) {
+    if (QGuiApplication::platformName() == QStringLiteral("xcb")) {
+        if (restore) {
+            xcb_dpms_set_timeouts(QX11Info::connection(), mDpmsStandby, mDpmsSuspend, mDpmsOff);
+        }
+        else {
+            xcb_dpms_set_timeouts(QX11Info::connection(), 0, 0, 0);
+        }
+    }
 }
 
 void IdlenessWatcher::setup()
@@ -109,6 +137,13 @@ void IdlenessWatcher::setup()
                 milliseconds = 1000;
             mIdleBacklightWatcher = KIdleTime::instance()->addIdleTimeout(milliseconds);
         }
+
+        // override DPMS settings
+        setDpmsTimeouts(false);
+    }
+    else {
+        // restore DPMS settings
+        setDpmsTimeouts(true);
     }
 }
 

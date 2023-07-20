@@ -15,18 +15,22 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
+set(LXQTBT_MINIMUM_VERSION "0.13.0")
 set(KF5_MINIMUM_VERSION "5.101.0")
 set(LXQT_MINIMUM_VERSION "1.3.0")
 set(QT_MINIMUM_VERSION "5.15.0")
 
+find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt5DBus ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt5LinguistTools ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt5Svg ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(Qt5X11Extras ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(KF5IdleTime ${KF5_MINIMUM_VERSION} REQUIRED)
 find_package(KF5Solid ${KF5_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt-globalkeys-ui ${LXQT_GLOBALKEYS_MINIMUM_VERSION} REQUIRED)
+find_package(XCB REQUIRED COMPONENTS xcb-dpms)
 
 message(STATUS "Building with Qt${Qt5Core_VERSION}")
 
