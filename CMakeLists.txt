@@ -30,7 +30,7 @@ find_package(KF5IdleTime ${KF5_MINIMUM_VERSION} REQUIRED)
 find_package(KF5Solid ${KF5_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt-globalkeys-ui ${LXQT_GLOBALKEYS_MINIMUM_VERSION} REQUIRED)
-find_package(XCB REQUIRED COMPONENTS xcb-dpms)
+find_package(XCB REQUIRED COMPONENTS xcb-dpms xcb-screensaver)
 
 message(STATUS "Building with Qt${Qt5Core_VERSION}")
 
