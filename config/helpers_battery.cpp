@@ -27,12 +27,13 @@
 
 #include <LXQt/Power>
 
-#include "helpers.h"
+#include "helpers_battery.h"
 
-void fillComboBox(QComboBox* comboBox)
+void fillComboBoxBat(QComboBox* comboBox)
 {
     comboBox->clear();
     comboBox->addItem(QObject::tr("Nothing"), -1);
+    comboBox->addItem(QObject::tr("Ask"), LXQt::Power::PowerShowLeaveDialog);
     comboBox->addItem(QObject::tr("Lock screen"), -2); // FIXME
     comboBox->addItem(QObject::tr("Suspend"), LXQt::Power::PowerSuspend);
     comboBox->addItem(QObject::tr("Hibernate"), LXQt::Power::PowerHibernate);
@@ -40,7 +41,7 @@ void fillComboBox(QComboBox* comboBox)
     comboBox->addItem(QObject::tr("Turn Off monitor(s)"), LXQt::Power::PowerMonitorOff);
 }
 
-void setComboBoxToValue(QComboBox* comboBox, int value)
+void setComboBoxToValueBat(QComboBox* comboBox, int value)
 {
     for (int index = 0; index < comboBox->count(); index++)
     {
@@ -54,7 +55,7 @@ void setComboBoxToValue(QComboBox* comboBox, int value)
     comboBox->setCurrentIndex(0);
 }
 
-int currentValue(QComboBox *comboBox)
+int currentValueBat(QComboBox *comboBox)
 {
     return comboBox->itemData(comboBox->currentIndex()).toInt();
 }

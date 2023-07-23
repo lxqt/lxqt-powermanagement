@@ -54,7 +54,7 @@ BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
 
 {
     mUi->setupUi(this);
-    fillComboBox(mUi->actionComboBox);
+    fillComboBoxBat(mUi->actionComboBox);
     fillIconTypeCombo(mUi->iconTypeComboBox);
     mUi->chargeLevelSlider->setValue(53);
     mChargingIconProducer.updateState(Solid::Battery::Charging);
@@ -82,21 +82,21 @@ BatteryWatcherSettings::~BatteryWatcherSettings()
 void BatteryWatcherSettings::loadSettings()
 {
     mUi->groupBox->setChecked(mSettings.isBatteryWatcherEnabled());
-    setComboBoxToValue(mUi->actionComboBox, mSettings.getPowerLowAction());
+    setComboBoxToValueBat(mUi->actionComboBox, mSettings.getPowerLowAction());
     mUi->warningSpinBox->setValue(mSettings.getPowerLowWarningTime());
     mUi->levelSpinBox->setValue(mSettings.getPowerLowLevel());
     mUi->showIconCheckBox->setChecked(mSettings.isShowIcon());
-    setComboBoxToValue(mUi->iconTypeComboBox, mSettings.getIconType());
+    setComboBoxToValueBat(mUi->iconTypeComboBox, mSettings.getIconType());
 }
 
 void BatteryWatcherSettings::saveSettings()
 {
     mSettings.setBatteryWatcherEnabled(mUi->groupBox->isChecked());
-    mSettings.setPowerLowAction(currentValue(mUi->actionComboBox));
+    mSettings.setPowerLowAction(currentValueBat(mUi->actionComboBox));
     mSettings.setPowerLowWarningTime(mUi->warningSpinBox->value());
     mSettings.setPowerLowLevel(mUi->levelSpinBox->value());
     mSettings.setShowIcon(mUi->showIconCheckBox->isChecked());
-    mSettings.setIconType(static_cast<PowerManagementSettings::IconType>(currentValue(mUi->iconTypeComboBox)));
+    mSettings.setIconType(static_cast<PowerManagementSettings::IconType>(currentValueBat(mUi->iconTypeComboBox)));
 }
 
 void BatteryWatcherSettings::updatePreview()

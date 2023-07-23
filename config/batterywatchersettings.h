@@ -33,7 +33,7 @@
 #include "../config/powermanagementsettings.h"
 #include "../src/iconproducer.h"
 
-#include "helpers.h"
+#include "helpers_battery.h"
 
 namespace Ui {
 class BatteryWatcherSettings;

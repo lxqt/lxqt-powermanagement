@@ -11,6 +11,7 @@ set(SOURCES
     powermanagementsettings.cpp
     powerkeyssettings.cpp
     helpers.cpp
+    helpers_battery.cpp
     ../src/iconproducer.cpp
 )
 
