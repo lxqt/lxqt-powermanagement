@@ -37,6 +37,7 @@
 #include <QObject>
 #include <QX11Info>
 #include <xcb/dpms.h>
+#include <xcb/screensaver.h>
 
 IdlenessWatcher::IdlenessWatcher(QObject* parent):
     Watcher(parent)
@@ -95,11 +96,14 @@ IdlenessWatcher::~IdlenessWatcher()
 
 void IdlenessWatcher::setDpmsTimeouts(bool restore) {
     if (QGuiApplication::platformName() == QStringLiteral("xcb")) {
+        xcb_connection_t* c = QX11Info::connection();
         if (restore) {
-            xcb_dpms_set_timeouts(QX11Info::connection(), mDpmsStandby, mDpmsSuspend, mDpmsOff);
+            xcb_dpms_set_timeouts(c, mDpmsStandby, mDpmsSuspend, mDpmsOff);
+            xcb_screensaver_suspend(c, 0); // WARNING: This is not documented but works.
         }
         else {
-            xcb_dpms_set_timeouts(QX11Info::connection(), 0, 0, 0);
+            xcb_dpms_set_timeouts(c, 0, 0, 0);
+            xcb_screensaver_suspend(c, XCB_SCREENSAVER_SUSPEND);
         }
     }
 }
