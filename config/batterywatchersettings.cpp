@@ -54,7 +54,7 @@ BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
 
 {
     mUi->setupUi(this);
-    fillComboBox(mUi->actionComboBox);
+    fillComboBox(mUi->actionComboBox, true);
     fillIconTypeCombo(mUi->iconTypeComboBox);
     mUi->chargeLevelSlider->setValue(53);
     mChargingIconProducer.updateState(Solid::Battery::Charging);

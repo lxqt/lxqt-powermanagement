@@ -10,7 +10,7 @@
 
 #include <QComboBox>
 
-void fillComboBox(QComboBox* comboBox);
+void fillComboBox(QComboBox* comboBox, bool ask = false);
 
 void setComboBoxToValue(QComboBox* comboBox, int value);
 
