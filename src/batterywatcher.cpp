@@ -42,13 +42,10 @@
 BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 {
     const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
-
-    if (devices.isEmpty())
-    {
-        LXQt::Notification::notify(tr("No battery!"),
-                tr("LXQt could not find data about any battery - monitoring disabled"),
-                QSL("lxqt-powermanagement"));
-    }
+    double totalEnergyFull = 0;
+    double totalEnergyNow = 0;
+    bool discharging = true;
+    double chargeLevel;
 
     for (Solid::Device device : devices)
     {
@@ -57,10 +54,21 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
         {
             continue;
         }
+
+        totalEnergyFull += battery->energyFull();
+        totalEnergyNow += battery->energy();
+        discharging &= (battery->chargeState() == Solid::Battery::Discharging);
+        chargeLevel = 100 * totalEnergyNow / totalEnergyFull;
         mBatteries << battery;
         connect(battery, &Solid::Battery::energyChanged, this, &BatteryWatcher::batteryChanged);
         connect(battery, &Solid::Battery::chargeStateChanged, this, &BatteryWatcher::batteryChanged);
     }
+
+    QString status = discharging ? QStringLiteral("Discharging") : QStringLiteral("Charging");
+    QString message = tr("%1 (%2%)").arg(status).arg(chargeLevel);
+    LXQt::Notification::notify(tr("Battery Present"),
+            message,
+            QSL("lxqt-powermanagement"));
 
     mBatteryInfoDialog = new BatteryInfoDialog(mBatteries);
 
