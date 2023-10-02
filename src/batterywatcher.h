@@ -51,6 +51,8 @@ private slots:
     void setPause(TrayIcon::PAUSE duration);
 
 private:
+    void chargeLevelAndStatus(bool &discharging, double &chargeLevel);
+
     QList<Solid::Battery*> mBatteries;
     QList<TrayIcon*> mTrayIcons;
     QTimer mPauseTimer;

@@ -42,10 +42,6 @@
 BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 {
     const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
-    double totalEnergyFull = 0;
-    double totalEnergyNow = 0;
-    bool discharging = true;
-    double chargeLevel;
 
     for (Solid::Device device : devices)
     {
@@ -55,20 +51,22 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
             continue;
         }
 
-        totalEnergyFull += battery->energyFull();
-        totalEnergyNow += battery->energy();
-        discharging &= (battery->chargeState() == Solid::Battery::Discharging);
-        chargeLevel = 100 * totalEnergyNow / totalEnergyFull;
         mBatteries << battery;
         connect(battery, &Solid::Battery::energyChanged, this, &BatteryWatcher::batteryChanged);
         connect(battery, &Solid::Battery::chargeStateChanged, this, &BatteryWatcher::batteryChanged);
     }
 
-    QString status = discharging ? QStringLiteral("Discharging") : QStringLiteral("Charging");
-    QString message = tr("%1 (%2%)").arg(status).arg(chargeLevel);
-    LXQt::Notification::notify(tr("Battery Present"),
-            message,
-            QSL("lxqt-powermanagement"));
+    bool discharging;
+    double chargeLevel;
+    chargeLevelAndStatus(discharging, chargeLevel);
+
+    if (!devices.isEmpty()) {
+        QString status = discharging ? QStringLiteral("Discharging") : QStringLiteral("Charging");
+        QString message = tr("%1 (%2%)").arg(status).arg(chargeLevel);
+        LXQt::Notification::notify(tr("Battery Present"),
+                message,
+                QSL("lxqt-powermanagement"));
+    }
 
     mBatteryInfoDialog = new BatteryInfoDialog(mBatteries);
 
@@ -93,19 +91,10 @@ void BatteryWatcher::batteryChanged()
     static QTime actionTime;
     static LXQt::Notification *notification = nullptr;
 
-    double totalEnergyFull = 0;
-    double totalEnergyNow = 0;
-    bool discharging = true;
+    bool discharging;
     double chargeLevel;
 
-    for (const Solid::Battery *battery : qAsConst(mBatteries))
-    {
-        totalEnergyFull += battery->energyFull();
-        totalEnergyNow += battery->energy();
-        discharging &= (battery->chargeState() == Solid::Battery::Discharging);
-    }
-
-    chargeLevel = 100 * totalEnergyNow / totalEnergyFull;
+    chargeLevelAndStatus(discharging, chargeLevel);
 
     qDebug() <<  "BatteryChanged"
              <<  "discharging:" << discharging
@@ -165,6 +154,31 @@ void BatteryWatcher::batteryChanged()
             delete notification;
             notification = nullptr;
         }
+    }
+}
+
+void BatteryWatcher::chargeLevelAndStatus(bool &discharging, double &chargeLevel)
+{
+    double totalEnergyFull = 0;
+    double totalEnergyNow = 0;
+    bool batteries = false;
+    discharging = true;
+
+    for (const Solid::Battery *battery : qAsConst(mBatteries))
+    {
+        batteries = true;
+
+        totalEnergyFull += battery->energyFull();
+        totalEnergyNow += battery->energy();
+        discharging &= (battery->chargeState() == Solid::Battery::Discharging);
+    }
+
+    if (!batteries) {
+        discharging = false;
+        chargeLevel = 0;
+    }
+    else {
+        chargeLevel = 100 * totalEnergyNow / totalEnergyFull;
     }
 }
 
