@@ -17,7 +17,7 @@ option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" O
 
 set(LXQTBT_MINIMUM_VERSION "0.13.0")
 set(KF5_MINIMUM_VERSION "5.101.0")
-set(LXQT_MINIMUM_VERSION "1.3.0")
+set(LXQT_MINIMUM_VERSION "1.4.0")
 set(QT_MINIMUM_VERSION "5.15.0")
 
 find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
