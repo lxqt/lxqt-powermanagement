@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<TS version="2.1" language="pa">
 <context>
     <name>BatteryWatcherSettings</name>
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation>Настройки наблюдения за батареей</translation>
+        <translation>ਬੈਟਰੀ ਨਿਗਰਾਨ ਸੈਟਿੰਗਾਂ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Разрешить наблюдение за батареей</translation>
+        <translation>ਬੈਟਰੀ ਨਿਗਰਾਨ ਸਮਰੱਥ ਕਰੋ(&amp;n)</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation>Предупреждение:</translation>
+        <translation>ਸਾਵਧਾਨ:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation> секунд</translation>
+        <translation> ਸਕਿੰਟ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation>Низкий уровень при:</translation>
+        <translation>ਪੱਧਰ ਘੱਟ ਹੈ:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
@@ -36,73 +36,73 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation>Значок:</translation>
+        <translation>ਆਈਕਾਨ:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
         <location filename="../batterywatchersettings.cpp" line="104"/>
         <source>Preview</source>
-        <translation>Предварительный просмотр</translation>
+        <translation>ਝਲਕ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="158"/>
         <source>Charging</source>
-        <translation>Заряжается</translation>
+        <translation>ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="196"/>
         <source>Discharging</source>
-        <translation>Разряжается</translation>
+        <translation>ਡਿਸ-ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation>При низком заряде:</translation>
+        <translation>ਜਦੋਂ ਪਾਵਰ ਘੱਟ ਹੋਵੇ ਤਾਂ:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Показывать значок:</translation>
+        <translation>ਆਈਕਾਨ ਦਿਖਾਓ:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation>из темы</translation>
+        <translation>ਥੀਮ ਤੋਂ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>Circle</source>
         <comment>icons</comment>
-        <translation>Окружность</translation>
+        <translation>ਚੱਕਰ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
-        <translation>Окружность с процентами</translation>
+        <translation>ਫੀਸਦੀ ਨਾਲ ਚੱਕਰ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation>Батарея с процентами и фоном</translation>
+        <translation>ਫੀਸਦੀ ਅਤੇ ਬੈਕਗਰਾਊਂਡ ਨਾਲ ਬੈਟਰੀ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation>Батарея с процентами</translation>
+        <translation>ਫੀਸਦੀ ਨਾਲ ਬੈਟਰੀ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="104"/>
         <source>built in</source>
-        <translation>встроенная</translation>
+        <translation>ਬਿਲਟ-ਇਨ</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>Level: %1%</source>
-        <translation>Уровень: %1%</translation>
+        <translation>ਪੱਧਰ: %1%</translation>
     </message>
 </context>
 <context>
@@ -110,75 +110,75 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>В&amp;ключить наблюдение за простоем</translation>
+        <translation>ਵੇਹਲੇ ਹੋਣ ਲਈ ਨਿਗਰਾਨ ਸਮਰੱਥ(&amp;l)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
         <source>Idle time:</source>
-        <translation>Время простоя:</translation>
+        <translation>ਵੇਹਲਾ ਸਮਾਂ:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
         <source>Enable Backlight Change</source>
-        <translation>Включить изменение подсветки</translation>
+        <translation>ਬੈਕਲਾਈਟ ਬਦਲਣਾ ਸਮਰੱਥ</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation>В режиме ожидания от батареи:</translation>
+        <translation>ਜਦੋਂ ਬੈਟਰੀ ਉੱਤੇ ਵੇਹਲਾ ਹੋਵੇ:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation>Время простоя аккумулятора:</translation>
+        <translation>ਬੈਟਰੀ ਵੇਹਲਾ ਸਮਾਂ:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
-        <translation>Подсветка (%):</translation>
+        <translation>ਬੈਕਲਾਈਟ (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
         <source>Minutes:Seconds</source>
-        <translation>Минуты:Секунды</translation>
+        <translation>ਮਿੰਟ:ਸਕਿੰਟ</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="76"/>
         <location filename="../idlenesswatchersettings.ui" line="110"/>
         <location filename="../idlenesswatchersettings.ui" line="178"/>
         <source>mm:ss</source>
-        <translation>мм:сс</translation>
+        <translation>mm:ss</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation>При простое от сети:</translation>
+        <translation>ਜਦ AC ਉੱਤੇ ਵੇਹਲਾ ਹੋਵੇ:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation>Время простоя от сети:</translation>
+        <translation>AC ਉੱਤੇ ਵੇਹਲ ਸਮਾਂ:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation>Минуты:Секунды (мин: 01:30)</translation>
+        <translation>ਮਿੰਟ:ਸਕਿੰਟ (ਮਿੰਟ: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>Check backlight</source>
-        <translation>Проверить подсветку</translation>
+        <translation>ਬੈਕਲਾਈਟ ਜਾਂਚੋ</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
         <source>On battery discharging </source>
-        <translation>Только при работе от батареи </translation>
+        <translation>ਜਦੋਂ ਬੈਟਰੀ ਡਿਸ-ਚਾਰਜ ਹੋ ਰਹੀ ਹੋਵੇ </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation>Отключить проверку бездействия в полноэкранном режиме</translation>
+        <translation>ਜਦੋਂ ਪੂਰੀ ਸਕਰੀਨ ਹੋਵੇ ਤਾਂ ਵੇਹਲੇ ਹੋਣ ਦੀ ਜਾਂਚ ਅਸਮਰੱਥ ਕਰੋ</translation>
     </message>
 </context>
 <context>
@@ -186,49 +186,49 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>В&amp;ключить наблюдение за крышкой</translation>
+        <translation>&amp;Lid ਨਿਗਰਾਨ ਸਮਰੱਥ</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed:</source>
-        <translation>Действие при закрытии крышки:</translation>
+        <translation>ਜਦੋਂ lid ਬੰਦ ਹੋਵੇ ਤਾਂ ਕਾਰਵਾਈ:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery:</source>
-        <translation>От батареи:</translation>
+        <translation>ਬੈਟਰੀ ਉੱਤੇ:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
         <source>Nothing</source>
-        <translation>Ничего</translation>
+        <translation>ਕੁਝ ਨਹੀਂ</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation>Ждущий режим</translation>
+        <translation>ਸਸਪੈਂਡ</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>Спящий режим</translation>
+        <translation>ਹਾਈਬਰਨੇਟ</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
-        <translation>Выключить компьютер</translation>
+        <translation>ਬੰਦ ਕਰੋ</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC:</source>
-        <translation>От сети:</translation>
+        <translation>AC ਉੱਤੇ:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation>При &amp;использовании внешнего монитора</translation>
+        <translation>ਜਦੋਂ ਬਾਹਰੀ ਮਾਨੀਟਰ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ(&amp;u)</translation>
     </message>
 </context>
 <context>
@@ -236,27 +236,27 @@
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Power Management Settings</source>
-        <translation>Настройки управления энергопотреблением</translation>
+        <translation>ਪਾਵਰ ਇੰਤਜ਼ਾਮ ਸੈਟਿੰਗਾਂ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="40"/>
         <source>Battery</source>
-        <translation>Батарея</translation>
+        <translation>ਬੈਟਰੀ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="44"/>
         <source>Lid</source>
-        <translation>Крышка</translation>
+        <translation>Lid</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="48"/>
         <source>Idle</source>
-        <translation>Бездействие</translation>
+        <translation>ਵੇਹਲਾ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation>Кнопки питания</translation>
+        <translation>ਪਾਵਰ ਸਵਿੱਚਾਂ</translation>
     </message>
 </context>
 <context>
@@ -264,27 +264,27 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation>ਫਾਰਮ</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation>Обработка клавиш управления питанием</translation>
+        <translation>ਪਾਵਰ ਸਵਿੱਚਾਂ ਨਾਲ ਕੰਮ</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation>Действие кнопки питания:</translation>
+        <translation>ਪਾਵਰ ਸਵਿੱਚ ਕਾਰਵਾਈ:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>При переходе в ждущий режим:</translation>
+        <translation>ਸਸਪੈਂਡ ਸਵਿੱਚ ਕਾਰਵਾਈ:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>При переходе в спящий режим:</translation>
+        <translation>ਹਾਈਬਰਨੇਟ ਸਵਿੱਚ ਕਾਰਵਾਈ:</translation>
     </message>
 </context>
 <context>
@@ -292,37 +292,37 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation>Ничего</translation>
+        <translation>ਕੁਝ ਨਹੀਂ</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Ask</source>
-        <translation>Спросить</translation>
+        <translation>ਪੁੱਛੋ</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Lock screen</source>
-        <translation>Блокировать экран</translation>
+        <translation>ਸਕਰੀਨ ਲਾਕ</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="41"/>
         <source>Suspend</source>
-        <translation>Ждущий режим</translation>
+        <translation>ਸਸਪੈਂਡ</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="42"/>
         <source>Hibernate</source>
-        <translation>Спящий режим</translation>
+        <translation>ਹਾਈਬਰਨੇਟ</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="43"/>
         <source>Shutdown</source>
-        <translation>Выключить компьютер</translation>
+        <translation>ਬੰਦ ਕਰੋ</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="44"/>
         <source>Turn Off monitor(s)</source>
-        <translation>Отключить монитор(ы)</translation>
+        <translation>ਮਾਨੀਟਰ ਬੰਦ ਕਰੋ</translation>
     </message>
 </context>
 </TS>
