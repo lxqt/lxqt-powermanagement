@@ -119,7 +119,7 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%Ln ਮਿੰਟ</numerusform>
             <numerusform>%Ln ਮਿੰਟ</numerusform>
         </translation>
@@ -258,7 +258,7 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਾਵਰ ਆਫ ਬਟਨ ਕਾਰਵਾਈ</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
@@ -337,7 +337,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="103"/>
         <source>Disable icon</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅਸਮਰੱਥ ਆਈਕਾਨ</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="162"/>
