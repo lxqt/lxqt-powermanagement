@@ -269,7 +269,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation>Bearbeite Schalter</translation>
+        <translation>Startknöpfe</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
