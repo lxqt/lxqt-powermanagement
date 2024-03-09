@@ -73,8 +73,8 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     // retrieve DPMS timeouts
     mDpmsStandby = mDpmsSuspend = mDpmsOff = 0;
     if (QGuiApplication::platformName() == QStringLiteral("xcb")) {
-        if (auto x11NativeInterfce = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
-            xcb_connection_t* c = x11NativeInterfce->connection();
+        if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
+            xcb_connection_t* c = x11NativeInterface->connection();
             xcb_dpms_get_timeouts_cookie_t cookie = xcb_dpms_get_timeouts(c);
             xcb_dpms_get_timeouts_reply_t* reply = xcb_dpms_get_timeouts_reply(c, cookie, nullptr);
             if (reply) {
@@ -97,8 +97,8 @@ IdlenessWatcher::~IdlenessWatcher()
 
 void IdlenessWatcher::setDpmsTimeouts(bool restore) {
     if (QGuiApplication::platformName() == QStringLiteral("xcb")) {
-        if (auto x11NativeInterfce = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
-            xcb_connection_t* c = x11NativeInterfce->connection();
+        if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
+            xcb_connection_t* c = x11NativeInterface->connection();
             if (restore) {
                 xcb_dpms_set_timeouts(c, mDpmsStandby, mDpmsSuspend, mDpmsOff);
                 xcb_screensaver_suspend(c, 0); // WARNING: This is not documented but works.
