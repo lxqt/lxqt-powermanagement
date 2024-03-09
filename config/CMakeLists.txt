@@ -1,6 +1,6 @@
 project(lxqt-config-powermanagement)
 
-set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg)
+set(QTX_LIBRARIES Qt6::Widgets Qt6::DBus Qt6::Svg)
 
 set(SOURCES
     main.cpp
@@ -53,7 +53,7 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(lxqt-config-powermanagement
     lxqt
     ${QTX_LIBRARIES}
-    KF5::Solid
+    KF6::Solid
 )
 
 install(TARGETS

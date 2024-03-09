@@ -90,7 +90,7 @@ void BatteryWatcher::batteryChanged()
     bool discharging = true;
     double chargeLevel;
 
-    for (const Solid::Battery *battery : qAsConst(mBatteries))
+    for (const Solid::Battery *battery : std::as_const(mBatteries))
     {
         totalEnergyFull += battery->energyFull();
         totalEnergyNow += battery->energy();
@@ -175,7 +175,7 @@ void BatteryWatcher::settingsChanged()
     }
     else if (mTrayIcons.isEmpty())
     {
-        for (Solid::Battery *battery : qAsConst(mBatteries))
+        for (Solid::Battery *battery : std::as_const(mBatteries))
         {
             mTrayIcons.append(new TrayIcon(battery, this));
             connect(mTrayIcons.last(), &TrayIcon::toggleShowInfo, mBatteryInfoDialog, &BatteryInfoDialog::toggleShow);
@@ -187,7 +187,7 @@ void BatteryWatcher::settingsChanged()
 
 void BatteryWatcher::onPauseTimeout()
 {
-    for (const auto &trayIcon : qAsConst(mTrayIcons))
+    for (const auto &trayIcon : std::as_const(mTrayIcons))
         trayIcon->setPause(TrayIcon::PAUSE::None);
 }
 
@@ -200,7 +200,7 @@ void BatteryWatcher::setPause(TrayIcon::PAUSE duration)
     }
     else
     {
-        for (const auto &trayIcon : qAsConst(mTrayIcons))
+        for (const auto &trayIcon : std::as_const(mTrayIcons))
             trayIcon->setPause(duration);
         mPauseTimer.start(TrayIcon::getPauseInterval(duration));
     }

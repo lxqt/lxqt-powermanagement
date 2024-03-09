@@ -1,6 +1,6 @@
 project(lxqt-powermanagement)
 
-set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg)
+set(QTX_LIBRARIES Qt6::Widgets Qt6::DBus Qt6::Svg)
 
 set(SOURCES
     watcher.cpp
@@ -40,7 +40,7 @@ lxqt_translate_ts(QM_FILES
 lxqt_app_translation_loader(lxqt-powermanagement_QM_LOADER ${PROJECT_NAME})
 
 include_directories(
-    ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
+    ${Qt6Gui_PRIVATE_INCLUDE_DIRS}
 )
 
 add_executable(lxqt-powermanagement
@@ -54,10 +54,9 @@ add_executable(lxqt-powermanagement
 target_link_libraries(lxqt-powermanagement
     lxqt
     ${QTX_LIBRARIES}
-    KF5::Solid
-    KF5::IdleTime
+    KF6::Solid
+    KF6::IdleTime
     lxqt-globalkeys
-    Qt5::X11Extras
     ${XCB_LIBRARIES}
 )
 
