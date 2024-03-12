@@ -234,9 +234,9 @@
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
         <translation>
-            <numerusform>Zawieszenie za %Ln sekundę</numerusform>
-            <numerusform>Zawieszenie za %Ln sekundy</numerusform>
-            <numerusform>Zawieszenie za %Ln sekund</numerusform>
+            <numerusform>Uśpienie za %Ln sekundę</numerusform>
+            <numerusform>Uśpienie za %Ln sekundy</numerusform>
+            <numerusform>Uśpienie za %Ln sekund</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -287,7 +287,7 @@
         <location filename="../powermanagementd.cpp" line="116"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>Uruchamiasz zarządzanie energią LXQt po raz pierwszy.
+        <translation>Uruchamiasz zarządzanie zasilaniem LXQt po raz pierwszy.
 Możesz skonfigurować jego ustawienia… </translation>
     </message>
     <message>
@@ -337,7 +337,7 @@ Możesz skonfigurować jego ustawienia… </translation>
         <location filename="../trayicon.cpp" line="101"/>
         <location filename="../trayicon.cpp" line="193"/>
         <source>About</source>
-        <translation>Info</translation>
+        <translation>Informacje</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="103"/>
@@ -352,17 +352,17 @@ Możesz skonfigurować jego ustawienia… </translation>
     <message>
         <location filename="../trayicon.cpp" line="194"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Zarządzanie energią LXQt&lt;/b&gt;&lt;br/&gt;  - Zarządzanie energią w środowisku LXQt&lt;/p&gt;&lt;p&gt;  Autorzy:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - i inni z projektu Razor i LXQt&lt;/p&gt;&lt;p&gt;  Prawa autorskie &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Zarządzanie zasilaniem LXQt&lt;/b&gt;&lt;br/&gt;  - Zarządzanie zasilaniem w środowisku LXQt&lt;/p&gt;&lt;p&gt;  Autorzy:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - i inni z projektu Razor i LXQt&lt;/p&gt;&lt;p&gt;  Prawa autorskie &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="212"/>
         <source>LXQt Power Management info</source>
-        <translation>Informacje o Zarządzaniu energią LXQt</translation>
+        <translation>Informacje o zarządzaniu zasilaniem LXQt</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="213"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>Ikona w pasku zadań może być włączona ponownie w ustawieniach Zarządzania energią LXQt</translation>
+        <translation>Ikonę zarządzania zasilaniem LXQt w zasobniku systemowym można (ponownie) włączyć w &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="215"/>
