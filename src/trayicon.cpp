@@ -28,6 +28,7 @@
 #include <QDebug>
 #include <QApplication>
 #include <QProcess>
+#include <QActionGroup>
 #include <QMessageBox>
 #include <QToolTip>
 #include <QHelpEvent>

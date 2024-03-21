@@ -44,7 +44,7 @@ BatteryInfoFrame::BatteryInfoFrame(Solid::Battery *battery) :
     mUi->typeValue->setText(BatteryHelper::typeToString(mBattery->type()));
     mUi->technologyValue->setText(BatteryHelper::technologyToString(mBattery->technology()));
 
-    QString vendor = QString::fromLatin1("%1 %2").arg( battery->recallVendor() , battery->serial() );
+    QString vendor = QString::fromLatin1("%1 %2").arg( QSL("Unknown") , battery->serial() );
     if (vendor.trimmed().isEmpty())
         vendor = QSL("Unknown");
     mUi->vendorValue->setText(vendor);
