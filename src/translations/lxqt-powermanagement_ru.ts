@@ -155,7 +155,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation>Управление энергопотреблением</translation>
+        <translation>Управление электропитанием</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="53"/>
@@ -281,7 +281,7 @@
     <message>
         <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
-        <translation>Управление энергопотреблением</translation>
+        <translation>Управление электропитанием</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="116"/>
@@ -352,7 +352,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="194"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Управление энергопотреблением LXQt&lt;/b&gt;&lt;br/&gt;  - Управление энергопотреблением для окружения рабочего стола LXQt&lt;/p&gt;&lt;p&gt; Авторы:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и другие из проектов Razor и LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Управление электропитанием LXQt&lt;/b&gt;&lt;br/&gt;  — Управление энергопотреблением для окружения рабочего стола LXQt&lt;/p&gt;&lt;p&gt; Авторы:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и другие из проектов Razor и LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="212"/>
@@ -362,7 +362,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="213"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>Значок в системном лотке для управление энергопотреблением может быть включён в &lt;i&gt;Настройках управления энергопотреблением&lt;/i&gt;</translation>
+        <translation>Значок в системном лотке для управление энергопотреблением можно включить в &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="215"/>
