@@ -1,3 +1,7 @@
+lxqt-powermanagement-2.0.0 / 2024-04-17
+========================================
+ * Ported to Qt6.
+
 lxqt-powermanagement-1.4.0 / 2023-11-05
 ========================================
  * Override DPMS on enabling idleness watcher (to fix the problem of default DPMS timeouts being in conflict with lxqt-powermanagement).
