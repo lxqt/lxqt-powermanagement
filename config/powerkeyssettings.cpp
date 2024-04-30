@@ -46,6 +46,7 @@ PowerKeysSettings::PowerKeysSettings(QWidget *parent) :
 
 PowerKeysSettings::~PowerKeysSettings()
 {
+    delete mUi;
 }
 
 void PowerKeysSettings::loadSettings()
