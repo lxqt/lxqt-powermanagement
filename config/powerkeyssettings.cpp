@@ -42,6 +42,11 @@ PowerKeysSettings::PowerKeysSettings(QWidget *parent) :
     connect(mUi->powerKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
     connect(mUi->suspendKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
     connect(mUi->hibernateKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
+
+    if (QGuiApplication::platformName() == QStringLiteral("wayland"))
+    {
+        mUi->waylandLabel->setText(tr("Note: Under Wayland, XF86 keys can be configured in the settings of the compositor."));
+    }
 }
 
 PowerKeysSettings::~PowerKeysSettings()
