@@ -289,73 +289,73 @@ You can configure it from settings... </source>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="67"/>
+        <location filename="../trayicon.cpp" line="68"/>
         <source>Configure</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="75"/>
+        <location filename="../trayicon.cpp" line="76"/>
         <source>30 minutes</source>
         <translation>30 分</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="79"/>
+        <location filename="../trayicon.cpp" line="80"/>
         <source>1 hour</source>
         <translation>1 時間</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="83"/>
+        <location filename="../trayicon.cpp" line="84"/>
         <source>2 hours</source>
         <translation>2 時間</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="87"/>
+        <location filename="../trayicon.cpp" line="88"/>
         <source>3 hours</source>
         <translation>3 時間</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="91"/>
+        <location filename="../trayicon.cpp" line="92"/>
         <source>4 hours</source>
         <translation>4 時間</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="96"/>
+        <location filename="../trayicon.cpp" line="97"/>
         <source>Pause idleness checks</source>
         <translation>アイドル状態のチェックを一時停止</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="101"/>
-        <location filename="../trayicon.cpp" line="193"/>
+        <location filename="../trayicon.cpp" line="102"/>
+        <location filename="../trayicon.cpp" line="194"/>
         <source>About</source>
         <translation>このアプリケーションについて</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="103"/>
+        <location filename="../trayicon.cpp" line="104"/>
         <source>Disable icon</source>
         <translation>トレイのアイコンを非表示にする</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="162"/>
+        <location filename="../trayicon.cpp" line="163"/>
         <source>Empty</source>
         <translation>空</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="194"/>
+        <location filename="../trayicon.cpp" line="195"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt 電源管理&lt;/b&gt;&lt;br/&gt;  - LXQt デスクトップ環境の電源管理&lt;/p&gt;&lt;p&gt;  作者:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - そして Razor と LXQt projects の人々&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="212"/>
+        <location filename="../trayicon.cpp" line="213"/>
         <source>LXQt Power Management info</source>
         <translation>LXQt 電源管理の情報</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="214"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>LXQt 電源管理のトレイアイコンは、&lt;i&gt;LXQt 電源管理の設定&lt;/i&gt; から(再)表示できます</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="215"/>
+        <location filename="../trayicon.cpp" line="216"/>
         <source>Configure now</source>
         <translation>今すぐに設定する</translation>
     </message>

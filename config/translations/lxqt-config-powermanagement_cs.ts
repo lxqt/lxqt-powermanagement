@@ -286,6 +286,11 @@
         <source>Hibernate Key Action:</source>
         <translation>Akce při stisknutí klávesy pro uspání na disk:</translation>
     </message>
+    <message>
+        <location filename="../powerkeyssettings.cpp" line="48"/>
+        <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
