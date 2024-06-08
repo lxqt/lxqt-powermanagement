@@ -294,73 +294,73 @@ Pode configurar o módulo nas definições... </translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="67"/>
+        <location filename="../trayicon.cpp" line="68"/>
         <source>Configure</source>
         <translation>Configurar</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="75"/>
+        <location filename="../trayicon.cpp" line="76"/>
         <source>30 minutes</source>
         <translation>30 minutos</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="79"/>
+        <location filename="../trayicon.cpp" line="80"/>
         <source>1 hour</source>
         <translation>1 hora</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="83"/>
+        <location filename="../trayicon.cpp" line="84"/>
         <source>2 hours</source>
         <translation>2 horas</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="87"/>
+        <location filename="../trayicon.cpp" line="88"/>
         <source>3 hours</source>
         <translation>3 horas</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="91"/>
+        <location filename="../trayicon.cpp" line="92"/>
         <source>4 hours</source>
         <translation>4 horas</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="96"/>
+        <location filename="../trayicon.cpp" line="97"/>
         <source>Pause idleness checks</source>
         <translation>Pausa de verificação da inatividade</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="101"/>
-        <location filename="../trayicon.cpp" line="193"/>
+        <location filename="../trayicon.cpp" line="102"/>
+        <location filename="../trayicon.cpp" line="194"/>
         <source>About</source>
         <translation>Acerca</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="103"/>
+        <location filename="../trayicon.cpp" line="104"/>
         <source>Disable icon</source>
         <translation>Desativar ícone</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="162"/>
+        <location filename="../trayicon.cpp" line="163"/>
         <source>Empty</source>
         <translation>Descarregada</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="194"/>
+        <location filename="../trayicon.cpp" line="195"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt; &lt;b&gt;Gestão de energia do LXQt&lt;/b&gt;&lt;br/&gt; - Gestão de energia para o Ambiente de trabalho LXQt&lt;/p&gt;&lt;p&gt; Autores:&lt;br/&gt; &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; &amp;nbsp; - e mais algumas pessoas das equipas de desenvolvimento do Razor e do LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="212"/>
+        <location filename="../trayicon.cpp" line="213"/>
         <source>LXQt Power Management info</source>
         <translation>Informação da gestão de energia do LXQt</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="214"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Pode reativar o ícone da área de notificação através do comando &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="215"/>
+        <location filename="../trayicon.cpp" line="216"/>
         <source>Configure now</source>
         <translation>Configurar agora</translation>
     </message>

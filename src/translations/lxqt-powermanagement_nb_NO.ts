@@ -294,73 +294,73 @@ Du kan konfigurere det fra innstillinger... </translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="67"/>
+        <location filename="../trayicon.cpp" line="68"/>
         <source>Configure</source>
         <translation>Konfigurer</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="75"/>
+        <location filename="../trayicon.cpp" line="76"/>
         <source>30 minutes</source>
         <translation>30 minutter</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="79"/>
+        <location filename="../trayicon.cpp" line="80"/>
         <source>1 hour</source>
         <translation>1 time</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="83"/>
+        <location filename="../trayicon.cpp" line="84"/>
         <source>2 hours</source>
         <translation>2 timer</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="87"/>
+        <location filename="../trayicon.cpp" line="88"/>
         <source>3 hours</source>
         <translation>3 timer</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="91"/>
+        <location filename="../trayicon.cpp" line="92"/>
         <source>4 hours</source>
         <translation>4 timer</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="96"/>
+        <location filename="../trayicon.cpp" line="97"/>
         <source>Pause idleness checks</source>
         <translation type="unfinished">Ta pause i lediggangssjekker</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="101"/>
-        <location filename="../trayicon.cpp" line="193"/>
+        <location filename="../trayicon.cpp" line="102"/>
+        <location filename="../trayicon.cpp" line="194"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="103"/>
+        <location filename="../trayicon.cpp" line="104"/>
         <source>Disable icon</source>
         <translation>Skru av symbol</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="162"/>
+        <location filename="../trayicon.cpp" line="163"/>
         <source>Empty</source>
         <translation type="unfinished">Tomt</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="194"/>
+        <location filename="../trayicon.cpp" line="195"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt strømstyring&lt;/b&gt;&lt;br/&gt;  - strømstyring for LXQt skrivebordsmiljøet&lt;/p&gt;&lt;p&gt;  Opphavsmenn:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - og andre fra Razor-Qt og LXQt prosjektene&lt;/p&gt;&lt;p&gt;  Opphavsrett &amp;copy; 2012-2014&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="212"/>
+        <location filename="../trayicon.cpp" line="213"/>
         <source>LXQt Power Management info</source>
         <translation>LXQt strømstyringsinfo</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="214"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>LXQt strømstyringssymbolet for systemtrauet kan skrus på (igjen) i &lt;i&gt;LXQt strømstyringsinnstillinger&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="215"/>
+        <location filename="../trayicon.cpp" line="216"/>
         <source>Configure now</source>
         <translation>Konfigurer nå</translation>
     </message>
