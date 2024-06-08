@@ -45,7 +45,7 @@ PowerKeysSettings::PowerKeysSettings(QWidget *parent) :
 
     if (QGuiApplication::platformName() == QStringLiteral("wayland"))
     {
-        mUi->waylandLabel->setText(tr("Note: Under Wayland, XF86 keys can be configured in the settings of the compositor."));
+        mUi->waylandLabel->setText(tr("Note: Under Wayland, power keys are configured by the compositor instead."));
     }
 }
 
