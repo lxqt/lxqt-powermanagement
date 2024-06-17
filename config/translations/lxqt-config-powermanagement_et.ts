@@ -289,7 +289,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Märkus: Waylandi puhul kasuta toitenuppude seadistamiseks komposiitorit.</translation>
     </message>
 </context>
 <context>
