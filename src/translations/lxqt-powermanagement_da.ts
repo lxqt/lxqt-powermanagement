@@ -283,12 +283,12 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>Du kører LXQt-strømstyring for første gang.
-Du kan konfigurere den fra indstillinger... </translation>
+Du kan indstille den i indstillinger... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>
         <source>Configure...</source>
-        <translation>Konfigurér...</translation>
+        <translation>Indstil...</translation>
     </message>
 </context>
 <context>
@@ -362,7 +362,7 @@ Du kan konfigurere den fra indstillinger... </translation>
     <message>
         <location filename="../trayicon.cpp" line="216"/>
         <source>Configure now</source>
-        <translation>Konfigurér nu</translation>
+        <translation>Indstil nu</translation>
     </message>
 </context>
 </TS>
