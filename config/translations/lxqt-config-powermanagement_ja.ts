@@ -289,7 +289,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>注: Wayland では、電源キーは代わりにコンポジターによって設定されます。</translation>
     </message>
 </context>
 <context>
