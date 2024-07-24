@@ -125,17 +125,17 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation type="unfinished">Saat baterai menganggur:</translation>
+        <translation>Saat baterai siaga:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation type="unfinished">Waktu menganggur baterai:</translation>
+        <translation>Waktu siaga baterai:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
-        <translation>Lampur latar (%):</translation>
+        <translation>Lampu latar (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
@@ -152,12 +152,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Saat siaga dengan AC:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>waktu siaga AC:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
@@ -178,7 +178,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Nonaktifkan pemeriksaan kesiagaan saat layar penuh</translation>
     </message>
 </context>
 <context>
