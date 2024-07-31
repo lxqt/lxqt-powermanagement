@@ -147,7 +147,7 @@
         <location filename="../idlenesswatchersettings.ui" line="110"/>
         <location filename="../idlenesswatchersettings.ui" line="178"/>
         <source>mm:ss</source>
-        <translation type="unfinished">Jam:detik</translation>
+        <translation>menit:detik</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
@@ -163,7 +163,7 @@
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished">Menit:Detik (min: 01:30)</translation>
+        <translation>Menit:Detik (min: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
