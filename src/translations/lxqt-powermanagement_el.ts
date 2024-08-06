@@ -282,9 +282,8 @@
         <location filename="../powermanagementd.cpp" line="116"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>Εκτελείτε την διαχείριση ενέργειας του LXQt για πρώτη φορά.
-Μπορείτε να την διαμορφώσετε από τις ρυθμίσεις... 
-</translation>
+        <translation>Εκτελείτε τη Διαχείριση Ενέργειας του LXQt για πρώτη φορά.
+Μπορείτε να τη διαμορφώσετε από τις ρυθμίσεις... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>

@@ -125,12 +125,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation>Ved lediggang på batteri:</translation>
+        <translation>Ved inaktivitet på batteri:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="90"/>
         <source>Battery Idle time:</source>
-        <translation>Lediggangstid på batteri:</translation>
+        <translation>Inaktivitetstid på batteri:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -152,18 +152,18 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation>Ved lediggang på lysnettstilkobling:</translation>
+        <translation>Ved inaktivitet på nettstrøm:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation>Lediggangstid på lysnett:</translation>
+        <translation>Inaktivitetstid på nettstrøm:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation type="unfinished">minutter:sekunder (minimum:01:30)</translation>
+        <translation>Minutter:Sekunder (min: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
@@ -173,12 +173,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="192"/>
         <source>On battery discharging </source>
-        <translation type="unfinished">Når batteriet utlades </translation>
+        <translation>Ved utladning av batteriet </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation>Skru av lediggangssjekk i fullskjermsvisning</translation>
+        <translation>Slå av inaktivitetssjekk i fullskjermsvisning</translation>
     </message>
 </context>
 <context>
@@ -256,7 +256,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="52"/>
         <source>Power keys</source>
-        <translation>Effekt-taster</translation>
+        <translation>Strømtaster</translation>
     </message>
 </context>
 <context>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished">Håndter effekt-taster</translation>
+        <translation>Håndter strømtaster</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
