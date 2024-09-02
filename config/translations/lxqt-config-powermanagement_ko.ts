@@ -207,12 +207,12 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation>절전모드</translation>
+        <translation>절전</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation>최대 절전모드</translation>
+        <translation>최대 절전</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
@@ -279,17 +279,17 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>절전모드 키 동작:</translation>
+        <translation>절전 키 동작:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>최대 절전모드 키 동작:</translation>
+        <translation>최대 절전 키 동작:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>참고: Wayland에서는 전원 키가 컴포지터에 의해 구성됩니다.</translation>
     </message>
 </context>
 <context>
@@ -312,12 +312,12 @@
     <message>
         <location filename="../helpers.cpp" line="41"/>
         <source>Suspend</source>
-        <translation>절전모드</translation>
+        <translation>절전</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="42"/>
         <source>Hibernate</source>
-        <translation>최대 절전모드</translation>
+        <translation>최대 절전</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="43"/>
