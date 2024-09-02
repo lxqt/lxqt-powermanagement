@@ -206,7 +206,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation>거의 방전됨</translation>
+        <translation>방전됨</translation>
     </message>
 </context>
 <context>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
-        <translation>배터리가 없습니다!</translation>
+        <translation>배터리 잔량이 없습니다!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
@@ -258,12 +258,12 @@
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation>대기 모드 키 작업</translation>
+        <translation>절전 키 작업</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation>최대 절전모드 키 동작</translation>
+        <translation>최대 절전 키 동작</translation>
     </message>
 </context>
 <context>
