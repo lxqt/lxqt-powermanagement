@@ -289,7 +289,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>לתשומת ליבך: תחת Wayland, כפתורי השליטה בכיבוי/הדלקה/שינה מנוהלים על ידי המנהל החלונאי במקום.</translation>
     </message>
 </context>
 <context>
