@@ -102,7 +102,7 @@
     <message>
         <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>Level: %1%</source>
-        <translation>Nivel: %1 %</translation>
+        <translation>Nivel: %1&#xa0;%</translation>
     </message>
 </context>
 <context>
