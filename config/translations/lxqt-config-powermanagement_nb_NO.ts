@@ -135,7 +135,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
         <source>Backlight (%):</source>
-        <translation>Bagrunnsbelysning (%)</translation>
+        <translation>Bakgrunnsbelysning (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
-        <translation>Skru av</translation>
+        <translation>Slå av</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
@@ -322,7 +322,7 @@
     <message>
         <location filename="../helpers.cpp" line="43"/>
         <source>Shutdown</source>
-        <translation>Skru av</translation>
+        <translation>Slå av</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="44"/>

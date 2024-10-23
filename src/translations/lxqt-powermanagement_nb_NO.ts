@@ -132,7 +132,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished">till fullstendig %1</translation>
+        <translation>til full %1</translation>
     </message>
 </context>
 <context>
@@ -247,9 +247,9 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Slår av om %Ln sekund</numerusform>
+            <numerusform>Slår av om %Ln sekunder</numerusform>
         </translation>
     </message>
 </context>
@@ -326,7 +326,7 @@ Du kan konfigurere det fra innstillinger... </translation>
     <message>
         <location filename="../trayicon.cpp" line="97"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished">Ta pause i lediggangssjekker</translation>
+        <translation>Ta pause i inaktivitetssjekker</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="102"/>
