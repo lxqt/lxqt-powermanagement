@@ -62,13 +62,13 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation>Vis symbol:</translation>
+        <translation>Vis ikon:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation>fra drakt</translation>
+        <translation>fra tema</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>

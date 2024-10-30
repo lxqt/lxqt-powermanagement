@@ -289,7 +289,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Genderera: Wayland bw&apos;eba nga y&apos;ekola, amapeesa agateekako n&apos;okugyako kompyuta ogatekegera w&apos;oteekateekera puloguramu ekwanaganya ebirabikira awakolerwa.</translation>
     </message>
 </context>
 <context>

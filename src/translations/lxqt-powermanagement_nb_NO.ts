@@ -337,7 +337,7 @@ Du kan konfigurere det fra innstillinger... </translation>
     <message>
         <location filename="../trayicon.cpp" line="104"/>
         <source>Disable icon</source>
-        <translation>Skru av symbol</translation>
+        <translation>Deaktiver ikon</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="163"/>
@@ -357,7 +357,7 @@ Du kan konfigurere det fra innstillinger... </translation>
     <message>
         <location filename="../trayicon.cpp" line="214"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>LXQt strømstyringssymbolet for systemtrauet kan skrus på (igjen) i &lt;i&gt;LXQt strømstyringsinnstillinger&lt;/i&gt;</translation>
+        <translation>Systemkurvikonet for LXQt-strømstyring kan aktiveres (igjen) i &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="216"/>
