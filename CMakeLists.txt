@@ -15,9 +15,9 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
-set(LXQTBT_MINIMUM_VERSION "2.0.0")
+set(LXQTBT_MINIMUM_VERSION "2.1.0")
 set(KF6_MINIMUM_VERSION "6.0.0")
-set(LXQT_MINIMUM_VERSION "2.0.0")
+set(LXQT_MINIMUM_VERSION "2.1.0")
 set(QT_MINIMUM_VERSION "6.6.0")
 
 find_package(lxqt2-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
