@@ -269,27 +269,27 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation>Обработка клавиш управления питанием</translation>
+        <translation>Действия при нажатии на клавиши управления питанием</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation>Действие кнопки питания:</translation>
+        <translation>Кнопка выключения:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation>При переходе в ждущий режим:</translation>
+        <translation>Переход в ждущий режим:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation>При переходе в спящий режим:</translation>
+        <translation>Переход в спящий режим:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Замечание: под Wayland клавиши управления питанием настраиваются в настройках самого композитора.</translation>
     </message>
 </context>
 <context>
