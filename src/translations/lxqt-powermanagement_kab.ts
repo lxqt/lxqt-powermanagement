@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="oc">
+<TS version="2.1" language="kab">
 <context>
     <name>BatteryHelper</name>
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation>Estable</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
         <source>Discharging</source>
-        <translation>Se descarga</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="48"/>
         <source>Fully charged</source>
-        <translation>Complètament cargada</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="51"/>
         <source>Charging</source>
-        <translation>Se carga</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
         <source>Lithium ion</source>
-        <translation type="unfinished"></translation>
+        <translation>Lithium ion</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="62"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="73"/>
         <source>Unknown</source>
-        <translation>Desconeguda</translation>
+        <translation>D tarussint</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
@@ -71,68 +71,66 @@
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Primary battery</source>
-        <translation>Batariá primària</translation>
+        <translation>Aẓru amezwaru</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
         <source>Mouse battery</source>
-        <translation>Batariá de la mirga</translation>
+        <translation>Azṛu n tɣerdayt</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard battery</source>
-        <translation>Batariá del clavièr</translation>
+        <translation>Azṛu n unasiw</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation>Batariá clavièr/mirga</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Camera battery</source>
-        <translation>Batariá d’aparelh de fòto</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Phone battery</source>
-        <translation>Batariá de telefòn</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="98"/>
         <source>Monitor battery</source>
-        <translation>Batariá de l’ecran</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="101"/>
         <source>Unknown battery</source>
-        <translation>Batariá desconeguda</translation>
+        <translation>Azṛu d arussin</translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation>
-            <numerusform>%Ln ora</numerusform>
-            <numerusform>%Ln oras</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation>
-            <numerusform>%Ln minuta</numerusform>
-            <numerusform>%Ln minutas</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation>demòra %1</translation>
+        <translation>%1 d-yeggran</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation>carga complèta d’aquí %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -140,12 +138,12 @@
     <message>
         <location filename="../batteryinfodialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Dialòg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfodialog.cpp" line="24"/>
         <source>Battery Info</source>
-        <translation>Informacions de la batariá</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -153,22 +151,22 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation>Gestion energetica</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="53"/>
         <source>Temperature:</source>
-        <translation>Temperatura :</translation>
+        <translation>Tazɣelt:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="63"/>
         <source>Type:</source>
-        <translation>Tipe :</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="73"/>
         <source>State:</source>
-        <translation>Estat :</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
@@ -178,37 +176,37 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
         <source>Energy Full:</source>
-        <translation>Energia totala :</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation>Energia actuala :</translation>
+        <translation>Tazmart tura:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Taus d’energia :</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
         <source>Technology:</source>
-        <translation>Tecnologia :</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="182"/>
         <source>Voltage:</source>
-        <translation>Voltatge :</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation>Fabricant :</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation>Void</translation>
+        <translation>D tilemt</translation>
     </message>
 </context>
 <context>
@@ -216,7 +214,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
-        <translation>Cap de batariá !</translation>
+        <translation>Ulac azṛu!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
@@ -226,30 +224,27 @@
     <message>
         <location filename="../batterywatcher.cpp" line="119"/>
         <source>Power low!</source>
-        <translation>Energia febla !</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation>
-            <numerusform>Suspension d’aquí %Ln segonda</numerusform>
-            <numerusform>Suspension d’aquí %Ln segondas</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation>
-            <numerusform>Ivernacion d’aquí %Ln segonda</numerusform>
-            <numerusform>Ivernacion d’aquí %Ln segondas</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation>
-            <numerusform>Arrèst d’aquí %Ln segonda</numerusform>
-            <numerusform>Arrèst d’aquí %Ln segondas</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -258,17 +253,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation>Accion del boton d’extincion</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation>Accion del boton de suspension</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation>Accion del boton ivernacion</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -276,7 +271,7 @@
     <message>
         <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
-        <translation>Gestion energetica</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="116"/>
@@ -287,7 +282,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>
         <source>Configure...</source>
-        <translation>Configuracion...</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -295,32 +290,32 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="68"/>
         <source>Configure</source>
-        <translation>Configuracion</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="76"/>
         <source>30 minutes</source>
-        <translation>30 minutas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="80"/>
         <source>1 hour</source>
-        <translation>1 ora</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="84"/>
         <source>2 hours</source>
-        <translation>2 oras</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="88"/>
         <source>3 hours</source>
-        <translation>3 oras</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="92"/>
         <source>4 hours</source>
-        <translation>4 oras</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="97"/>
@@ -331,17 +326,17 @@ You can configure it from settings... </source>
         <location filename="../trayicon.cpp" line="102"/>
         <location filename="../trayicon.cpp" line="194"/>
         <source>About</source>
-        <translation>A prepaus</translation>
+        <translation>Ɣef</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="104"/>
         <source>Disable icon</source>
-        <translation>Desactivar l’icòna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="163"/>
         <source>Empty</source>
-        <translation>Void</translation>
+        <translation>D tilemt</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="195"/>
@@ -351,7 +346,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="213"/>
         <source>LXQt Power Management info</source>
-        <translation>Informacions de la gestion de l’energia de LXQt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="214"/>
@@ -361,7 +356,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="216"/>
         <source>Configure now</source>
-        <translation>Configurar ara</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
