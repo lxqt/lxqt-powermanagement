@@ -161,7 +161,7 @@ void PowerManagementSettings::setLidWatcherEnabled(bool lidWatcherEnabled)
 
 int PowerManagementSettings::getLidClosedAcAction()
 {
-    return value(LID_CLOSED_AC_ACTION_KEY, -1).toInt();
+    return value(LID_CLOSED_AC_ACTION_KEY, LXQt::Power::Action::PowerSuspend).toInt();
 }
 
 void PowerManagementSettings::setLidClosedAcAction(int lidClosedAcAction)
@@ -171,7 +171,7 @@ void PowerManagementSettings::setLidClosedAcAction(int lidClosedAcAction)
 
 int PowerManagementSettings::getLidClosedAction()
 {
-    return value(LID_CLOSED_ACTION_KEY, -1).toInt();
+    return value(LID_CLOSED_ACTION_KEY, LXQt::Power::Action::PowerSuspend).toInt();
 }
 
 void PowerManagementSettings::setLidClosedAction(int lidClosedAction)
