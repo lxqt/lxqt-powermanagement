@@ -36,13 +36,13 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Icon:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
         <location filename="../batterywatchersettings.cpp" line="104"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Preview</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="158"/>
