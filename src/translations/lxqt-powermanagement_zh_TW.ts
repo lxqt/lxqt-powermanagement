@@ -101,7 +101,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="98"/>
         <source>Monitor battery</source>
-        <translation>監視器電池</translation>
+        <translation>顯示器電池</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="101"/>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt 找無任何相關電池數據 - 監控已經停用</translation>
+        <translation>LXQt 查無任何相關電池資料 - 監控已經停用</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="119"/>
@@ -253,17 +253,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation>電源關閉鍵動作</translation>
+        <translation>電源關閉按鍵動作</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation>電腦暫停鍵動作</translation>
+        <translation>電腦暫停按鍵動作</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation>電腦休眠鍵動作</translation>
+        <translation>電腦休眠按鍵動作</translation>
     </message>
 </context>
 <context>
@@ -278,12 +278,12 @@
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
         <translation>這是您首次執行 LXQt 電源管理，
-您可以由設定中進行調整設定... </translation>
+您可以由設定中進行調設… </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>
         <source>Configure...</source>
-        <translation>調整設定…</translation>
+        <translation>設定…</translation>
     </message>
 </context>
 <context>
