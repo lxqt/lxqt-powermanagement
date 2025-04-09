@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>啟用電池監測 (&amp;N)</translation>
+        <translation>啟用電池監測(&amp;N)</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>啟用閒置監測 (&amp;L)</translation>
+        <translation>啟用閒置監測(&amp;L)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
@@ -120,7 +120,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="122"/>
         <source>Enable Backlight Change</source>
-        <translation>改變背光</translation>
+        <translation>啟用背光變更</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
@@ -163,7 +163,7 @@
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation>分鐘：秒鐘 （最少 01:30）</translation>
+        <translation>分鐘：秒鐘 (最少 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>啟用上蓋監測 (&amp;L)</translation>
+        <translation>啟用上蓋監測(&amp;L)</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
@@ -228,7 +228,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation>使用外接螢幕時：(&amp;U)</translation>
+        <translation>使用外接顯示器時(&amp;U)</translation>
     </message>
 </context>
 <context>
