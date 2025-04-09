@@ -346,8 +346,8 @@ Osobola okugisanga ne mu ntabiro y&apos;enteekateeka... </translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="195"/>
-        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Enteekateeka z&apos;enkozesa ya masanyalaze eza mu LXQt&lt;/b&gt;&lt;br/&gt;  - W&apos;oteekateekera awakolerwa wa LXQt eby&apos;enkozesa y&apos;amasanyalaze&lt;/p&gt;&lt;p&gt;  Abaawandika:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - n&apos;abalala ab&apos;enyigide mu kawefube wa Razor ne LXQt &lt;/p&gt;&lt;p&gt;  Buyinza bwa kukopporola &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
+        <translation>&lt;p&gt;  &lt;b&gt;Enteekateeka z&apos;enkozesa ya masanyalaze eza mu LXQt&lt;/b&gt;&lt;br/&gt;  - W&apos;oteekateekera awakolerwa wa LXQt eby&apos;enkozesa y&apos;amasanyalaze&lt;/p&gt;&lt;p&gt;  Abaawandika:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - n&apos;abalala ab&apos;enyigide mu kawefube wa Razor ne LXQt &lt;/p&gt;&lt;p&gt;  Buyinza bwa kukopporola &amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="213"/>

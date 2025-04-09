@@ -346,8 +346,8 @@ Sie können sie in den Einstellungen konfigurieren... </translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="195"/>
-        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;LXQt-Energieverwaltung&lt;/b&gt;&lt;br/&gt;  - Energieverwaltung für die LXQt-Desktop-Umgebung&lt;/p&gt;&lt;p&gt;  Autoren:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - und Andere aus den Razor- und LXQt-Projekten&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
+        <translation>&lt;p&gt;  &lt;b&gt;LXQt-Energieverwaltung&lt;/b&gt;&lt;br/&gt;  - Energieverwaltung für die LXQt-Desktop-Umgebung&lt;/p&gt;&lt;p&gt;  Autoren:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - und Andere aus den Razor- und LXQt-Projekten&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="213"/>
