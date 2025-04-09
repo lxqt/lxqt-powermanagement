@@ -341,8 +341,8 @@ Anda dapat mengkonfigurasikannya dari pengaturan... </translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="195"/>
-        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Manajemen Daya LXQt&lt;/b&gt;&lt;br/&gt;  - Manajemen Daya untuk Lingkungan Desktop LXQt&lt;/p&gt;&lt;p&gt;  Pembuat:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - dan yang lainnya dari proyek Razor dan LXQt&lt;/p&gt;&lt;p&gt;  Hak cipta&amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
+        <translation>&lt;p&gt;  &lt;b&gt;Manajemen Daya LXQt&lt;/b&gt;&lt;br/&gt;  - Manajemen Daya untuk Lingkungan Desktop LXQt&lt;/p&gt;&lt;p&gt;  Pembuat:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - dan yang lainnya dari proyek Razor dan LXQt&lt;/p&gt;&lt;p&gt;  Hak cipta&amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="213"/>

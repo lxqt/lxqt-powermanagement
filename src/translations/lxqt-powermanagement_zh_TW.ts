@@ -341,8 +341,8 @@ You can configure it from settings... </source>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="195"/>
-        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;LXQt 電源管理&lt;/b&gt;&lt;br/&gt;  - 用於 LXQt 桌面環境的電源管理&lt;/p&gt;&lt;p&gt;  作者：&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - 以及來自 Razor 及 LXQt 專案的人員&lt;/p&gt;&lt;p&gt;  版權所有 &amp;copy; 2012-2014&lt;/p&gt;</translation>
+        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
+        <translation>&lt;p&gt;  &lt;b&gt;LXQt 電源管理&lt;/b&gt;&lt;br/&gt;  - 用於 LXQt 桌面環境的電源管理&lt;/p&gt;&lt;p&gt;  作者：&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - 以及來自 Razor 及 LXQt 專案的人員&lt;/p&gt;&lt;p&gt;  版權所有 &amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="213"/>

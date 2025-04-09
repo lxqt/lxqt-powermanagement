@@ -202,7 +202,7 @@ void TrayIcon::onAboutTriggered()
                            "  &nbsp; - and others from the Razor and LXQt projects"
                            "</p>"
                            "<p>"
-                           "  Copyright &copy; 2012-2014"
+                           "  Copyright &copy; 2012-2025"
                            "</p>"
                         ));
 }

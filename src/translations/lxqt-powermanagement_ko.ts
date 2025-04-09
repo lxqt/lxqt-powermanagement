@@ -341,9 +341,9 @@ You can configure it from settings... </source>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="195"/>
-        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2014&lt;/p&gt;</source>
+        <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt 전원 관리&lt;/b&gt;&lt;br/&gt;  - LXQt 데스크탑 환경을 위한 전원 관리&lt;/p&gt;&lt;p&gt;  작성자:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt; 
- &amp;nbsp; - 그리고 Razor 및 LXQt 프로젝트의 다른 프로젝트들&lt;/p&gt;&lt;p&gt; Copyright &amp;copy; 2012-2014&lt;/p&gt;&lt;p&gt;  번역자:&lt;br/&gt;  &amp;nbsp; 이정희 &lt;daemul72@gmail.com&gt;&lt;/p&gt;</translation>
+ &amp;nbsp; - 그리고 Razor 및 LXQt 프로젝트의 다른 프로젝트들&lt;/p&gt;&lt;p&gt; Copyright &amp;copy; 2012-2025&lt;/p&gt;&lt;p&gt;  번역자:&lt;br/&gt;  &amp;nbsp; 이정희 &lt;daemul72@gmail.com&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="213"/>
