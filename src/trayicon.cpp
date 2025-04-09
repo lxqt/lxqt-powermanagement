@@ -39,6 +39,7 @@
 #include <Solid/Device>
 #include <QIcon>
 #include <QStringBuilder>
+#include <QGlobalStatic>
 
 #include "trayicon.h"
 #include "batteryhelper.h"
@@ -46,6 +47,7 @@
 
 #include <LXQt/Globals>
 #include <LXQt/Notification>
+#include "PowerProfiles.h"
 
 TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
     : QSystemTrayIcon(parent),
@@ -96,6 +98,9 @@ TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
     QMenu *pauseMenu = mContextMenu.addMenu(QIcon::fromTheme(QStringLiteral("media-playback-pause")),
                                             tr("Pause idleness checks"));
     pauseMenu->addActions(mPauseActions->actions());
+
+    // power-profiles actions
+    mContextMenu.addMenu(LXQt::PowerProfiles::instance().menu());
 
     mContextMenu.addSeparator();
 
