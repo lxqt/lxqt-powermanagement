@@ -37,7 +37,7 @@
 #include <QtSvg/QSvgRenderer>
 #include <Solid/Battery>
 #include <Solid/Device>
-#include <XdgIcon>
+#include <QIcon>
 #include <QStringBuilder>
 
 #include "trayicon.h"
@@ -65,7 +65,7 @@ TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
 
     connect(this, &TrayIcon::activated, this, &TrayIcon::onActivated);
 
-    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("configure")), tr("Configure"),
+    mContextMenu.addAction(QIcon::fromTheme(QStringLiteral("configure")), tr("Configure"),
                            this, &TrayIcon::onConfigureTriggered);
 
     // pause actions
@@ -93,15 +93,15 @@ TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
     a->setCheckable(true);
     a->setData(PAUSE::Four);
 
-    QMenu *pauseMenu = mContextMenu.addMenu(XdgIcon::fromTheme(QStringLiteral("media-playback-pause")),
+    QMenu *pauseMenu = mContextMenu.addMenu(QIcon::fromTheme(QStringLiteral("media-playback-pause")),
                                             tr("Pause idleness checks"));
     pauseMenu->addActions(mPauseActions->actions());
 
     mContextMenu.addSeparator();
 
-    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("help-about")), tr("About"),
+    mContextMenu.addAction(QIcon::fromTheme(QStringLiteral("help-about")), tr("About"),
                            this, &TrayIcon::onAboutTriggered);
-    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("edit-delete")), tr("Disable icon"),
+    mContextMenu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), tr("Disable icon"),
                            this, &TrayIcon::onDisableIconTriggered);
     setContextMenu(&mContextMenu);
 }
