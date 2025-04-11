@@ -100,7 +100,7 @@ TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
     pauseMenu->addActions(mPauseActions->actions());
 
     // power-profiles actions
-    mContextMenu.addMenu(LXQt::PowerProfiles::instance().menu());
+    mContextMenu.addAction(LXQt::PowerProfiles::instance().menuAction());
 
     mContextMenu.addSeparator();
 

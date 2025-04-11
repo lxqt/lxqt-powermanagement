@@ -30,6 +30,7 @@
 #include <QObject>
 #include "dbus_types.h"
 
+class QAction;
 class QMenu;
 class QActionGroup;
 
@@ -57,7 +58,7 @@ namespace LXQt
         bool isValid() const;
         const QString & activeProfile() const;
         void setActiveProfile(const QString & value);
-        QMenu * menu();
+        QAction * menuAction();
 
     Q_SIGNALS:
         void needPropertyFetch(const QString & name);
@@ -83,6 +84,7 @@ namespace LXQt
         std::unique_ptr<QThread> mThread;
         std::unique_ptr<DBusPropAsyncGetter> mPropGetter;
 
+        std::unique_ptr<QAction> mMenuAction;
         std::unique_ptr<QMenu> mMenu;
         std::unique_ptr<QActionGroup> mActions;
         QString mActiveProfile;
