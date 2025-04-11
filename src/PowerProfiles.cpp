@@ -33,6 +33,15 @@
 #include "PowerProfiles.h"
 #include "DBusPropAsyncGetter.h"
 
+namespace {
+    using Trans = struct { char const * const s1; char const * const s2; };
+    [[maybe_unused]] void just_for_translations_dummy_function(const Trans = QT_TRANSLATE_NOOP3("LXQt::PowerProfiles", "power-saver", "power-profiles-daemon")
+            , const Trans = QT_TRANSLATE_NOOP3("LXQt::PowerProfiles", "balanced", "power-profiles-daemon")
+            , const Trans = QT_TRANSLATE_NOOP3("LXQt::PowerProfiles", "performance", "power-profiles-daemon")
+            )
+    {}
+}
+
 namespace LXQt
 {
     Q_GLOBAL_STATIC(LXQt::PowerProfiles, g_power_profiles)
@@ -130,7 +139,7 @@ namespace LXQt
         for (auto const & profile : profiles)
         {
             const QString p = qdbus_cast<QString>(profile[QStringLiteral("Profile")]);
-            auto a = new QAction(p, mActions.get());
+            auto a = new QAction(tr(qUtf8Printable(p), "power-profiles-daemon"), mActions.get());
             a->setCheckable(true);
             a->setData(p);
             a->setChecked(mActiveProfile == p);
