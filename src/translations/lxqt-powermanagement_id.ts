@@ -249,6 +249,32 @@
     </message>
 </context>
 <context>
+    <name>LXQt::PowerProfiles</name>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="38"/>
+        <source>power-saver</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="39"/>
+        <source>balanced</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="40"/>
+        <source>performance</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="69"/>
+        <source>Power profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PowerButton</name>
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
@@ -289,73 +315,73 @@ Anda dapat mengkonfigurasikannya dari pengaturan... </translation>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="68"/>
+        <location filename="../trayicon.cpp" line="70"/>
         <source>Configure</source>
         <translation>Konfigurasi</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="76"/>
+        <location filename="../trayicon.cpp" line="78"/>
         <source>30 minutes</source>
         <translation>30 menit</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="80"/>
+        <location filename="../trayicon.cpp" line="82"/>
         <source>1 hour</source>
         <translation>1 jam</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="84"/>
+        <location filename="../trayicon.cpp" line="86"/>
         <source>2 hours</source>
         <translation>2 jam</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="88"/>
+        <location filename="../trayicon.cpp" line="90"/>
         <source>3 hours</source>
         <translation>3 jam</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="92"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>4 hours</source>
         <translation>4 jam</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="97"/>
+        <location filename="../trayicon.cpp" line="99"/>
         <source>Pause idleness checks</source>
         <translation>Tunda sementara, pemeriksaan ketidakterpakaian</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="102"/>
-        <location filename="../trayicon.cpp" line="194"/>
+        <location filename="../trayicon.cpp" line="107"/>
+        <location filename="../trayicon.cpp" line="199"/>
         <source>About</source>
         <translation>Tentang</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="104"/>
+        <location filename="../trayicon.cpp" line="109"/>
         <source>Disable icon</source>
         <translation>Nonaktifkan ikon</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="163"/>
+        <location filename="../trayicon.cpp" line="168"/>
         <source>Empty</source>
         <translation type="unfinished">Kosong</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="195"/>
+        <location filename="../trayicon.cpp" line="200"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;Manajemen Daya LXQt&lt;/b&gt;&lt;br/&gt;  - Manajemen Daya untuk Lingkungan Desktop LXQt&lt;/p&gt;&lt;p&gt;  Pembuat:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - dan yang lainnya dari proyek Razor dan LXQt&lt;/p&gt;&lt;p&gt;  Hak cipta&amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="218"/>
         <source>LXQt Power Management info</source>
         <translation>Info Manajemen Daya LXQt</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="214"/>
+        <location filename="../trayicon.cpp" line="219"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Ikon tray Manajemen Daya LXQt dapat diaktifkan (ulang) di &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="216"/>
+        <location filename="../trayicon.cpp" line="221"/>
         <source>Configure now</source>
         <translation>Konfigurasi sekarang</translation>
     </message>
