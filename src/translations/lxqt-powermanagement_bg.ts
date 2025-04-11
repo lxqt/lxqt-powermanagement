@@ -254,6 +254,32 @@
     </message>
 </context>
 <context>
+    <name>LXQt::PowerProfiles</name>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="38"/>
+        <source>power-saver</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="39"/>
+        <source>balanced</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="40"/>
+        <source>performance</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="69"/>
+        <source>Power profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PowerButton</name>
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
@@ -294,73 +320,73 @@ You can configure it from settings... </source>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="68"/>
+        <location filename="../trayicon.cpp" line="70"/>
         <source>Configure</source>
         <translation>Конфигуриране</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="76"/>
+        <location filename="../trayicon.cpp" line="78"/>
         <source>30 minutes</source>
         <translation>30 минути</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="80"/>
+        <location filename="../trayicon.cpp" line="82"/>
         <source>1 hour</source>
         <translation>1 час</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="84"/>
+        <location filename="../trayicon.cpp" line="86"/>
         <source>2 hours</source>
         <translation>2 часа</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="88"/>
+        <location filename="../trayicon.cpp" line="90"/>
         <source>3 hours</source>
         <translation>3 часа</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="92"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>4 hours</source>
         <translation>4 часа</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="97"/>
+        <location filename="../trayicon.cpp" line="99"/>
         <source>Pause idleness checks</source>
         <translation>Спиране на проверка за бездействие</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="102"/>
-        <location filename="../trayicon.cpp" line="194"/>
+        <location filename="../trayicon.cpp" line="107"/>
+        <location filename="../trayicon.cpp" line="199"/>
         <source>About</source>
         <translation>Относно</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="104"/>
+        <location filename="../trayicon.cpp" line="109"/>
         <source>Disable icon</source>
         <translation>Деактивиране на икона</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="163"/>
+        <location filename="../trayicon.cpp" line="168"/>
         <source>Empty</source>
         <translation>Празно</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="195"/>
+        <location filename="../trayicon.cpp" line="200"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt Управление на захранването&lt;/b&gt;&lt;br/&gt;  - Управление на захранването на LXQt работна среда&lt;/p&gt;&lt;p&gt;  Автори:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - и други от Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="218"/>
         <source>LXQt Power Management info</source>
         <translation>Управление на захранването Инфо</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="214"/>
+        <location filename="../trayicon.cpp" line="219"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>Иконата за зоната на системния обмен може да бъде активирана в&lt;i&gt;Настройки-&gt;LXQt-&gt;Управление на захранването&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="216"/>
+        <location filename="../trayicon.cpp" line="221"/>
         <source>Configure now</source>
         <translation>Конфигурирай сега</translation>
     </message>

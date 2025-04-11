@@ -249,6 +249,32 @@
     </message>
 </context>
 <context>
+    <name>LXQt::PowerProfiles</name>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="38"/>
+        <source>power-saver</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="39"/>
+        <source>balanced</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="40"/>
+        <source>performance</source>
+        <comment>power-profiles-daemon</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PowerProfiles.cpp" line="69"/>
+        <source>Power profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PowerButton</name>
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
@@ -289,73 +315,73 @@ You can configure it from settings... </source>
 <context>
     <name>TrayIcon</name>
     <message>
-        <location filename="../trayicon.cpp" line="68"/>
+        <location filename="../trayicon.cpp" line="70"/>
         <source>Configure</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="76"/>
+        <location filename="../trayicon.cpp" line="78"/>
         <source>30 minutes</source>
         <translation>30 分鐘</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="80"/>
+        <location filename="../trayicon.cpp" line="82"/>
         <source>1 hour</source>
         <translation>1 小時</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="84"/>
+        <location filename="../trayicon.cpp" line="86"/>
         <source>2 hours</source>
         <translation>2 小時</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="88"/>
+        <location filename="../trayicon.cpp" line="90"/>
         <source>3 hours</source>
         <translation>3 小時</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="92"/>
+        <location filename="../trayicon.cpp" line="94"/>
         <source>4 hours</source>
         <translation>4 小時</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="97"/>
+        <location filename="../trayicon.cpp" line="99"/>
         <source>Pause idleness checks</source>
         <translation>暫停閒置檢查</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="102"/>
-        <location filename="../trayicon.cpp" line="194"/>
+        <location filename="../trayicon.cpp" line="107"/>
+        <location filename="../trayicon.cpp" line="199"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="104"/>
+        <location filename="../trayicon.cpp" line="109"/>
         <source>Disable icon</source>
         <translation>停用圖示</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="163"/>
+        <location filename="../trayicon.cpp" line="168"/>
         <source>Empty</source>
         <translation>空白</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="195"/>
+        <location filename="../trayicon.cpp" line="200"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
         <translation>&lt;p&gt;  &lt;b&gt;LXQt 電源管理&lt;/b&gt;&lt;br/&gt;  - 用於 LXQt 桌面環境的電源管理&lt;/p&gt;&lt;p&gt;  作者：&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - 以及來自 Razor 及 LXQt 專案的人員&lt;/p&gt;&lt;p&gt;  版權所有 &amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="213"/>
+        <location filename="../trayicon.cpp" line="218"/>
         <source>LXQt Power Management info</source>
         <translation>LXQt 電源管理資訊</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="214"/>
+        <location filename="../trayicon.cpp" line="219"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
         <translation>LXQt 電源管理的系統匣圖示可以在 &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt; 中啟用</translation>
     </message>
     <message>
-        <location filename="../trayicon.cpp" line="216"/>
+        <location filename="../trayicon.cpp" line="221"/>
         <source>Configure now</source>
         <translation>立即進行設定</translation>
     </message>
