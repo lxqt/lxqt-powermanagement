@@ -60,9 +60,11 @@ namespace LXQt
         : QObject{parent}
         , mThread{new QThread}
         , mPropGetter{new DBusPropAsyncGetter{msDBusPPService, msDBusPPPath, msDBusPPInterface, QDBusConnection::systemBus()}}
+        , mMenuAction{new QAction}
         , mMenu{new QMenu}
 
     {
+        mMenuAction->setMenu(mMenu.get());
         mMenu->menuAction()->setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-performance")));
         mMenu->setTitle(tr("Power profile"));
 
@@ -99,9 +101,9 @@ namespace LXQt
         mThread->wait();
     }
 
-    QMenu * PowerProfiles::menu()
+    QAction * PowerProfiles::menuAction()
     {
-        return mMenu.get();
+        return mMenuAction.get();
     }
 
     void PowerProfiles::onFetched(const QString name, const QVariant value)
@@ -125,12 +127,13 @@ namespace LXQt
         if (profiles.empty())
         {
             mActions.reset(nullptr);
-            mMenu->addAction(tr("power-profiles-daemon not available"))->setDisabled(true);
+            mMenuAction->setVisible(false);
             return;
         }
 
+        mMenuAction->setVisible(true);
         mActions.reset(new QActionGroup(nullptr));
-        mActions->setExclusionPolicy(QActionGroup::ExclusionPolicy::ExclusiveOptional);
+        mActions->setExclusionPolicy(QActionGroup::ExclusionPolicy::Exclusive);
 
         connect(mActions.get(), &QActionGroup::triggered, this, [this] (const QAction * a) {
             setActiveProfile(get<QString>(a->data()));
