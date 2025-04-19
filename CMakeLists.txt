@@ -29,7 +29,7 @@ find_package(KF6IdleTime ${KF6_MINIMUM_VERSION} REQUIRED)
 find_package(KF6Solid ${KF6_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt-globalkeys-ui ${LXQT_GLOBALKEYS_MINIMUM_VERSION} REQUIRED)
-find_package(XCB REQUIRED COMPONENTS xcb-dpms xcb-screensaver)
+find_package(XCB REQUIRED COMPONENTS DPMS SCREENSAVER)
 
 message(STATUS "Building with Qt${Qt6Core_VERSION}")
 
