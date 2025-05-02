@@ -114,6 +114,8 @@
         <translation>
             <numerusform>שעה</numerusform>
             <numerusform>שעתיים</numerusform>
+            <numerusform>%Ln שעות</numerusform>
+            <numerusform>%Ln שעות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -122,6 +124,8 @@
         <translation>
             <numerusform>דקה</numerusform>
             <numerusform>שתי דקות</numerusform>
+            <numerusform>%Ln דקות</numerusform>
+            <numerusform>%Ln דקות</numerusform>
         </translation>
     </message>
     <message>
@@ -234,6 +238,8 @@
         <translation>
             <numerusform>תתבצע השהיה בעוד שנייה</numerusform>
             <numerusform>תתבצע השהיה בעוד שתי שניות</numerusform>
+            <numerusform>תתבצע השהיה בעוד %Ln שניות</numerusform>
+            <numerusform>תתבצע השהיה בעוד %Ln שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -242,6 +248,8 @@
         <translation>
             <numerusform>תתבצע הרדמה בעוד שנייה</numerusform>
             <numerusform>תתבצע הרדמה בעוד שתי שניות</numerusform>
+            <numerusform>תתבצע הרדמה בעוד %Ln שניות</numerusform>
+            <numerusform>תתבצע הרדמה בעוד %Ln שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -250,6 +258,8 @@
         <translation>
             <numerusform>יתבצע כיבוי בעוד שנייה</numerusform>
             <numerusform>יתבצע כיבוי בעוד שתי שניות</numerusform>
+            <numerusform>יתבצע כיבוי בעוד %Ln שניות</numerusform>
+            <numerusform>יתבצע כיבוי בעוד %Ln שניות</numerusform>
         </translation>
     </message>
 </context>
@@ -259,24 +269,24 @@
         <location filename="../PowerProfiles.cpp" line="38"/>
         <source>power-saver</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>חסכון בחשמל</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="39"/>
         <source>balanced</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>מאוזן</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="40"/>
         <source>performance</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>ביצועים</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="69"/>
         <source>Power profile</source>
-        <translation type="unfinished"></translation>
+        <translation>פרופיל צריכת חשמל</translation>
     </message>
 </context>
 <context>
