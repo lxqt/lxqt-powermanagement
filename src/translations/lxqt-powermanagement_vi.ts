@@ -254,24 +254,24 @@
         <location filename="../PowerProfiles.cpp" line="38"/>
         <source>power-saver</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>tiết kiệm năng lượng</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="39"/>
         <source>balanced</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>cân bằng</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="40"/>
         <source>performance</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>hiệu năng cao</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="69"/>
         <source>Power profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ năng lượng</translation>
     </message>
 </context>
 <context>
