@@ -237,7 +237,7 @@
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
         <translation>
-            <numerusform>%Ln초 후 최대 절전모드</numerusform>
+            <numerusform>%Ln초 후 최대 절전 모드</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -254,19 +254,19 @@
         <location filename="../PowerProfiles.cpp" line="38"/>
         <source>power-saver</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>절전</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="39"/>
         <source>balanced</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>균형</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="40"/>
         <source>performance</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>성능</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="69"/>
