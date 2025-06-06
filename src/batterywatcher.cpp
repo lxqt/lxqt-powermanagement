@@ -69,11 +69,6 @@ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
 
     settingsChanged();
     batteryChanged();
-
-    // pause timer
-    mPauseTimer.setSingleShot(true);
-    mPauseTimer.setTimerType(Qt::VeryCoarseTimer);
-    connect(&mPauseTimer, &QTimer::timeout, this, &BatteryWatcher::onPauseTimeout);
 }
 
 BatteryWatcher::~BatteryWatcher()
@@ -177,31 +172,9 @@ void BatteryWatcher::settingsChanged()
     {
         for (Solid::Battery *battery : std::as_const(mBatteries))
         {
-            mTrayIcons.append(new TrayIcon(battery, this));
+            mTrayIcons.append(new TrayIconBattery(battery, this));
             connect(mTrayIcons.last(), &TrayIcon::toggleShowInfo, mBatteryInfoDialog, &BatteryInfoDialog::toggleShow);
-            connect(mTrayIcons.last(), &TrayIcon::pauseChanged, this, &BatteryWatcher::setPause);
             mTrayIcons.last()->show();
         }
-    }
-}
-
-void BatteryWatcher::onPauseTimeout()
-{
-    for (const auto &trayIcon : std::as_const(mTrayIcons))
-        trayIcon->setPause(TrayIcon::PAUSE::None);
-}
-
-void BatteryWatcher::setPause(TrayIcon::PAUSE duration)
-{
-    if (duration == TrayIcon::PAUSE::None)
-    {
-        onPauseTimeout();
-        mPauseTimer.stop();
-    }
-    else
-    {
-        for (const auto &trayIcon : std::as_const(mTrayIcons))
-            trayIcon->setPause(duration);
-        mPauseTimer.start(TrayIcon::getPauseInterval(duration));
     }
 }
