@@ -1,3 +1,8 @@
+lxqt-powermanagement-2.2.1 / 2025-06-30
+========================================
+ * Use Qt provided FindXCB module.
+ * Added power-profiles info to README.
+
 lxqt-powermanagement-2.2.0 / 2025-04-17
 ========================================
  * Added support for power profiles.
