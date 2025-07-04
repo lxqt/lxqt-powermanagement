@@ -84,6 +84,9 @@
           </property>
          </widget>
         </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="idleBatteryActionComboBox"/>
+        </item>
         <item row="3" column="0">
          <widget class="QLabel" name="idleBatteryActionLabel">
           <property name="text">
@@ -110,9 +113,6 @@
            <string>mm:ss</string>
           </property>
          </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QComboBox" name="idleBatteryActionComboBox"/>
         </item>
        </layout>
       </item>
@@ -179,13 +179,6 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="1">
-          <widget class="QPushButton" name="checkBacklightButton">
-           <property name="text">
-            <string>Check backlight</string>
-           </property>
-          </widget>
-         </item>
          <item row="3" column="1">
           <widget class="QCheckBox" name="onBatteryDischargingCheckBox">
            <property name="text">
@@ -193,6 +186,13 @@
            </property>
            <property name="checked">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QPushButton" name="checkBacklightButton">
+           <property name="text">
+            <string>Check backlight</string>
            </property>
           </widget>
          </item>
