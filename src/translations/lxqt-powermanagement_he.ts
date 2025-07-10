@@ -114,8 +114,6 @@
         <translation>
             <numerusform>שעה</numerusform>
             <numerusform>שעתיים</numerusform>
-            <numerusform>%Ln שעות</numerusform>
-            <numerusform>%Ln שעות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -124,8 +122,6 @@
         <translation>
             <numerusform>דקה</numerusform>
             <numerusform>שתי דקות</numerusform>
-            <numerusform>%Ln דקות</numerusform>
-            <numerusform>%Ln דקות</numerusform>
         </translation>
     </message>
     <message>
@@ -238,8 +234,6 @@
         <translation>
             <numerusform>תתבצע השהיה בעוד שנייה</numerusform>
             <numerusform>תתבצע השהיה בעוד שתי שניות</numerusform>
-            <numerusform>תתבצע השהיה בעוד %Ln שניות</numerusform>
-            <numerusform>תתבצע השהיה בעוד %Ln שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -248,8 +242,6 @@
         <translation>
             <numerusform>תתבצע הרדמה בעוד שנייה</numerusform>
             <numerusform>תתבצע הרדמה בעוד שתי שניות</numerusform>
-            <numerusform>תתבצע הרדמה בעוד %Ln שניות</numerusform>
-            <numerusform>תתבצע הרדמה בעוד %Ln שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -258,8 +250,6 @@
         <translation>
             <numerusform>יתבצע כיבוי בעוד שנייה</numerusform>
             <numerusform>יתבצע כיבוי בעוד שתי שניות</numerusform>
-            <numerusform>יתבצע כיבוי בעוד %Ln שניות</numerusform>
-            <numerusform>יתבצע כיבוי בעוד %Ln שניות</numerusform>
         </translation>
     </message>
 </context>

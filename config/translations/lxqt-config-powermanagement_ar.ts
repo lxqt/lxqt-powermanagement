@@ -128,7 +128,7 @@
         <translation>عند الخمول على البطارية:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="90"/>
+        <location filename="../idlenesswatchersettings.ui" line="93"/>
         <source>Battery Idle time:</source>
         <translation>وقت خمول البطارية:</translation>
     </message>
@@ -144,7 +144,7 @@
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="76"/>
-        <location filename="../idlenesswatchersettings.ui" line="110"/>
+        <location filename="../idlenesswatchersettings.ui" line="113"/>
         <location filename="../idlenesswatchersettings.ui" line="178"/>
         <source>mm:ss</source>
         <translation>س س:ث ث</translation>
@@ -161,22 +161,32 @@
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
-        <location filename="../idlenesswatchersettings.ui" line="97"/>
+        <location filename="../idlenesswatchersettings.ui" line="100"/>
         <source>Minutes:Seconds (min: 01:30)</source>
         <translation>الدقائق:الثواني (الحد الأدنى: 01:30)</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="185"/>
+        <location filename="../idlenesswatchersettings.ui" line="195"/>
         <source>Check backlight</source>
         <translation>تحقق من الإضاءة الخلفية</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="192"/>
+        <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>On battery discharging </source>
         <translation>عند تفريغ البطارية </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
+        <source>Command to Turn off Monitor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="214"/>
+        <source>Recommended command for:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="234"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>تعطيل عمليات التحقق من الخمول عند ملء الشاشة</translation>
     </message>
