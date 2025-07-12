@@ -60,14 +60,18 @@ BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     mChargingIconProducer.updateState(Solid::Battery::Charging);
     mDischargingIconProducer.updateState(Solid::Battery::Discharging);
 
-    connect(mUi->groupBox, &QGroupBox::clicked, this, &BatteryWatcherSettings::saveSettings);
-    connect(mUi->actionComboBox, QOverload<int>::of(&QComboBox::activated), this, &BatteryWatcherSettings::saveSettings);
-    connect(mUi->warningSpinBox, &QSpinBox::editingFinished, this, &BatteryWatcherSettings::saveSettings);
-    connect(mUi->levelSpinBox, &QSpinBox::editingFinished, this, &BatteryWatcherSettings::saveSettings);
-    connect(mUi->showIconCheckBox, &QCheckBox::clicked, this, &BatteryWatcherSettings::saveSettings);
-    connect(mUi->showIconCheckBox, &QCheckBox::clicked, mUi->previewBox, &QGroupBox::setEnabled);
-    connect(mUi->iconTypeComboBox, QOverload<int>::of(&QComboBox::activated), this, &BatteryWatcherSettings::saveSettings);
-    connect(mUi->iconTypeComboBox, QOverload<int>::of(&QComboBox::activated), this, &BatteryWatcherSettings::updatePreview);
+    loadSettings();
+
+    connect(mUi->groupBox, &QGroupBox::toggled, this, &BatteryWatcherSettings::settingsChanged);
+    connect(mUi->actionComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::settingsChanged);
+    connect(mUi->warningSpinBox, &QSpinBox::valueChanged, this, &BatteryWatcherSettings::settingsChanged);
+    connect(mUi->levelSpinBox, &QSpinBox::valueChanged, this, &BatteryWatcherSettings::settingsChanged);
+    connect(mUi->showIconCheckBox, &QCheckBox::toggled, this, &BatteryWatcherSettings::settingsChanged);
+    connect(mUi->showIconCheckBox, &QCheckBox::toggled, mUi->previewBox, &QGroupBox::setEnabled);
+    connect(mUi->iconTypeComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::settingsChanged);
+    connect(mUi->iconTypeComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::updatePreview);
+    connect(mUi->iconTypeComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::onChargeIconChanged);
+    connect(mUi->iconTypeComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::onDischargeIconChanged);
     connect(mUi->chargeLevelSlider, &QSlider::valueChanged, this, &BatteryWatcherSettings::updatePreview);
     connect(&mChargingIconProducer, &IconProducer::iconChanged, this, &BatteryWatcherSettings::onChargeIconChanged);
     connect(&mDischargingIconProducer, &IconProducer::iconChanged, this, &BatteryWatcherSettings::onDischargeIconChanged);
@@ -101,7 +105,8 @@ void BatteryWatcherSettings::saveSettings()
 
 void BatteryWatcherSettings::updatePreview()
 {
-    mUi->previewBox->setTitle(tr("Preview") +  QString::fromLatin1(" (%1)").arg(mSettings.isUseThemeIcons() ? QIcon::themeName() : tr("built in")));
+    bool useThemeIcons = static_cast<PowerManagementSettings::IconType>(currentValue(mUi->iconTypeComboBox)) == PowerManagementSettings::ICON_THEME;
+    mUi->previewBox->setTitle(tr("Preview") +  QString::fromLatin1(" (%1)").arg(useThemeIcons ? QIcon::themeName() : tr("built in")));
 
     int chargePercent = mUi->chargeLevelSlider->value();
     mChargingIconProducer.updateChargePercent(chargePercent);
@@ -111,12 +116,14 @@ void BatteryWatcherSettings::updatePreview()
 
 void BatteryWatcherSettings::onChargeIconChanged()
 {
+    mChargingIconProducer.forceIconType(static_cast<PowerManagementSettings::IconType>(currentValue(mUi->iconTypeComboBox)));
     mUi->chargingIcon->setPixmap(mChargingIconProducer.mIcon.pixmap(mUi->chargingIcon->size()));
     mUi->chargingLabel->setText(mChargingIconProducer.mIconName);
 }
 
 void BatteryWatcherSettings::onDischargeIconChanged()
 {
+    mDischargingIconProducer.forceIconType(static_cast<PowerManagementSettings::IconType>(currentValue(mUi->iconTypeComboBox)));
     mUi->dischargingIcon->setPixmap(mDischargingIconProducer.mIcon.pixmap(mUi->dischargingIcon->size()));
     mUi->dischargingLabel->setText(mDischargingIconProducer.mIconName);
 }

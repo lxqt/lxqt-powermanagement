@@ -44,12 +44,14 @@ LidWatcherSettings::LidWatcherSettings(QWidget *parent) :
     fillComboBox(mUi->extMonOnBatteryActionComboBox);
     fillComboBox(mUi->extMonOnAcActionComboBox);
 
-    connect(mUi->lidWatcherSettingsGroupBox, &QGroupBox::clicked, this, &LidWatcherSettings::saveSettings);
-    connect(mUi->onBatteryActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &LidWatcherSettings::saveSettings);
-    connect(mUi->onAcActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &LidWatcherSettings::saveSettings);
-    connect(mUi->extMonOnBatteryActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &LidWatcherSettings::saveSettings);
-    connect(mUi->extMonOnAcActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &LidWatcherSettings::saveSettings);
-    connect(mUi->extMonGroupBox, &QGroupBox::clicked, this, &LidWatcherSettings::saveSettings);
+    loadSettings();
+
+    connect(mUi->lidWatcherSettingsGroupBox, &QGroupBox::toggled, this, &LidWatcherSettings::settingsChanged);
+    connect(mUi->onBatteryActionComboBox, &QComboBox::currentIndexChanged, this, &LidWatcherSettings::settingsChanged);
+    connect(mUi->onAcActionComboBox, &QComboBox::currentIndexChanged, this, &LidWatcherSettings::settingsChanged);
+    connect(mUi->extMonOnBatteryActionComboBox, &QComboBox::currentIndexChanged, this, &LidWatcherSettings::settingsChanged);
+    connect(mUi->extMonOnAcActionComboBox, &QComboBox::currentIndexChanged, this, &LidWatcherSettings::settingsChanged);
+    connect(mUi->extMonGroupBox, &QGroupBox::toggled, this, &LidWatcherSettings::settingsChanged);
 }
 
 LidWatcherSettings::~LidWatcherSettings()
@@ -67,7 +69,6 @@ void LidWatcherSettings::loadSettings()
     mUi->extMonGroupBox->setChecked(mSettings.isEnableExtMonLidClosedActions());
     setComboBoxToValue(mUi->extMonOnBatteryActionComboBox, mSettings.getLidClosedExtMonAction());
     setComboBoxToValue(mUi->extMonOnAcActionComboBox, mSettings.getLidClosedExtMonAcAction());
-
 }
 
 void LidWatcherSettings::saveSettings()

@@ -24,6 +24,9 @@ IconProducer::IconProducer(Solid::Battery *battery, QObject *parent) : QObject(p
     connect(battery, &Solid::Battery::chargePercentChanged, this, &IconProducer::updateChargePercent);
     connect(&mSettings, &PowerManagementSettings::settingsChanged, this, &IconProducer::update);
 
+    iconTypeForced = false;
+    mIconType = PowerManagementSettings::ICON_THEME;
+
     mChargePercent = battery->chargePercent();
     mState = battery->chargeState();
     themeChanged();
@@ -31,6 +34,9 @@ IconProducer::IconProducer(Solid::Battery *battery, QObject *parent) : QObject(p
 
 IconProducer::IconProducer(QObject *parent):  QObject(parent)
 {
+    iconTypeForced = false;
+    mIconType = PowerManagementSettings::ICON_THEME;
+
     themeChanged();
     update();
 }
@@ -50,11 +56,12 @@ void IconProducer::updateState(int newState)
     update();
 }
 
-void IconProducer::update()
+bool IconProducer::updateIcon()
 {
     QString newIconName;
+    bool useThemeIcons = iconTypeForced ? mIconType == PowerManagementSettings::ICON_THEME : mSettings.isUseThemeIcons();
 
-    if (mSettings.isUseThemeIcons())
+    if (useThemeIcons)
     {
         QMap<float, QString> *levelNameMap = (mState == Solid::Battery::Discharging ? &mLevelNameMapDischarging : &mLevelNameMapCharging);
         const auto levels = levelNameMap->keys();
@@ -68,12 +75,18 @@ void IconProducer::update()
         }
     }
 
-    if (mSettings.isUseThemeIcons() && newIconName == mIconName)
-        return;
+    if (useThemeIcons && newIconName == mIconName)
+        return false;
 
     mIconName = newIconName;
-    mIcon = mSettings.isUseThemeIcons() ? QIcon::fromTheme(mIconName) : generatedIcon();
-    emit iconChanged();
+    mIcon = useThemeIcons ? QIcon::fromTheme(mIconName) : generatedIcon();
+    return true;
+}
+
+void IconProducer::update()
+{
+    if (updateIcon())
+        emit iconChanged();
 }
 
 void IconProducer::themeChanged()
@@ -359,7 +372,7 @@ QString IconProducer::buildIcon<PowerManagementSettings::ICON_BATTERY_OPAQUE>(So
 
 QIcon IconProducer::generatedIcon()
 {
-    PowerManagementSettings::IconType icnType = mSettings.getIconType();
+    PowerManagementSettings::IconType icnType = iconTypeForced ? mIconType : mSettings.getIconType();
     const QString cacheStr = QString::number(icnType)
                              + QString::number(mState)
                              + QString::number(mChargePercent);
@@ -398,4 +411,11 @@ QIcon IconProducer::generatedIcon()
     }
 
     return QIcon(pixmap);
+}
+
+void IconProducer::forceIconType(PowerManagementSettings::IconType iconType)
+{
+    iconTypeForced = true;
+    mIconType = iconType;
+    updateIcon();
 }

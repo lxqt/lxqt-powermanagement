@@ -22,6 +22,8 @@ public:
     IconProducer(Solid::Battery* battery, QObject *parent = nullptr);
     IconProducer(QObject *parent = nullptr);
 
+    void forceIconType(PowerManagementSettings::IconType iconType);
+
     QIcon mIcon;
     QString mIconName;
 
@@ -36,6 +38,7 @@ public slots:
 
 private:
 
+    bool updateIcon();
     QIcon generatedIcon();
     template <int iconType>
         QString buildIcon(Solid::Battery::ChargeState state, int chargeLevel);
@@ -47,6 +50,9 @@ private:
 
     QMap<float, QString> mLevelNameMapCharging;
     QMap<float, QString> mLevelNameMapDischarging;
+
+    bool iconTypeForced;
+    PowerManagementSettings::IconType mIconType;
 
 };
 

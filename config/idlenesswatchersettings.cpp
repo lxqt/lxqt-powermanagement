@@ -56,70 +56,45 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
         mBacklightActualValue = mBacklight->getBacklight();
     }
 
-    mConnectSignals();
-
     // Handle the monitor command separately.
-    if (QGuiApplication::platformName() != QStringLiteral("wayland")) {
-        mUi->monitorGroupBox->hide();
-        return;
+    if (QGuiApplication::platformName() == QStringLiteral("wayland")) {
+        // Add some known commands that work fine.
+        mUi->monitorComboBox->addItem(QStringLiteral("KWin-Wayland"), QStringLiteral("kscreen-doctor --dpms off"));
+        mUi->monitorComboBox->addItem(QStringLiteral("Niri"), QStringLiteral("niri msg action power-off-monitors"));
     }
-    // Add some known commands that work fine.
-    mUi->monitorComboBox->addItem(QStringLiteral("KWin-Wayland"), QStringLiteral("kscreen-doctor --dpms off"));
-    mUi->monitorComboBox->addItem(QStringLiteral("Niri"), QStringLiteral("niri msg action power-off-monitors"));
-    // Set the command on activating an item.
-    connect(mUi->monitorComboBox, &QComboBox::activated, this, [this](int index) {
-        if (index > -1) {
-            // don't use setText(), because it resets modification
-            mUi->monitorLineEdit->selectAll();
-            mUi->monitorLineEdit->insert(mUi->monitorComboBox->itemData(index).toString());
-            // focus monitorLineEdit for QLineEdit::editingFinished to be emitted later
-            mUi->monitorLineEdit->setFocus();
-        }
-    });
-    // Save the command when editing is finished.
-    connect(mUi->monitorLineEdit, &QLineEdit::editingFinished, this, [this] {
-        LXQt::Settings powerSetting(QStringLiteral("power"));
-        powerSetting.setValue(QStringLiteral("monitorOffCommand_wayland"), mUi->monitorLineEdit->text());
-    });
-}
+    else {
+        mUi->monitorGroupBox->hide();
+    }
 
+    mFirstLoad = true; // not a resetting
+    loadSettings();
 
-void IdlenessWatcherSettings::mConnectSignals()
-{
-    connect(mUi->idlenessWatcherGroupBox,          &QGroupBox::clicked,         this, &IdlenessWatcherSettings::saveSettings);
-    connect(mUi->idleACActionComboBox,             &QComboBox::activated,       this, &IdlenessWatcherSettings::saveSettings);
-    connect(mUi->idleACTimeEdit,                   &QTimeEdit::editingFinished, this, &IdlenessWatcherSettings::saveSettings);
-    connect(mUi->idleBatteryActionComboBox,        &QComboBox::activated,       this, &IdlenessWatcherSettings::saveSettings);
-    connect(mUi->idleBatteryTimeEdit,              &QTimeEdit::editingFinished, this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->idlenessWatcherGroupBox, &QGroupBox::toggled, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->idleACActionComboBox, &QComboBox::currentIndexChanged, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->idleACTimeEdit, &QTimeEdit::dateTimeChanged, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->idleBatteryActionComboBox, &QComboBox::currentIndexChanged, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->idleBatteryTimeEdit, &QTimeEdit::dateTimeChanged, this, &IdlenessWatcherSettings::settingsChanged);
 
-    connect(mUi->checkBacklightButton,             &QPushButton::pressed,       this, &IdlenessWatcherSettings::backlightCheckButtonPressed);
-    connect(mUi->checkBacklightButton,             &QPushButton::released,      this, &IdlenessWatcherSettings::backlightCheckButtonReleased);
+    connect(mUi->checkBacklightButton, &QPushButton::pressed, this, &IdlenessWatcherSettings::backlightCheckButtonPressed);
+    connect(mUi->checkBacklightButton, &QPushButton::released, this, &IdlenessWatcherSettings::backlightCheckButtonReleased);
 
-    connect(mUi->idlenessBacklightWatcherGroupBox, &QGroupBox::clicked,         this, &IdlenessWatcherSettings::saveSettings);
-    connect(mUi->backlightSlider,                  &QSlider::valueChanged,      this, &IdlenessWatcherSettings::saveSettings);
-    connect(mUi->idleTimeBacklightTimeEdit,        &QTimeEdit::editingFinished, this, &IdlenessWatcherSettings::saveSettings);
-    connect(mUi->onBatteryDischargingCheckBox,     &QCheckBox::toggled,         this, &IdlenessWatcherSettings::saveSettings);
+    connect(mUi->idlenessBacklightWatcherGroupBox, &QGroupBox::toggled, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->backlightSlider, &QSlider::valueChanged, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->idleTimeBacklightTimeEdit, &QTimeEdit::dateTimeChanged, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->onBatteryDischargingCheckBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::settingsChanged);
 
-    connect(mUi->disableIdlenessFullscreenBox,     &QCheckBox::toggled,         this, &IdlenessWatcherSettings::saveSettings);
-}
+    connect(mUi->disableIdlenessFullscreenBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::settingsChanged);
 
-void IdlenessWatcherSettings::mDisconnectSignals()
-{
-    disconnect(mUi->idlenessWatcherGroupBox,          &QGroupBox::clicked,         this, &IdlenessWatcherSettings::saveSettings);
-    disconnect(mUi->idleACActionComboBox,             &QComboBox::activated,       this, &IdlenessWatcherSettings::saveSettings);
-    disconnect(mUi->idleACTimeEdit,                   &QTimeEdit::editingFinished, this, &IdlenessWatcherSettings::saveSettings);
-    disconnect(mUi->idleBatteryActionComboBox,        &QComboBox::activated,       this, &IdlenessWatcherSettings::saveSettings);
-    disconnect(mUi->idleBatteryTimeEdit,              &QTimeEdit::editingFinished, this, &IdlenessWatcherSettings::saveSettings);
-
-    disconnect(mUi->checkBacklightButton,             &QPushButton::pressed,       this, &IdlenessWatcherSettings::backlightCheckButtonPressed);
-    disconnect(mUi->checkBacklightButton,             &QPushButton::released,      this, &IdlenessWatcherSettings::backlightCheckButtonReleased);
-
-    disconnect(mUi->idlenessBacklightWatcherGroupBox, &QGroupBox::clicked,         this, &IdlenessWatcherSettings::saveSettings);
-    disconnect(mUi->backlightSlider,                  &QSlider::valueChanged,      this, &IdlenessWatcherSettings::saveSettings);
-    disconnect(mUi->idleTimeBacklightTimeEdit,        &QTimeEdit::editingFinished, this, &IdlenessWatcherSettings::saveSettings);
-    disconnect(mUi->onBatteryDischargingCheckBox,     &QCheckBox::toggled,         this, &IdlenessWatcherSettings::saveSettings);
-
-    disconnect(mUi->disableIdlenessFullscreenBox,     &QCheckBox::toggled,         this, &IdlenessWatcherSettings::saveSettings);
+    if (QGuiApplication::platformName() == QStringLiteral("wayland")) {
+        connect(mUi->monitorComboBox, &QComboBox::activated, this, [this](int index) {
+            if (index > -1) {
+                // don't use setText(), because it resets modification
+                mUi->monitorLineEdit->selectAll();
+                mUi->monitorLineEdit->insert(mUi->monitorComboBox->itemData(index).toString());
+            }
+        });
+        connect(mUi->monitorLineEdit, &QLineEdit::textChanged, this, &IdlenessWatcherSettings::settingsChanged);
+    }
 }
 
 IdlenessWatcherSettings::~IdlenessWatcherSettings()
@@ -129,7 +104,6 @@ IdlenessWatcherSettings::~IdlenessWatcherSettings()
 
 void IdlenessWatcherSettings::loadSettings()
 {
-    mDisconnectSignals();
     mUi->idlenessWatcherGroupBox->setChecked(mSettings.isIdlenessWatcherEnabled());
 
     setComboBoxToValue(mUi->idleACActionComboBox, mSettings.getIdlenessACAction());
@@ -145,14 +119,20 @@ void IdlenessWatcherSettings::loadSettings()
         mUi->onBatteryDischargingCheckBox->setChecked(mSettings.isIdlenessBacklightOnBatteryDischargingEnabled());
     }
     mUi->disableIdlenessFullscreenBox->setChecked(mSettings.isDisableIdlenessWhenFullscreenEnabled());
-    mConnectSignals();
 
     if (QGuiApplication::platformName() == QStringLiteral("wayland")) {
         LXQt::Settings powerSetting(QStringLiteral("power"));
-        auto powerCommand = powerSetting.value(QStringLiteral("monitorOffCommand_wayland"));
-        mUi->monitorComboBox->setCurrentIndex(mUi->monitorComboBox->findData(powerCommand));
-        mUi->monitorLineEdit->setText(powerCommand.toString());
+        if (mFirstLoad) {
+            mMonitorOffCommand = powerSetting.value(QStringLiteral("monitorOffCommand_wayland"));
+        }
+        else {
+            // needed with resetting
+            powerSetting.setValue(QStringLiteral("monitorOffCommand_wayland"), mMonitorOffCommand);
+        }
+        mUi->monitorComboBox->setCurrentIndex(mUi->monitorComboBox->findData(mMonitorOffCommand));
+        mUi->monitorLineEdit->setText(mMonitorOffCommand.toString());
     }
+    mFirstLoad = false;
 }
 
 void IdlenessWatcherSettings::saveSettings()
@@ -170,6 +150,12 @@ void IdlenessWatcherSettings::saveSettings()
     mSettings.setBacklight(mUi->backlightSlider->value());
     mSettings.setIdlenessBacklightOnBatteryDischargingEnabled(mUi->onBatteryDischargingCheckBox->isChecked());
     mSettings.setDisableIdlenessWhenFullscreen(mUi->disableIdlenessFullscreenBox->isChecked());
+
+    if (QGuiApplication::platformName() == QStringLiteral("wayland")) {
+        LXQt::Settings powerSetting(QStringLiteral("power"));
+        powerSetting.setValue(QStringLiteral("monitorOffCommand_wayland"), mUi->monitorLineEdit->text());
+        mUi->monitorComboBox->setCurrentIndex(mUi->monitorComboBox->findData(mUi->monitorLineEdit->text()));
+    }
 }
 
 void IdlenessWatcherSettings::backlightCheckButtonPressed()
