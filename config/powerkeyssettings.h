@@ -45,10 +45,11 @@ public:
     explicit PowerKeysSettings(QWidget *parent = nullptr);
     ~PowerKeysSettings() override;
 
+signals:
+    void settingsChanged();
+
 public Q_SLOTS:
     void loadSettings();
-
-private Q_SLOTS:
     void saveSettings();
 
 private:

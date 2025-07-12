@@ -36,21 +36,47 @@
 MainWindow::MainWindow(QWidget *parent) :
     LXQt::ConfigDialog(tr("Power Management Settings"), new PowerManagementSettings(parent))
 {
+    setButtons(QDialogButtonBox::Apply | QDialogButtonBox::Close | QDialogButtonBox::Reset);
+    enableButton(QDialogButtonBox::Apply, false); // disable Apply button until something is changed
+
     BatteryWatcherSettings* batteryWatcherSettings = new BatteryWatcherSettings(this);
     addPage(batteryWatcherSettings, tr("Battery"), QSL("battery"));
     connect(this, &MainWindow::reset, batteryWatcherSettings, &BatteryWatcherSettings::loadSettings);
+    connect(batteryWatcherSettings, &BatteryWatcherSettings::settingsChanged, this, [this] {
+        enableButton(QDialogButtonBox::Apply, true);
+    });
 
     LidWatcherSettings *lidwatcherSettings = new LidWatcherSettings(this);
     addPage(lidwatcherSettings, tr("Lid"), QSL("laptop-lid"));
     connect(this, &MainWindow::reset, lidwatcherSettings, &LidWatcherSettings::loadSettings);
+    connect(lidwatcherSettings, &LidWatcherSettings::settingsChanged, this, [this] {
+        enableButton(QDialogButtonBox::Apply, true);
+    });
 
     IdlenessWatcherSettings* idlenessWatcherSettings = new IdlenessWatcherSettings(this);
     addPage(idlenessWatcherSettings, tr("Idle"), (QStringList() << QSL("user-idle") << QSL("user-away")));
     connect(this, &MainWindow::reset, idlenessWatcherSettings, &IdlenessWatcherSettings::loadSettings);
+    connect(idlenessWatcherSettings, &IdlenessWatcherSettings::settingsChanged, this, [this] {
+        enableButton(QDialogButtonBox::Apply, true);
+    });
 
     PowerKeysSettings* powerKeysSettings = new PowerKeysSettings(this);
     addPage(powerKeysSettings, tr("Power keys"), QSL("system-shutdown"));
     connect(this, &MainWindow::reset, powerKeysSettings, &PowerKeysSettings::loadSettings);
+    connect(powerKeysSettings, &PowerKeysSettings::settingsChanged, this, [this] {
+        enableButton(QDialogButtonBox::Apply, true);
+    });
 
-    emit reset();
+    connect(this, &MainWindow::reset, [this]() {
+        enableButton(QDialogButtonBox::Apply, false);
+    });
+    connect(this, &LXQt::ConfigDialog::clicked, [=, this] (QDialogButtonBox::StandardButton btn) {
+        if (btn == QDialogButtonBox::Apply) {
+            batteryWatcherSettings->saveSettings();
+            lidwatcherSettings->saveSettings();
+            idlenessWatcherSettings->saveSettings();
+            powerKeysSettings->saveSettings();
+            enableButton(QDialogButtonBox::Apply, false);
+        }
+    });
 }

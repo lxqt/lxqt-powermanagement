@@ -49,9 +49,12 @@ public:
 
 public slots:
     void loadSettings();
+    void saveSettings();
+
+signals:
+    void settingsChanged();
 
 private slots:
-    void saveSettings();
     void updatePreview();
     void onChargeIconChanged();
     void onDischargeIconChanged();

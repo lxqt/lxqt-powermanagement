@@ -46,9 +46,10 @@ public:
 
 public slots:
     void loadSettings();
-
-private slots:
     void saveSettings();
+
+signals:
+    void settingsChanged();
 
 private:
     PowerManagementSettings mSettings;

@@ -47,9 +47,12 @@ public:
 
 public Q_SLOTS:
     void loadSettings();
+    void saveSettings();
+
+signals:
+    void settingsChanged();
 
 private Q_SLOTS:
-    void saveSettings();
     void backlightCheckButtonPressed();
     void backlightCheckButtonReleased();
 
@@ -58,9 +61,8 @@ private:
     Ui::IdlenessWatcherSettings *mUi;
     LXQt::Backlight *mBacklight;
     int mBacklightActualValue;
-    
-    void mConnectSignals();
-    void mDisconnectSignals();
+    bool mFirstLoad;
+    QVariant mMonitorOffCommand;
 };
 
 #endif // IDLE_SETTINGS_H

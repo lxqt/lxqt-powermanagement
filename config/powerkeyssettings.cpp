@@ -39,9 +39,11 @@ PowerKeysSettings::PowerKeysSettings(QWidget *parent) :
     fillComboBox(mUi->suspendKeyActionComboBox, true);
     fillComboBox(mUi->hibernateKeyActionComboBox, true);
 
-    connect(mUi->powerKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
-    connect(mUi->suspendKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
-    connect(mUi->hibernateKeyActionComboBox, QOverload<int>::of(&QComboBox::activated), this, &PowerKeysSettings::saveSettings);
+    loadSettings();
+
+    connect(mUi->powerKeyActionComboBox, &QComboBox::currentIndexChanged, this, &PowerKeysSettings::settingsChanged);
+    connect(mUi->suspendKeyActionComboBox, &QComboBox::currentIndexChanged, this, &PowerKeysSettings::settingsChanged);
+    connect(mUi->hibernateKeyActionComboBox, &QComboBox::currentIndexChanged, this, &PowerKeysSettings::settingsChanged);
 
     if (QGuiApplication::platformName() == QStringLiteral("wayland"))
     {
