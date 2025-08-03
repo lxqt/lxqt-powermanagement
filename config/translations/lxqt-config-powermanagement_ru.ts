@@ -178,7 +178,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Команда для выключения монитора</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="214"/>
