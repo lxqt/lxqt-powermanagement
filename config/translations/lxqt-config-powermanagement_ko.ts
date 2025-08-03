@@ -178,12 +178,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>모니터 끄기 명령</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="214"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>권장 명령어:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>

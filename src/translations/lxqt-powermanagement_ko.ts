@@ -186,7 +186,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>활동력 등급:</translation>
+        <translation>용량 비율:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="../PowerProfiles.cpp" line="69"/>
         <source>Power profile</source>
-        <translation type="unfinished"></translation>
+        <translation>전원 프로필</translation>
     </message>
 </context>
 <context>
