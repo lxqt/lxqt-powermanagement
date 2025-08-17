@@ -46,7 +46,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation>Icône&#xa0;:</translation>
+        <translation>Icône :</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
@@ -125,12 +125,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation>En cas d&apos;inactivité sur batterie&#x202f;:</translation>
+        <translation>En cas d&apos;inactivité sur batterie :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="93"/>
         <source>Battery Idle time:</source>
-        <translation>Temps d&apos;inactivité sur batterie&#x202f;:</translation>
+        <translation>Temps d&apos;inactivité sur batterie :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -152,18 +152,18 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation>En cas d&apos;inactivité branché&#xa0;:</translation>
+        <translation>En cas d&apos;inactivité branché :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation>Temps d&apos;inactivité branché&#xa0;:</translation>
+        <translation>Temps d&apos;inactivité branché :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="100"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation>Minutes:Secondes (min&#xa0;: 01:30)</translation>
+        <translation>Minutes:Secondes (min : 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="195"/>
@@ -178,12 +178,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande pour éteindre le moniteur</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="214"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande recommandée pour :</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
@@ -299,7 +299,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation>Note&#xa0;: Sous Wayland, les touches d&apos;alimentation sont configurées par le compositeur.</translation>
+        <translation>Note : Sous Wayland, les touches d&apos;alimentation sont configurées par le compositeur.</translation>
     </message>
 </context>
 <context>

@@ -178,12 +178,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Naredba za gašenje monitora</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="214"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Preporučena naredba za:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
