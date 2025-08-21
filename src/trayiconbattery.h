@@ -29,58 +29,25 @@
 
 #pragma once
 
-#include <QSystemTrayIcon>
-#include <QMenu>
+#include "trayicon.h"
+#include <Solid/Battery>
 
+#include "iconproducer.h"
 
-class TrayIcon : public QSystemTrayIcon
+class TrayIconBattery : public TrayIcon
 {
     Q_OBJECT
 
 public:
-    enum PAUSE {
-        None  = 0,
-        Half  = 1,
-        One   = 2, // two halves
-        Two   = 4,
-        Three = 6,
-        Four  = 8
-    };
-
-    TrayIcon(QObject *parent = nullptr);
-    ~TrayIcon() override;
-
-    static int getPauseInterval(PAUSE duration);
-
-    void setPause(PAUSE duration);
-
-signals:
-    void toggleShowInfo();
-    void pauseChanged(PAUSE duration);
+    TrayIconBattery(Solid::Battery *battery, QObject *parent = nullptr);
+    ~TrayIconBattery() override;
 
 public slots:
-    void iconChanged();
-
-private slots:
-    void onActivated(QSystemTrayIcon::ActivationReason reason);
+    void updateTooltip();
 
 private:
-    static void onPauseTriggered(QAction *action);
-    static void onPauseTimeout();
-    static void onConfigureTriggered();
-    static void onAboutTriggered();
-    static void onDisableIconTriggered();
+    virtual const QIcon & getIcon() const override;
 
-private:
-    virtual const QIcon & getIcon() const;
-    QIcon emblemizedIcon();
-
-private:
-    static QList<TrayIcon *> msInstances;
-    static std::unique_ptr<QMenu> msContextMenu;
-    static std::unique_ptr<QTimer> msPauseTimer;
-    static std::unique_ptr<QActionGroup> msPauseActions;
-
-    QIcon mBaseIcon;
-    bool mHasPauseEmblem;
+    Solid::Battery *mBattery;
+    IconProducer mIconProducer;
 };
