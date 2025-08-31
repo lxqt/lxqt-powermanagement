@@ -230,6 +230,9 @@
    </item>
    <item>
     <widget class="QCheckBox" name="disableIdlenessFullscreenBox">
+     <property name="toolTip">
+      <string>On Wayland, usually handled by compositor and app</string>
+     </property>
      <property name="text">
       <string>Disable idleness checks when fullscreen</string>
      </property>
