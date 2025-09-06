@@ -265,7 +265,7 @@
         <location filename="../PowerProfiles.cpp" line="39"/>
         <source>balanced</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>equilibrado</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="40"/>

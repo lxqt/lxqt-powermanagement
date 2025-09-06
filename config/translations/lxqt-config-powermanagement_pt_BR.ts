@@ -178,12 +178,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando para desligar o monitor</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="214"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando recomendado para:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
@@ -299,7 +299,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota: No Wayland, as teclas de energia são configuradas pelo compositor.</translation>
     </message>
 </context>
 <context>
