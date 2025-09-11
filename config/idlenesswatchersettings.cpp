@@ -59,6 +59,7 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     // Handle the monitor command separately.
     if (QGuiApplication::platformName() == QStringLiteral("wayland")) {
         // Add some known commands that work fine.
+        mUi->monitorComboBox->addItem(QStringLiteral("Hyprland"), QStringLiteral("hyprctl dispatch dpms off"));
         mUi->monitorComboBox->addItem(QStringLiteral("KWin-Wayland"), QStringLiteral("kscreen-doctor --dpms off"));
         mUi->monitorComboBox->addItem(QStringLiteral("Niri"), QStringLiteral("niri msg action power-off-monitors"));
     }
