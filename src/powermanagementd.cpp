@@ -43,6 +43,8 @@ PowerManagementd::PowerManagementd() :
         mBatterywatcherd(nullptr),
         mLidwatcherd(nullptr),
         mIdlenesswatcherd(nullptr),
+        mPowerButton(nullptr),
+        mTrayIcon(nullptr),
         mSettings()
  {
     connect(&mSettings, &PowerManagementSettings::settingsChanged, this, &PowerManagementd::settingsChanged);
@@ -69,6 +71,16 @@ void PowerManagementd::settingsChanged()
     {
         mBatterywatcherd->deleteLater();
         mBatterywatcherd = nullptr;
+    }
+    if (!mTrayIcon && (!mBatterywatcherd || !mSettings.isShowIcon()))
+    {
+        mTrayIcon = new TrayIcon(this);
+        mTrayIcon->show();
+    } else if (mBatterywatcherd && mSettings.isShowIcon() && mTrayIcon)
+    {
+        mTrayIcon->hide();
+        mTrayIcon->deleteLater();
+        mTrayIcon = nullptr;
     }
 
     if (mSettings.isLidWatcherEnabled() && !mLidwatcherd)
