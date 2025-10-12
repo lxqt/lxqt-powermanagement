@@ -140,7 +140,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="158"/>
         <source>Minutes:Seconds</source>
-        <translation>Minuty:Sekundy</translation>
+        <translation>Minuty:sekundy</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="76"/>
@@ -163,7 +163,7 @@
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="100"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation>Minuty:Sekundy (min: 01:30)</translation>
+        <translation>Minuty:sekundy (min: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="195"/>
@@ -178,12 +178,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Příkaz pro vypnutí monitoru</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="214"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Doporučený příkaz pro:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
@@ -299,7 +299,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="48"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozn.: Pod Wayland jsou klávesy ovládání napájení nastavovány namísto toho kompozitorem.</translation>
     </message>
 </context>
 <context>
