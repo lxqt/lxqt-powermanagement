@@ -68,6 +68,11 @@ BatteryWatcher::~BatteryWatcher()
 {
 }
 
+int BatteryWatcher::batteriesCount() const
+{
+    return mBatteries.size();
+}
+
 void BatteryWatcher::batteryChanged()
 {
     static QTime actionTime;

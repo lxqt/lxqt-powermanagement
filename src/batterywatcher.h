@@ -43,6 +43,7 @@ class BatteryWatcher : public Watcher
 public:
     explicit BatteryWatcher(QObject *parent = nullptr);
     ~BatteryWatcher() override;
+    int batteriesCount() const;
 
 private slots:
     void batteryChanged();

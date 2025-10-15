@@ -72,11 +72,11 @@ void PowerManagementd::settingsChanged()
         mBatterywatcherd->deleteLater();
         mBatterywatcherd = nullptr;
     }
-    if (!mTrayIcon && (!mBatterywatcherd || !mSettings.isShowIcon()))
+    if (!mTrayIcon && (!mBatterywatcherd || mBatterywatcherd->batteriesCount() == 0 || !mSettings.isShowIcon()))
     {
         mTrayIcon = new TrayIcon(this);
         mTrayIcon->show();
-    } else if (mBatterywatcherd && mSettings.isShowIcon() && mTrayIcon)
+    } else if (mTrayIcon && mBatterywatcherd && mBatterywatcherd->batteriesCount() > 0 && mSettings.isShowIcon() )
     {
         mTrayIcon->hide();
         mTrayIcon->deleteLater();
