@@ -1,3 +1,10 @@
+lxqt-powermanagement-2.3.0 / 2025-11-05
+========================================
+ * Added a section for turning off monitor on Wayland (supporting KWin, Niri and Hyprland).
+ * Corrected the tabbing order in the config dialog.
+ * Added Apply button to the config dialog.
+ * Added tooltip info about idleness on fullscreen on Wayland.
+
 lxqt-powermanagement-2.2.1 / 2025-06-30
 ========================================
  * Use Qt provided FindXCB module.
