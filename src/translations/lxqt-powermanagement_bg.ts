@@ -101,7 +101,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="98"/>
         <source>Monitor battery</source>
-        <translation>Батерия на монитора</translation>
+        <translation>Батерия на монитор</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="101"/>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation>Енергиен дизайн:</translation>
+        <translation>Енергия по дизайн при пълно зареждане:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
@@ -203,7 +203,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation>Vendor:</translation>
+        <translation>Доставчик:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
@@ -352,7 +352,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="99"/>
         <source>Pause idleness checks</source>
-        <translation>Спиране на проверка за бездействие</translation>
+        <translation>Спиране на проверка за бездействие за:</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="107"/>
@@ -383,7 +383,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="219"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>Иконата за зоната на системния обмен може да бъде активирана в&lt;i&gt;Настройки-&gt;LXQt-&gt;Управление на захранването&lt;/i&gt;</translation>
+        <translation>Иконата за зоната на системния обмен може да бъде активирана в&lt;i&gt;Настройки-&gt;Конфигурационен център на LXQt-&gt;Управление на захранването&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="221"/>
