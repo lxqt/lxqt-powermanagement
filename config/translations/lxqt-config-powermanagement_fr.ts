@@ -46,11 +46,11 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation>Icône :</translation>
+        <translation>Icône&#xa0;:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
-        <location filename="../batterywatchersettings.cpp" line="104"/>
+        <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>Preview</source>
         <translation>Aperçu</translation>
     </message>
@@ -95,12 +95,12 @@
         <translation>Batterie avec pourcentage</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="104"/>
+        <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>built in</source>
         <translation>intégré(e)</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="114"/>
         <source>Level: %1%</source>
         <translation>Niveau : %1%</translation>
     </message>
@@ -125,12 +125,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="83"/>
         <source>When idle on Battery:</source>
-        <translation>En cas d&apos;inactivité sur batterie :</translation>
+        <translation>En cas d&apos;inactivité sur batterie&#x202f;:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="93"/>
         <source>Battery Idle time:</source>
-        <translation>Temps d&apos;inactivité sur batterie :</translation>
+        <translation>Temps d&apos;inactivité sur batterie&#x202f;:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="131"/>
@@ -152,18 +152,18 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="34"/>
         <source>When idle on AC:</source>
-        <translation>En cas d&apos;inactivité branché :</translation>
+        <translation>En cas d&apos;inactivité branché&#xa0;:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="53"/>
         <source>AC Idle time:</source>
-        <translation>Temps d&apos;inactivité branché :</translation>
+        <translation>Temps d&apos;inactivité branché&#xa0;:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="63"/>
         <location filename="../idlenesswatchersettings.ui" line="100"/>
         <source>Minutes:Seconds (min: 01:30)</source>
-        <translation>Minutes:Secondes (min : 01:30)</translation>
+        <translation>Minutes:Secondes (min&#xa0;: 01:30)</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="195"/>
@@ -187,6 +187,11 @@
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
+        <source>On Wayland, usually handled by compositor and app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="237"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>Désactiver les contrôles d&apos;inactivité en plein écran</translation>
     </message>
@@ -249,22 +254,22 @@
         <translation>Paramètres de gestion de l&apos;alimentation</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="40"/>
+        <location filename="../mainwindow.cpp" line="43"/>
         <source>Battery</source>
         <translation>Batterie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="44"/>
+        <location filename="../mainwindow.cpp" line="50"/>
         <source>Lid</source>
         <translation>Capot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="48"/>
+        <location filename="../mainwindow.cpp" line="57"/>
         <source>Idle</source>
         <translation>Inactivité</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="52"/>
+        <location filename="../mainwindow.cpp" line="64"/>
         <source>Power keys</source>
         <translation>Boutons d&apos;alimentation</translation>
     </message>
@@ -297,9 +302,9 @@
         <translation>Action de la touche hiberner :</translation>
     </message>
     <message>
-        <location filename="../powerkeyssettings.cpp" line="48"/>
+        <location filename="../powerkeyssettings.cpp" line="50"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation>Note : Sous Wayland, les touches d&apos;alimentation sont configurées par le compositeur.</translation>
+        <translation>Note&#xa0;: Sous Wayland, les touches d&apos;alimentation sont configurées par le compositeur.</translation>
     </message>
 </context>
 <context>

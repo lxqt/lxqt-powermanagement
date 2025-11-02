@@ -40,7 +40,7 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
-        <location filename="../batterywatchersettings.cpp" line="104"/>
+        <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>Preview</source>
         <translation>Esikatselu</translation>
     </message>
@@ -95,12 +95,12 @@
         <translation>Akku ja prosentit</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="104"/>
+        <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>built in</source>
         <translation>sisäänrakennettu</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="114"/>
         <source>Level: %1%</source>
         <translation>Taso: %1%</translation>
     </message>
@@ -187,6 +187,11 @@
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
+        <source>On Wayland, usually handled by compositor and app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="237"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>Älä valvo joutilasta aikaa koko näytön tilassa</translation>
     </message>
@@ -249,22 +254,22 @@
         <translation>Virranhallinnan asetukset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="40"/>
+        <location filename="../mainwindow.cpp" line="43"/>
         <source>Battery</source>
         <translation>Akku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="44"/>
+        <location filename="../mainwindow.cpp" line="50"/>
         <source>Lid</source>
         <translation>Kansi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="48"/>
+        <location filename="../mainwindow.cpp" line="57"/>
         <source>Idle</source>
         <translation>Joutilas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="52"/>
+        <location filename="../mainwindow.cpp" line="64"/>
         <source>Power keys</source>
         <translation>Virtanäppäimet</translation>
     </message>
@@ -297,7 +302,7 @@
         <translation>Lepotilanäppäimen toiminto:</translation>
     </message>
     <message>
-        <location filename="../powerkeyssettings.cpp" line="48"/>
+        <location filename="../powerkeyssettings.cpp" line="50"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
         <translation>Huom: Waylandiä käytettäessä, virtanapit määritetään koostajan asetuksissa.</translation>
     </message>

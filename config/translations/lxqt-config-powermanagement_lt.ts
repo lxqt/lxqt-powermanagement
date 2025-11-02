@@ -40,7 +40,7 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
-        <location filename="../batterywatchersettings.cpp" line="104"/>
+        <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>Preview</source>
         <translation>Peržiūra</translation>
     </message>
@@ -95,12 +95,12 @@
         <translation>Baterija su procentine dalimi</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="104"/>
+        <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>built in</source>
         <translation>įtaisyta</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="114"/>
         <source>Level: %1%</source>
         <translation>Lygis: %1%</translation>
     </message>
@@ -187,6 +187,11 @@
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
+        <source>On Wayland, usually handled by compositor and app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="237"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>Išjungti neveiklumo patikrinimus, kai rodoma visame ekrane</translation>
     </message>
@@ -249,22 +254,22 @@
         <translation>Maitinimo tvarkytuvės nustatymai</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="40"/>
+        <location filename="../mainwindow.cpp" line="43"/>
         <source>Battery</source>
         <translation>Baterija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="44"/>
+        <location filename="../mainwindow.cpp" line="50"/>
         <source>Lid</source>
         <translation>Dangtis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="48"/>
+        <location filename="../mainwindow.cpp" line="57"/>
         <source>Idle</source>
         <translation>Neveiklumas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="52"/>
+        <location filename="../mainwindow.cpp" line="64"/>
         <source>Power keys</source>
         <translation>Maitinimo klavišai</translation>
     </message>
@@ -297,7 +302,7 @@
         <translation>Užmigdymo klavišo veiksmas:</translation>
     </message>
     <message>
-        <location filename="../powerkeyssettings.cpp" line="48"/>
+        <location filename="../powerkeyssettings.cpp" line="50"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
         <translation>Pastaba: „Wayland“ aplinkoje maitinimo klavišus, vietoj to, konfigūruoja kompozitorius.</translation>
     </message>
