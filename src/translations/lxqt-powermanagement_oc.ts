@@ -26,32 +26,32 @@
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
         <source>Lithium ion</source>
-        <translation type="unfinished"></translation>
+        <translation>Liti-ion</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="62"/>
         <source>Lithium polymer</source>
-        <translation type="unfinished"></translation>
+        <translation>Liti polimèr</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="64"/>
         <source>Lithium iron phosphate</source>
-        <translation type="unfinished"></translation>
+        <translation>Liti fosfat de fèrre</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="66"/>
         <source>Lead acid</source>
-        <translation type="unfinished"></translation>
+        <translation>Plomb-acid</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="68"/>
         <source>Nickel cadmium</source>
-        <translation type="unfinished"></translation>
+        <translation>Niquèl cadmi</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="70"/>
         <source>Nickel metal hydride</source>
-        <translation type="unfinished"></translation>
+        <translation>Niquèl metal idrur</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="73"/>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Batariá de l’assistent personal numeric</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Batariá del sistèma d’alimentacion ininterrompuda</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="14"/>
         <source>Power Management</source>
-        <translation>Gestion energetica</translation>
+        <translation>Gestion de l’energia</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="53"/>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation type="unfinished"></translation>
+        <translation>Energia totala teorica :</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
@@ -193,17 +193,17 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
         <source>Technology:</source>
-        <translation>Tecnologia&#xa0;:</translation>
+        <translation>Tecnologia :</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="182"/>
         <source>Voltage:</source>
-        <translation>Voltatge&#xa0;:</translation>
+        <translation>Voltatge :</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
         <source>Vendor:</source>
-        <translation>Fabricant&#xa0;:</translation>
+        <translation>Fabricant :</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
@@ -216,17 +216,17 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
-        <translation>Cap de batariá&#xa0;!</translation>
+        <translation>Cap de batariá !</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt a pas pogut trobar cap de donadas de batariá - monitoratge desactivat</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="119"/>
         <source>Power low!</source>
-        <translation>Energia febla&#xa0;!</translation>
+        <translation>Energia febla !</translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
@@ -259,24 +259,24 @@
         <location filename="../PowerProfiles.cpp" line="38"/>
         <source>power-saver</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>estalvi d’energia</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="39"/>
         <source>balanced</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>equilibrat</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="40"/>
         <source>performance</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>performança</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="69"/>
         <source>Power profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Perfil energetic</translation>
     </message>
 </context>
 <context>
@@ -302,13 +302,14 @@
     <message>
         <location filename="../powermanagementd.cpp" line="115"/>
         <source>Power Management</source>
-        <translation>Gestion energetica</translation>
+        <translation>Gestion de l’energia</translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="116"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation type="unfinished"></translation>
+        <translation>Executatz la gestion de l’energia de LXQt pel primièr còp.
+La podètz configurar dempuèi los paramètres... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>
@@ -351,7 +352,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="99"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Suspendre los contraròtles d’inactivitat</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="107"/>
@@ -372,7 +373,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="200"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Gestion de l’energia d&apos;LXQt&lt;/b&gt;&lt;br/&gt;  - Gestion de l&apos;energia per l&apos;environament de burèu LXQt&lt;/p&gt;&lt;p&gt;  Autors :&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - e d&apos;autres dels projèctes Razor e LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="218"/>
@@ -382,7 +383,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="219"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>L’icòna de gestion de l’energia LXQt se pòt (des)activar a partir de &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="221"/>

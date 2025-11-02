@@ -11,7 +11,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation>&amp;Активиране на монитор на батерията</translation>
+        <translation>&amp;Активиране на следене на батерията</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
@@ -68,7 +68,7 @@
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation>от тема</translation>
+        <translation>от системната тема</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation>&amp;Активиране на монитор за бездействие</translation>
+        <translation>&amp;Активиране на следене за бездействие</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="151"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation>&amp;Активиране на монитор за състоянието на екрана</translation>
+        <translation>&amp;Активиране на следене за състоянието на екрана</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
