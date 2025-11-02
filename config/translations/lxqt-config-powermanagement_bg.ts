@@ -40,7 +40,7 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
-        <location filename="../batterywatchersettings.cpp" line="104"/>
+        <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>Preview</source>
         <translation>Предварителен преглед</translation>
     </message>
@@ -95,12 +95,12 @@
         <translation>Батерия с проценти</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="104"/>
+        <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>built in</source>
         <translation>вградена</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="114"/>
         <source>Level: %1%</source>
         <translation>Заредена: %1%</translation>
     </message>
@@ -187,6 +187,11 @@
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
+        <source>On Wayland, usually handled by compositor and app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="237"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>Деактивиране на проверка за бездействие при режим на цял екран</translation>
     </message>
@@ -249,22 +254,22 @@
         <translation>Настройки на управление на захранването</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="40"/>
+        <location filename="../mainwindow.cpp" line="43"/>
         <source>Battery</source>
         <translation>Батерия</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="44"/>
+        <location filename="../mainwindow.cpp" line="50"/>
         <source>Lid</source>
         <translation>Екран</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="48"/>
+        <location filename="../mainwindow.cpp" line="57"/>
         <source>Idle</source>
         <translation>Бездействие</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="52"/>
+        <location filename="../mainwindow.cpp" line="64"/>
         <source>Power keys</source>
         <translation>Бутони на захранването</translation>
     </message>
@@ -297,7 +302,7 @@
         <translation>Бутон хибернация:</translation>
     </message>
     <message>
-        <location filename="../powerkeyssettings.cpp" line="48"/>
+        <location filename="../powerkeyssettings.cpp" line="50"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
         <translation>Забележка: Под Wayland клавишите за захранване се конфигурират от композитора.</translation>
     </message>
