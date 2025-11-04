@@ -188,7 +188,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation>W Wayland zwykle obsługiwane przez kompozytor i aplikację</translation>
+        <translation>W Wayland zwykle obsługiwane przez kompozytor i&#xa0;aplikację</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="237"/>
