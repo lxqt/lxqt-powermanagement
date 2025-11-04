@@ -188,7 +188,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation type="unfinished"></translation>
+        <translation>ב־Wayland מטופל בדרך כלל על ידי ניהול חלונאי ויישום</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="237"/>
