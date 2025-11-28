@@ -66,8 +66,6 @@ BatteryWatcherSettings::BatteryWatcherSettings(QWidget *parent) :
     connect(mUi->actionComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::settingsChanged);
     connect(mUi->warningSpinBox, &QSpinBox::valueChanged, this, &BatteryWatcherSettings::settingsChanged);
     connect(mUi->levelSpinBox, &QSpinBox::valueChanged, this, &BatteryWatcherSettings::settingsChanged);
-    connect(mUi->showIconCheckBox, &QCheckBox::toggled, this, &BatteryWatcherSettings::settingsChanged);
-    connect(mUi->showIconCheckBox, &QCheckBox::toggled, mUi->previewBox, &QGroupBox::setEnabled);
     connect(mUi->iconTypeComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::settingsChanged);
     connect(mUi->iconTypeComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::updatePreview);
     connect(mUi->iconTypeComboBox, &QComboBox::currentIndexChanged, this, &BatteryWatcherSettings::onChargeIconChanged);
@@ -89,7 +87,6 @@ void BatteryWatcherSettings::loadSettings()
     setComboBoxToValue(mUi->actionComboBox, mSettings.getPowerLowAction());
     mUi->warningSpinBox->setValue(mSettings.getPowerLowWarningTime());
     mUi->levelSpinBox->setValue(mSettings.getPowerLowLevel());
-    mUi->showIconCheckBox->setChecked(mSettings.isShowIcon());
     setComboBoxToValue(mUi->iconTypeComboBox, mSettings.getIconType());
 }
 
@@ -99,7 +96,6 @@ void BatteryWatcherSettings::saveSettings()
     mSettings.setPowerLowAction(currentValue(mUi->actionComboBox));
     mSettings.setPowerLowWarningTime(mUi->warningSpinBox->value());
     mSettings.setPowerLowLevel(mUi->levelSpinBox->value());
-    mSettings.setShowIcon(mUi->showIconCheckBox->isChecked());
     mSettings.setIconType(static_cast<PowerManagementSettings::IconType>(currentValue(mUi->iconTypeComboBox)));
 }
 

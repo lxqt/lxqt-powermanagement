@@ -104,7 +104,6 @@ TrayIcon::TrayIcon(QObject *parent)
         msContextMenu->addSeparator();
 
         connect(msContextMenu->addAction(QIcon::fromTheme(QStringLiteral("help-about")), tr("About")), &QAction::triggered, [] { TrayIcon::onAboutTriggered(); });
-        connect(msContextMenu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), tr("Disable icon")), &QAction::triggered, [] { TrayIcon::onDisableIconTriggered(); });
     }
     setContextMenu(msContextMenu.get());
     msInstances.push_back(this);
@@ -220,19 +219,6 @@ void TrayIcon::onAboutTriggered()
 }
 
 
-void TrayIcon::onDisableIconTriggered()
-{
-    auto notification = new LXQt::Notification{tr("LXQt Power Management info"), nullptr};
-    notification->setBody(tr("The LXQt Power Management tray icon can be (re)enabled in <i>lxqt-config-powermanagement</i>"));
-    notification->setIcon(QSL("preferences-system-power-management"));
-    notification->setActions({tr("Configure now")});
-    notification->setUrgencyHint(LXQt::Notification::UrgencyLow);
-    connect(notification, &LXQt::Notification::actionActivated, [notification] { notification->close(); QProcess::startDetached(QL1S("lxqt-config-powermanagement"), QStringList()); });
-    connect(notification, &LXQt::Notification::notificationClosed, notification, &QObject::deleteLater);
-    notification->update();
-
-    PowerManagementSettings().setShowIcon(false);
-}
 
 void TrayIcon::onActivated(QSystemTrayIcon::ActivationReason reason)
 {
