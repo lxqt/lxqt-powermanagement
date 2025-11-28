@@ -69,7 +69,6 @@ private:
     static void onPauseTimeout();
     static void onConfigureTriggered();
     static void onAboutTriggered();
-    static void onDisableIconTriggered();
 
 private:
     virtual const QIcon & getIcon() const;
