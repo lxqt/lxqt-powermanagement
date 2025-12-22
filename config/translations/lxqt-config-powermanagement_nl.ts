@@ -173,7 +173,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="185"/>
         <source>On battery discharging </source>
-        <translation>Bij ontladen van accu </translation>
+        <translation>Tijdens ontladen van accu </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
@@ -188,7 +188,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation type="unfinished"></translation>
+        <translation>Op Wayland wordt dit doorgaans afgehandeld door de compositor en het programma</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="237"/>

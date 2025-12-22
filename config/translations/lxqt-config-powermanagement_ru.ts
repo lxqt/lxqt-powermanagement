@@ -183,12 +183,12 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="214"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Рекомендуемая команда для:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation type="unfinished"></translation>
+        <translation>В Wayland обычно обрабатывается композитором и приложением</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="237"/>
