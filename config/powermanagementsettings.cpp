@@ -52,8 +52,12 @@ namespace PowerManagementSettingsConstants
     const QString ICON_TYPE_KEY { QL1S("iconType") };
     const QString IDLENESS_AC_ACTION_KEY { QL1S("idlenessACAction") };
     const QString IDLENESS_AC_TIME { QL1S("idlenessACTime") };
+    const QString ENABLE_ACMONITOROFF_KEY { QL1S("enableACMonitorOff") }; //
+    const QString MONITOR_IDLENESS_AC_TIME { QL1S("monitorIdlenessACTime") };// new
     const QString IDLENESS_BATTERY_ACTION_KEY { QL1S("idlenessBatteryAction") };
     const QString IDLENESS_BATTERY_TIME { QL1S("idlenessBatteryTime") };
+    const QString ENABLE_BATMONITOROFF_KEY { QL1S("enableBatMonitorOff") }; //
+    const QString MONITOR_IDLENESS_BAT_TIME { QL1S("monitorIdlenessBatTime") };// new
     const QString IDLENESS_BACKLIGHT_TIME { QL1S("idlenessTime") };
     const QString IDLENESS_BACKLIGHT { QL1S("backlightIdleness") };
     const QString IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING { QL1S("backlightIdlenessOnBatteryDischarging") };
@@ -248,6 +252,32 @@ void PowerManagementSettings::setIdlenessACTime(QTime idlenessTime)
     setValue(IDLENESS_AC_TIME, idlenessTime);
 }
 
+bool PowerManagementSettings::isACMonitorOffEnabled()
+{
+    return value(ENABLE_ACMONITOROFF_KEY, false).toBool();
+}
+
+QTime PowerManagementSettings::getMonitorACIdleTime()
+{
+    // 1. The default value is 10 minutes
+    // 2. Intervals greater than or equal to one hour aren't supported; and
+    // 3. Intervals smaller than one minute are prevented.
+    int oldValue = qBound(60, value(QL1S("IdlenessTimeSecs"), 600).toInt(), 3599);
+    int m = oldValue / 60;
+    int s = oldValue - m * 60;
+    return value(MONITOR_IDLENESS_AC_TIME, QTime(0, m, s)).toTime();
+}
+
+void PowerManagementSettings::setMonitorACIdleTime(QTime idlenessTime)
+{
+    setValue(MONITOR_IDLENESS_AC_TIME, idlenessTime);
+}
+
+void PowerManagementSettings::setACMonitorOffEnabled(bool aCMonitorOffEnabled)
+{
+    setValue(ENABLE_ACMONITOROFF_KEY, aCMonitorOffEnabled);
+}
+
 int PowerManagementSettings::getIdlenessBatteryAction()
 {
     // defaults to nothing (-1) and eventually load legacy value
@@ -274,6 +304,32 @@ QTime PowerManagementSettings::getIdlenessBatteryTime()
 void PowerManagementSettings::setIdlenessBatteryTime(QTime idlenessTime)
 {
     setValue(IDLENESS_BATTERY_TIME, idlenessTime);
+}
+
+bool PowerManagementSettings::isBatMonitorOffEnabled()
+{
+    return value(ENABLE_BATMONITOROFF_KEY, false).toBool();
+}
+
+QTime PowerManagementSettings::getMonitorBatIdleTime()
+{
+    // 1. The default value is 10 minutes
+    // 2. Intervals greater than or equal to one hour aren't supported; and
+    // 3. Intervals smaller than one minute are prevented.
+    int oldValue = qBound(60, value(QL1S("IdlenessTimeSecs"), 600).toInt(), 3599);
+    int m = oldValue / 60;
+    int s = oldValue - m * 60;
+    return value(MONITOR_IDLENESS_BAT_TIME, QTime(0, m, s)).toTime();
+}
+
+void PowerManagementSettings::setMonitorBatIdleTime(QTime idlenessTime)
+{
+    setValue(MONITOR_IDLENESS_BAT_TIME, idlenessTime);
+}
+
+void PowerManagementSettings::setBatMonitorOffEnabled(bool batMonitorOffEnabled)
+{
+    setValue(ENABLE_BATMONITOROFF_KEY, batMonitorOffEnabled);
 }
 
 bool PowerManagementSettings::isIdlenessBacklightWatcherEnabled()

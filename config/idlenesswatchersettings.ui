@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>452</height>
+    <width>411</width>
+    <height>753</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -21,100 +21,162 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <layout class="QFormLayout" name="formLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="idleTimeACLabel">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>When idle on AC:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QComboBox" name="idleACActionComboBox"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="idleACActionLabel">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>AC Idle time:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QTimeEdit" name="idleACTimeEdit">
-          <property name="toolTip">
-           <string>Minutes:Seconds (min: 01:30)</string>
-          </property>
-          <property name="minimumDateTime">
-           <datetime>
-            <hour>0</hour>
-            <minute>1</minute>
-            <second>0</second>
-            <year>2000</year>
-            <month>1</month>
-            <day>1</day>
-           </datetime>
-          </property>
-          <property name="displayFormat">
-           <string>mm:ss</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="idleTimeBatteryLabel">
-          <property name="text">
-           <string>When idle on Battery:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QComboBox" name="idleBatteryActionComboBox"/>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="idleBatteryActionLabel">
-          <property name="text">
-           <string>Battery Idle time:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QTimeEdit" name="idleBatteryTimeEdit">
-          <property name="toolTip">
-           <string>Minutes:Seconds (min: 01:30)</string>
-          </property>
-          <property name="minimumDateTime">
-           <datetime>
-            <hour>0</hour>
-            <minute>1</minute>
-            <second>0</second>
-            <year>2000</year>
-            <month>1</month>
-            <day>1</day>
-           </datetime>
-          </property>
-          <property name="displayFormat">
-           <string>mm:ss</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QGroupBox" name="acGroupBox">
+        <property name="title">
+         <string>AC</string>
+        </property>
+        <layout class="QFormLayout" name="formLayout_AC">
+         <item row="0" column="0">
+          <widget class="QLabel" name="idleTimeACLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>When idle:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="idleACActionComboBox"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="idleACActionLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Idle time:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTimeEdit" name="idleACTimeEdit">
+           <property name="toolTip">
+            <string>Minutes:Seconds (min: 01:30)</string>
+           </property>
+           <property name="minimumDateTime">
+            <datetime>
+             <hour>20</hour>
+             <minute>1</minute>
+             <second>0</second>
+             <year>2000</year>
+             <month>1</month>
+             <day>1</day>
+            </datetime>
+           </property>
+           <property name="displayFormat">
+            <string>mm:ss</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="enableACMonitorOffCheckBox">
+           <property name="text">
+            <string>Turn monitor(s) off after:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QTimeEdit" name="idleACMonitorOffTimeEdit">
+           <property name="dateTime">
+            <datetime>
+             <hour>21</hour>
+             <minute>1</minute>
+             <second>0</second>
+             <year>1999</year>
+             <month>12</month>
+             <day>31</day>
+            </datetime>
+           </property>
+           <property name="displayFormat">
+            <string>mm:ss</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="batteryGroupBox">
+        <property name="title">
+         <string>Battery</string>
+        </property>
+        <layout class="QFormLayout" name="formLayout_Battery">
+         <item row="0" column="0">
+          <widget class="QLabel" name="idleTimeBatteryLabel">
+           <property name="text">
+            <string>When idle:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="idleBatteryActionComboBox"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="idleBatteryActionLabel">
+           <property name="text">
+            <string>Idle time:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTimeEdit" name="idleBatteryTimeEdit">
+           <property name="toolTip">
+            <string>Minutes:Seconds (min: 01:30)</string>
+           </property>
+           <property name="minimumDateTime">
+            <datetime>
+             <hour>20</hour>
+             <minute>1</minute>
+             <second>0</second>
+             <year>2000</year>
+             <month>1</month>
+             <day>1</day>
+            </datetime>
+           </property>
+           <property name="displayFormat">
+            <string>mm:ss</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="enableBatMonitorOffCheckBox">
+           <property name="text">
+            <string>Turn monitor(s) off after:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QTimeEdit" name="idleBatMonitorOffTimeEdit">
+           <property name="dateTime">
+            <datetime>
+             <hour>20</hour>
+             <minute>1</minute>
+             <second>0</second>
+             <year>2000</year>
+             <month>1</month>
+             <day>1</day>
+            </datetime>
+           </property>
+           <property name="displayFormat">
+            <string>mm:ss</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </item>
       <item>
        <widget class="QGroupBox" name="idlenessBacklightWatcherGroupBox">
@@ -141,7 +203,7 @@
             <number>1</number>
            </property>
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -172,7 +234,7 @@
             </time>
            </property>
            <property name="currentSection">
-            <enum>QDateTimeEdit::MinuteSection</enum>
+            <enum>QDateTimeEdit::Section::MinuteSection</enum>
            </property>
            <property name="displayFormat">
             <string>mm:ss</string>
@@ -241,10 +303,10 @@
    <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
      <property name="sizeType">
-      <enum>QSizePolicy::MinimumExpanding</enum>
+      <enum>QSizePolicy::Policy::MinimumExpanding</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>

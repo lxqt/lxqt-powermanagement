@@ -46,9 +46,11 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
 
     mUi->idleACTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
     mUi->idleBatteryTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
+    mUi->idleACMonitorOffTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
+    mUi->idleBatMonitorOffTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
 
     mBacklight = new LXQt::Backlight(this);
-    // If if no backlight support then disable backlight control:
+    // If no backlight support then disable backlight control:
     if(! mBacklight->isBacklightAvailable()) {
         mUi->idlenessBacklightWatcherGroupBox->setEnabled(false);
         mUi->idlenessBacklightWatcherGroupBox->setChecked(false);
@@ -73,8 +75,15 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     connect(mUi->idlenessWatcherGroupBox, &QGroupBox::toggled, this, &IdlenessWatcherSettings::settingsChanged);
     connect(mUi->idleACActionComboBox, &QComboBox::currentIndexChanged, this, &IdlenessWatcherSettings::settingsChanged);
     connect(mUi->idleACTimeEdit, &QTimeEdit::dateTimeChanged, this, &IdlenessWatcherSettings::settingsChanged);
+
+    connect(mUi->enableACMonitorOffCheckBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->idleACMonitorOffTimeEdit, &QTimeEdit::dateTimeChanged, this, &IdlenessWatcherSettings::settingsChanged);
+
     connect(mUi->idleBatteryActionComboBox, &QComboBox::currentIndexChanged, this, &IdlenessWatcherSettings::settingsChanged);
     connect(mUi->idleBatteryTimeEdit, &QTimeEdit::dateTimeChanged, this, &IdlenessWatcherSettings::settingsChanged);
+
+    connect(mUi->enableBatMonitorOffCheckBox, &QCheckBox::toggled, this, &IdlenessWatcherSettings::settingsChanged);
+    connect(mUi->idleBatMonitorOffTimeEdit, &QTimeEdit::dateTimeChanged, this, &IdlenessWatcherSettings::settingsChanged);
 
     connect(mUi->checkBacklightButton, &QPushButton::pressed, this, &IdlenessWatcherSettings::backlightCheckButtonPressed);
     connect(mUi->checkBacklightButton, &QPushButton::released, this, &IdlenessWatcherSettings::backlightCheckButtonReleased);
@@ -113,6 +122,18 @@ void IdlenessWatcherSettings::loadSettings()
     setComboBoxToValue(mUi->idleBatteryActionComboBox, mSettings.getIdlenessBatteryAction());
     mUi->idleBatteryTimeEdit->setTime(mSettings.getIdlenessBatteryTime());
 
+    mUi->enableACMonitorOffCheckBox->setChecked(mSettings.isACMonitorOffEnabled());
+    mUi->idleACMonitorOffTimeEdit->setTime(mSettings.getMonitorACIdleTime());
+    mUi->idleACMonitorOffTimeEdit->setEnabled(mUi->enableACMonitorOffCheckBox->isChecked());
+    connect(mUi->enableACMonitorOffCheckBox, &QCheckBox::toggled, mUi->idleACMonitorOffTimeEdit, &QCheckBox::setEnabled);
+    connect(mUi->idleACTimeEdit, &QTimeEdit::timeChanged, mUi->idleACMonitorOffTimeEdit, &QTimeEdit::setMaximumTime);
+
+    mUi->enableBatMonitorOffCheckBox->setChecked(mSettings.isBatMonitorOffEnabled());
+    mUi->idleBatMonitorOffTimeEdit->setTime(mSettings.getMonitorBatIdleTime());
+    mUi->idleBatMonitorOffTimeEdit->setEnabled(mUi->enableBatMonitorOffCheckBox->isChecked());
+    connect(mUi->enableBatMonitorOffCheckBox, &QCheckBox::toggled, mUi->idleBatMonitorOffTimeEdit, &QCheckBox::setEnabled);
+    connect(mUi->idleBatteryTimeEdit, &QTimeEdit::timeChanged, mUi->idleBatMonitorOffTimeEdit, &QTimeEdit::setMaximumTime);
+
     if(mBacklight->isBacklightAvailable()) {
         mUi->idlenessBacklightWatcherGroupBox->setChecked(mSettings.isIdlenessBacklightWatcherEnabled());
         mUi->idleTimeBacklightTimeEdit->setTime(mSettings.getIdlenessBacklightTime());
@@ -143,8 +164,14 @@ void IdlenessWatcherSettings::saveSettings()
     mSettings.setIdlenessACAction(currentValue(mUi->idleACActionComboBox));
     mSettings.setIdlenessACTime(mUi->idleACTimeEdit->time());
 
+    mSettings.setACMonitorOffEnabled(mUi->enableACMonitorOffCheckBox->isChecked());
+    mSettings.setMonitorACIdleTime(mUi->idleACMonitorOffTimeEdit->time());
+
     mSettings.setIdlenessBatteryAction(currentValue(mUi->idleBatteryActionComboBox));
     mSettings.setIdlenessBatteryTime(mUi->idleBatteryTimeEdit->time());
+
+    mSettings.setBatMonitorOffEnabled(mUi->enableBatMonitorOffCheckBox->isChecked());
+    mSettings.setMonitorBatIdleTime(mUi->idleBatMonitorOffTimeEdit->time());
 
     mSettings.setIdlenessBacklightWatcherEnabled(mBacklight->isBacklightAvailable() ? mUi->idlenessBacklightWatcherGroupBox->isChecked() : false);
     mSettings.setIdlenessBacklightTime(mUi->idleTimeBacklightTimeEdit->time());

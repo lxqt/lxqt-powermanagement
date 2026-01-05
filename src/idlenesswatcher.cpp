@@ -118,13 +118,32 @@ void IdlenessWatcher::setup()
         int ACmsecs = (ACtime.second() + ACtime.minute() * 60) * 1000;
         mIdleACWatcher = KIdleTime::instance()->addIdleTimeout(ACmsecs);
 
+        if(mPSettings.isACMonitorOffEnabled()) {
+            QTime ACMonitortime = mPSettings.getMonitorACIdleTime();
+            int ACMonitormsecs = (ACMonitortime.second() + ACMonitortime.minute() * 60) * 1000;
+            if (ACmsecs == ACMonitormsecs) {
+            ACmsecs += 20; //  20 msecs more
+            }
+            mIdleACMonitorWatcher = KIdleTime::instance()->addIdleTimeout(ACMonitormsecs);
+            }
+
         QTime BATtime = mPSettings.getIdlenessBatteryTime();
         int BATmsecs = (BATtime.second() + BATtime.minute() * 60) * 1000;
-        // to get sure times are NOT the same ones...
+        // to get sure times are NOT the same ones... Is that needed? They are never together active
         if (BATmsecs == ACmsecs) {
             BATmsecs -= 10; // just 10 msecs less... ;)
         }
         mIdleBatteryWatcher = KIdleTime::instance()->addIdleTimeout(BATmsecs);
+
+        if(mPSettings.isBatMonitorOffEnabled()) {
+            QTime BATMonitortime = mPSettings.getMonitorBatIdleTime();
+            int BATMonitormsecs = (BATMonitortime.second() + BATMonitortime.minute() * 60) * 1000;
+
+            if (BATmsecs == BATMonitormsecs) {
+            ACmsecs += 20; //  20 msecs more
+            }
+            mIdleBatMonitorWatcher = KIdleTime::instance()->addIdleTimeout(BATMonitormsecs);
+            }
 
         // Enable backlight control:
         if(mPSettings.isIdlenessBacklightWatcherEnabled() &&
@@ -183,12 +202,28 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
         return;
     }
 
+    if(identifier == mIdleACMonitorWatcher) {
+    if (mDischarging) {
+        return;
+    }
+    mPower.doAction(LXQt::Power::PowerMonitorOff);
+    return;
+    }
+
     if(identifier == mIdleBatteryWatcher) {
         if (!mDischarging) {
             return;
         }
         doAction(mPSettings.getIdlenessBatteryAction());
         return;
+    }
+
+    if(identifier == mIdleBatMonitorWatcher) {
+    if (!mDischarging) {
+        return;
+    }
+    mPower.doAction(LXQt::Power::PowerMonitorOff);
+    return;
     }
 
     if(identifier == mIdleBacklightWatcher && mBacklightActualValue < 0) {

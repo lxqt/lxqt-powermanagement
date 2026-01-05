@@ -49,9 +49,12 @@ private:
 
     PowerManagementSettings mPSettings;
     int mIdleACWatcher;
+    int mIdleACMonitorWatcher;
     int mIdleBatteryWatcher;
+    int mIdleBatMonitorWatcher;
     int mIdleBacklightWatcher;
     LXQt::Backlight *mBacklight;
+    LXQt::Power mPower;
     int mBacklightActualValue;
     bool mDischarging;
     quint16 mDpmsStandby, mDpmsSuspend, mDpmsOff;
