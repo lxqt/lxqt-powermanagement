@@ -66,16 +66,6 @@
            <property name="toolTip">
             <string>Minutes:Seconds (min: 01:30)</string>
            </property>
-           <property name="minimumDateTime">
-            <datetime>
-             <hour>20</hour>
-             <minute>1</minute>
-             <second>0</second>
-             <year>2000</year>
-             <month>1</month>
-             <day>1</day>
-            </datetime>
-           </property>
            <property name="displayFormat">
             <string>mm:ss</string>
            </property>
@@ -90,16 +80,6 @@
          </item>
          <item row="2" column="1">
           <widget class="QTimeEdit" name="idleACMonitorOffTimeEdit">
-           <property name="dateTime">
-            <datetime>
-             <hour>21</hour>
-             <minute>1</minute>
-             <second>0</second>
-             <year>1999</year>
-             <month>12</month>
-             <day>31</day>
-            </datetime>
-           </property>
            <property name="displayFormat">
             <string>mm:ss</string>
            </property>
@@ -136,16 +116,6 @@
            <property name="toolTip">
             <string>Minutes:Seconds (min: 01:30)</string>
            </property>
-           <property name="minimumDateTime">
-            <datetime>
-             <hour>20</hour>
-             <minute>1</minute>
-             <second>0</second>
-             <year>2000</year>
-             <month>1</month>
-             <day>1</day>
-            </datetime>
-           </property>
            <property name="displayFormat">
             <string>mm:ss</string>
            </property>
@@ -160,16 +130,6 @@
          </item>
          <item row="2" column="1">
           <widget class="QTimeEdit" name="idleBatMonitorOffTimeEdit">
-           <property name="dateTime">
-            <datetime>
-             <hour>20</hour>
-             <minute>1</minute>
-             <second>0</second>
-             <year>2000</year>
-             <month>1</month>
-             <day>1</day>
-            </datetime>
-           </property>
            <property name="displayFormat">
             <string>mm:ss</string>
            </property>
@@ -218,23 +178,6 @@
           <widget class="QTimeEdit" name="idleTimeBacklightTimeEdit">
            <property name="toolTip">
             <string>Minutes:Seconds</string>
-           </property>
-           <property name="maximumTime">
-            <time>
-             <hour>22</hour>
-             <minute>59</minute>
-             <second>59</second>
-            </time>
-           </property>
-           <property name="minimumTime">
-            <time>
-             <hour>0</hour>
-             <minute>0</minute>
-             <second>1</second>
-            </time>
-           </property>
-           <property name="currentSection">
-            <enum>QDateTimeEdit::Section::MinuteSection</enum>
            </property>
            <property name="displayFormat">
             <string>mm:ss</string>
