@@ -35,9 +35,9 @@ PowerKeysSettings::PowerKeysSettings(QWidget *parent) :
     mUi(new Ui::PowerKeysSettings)
 {
     mUi->setupUi(this);
-    fillComboBox(mUi->powerKeyActionComboBox, true);
-    fillComboBox(mUi->suspendKeyActionComboBox, true);
-    fillComboBox(mUi->hibernateKeyActionComboBox, true);
+    fillComboBoxFull(mUi->powerKeyActionComboBox, true);
+    fillComboBoxFull(mUi->suspendKeyActionComboBox, true);
+    fillComboBoxFull(mUi->hibernateKeyActionComboBox, true);
 
     loadSettings();
 

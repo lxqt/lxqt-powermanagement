@@ -29,6 +29,21 @@
 
 #include "helpers.h"
 
+void fillComboBoxFull(QComboBox* comboBox, bool ask)
+{
+    comboBox->clear();
+    comboBox->addItem(QObject::tr("Nothing"), -1);
+    if (ask)
+    {
+        comboBox->addItem(QObject::tr("Ask"), LXQt::Power::PowerShowLeaveDialog);
+    }
+    comboBox->addItem(QObject::tr("Lock screen"), -2); // FIXME
+    comboBox->addItem(QObject::tr("Suspend"), LXQt::Power::PowerSuspend);
+    comboBox->addItem(QObject::tr("Hibernate"), LXQt::Power::PowerHibernate);
+    comboBox->addItem(QObject::tr("Shutdown"), LXQt::Power::PowerShutdown);
+    comboBox->addItem(QObject::tr("Turn Off monitor(s)"), LXQt::Power::PowerMonitorOff);
+}
+
 void fillComboBox(QComboBox* comboBox, bool ask)
 {
     comboBox->clear();
@@ -42,7 +57,6 @@ void fillComboBox(QComboBox* comboBox, bool ask)
     comboBox->addItem(QObject::tr("Hibernate"), LXQt::Power::PowerHibernate);
     comboBox->addItem(QObject::tr("Shutdown"), LXQt::Power::PowerShutdown);
 }
-
 void setComboBoxToValue(QComboBox* comboBox, int value)
 {
     for (int index = 0; index < comboBox->count(); index++)

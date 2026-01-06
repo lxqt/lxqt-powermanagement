@@ -39,10 +39,10 @@ LidWatcherSettings::LidWatcherSettings(QWidget *parent) :
 {
     mUi->setupUi(this);
 
-    fillComboBox(mUi->onBatteryActionComboBox);
-    fillComboBox(mUi->onAcActionComboBox);
-    fillComboBox(mUi->extMonOnBatteryActionComboBox);
-    fillComboBox(mUi->extMonOnAcActionComboBox);
+    fillComboBoxFull(mUi->onBatteryActionComboBox);
+    fillComboBoxFull(mUi->onAcActionComboBox);
+    fillComboBoxFull(mUi->extMonOnBatteryActionComboBox);
+    fillComboBoxFull(mUi->extMonOnAcActionComboBox);
 
     loadSettings();
 
