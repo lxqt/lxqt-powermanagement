@@ -178,17 +178,17 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="208"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Perintah untuk Mematikan Monitor</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="214"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Perintah disarankan untuk:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="234"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation type="unfinished"></translation>
+        <translation>Di Wayland, biasanya ditangani oleh penyusun dan app</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="237"/>

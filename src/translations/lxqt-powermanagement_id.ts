@@ -111,26 +111,26 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln jam</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln menit</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>tersisa %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>sampai penuh %1</translation>
     </message>
 </context>
 <context>
@@ -236,15 +236,15 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Hibernasi dalam %Ln detik</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Mematikan dalam %Ln detik</numerusform>
         </translation>
     </message>
 </context>
@@ -254,24 +254,24 @@
         <location filename="../PowerProfiles.cpp" line="38"/>
         <source>power-saver</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>penghemat-daya</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="39"/>
         <source>balanced</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>seimbang</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="40"/>
         <source>performance</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>kinerja</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="69"/>
         <source>Power profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Profil daya</translation>
     </message>
 </context>
 <context>
