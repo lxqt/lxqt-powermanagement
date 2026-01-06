@@ -71,17 +71,17 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="enableACMonitorOffCheckBox">
-           <property name="text">
-            <string>Turn monitor(s) off after:</string>
-           </property>
-          </widget>
-         </item>
          <item row="2" column="1">
           <widget class="QTimeEdit" name="idleACMonitorOffTimeEdit">
            <property name="displayFormat">
             <string>mm:ss</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Monitor idle time:</string>
            </property>
           </widget>
          </item>
@@ -121,17 +121,17 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="enableBatMonitorOffCheckBox">
-           <property name="text">
-            <string>Turn monitor(s) off after:</string>
-           </property>
-          </widget>
-         </item>
          <item row="2" column="1">
           <widget class="QTimeEdit" name="idleBatMonitorOffTimeEdit">
            <property name="displayFormat">
             <string>mm:ss</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Monitor idle time</string>
            </property>
           </widget>
          </item>

@@ -102,9 +102,6 @@ public:
     QTime getIdlenessACTime();
     void setIdlenessACTime(QTime idlenessTime);
 
-    bool isACMonitorOffEnabled();
-    void setACMonitorOffEnabled(bool acMonitorOffEnabled);
-
     QTime getMonitorACIdleTime();
     void setMonitorACIdleTime(QTime acMonitorIdleTime);
 
@@ -113,9 +110,6 @@ public:
 
     QTime getIdlenessBatteryTime();
     void setIdlenessBatteryTime(QTime idlenessTime);
-
-    bool isBatMonitorOffEnabled();
-    void setBatMonitorOffEnabled(bool batMonitorOffEnabled);
 
     QTime getMonitorBatIdleTime();
     void setMonitorBatIdleTime(QTime batMonitorIdleTime);

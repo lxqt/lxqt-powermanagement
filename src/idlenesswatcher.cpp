@@ -118,7 +118,7 @@ void IdlenessWatcher::setup()
         int ACmsecs = (ACtime.second() + ACtime.minute() * 60) * 1000;
         mIdleACWatcher = KIdleTime::instance()->addIdleTimeout(ACmsecs);
 
-        if(mPSettings.isACMonitorOffEnabled()) {
+        if (mPSettings.getMonitorACIdleTime() != QTime(0, 0, 0)) {
             QTime ACMonitortime = mPSettings.getMonitorACIdleTime();
             int ACMonitormsecs = (ACMonitortime.second() + ACMonitortime.minute() * 60) * 1000;
             if (ACmsecs == ACMonitormsecs) {
@@ -135,7 +135,7 @@ void IdlenessWatcher::setup()
         }
         mIdleBatteryWatcher = KIdleTime::instance()->addIdleTimeout(BATmsecs);
 
-        if(mPSettings.isBatMonitorOffEnabled()) {
+        if (mPSettings.getMonitorBatIdleTime() != QTime(0, 0, 0)) {
             QTime BATMonitortime = mPSettings.getMonitorBatIdleTime();
             int BATMonitormsecs = (BATMonitortime.second() + BATMonitortime.minute() * 60) * 1000;
 
@@ -206,7 +206,7 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
     if (mDischarging) {
         return;
     }
-    mPower.doAction(LXQt::Power::PowerMonitorOff);
+    doAction(5);
     return;
     }
 
@@ -222,7 +222,7 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
     if (!mDischarging) {
         return;
     }
-    mPower.doAction(LXQt::Power::PowerMonitorOff);
+    doAction(5);
     return;
     }
 
