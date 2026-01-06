@@ -48,6 +48,7 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     mUi->idleBatteryTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
     mUi->idleACMonitorOffTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
     mUi->idleBatMonitorOffTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
+    mUi->idleTimeBacklightTimeEdit->setMinimumTime( QTime(0,0,MINIMUM_SECONDS) );
 
     mBacklight = new LXQt::Backlight(this);
     // If no backlight support then disable backlight control:
