@@ -105,6 +105,12 @@ public:
     int getIdlenessBatteryAction();
     void setIdlenessBatteryAction(int idlenessAction);
 
+    QTime getMonitorACIdleTime();
+    void setMonitorACIdleTime(QTime idlenessTime);
+
+    QTime getMonitorBatteryIdleTime();
+    void setMonitorBatteryIdleTime(QTime idlenessTime);
+
     QTime getIdlenessBatteryTime();
     void setIdlenessBatteryTime(QTime idlenessTime);
 
@@ -134,6 +140,9 @@ public:
 
     bool isIdlenessWatcherPaused() const;
     void setIdlenessWatcherPaused(bool idlenessWatcherPaused);
+
+    // The lower limit for monitor idleness watching:
+    static const QTime noMonitorIdlenessWatcher;
 
 private:
     static bool mIdlenessWatcherPaused;

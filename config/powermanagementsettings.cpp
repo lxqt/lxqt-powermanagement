@@ -29,6 +29,7 @@
 
 #include "powermanagementsettings.h"
 
+const QTime PowerManagementSettings::noMonitorIdlenessWatcher = QTime(0, 1, 0);
 // the pause state is only for the tray icon and is not saved
 bool PowerManagementSettings::mIdlenessWatcherPaused = false;
 
@@ -54,6 +55,8 @@ namespace PowerManagementSettingsConstants
     const QString IDLENESS_AC_TIME { QL1S("idlenessACTime") };
     const QString IDLENESS_BATTERY_ACTION_KEY { QL1S("idlenessBatteryAction") };
     const QString IDLENESS_BATTERY_TIME { QL1S("idlenessBatteryTime") };
+    const QString MONITOR_IDLENESS_AC_TIME { QL1S("monitorIdlenessACTime") };
+    const QString MONITOR_IDLENESS_BATTERY_TIME { QL1S("monitorIdlenessBatteryTime") };
     const QString IDLENESS_BACKLIGHT_TIME { QL1S("idlenessTime") };
     const QString IDLENESS_BACKLIGHT { QL1S("backlightIdleness") };
     const QString IDLENESS_BACKLIGHT_ON_BATTERY_DISCHARGING { QL1S("backlightIdlenessOnBatteryDischarging") };
@@ -274,6 +277,40 @@ QTime PowerManagementSettings::getIdlenessBatteryTime()
 void PowerManagementSettings::setIdlenessBatteryTime(QTime idlenessTime)
 {
     setValue(IDLENESS_BATTERY_TIME, idlenessTime);
+}
+
+QTime PowerManagementSettings::getMonitorACIdleTime()
+{
+    // For backward compatibility, the value is set to the AC idleness time
+    // if the AC action is turning off monitor.
+    if (getIdlenessACAction() == static_cast<int>(LXQt::Power::PowerMonitorOff))
+    {
+        return getIdlenessACTime();
+    }
+    // The default value means no turning off.
+    return value(MONITOR_IDLENESS_AC_TIME, noMonitorIdlenessWatcher).toTime();
+}
+
+void PowerManagementSettings::setMonitorACIdleTime(QTime idlenessTime)
+{
+    setValue(MONITOR_IDLENESS_AC_TIME, idlenessTime);
+}
+
+QTime PowerManagementSettings::getMonitorBatteryIdleTime()
+{
+    // For backward compatibility, the value is set to the battery idleness time
+    // if the battery action is turning off monitor.
+    if (getIdlenessBatteryAction() == static_cast<int>(LXQt::Power::PowerMonitorOff))
+    {
+        return getIdlenessBatteryTime();
+    }
+    // The default value means no turning off.
+    return value(MONITOR_IDLENESS_BATTERY_TIME, noMonitorIdlenessWatcher).toTime();
+}
+
+void PowerManagementSettings::setMonitorBatteryIdleTime(QTime idlenessTime)
+{
+    setValue(MONITOR_IDLENESS_BATTERY_TIME, idlenessTime);
 }
 
 bool PowerManagementSettings::isIdlenessBacklightWatcherEnabled()
