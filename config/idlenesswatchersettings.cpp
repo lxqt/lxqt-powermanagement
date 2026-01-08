@@ -87,7 +87,7 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     });
 
     // Set tooltips.
-    QString tooltip = tr("Minutes:Seconds (min: 01:30)");
+    QString tooltip = tr("Minutes:Seconds");
     mUi->idleACTimeEdit->setToolTip(tooltip);
     mUi->idleBatteryTimeEdit->setToolTip(tooltip);
     mUi->idleACActionLabel->setToolTip(tooltip);
