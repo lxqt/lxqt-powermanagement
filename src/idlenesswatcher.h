@@ -50,6 +50,8 @@ private:
     PowerManagementSettings mPSettings;
     int mIdleACWatcher;
     int mIdleBatteryWatcher;
+    int mIdleACMonitorWatcher;
+    int mIdleBatteryMonitorWatcher;
     int mIdleBacklightWatcher;
     LXQt::Backlight *mBacklight;
     int mBacklightActualValue;

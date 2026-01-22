@@ -43,7 +43,7 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
 {
     qDebug() << "Starting idlenesswatcher";
 
-    mIdleACWatcher = mIdleBatteryWatcher = mIdleBacklightWatcher = mBacklightActualValue = -1;
+    mIdleACWatcher = mIdleBatteryWatcher = mIdleACMonitorWatcher = mIdleBatteryMonitorWatcher = mIdleBacklightWatcher = mBacklightActualValue = -1;
     mBacklight = nullptr;
     mDischarging = false;
 
@@ -116,15 +116,38 @@ void IdlenessWatcher::setup()
     if(mPSettings.isIdlenessWatcherEnabled()) {
         QTime ACtime = mPSettings.getIdlenessACTime();
         int ACmsecs = (ACtime.second() + ACtime.minute() * 60) * 1000;
-        mIdleACWatcher = KIdleTime::instance()->addIdleTimeout(ACmsecs);
+        if (ACmsecs >= 30000) { // preventing edge cases
+            mIdleACWatcher = KIdleTime::instance()->addIdleTimeout(ACmsecs);
+        }
 
         QTime BATtime = mPSettings.getIdlenessBatteryTime();
         int BATmsecs = (BATtime.second() + BATtime.minute() * 60) * 1000;
-        // to get sure times are NOT the same ones...
-        if (BATmsecs == ACmsecs) {
-            BATmsecs -= 10; // just 10 msecs less... ;)
+        if (BATmsecs >= 30000) {
+            // to make sure times are NOT the same ones...
+            if (BATmsecs == ACmsecs) {
+                BATmsecs -= 10; // just 10 msecs less... ;)
+            }
+            mIdleBatteryWatcher = KIdleTime::instance()->addIdleTimeout(BATmsecs);
         }
-        mIdleBatteryWatcher = KIdleTime::instance()->addIdleTimeout(BATmsecs);
+
+        int ACMonitormsecs = 30000;
+        QTime ACMonitortime = mPSettings.getMonitorACIdleTime();
+        if (ACMonitortime > PowerManagementSettings::noMonitorIdlenessWatcher) {
+            ACMonitormsecs = (ACMonitortime.second() + ACMonitortime.minute() * 60) * 1000;
+            while (ACMonitormsecs == ACmsecs || ACMonitormsecs == BATmsecs) {
+                ACMonitormsecs -= 10;
+            }
+            mIdleACMonitorWatcher = KIdleTime::instance()->addIdleTimeout(ACMonitormsecs);
+        }
+
+        QTime BATMonitortime = mPSettings.getMonitorBatteryIdleTime();
+        if (BATMonitortime > PowerManagementSettings::noMonitorIdlenessWatcher) {
+            int BATMonitormsecs = (BATMonitortime.second() + BATMonitortime.minute() * 60) * 1000;
+            while (BATMonitormsecs == ACmsecs || BATMonitormsecs == BATmsecs || BATMonitormsecs == ACMonitormsecs) {
+                BATMonitormsecs -= 10;
+            }
+            mIdleBatteryMonitorWatcher = KIdleTime::instance()->addIdleTimeout(BATMonitormsecs);
+        }
 
         // Enable backlight control:
         if(mPSettings.isIdlenessBacklightWatcherEnabled() &&
@@ -191,6 +214,22 @@ void IdlenessWatcher::timeoutReached(int identifier,int /*msec*/)
         return;
     }
 
+    if(identifier == mIdleACMonitorWatcher) {
+        if (mDischarging) {
+            return;
+        }
+        doAction(static_cast<int>(LXQt::Power::PowerMonitorOff));
+        return;
+    }
+
+    if(identifier == mIdleBatteryMonitorWatcher) {
+        if (!mDischarging) {
+            return;
+        }
+        doAction(static_cast<int>(LXQt::Power::PowerMonitorOff));
+        return;
+    }
+
     if(identifier == mIdleBacklightWatcher && mBacklightActualValue < 0) {
         if(mBacklight == nullptr) {
             mBacklight = new LXQt::Backlight();
@@ -250,6 +289,6 @@ void IdlenessWatcher::onBatteryChanged(int, const QString &)
 void IdlenessWatcher::onSettingsChanged()
 {
     KIdleTime::instance()->removeAllIdleTimeouts();
-    mIdleACWatcher = mIdleBatteryWatcher = mIdleBacklightWatcher = -1;
+    mIdleACWatcher = mIdleBatteryWatcher = mIdleACMonitorWatcher = mIdleBatteryMonitorWatcher = mIdleBacklightWatcher = -1;
     setup();
 }
