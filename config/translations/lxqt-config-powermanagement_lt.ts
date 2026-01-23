@@ -113,39 +113,58 @@
         <translation>Į&amp;jungti neveiklumo stebėtoją</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="151"/>
+        <location filename="../idlenesswatchersettings.ui" line="175"/>
         <source>Idle time:</source>
         <translation>Neveiklumo laikas:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="122"/>
+        <location filename="../idlenesswatchersettings.ui" line="146"/>
         <source>Enable Backlight Change</source>
         <translation>Įjungti foninio apšvietimo pakeitimus</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="83"/>
+        <location filename="../idlenesswatchersettings.ui" line="70"/>
+        <source>Turn off monitor(s) on AC:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="77"/>
+        <location filename="../idlenesswatchersettings.ui" line="134"/>
+        <source>Disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>When idle on Battery:</source>
         <translation>Esant neveiklumui naudojant bateriją:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="93"/>
+        <location filename="../idlenesswatchersettings.ui" line="113"/>
         <source>Battery Idle time:</source>
         <translation>Baterijos neveiklumo laikas:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="131"/>
+        <location filename="../idlenesswatchersettings.ui" line="127"/>
+        <source>Turn off monitor(s) on battery:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="155"/>
         <source>Backlight (%):</source>
         <translation>Foninis apšvietimas (%):</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="158"/>
+        <location filename="../idlenesswatchersettings.ui" line="182"/>
+        <location filename="../idlenesswatchersettings.cpp" line="90"/>
         <source>Minutes:Seconds</source>
         <translation>Minutės:Sekundės</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="76"/>
-        <location filename="../idlenesswatchersettings.ui" line="113"/>
-        <location filename="../idlenesswatchersettings.ui" line="178"/>
+        <location filename="../idlenesswatchersettings.ui" line="63"/>
+        <location filename="../idlenesswatchersettings.ui" line="80"/>
+        <location filename="../idlenesswatchersettings.ui" line="120"/>
+        <location filename="../idlenesswatchersettings.ui" line="137"/>
+        <location filename="../idlenesswatchersettings.ui" line="202"/>
         <source>mm:ss</source>
         <translation>mm:ss</translation>
     </message>
@@ -160,40 +179,39 @@
         <translation>El. maitinimo neveiklumo laikas:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="63"/>
-        <location filename="../idlenesswatchersettings.ui" line="100"/>
-        <source>Minutes:Seconds (min: 01:30)</source>
-        <translation>Minutės:Sekundės (min.: 01:30)</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="195"/>
+        <location filename="../idlenesswatchersettings.ui" line="219"/>
         <source>Check backlight</source>
         <translation>Tikrinti foninį apšvietimą</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="185"/>
+        <location filename="../idlenesswatchersettings.ui" line="209"/>
         <source>On battery discharging </source>
         <translation>Baterijai išsikraunant </translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="208"/>
+        <location filename="../idlenesswatchersettings.ui" line="232"/>
         <source>Command to Turn off Monitor</source>
         <translation>Komanda, skirta išjungti monitorių</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="214"/>
+        <location filename="../idlenesswatchersettings.ui" line="238"/>
         <source>Recommended command for:</source>
         <translation>Rekomenduojama komanda, skirta:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="234"/>
+        <location filename="../idlenesswatchersettings.ui" line="258"/>
         <source>On Wayland, usually handled by compositor and app</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="237"/>
+        <location filename="../idlenesswatchersettings.ui" line="261"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>Išjungti neveiklumo patikrinimus, kai rodoma visame ekrane</translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.cpp" line="97"/>
+        <source>Set to minimum to disable</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -340,7 +358,7 @@
         <translation>Išjungti</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="44"/>
+        <location filename="../helpers.cpp" line="46"/>
         <source>Turn Off monitor(s)</source>
         <translation>Išjungti monitorių(-ius)</translation>
     </message>
