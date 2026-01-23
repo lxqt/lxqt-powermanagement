@@ -29,7 +29,7 @@
 
 #include "helpers.h"
 
-void fillComboBox(QComboBox* comboBox, bool ask, bool monitor)
+void fillComboBox(QComboBox* comboBox, bool ask, bool monitor, bool lock)
 {
     comboBox->clear();
     comboBox->addItem(QObject::tr("Nothing"), -1);
@@ -37,7 +37,10 @@ void fillComboBox(QComboBox* comboBox, bool ask, bool monitor)
     {
         comboBox->addItem(QObject::tr("Ask"), LXQt::Power::PowerShowLeaveDialog);
     }
-    comboBox->addItem(QObject::tr("Lock screen"), -2); // FIXME
+    if (lock)
+    {
+        comboBox->addItem(QObject::tr("Lock screen"), -2); // FIXME
+    }
     comboBox->addItem(QObject::tr("Suspend"), LXQt::Power::PowerSuspend);
     comboBox->addItem(QObject::tr("Hibernate"), LXQt::Power::PowerHibernate);
     comboBox->addItem(QObject::tr("Shutdown"), LXQt::Power::PowerShutdown);
