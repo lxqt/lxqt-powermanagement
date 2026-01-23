@@ -84,7 +84,7 @@
          <item row="2" column="0">
           <widget class="QLabel" name="idleBatteryMonitorLabel">
            <property name="text">
-            <string>Monitor idle time:</string>
+            <string>Turn off monitor(s) after:</string>
            </property>
           </widget>
          </item>
@@ -137,7 +137,7 @@
          <item row="2" column="0">
           <widget class="QLabel" name="idleACMonitorLabel">
            <property name="text">
-            <string>Monitor idle time</string>
+            <string>Turn off monitor(s) after:</string>
            </property>
           </widget>
          </item>
