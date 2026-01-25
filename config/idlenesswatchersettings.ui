@@ -23,9 +23,9 @@
       <item>
        <widget class="QGroupBox" name="acGroupBox">
         <property name="title">
-         <string>AC</string>
+         <string>On AC</string>
         </property>
-        <layout class="QFormLayout" name="formLayout_AC">
+        <layout class="QFormLayout" name="formLayout_On_AC">
          <item row="0" column="0">
           <widget class="QLabel" name="idleTimeACLabel">
            <property name="sizePolicy">
@@ -94,9 +94,9 @@
       <item>
        <widget class="QGroupBox" name="batteryGroupBox">
         <property name="title">
-         <string>Battery</string>
+         <string>On Battery</string>
         </property>
-        <layout class="QFormLayout" name="formLayout_Battery">
+        <layout class="QFormLayout" name="formLayout_On_Battery">
          <item row="0" column="0">
           <widget class="QLabel" name="idleTimeBatteryLabel">
            <property name="text">
