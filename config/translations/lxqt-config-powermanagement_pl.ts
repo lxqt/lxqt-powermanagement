@@ -113,98 +113,94 @@
         <translation>W&amp;łącz monitorowanie bezczynności</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="175"/>
+        <location filename="../idlenesswatchersettings.ui" line="57"/>
+        <location filename="../idlenesswatchersettings.ui" line="113"/>
+        <location filename="../idlenesswatchersettings.ui" line="179"/>
         <source>Idle time:</source>
         <translation>Czas bezczynności:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="146"/>
+        <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>Enable Backlight Change</source>
         <translation>Włącz zmianę podświetlenia</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="70"/>
-        <source>Turn off monitor(s) on AC:</source>
-        <translation>Wyłącz monitor(y) na zasilaniu sieciowym:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="77"/>
-        <location filename="../idlenesswatchersettings.ui" line="134"/>
+        <location filename="../idlenesswatchersettings.ui" line="80"/>
+        <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
         <translation>Wyłączone</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="103"/>
-        <source>When idle on Battery:</source>
-        <translation>Podczas bezczynności na baterii:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="113"/>
-        <source>Battery Idle time:</source>
-        <translation>Czas bezczynności na baterii:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="127"/>
-        <source>Turn off monitor(s) on battery:</source>
-        <translation>Wyłącz monitor(y) na baterii:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="155"/>
+        <location filename="../idlenesswatchersettings.ui" line="159"/>
         <source>Backlight (%):</source>
         <translation>Podświetlenie (%):</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="182"/>
+        <location filename="../idlenesswatchersettings.ui" line="67"/>
+        <location filename="../idlenesswatchersettings.ui" line="120"/>
+        <location filename="../idlenesswatchersettings.ui" line="186"/>
         <location filename="../idlenesswatchersettings.cpp" line="90"/>
         <source>Minutes:Seconds</source>
         <translation>Minuty:Sekundy</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="63"/>
-        <location filename="../idlenesswatchersettings.ui" line="80"/>
-        <location filename="../idlenesswatchersettings.ui" line="120"/>
-        <location filename="../idlenesswatchersettings.ui" line="137"/>
-        <location filename="../idlenesswatchersettings.ui" line="202"/>
+        <location filename="../idlenesswatchersettings.ui" line="70"/>
+        <location filename="../idlenesswatchersettings.ui" line="77"/>
+        <location filename="../idlenesswatchersettings.ui" line="123"/>
+        <location filename="../idlenesswatchersettings.ui" line="130"/>
+        <location filename="../idlenesswatchersettings.ui" line="189"/>
         <source>mm:ss</source>
         <translation>mm:ss</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="34"/>
-        <source>When idle on AC:</source>
-        <translation>Podczas bezczynności na zasilaniu sieciowym:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="53"/>
-        <source>AC Idle time:</source>
-        <translation>Czas bezczynności na zasilaniu sieciowym:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="219"/>
+        <location filename="../idlenesswatchersettings.ui" line="223"/>
         <source>Check backlight</source>
         <translation>Sprawdź podświetlenie</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="209"/>
+        <location filename="../idlenesswatchersettings.ui" line="213"/>
         <source>On battery discharging </source>
         <translation>Podczas pracy na baterii </translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="232"/>
+        <location filename="../idlenesswatchersettings.ui" line="26"/>
+        <source>On AC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="38"/>
+        <location filename="../idlenesswatchersettings.ui" line="103"/>
+        <source>When idle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="87"/>
+        <location filename="../idlenesswatchersettings.ui" line="140"/>
+        <source>Turn off monitor(s) after:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="97"/>
+        <source>On Battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="236"/>
         <source>Command to Turn off Monitor</source>
         <translation>Polecenie wyłączenia monitora</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="238"/>
+        <location filename="../idlenesswatchersettings.ui" line="242"/>
         <source>Recommended command for:</source>
         <translation>Zalecane polecenie dla:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="258"/>
+        <location filename="../idlenesswatchersettings.ui" line="262"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation>W Wayland zwykle obsługiwane przez kompozytor i aplikację</translation>
+        <translation>W Wayland zwykle obsługiwane przez kompozytor i&#xa0;aplikację</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="261"/>
+        <location filename="../idlenesswatchersettings.ui" line="265"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>Wyłącz kontrolę bezczynności w trybie pełnoekranowym</translation>
     </message>
