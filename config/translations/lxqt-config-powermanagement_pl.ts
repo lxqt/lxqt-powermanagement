@@ -125,13 +125,13 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
         <source>Turn off monitor(s) on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłącz monitor(y) na zasilaniu sieciowym:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="77"/>
         <location filename="../idlenesswatchersettings.ui" line="134"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłączone</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
@@ -146,7 +146,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="127"/>
         <source>Turn off monitor(s) on battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłącz monitor(y) na baterii:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="155"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="258"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation>W Wayland zwykle obsługiwane przez kompozytor i&#xa0;aplikację</translation>
+        <translation>W Wayland zwykle obsługiwane przez kompozytor i aplikację</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="261"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../idlenesswatchersettings.cpp" line="97"/>
         <source>Set to minimum to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustaw na minimum, aby wyłączyć</translation>
     </message>
 </context>
 <context>

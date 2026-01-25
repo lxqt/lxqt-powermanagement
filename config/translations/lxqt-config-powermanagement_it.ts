@@ -125,13 +125,13 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
         <source>Turn off monitor(s) on AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spegni (i) monitor se alimentato da rete:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="77"/>
         <location filename="../idlenesswatchersettings.ui" line="134"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Disabilitato</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
@@ -146,7 +146,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="127"/>
         <source>Turn off monitor(s) on battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spegni (i) monitor se alimentata a batteria:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="155"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../idlenesswatchersettings.cpp" line="97"/>
         <source>Set to minimum to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostare al minimo per disabilitare</translation>
     </message>
 </context>
 <context>
