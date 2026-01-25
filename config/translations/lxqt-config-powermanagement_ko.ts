@@ -113,98 +113,94 @@
         <translation>유휴상태 감시자 활성화(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="175"/>
+        <location filename="../idlenesswatchersettings.ui" line="57"/>
+        <location filename="../idlenesswatchersettings.ui" line="113"/>
+        <location filename="../idlenesswatchersettings.ui" line="179"/>
         <source>Idle time:</source>
         <translation>유휴상태 시간:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="146"/>
+        <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>Enable Backlight Change</source>
         <translation>백라이트 변경 활성화</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="70"/>
-        <source>Turn off monitor(s) on AC:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="77"/>
-        <location filename="../idlenesswatchersettings.ui" line="134"/>
+        <location filename="../idlenesswatchersettings.ui" line="80"/>
+        <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="103"/>
-        <source>When idle on Battery:</source>
-        <translation>배터리에서 유휴상태일 때:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="113"/>
-        <source>Battery Idle time:</source>
-        <translation>배터리 유휴 시간:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="127"/>
-        <source>Turn off monitor(s) on battery:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="155"/>
+        <location filename="../idlenesswatchersettings.ui" line="159"/>
         <source>Backlight (%):</source>
         <translation>백라이트(%):</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="182"/>
+        <location filename="../idlenesswatchersettings.ui" line="67"/>
+        <location filename="../idlenesswatchersettings.ui" line="120"/>
+        <location filename="../idlenesswatchersettings.ui" line="186"/>
         <location filename="../idlenesswatchersettings.cpp" line="90"/>
         <source>Minutes:Seconds</source>
         <translation>분:초</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="63"/>
-        <location filename="../idlenesswatchersettings.ui" line="80"/>
-        <location filename="../idlenesswatchersettings.ui" line="120"/>
-        <location filename="../idlenesswatchersettings.ui" line="137"/>
-        <location filename="../idlenesswatchersettings.ui" line="202"/>
+        <location filename="../idlenesswatchersettings.ui" line="70"/>
+        <location filename="../idlenesswatchersettings.ui" line="77"/>
+        <location filename="../idlenesswatchersettings.ui" line="123"/>
+        <location filename="../idlenesswatchersettings.ui" line="130"/>
+        <location filename="../idlenesswatchersettings.ui" line="189"/>
         <source>mm:ss</source>
         <translation>mm:ss</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="34"/>
-        <source>When idle on AC:</source>
-        <translation>AC에서 유휴상태일 때:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="53"/>
-        <source>AC Idle time:</source>
-        <translation>AC 유휴 시간:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="219"/>
+        <location filename="../idlenesswatchersettings.ui" line="223"/>
         <source>Check backlight</source>
         <translation>백라이트 검사</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="209"/>
+        <location filename="../idlenesswatchersettings.ui" line="213"/>
         <source>On battery discharging </source>
         <translation>배터리 방전 시 </translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="232"/>
+        <location filename="../idlenesswatchersettings.ui" line="26"/>
+        <source>On AC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="38"/>
+        <location filename="../idlenesswatchersettings.ui" line="103"/>
+        <source>When idle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="87"/>
+        <location filename="../idlenesswatchersettings.ui" line="140"/>
+        <source>Turn off monitor(s) after:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="97"/>
+        <source>On Battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="236"/>
         <source>Command to Turn off Monitor</source>
         <translation>모니터 끄기 명령</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="238"/>
+        <location filename="../idlenesswatchersettings.ui" line="242"/>
         <source>Recommended command for:</source>
         <translation>권장 명령어:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="258"/>
+        <location filename="../idlenesswatchersettings.ui" line="262"/>
         <source>On Wayland, usually handled by compositor and app</source>
         <translation>Wayland에서는 일반적으로 컴포지터와 앱으로 처리됩니다</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="261"/>
+        <location filename="../idlenesswatchersettings.ui" line="265"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>전체 화면에서 유휴상태 검사 비활성화</translation>
     </message>

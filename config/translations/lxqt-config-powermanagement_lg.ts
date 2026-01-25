@@ -113,98 +113,94 @@
         <translation>Tandika eki&amp;rabiriza kusiriikirira</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="175"/>
+        <location filename="../idlenesswatchersettings.ui" line="57"/>
+        <location filename="../idlenesswatchersettings.ui" line="113"/>
+        <location filename="../idlenesswatchersettings.ui" line="179"/>
         <source>Idle time:</source>
         <translation>Akasiriikiriro:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="146"/>
+        <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>Enable Backlight Change</source>
         <translation>Kkiriza okumulisa kw&apos;olutimbe okukyuka</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="70"/>
-        <source>Turn off monitor(s) on AC:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="77"/>
-        <location filename="../idlenesswatchersettings.ui" line="134"/>
+        <location filename="../idlenesswatchersettings.ui" line="80"/>
+        <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="103"/>
-        <source>When idle on Battery:</source>
-        <translation>Mu kasiriikiriro nga eri ku lyanda:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="113"/>
-        <source>Battery Idle time:</source>
-        <translation>Akasiriikiriro nga eri ku lyanda:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="127"/>
-        <source>Turn off monitor(s) on battery:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="155"/>
+        <location filename="../idlenesswatchersettings.ui" line="159"/>
         <source>Backlight (%):</source>
         <translation>Okumulisa (%):</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="182"/>
+        <location filename="../idlenesswatchersettings.ui" line="67"/>
+        <location filename="../idlenesswatchersettings.ui" line="120"/>
+        <location filename="../idlenesswatchersettings.ui" line="186"/>
         <location filename="../idlenesswatchersettings.cpp" line="90"/>
         <source>Minutes:Seconds</source>
         <translation>Ddakiika:Sikonda</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="63"/>
-        <location filename="../idlenesswatchersettings.ui" line="80"/>
-        <location filename="../idlenesswatchersettings.ui" line="120"/>
-        <location filename="../idlenesswatchersettings.ui" line="137"/>
-        <location filename="../idlenesswatchersettings.ui" line="202"/>
+        <location filename="../idlenesswatchersettings.ui" line="70"/>
+        <location filename="../idlenesswatchersettings.ui" line="77"/>
+        <location filename="../idlenesswatchersettings.ui" line="123"/>
+        <location filename="../idlenesswatchersettings.ui" line="130"/>
+        <location filename="../idlenesswatchersettings.ui" line="189"/>
         <source>mm:ss</source>
         <translation>mm:ss</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="34"/>
-        <source>When idle on AC:</source>
-        <translation>Mu kasiriikiriro nga eri ku masanyalaze:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="53"/>
-        <source>AC Idle time:</source>
-        <translation>Akasiriikiriro nga eri ku masanyalaze:</translation>
-    </message>
-    <message>
-        <location filename="../idlenesswatchersettings.ui" line="219"/>
+        <location filename="../idlenesswatchersettings.ui" line="223"/>
         <source>Check backlight</source>
         <translation>Gezesa okumulisa olutimbe</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="209"/>
+        <location filename="../idlenesswatchersettings.ui" line="213"/>
         <source>On battery discharging </source>
         <translation>Okumulisa kukendeere nga kompyuta enywa lyanda </translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="232"/>
+        <location filename="../idlenesswatchersettings.ui" line="26"/>
+        <source>On AC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="38"/>
+        <location filename="../idlenesswatchersettings.ui" line="103"/>
+        <source>When idle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="87"/>
+        <location filename="../idlenesswatchersettings.ui" line="140"/>
+        <source>Turn off monitor(s) after:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="97"/>
+        <source>On Battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../idlenesswatchersettings.ui" line="236"/>
         <source>Command to Turn off Monitor</source>
         <translation>Kiragiro Ekigyako Olutimbe</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="238"/>
+        <location filename="../idlenesswatchersettings.ui" line="242"/>
         <source>Recommended command for:</source>
         <translation>Ekiragiro ekisaanira:</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="258"/>
+        <location filename="../idlenesswatchersettings.ui" line="262"/>
         <source>On Wayland, usually handled by compositor and app</source>
         <translation>Wayland nga y&apos;ekola, bino bikolebwako puloguramu n&apos;ekikwanaganya ebirabikira awakolerwa</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.ui" line="261"/>
+        <location filename="../idlenesswatchersettings.ui" line="265"/>
         <source>Disable idleness checks when fullscreen</source>
         <translation>Yimiriza okulabiriza okusiriikirira nga waliwo puloguramu ebuna olutimba</translation>
     </message>
