@@ -4,9 +4,11 @@
  * LXQt - a lightweight, Qt based, desktop toolset
  * https://lxqt.org
  *
- * Copyright: 2012 Razor team
+ * Copyright: 2011 Razor team
+ *            2025~ LXQt team
  * Authors:
  *   Christian Surlykke <christian@surlykke.dk>
+ *   Palo Kisa <palo.kisa@gmail.com>
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -24,37 +26,28 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
-#ifndef BATTERYWATCHER_H
-#define BATTERYWATCHER_H
 
-#include "watcher.h"
-#include "trayiconbattery.h"
-#include "batteryinfodialog.h"
-#include "../config/powermanagementsettings.h"
+#pragma once
 
-#include <QTimer>
-
+#include "trayicon.h"
 #include <Solid/Battery>
 
-class BatteryWatcher : public Watcher
+#include "iconproducer.h"
+
+class TrayIconBattery : public TrayIcon
 {
     Q_OBJECT
 
 public:
-    explicit BatteryWatcher(QObject *parent = nullptr);
-    ~BatteryWatcher() override;
-    int batteriesCount() const;
+    TrayIconBattery(Solid::Battery *battery, QObject *parent = nullptr);
+    ~TrayIconBattery() override;
 
-private slots:
-    void batteryChanged();
-    void settingsChanged();
+public slots:
+    void updateTooltip();
 
 private:
-    QList<Solid::Battery*> mBatteries;
-    QList<TrayIconBattery*> mTrayIcons;
+    virtual const QIcon & getIcon() const override;
 
-    PowerManagementSettings mSettings;
-    BatteryInfoDialog *mBatteryInfoDialog;
+    Solid::Battery *mBattery;
+    IconProducer mIconProducer;
 };
-
-#endif // BATTERYWATCHER_H
