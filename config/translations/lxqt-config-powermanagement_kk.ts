@@ -6,103 +6,103 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="14"/>
         <source>Battery Watcher Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея бақылаушысының баптаулары</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="26"/>
         <source>E&amp;nable Battery Watcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея бақылаушысын іс&amp;ке қосу</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="54"/>
         <source>Warning:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ескерту:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="67"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translation> секунд</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation type="unfinished"></translation>
+        <translation>Деңгейі келесіде төмен:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="111"/>
         <source>Icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Таңбаша:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
         <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Алдын ала қарау</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="158"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>Зарядталуда</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="196"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>Заряды таусылуда</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="41"/>
         <source>When power is low then:</source>
-        <translation type="unfinished"></translation>
+        <translation>Қуат төмен болғанда:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="97"/>
         <source>Show icon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Таңбашаны көрсету:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="41"/>
         <source>from theme</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>темадан</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>Circle</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Шеңбер</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Пайызы бар шеңбер</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Пайызы мен фоны бар батарея</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
-        <translation type="unfinished"></translation>
+        <translation>Пайызы бар батарея</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="109"/>
         <source>built in</source>
-        <translation type="unfinished"></translation>
+        <translation>кірістірілген</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.cpp" line="114"/>
         <source>Level: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Деңгейі: %1%</translation>
     </message>
 </context>
 <context>
@@ -110,30 +110,30 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="17"/>
         <source>Enab&amp;le Idleness Watcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Әрекетсіздікті бақылаушыны іске қо&amp;су</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="57"/>
         <location filename="../idlenesswatchersettings.ui" line="113"/>
         <location filename="../idlenesswatchersettings.ui" line="179"/>
         <source>Idle time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Әрекетсіздік уақыты:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="150"/>
         <source>Enable Backlight Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Жарықтықты өзгертуді іске қосу</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="80"/>
         <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Сөндірілген</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="159"/>
         <source>Backlight (%):</source>
-        <translation type="unfinished"></translation>
+        <translation>Жарықтық (%):</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="67"/>
@@ -141,7 +141,7 @@
         <location filename="../idlenesswatchersettings.ui" line="186"/>
         <location filename="../idlenesswatchersettings.cpp" line="90"/>
         <source>Minutes:Seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Минут:Секунд</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="70"/>
@@ -150,64 +150,64 @@
         <location filename="../idlenesswatchersettings.ui" line="130"/>
         <location filename="../idlenesswatchersettings.ui" line="189"/>
         <source>mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>мм:сс</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="223"/>
         <source>Check backlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Жарықтықты тексеру</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="213"/>
         <source>On battery discharging </source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея заряды таусылғанда </translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="26"/>
         <source>On AC</source>
-        <translation type="unfinished"></translation>
+        <translation>Желіден</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>When idle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Әрекетсіз болғанда:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="87"/>
         <location filename="../idlenesswatchersettings.ui" line="140"/>
         <source>Turn off monitor(s) after:</source>
-        <translation type="unfinished"></translation>
+        <translation>Монитор(лар)ды келесі уақыттан кейін сөндіру:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>On Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батареядан</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="236"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Мониторды сөндіру командасы</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="242"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Келесі үшін ұсынылатын команда:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="262"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation type="unfinished"></translation>
+        <translation>Wayland жүйесінде әдетте композитор мен қолданба арқылы өңделеді</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="265"/>
         <source>Disable idleness checks when fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Толық экранда әрекетсіздікті тексеруді сөндіру</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.cpp" line="97"/>
         <source>Set to minimum to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Сөндіру үшін минимумға орнатыңыз</translation>
     </message>
 </context>
 <context>
@@ -215,49 +215,49 @@
     <message>
         <location filename="../lidwatchersettings.ui" line="23"/>
         <source>Enable &amp;Lid Watcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Қақпақ бақылаушысын іс&amp;ке қосу</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="38"/>
         <source>Action when lid is closed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Қақпақ жабылғандағы әрекет:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="50"/>
         <location filename="../lidwatchersettings.ui" line="115"/>
         <source>On Battery:</source>
-        <translation type="unfinished"></translation>
+        <translation>Батареядан:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="58"/>
         <source>Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Ештеңе</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="63"/>
         <source>Suspend</source>
-        <translation type="unfinished"></translation>
+        <translation>Күту режимі</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="68"/>
         <source>Hibernate</source>
-        <translation type="unfinished"></translation>
+        <translation>Гибернация</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="73"/>
         <source>Shut down</source>
-        <translation type="unfinished"></translation>
+        <translation>Сөндіру</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="81"/>
         <location filename="../lidwatchersettings.ui" line="125"/>
         <source>On AC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Желіден:</translation>
     </message>
     <message>
         <location filename="../lidwatchersettings.ui" line="94"/>
         <source>When &amp;using external monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Сыртқы монитор қолданылған&amp;да</translation>
     </message>
 </context>
 <context>
@@ -265,27 +265,27 @@
     <message>
         <location filename="../mainwindow.cpp" line="37"/>
         <source>Power Management Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Қуатты басқару баптаулары</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="43"/>
         <source>Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Батарея</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="50"/>
         <source>Lid</source>
-        <translation type="unfinished"></translation>
+        <translation>Қақпақ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="57"/>
         <source>Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Әрекетсіздік</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="64"/>
         <source>Power keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Қуат пернелері</translation>
     </message>
 </context>
 <context>
@@ -293,32 +293,32 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Форма</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="20"/>
         <source>Handle Power Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Қуат пернелерін өңдеу</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="26"/>
         <source>Power Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Қуат пернесінің әрекеті:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Күту режимі пернесінің әрекеті:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
         <source>Hibernate Key Action:</source>
-        <translation type="unfinished"></translation>
+        <translation>Гибернация пернесінің әрекеті:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.cpp" line="50"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ескертпе: Wayland жүйесінде қуат пернелері оның орнына композитор арқылы бапталады.</translation>
     </message>
 </context>
 <context>
@@ -326,37 +326,37 @@
     <message>
         <location filename="../helpers.cpp" line="35"/>
         <source>Nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Ештеңе</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="38"/>
         <source>Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Сұрау</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="40"/>
         <source>Lock screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Экранды құлыптау</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="41"/>
         <source>Suspend</source>
-        <translation type="unfinished"></translation>
+        <translation>Күту режимі</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="42"/>
         <source>Hibernate</source>
-        <translation type="unfinished"></translation>
+        <translation>Гибернация</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="43"/>
         <source>Shutdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Сөндіру</translation>
     </message>
     <message>
         <location filename="../helpers.cpp" line="46"/>
         <source>Turn Off monitor(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Монитор(лар)ды сөндіру</translation>
     </message>
 </context>
 </TS>
