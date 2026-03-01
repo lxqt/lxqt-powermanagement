@@ -6,15 +6,9 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>276</width>
-    <height>289</height>
+    <width>358</width>
+    <height>314</height>
    </rect>
-  </property>
-  <property name="styleSheet">
-   <string notr="true">QGroupBox QGroupBox {
-border: none;
-padding-top: 30px;
-}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -31,18 +25,15 @@ padding-top: 30px;
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QGroupBox" name="groupBox">
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
         <property name="title">
          <string>Action when lid is closed:</string>
         </property>
         <layout class="QFormLayout" name="formLayout_2">
          <property name="fieldGrowthPolicy">
-          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          <enum>QFormLayout::FieldGrowthPolicy::AllNonFixedFieldsGrow</enum>
          </property>
          <property name="labelAlignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
          </property>
          <item row="0" column="0">
           <widget class="QLabel" name="onBatteryActionLabel">
@@ -88,6 +79,22 @@ padding-top: 30px;
         </layout>
        </widget>
       </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>10</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
       <item>
        <widget class="QGroupBox" name="extMonGroupBox">
         <property name="title">
@@ -98,10 +105,10 @@ padding-top: 30px;
         </property>
         <layout class="QFormLayout" name="formLayout">
          <property name="fieldGrowthPolicy">
-          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          <enum>QFormLayout::FieldGrowthPolicy::AllNonFixedFieldsGrow</enum>
          </property>
          <property name="labelAlignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
          </property>
          <item row="1" column="0">
           <widget class="QLabel" name="extMonOnBatteryActionLabel">
@@ -138,6 +145,22 @@ padding-top: 30px;
          </item>
         </layout>
        </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer1">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Policy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </widget>
