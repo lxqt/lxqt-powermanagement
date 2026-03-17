@@ -128,7 +128,7 @@
         <location filename="../idlenesswatchersettings.ui" line="80"/>
         <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungta</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="159"/>
@@ -165,24 +165,24 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="26"/>
         <source>On AC</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudojant el. maitinimo šaltinį</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>When idle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Esant neveiklumui:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="87"/>
         <location filename="../idlenesswatchersettings.ui" line="140"/>
         <source>Turn off monitor(s) after:</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti monitorių(-ius) po:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>On Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudojant bateriją</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="236"/>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="262"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation type="unfinished"></translation>
+        <translation>„Wayland“ aplinkoje, įprastai, apdoroja tvarkytojas ir programa</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="265"/>
@@ -207,7 +207,7 @@
     <message>
         <location filename="../idlenesswatchersettings.cpp" line="97"/>
         <source>Set to minimum to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Norėdami išjungti, nustatykite į mažiausią reikšmę</translation>
     </message>
 </context>
 <context>
