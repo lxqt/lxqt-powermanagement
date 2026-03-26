@@ -114,6 +114,8 @@
         <translation>
             <numerusform>שעה</numerusform>
             <numerusform>שעתיים</numerusform>
+            <numerusform>%Ln שעות</numerusform>
+            <numerusform>%Ln שעות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -122,6 +124,8 @@
         <translation>
             <numerusform>דקה</numerusform>
             <numerusform>שתי דקות</numerusform>
+            <numerusform>%Ln דקות</numerusform>
+            <numerusform>%Ln דקות</numerusform>
         </translation>
     </message>
     <message>
@@ -234,6 +238,8 @@
         <translation>
             <numerusform>תתבצע השהיה בעוד שנייה</numerusform>
             <numerusform>תתבצע השהיה בעוד שתי שניות</numerusform>
+            <numerusform>תתבצע השהיה בעוד %Ln שניות</numerusform>
+            <numerusform>תתבצע השהיה בעוד %Ln שניות</numerusform>
         </translation>
     </message>
     <message numerus="yes">
