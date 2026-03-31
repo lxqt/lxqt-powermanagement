@@ -1,3 +1,11 @@
+lxqt-powermanagement-2.4.0 / 2026-04-20
+========================================
+ * Separated idleness options for turning off monitor(s).
+ * UI improvement for Battery/AC idleness settings.
+ * Removed useless options.
+ * Updated translations.
+ * Small UI improvements.
+
 lxqt-powermanagement-2.3.0 / 2025-11-05
 ========================================
  * Added a section for turning off monitor on Wayland (supporting KWin, Niri and Hyprland).
