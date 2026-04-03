@@ -197,7 +197,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="262"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation>W Wayland zwykle obsługiwane przez kompozytor i aplikację</translation>
+        <translation>W Wayland zwykle obsługiwane przez kompozytor i&#xa0;aplikację</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="265"/>
@@ -334,27 +334,27 @@
         <translation>Zapytaj</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="40"/>
+        <location filename="../helpers.cpp" line="42"/>
         <source>Lock screen</source>
         <translation>Zablokuj ekran</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="41"/>
+        <location filename="../helpers.cpp" line="44"/>
         <source>Suspend</source>
         <translation>Wstrzymaj</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="42"/>
+        <location filename="../helpers.cpp" line="45"/>
         <source>Hibernate</source>
         <translation>Hibernuj</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="43"/>
+        <location filename="../helpers.cpp" line="46"/>
         <source>Shutdown</source>
         <translation>Wyłącz</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="46"/>
+        <location filename="../helpers.cpp" line="49"/>
         <source>Turn Off monitor(s)</source>
         <translation>Wyłącz ekran(y)</translation>
     </message>
