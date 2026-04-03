@@ -334,27 +334,27 @@
         <translation>Demandar</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="40"/>
+        <location filename="../helpers.cpp" line="42"/>
         <source>Lock screen</source>
         <translation>Verrolhar l’ecran</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="41"/>
+        <location filename="../helpers.cpp" line="44"/>
         <source>Suspend</source>
         <translation>Suspendre</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="42"/>
+        <location filename="../helpers.cpp" line="45"/>
         <source>Hibernate</source>
         <translation>Ivernar</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="43"/>
+        <location filename="../helpers.cpp" line="46"/>
         <source>Shutdown</source>
         <translation>Atudar</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="46"/>
+        <location filename="../helpers.cpp" line="49"/>
         <source>Turn Off monitor(s)</source>
         <translation>Atudar los monitors</translation>
     </message>

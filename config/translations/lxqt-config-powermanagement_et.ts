@@ -334,27 +334,27 @@
         <translation>Küsi</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="40"/>
+        <location filename="../helpers.cpp" line="42"/>
         <source>Lock screen</source>
         <translation>Lukusta ekraan</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="41"/>
+        <location filename="../helpers.cpp" line="44"/>
         <source>Suspend</source>
         <translation>Vaju unne</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="42"/>
+        <location filename="../helpers.cpp" line="45"/>
         <source>Hibernate</source>
         <translation>Vaju sügavasse unne</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="43"/>
+        <location filename="../helpers.cpp" line="46"/>
         <source>Shutdown</source>
         <translation>Seiska</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="46"/>
+        <location filename="../helpers.cpp" line="49"/>
         <source>Turn Off monitor(s)</source>
         <translation>Lülita monitor(id) välja</translation>
     </message>

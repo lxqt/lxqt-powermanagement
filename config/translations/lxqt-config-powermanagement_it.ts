@@ -334,27 +334,27 @@
         <translation>Chiedi</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="40"/>
+        <location filename="../helpers.cpp" line="42"/>
         <source>Lock screen</source>
         <translation>Blocca schermo</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="41"/>
+        <location filename="../helpers.cpp" line="44"/>
         <source>Suspend</source>
         <translation>Sospendi</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="42"/>
+        <location filename="../helpers.cpp" line="45"/>
         <source>Hibernate</source>
         <translation>Iberna</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="43"/>
+        <location filename="../helpers.cpp" line="46"/>
         <source>Shutdown</source>
         <translation>Spegni</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="46"/>
+        <location filename="../helpers.cpp" line="49"/>
         <source>Turn Off monitor(s)</source>
         <translation>Spegni (tutti) monitor</translation>
     </message>

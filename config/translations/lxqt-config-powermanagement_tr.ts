@@ -334,27 +334,27 @@
         <translation>Sor</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="40"/>
+        <location filename="../helpers.cpp" line="42"/>
         <source>Lock screen</source>
         <translation>Ekranı kilitle</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="41"/>
+        <location filename="../helpers.cpp" line="44"/>
         <source>Suspend</source>
         <translation>Beklemeye Al</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="42"/>
+        <location filename="../helpers.cpp" line="45"/>
         <source>Hibernate</source>
         <translation>Uykuya Al</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="43"/>
+        <location filename="../helpers.cpp" line="46"/>
         <source>Shutdown</source>
         <translation>Bilgisayarı Kapat</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="46"/>
+        <location filename="../helpers.cpp" line="49"/>
         <source>Turn Off monitor(s)</source>
         <translation>Ekran(lar)ı kapat</translation>
     </message>

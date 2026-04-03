@@ -334,27 +334,27 @@
         <translation>Pitaj</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="40"/>
+        <location filename="../helpers.cpp" line="42"/>
         <source>Lock screen</source>
         <translation>Zaključaj ekran</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="41"/>
+        <location filename="../helpers.cpp" line="44"/>
         <source>Suspend</source>
         <translation>Pripravno stanje</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="42"/>
+        <location filename="../helpers.cpp" line="45"/>
         <source>Hibernate</source>
         <translation>Stanje mirovanja</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="43"/>
+        <location filename="../helpers.cpp" line="46"/>
         <source>Shutdown</source>
         <translation>Isključi računalo</translation>
     </message>
     <message>
-        <location filename="../helpers.cpp" line="46"/>
+        <location filename="../helpers.cpp" line="49"/>
         <source>Turn Off monitor(s)</source>
         <translation>Ugasi monitore</translation>
     </message>
