@@ -213,49 +213,49 @@
 <context>
     <name>LidWatcherSettings</name>
     <message>
-        <location filename="../lidwatchersettings.ui" line="23"/>
+        <location filename="../lidwatchersettings.ui" line="17"/>
         <source>Enable &amp;Lid Watcher</source>
         <translation>&amp;Kapak İzleyicisini Etkinleştir</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="38"/>
+        <location filename="../lidwatchersettings.ui" line="29"/>
         <source>Action when lid is closed:</source>
         <translation>Kapak kapatıldığında:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="50"/>
-        <location filename="../lidwatchersettings.ui" line="115"/>
+        <location filename="../lidwatchersettings.ui" line="41"/>
+        <location filename="../lidwatchersettings.ui" line="122"/>
         <source>On Battery:</source>
         <translation>Pil Durumunda:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="58"/>
+        <location filename="../lidwatchersettings.ui" line="49"/>
         <source>Nothing</source>
         <translation>Hiçbir şey</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="63"/>
+        <location filename="../lidwatchersettings.ui" line="54"/>
         <source>Suspend</source>
         <translation>Beklemeye Al</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="68"/>
+        <location filename="../lidwatchersettings.ui" line="59"/>
         <source>Hibernate</source>
         <translation>Uykuya Al</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="73"/>
+        <location filename="../lidwatchersettings.ui" line="64"/>
         <source>Shut down</source>
         <translation>Bilgisayarı Kapat</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="81"/>
-        <location filename="../lidwatchersettings.ui" line="125"/>
+        <location filename="../lidwatchersettings.ui" line="72"/>
+        <location filename="../lidwatchersettings.ui" line="132"/>
         <source>On AC:</source>
         <translation>Prize Takılı Durumda:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="94"/>
+        <location filename="../lidwatchersettings.ui" line="101"/>
         <source>When &amp;using external monitor</source>
         <translation>Harici ekran k&amp;ullanırken</translation>
     </message>

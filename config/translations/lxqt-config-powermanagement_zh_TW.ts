@@ -213,49 +213,49 @@
 <context>
     <name>LidWatcherSettings</name>
     <message>
-        <location filename="../lidwatchersettings.ui" line="23"/>
+        <location filename="../lidwatchersettings.ui" line="17"/>
         <source>Enable &amp;Lid Watcher</source>
         <translation>啟用上蓋監測(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="38"/>
+        <location filename="../lidwatchersettings.ui" line="29"/>
         <source>Action when lid is closed:</source>
         <translation>當上蓋關上時：</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="50"/>
-        <location filename="../lidwatchersettings.ui" line="115"/>
+        <location filename="../lidwatchersettings.ui" line="41"/>
+        <location filename="../lidwatchersettings.ui" line="122"/>
         <source>On Battery:</source>
         <translation>使用電池時：</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="58"/>
+        <location filename="../lidwatchersettings.ui" line="49"/>
         <source>Nothing</source>
         <translation>不做任何事</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="63"/>
+        <location filename="../lidwatchersettings.ui" line="54"/>
         <source>Suspend</source>
         <translation>睡眠</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="68"/>
+        <location filename="../lidwatchersettings.ui" line="59"/>
         <source>Hibernate</source>
         <translation>休眠</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="73"/>
+        <location filename="../lidwatchersettings.ui" line="64"/>
         <source>Shut down</source>
         <translation>關機</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="81"/>
-        <location filename="../lidwatchersettings.ui" line="125"/>
+        <location filename="../lidwatchersettings.ui" line="72"/>
+        <location filename="../lidwatchersettings.ui" line="132"/>
         <source>On AC:</source>
         <translation>充電時：</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="94"/>
+        <location filename="../lidwatchersettings.ui" line="101"/>
         <source>When &amp;using external monitor</source>
         <translation>使用外接顯示器時(&amp;U)</translation>
     </message>
