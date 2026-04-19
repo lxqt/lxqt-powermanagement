@@ -213,49 +213,49 @@
 <context>
     <name>LidWatcherSettings</name>
     <message>
-        <location filename="../lidwatchersettings.ui" line="23"/>
+        <location filename="../lidwatchersettings.ui" line="17"/>
         <source>Enable &amp;Lid Watcher</source>
         <translation>ნოუთბუქის დახურვის მონიტორინგის ჩართვ&amp;ა</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="38"/>
+        <location filename="../lidwatchersettings.ui" line="29"/>
         <source>Action when lid is closed:</source>
         <translation>ქმედება, როცა ნოუთბუქს დახურავენ:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="50"/>
-        <location filename="../lidwatchersettings.ui" line="115"/>
+        <location filename="../lidwatchersettings.ui" line="41"/>
+        <location filename="../lidwatchersettings.ui" line="122"/>
         <source>On Battery:</source>
         <translation>ელემენტზე:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="58"/>
+        <location filename="../lidwatchersettings.ui" line="49"/>
         <source>Nothing</source>
         <translation>არაფერი</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="63"/>
+        <location filename="../lidwatchersettings.ui" line="54"/>
         <source>Suspend</source>
         <translation>ძილი</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="68"/>
+        <location filename="../lidwatchersettings.ui" line="59"/>
         <source>Hibernate</source>
         <translation>პროგრამული ძილი</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="73"/>
+        <location filename="../lidwatchersettings.ui" line="64"/>
         <source>Shut down</source>
         <translation>გამორთვა</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="81"/>
-        <location filename="../lidwatchersettings.ui" line="125"/>
+        <location filename="../lidwatchersettings.ui" line="72"/>
+        <location filename="../lidwatchersettings.ui" line="132"/>
         <source>On AC:</source>
         <translation>შეერთებული:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="94"/>
+        <location filename="../lidwatchersettings.ui" line="101"/>
         <source>When &amp;using external monitor</source>
         <translation>&amp;გარე ეკრანის გამოყენებისას</translation>
     </message>

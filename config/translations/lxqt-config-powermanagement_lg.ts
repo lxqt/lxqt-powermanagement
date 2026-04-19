@@ -213,49 +213,49 @@
 <context>
     <name>LidWatcherSettings</name>
     <message>
-        <location filename="../lidwatchersettings.ui" line="23"/>
+        <location filename="../lidwatchersettings.ui" line="17"/>
         <source>Enable &amp;Lid Watcher</source>
         <translation>Tandika &amp;ekirabiriza ekisaanikira</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="38"/>
+        <location filename="../lidwatchersettings.ui" line="29"/>
         <source>Action when lid is closed:</source>
         <translation>Ekikolebwa nga ekisaanikira kiggadwa:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="50"/>
-        <location filename="../lidwatchersettings.ui" line="115"/>
+        <location filename="../lidwatchersettings.ui" line="41"/>
+        <location filename="../lidwatchersettings.ui" line="122"/>
         <source>On Battery:</source>
         <translation>Nga eri ku lyanda:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="58"/>
+        <location filename="../lidwatchersettings.ui" line="49"/>
         <source>Nothing</source>
         <translation>Tewali</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="63"/>
+        <location filename="../lidwatchersettings.ui" line="54"/>
         <source>Suspend</source>
         <translation>Kompyuta girindise</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="68"/>
+        <location filename="../lidwatchersettings.ui" line="59"/>
         <source>Hibernate</source>
         <translation>Kompyuta gyebase</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="73"/>
+        <location filename="../lidwatchersettings.ui" line="64"/>
         <source>Shut down</source>
         <translation>Gyako kompyuta</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="81"/>
-        <location filename="../lidwatchersettings.ui" line="125"/>
+        <location filename="../lidwatchersettings.ui" line="72"/>
+        <location filename="../lidwatchersettings.ui" line="132"/>
         <source>On AC:</source>
         <translation>Nga eri ku masanyalaze:</translation>
     </message>
     <message>
-        <location filename="../lidwatchersettings.ui" line="94"/>
+        <location filename="../lidwatchersettings.ui" line="101"/>
         <source>When &amp;using external monitor</source>
         <translation>Nga ekozesa ol&amp;utimbe olwetongovu</translation>
     </message>
