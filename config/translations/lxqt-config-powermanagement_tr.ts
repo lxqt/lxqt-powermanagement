@@ -128,7 +128,7 @@
         <location filename="../idlenesswatchersettings.ui" line="80"/>
         <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Devre dışı</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="159"/>
@@ -165,39 +165,39 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="26"/>
         <source>On AC</source>
-        <translation type="unfinished"></translation>
+        <translation>Pirizde</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>When idle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Boştayken:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="87"/>
         <location filename="../idlenesswatchersettings.ui" line="140"/>
         <source>Turn off monitor(s) after:</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitörü şu süreden sonra kapat:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>On Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilde</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="236"/>
         <source>Command to Turn off Monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitörü kapatma komutu</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="242"/>
         <source>Recommended command for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Şunun için önerilen komut:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="262"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation type="unfinished"></translation>
+        <translation>Wayland&apos;de bu işlem genellikle kompozitör ve uygulama tarafından gerçekleştirilir</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="265"/>
@@ -207,7 +207,7 @@
     <message>
         <location filename="../idlenesswatchersettings.cpp" line="97"/>
         <source>Set to minimum to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Devre dışı bırakmak için minimuma ayarlayın</translation>
     </message>
 </context>
 <context>
