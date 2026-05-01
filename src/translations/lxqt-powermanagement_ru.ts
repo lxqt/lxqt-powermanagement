@@ -223,7 +223,7 @@
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt не смог найти информацию о какой-либо батарее - наблюдение отменено</translation>
+        <translation>LXQt не смог найти данные о какой-либо батарее — наблюдение отключено</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="119"/>

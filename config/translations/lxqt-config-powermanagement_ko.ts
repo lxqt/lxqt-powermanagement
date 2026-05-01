@@ -128,7 +128,7 @@
         <location filename="../idlenesswatchersettings.ui" line="80"/>
         <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>비활성화됨</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="159"/>
@@ -165,24 +165,24 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="26"/>
         <source>On AC</source>
-        <translation type="unfinished"></translation>
+        <translation>전원 연결 시</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>When idle:</source>
-        <translation type="unfinished"></translation>
+        <translation>대기 상태일 때:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="87"/>
         <location filename="../idlenesswatchersettings.ui" line="140"/>
         <source>Turn off monitor(s) after:</source>
-        <translation type="unfinished"></translation>
+        <translation>모니터 절전 모드 진입:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>On Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>배터리 사용 시</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="236"/>
@@ -207,7 +207,7 @@
     <message>
         <location filename="../idlenesswatchersettings.cpp" line="97"/>
         <source>Set to minimum to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>비활성화하려면 최소로 설정</translation>
     </message>
 </context>
 <context>
