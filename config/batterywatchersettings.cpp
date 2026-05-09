@@ -30,6 +30,7 @@
 #include <QLabel>
 #include <QGroupBox>
 #include <Solid/Battery>
+#include <Solid/Device>
 
 #include "batterywatchersettings.h"
 #include "ui_batterywatchersettings.h"
@@ -85,6 +86,13 @@ BatteryWatcherSettings::~BatteryWatcherSettings()
 
 void BatteryWatcherSettings::loadSettings()
 {
+    const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
+
+    if (devices.isEmpty())
+    {
+        mUi->groupBox->setEnabled(false);
+    }
+
     mUi->groupBox->setChecked(mSettings.isBatteryWatcherEnabled());
     setComboBoxToValue(mUi->actionComboBox, mSettings.getPowerLowAction());
     mUi->warningSpinBox->setValue(mSettings.getPowerLowWarningTime());
