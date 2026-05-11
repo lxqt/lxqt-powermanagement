@@ -259,24 +259,24 @@
         <location filename="../PowerProfiles.cpp" line="38"/>
         <source>power-saver</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>power-saver</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="39"/>
         <source>balanced</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>balanced</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="40"/>
         <source>performance</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>performance</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="69"/>
         <source>Power profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Power profile</translation>
     </message>
 </context>
 <context>
