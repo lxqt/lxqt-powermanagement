@@ -352,7 +352,7 @@ You can configure it from settings... </source>
     <message>
         <location filename="../trayicon.cpp" line="99"/>
         <source>Pause idleness checks</source>
-        <translation>Спиране на проверка за бездействие за:</translation>
+        <translation>Спиране на проверките за бездействие</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="107"/>
