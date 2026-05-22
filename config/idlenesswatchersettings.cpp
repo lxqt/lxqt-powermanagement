@@ -32,6 +32,7 @@
 #include "idlenesswatchersettings.h"
 #include "ui_idlenesswatchersettings.h"
 #include "helpers.h"
+#include <Solid/Battery>
 #include <Solid/Device>
 
 IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
