@@ -103,8 +103,18 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
 
     // Disable idle settings on battery without battery.
     const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
+    bool hasBattery = false;
 
-    if (devices.isEmpty())
+    for (const Solid::Device &device : devices)
+    {
+        if (device.as<Solid::Battery>()->type() == Solid::Battery::PrimaryBattery)
+        {
+            hasBattery = true;
+            break;
+        }
+    }
+
+    if (!hasBattery)
     {
         mUi->batteryGroupBox->setEnabled(false);
     }
