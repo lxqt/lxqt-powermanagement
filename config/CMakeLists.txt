@@ -1,5 +1,3 @@
-project(lxqt-config-powermanagement)
-
 set(QTX_LIBRARIES Qt6::Widgets Qt6::DBus Qt6::Svg)
 
 set(SOURCES
@@ -36,14 +34,16 @@ lxqt_translate_ts(QM_FILES
     SOURCES
         ${SOURCES}
         ${UI_FILES}
+    TEMPLATE
+        lxqt-config-powermanagement
     INSTALL_DIR
-        ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-config-powermanagement"
 )
 
-lxqt_app_translation_loader(config-powermanagement_QM_LOADER ${PROJECT_NAME})
+lxqt_app_translation_loader(config-powermanagement_QM_LOADER lxqt-config-powermanagement)
 lxqt_translate_desktop(DESKTOP_FILES SOURCES ${DESKTOP_FILES_IN} USE_YAML)
 
-add_executable(${PROJECT_NAME}
+add_executable(lxqt-config-powermanagement
     ${SOURCES}
     ${DESKTOP_FILES}
     ${QM_FILES}
@@ -57,7 +57,7 @@ target_link_libraries(lxqt-config-powermanagement
 )
 
 install(TARGETS
-    ${PROJECT_NAME}
+    lxqt-config-powermanagement
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
     COMPONENT Runtime
 )
