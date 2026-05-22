@@ -32,6 +32,8 @@
 #include "idlenesswatchersettings.h"
 #include "ui_idlenesswatchersettings.h"
 #include "helpers.h"
+#include <Solid/Battery>
+#include <Solid/Device>
 
 IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     QWidget(parent),
@@ -100,8 +102,26 @@ IdlenessWatcherSettings::IdlenessWatcherSettings(QWidget *parent) :
     mUi->idleACMonitorLabel->setToolTip(tooltip);
     mUi->idleBatteryMonitorLabel->setToolTip(tooltip);
 
+    // Disable idle settings on battery without battery.
+    const QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
+    bool hasBattery = false;
+
+    for (const Solid::Device &device : devices)
+    {
+        if (device.as<Solid::Battery>()->type() == Solid::Battery::PrimaryBattery)
+        {
+            hasBattery = true;
+            break;
+        }
+    }
+
+    if (!hasBattery)
+    {
+        mUi->batteryGroupBox->setEnabled(false);
+    }
+
     mBacklight = new LXQt::Backlight(this);
-    // If if no backlight support then disable backlight control:
+    // If no backlight support then disable backlight control:
     if(! mBacklight->isBacklightAvailable()) {
         mUi->idlenessBacklightWatcherGroupBox->setEnabled(false);
         mUi->idlenessBacklightWatcherGroupBox->setChecked(false);
