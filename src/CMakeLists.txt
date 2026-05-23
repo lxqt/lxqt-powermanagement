@@ -12,6 +12,7 @@ set(SOURCES
     main.cpp
     powermanagementd.cpp
     trayicon.cpp
+    trayiconbattery.cpp
     iconproducer.cpp
     powerbutton.cpp
     ../config/powermanagementsettings.cpp
