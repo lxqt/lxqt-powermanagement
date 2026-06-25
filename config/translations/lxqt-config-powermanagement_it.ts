@@ -26,7 +26,7 @@
     <message>
         <location filename="../batterywatchersettings.ui" line="77"/>
         <source>Level is low at:</source>
-        <translation>Livello basso :</translation>
+        <translation>Livello basso:</translation>
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="90"/>
