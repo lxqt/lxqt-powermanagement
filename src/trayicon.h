@@ -5,8 +5,10 @@
  * https://lxqt.org
  *
  * Copyright: 2011 Razor team
+ *            2025~ LXQt team
  * Authors:
  *   Christian Surlykke <christian@surlykke.dk>
+ *   Palo Kisa <palo.kisa@gmail.com>
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -25,15 +27,11 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef TRAYICON_H
-#define TRAYICON_H
+#pragma once
 
 #include <QSystemTrayIcon>
 #include <QMenu>
-#include <Solid/Battery>
 
-#include "iconproducer.h"
-#include "../config/powermanagementsettings.h"
 
 class TrayIcon : public QSystemTrayIcon
 {
@@ -49,7 +47,7 @@ public:
         Four  = 8
     };
 
-    TrayIcon(Solid::Battery *battery, QObject *parent = nullptr);
+    TrayIcon(QObject *parent = nullptr);
     ~TrayIcon() override;
 
     static int getPauseInterval(PAUSE duration);
@@ -62,23 +60,27 @@ signals:
 
 public slots:
     void iconChanged();
-    void updateTooltip();
 
 private slots:
-    void onConfigureTriggered();
-    void onPauseTriggered(QAction *action);
-    void onAboutTriggered();
-    void onDisableIconTriggered();
     void onActivated(QSystemTrayIcon::ActivationReason reason);
 
 private:
+    static void onPauseTriggered(QAction *action);
+    static void onPauseTimeout();
+    static void onConfigureTriggered();
+    static void onAboutTriggered();
+    static void onDisableIconTriggered();
+
+private:
+    virtual const QIcon & getIcon() const;
     QIcon emblemizedIcon();
 
-    Solid::Battery *mBattery;
-    IconProducer mIconProducer;
-    QMenu mContextMenu;
-    QActionGroup *mPauseActions;
+private:
+    static QList<TrayIcon *> msInstances;
+    static std::unique_ptr<QMenu> msContextMenu;
+    static std::unique_ptr<QTimer> msPauseTimer;
+    static std::unique_ptr<QActionGroup> msPauseActions;
+
+    QIcon mBaseIcon;
     bool mHasPauseEmblem;
 };
-
-#endif // TRAYICON_H

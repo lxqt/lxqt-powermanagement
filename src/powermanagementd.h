@@ -17,6 +17,7 @@ class BatteryWatcher;
 class LidWatcher;
 class IdlenessWatcher;
 class PowerButton;
+class TrayIcon;
 
 class PowerManagementd : public QObject
 {
@@ -36,7 +37,8 @@ private:
     BatteryWatcher* mBatterywatcherd;
     LidWatcher* mLidwatcherd;
     IdlenessWatcher* mIdlenesswatcherd;
-    PowerButton *mPowerButton;
+    PowerButton* mPowerButton;
+    TrayIcon* mTrayIcon;
 
     PowerManagementSettings mSettings;
     LXQt::Notification mNotification;

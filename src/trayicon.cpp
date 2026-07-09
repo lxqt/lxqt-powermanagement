@@ -5,8 +5,10 @@
  * https://lxqt.org
  *
  * Copyright: 2011 Razor team
+ *            2025~ LXQt team
  * Authors:
  *   Christian Surlykke <christian@surlykke.dk>
+ *   Palo Kisa <palo.kisa@gmail.com>
  *
  * This program or library is free software; you can redistribute it
  * and/or modify it under the terms of the GNU Lesser General Public
@@ -25,100 +27,109 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <QDebug>
-#include <QApplication>
 #include <QProcess>
 #include <QActionGroup>
 #include <QMessageBox>
-#include <QToolTip>
-#include <QHelpEvent>
 #include <QPixmapCache>
 #include <QPainter>
 #include <QtSvg/QSvgRenderer>
-#include <Solid/Battery>
-#include <Solid/Device>
-#include <QIcon>
 #include <QStringBuilder>
-#include <QGlobalStatic>
 
 #include "trayicon.h"
-#include "batteryhelper.h"
 #include "../config/powermanagementsettings.h"
 
 #include <LXQt/Globals>
 #include <LXQt/Notification>
 #include "PowerProfiles.h"
+#include <QTimer>
 
-TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
+QList<TrayIcon *> TrayIcon::msInstances;
+std::unique_ptr<QMenu> TrayIcon::msContextMenu{nullptr};
+std::unique_ptr<QTimer> TrayIcon::msPauseTimer{nullptr};
+std::unique_ptr<QActionGroup> TrayIcon::msPauseActions{nullptr};
+
+TrayIcon::TrayIcon(QObject *parent)
     : QSystemTrayIcon(parent),
-    mBattery(battery),
-    mIconProducer(battery),
-    mContextMenu(),
+    mBaseIcon(QIcon::fromTheme(QL1S("preferences-system-power-management"))),
     mHasPauseEmblem(false)
 {
-    connect(mBattery, &Solid::Battery::chargePercentChanged, this, &TrayIcon::updateTooltip);
-    connect(mBattery, &Solid::Battery::chargeStateChanged, this, &TrayIcon::updateTooltip);
-    connect(mBattery, &Solid::Battery::timeToEmptyChanged, this, &TrayIcon::updateTooltip);
-    connect(mBattery, &Solid::Battery::timeToFullChanged, this, &TrayIcon::updateTooltip);
-    updateTooltip();
 
-    connect(&mIconProducer, &IconProducer::iconChanged, this, &TrayIcon::iconChanged);
     iconChanged();
 
     connect(this, &TrayIcon::activated, this, &TrayIcon::onActivated);
 
-    mContextMenu.addAction(QIcon::fromTheme(QStringLiteral("configure")), tr("Configure"),
-                           this, &TrayIcon::onConfigureTriggered);
+    if (!msPauseTimer)
+    {
+        msPauseTimer.reset(new QTimer);
+        msPauseTimer->setSingleShot(true);
+        msPauseTimer->setTimerType(Qt::VeryCoarseTimer);
+        connect(msPauseTimer.get(), &QTimer::timeout, [] { onPauseTimeout(); });
+    }
+    if (!msContextMenu) {
+        msContextMenu.reset(new QMenu);
+        connect(msContextMenu->addAction(QIcon::fromTheme(QStringLiteral("configure")), tr("Configure")), &QAction::triggered, [] { onConfigureTriggered(); });
 
-    // pause actions
-    mPauseActions = new QActionGroup(this);
-    mPauseActions->setExclusionPolicy(QActionGroup::ExclusionPolicy::ExclusiveOptional);
-    connect(mPauseActions, &QActionGroup::triggered, this, &TrayIcon::onPauseTriggered);
+        // pause actions
+        msPauseActions.reset(new QActionGroup{nullptr});
+        msPauseActions->setExclusionPolicy(QActionGroup::ExclusionPolicy::ExclusiveOptional);
+        connect(msPauseActions.get(), &QActionGroup::triggered, [] (QAction * action) { onPauseTriggered(action); });
 
-    QAction *a = new QAction(tr("30 minutes"), mPauseActions);
-    a->setCheckable(true);
-    a->setData(PAUSE::Half);
+        QAction *a = new QAction(tr("30 minutes"), msPauseActions.get());
+        a->setCheckable(true);
+        a->setData(PAUSE::Half);
 
-    a = new QAction(tr("1 hour"), mPauseActions);
-    a->setCheckable(true);
-    a->setData(PAUSE::One);
+        a = new QAction(tr("1 hour"), msPauseActions.get());
+        a->setCheckable(true);
+        a->setData(PAUSE::One);
 
-    a = new QAction(tr("2 hours"), mPauseActions);
-    a->setCheckable(true);
-    a->setData(PAUSE::Two);
+        a = new QAction(tr("2 hours"), msPauseActions.get());
+        a->setCheckable(true);
+        a->setData(PAUSE::Two);
 
-    a = new QAction(tr("3 hours"), mPauseActions);
-    a->setCheckable(true);
-    a->setData(PAUSE::Three);
+        a = new QAction(tr("3 hours"), msPauseActions.get());
+        a->setCheckable(true);
+        a->setData(PAUSE::Three);
 
-    a = new QAction(tr("4 hours"), mPauseActions);
-    a->setCheckable(true);
-    a->setData(PAUSE::Four);
+        a = new QAction(tr("4 hours"), msPauseActions.get());
+        a->setCheckable(true);
+        a->setData(PAUSE::Four);
 
-    QMenu *pauseMenu = mContextMenu.addMenu(QIcon::fromTheme(QStringLiteral("media-playback-pause")),
-                                            tr("Pause idleness checks"));
-    pauseMenu->addActions(mPauseActions->actions());
+        QMenu *pauseMenu = msContextMenu->addMenu(QIcon::fromTheme(QStringLiteral("media-playback-pause")),
+                tr("Pause idleness checks"));
+        pauseMenu->addActions(msPauseActions->actions());
 
-    // power-profiles actions
-    mContextMenu.addAction(LXQt::PowerProfiles::instance().menuAction());
+        // power-profiles actions
+        msContextMenu->addAction(LXQt::PowerProfiles::instance().menuAction());
 
-    mContextMenu.addSeparator();
+        msContextMenu->addSeparator();
 
-    mContextMenu.addAction(QIcon::fromTheme(QStringLiteral("help-about")), tr("About"),
-                           this, &TrayIcon::onAboutTriggered);
-    mContextMenu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), tr("Disable icon"),
-                           this, &TrayIcon::onDisableIconTriggered);
-    setContextMenu(&mContextMenu);
+        connect(msContextMenu->addAction(QIcon::fromTheme(QStringLiteral("help-about")), tr("About")), &QAction::triggered, [] { TrayIcon::onAboutTriggered(); });
+        connect(msContextMenu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), tr("Disable icon")), &QAction::triggered, [] { TrayIcon::onDisableIconTriggered(); });
+    }
+    setContextMenu(msContextMenu.get());
+    msInstances.push_back(this);
 }
 
 TrayIcon::~TrayIcon()
 {
+    msInstances.removeOne(this);
+    if (msInstances.empty())
+    {
+        msPauseTimer.reset(nullptr);
+        msPauseActions.reset(nullptr);
+        msContextMenu.reset(nullptr);
+    }
+}
+
+/*virtual*/ const QIcon & TrayIcon::getIcon() const
+{
+    return mBaseIcon;
 }
 
 void TrayIcon::iconChanged()
 {
     mHasPauseEmblem = PowerManagementSettings().isIdlenessWatcherPaused();
-    setIcon(mHasPauseEmblem ? emblemizedIcon() : mIconProducer.mIcon);
+    setIcon(mHasPauseEmblem ? emblemizedIcon() : getIcon());
 }
 
 QIcon TrayIcon::emblemizedIcon()
@@ -131,7 +142,7 @@ QIcon TrayIcon::emblemizedIcon()
     );
 
     const QSize icnSize(200, 200); // NOTE: QSystemTrayIcon::geometry() gives an empty rectangle
-    QPixmap icnPix = mIconProducer.mIcon.pixmap(icnSize);
+    QPixmap icnPix = getIcon().pixmap(icnSize);
     const qreal pixelRatio = icnPix.devicePixelRatio();
     const QSize icnPixSize((QSizeF(icnSize) * pixelRatio).toSize());
 
@@ -162,24 +173,10 @@ QIcon TrayIcon::emblemizedIcon()
     return QIcon(pix);
 }
 
-void TrayIcon::updateTooltip()
+void TrayIcon::onPauseTimeout()
 {
-    QString stateStr = mBattery->chargePercent() <= 0 && mBattery->chargeState() == Solid::Battery::NoCharge ?
-                       tr("Empty") : BatteryHelper::stateToString(mBattery->chargeState());
-    QString tooltip = stateStr % QString::fromLatin1(" (%1%)").arg(mBattery->chargePercent());
-    switch (mBattery->chargeState())
-    {
-        case Solid::Battery::Charging:
-            tooltip += QL1S(", ") % BatteryHelper::timeToFullString(mBattery->timeToFull());
-            break;
-        case Solid::Battery::Discharging:
-            tooltip += QL1S(", ") % BatteryHelper::timeToEmptyString(mBattery->timeToEmpty());
-            break;
-        default:
-            break;
-    }
-
-    setToolTip(tooltip);
+    for (const auto &trayIcon : std::as_const(msInstances))
+        trayIcon->setPause(TrayIcon::PAUSE::None);
 }
 
 void TrayIcon::onConfigureTriggered()
@@ -189,8 +186,18 @@ void TrayIcon::onConfigureTriggered()
 
 void TrayIcon::onPauseTriggered(QAction *action)
 {
-    emit pauseChanged(!action->isChecked() ? PAUSE::None
-                                           : static_cast<PAUSE>(action->data().toInt()));
+    const PAUSE duration = !action->isChecked() ? None : static_cast<PAUSE>(action->data().toInt());
+    if (duration == None)
+    {
+        onPauseTimeout();
+        msPauseTimer->stop();
+    }
+    else
+    {
+        for (const auto &trayIcon : std::as_const(msInstances))
+            trayIcon->setPause(duration);
+        msPauseTimer->start(getPauseInterval(duration));
+    }
 }
 
 void TrayIcon::onAboutTriggered()
@@ -236,7 +243,7 @@ void TrayIcon::onActivated(QSystemTrayIcon::ActivationReason reason)
 void TrayIcon::setPause(PAUSE duration)
 {
     // add/remove the pause emblem and correct the checked action if needed
-    QAction *checked = mPauseActions->checkedAction();
+    QAction *checked = msPauseActions->checkedAction();
     if (duration == PAUSE::None)
     {
         PowerManagementSettings().setIdlenessWatcherPaused(false);
@@ -252,7 +259,7 @@ void TrayIcon::setPause(PAUSE duration)
             iconChanged(); // adds the pause emblem
         if (checked == nullptr || checked->data().toInt() != duration)
         {
-            const auto actions = mPauseActions->actions();
+            const auto actions = msPauseActions->actions();
             for (const auto &a : actions)
             {
                 if (a->data().toInt() == duration)
