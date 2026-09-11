@@ -6,107 +6,107 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Egonkorra</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
         <source>Discharging</source>
-        <translation type="unfinished"></translation>
+        <translation>Deskargatzen</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="48"/>
         <source>Fully charged</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabat kargatuta</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="51"/>
         <source>Charging</source>
-        <translation type="unfinished"></translation>
+        <translation>Kargatzen</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="60"/>
         <source>Lithium ion</source>
-        <translation type="unfinished"></translation>
+        <translation>Litio-ioia</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="62"/>
         <source>Lithium polymer</source>
-        <translation type="unfinished"></translation>
+        <translation>Litio-polimeroa</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="64"/>
         <source>Lithium iron phosphate</source>
-        <translation type="unfinished"></translation>
+        <translation>Litio-burdin fosfatoa</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="66"/>
         <source>Lead acid</source>
-        <translation type="unfinished"></translation>
+        <translation>Berun-azido</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="68"/>
         <source>Nickel cadmium</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikel-kadmioa</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="70"/>
         <source>Nickel metal hydride</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikel-metal hidruroa</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="73"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezezaguna</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Laguntzaile Digital Pertsonalaren bateria</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Etenik Gabeko Elikatze-Sistemaren bateria</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Primary battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Bateria primarioa</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
         <source>Mouse battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Saguaren bateria</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Teklatuaren bateria</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Teklatuaren eta saguaren bateria</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Camera battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Kameraren bateria</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Phone battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Telefonoaren bateria</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="98"/>
         <source>Monitor battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Bateriaren monitorea</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="101"/>
         <source>Unknown battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Bateria ezezaguna</translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>

@@ -128,7 +128,7 @@
         <location filename="../idlenesswatchersettings.ui" line="80"/>
         <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Dinonaktifkan</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="159"/>
@@ -165,24 +165,24 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="26"/>
         <source>On AC</source>
-        <translation type="unfinished"></translation>
+        <translation>Pada AC</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>When idle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ketika idle:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="87"/>
         <location filename="../idlenesswatchersettings.ui" line="140"/>
         <source>Turn off monitor(s) after:</source>
-        <translation type="unfinished"></translation>
+        <translation>Matikan monitor setelah:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>On Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Pada Baterai</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="236"/>
@@ -207,7 +207,7 @@
     <message>
         <location filename="../idlenesswatchersettings.cpp" line="97"/>
         <source>Set to minimum to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Atur ke minimum untuk menonaktifkan</translation>
     </message>
 </context>
 <context>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../powerkeyssettings.ui" line="42"/>
         <source>Suspend Key Action:</source>
-        <translation type="unfinished">Menanggungkan tindakan:</translation>
+        <translation>Aksi Kunci Suspend:</translation>
     </message>
     <message>
         <location filename="../powerkeyssettings.ui" line="49"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="50"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation type="unfinished"></translation>
+        <translation>Catatan: Pada Wayland, kunci power dikonfigurasi oleh kompositor.</translation>
     </message>
 </context>
 <context>

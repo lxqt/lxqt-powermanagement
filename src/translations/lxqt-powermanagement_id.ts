@@ -206,7 +206,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation type="unfinished">Kosong</translation>
+        <translation>Kosong</translation>
     </message>
 </context>
 <context>
@@ -229,8 +229,8 @@
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Men-suspend dalam %Ln detik</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -363,7 +363,7 @@ Anda dapat mengkonfigurasikannya dari pengaturan... </translation>
     <message>
         <location filename="../trayicon.cpp" line="168"/>
         <source>Empty</source>
-        <translation type="unfinished">Kosong</translation>
+        <translation>Kosong</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="200"/>

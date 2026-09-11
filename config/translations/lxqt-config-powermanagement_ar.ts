@@ -318,7 +318,7 @@
     <message>
         <location filename="../powerkeyssettings.cpp" line="50"/>
         <source>Note: Under Wayland, power keys are configured by the compositor instead.</source>
-        <translation>ملاحظة: ضمن Wayland، يتم تكوين مفاتيح التشغيل بواسطة المنشئ بدلاً من ذلك.</translation>
+        <translation>ملاحظة: في بيئة Wayland، يتولى المُركِّب (Compositor) إعداد مفاتيح الطاقة.</translation>
     </message>
 </context>
 <context>

@@ -128,7 +128,7 @@
         <location filename="../idlenesswatchersettings.ui" line="80"/>
         <location filename="../idlenesswatchersettings.ui" line="133"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнено</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="159"/>
@@ -165,24 +165,24 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="26"/>
         <source>On AC</source>
-        <translation type="unfinished"></translation>
+        <translation>Від мережі</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="38"/>
         <location filename="../idlenesswatchersettings.ui" line="103"/>
         <source>When idle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Під час бездіяльності:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="87"/>
         <location filename="../idlenesswatchersettings.ui" line="140"/>
         <source>Turn off monitor(s) after:</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимикати монітор(и) через:</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="97"/>
         <source>On Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Від акумулятора</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="236"/>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../idlenesswatchersettings.ui" line="262"/>
         <source>On Wayland, usually handled by compositor and app</source>
-        <translation type="unfinished"></translation>
+        <translation>У Wayland це зазвичай забезпечується композитором та застосунком</translation>
     </message>
     <message>
         <location filename="../idlenesswatchersettings.ui" line="265"/>
@@ -207,7 +207,7 @@
     <message>
         <location filename="../idlenesswatchersettings.cpp" line="97"/>
         <source>Set to minimum to disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Встановіть мінімальне значення, щоб вимкнути</translation>
     </message>
 </context>
 <context>
