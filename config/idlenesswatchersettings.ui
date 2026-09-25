@@ -233,7 +233,7 @@
    <item>
     <widget class="QGroupBox" name="monitorGroupBox">
      <property name="title">
-      <string>Command to Turn off Monitor</string>
+      <string>DPMS Command</string>
      </property>
      <layout class="QFormLayout" name="formLayout_3">
       <item row="0" column="0">
