@@ -1,3 +1,9 @@
+lxqt-powermanagement-2.5.0 / 2026-11-05
+========================================
+ * Disabled the battery settings with no battery.
+ * CMake maintenance.
+ * Updated the address of Free Software Foundation.
+
 lxqt-powermanagement-2.4.0 / 2026-04-20
 ========================================
  * Separated idleness options for turning off monitor(s).
