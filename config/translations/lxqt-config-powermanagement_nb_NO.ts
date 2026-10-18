@@ -40,7 +40,7 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="127"/>
         <source>Preview</source>
         <translation>Forhåndsvisning</translation>
     </message>
@@ -65,42 +65,42 @@
         <translation>Vis ikon:</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="41"/>
+        <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>from theme</source>
         <comment>icons</comment>
         <translation>fra tema</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="42"/>
+        <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle</source>
         <comment>icons</comment>
         <translation>Sirkel</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="43"/>
+        <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
         <translation>Sirkel med prosentanvisning</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="44"/>
+        <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
         <translation>Batteri med prosentanvisning og bakgrunn</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="45"/>
+        <location filename="../batterywatchersettings.cpp" line="46"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
         <translation>Batteri med prosentanvisning</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="127"/>
         <source>built in</source>
         <translation>innebygd</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="114"/>
+        <location filename="../batterywatchersettings.cpp" line="132"/>
         <source>Level: %1%</source>
         <translation>Nivå: %1%</translation>
     </message>
@@ -139,7 +139,7 @@
         <location filename="../idlenesswatchersettings.ui" line="67"/>
         <location filename="../idlenesswatchersettings.ui" line="120"/>
         <location filename="../idlenesswatchersettings.ui" line="186"/>
-        <location filename="../idlenesswatchersettings.cpp" line="90"/>
+        <location filename="../idlenesswatchersettings.cpp" line="92"/>
         <source>Minutes:Seconds</source>
         <translation>Minutter:Sekunder</translation>
     </message>
@@ -205,7 +205,7 @@
         <translation>Slå av inaktivitetssjekk i fullskjermsvisning</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.cpp" line="97"/>
+        <location filename="../idlenesswatchersettings.cpp" line="99"/>
         <source>Set to minimum to disable</source>
         <translation type="unfinished"></translation>
     </message>

@@ -40,7 +40,7 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="127"/>
         <source>Preview</source>
         <translation>Kyegezemu</translation>
     </message>
@@ -65,42 +65,42 @@
         <translation>Wabeewo akafaananyi:</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="41"/>
+        <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>from theme</source>
         <comment>icons</comment>
         <translation>ka mu lulyo lumu n&apos;obuli awakolerwa</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="42"/>
+        <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle</source>
         <comment>icons</comment>
         <translation>Namuziga</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="43"/>
+        <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
         <translation>Namuziga n&apos;ekigero kya kikumi</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="44"/>
+        <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
         <translation>Lyanda bwaliriro n&apos;ekigero kya kikumi</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="45"/>
+        <location filename="../batterywatchersettings.cpp" line="46"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
         <translation>Lyanda n&apos;ekigero kya kikumi</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="127"/>
         <source>built in</source>
         <translation>kijja kyokka</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="114"/>
+        <location filename="../batterywatchersettings.cpp" line="132"/>
         <source>Level: %1%</source>
         <translation>Muliro: %1%</translation>
     </message>
@@ -139,7 +139,7 @@
         <location filename="../idlenesswatchersettings.ui" line="67"/>
         <location filename="../idlenesswatchersettings.ui" line="120"/>
         <location filename="../idlenesswatchersettings.ui" line="186"/>
-        <location filename="../idlenesswatchersettings.cpp" line="90"/>
+        <location filename="../idlenesswatchersettings.cpp" line="92"/>
         <source>Minutes:Seconds</source>
         <translation>Ddakiika:Sikonda</translation>
     </message>
@@ -205,7 +205,7 @@
         <translation>Yimiriza okulabiriza okusiriikirira nga waliwo puloguramu ebuna olutimba</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.cpp" line="97"/>
+        <location filename="../idlenesswatchersettings.cpp" line="99"/>
         <source>Set to minimum to disable</source>
         <translation>Okusiba kendeereza ddala awasemba</translation>
     </message>

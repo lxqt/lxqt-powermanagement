@@ -114,8 +114,6 @@
         <translation>
             <numerusform>שעה</numerusform>
             <numerusform>שעתיים</numerusform>
-            <numerusform>%Ln שעות</numerusform>
-            <numerusform>%Ln שעות</numerusform>
         </translation>
     </message>
     <message numerus="yes">

@@ -40,7 +40,7 @@
     </message>
     <message>
         <location filename="../batterywatchersettings.ui" line="121"/>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="127"/>
         <source>Preview</source>
         <translation>Vorschau</translation>
     </message>
@@ -65,42 +65,42 @@
         <translation>Symbol anzeigen:</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="41"/>
+        <location filename="../batterywatchersettings.cpp" line="42"/>
         <source>from theme</source>
         <comment>icons</comment>
         <translation>aus Thema</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="42"/>
+        <location filename="../batterywatchersettings.cpp" line="43"/>
         <source>Circle</source>
         <comment>icons</comment>
         <translation>Kreis</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="43"/>
+        <location filename="../batterywatchersettings.cpp" line="44"/>
         <source>Circle with percentage</source>
         <comment>icons</comment>
         <translation>Kreis mit Prozentangabe</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="44"/>
+        <location filename="../batterywatchersettings.cpp" line="45"/>
         <source>Battery with percentage and background</source>
         <comment>icons</comment>
         <translation>Batterie mit Prozentangabe und Hintergrund</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="45"/>
+        <location filename="../batterywatchersettings.cpp" line="46"/>
         <source>Battery with percentage</source>
         <comment>icons</comment>
         <translation>Batterie mit Prozentangabe</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="109"/>
+        <location filename="../batterywatchersettings.cpp" line="127"/>
         <source>built in</source>
         <translation>eingebaut</translation>
     </message>
     <message>
-        <location filename="../batterywatchersettings.cpp" line="114"/>
+        <location filename="../batterywatchersettings.cpp" line="132"/>
         <source>Level: %1%</source>
         <translation>Ladezustand: %1%</translation>
     </message>
@@ -139,7 +139,7 @@
         <location filename="../idlenesswatchersettings.ui" line="67"/>
         <location filename="../idlenesswatchersettings.ui" line="120"/>
         <location filename="../idlenesswatchersettings.ui" line="186"/>
-        <location filename="../idlenesswatchersettings.cpp" line="90"/>
+        <location filename="../idlenesswatchersettings.cpp" line="92"/>
         <source>Minutes:Seconds</source>
         <translation>Minuten:Sekunden</translation>
     </message>
@@ -205,7 +205,7 @@
         <translation>Ladezustandskontrolle ausschalten im Vollbildmodus</translation>
     </message>
     <message>
-        <location filename="../idlenesswatchersettings.cpp" line="97"/>
+        <location filename="../idlenesswatchersettings.cpp" line="99"/>
         <source>Set to minimum to disable</source>
         <translation>Auf Minimum setzen zum deaktivieren</translation>
     </message>
