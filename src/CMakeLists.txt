@@ -1,5 +1,3 @@
-set(QTX_LIBRARIES Qt6::Widgets Qt6::DBus Qt6::Svg)
-
 set(SOURCES
     watcher.cpp
     batteryhelper.cpp
@@ -55,7 +53,9 @@ add_executable(lxqt-powermanagement
 
 target_link_libraries(lxqt-powermanagement
     lxqt
-    ${QTX_LIBRARIES}
+    Qt6::Widgets
+    Qt6::DBus
+    Qt6::Svg
     KF6::Solid
     KF6::IdleTime
     lxqt-globalkeys

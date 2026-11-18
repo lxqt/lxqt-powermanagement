@@ -1,5 +1,3 @@
-set(QTX_LIBRARIES Qt6::Widgets Qt6::DBus Qt6::Svg)
-
 set(SOURCES
     main.cpp
     mainwindow.cpp
@@ -52,7 +50,9 @@ add_executable(lxqt-config-powermanagement
 
 target_link_libraries(lxqt-config-powermanagement
     lxqt
-    ${QTX_LIBRARIES}
+    Qt6::Widgets
+    Qt6::DBus
+    Qt6::Svg
     KF6::Solid
 )
 
