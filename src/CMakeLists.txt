@@ -59,7 +59,8 @@ target_link_libraries(lxqt-powermanagement
     KF6::Solid
     KF6::IdleTime
     lxqt-globalkeys
-    ${XCB_LIBRARIES}
+    XCB::DPMS
+    XCB::SCREENSAVER
 )
 
 install(TARGETS
