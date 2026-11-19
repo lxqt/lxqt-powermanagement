@@ -39,10 +39,6 @@ lxqt_translate_ts(QM_FILES
 
 lxqt_app_translation_loader(lxqt-powermanagement_QM_LOADER lxqt-powermanagement)
 
-include_directories(
-    ${Qt6Gui_PRIVATE_INCLUDE_DIRS}
-)
-
 add_executable(lxqt-powermanagement
     ${SOURCES}
     ${RSCS}
