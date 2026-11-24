@@ -46,6 +46,8 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     mIdleACWatcher = mIdleBatteryWatcher = mIdleACMonitorWatcher = mIdleBatteryMonitorWatcher = mIdleBacklightWatcher = mBacklightActualValue = -1;
     mBacklight = nullptr;
     mDischarging = false;
+    mDpmsPresent = false;
+    mScreensaverPresent = false;
 
     connect(KIdleTime::instance(),
             static_cast<void (KIdleTime::*)(int,int)>(&KIdleTime::timeoutReached),
@@ -75,13 +77,29 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
     if (QGuiApplication::platformName() == QStringLiteral("xcb")) {
         if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
             xcb_connection_t* c = x11NativeInterface->connection();
-            xcb_dpms_get_timeouts_cookie_t cookie = xcb_dpms_get_timeouts(c);
-            xcb_dpms_get_timeouts_reply_t* reply = xcb_dpms_get_timeouts_reply(c, cookie, nullptr);
-            if (reply) {
-                mDpmsStandby = reply->standby_timeout;
-                mDpmsSuspend = reply->suspend_timeout;
-                mDpmsOff = reply->off_timeout;
-                free(reply);
+            // Some X servers (e.g. the one provided by xrdp) do not implement the
+            // DPMS and/or SCREENSAVER extensions. Issuing a request for an
+            // unsupported extension is a fatal protocol error that immediately
+            // kills the whole X11 connection, so check for their presence first.
+            const auto *dpmsReply = xcb_get_extension_data(c, &xcb_dpms_id);
+            mDpmsPresent = dpmsReply && dpmsReply->present;
+            const auto *screensaverReply = xcb_get_extension_data(c, &xcb_screensaver_id);
+            mScreensaverPresent = screensaverReply && screensaverReply->present;
+
+            if (mDpmsPresent) {
+                xcb_dpms_get_timeouts_cookie_t cookie = xcb_dpms_get_timeouts(c);
+                xcb_dpms_get_timeouts_reply_t* reply = xcb_dpms_get_timeouts_reply(c, cookie, nullptr);
+                if (reply) {
+                    mDpmsStandby = reply->standby_timeout;
+                    mDpmsSuspend = reply->suspend_timeout;
+                    mDpmsOff = reply->off_timeout;
+                    free(reply);
+                }
+            } else {
+                qWarning() << "X11 DPMS extension not present; disabling DPMS handling in idlenesswatcher";
+            }
+            if (!mScreensaverPresent) {
+                qWarning() << "X11 SCREENSAVER extension not present; disabling screensaver handling in idlenesswatcher";
             }
         }
     }
@@ -100,12 +118,20 @@ void IdlenessWatcher::setDpmsTimeouts(bool restore) {
         if (auto x11NativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
             xcb_connection_t* c = x11NativeInterface->connection();
             if (restore) {
-                xcb_dpms_set_timeouts(c, mDpmsStandby, mDpmsSuspend, mDpmsOff);
-                xcb_screensaver_suspend(c, 0); // WARNING: This is not documented but works.
+                if (mDpmsPresent) {
+                    xcb_dpms_set_timeouts(c, mDpmsStandby, mDpmsSuspend, mDpmsOff);
+                }
+                if (mScreensaverPresent) {
+                    xcb_screensaver_suspend(c, 0); // WARNING: This is not documented but works.
+                }
             }
             else {
-                xcb_dpms_set_timeouts(c, 0, 0, 0);
-                xcb_screensaver_suspend(c, XCB_SCREENSAVER_SUSPEND);
+                if (mDpmsPresent) {
+                    xcb_dpms_set_timeouts(c, 0, 0, 0);
+                }
+                if (mScreensaverPresent) {
+                    xcb_screensaver_suspend(c, XCB_SCREENSAVER_SUSPEND);
+                }
             }
         }
     }

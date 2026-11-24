@@ -56,6 +56,8 @@ private:
     LXQt::Backlight *mBacklight;
     int mBacklightActualValue;
     bool mDischarging;
+    bool mDpmsPresent;
+    bool mScreensaverPresent;
     quint16 mDpmsStandby, mDpmsSuspend, mDpmsOff;
 };
 
