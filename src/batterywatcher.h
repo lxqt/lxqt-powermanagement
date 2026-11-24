@@ -28,7 +28,7 @@
 #define BATTERYWATCHER_H
 
 #include "watcher.h"
-#include "trayicon.h"
+#include "trayiconbattery.h"
 #include "batteryinfodialog.h"
 #include "../config/powermanagementsettings.h"
 
@@ -43,17 +43,15 @@ class BatteryWatcher : public Watcher
 public:
     explicit BatteryWatcher(QObject *parent = nullptr);
     ~BatteryWatcher() override;
+    int batteriesCount() const;
 
 private slots:
     void batteryChanged();
     void settingsChanged();
-    void onPauseTimeout();
-    void setPause(TrayIcon::PAUSE duration);
 
 private:
     QList<Solid::Battery*> mBatteries;
-    QList<TrayIcon*> mTrayIcons;
-    QTimer mPauseTimer;
+    QList<TrayIconBattery*> mTrayIcons;
 
     PowerManagementSettings mSettings;
     BatteryInfoDialog *mBatteryInfoDialog;
