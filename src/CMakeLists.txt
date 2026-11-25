@@ -1,5 +1,3 @@
-set(QTX_LIBRARIES Qt6::Widgets Qt6::DBus Qt6::Svg)
-
 set(SOURCES
     watcher.cpp
     batteryhelper.cpp
@@ -41,10 +39,6 @@ lxqt_translate_ts(QM_FILES
 
 lxqt_app_translation_loader(lxqt-powermanagement_QM_LOADER lxqt-powermanagement)
 
-include_directories(
-    ${Qt6Gui_PRIVATE_INCLUDE_DIRS}
-)
-
 add_executable(lxqt-powermanagement
     ${SOURCES}
     ${RSCS}
@@ -55,11 +49,14 @@ add_executable(lxqt-powermanagement
 
 target_link_libraries(lxqt-powermanagement
     lxqt
-    ${QTX_LIBRARIES}
+    Qt6::Widgets
+    Qt6::DBus
+    Qt6::Svg
     KF6::Solid
     KF6::IdleTime
     lxqt-globalkeys
-    ${XCB_LIBRARIES}
+    XCB::DPMS
+    XCB::SCREENSAVER
 )
 
 install(TARGETS
