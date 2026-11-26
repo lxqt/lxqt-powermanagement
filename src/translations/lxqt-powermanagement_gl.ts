@@ -6,7 +6,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="44"/>
         <source>Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Estable</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="46"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../batteryhelper.cpp" line="48"/>
         <source>Fully charged</source>
-        <translation>Totalmente cargada</translation>
+        <translation>Completamente cargada</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="51"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../batteryhelper.cpp" line="64"/>
         <source>Lithium iron phosphate</source>
-        <translation>Litio-ferrofosfato</translation>
+        <translation>Fosfato de ferro e litio</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="66"/>
         <source>Lead acid</source>
-        <translation>Chumbo e ácido</translation>
+        <translation>Chumbo-ácido</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="68"/>
@@ -51,57 +51,57 @@
     <message>
         <location filename="../batteryhelper.cpp" line="70"/>
         <source>Nickel metal hydride</source>
-        <translation>Níquel-metal hidruro</translation>
+        <translation>Níquel-hidruro metálico</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="73"/>
         <source>Unknown</source>
-        <translation>Descoñecida</translation>
+        <translation>Descoñecido</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="82"/>
         <source>Personal Digital Assistant&apos;s battery</source>
-        <translation>Batería de computador de peto (PDA)</translation>
+        <translation>Batería do asistente dixital persoal</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="84"/>
         <source>Uninterruptible Power Supply&apos;s battery</source>
-        <translation>Batería de sistema de alimentación ininterrompida (UPS)</translation>
+        <translation>Batería do sistema de alimentación ininterrompida</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="86"/>
         <source>Primary battery</source>
-        <translation>Batería principal</translation>
+        <translation>Batería primaria</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="88"/>
         <source>Mouse battery</source>
-        <translation>Batería de rato</translation>
+        <translation>Batería do rato</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="90"/>
         <source>Keyboard battery</source>
-        <translation>Batería de teclado</translation>
+        <translation>Batería do teclado</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="92"/>
         <source>Keyboard and mouse&apos;s battery</source>
-        <translation>Batería de teclado e de rato</translation>
+        <translation>Batería do teclado e do rato</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="94"/>
         <source>Camera battery</source>
-        <translation>Batería de cámara</translation>
+        <translation>Batería da cámara</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="96"/>
         <source>Phone battery</source>
-        <translation>Batería de teléfono</translation>
+        <translation>Batería do teléfono</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="98"/>
         <source>Monitor battery</source>
-        <translation>Batería de monitor</translation>
+        <translation>Batería do monitor</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="101"/>
@@ -111,28 +111,28 @@
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="111"/>
         <source>%Ln hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln hora</numerusform>
+            <numerusform>%Ln horas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batteryhelper.cpp" line="112"/>
         <source>%Ln minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%Ln minuto</numerusform>
+            <numerusform>%Ln minutos</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="117"/>
         <source>remaining %1</source>
-        <translation type="unfinished"></translation>
+        <translation>restantes %1</translation>
     </message>
     <message>
         <location filename="../batteryhelper.cpp" line="122"/>
         <source>to full %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ata a carga completa %1</translation>
     </message>
 </context>
 <context>
@@ -173,22 +173,22 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="90"/>
         <source>Energy Full Design:</source>
-        <translation>Enerxía total teórica:</translation>
+        <translation>Enerxía total de deseño:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="107"/>
         <source>Energy Full:</source>
-        <translation>Carga completa:</translation>
+        <translation>Enerxía total:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="124"/>
         <source>Energy Now:</source>
-        <translation>Carga actual:</translation>
+        <translation>Enerxía actual:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="141"/>
         <source>Energy rate:</source>
-        <translation>Taxa de carga:</translation>
+        <translation>Taxa de enerxía:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="165"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../batteryinfoframe.ui" line="182"/>
         <source>Voltage:</source>
-        <translation>Voltaxe:</translation>
+        <translation>Tensión:</translation>
     </message>
     <message>
         <location filename="../batteryinfoframe.ui" line="192"/>
@@ -208,7 +208,7 @@
     <message>
         <location filename="../batteryinfoframe.cpp" line="65"/>
         <source>Empty</source>
-        <translation type="unfinished">Baleira</translation>
+        <translation>Baleira</translation>
     </message>
 </context>
 <context>
@@ -216,40 +216,40 @@
     <message>
         <location filename="../batterywatcher.cpp" line="48"/>
         <source>No battery!</source>
-        <translation>Sen batería!</translation>
+        <translation>Non hai batería!</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="49"/>
         <source>LXQt could not find data about any battery - monitoring disabled</source>
-        <translation>LXQt non foi quen de atopar datos sobre ningunha batería - desactivouse a supervisión</translation>
+        <translation>LXQt non atopou datos sobre ningunha batería; desactivouse a monitorización</translation>
     </message>
     <message>
         <location filename="../batterywatcher.cpp" line="119"/>
         <source>Power low!</source>
-        <translation>Carga baixa!</translation>
+        <translation>Batería baixa!</translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="131"/>
         <source>Suspending in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Suspendendo en %Ln segundo</numerusform>
+            <numerusform>Suspendendo en %Ln segundos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="134"/>
         <source>Hibernating in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Hibernando en %Ln segundo</numerusform>
+            <numerusform>Hibernando en %Ln segundos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../batterywatcher.cpp" line="137"/>
         <source>Shutting down in %Ln second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Apagando en %Ln segundo</numerusform>
+            <numerusform>Apagando en %Ln segundos</numerusform>
         </translation>
     </message>
 </context>
@@ -259,24 +259,24 @@
         <location filename="../PowerProfiles.cpp" line="38"/>
         <source>power-saver</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>aforro de enerxía</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="39"/>
         <source>balanced</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>equilibrado</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="40"/>
         <source>performance</source>
         <comment>power-profiles-daemon</comment>
-        <translation type="unfinished"></translation>
+        <translation>rendemento</translation>
     </message>
     <message>
         <location filename="../PowerProfiles.cpp" line="69"/>
         <source>Power profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Perfil de enerxía</translation>
     </message>
 </context>
 <context>
@@ -284,17 +284,17 @@
     <message>
         <location filename="../powerbutton.cpp" line="72"/>
         <source>Power off key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acción da tecla de apagado</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="79"/>
         <source>Suspend key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acción da tecla de suspensión</translation>
     </message>
     <message>
         <location filename="../powerbutton.cpp" line="86"/>
         <source>Hibernate key action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acción da tecla de hibernación</translation>
     </message>
 </context>
 <context>
@@ -308,8 +308,8 @@
         <location filename="../powermanagementd.cpp" line="116"/>
         <source>You are running LXQt Power Management for the first time.
 You can configure it from settings... </source>
-        <translation>Está executando por primeira vez a xestión de enerxía do LXQt.
-Pode configurala a partires dos axustes... </translation>
+        <translation>Estás a executar LXQt Power Management por primeira vez.
+Podes configuralo desde os axustes... </translation>
     </message>
     <message>
         <location filename="../powermanagementd.cpp" line="117"/>
@@ -327,32 +327,32 @@ Pode configurala a partires dos axustes... </translation>
     <message>
         <location filename="../trayicon.cpp" line="78"/>
         <source>30 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>30 minutos</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="82"/>
         <source>1 hour</source>
-        <translation type="unfinished"></translation>
+        <translation>1 hora</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="86"/>
         <source>2 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>2 horas</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="90"/>
         <source>3 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>3 horas</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="94"/>
         <source>4 hours</source>
-        <translation type="unfinished"></translation>
+        <translation>4 horas</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="99"/>
         <source>Pause idleness checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Pór en pausa as comprobacións de inactividade</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="107"/>
@@ -368,27 +368,27 @@ Pode configurala a partires dos axustes... </translation>
     <message>
         <location filename="../trayicon.cpp" line="168"/>
         <source>Empty</source>
-        <translation type="unfinished">Baleira</translation>
+        <translation>Baleira</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="200"/>
         <source>&lt;p&gt;  &lt;b&gt;LXQt Power Management&lt;/b&gt;&lt;br/&gt;  - Power Management for the LXQt Desktop Environment&lt;/p&gt;&lt;p&gt;  Authors:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - and others from the Razor and LXQt projects&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</source>
-        <translation>&lt;p&gt;  &lt;b&gt;Xestión de enerxía do LXQt&lt;/b&gt;&lt;br/&gt;  - Xestión de enerxía do contorno de escritorio LXQt&lt;/p&gt;&lt;p&gt;  Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - e outras persoas dos proxectos Razor e LXQt&lt;/p&gt;&lt;p&gt;  Dereitos de autoría &amp;copy; 2012-2025&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;  &lt;b&gt;Xestión da enerxía de LXQt&lt;/b&gt;&lt;br/&gt;  - Xestión da enerxía para o contorno de escritorio LXQt&lt;/p&gt;&lt;p&gt;  Autores:&lt;br/&gt;  &amp;nbsp; Christian Surlykke, Alec Moskvin&lt;br/&gt;  &amp;nbsp; - e outros dos proxectos Razor e LXQt&lt;/p&gt;&lt;p&gt;  Copyright &amp;copy; 2012-2025&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="218"/>
         <source>LXQt Power Management info</source>
-        <translation>Información da xestión de enerxía do LXQt</translation>
+        <translation>Información de LXQt Power Management</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="219"/>
         <source>The LXQt Power Management tray icon can be (re)enabled in &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</source>
-        <translation>Pode (re)activar a icona da xestión de enerxía do LXQt na área de notificación en &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
+        <translation>A icona da bandexa de LXQt Power Management pódese activar de novo en &lt;i&gt;lxqt-config-powermanagement&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../trayicon.cpp" line="221"/>
         <source>Configure now</source>
-        <translation>Configurala agora</translation>
+        <translation>Configurar agora</translation>
     </message>
 </context>
 </TS>
