@@ -118,6 +118,7 @@ void BatteryWatcher::batteryChanged()
         {
             notification = new LXQt::Notification(tr("Power low!"), this);
             notification->setTimeout(2000);
+            notification->setIcon(QStringLiteral("battery-low"));
         }
 
         int milliSecondsToAction = QTime::currentTime().msecsTo(actionTime);
